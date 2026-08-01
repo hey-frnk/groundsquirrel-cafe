@@ -22,9 +22,31 @@ function readEntry<T extends object>(
   return { slug: filename.replace(/\.md$/, ""), data: data as T, content };
 }
 
+/**
+ * Groups consecutive single-image paragraphs (no caption, no other text between
+ * them) into a responsive side-by-side grid, mirroring how these images were
+ * grouped in the original Squarespace "gallery" blocks they were migrated from.
+ * A single image followed by its own caption paragraph is left untouched.
+ */
+function wrapImageGalleries(htmlStr: string): string {
+  const toGrid = (imgs: string[]) => {
+    const cols = imgs.length >= 3 ? 3 : 2;
+    return `<div class="img-gallery" style="--gallery-cols:${cols}">${imgs.join("")}</div>`;
+  };
+  // Consecutive image lines with no blank line between them become one <p>
+  // containing multiple <img> tags (remark's soft-break behavior).
+  let out = htmlStr.replace(/<p>((?:\s*<img[^>]*>\s*){2,})<\/p>/g, (_m, inner: string) =>
+    toGrid(inner.match(/<img[^>]*>/g) ?? [])
+  );
+  // Consecutive image lines separated by blank lines become separate
+  // <p><img></p> blocks in a row — group those too.
+  out = out.replace(/(?:<p><img[^>]*><\/p>\s*){2,}/g, (run) => toGrid(run.match(/<img[^>]*>/g) ?? []));
+  return out;
+}
+
 export async function markdownToHtml(markdown: string): Promise<string> {
   const processed = await remark().use(html).process(markdown);
-  return processed.toString();
+  return wrapImageGalleries(processed.toString());
 }
 
 export interface JournalPost {
