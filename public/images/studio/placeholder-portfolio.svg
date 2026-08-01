@@ -1,0 +1,10 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="800" fill="#C7B7DB"/>
+  <rect x="24" y="24" width="752" height="752" fill="none" stroke="#4A4235" stroke-width="3" stroke-dasharray="10 10"/>
+  <g fill="none" stroke="#4A4235" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="260" y="300" width="280" height="200" rx="10"/>
+    <circle cx="330" cy="360" r="18"/>
+    <path d="M260 460 L360 400 L440 440 L540 360 L540 500 L260 500 Z"/>
+  </g>
+  <text x="400" y="560" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#4A4235">Werk folgt</text>
+</svg>

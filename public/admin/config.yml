@@ -1,0 +1,160 @@
+backend:
+  name: github
+  repo: hey-frnk/groundsquirrel-cafe
+  branch: main
+  # PLATZHALTER: URL eures OAuth-Proxys (siehe README, Abschnitt "CMS einrichten")
+  base_url: https://YOUR-OAUTH-PROXY.netlify.app
+  auth_endpoint: auth
+
+# Bilder, die ihr im CMS hochladet, landen hier und sind danach unter /images/uploads/... erreichbar
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+publish_mode: simple
+
+collections:
+  - name: "journal"
+    label: "Journal"
+    label_singular: "Journal-Eintrag"
+    folder: "content/journal"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Datum", name: "date", widget: "datetime", format: "YYYY-MM-DD", time_format: false }
+      - { label: "Autor:in", name: "author", widget: "string" }
+      - { label: "Kurzbeschreibung", name: "excerpt", widget: "text" }
+      - { label: "Titelbild", name: "cover", widget: "image" }
+      - { label: "Tags", name: "tags", widget: "list", default: [] }
+      - { label: "Inhalt", name: "body", widget: "markdown" }
+
+  - name: "shop"
+    label: "Shop"
+    label_singular: "Produkt"
+    folder: "content/shop"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Produktname", name: "title", widget: "string" }
+      - { label: "Preis", name: "price", widget: "string", hint: "z.B. CHF 12.00" }
+      - { label: "Produktfoto", name: "image", widget: "image" }
+      - label: "Stripe Payment Link"
+        name: "stripeLink"
+        widget: "string"
+        required: false
+        hint: "Erstellt einen Payment Link in eurem Stripe-Dashboard und fügt den Link hier ein. Leer lassen = Button zeigt 'Coming soon'."
+      - { label: "Reihenfolge", name: "order", widget: "number", default: 1 }
+      - { label: "Beschreibung", name: "body", widget: "markdown", required: false }
+
+  - name: "crew"
+    label: "Crew"
+    label_singular: "Crew-Mitglied"
+    folder: "content/crew"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Rolle", name: "role", widget: "string" }
+      - { label: "Foto", name: "photo", widget: "image" }
+      - { label: "Reihenfolge", name: "order", widget: "number" }
+      - { label: "Spirit Animal", name: "spiritAnimal", widget: "string", required: false }
+      - { label: "Inspiriert von", name: "inspiredBy", widget: "string", required: false }
+      - { label: "Tätigkeitsfelder", name: "fieldOfWork", widget: "list", required: false }
+      - { label: "Qualifikationen", name: "qualifications", widget: "list", required: false }
+      - { label: "Bio", name: "body", widget: "markdown" }
+
+  - name: "tour-stops"
+    label: "Tour Stopps"
+    label_singular: "Stopp"
+    folder: "content/tour-stops"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Ort", name: "location", widget: "string" }
+      - { label: "Datum", name: "date", widget: "datetime", format: "YYYY-MM-DD", time_format: false }
+      - { label: "Foto", name: "photo", widget: "image" }
+      - { label: "Reihenfolge", name: "order", widget: "number" }
+      - { label: "Beschreibung", name: "body", widget: "markdown" }
+
+  - name: "studio-portfolio"
+    label: "Studio: Portfolio"
+    label_singular: "Werk"
+    folder: "content/studio-portfolio"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Bild", name: "image", widget: "image" }
+      - { label: "Reihenfolge", name: "order", widget: "number" }
+      - { label: "Beschreibung", name: "body", widget: "markdown", required: false }
+
+  - name: "studio-projects"
+    label: "Studio: Projekte & Veröffentlichungen"
+    label_singular: "Projekt"
+    folder: "content/studio-projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Link", name: "link", widget: "string", required: false }
+      - { label: "Bild", name: "image", widget: "image" }
+      - { label: "Reihenfolge", name: "order", widget: "number" }
+      - { label: "Beschreibung", name: "body", widget: "markdown", required: false }
+
+  - name: "studio-teaching"
+    label: "Studio: Unterrichtsmaterial"
+    label_singular: "Material"
+    folder: "content/studio-teaching"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Bild", name: "image", widget: "image" }
+      - { label: "Eduki-Link", name: "edukiLink", widget: "string", required: false }
+      - { label: "Reihenfolge", name: "order", widget: "number" }
+      - { label: "Beschreibung", name: "body", widget: "markdown", required: false }
+
+  - name: "pages"
+    label: "Seiten & Einstellungen"
+    files:
+      - name: "settings"
+        label: "Website-Einstellungen"
+        file: "content/pages/settings.md"
+        fields:
+          - { label: "Tagline (Startseite)", name: "tagline", widget: "string" }
+          - { label: "Kontakt-E-Mail", name: "contactEmail", widget: "string" }
+          - { label: "Instagram-Link", name: "instagramUrl", widget: "string", required: false }
+          - { label: "YouTube-Link", name: "youtubeUrl", widget: "string", required: false }
+          - { label: "TikTok-Link", name: "tiktokUrl", widget: "string", required: false }
+
+      - name: "tour_intro"
+        label: "Tour: Einleitung & CTA"
+        file: "content/pages/tour-intro.md"
+        fields:
+          - { label: "Seitentitel", name: "title", widget: "string" }
+          - { label: "Einleitungstext", name: "intro", widget: "text" }
+          - { label: "CTA-Überschrift", name: "ctaHeading", widget: "string" }
+          - { label: "CTA-Text", name: "ctaText", widget: "text" }
+          - { label: "CTA-E-Mail", name: "ctaEmail", widget: "string" }
+
+      - name: "studio_intro"
+        label: "Studio: Einleitung"
+        file: "content/pages/studio-intro.md"
+        fields:
+          - { label: "Seitentitel", name: "title", widget: "string" }
+          - { label: "Einleitungstext", name: "intro", widget: "text" }
+          - { label: "Eduki-Account-Link", name: "edukiUrl", widget: "string", required: false }
+
+      - name: "impressum"
+        label: "Impressum"
+        file: "content/pages/impressum.md"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Inhalt", name: "body", widget: "markdown" }
+
+      - name: "datenschutz"
+        label: "Datenschutz"
+        file: "content/pages/datenschutz.md"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Inhalt", name: "body", widget: "markdown" }

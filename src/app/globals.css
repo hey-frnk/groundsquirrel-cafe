@@ -1,0 +1,68 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  /* Brand palette */
+  --color-cream: #f7f2e7; /* page background */
+  --color-ivory: #e1cd9e; /* RAL 1014 — cards, nav, dividers */
+  --color-lilac: #c7b7db; /* accent — hover, borders */
+  --color-rose: #e0a7bb; /* highlight / CTA */
+  --color-ink: #4a4235; /* text */
+}
+
+@theme inline {
+  --color-cream: var(--color-cream);
+  --color-ivory: var(--color-ivory);
+  --color-lilac: var(--color-lilac);
+  --color-rose: var(--color-rose);
+  --color-ink: var(--color-ink);
+  --font-display: var(--font-special-elite);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-special-elite), "Courier New", monospace;
+}
+
+::selection {
+  background: var(--color-rose);
+  color: var(--color-ink);
+}
+
+.prose {
+  --tw-prose-body: var(--color-ink);
+  --tw-prose-headings: var(--color-ink);
+  --tw-prose-bold: var(--color-ink);
+  --tw-prose-links: var(--color-ink);
+  --tw-prose-quotes: var(--color-ink);
+  --tw-prose-quote-borders: var(--color-rose);
+  --tw-prose-bullets: var(--color-lilac);
+  --tw-prose-hr: var(--color-ivory);
+  --tw-prose-captions: color-mix(in srgb, var(--color-ink) 65%, transparent);
+}
+
+.prose a {
+  color: var(--color-ink);
+  text-decoration-color: var(--color-rose);
+  text-underline-offset: 3px;
+}
+
+.prose a:hover {
+  color: color-mix(in srgb, var(--color-rose) 70%, var(--color-ink));
+}
+
+.prose img {
+  border-radius: 0.75rem;
+}
+
+.prose em:only-child {
+  display: block;
+  text-align: center;
+  font-size: 0.875rem;
+  margin-top: -0.5rem;
+}

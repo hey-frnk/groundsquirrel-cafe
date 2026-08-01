@@ -1,0 +1,16 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="800" fill="#C7B7DB"/>
+  <rect x="24" y="24" width="752" height="752" fill="none" stroke="#4A4235" stroke-width="3" stroke-dasharray="10 10"/>
+  <g fill="none" stroke="#4A4235" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="400" cy="440" rx="110" ry="90"/>
+    <path d="M300 400 Q400 370 500 400"/>
+    <path d="M300 440 Q400 410 500 440"/>
+    <path d="M300 480 Q400 450 500 480"/>
+    <circle cx="400" cy="300" r="55"/>
+    <ellipse cx="300" cy="330" rx="55" ry="35" transform="rotate(-30 300 330)"/>
+    <ellipse cx="500" cy="330" rx="55" ry="35" transform="rotate(30 500 330)"/>
+    <line x1="380" y1="255" x2="360" y2="220"/>
+    <line x1="420" y1="255" x2="440" y2="220"/>
+  </g>
+  <text x="400" y="600" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#4A4235">Foto von Bumblepuutz folgt</text>
+</svg>
