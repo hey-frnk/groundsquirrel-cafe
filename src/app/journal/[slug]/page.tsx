@@ -30,7 +30,7 @@ export default async function JournalPostPage({
   const post = await getJournalPost(slug);
 
   return (
-    <article className="mx-auto max-w-2xl px-5 py-12">
+    <article className="mx-auto max-w-[52.5rem] px-5 py-12">
       <Link href="/journal" className="text-sm text-ink/60 hover:text-rose">
         ← Back to journal
       </Link>
