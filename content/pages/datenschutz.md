@@ -6,10 +6,9 @@ title: "Datenschutz"
 
 ## Who is responsible
 
-Evelyne Buttet\
-Sonnhalde 42\
-6013 Eigenthal, Switzerland\
-[evelyne.buttet@bluewin.ch](mailto:evelyne.buttet@bluewin.ch)
+![Evelyne Buttet, Sonnhalde 42, 6013 Eigenthal, Switzerland — evelyne.buttet@bluewin.ch](/images/legal/impressum-contact.png)
+
+*(Shown as an image rather than plain text to reduce automated address/email harvesting — see the [Impressum](/impressum/) for the same details.)*
 
 This website is operated from Switzerland and personal data is processed in accordance with the Swiss Federal Act on Data Protection (FADP). Where visitors from the EU/EEA are concerned, we also aim to comply with the GDPR.
 
@@ -42,7 +41,7 @@ Journal posts, shop listings, and other content on this site are edited by Evely
 
 ## Your rights
 
-Under the Swiss FADP (and, where applicable, the GDPR), you have the right to request information about, correction of, or deletion of personal data we hold about you — for example, emails you've previously sent us. To exercise any of these rights, contact us at [evelyne.buttet@bluewin.ch](mailto:evelyne.buttet@bluewin.ch).
+Under the Swiss FADP (and, where applicable, the GDPR), you have the right to request information about, correction of, or deletion of personal data we hold about you — for example, emails you've previously sent us. To exercise any of these rights, use the contact details above.
 
 ## Changes to this policy
 
