@@ -1,7 +1,7 @@
 ---
 title: "Elephant"
-image: "/images/studio/portfolio-elephant.png"
-order: 3
+image: "/images/studio/sketch-elephant.webp"
+order: 9
 ---
 
-A graphite and watercolor elephant, inspired by Evelyne's time as a field guide in South Africa.
+A graphite elephant sketch, inspired by Evelyne's time as a field guide in South Africa.

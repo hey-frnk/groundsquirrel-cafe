@@ -1,7 +1,7 @@
 ---
 title: "Christmas Stories"
 link: ""
-image: "/images/studio/project-prints-collection.jpg"
+image: "/images/studio/placeholder-project.svg"
 order: 2
 ---
 

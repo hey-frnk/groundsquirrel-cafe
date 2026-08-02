@@ -1,7 +1,7 @@
 ---
 title: "The Power Cut"
 link: ""
-image: "/images/studio/about-evelyne-at-work.jpg"
+image: "/images/studio/book-the-power-cut.webp"
 order: 1
 ---
 

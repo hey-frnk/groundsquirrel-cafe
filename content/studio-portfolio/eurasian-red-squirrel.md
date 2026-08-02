@@ -1,7 +1,7 @@
 ---
 title: "Eurasian Red Squirrel"
-image: "/images/studio/portfolio-eurasian-red-squirrel.jpg"
-order: 5
+image: "/images/studio/poster-eurasian-red-squirrel.webp"
+order: 2
 ---
 
-Part of Evelyne's illustrated field-guide-style species cards — habitat, range map and fun facts alongside the artwork.
+Endangered in parts of its range and outcompeted by the Eastern Grey Squirrel — one of the species cards from Evelyne's "Squirrels of the World" series.

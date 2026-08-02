@@ -1,7 +1,7 @@
 ---
 title: "Flamingo"
-image: "/images/studio/portfolio-flamingo.png"
-order: 2
+image: "/images/studio/watercolor-flamingo.webp"
+order: 8
 ---
 
 A watercolor flamingo, wings spread mid-stride through shallow water.

@@ -23,6 +23,22 @@ html {
   scroll-behavior: smooth;
 }
 
+.sparkle-bg {
+  background-image:
+    radial-gradient(circle at 8% 20%, color-mix(in srgb, white 90%, transparent) 0 3px, transparent 3px),
+    radial-gradient(circle at 22% 65%, color-mix(in srgb, white 80%, transparent) 0 2px, transparent 2px),
+    radial-gradient(circle at 38% 15%, color-mix(in srgb, white 85%, transparent) 0 2.5px, transparent 2.5px),
+    radial-gradient(circle at 55% 75%, color-mix(in srgb, white 75%, transparent) 0 2px, transparent 2px),
+    radial-gradient(circle at 68% 30%, color-mix(in srgb, white 90%, transparent) 0 3px, transparent 3px),
+    radial-gradient(circle at 82% 60%, color-mix(in srgb, white 80%, transparent) 0 2px, transparent 2px),
+    radial-gradient(circle at 92% 12%, color-mix(in srgb, white 85%, transparent) 0 2.5px, transparent 2.5px),
+    radial-gradient(circle at 15% 88%, color-mix(in srgb, white 80%, transparent) 0 2px, transparent 2px),
+    radial-gradient(circle at 47% 45%, color-mix(in srgb, white 70%, transparent) 0 1.5px, transparent 1.5px),
+    radial-gradient(circle at 74% 85%, color-mix(in srgb, white 75%, transparent) 0 2px, transparent 2px);
+  background-repeat: repeat;
+  background-size: 220px 220px;
+}
+
 body {
   background: var(--color-cream);
   color: var(--color-ink);

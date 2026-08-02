@@ -1,7 +1,7 @@
 ---
 title: "Wildlife Around the World"
 link: ""
-image: "/images/studio/project-squirrels-of-the-world.jpg"
+image: "/images/studio/sketch-elephant.webp"
 order: 3
 ---
 

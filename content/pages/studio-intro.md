@@ -1,7 +1,8 @@
 ---
-title: "Studio"
-intro: "Welcome to Evelyne's creative space — wildlife illustrations, storytelling, and colorful projects inspired by life on the road."
-etsyUrl: "[PLATZHALTER: Link zum Etsy-Shop einfügen, falls noch aktiv]"
+title: "hummel & bear"
+subtitle: "weltenhummler's creative space"
+intro: "Hummel & Bear was founded in 2025 by Evelyne as a creative studio dedicated to sharing her vivid illustrations, with a primary focus on wildlife, particularly endangered species."
+etsyUrl: "https://hummelandbear.etsy.com/"
 edukiUrl: "[PLATZHALTER: Link zu Eduki-Account einfügen]"
 ---
 
