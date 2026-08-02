@@ -29,7 +29,7 @@ export default function ProductCard({
           alt={variant ? `${product.title} — ${variant.label}` : product.title}
           fill
           sizes="(max-width: 640px) 50vw, 33vw"
-          className="object-cover"
+          className="object-contain"
         />
       </div>
       <h2 className="text-base mt-3">{product.title}</h2>
