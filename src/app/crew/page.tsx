@@ -33,14 +33,14 @@ export default async function CrewPage() {
                 {member.photos.map((photo) => (
                   <div
                     key={photo}
-                    className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border-4 border-ivory shadow-sm"
+                    className="rounded-2xl overflow-hidden border-4 border-ivory shadow-sm"
                   >
-                    <Image
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
                       src={photo}
                       alt={member.name}
-                      fill
-                      sizes="256px"
-                      className="object-cover"
+                      loading="lazy"
+                      className="block w-full h-auto"
                     />
                   </div>
                 ))}

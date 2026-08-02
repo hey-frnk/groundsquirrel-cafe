@@ -23,13 +23,13 @@ const PREVIEW_CARDS = [
     href: "/studio",
     label: "Studio",
     sub: "Evelyne's art",
-    image: "/images/studio/placeholder-portfolio.svg",
+    image: "/images/studio/evelyne-in-humbaer.webp",
   },
   {
     href: "/shop",
     label: "Shop",
     sub: "Squirrel goods",
-    image: "/images/shop/placeholder-product.svg",
+    image: "/images/studio/stickers-on-table.webp",
   },
   {
     href: "/crew",
