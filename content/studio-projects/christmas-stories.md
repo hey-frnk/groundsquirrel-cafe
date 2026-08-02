@@ -1,7 +1,7 @@
 ---
 title: "Christmas Stories"
 link: ""
-image: "/images/studio/placeholder-project.svg"
+image: "/images/studio/book-christmas-stories.webp"
 order: 2
 ---
 

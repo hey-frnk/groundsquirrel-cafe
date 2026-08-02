@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ProjectCarousel from "@/components/ProjectCarousel";
 import {
   getPage,
   getStudioPortfolio,
@@ -115,29 +116,7 @@ export default async function StudioPage() {
         {/* Recent Projects */}
         <section className="mb-20">
           <h2 className="text-2xl mb-6 text-center">recent projects</h2>
-          <div className="grid sm:grid-cols-3 gap-6">
-            {projects.map((item) => (
-              <div key={item.slug} className="flex flex-col rounded-xl border border-ink/10 overflow-hidden bg-white/40">
-                <div className="relative aspect-[4/3]">
-                  <Image src={item.image} alt={item.title} fill className="object-cover" />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-lg mb-1">{item.title}</h3>
-                  <p className="text-sm text-ink/70">{item.description}</p>
-                  {!isPlaceholder(item.link) && (
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm text-rose hover:underline"
-                    >
-                      Learn more →
-                    </a>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
+          <ProjectCarousel projects={projects} />
         </section>
 
         {/* Teaching Materials */}
