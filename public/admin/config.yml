@@ -44,6 +44,20 @@ collections:
         required: false
         hint: "Erstellt einen Payment Link in eurem Stripe-Dashboard und fügt den Link hier ein. Leer lassen = Button zeigt 'Coming soon'."
       - { label: "Reihenfolge", name: "order", widget: "number", default: 1 }
+      - label: "Varianten (z.B. Set / einzelne Designs)"
+        name: "variants"
+        widget: "list"
+        required: false
+        hint: "Falls ausgefüllt, zeigt der Shop ein Auswahl-Dropdown statt eines festen Preises/Fotos. Leer lassen für ein Produkt ohne Varianten."
+        fields:
+          - { label: "Bezeichnung (im Dropdown)", name: "label", widget: "string" }
+          - { label: "Preis", name: "price", widget: "string", required: false, hint: "z.B. CHF 12.00" }
+          - { label: "Foto", name: "image", widget: "image", required: false }
+          - label: "Stripe Payment Link"
+            name: "stripeLink"
+            widget: "string"
+            required: false
+            hint: "Leer lassen = Button zeigt 'Coming soon'."
       - { label: "Beschreibung", name: "body", widget: "markdown", required: false }
 
   - name: "crew"

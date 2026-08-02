@@ -110,6 +110,13 @@ export async function getAllCrewMembers(): Promise<(CrewMember & { contentHtml: 
   );
 }
 
+export interface ShopProductVariant {
+  label: string;
+  price?: string;
+  image?: string;
+  stripeLink?: string;
+}
+
 export interface ShopProduct {
   slug: string;
   title: string;
@@ -117,13 +124,21 @@ export interface ShopProduct {
   image: string;
   stripeLink: string;
   order: number;
+  variants?: ShopProductVariant[];
+}
+
+// The CMS list widget stores an empty variants list as undefined/missing, so
+// normalize it away entirely rather than expose a variants: [] with no options.
+function normalizeVariants(variants: unknown): ShopProductVariant[] | undefined {
+  if (!Array.isArray(variants) || variants.length === 0) return undefined;
+  return variants as ShopProductVariant[];
 }
 
 export function getAllShopProducts(): (ShopProduct & { description: string })[] {
   return readDir("shop")
     .map((filename) => {
       const { slug, data, content } = readEntry<ShopProduct>("shop", filename);
-      return { ...data, slug, description: content.trim() };
+      return { ...data, slug, description: content.trim(), variants: normalizeVariants(data.variants) };
     })
     .sort((a, b) => a.order - b.order);
 }
