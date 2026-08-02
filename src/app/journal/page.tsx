@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { getAllJournalPosts } from "@/lib/content";
 
@@ -16,20 +15,20 @@ export default function JournalPage() {
         Stories, hikes, and slow travel from wherever Humbär takes us.
       </p>
 
-      <div className="grid sm:grid-cols-2 gap-8">
+      <div className="columns-1 sm:columns-2 lg:columns-3 gap-8">
         {posts.map((post) => (
           <Link
             key={post.slug}
             href={`/journal/${post.slug}`}
-            className="group flex flex-col"
+            className="group block mb-8 break-inside-avoid"
           >
-            <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-ink/10">
-              <Image
+            <div className="overflow-hidden rounded-xl border border-ink/10">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src={post.cover}
                 alt={post.title}
-                fill
-                sizes="(max-width: 640px) 100vw, 50vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+                className="block w-full h-auto transition-transform duration-500 group-hover:scale-105"
               />
             </div>
             <div className="mt-4">
