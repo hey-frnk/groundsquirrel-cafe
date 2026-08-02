@@ -4,12 +4,18 @@ import {
   getStudioPortfolio,
   getStudioProjects,
   getStudioTeaching,
+  markdownToHtml,
 } from "@/lib/content";
 
 interface StudioIntro {
   title: string;
   intro: string;
+  etsyUrl: string;
   edukiUrl: string;
+}
+
+interface Settings {
+  contactEmail: string;
 }
 
 export const metadata = {
@@ -20,16 +26,37 @@ function isPlaceholder(value?: string) {
   return !value || value.includes("PLATZHALTER");
 }
 
-export default function StudioPage() {
+export default async function StudioPage() {
   const intro = getPage<StudioIntro>("studio-intro");
+  const bioHtml = await markdownToHtml(intro.content);
   const portfolio = getStudioPortfolio();
   const projects = getStudioProjects();
   const teaching = getStudioTeaching();
+  const settings = getPage<Settings>("settings");
 
   return (
     <div className="mx-auto max-w-5xl px-5 py-12">
       <h1 className="text-3xl sm:text-4xl text-center mb-4">{intro.title}</h1>
-      <p className="text-center text-ink/80 max-w-xl mx-auto mb-16">{intro.intro}</p>
+      <p className="text-center text-ink/80 max-w-xl mx-auto mb-8">{intro.intro}</p>
+
+      <div
+        className="prose prose-sm max-w-2xl mx-auto mb-6 text-center"
+        dangerouslySetInnerHTML={{ __html: bioHtml }}
+      />
+
+      {!isPlaceholder(intro.etsyUrl) && (
+        <p className="text-center mb-16">
+          <a
+            href={intro.etsyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block rounded-full bg-lilac/40 border border-lilac px-6 py-2 text-sm hover:bg-lilac/60 transition-colors"
+          >
+            Shop on Etsy →
+          </a>
+        </p>
+      )}
+      {isPlaceholder(intro.etsyUrl) && <div className="mb-16" />}
 
       <section className="mb-16">
         <h2 className="text-2xl mb-6 text-center">Portfolio</h2>
@@ -126,6 +153,23 @@ export default function StudioPage() {
           ))}
         </div>
       </section>
+
+      <div className="mt-20 rounded-2xl bg-lilac/30 border border-lilac px-6 py-10 text-center">
+        <h2 className="text-2xl mb-3">Collaborations</h2>
+        <p className="max-w-xl mx-auto mb-6 text-ink/80">
+          Are you looking for a passionate illustrator to bring your vision to life? Have
+          one of my original paintings caught your eye, or do you have a special idea
+          you&rsquo;d love to see painted — a book project, a flyer, a business card, or
+          any other creative concept? Don&rsquo;t hesitate to get in touch, I&rsquo;m
+          looking forward to meeting you!
+        </p>
+        <a
+          href={`mailto:${settings.contactEmail}`}
+          className="inline-block rounded-full bg-ink text-cream px-8 py-3 transition-colors hover:bg-rose hover:text-ink"
+        >
+          Get in touch
+        </a>
+      </div>
     </div>
   );
 }

@@ -142,8 +142,10 @@ collections:
         file: "content/pages/studio-intro.md"
         fields:
           - { label: "Seitentitel", name: "title", widget: "string" }
-          - { label: "Einleitungstext", name: "intro", widget: "text" }
+          - { label: "Einleitungstext (kurz)", name: "intro", widget: "text" }
+          - { label: "Etsy-Shop-Link", name: "etsyUrl", widget: "string", required: false }
           - { label: "Eduki-Account-Link", name: "edukiUrl", widget: "string", required: false }
+          - { label: "Bio-Text (länger, unter der Einleitung)", name: "body", widget: "markdown" }
 
       - name: "impressum"
         label: "Impressum"
