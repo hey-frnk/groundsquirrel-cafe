@@ -45,5 +45,9 @@ next-env.d.ts
 /archived_blogs/
 /archived_pages/
 
+# raw, full-resolution source photos dropped in for processing — web-ready
+# versions get copied into public/images/... instead of committing these
+/res/
+
 # local Claude Code session settings (machine-specific, not for sharing)
 .claude/settings.local.json

@@ -56,6 +56,11 @@ collections:
       - { label: "Name", name: "name", widget: "string" }
       - { label: "Rolle", name: "role", widget: "string" }
       - { label: "Foto", name: "photo", widget: "image" }
+      - label: "Weitere Fotos (optional, werden untereinander gezeigt statt des einzelnen runden Fotos)"
+        name: "photos"
+        widget: "list"
+        field: { label: "Foto", name: "image", widget: "image" }
+        required: false
       - { label: "Reihenfolge", name: "order", widget: "number" }
       - { label: "Spirit Animal", name: "spiritAnimal", widget: "string", required: false }
       - { label: "Inspiriert von", name: "inspiredBy", widget: "string", required: false }

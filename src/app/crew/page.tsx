@@ -28,15 +28,34 @@ export default async function CrewPage() {
               i % 2 === 1 ? "md:flex-row-reverse" : ""
             }`}
           >
-            <div className="relative w-56 h-56 sm:w-64 sm:h-64 shrink-0 rounded-full overflow-hidden border-4 border-ivory shadow-sm">
-              <Image
-                src={member.photo}
-                alt={member.name}
-                fill
-                sizes="256px"
-                className="object-cover"
-              />
-            </div>
+            {member.photos && member.photos.length > 0 ? (
+              <div className="flex flex-col gap-4 shrink-0 w-56 sm:w-64">
+                {member.photos.map((photo) => (
+                  <div
+                    key={photo}
+                    className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border-4 border-ivory shadow-sm"
+                  >
+                    <Image
+                      src={photo}
+                      alt={member.name}
+                      fill
+                      sizes="256px"
+                      className="object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="relative w-56 h-56 sm:w-64 sm:h-64 shrink-0 rounded-full overflow-hidden border-4 border-ivory shadow-sm">
+                <Image
+                  src={member.photo}
+                  alt={member.name}
+                  fill
+                  sizes="256px"
+                  className="object-cover"
+                />
+              </div>
+            )}
             <div className="text-center md:text-left">
               <h2 className="text-2xl mb-1">{member.name}</h2>
               <p className="text-sm text-rose mb-4">{member.role}</p>

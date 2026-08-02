@@ -1,7 +1,8 @@
 ---
 name: "Humbär"
 role: "Classic car, home & solar-powered café on wheels"
-photo: "/images/crew/placeholder-humbaer.svg"
+photo: "/images/crew/humbaer-outside.jpg"
+photos: ["/images/crew/humbaer-outside.jpg", "/images/crew/humbaer-inside.jpg"]
 order: 3
 spiritAnimal: "Extra fluffy and very spacious bumblebee (aka Bumblepuutz)"
 inspiredBy: "His own interior, and the person who looked after him so well — Humbär is built, not bought"

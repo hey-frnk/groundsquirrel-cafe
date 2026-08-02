@@ -1,7 +1,7 @@
 ---
 name: "Bumblepuutz"
 role: "Our mascot, one fat, fluffy bumblebee"
-photo: "/images/crew/placeholder-bumblepuutz.svg"
+photo: "/images/crew/bumblepuutz.jpg"
 order: 4
 spiritAnimal: "Big grizzly bear in the Alaskan wilderness"
 inspiredBy: "Nature"

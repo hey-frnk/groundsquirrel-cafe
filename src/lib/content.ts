@@ -79,6 +79,7 @@ export interface CrewMember {
   name: string;
   role: string;
   photo: string;
+  photos?: string[];
   order: number;
   spiritAnimal?: string;
   inspiredBy?: string;
@@ -86,10 +87,19 @@ export interface CrewMember {
   qualifications?: string[];
 }
 
+// The CMS list widget can store each entry either as a plain string or as
+// { image: "..." } depending on how it's configured — accept both.
+function normalizePhotos(photos: unknown): string[] | undefined {
+  if (!Array.isArray(photos)) return undefined;
+  return photos
+    .map((p) => (typeof p === "string" ? p : (p as { image?: string })?.image))
+    .filter((p): p is string => Boolean(p));
+}
+
 export async function getAllCrewMembers(): Promise<(CrewMember & { contentHtml: string })[]> {
   const entries = readDir("crew").map((filename) => {
     const { slug, data, content } = readEntry<CrewMember>("crew", filename);
-    return { ...data, slug, content };
+    return { ...data, slug, content, photos: normalizePhotos(data.photos) };
   });
   entries.sort((a, b) => a.order - b.order);
   return Promise.all(
