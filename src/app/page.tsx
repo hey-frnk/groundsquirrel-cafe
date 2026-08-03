@@ -24,6 +24,14 @@ function isPlaceholder(value?: string) {
   return !value || value.includes("PLATZHALTER");
 }
 
+const NAV_LINKS = [
+  { href: "/tour", label: "Tour" },
+  { href: "/journal", label: "Journal" },
+  { href: "/studio", label: "Studio" },
+  { href: "/shop", label: "Shop" },
+  { href: "/crew", label: "Crew" },
+];
+
 const PLACES = [
   {
     href: "/tour",
@@ -70,47 +78,155 @@ export default function Home() {
 
   return (
     <div>
-      {/* ---------- Hero: the hand-painted sign, and the view out the door ---------- */}
-      <section>
-        {/* fixed ratios rather than vh, so the sign and the window are always
-            both in frame whatever the viewport does */}
-        <div className="relative aspect-4/5 sm:aspect-5/2">
-          {/* Art-directed: the wide crop loses the sign on narrow screens. A real
-              <picture> (rather than two <Image>s toggled with `hidden`) so only
-              the crop actually shown gets downloaded — images are unoptimized in
-              this export anyway, so next/image would add nothing here. */}
-          <picture>
-            <source media="(min-width: 640px)" srcSet="/images/home/hero-wide.webp" />
-            <img
-              src="/images/home/hero-tall.webp"
-              alt="A guitar and a hand-painted 'the ground squirrel café' sign above the open door of the camper, looking out over a green Swiss valley"
-              fetchPriority="high"
-              className="absolute inset-0 h-full w-full object-cover object-center"
-            />
-          </picture>
-        </div>
+      {/* ---------- Hero: the intro film, with the nav living inside it ---------- */}
+      <section className="relative isolate overflow-hidden">
+        <div className="relative h-[72vh] max-h-205 min-h-112 sm:h-[84vh] sm:min-h-140">
+          {/* object-position sits left of centre so the van stays in frame when a
+              narrow viewport crops the sides off the 16:9 film */}
+          <video
+            className="hero-video absolute inset-0 h-full w-full object-cover object-[30%_50%]"
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/images/home/intro-poster.webp"
+            aria-label="Humbär parked on a clifftop above the sea, with Evelyne and Frank waving from the open side door"
+          >
+            <source src="/videos/intro.mp4" type="video/mp4" />
+          </video>
+          {/* shown instead of the film when the visitor prefers reduced motion */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/home/intro-poster.webp"
+            alt="Humbär parked on a clifftop above the sea, with Evelyne and Frank at the open side door"
+            className="hero-still absolute inset-0 h-full w-full object-cover object-[30%_50%]"
+          />
 
-        <div className="mx-auto max-w-3xl px-5 pt-10 text-center sm:pt-14">
-          <p className="text-[0.7rem] uppercase tracking-[0.3em] text-ink/55">
-            {home.heroKicker}
-          </p>
-          <h1 className="mt-3 text-4xl sm:text-5xl lg:text-6xl leading-tight">
-            {home.heroHeadline}
-          </h1>
-          <p className="mx-auto mt-4 max-w-xl text-ink/75">{settings.tagline}</p>
-          <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
+          <div className="absolute inset-0 bg-ink/15" />
+          <div className="absolute inset-x-0 top-0 h-40 bg-linear-to-b from-ink/55 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-3/4 bg-linear-to-t from-ink/90 via-ink/55 to-transparent" />
+
+          {/* Navigation, sitting on the film */}
+          <div className="absolute inset-x-0 top-0 z-10 px-5 py-4 sm:py-6">
+            <div className="mx-auto flex max-w-6xl flex-col items-center gap-2.5 sm:flex-row sm:justify-between sm:gap-6">
+              <Link href="/" className="flex items-center gap-2.5 text-cream drop-shadow">
+                <Image
+                  src="/images/brand/logo_notext.png"
+                  alt=""
+                  width={38}
+                  height={38}
+                  className="w-8 sm:w-9.5"
+                />
+                <span className="text-sm sm:text-base">the ground squirrel café</span>
+              </Link>
+
+              <nav className="flex items-center gap-4 text-xs text-cream/90 drop-shadow sm:gap-7 sm:text-sm">
+                {NAV_LINKS.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="transition-colors hover:text-rose"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+            </div>
+          </div>
+
+          {/* The welcome */}
+          <div className="absolute inset-x-0 bottom-0 z-10 px-5 pb-10 text-center text-cream sm:pb-16">
+            {/* a badge rather than bare text — it crosses the brightest part of
+                the film, where a scrim alone can't hold it */}
+            <p className="inline-block rounded-full border border-cream/25 bg-ink/45 px-4 py-1.5 text-[0.62rem] uppercase tracking-[0.18em] text-cream backdrop-blur-[2px] sm:text-[0.7rem] sm:tracking-[0.3em]">
+              {home.heroKicker}
+            </p>
+            <h1 className="mt-3 text-4xl leading-tight drop-shadow-md sm:text-5xl lg:text-6xl">
+              {home.heroHeadline}
+            </h1>
+            <p className="mx-auto mt-4 max-w-xl text-cream/90 drop-shadow-md">{settings.tagline}</p>
+            <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
+              <Link
+                href="/tour"
+                className="rounded-full bg-rose px-7 py-3 text-ink shadow-lg transition-colors hover:bg-cream"
+              >
+                Visit the café
+              </Link>
+              <Link
+                href="/journal"
+                className="rounded-full border border-cream/60 px-7 py-3 text-cream transition-colors hover:bg-cream/15"
+              >
+                Read the journal
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ---------- Where to go next ---------- */}
+      <section className="mx-auto max-w-6xl px-5 pt-14 sm:pt-20">
+        <div className="grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">
+          {PLACES.map((place) => (
             <Link
-              href="/tour"
-              className="rounded-full bg-ink px-7 py-3 text-cream transition-colors hover:bg-rose hover:text-ink"
+              key={place.href}
+              href={place.href}
+              className={`group relative overflow-hidden rounded-2xl border border-ink/10 bg-ivory shadow-sm ${
+                place.wide
+                  ? "col-span-2 aspect-4/3 sm:aspect-16/9 lg:aspect-auto lg:row-span-2"
+                  : "aspect-3/4"
+              }`}
             >
-              Visit the café
+              <Image
+                src={place.image}
+                alt={place.alt}
+                fill
+                sizes={
+                  place.wide ? "(max-width: 1024px) 92vw, 46vw" : "(max-width: 1024px) 45vw, 23vw"
+                }
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-ink/75 via-ink/15 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 p-4 text-cream sm:p-5">
+                <div className={place.wide ? "text-2xl sm:text-3xl" : "text-lg"}>{place.label}</div>
+                <div className="mt-0.5 text-xs opacity-85 sm:text-sm">{place.sub}</div>
+              </div>
             </Link>
-            <Link
-              href="/journal"
-              className="rounded-full border border-ink/25 px-7 py-3 transition-colors hover:bg-ivory"
-            >
-              Read the journal
-            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* ---------- The studio ---------- */}
+      <section id="studio" className="mx-auto max-w-6xl px-5 pt-16 scroll-mt-8 sm:pt-24">
+        <div className="overflow-hidden rounded-3xl border border-lilac bg-lilac/25">
+          <div className="grid items-center lg:grid-cols-[1fr_0.85fr]">
+            <div className="px-6 py-10 sm:px-12 sm:py-14">
+              <h2 className="text-3xl leading-tight sm:text-4xl">{home.studioHeading}</h2>
+              <p className="mt-5 leading-relaxed text-ink/80">{home.studioText}</p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link
+                  href="/studio"
+                  className="rounded-full bg-ink px-7 py-3 text-cream transition-colors hover:bg-cream hover:text-ink"
+                >
+                  Into the studio
+                </Link>
+                <Link
+                  href="/shop"
+                  className="rounded-full border border-ink/25 px-7 py-3 transition-colors hover:bg-cream/70"
+                >
+                  Visit the shop
+                </Link>
+              </div>
+            </div>
+
+            <div className="sparkle-bg relative min-h-64 lg:min-h-full">
+              <Image
+                src="/images/studio/hero-squirrel.webp"
+                alt="Evelyne's painting of a golden-mantled ground squirrel with a nut"
+                fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="object-contain p-10"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -119,7 +235,7 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-5 pt-16 sm:pt-24">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div>
-            <h2 className="text-3xl sm:text-4xl leading-tight">{home.welcomeHeading}</h2>
+            <h2 className="text-3xl leading-tight sm:text-4xl">{home.welcomeHeading}</h2>
             <p className="mt-5 leading-relaxed text-ink/75">{home.welcomeText}</p>
             <Link
               href="/crew"
@@ -164,36 +280,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------- Where to go next ---------- */}
-      <section className="mx-auto max-w-6xl px-5 pt-16 sm:pt-24">
-        <div className="grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">
-          {PLACES.map((place) => (
-            <Link
-              key={place.href}
-              href={place.href}
-              className={`group relative overflow-hidden rounded-2xl border border-ink/10 bg-ivory shadow-sm ${
-                place.wide
-                  ? "col-span-2 aspect-4/3 sm:aspect-16/9 lg:aspect-auto lg:row-span-2"
-                  : "aspect-3/4"
-              }`}
-            >
-              <Image
-                src={place.image}
-                alt={place.alt}
-                fill
-                sizes={place.wide ? "(max-width: 1024px) 92vw, 46vw" : "(max-width: 1024px) 45vw, 23vw"}
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-linear-to-t from-ink/75 via-ink/15 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5 text-cream">
-                <div className={place.wide ? "text-2xl sm:text-3xl" : "text-lg"}>{place.label}</div>
-                <div className="mt-0.5 text-xs opacity-85 sm:text-sm">{place.sub}</div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
-
       {/* ---------- A quiet moment ---------- */}
       <section className="relative mt-16 sm:mt-24">
         <div className="relative h-56 sm:h-72 lg:h-96">
@@ -206,7 +292,7 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-ink/25" />
           <div className="absolute inset-0 flex items-center justify-center px-6">
-            <p className="max-w-2xl text-center text-xl sm:text-3xl leading-snug text-cream drop-shadow-md">
+            <p className="max-w-2xl text-center text-xl leading-snug text-cream drop-shadow-md sm:text-3xl">
               {home.bandCaption}
             </p>
           </div>
@@ -215,7 +301,7 @@ export default function Home() {
 
       {/* ---------- Latest from the journal ---------- */}
       {posts.length > 0 && (
-        <section id="journal" className="mx-auto max-w-6xl px-5 pt-16 sm:pt-24 scroll-mt-8">
+        <section id="journal" className="mx-auto max-w-6xl px-5 pt-16 scroll-mt-8 sm:pt-24">
           <div className="flex flex-wrap items-end justify-between gap-3">
             <div>
               <p className="text-[0.7rem] uppercase tracking-[0.3em] text-ink/50">
@@ -260,44 +346,8 @@ export default function Home() {
         </section>
       )}
 
-      {/* ---------- The studio ---------- */}
-      <section id="studio" className="mx-auto max-w-6xl px-5 pt-16 sm:pt-24 scroll-mt-8">
-        <div className="overflow-hidden rounded-3xl border border-lilac bg-lilac/25">
-          <div className="grid items-center lg:grid-cols-[1fr_0.85fr]">
-            <div className="px-6 py-10 sm:px-12 sm:py-14">
-              <h2 className="text-3xl sm:text-4xl leading-tight">{home.studioHeading}</h2>
-              <p className="mt-5 leading-relaxed text-ink/80">{home.studioText}</p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <Link
-                  href="/studio"
-                  className="rounded-full bg-ink px-7 py-3 text-cream transition-colors hover:bg-cream hover:text-ink"
-                >
-                  Into the studio
-                </Link>
-                <Link
-                  href="/shop"
-                  className="rounded-full border border-ink/25 px-7 py-3 transition-colors hover:bg-cream/70"
-                >
-                  Visit the shop
-                </Link>
-              </div>
-            </div>
-
-            <div className="sparkle-bg relative min-h-64 lg:min-h-full">
-              <Image
-                src="/images/studio/hero-squirrel.webp"
-                alt="Evelyne's painting of a golden-mantled ground squirrel with a nut"
-                fill
-                sizes="(max-width: 1024px) 100vw, 40vw"
-                className="object-contain p-10"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ---------- Come find us ---------- */}
-      <section id="hello" className="relative mt-16 sm:mt-24 scroll-mt-8">
+      <section id="hello" className="relative mt-16 scroll-mt-8 sm:mt-24">
         <div className="relative flex min-h-112 items-center justify-center px-5 sm:min-h-125">
           <Image
             src="/images/home/band-golden.webp"

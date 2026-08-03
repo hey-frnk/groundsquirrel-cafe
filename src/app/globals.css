@@ -23,6 +23,22 @@ html {
   scroll-behavior: smooth;
 }
 
+/* The homepage intro film, with a still for anyone who'd rather not have
+   motion — the poster frame stands in for the loop. */
+.hero-still {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-video {
+    display: none;
+  }
+
+  .hero-still {
+    display: block;
+  }
+}
+
 .sparkle-bg {
   background-image:
     radial-gradient(circle at 8% 20%, color-mix(in srgb, white 90%, transparent) 0 3px, transparent 3px),
