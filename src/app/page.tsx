@@ -25,6 +25,16 @@ function isPlaceholder(value?: string) {
   return !value || value.includes("PLATZHALTER");
 }
 
+/**
+ * Headlines are written in the CMS, where the natural way to ask for a line
+ * break is either a real newline or a typed <br>. Neither survives as-is in
+ * JSX, so split on both and let the caller render the parts as blocks — no raw
+ * HTML from content has to be trusted.
+ */
+function splitLines(text: string): string[] {
+  return text.split(/\s*(?:<br\s*\/?>|\n)\s*/).filter(Boolean);
+}
+
 const NAV_LINKS = [
   { href: "/tour", label: "Tour" },
   { href: "/journal", label: "Journal" },
@@ -33,14 +43,17 @@ const NAV_LINKS = [
   { href: "/crew", label: "Crew" },
 ];
 
+// Deliberately mismatched aspect ratios — they're what turns the row of tiles
+// into a pinboard once the cards flow into columns.
 const PLACES = [
   {
     href: "/tour",
     label: "Tour",
-    sub: "The café on wheels — and how to book it for your event",
+    sub: "The café on wheels, and how to book it for your event",
     image: "/images/tour/hero-3.webp",
     alt: "Humbär with his hatch open and the OPEN sign out",
-    wide: true,
+    aspect: "aspect-2/3",
+    feature: true,
   },
   {
     href: "/journal",
@@ -48,6 +61,7 @@ const PLACES = [
     sub: "Stories from the road",
     image: "/images/journal/sichuan-road-trip/IMG_6312.jpg",
     alt: "A misty mountain road in Sichuan",
+    aspect: "aspect-4/5",
   },
   {
     href: "/studio",
@@ -55,6 +69,7 @@ const PLACES = [
     sub: "Evelyne's wildlife art",
     image: "/images/studio/evelyne-in-humbaer.webp",
     alt: "Evelyne drawing at the table inside the camper",
+    aspect: "aspect-square",
   },
   {
     href: "/shop",
@@ -62,6 +77,7 @@ const PLACES = [
     sub: "Squirrel goods",
     image: "/images/studio/stickers-on-table.webp",
     alt: "Hand-drawn squirrel stickers spread on a table",
+    aspect: "aspect-4/5",
   },
   {
     href: "/crew",
@@ -69,6 +85,7 @@ const PLACES = [
     sub: "Meet everyone, van included",
     image: "/images/crew/evelyne-and-frank.webp",
     alt: "Evelyne and Frank together outside the camper",
+    aspect: "aspect-3/4",
   },
 ];
 
@@ -122,7 +139,9 @@ export default function Home() {
                 />
               </Link>
 
-              <nav className="flex items-center gap-4 text-xs text-cream/90 drop-shadow sm:absolute sm:top-2 sm:right-0 sm:gap-7 sm:text-sm">
+              {/* from sm up the links are pulled out of flow and centred on the
+                  badge's own mid-line, so the two sit level */}
+              <nav className="flex items-center gap-4 text-xs text-cream/90 drop-shadow sm:absolute sm:top-1/2 sm:right-0 sm:-translate-y-1/2 sm:gap-7 sm:text-sm">
                 {NAV_LINKS.map((link) => (
                   <Link
                     key={link.href}
@@ -147,7 +166,11 @@ export default function Home() {
                   {home.heroKicker}
                 </p>
                 <h1 className="mt-3 text-4xl leading-tight drop-shadow-md sm:text-5xl lg:text-6xl">
-                  {home.heroHeadline}
+                  {splitLines(home.heroHeadline).map((line) => (
+                    <span key={line} className="block">
+                      {line}
+                    </span>
+                  ))}
                 </h1>
                 <p className="mt-4 text-cream/90 drop-shadow-md">{home.heroSubline}</p>
                 <div className="mt-7 flex flex-wrap items-center justify-center gap-3 sm:justify-start">
@@ -172,30 +195,44 @@ export default function Home() {
 
       {/* ---------- Where to go next ---------- */}
       <section className="mx-auto max-w-6xl px-5 pt-14 sm:pt-20">
-        <div className="grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-4">
+        <div className="text-center">
+          <p className="text-[0.7rem] uppercase tracking-[0.3em] text-ink/50">have a look around</p>
+          <h2 className="mt-3 text-3xl sm:text-4xl">Where would you like to go?</h2>
+        </div>
+
+        {/* a pinboard rather than a row of equal tiles: CSS columns let the
+            different card heights settle into each other */}
+        <div className="mt-10 columns-2 gap-4 sm:mt-14 sm:gap-5 lg:columns-3">
           {PLACES.map((place) => (
             <Link
               key={place.href}
               href={place.href}
-              className={`group relative overflow-hidden rounded-2xl border border-ink/10 bg-ivory shadow-sm ${
-                place.wide
-                  ? "col-span-2 aspect-4/3 sm:aspect-16/9 lg:aspect-auto lg:row-span-2"
-                  : "aspect-3/4"
-              }`}
+              className="group mb-4 block break-inside-avoid sm:mb-5"
             >
-              <Image
-                src={place.image}
-                alt={place.alt}
-                fill
-                sizes={
-                  place.wide ? "(max-width: 1024px) 92vw, 46vw" : "(max-width: 1024px) 45vw, 23vw"
-                }
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-linear-to-t from-ink/75 via-ink/15 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 p-4 text-cream sm:p-5">
-                <div className={place.wide ? "text-2xl sm:text-3xl" : "text-lg"}>{place.label}</div>
-                <div className="mt-0.5 text-xs opacity-85 sm:text-sm">{place.sub}</div>
+              <div
+                className={`relative overflow-hidden rounded-[1.25rem] border border-ink/10 bg-ivory shadow-sm transition duration-500 group-hover:-translate-y-1.5 group-hover:shadow-xl ${place.aspect}`}
+              >
+                <Image
+                  src={place.image}
+                  alt={place.alt}
+                  fill
+                  sizes="(max-width: 640px) 45vw, (max-width: 1024px) 45vw, 30vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-ink/80 via-ink/20 to-transparent" />
+
+                <div className="absolute inset-x-0 bottom-0 p-4 text-cream sm:p-5">
+                  <span className="block h-0.5 w-8 rounded-full bg-rose transition-all duration-500 group-hover:w-16" />
+                  <div className="mt-2.5 flex items-baseline gap-2">
+                    <span className={place.feature ? "text-2xl sm:text-3xl" : "text-xl sm:text-2xl"}>
+                      {place.label}
+                    </span>
+                    <span className="-translate-x-2 text-rose opacity-0 transition duration-500 group-hover:translate-x-0 group-hover:opacity-100">
+                      →
+                    </span>
+                  </div>
+                  <p className="mt-1 text-xs leading-snug opacity-85 sm:text-sm">{place.sub}</p>
+                </div>
               </div>
             </Link>
           ))}
@@ -290,7 +327,7 @@ export default function Home() {
 
       {/* ---------- A quiet moment ---------- */}
       <section className="relative mt-16 sm:mt-24">
-        <div className="relative h-70 sm:h-90 lg:h-120">
+        <div className="relative h-84 sm:h-108 lg:h-144">
           <Image
             src="/images/home/band-wheel.webp"
             alt="A cappuccino with a heart in the foam, held in front of the VW steering wheel"

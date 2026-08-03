@@ -161,7 +161,10 @@ collections:
         fields:
           - { label: "Seitentitel (intern)", name: "title", widget: "string" }
           - { label: "Kleine Zeile über dem Titel", name: "heroKicker", widget: "string" }
-          - { label: "Grosse Überschrift (Hero)", name: "heroHeadline", widget: "string" }
+          - label: "Grosse Überschrift (Hero)"
+            name: "heroHeadline"
+            widget: "string"
+            hint: "Für einen Zeilenumbruch <br> einfügen, z.B. «Come in,<br>coffee's ready»"
           - { label: "Unterzeile (Hero)", name: "heroSubline", widget: "text" }
           - { label: "Überschrift «Wer wir sind»", name: "welcomeHeading", widget: "string" }
           - { label: "Text «Wer wir sind»", name: "welcomeText", widget: "text" }
