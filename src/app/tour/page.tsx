@@ -43,7 +43,7 @@ const OFFERINGS = [
     title: "Coffee & tea, poured by hand",
     image: "/images/tour/card-coffee.webp",
     alt: "The espresso machine and a tray of pastries inside the camper",
-    text: "Proper espresso from the little machine on board, pots of tea, and a squirrel in the milk foam if you're lucky.",
+    text: "Proper espresso from the little Zurich-made machine on board, pots of tea, and a heart in the milk foam.",
   },
 ];
 
@@ -213,20 +213,22 @@ export default function TourPage() {
         </div>
       </section>
 
-      {/* ---------- Wide breath of sea ---------- */}
+      {/* ---------- Wide breath of dusk ---------- */}
       <section className="relative mt-16 sm:mt-24">
-        <div className="relative h-52 sm:h-72 lg:h-80">
+        <div className="relative h-60 sm:h-80 lg:h-96">
           <Image
-            src="/images/tour/band-sea.webp"
-            alt="Coffee beans and a milk jug on the counter above a turquoise bay"
+            src="/images/tour/band-lake.webp"
+            alt="A still lake at dusk, with mountains and a treeline reflected in the water"
             fill
             sizes="100vw"
-            className="object-cover"
+            // anchored to the bottom so the horizon and reflections survive
+            // however wide the viewport gets
+            className="object-cover object-bottom"
           />
-          <div className="absolute inset-0 bg-ink/35" />
+          <div className="absolute inset-0 bg-ink/30" />
           <div className="absolute inset-0 flex items-center justify-center px-6">
             <p className="max-w-2xl text-center text-xl sm:text-3xl leading-snug text-cream drop-shadow-md">
-              Four countries, one little van, and a lot of very happy guests.
+              Wherever we park, that&rsquo;s the café.
             </p>
           </div>
         </div>
