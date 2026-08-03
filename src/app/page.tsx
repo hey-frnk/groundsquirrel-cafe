@@ -296,7 +296,7 @@ export default function Home() {
                 src="/images/home/welcome-van.webp"
                 alt="Evelyne and Frank with coffee beside Humbär, below the Swiss alps"
                 width={1154}
-                height={780}
+                height={1240}
                 sizes="(max-width: 1024px) 92vw, 46vw"
                 className="h-full w-full object-cover"
               />
@@ -306,7 +306,7 @@ export default function Home() {
                 src="/images/home/welcome-frank.webp"
                 alt="Frank laughing in the driver's window with a golden retriever"
                 width={900}
-                height={1125}
+                height={900}
                 sizes="(max-width: 1024px) 45vw, 23vw"
                 className="h-full w-full object-cover"
               />
@@ -316,7 +316,7 @@ export default function Home() {
                 src="/images/home/welcome-table.webp"
                 alt="Baklava, granola bowls and two coffees on a sunlit wooden table"
                 width={900}
-                height={1125}
+                height={900}
                 sizes="(max-width: 1024px) 45vw, 23vw"
                 className="h-full w-full object-cover"
               />
