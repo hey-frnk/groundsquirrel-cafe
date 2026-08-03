@@ -11,6 +11,7 @@ interface Settings {
 interface HomeContent {
   heroKicker: string;
   heroHeadline: string;
+  heroSubline: string;
   welcomeHeading: string;
   welcomeText: string;
   bandCaption: string;
@@ -106,58 +107,57 @@ export default function Home() {
           <div className="absolute inset-x-0 top-0 h-40 bg-linear-to-b from-ink/55 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 h-3/4 bg-linear-to-t from-ink/90 via-ink/55 to-transparent" />
 
-          {/* Navigation, sitting on the film */}
-          <div className="absolute inset-x-0 top-0 z-10 px-5 py-4 sm:py-6">
-            <div className="mx-auto flex max-w-6xl flex-col items-center gap-2.5 sm:flex-row sm:justify-between sm:gap-6">
-              <Link href="/" className="flex items-center gap-2.5 text-cream drop-shadow">
-                <Image
-                  src="/images/brand/logo_notext.png"
-                  alt=""
-                  width={38}
-                  height={38}
-                  className="w-8 sm:w-9.5"
-                />
-                <span className="text-sm sm:text-base">the ground squirrel café</span>
-              </Link>
+          {/* Brand mark and navigation, sitting on the film */}
+          <div className="absolute inset-x-0 top-0 z-10 flex flex-col items-center gap-3 px-5 pt-5 sm:gap-4 sm:pt-7">
+            <Link href="/" aria-label="The Ground Squirrel Café">
+              <Image
+                src="/images/brand/logo_badge_var.png"
+                alt="The Ground Squirrel Café"
+                width={132}
+                height={192}
+                className="w-19 opacity-95 drop-shadow-lg sm:w-24"
+                preload
+              />
+            </Link>
 
-              <nav className="flex items-center gap-4 text-xs text-cream/90 drop-shadow sm:gap-7 sm:text-sm">
-                {NAV_LINKS.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="transition-colors hover:text-rose"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </nav>
-            </div>
+            <nav className="flex items-center gap-4 text-xs text-cream/90 drop-shadow sm:gap-7 sm:text-sm">
+              {NAV_LINKS.map((link) => (
+                <Link key={link.href} href={link.href} className="transition-colors hover:text-rose">
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
           </div>
 
-          {/* The welcome */}
-          <div className="absolute inset-x-0 bottom-0 z-10 px-5 pb-10 text-center text-cream sm:pb-16">
-            {/* a badge rather than bare text — it crosses the brightest part of
-                the film, where a scrim alone can't hold it */}
-            <p className="inline-block rounded-full border border-cream/25 bg-ink/45 px-4 py-1.5 text-[0.62rem] uppercase tracking-[0.18em] text-cream backdrop-blur-[2px] sm:text-[0.7rem] sm:tracking-[0.3em]">
-              {home.heroKicker}
-            </p>
-            <h1 className="mt-3 text-4xl leading-tight drop-shadow-md sm:text-5xl lg:text-6xl">
-              {home.heroHeadline}
-            </h1>
-            <p className="mx-auto mt-4 max-w-xl text-cream/90 drop-shadow-md">{settings.tagline}</p>
-            <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
-              <Link
-                href="/tour"
-                className="rounded-full bg-rose px-7 py-3 text-ink shadow-lg transition-colors hover:bg-cream"
-              >
-                Visit the café
-              </Link>
-              <Link
-                href="/journal"
-                className="rounded-full border border-cream/60 px-7 py-3 text-cream transition-colors hover:bg-cream/15"
-              >
-                Read the journal
-              </Link>
+          {/* The welcome — held to the left half so it doesn't land on top of
+              Evelyne and Frank, who stand right of centre in the film */}
+          <div className="absolute inset-x-0 bottom-0 z-10 px-5 pb-10 sm:pb-16">
+            <div className="mx-auto max-w-6xl">
+              <div className="max-w-xl text-center text-cream sm:text-left">
+                {/* a badge rather than bare text — it crosses the brightest part
+                    of the film, where a scrim alone can't hold it */}
+                <p className="inline-block rounded-full border border-cream/25 bg-ink/45 px-4 py-1.5 text-[0.62rem] uppercase tracking-[0.18em] text-cream backdrop-blur-[2px] sm:text-[0.7rem] sm:tracking-[0.3em]">
+                  {home.heroKicker}
+                </p>
+                <h1 className="mt-3 text-4xl leading-tight drop-shadow-md sm:text-5xl lg:text-6xl">
+                  {home.heroHeadline}
+                </h1>
+                <p className="mt-4 text-cream/90 drop-shadow-md">{home.heroSubline}</p>
+                <div className="mt-7 flex flex-wrap items-center justify-center gap-3 sm:justify-start">
+                  <Link
+                    href="/tour"
+                    className="rounded-full bg-rose px-7 py-3 text-ink shadow-lg transition-colors hover:bg-cream"
+                  >
+                    Visit the café
+                  </Link>
+                  <Link
+                    href="/journal"
+                    className="rounded-full border border-cream/60 px-7 py-3 text-cream transition-colors hover:bg-cream/15"
+                  >
+                    Read the journal
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -198,8 +198,9 @@ export default function Home() {
       {/* ---------- The studio ---------- */}
       <section id="studio" className="mx-auto max-w-6xl px-5 pt-16 scroll-mt-8 sm:pt-24">
         <div className="overflow-hidden rounded-3xl border border-lilac bg-lilac/25">
-          <div className="grid items-center lg:grid-cols-[1fr_0.85fr]">
-            <div className="px-6 py-10 sm:px-12 sm:py-14">
+          {/* on desktop the squirrel leads on the left, the words follow */}
+          <div className="grid items-center lg:grid-cols-[0.85fr_1fr]">
+            <div className="px-6 py-10 sm:px-12 sm:py-14 lg:order-2">
               <h2 className="text-3xl leading-tight sm:text-4xl">{home.studioHeading}</h2>
               <p className="mt-5 leading-relaxed text-ink/80">{home.studioText}</p>
               <div className="mt-8 flex flex-wrap gap-3">
@@ -218,7 +219,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="sparkle-bg relative min-h-64 lg:min-h-full">
+            <div className="sparkle-bg relative min-h-64 lg:order-1 lg:min-h-full">
               <Image
                 src="/images/studio/hero-squirrel.webp"
                 alt="Evelyne's painting of a golden-mantled ground squirrel with a nut"
@@ -282,7 +283,7 @@ export default function Home() {
 
       {/* ---------- A quiet moment ---------- */}
       <section className="relative mt-16 sm:mt-24">
-        <div className="relative h-56 sm:h-72 lg:h-96">
+        <div className="relative h-70 sm:h-90 lg:h-120">
           <Image
             src="/images/home/band-wheel.webp"
             alt="A cappuccino with a heart in the foam, held in front of the VW steering wheel"

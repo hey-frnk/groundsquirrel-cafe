@@ -162,6 +162,7 @@ collections:
           - { label: "Seitentitel (intern)", name: "title", widget: "string" }
           - { label: "Kleine Zeile über dem Titel", name: "heroKicker", widget: "string" }
           - { label: "Grosse Überschrift (Hero)", name: "heroHeadline", widget: "string" }
+          - { label: "Unterzeile (Hero)", name: "heroSubline", widget: "text" }
           - { label: "Überschrift «Wer wir sind»", name: "welcomeHeading", widget: "string" }
           - { label: "Text «Wer wir sind»", name: "welcomeText", widget: "text" }
           - { label: "Bildzeile über dem Kaffeefoto", name: "bandCaption", widget: "string" }
