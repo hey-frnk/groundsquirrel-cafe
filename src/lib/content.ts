@@ -143,19 +143,42 @@ export function getAllShopProducts(): (ShopProduct & { description: string })[] 
     .sort((a, b) => a.order - b.order);
 }
 
+export interface TourPhoto {
+  image: string;
+  caption?: string;
+}
+
 export interface TourStop {
   slug: string;
-  location: string;
-  date: string;
+  country: string;
+  place?: string;
+  tagline?: string;
+  treat?: string;
   photo: string;
+  photos?: TourPhoto[];
   order: number;
+}
+
+// Photos are entered in the CMS as a list of { image, caption } objects, but an
+// older/simpler entry may still be a plain image path — accept both, and drop
+// entries without an image so a half-filled CMS row can't break the page.
+function normalizeTourPhotos(photos: unknown): TourPhoto[] {
+  if (!Array.isArray(photos)) return [];
+  return photos
+    .map((p) => (typeof p === "string" ? { image: p } : (p as TourPhoto)))
+    .filter((p): p is TourPhoto => Boolean(p?.image));
 }
 
 export function getAllTourStops(): (TourStop & { description: string })[] {
   return readDir("tour-stops")
     .map((filename) => {
       const { slug, data, content } = readEntry<TourStop>("tour-stops", filename);
-      return { ...data, slug, description: content.trim() };
+      return {
+        ...data,
+        slug,
+        photos: normalizeTourPhotos(data.photos),
+        description: content.trim(),
+      };
     })
     .sort((a, b) => a.order - b.order);
 }

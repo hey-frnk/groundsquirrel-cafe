@@ -89,9 +89,18 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Ort", name: "location", widget: "string" }
-      - { label: "Datum", name: "date", widget: "datetime", format: "YYYY-MM-DD", time_format: false }
-      - { label: "Foto", name: "photo", widget: "image" }
+      - { label: "Land", name: "country", widget: "string", hint: "Grosse Überschrift, z.B. Schweden" }
+      - { label: "Ort", name: "place", widget: "string", required: false, hint: "z.B. Furka Pass — steht klein unter dem Land" }
+      - { label: "Kurzzeile", name: "tagline", widget: "string", required: false, hint: "Ein poetischer Halbsatz, z.B. «Rentiere waren unsere ersten Gäste»" }
+      - { label: "Das gab es", name: "treat", widget: "string", required: false, hint: "z.B. Jordgubbstårta — erscheint als kleines Schildchen" }
+      - { label: "Hauptfoto", name: "photo", widget: "image" }
+      - label: "Weitere Fotos (bis zu 3)"
+        name: "photos"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Foto", name: "image", widget: "image" }
+          - { label: "Bildunterschrift", name: "caption", widget: "string", required: false }
       - { label: "Reihenfolge", name: "order", widget: "number" }
       - { label: "Beschreibung", name: "body", widget: "markdown" }
 
@@ -151,6 +160,9 @@ collections:
         file: "content/pages/tour-intro.md"
         fields:
           - { label: "Seitentitel", name: "title", widget: "string" }
+          - { label: "Kleine Zeile über dem Titel", name: "kicker", widget: "string", required: false }
+          - { label: "Grosse Überschrift (Hero)", name: "heroHeadline", widget: "string" }
+          - { label: "Unterzeile (Hero)", name: "heroSubline", widget: "text", required: false }
           - { label: "Einleitungstext", name: "intro", widget: "text" }
           - { label: "CTA-Überschrift", name: "ctaHeading", widget: "string" }
           - { label: "CTA-Text", name: "ctaText", widget: "text" }
