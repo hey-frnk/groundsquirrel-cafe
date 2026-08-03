@@ -22,10 +22,10 @@ export default function SiteHeader() {
     return (
       <header className="flex flex-col items-center justify-center py-12 sm:py-16">
         <Image
-          src="/images/brand/logo_transparent.png"
+          src="/images/brand/logo_badge_var.png"
           alt="The Ground Squirrel Café"
-          width={220}
-          height={222}
+          width={206}
+          height={300}
           priority
         />
       </header>
