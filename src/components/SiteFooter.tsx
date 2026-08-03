@@ -90,7 +90,7 @@ export default function SiteFooter() {
         </nav>
 
         <p className="text-xs text-ink/60">
-          © {new Date().getFullYear()} the ground squirrel café — with 🐿️ by evelyne &amp; frank
+          © {new Date().getFullYear()}&nbsp; the ground squirrel café — with 🐿️ by evelyne &amp; frank
         </p>
       </div>
     </footer>

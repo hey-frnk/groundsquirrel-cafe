@@ -18,19 +18,9 @@ export default function SiteHeader() {
   const isHome = pathname === "/";
   const [open, setOpen] = useState(false);
 
-  if (isHome) {
-    return (
-      <header className="flex flex-col items-center justify-center py-12 sm:py-16">
-        <Image
-          src="/images/brand/logo_badge_var.png"
-          alt="The Ground Squirrel Café"
-          width={206}
-          height={300}
-          priority
-        />
-      </header>
-    );
-  }
+  // The homepage carries its own brand mark and navigation inside the intro
+  // film, so the shared header would only duplicate it.
+  if (isHome) return null;
 
   return (
     <header className="sticky top-0 z-50 bg-ivory/95 backdrop-blur border-b border-ink/10">
