@@ -155,6 +155,21 @@ collections:
           - { label: "YouTube-Link", name: "youtubeUrl", widget: "string", required: false }
           - { label: "TikTok-Link", name: "tiktokUrl", widget: "string", required: false }
 
+      - name: "home"
+        label: "Startseite"
+        file: "content/pages/home.md"
+        fields:
+          - { label: "Seitentitel (intern)", name: "title", widget: "string" }
+          - { label: "Kleine Zeile über dem Titel", name: "heroKicker", widget: "string" }
+          - { label: "Grosse Überschrift (Hero)", name: "heroHeadline", widget: "string" }
+          - { label: "Überschrift «Wer wir sind»", name: "welcomeHeading", widget: "string" }
+          - { label: "Text «Wer wir sind»", name: "welcomeText", widget: "text" }
+          - { label: "Bildzeile über dem Kaffeefoto", name: "bandCaption", widget: "string" }
+          - { label: "Überschrift Studio-Abschnitt", name: "studioHeading", widget: "string" }
+          - { label: "Text Studio-Abschnitt", name: "studioText", widget: "text" }
+          - { label: "Überschrift Schluss-Abschnitt", name: "closingHeading", widget: "string" }
+          - { label: "Text Schluss-Abschnitt", name: "closingText", widget: "text" }
+
       - name: "tour_intro"
         label: "Tour: Einleitung & CTA"
         file: "content/pages/tour-intro.md"

@@ -20,13 +20,13 @@ export default function SiteHeader() {
 
   if (isHome) {
     return (
-      <header className="flex flex-col items-center justify-center py-12 sm:py-16">
+      <header className="flex flex-col items-center justify-center py-7 sm:py-9">
         <Image
           src="/images/brand/logo_badge_var.png"
           alt="The Ground Squirrel Café"
-          width={206}
-          height={300}
-          priority
+          width={165}
+          height={240}
+          preload
         />
       </header>
     );
