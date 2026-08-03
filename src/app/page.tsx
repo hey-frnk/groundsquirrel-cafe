@@ -107,31 +107,38 @@ export default function Home() {
           <div className="absolute inset-x-0 top-0 h-40 bg-linear-to-b from-ink/55 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 h-3/4 bg-linear-to-t from-ink/90 via-ink/55 to-transparent" />
 
-          {/* Brand mark and navigation, sitting on the film */}
-          <div className="absolute inset-x-0 top-0 z-10 flex flex-col items-center gap-3 px-5 pt-5 sm:gap-4 sm:pt-7">
-            <Link href="/" aria-label="The Ground Squirrel Café">
-              <Image
-                src="/images/brand/logo_badge_var.png"
-                alt="The Ground Squirrel Café"
-                width={132}
-                height={192}
-                className="w-19 opacity-95 drop-shadow-lg sm:w-24"
-                preload
-              />
-            </Link>
+          {/* Brand mark and navigation, sitting on the film. The badge stays
+              centred; from sm up the links move out to the top right corner. */}
+          <div className="absolute inset-x-0 top-0 z-10 px-5 pt-5 sm:pt-7">
+            <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-3">
+              <Link href="/" aria-label="The Ground Squirrel Café">
+                <Image
+                  src="/images/brand/logo_badge_var.png"
+                  alt="The Ground Squirrel Café"
+                  width={132}
+                  height={192}
+                  className="w-19 opacity-95 drop-shadow-lg sm:w-24"
+                  preload
+                />
+              </Link>
 
-            <nav className="flex items-center gap-4 text-xs text-cream/90 drop-shadow sm:gap-7 sm:text-sm">
-              {NAV_LINKS.map((link) => (
-                <Link key={link.href} href={link.href} className="transition-colors hover:text-rose">
-                  {link.label}
-                </Link>
-              ))}
-            </nav>
+              <nav className="flex items-center gap-4 text-xs text-cream/90 drop-shadow sm:absolute sm:top-2 sm:right-0 sm:gap-7 sm:text-sm">
+                {NAV_LINKS.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="transition-colors hover:text-rose"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+            </div>
           </div>
 
           {/* The welcome — held to the left half so it doesn't land on top of
               Evelyne and Frank, who stand right of centre in the film */}
-          <div className="absolute inset-x-0 bottom-0 z-10 px-5 pb-10 sm:pb-16">
+          <div className="absolute inset-x-0 bottom-[5%] z-10 px-5 pb-10 sm:pb-16">
             <div className="mx-auto max-w-6xl">
               <div className="max-w-xl text-center text-cream sm:text-left">
                 {/* a badge rather than bare text — it crosses the brightest part
