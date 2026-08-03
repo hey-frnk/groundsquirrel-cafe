@@ -59,7 +59,8 @@ We worked out three day-programs in advance, two for good weather and one where 
 
 ## Hiking Up the Hallelujah Mountains — a Peaceful Walk in the Valley
 
-![](/images/journal/zhangjiajie-avatar-mountains/IMG_9783.jpg)
+![a peaceful walk in the valley](/images/journal/zhangjiajie-avatar-mountains/IMG_9783.jpg)
+*A peaceful walk in the valley*
 
 Yuan Jia Jie (袁家界) is the most popular spot in the Wu Ling Yuan Scenic Area and can be reached by shuttle after the Bailong Elevator. However, the view should be well deserved, which is why we took a leisurely hike up Yuan Jia Jie using just our feet from below.
 
@@ -130,8 +131,7 @@ While you can enjoy the view while having American McDonald's, we continued our 
 
 ## A Peaceful Walk Along the Golden Whip Stream
 
-![a peaceful walk along the golden whip stream - isn't that the ideal mindful and slow relaxation to complement the active hiking days?](/images/journal/zhangjiajie-avatar-mountains/IMG_0004.jpg)
-*A peaceful walk along the Golden Whip Stream (金鞭溪) — isn't that the ideal mindful and slow relaxation to complement the active hiking days?*
+![](/images/journal/zhangjiajie-avatar-mountains/IMG_0004.jpg)
 
 ![a forest pool with crystal-clear turquoise water](/images/journal/zhangjiajie-avatar-mountains/IMG_0427.JPG)
 *A forest pool with crystal-clear turquoise water*

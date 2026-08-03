@@ -22,8 +22,8 @@ What is more perfect than starting out the day by sitting at the teal blue lake 
 
 The colorful buildings, fountains, local shops and restaurants make you truly feel like you are somewhere in gelato-vino-Italy. After all the Italian border is just a few miles, and you'll see later, a swim away.
 
-![us, in the water at 9 am in the morning](/images/journal/san-salvatore-morcote/IMG_9451.webp)
-*Us, in the water at 9 am in the morning*
+![us, in the water at 9 pm in the morning](/images/journal/san-salvatore-morcote/IMG_9451.webp)
+*Us, in the water at 9 pm in the morning*
 
 ## Monte San Salvatore
 
@@ -51,21 +51,22 @@ The main hike of the day starts in the charming village of Carona on the hills. 
 
 You wanna follow the signs to Morcote, which will first guide you through a botanical park, Parco San Grato, where you, by the way, can book a bed to sleep under the stars. Be sure to stop for a minute for some snacks, take in the view and some water to stay hydrated. Do you smell the scent of dry pine forest and orange peel? How refreshing! The trail stays on top of the mountain with occasional peeks of Lake Lugano until you reach a glade with a restaurant beneath it.
 
-![time for a break](/images/journal/san-salvatore-morcote/IMG_9493.webp)
+![](/images/journal/san-salvatore-morcote/IMG_9493.webp)
+![time for a break. what's better than a fluffy homemade olive oil ciabatta with homemade guacamole and homegrown cress?](/images/journal/san-salvatore-morcote/IMG_3708.webp)
 *Time for a break. What's better than a fluffy homemade olive oil ciabatta with homemade guacamole and homegrown cress?*
 
 From there, it's all easy stair-downhill, where once in a while, lizards will pass by in the dry chestnut forest. See the Chiesa Santa Maria del Sasso? That's the name of the iconic church of Morcote you can't and you won't miss out!
 
 ## Morcote, the Village
 
-![through the narrow alleyways](/images/journal/san-salvatore-morcote/IMG_3708.webp)
+![through the narrow alleyways](/images/journal/san-salvatore-morcote/IMG_9539.webp)
 *Through the narrow alleyways*
 
 Hearing that Morcote is considered as one of the most beautiful villages in Switzerland shouldn't be a surprise. There is not a single spot that is not picture-worthy — from the ferry port where restaurants have a lake terrace to the boats parked by the lake to cute ice cream shops inside the arcade.
 
 ### Parco Scherrer, Morcote
 
-![how paradise looks like](/images/journal/san-salvatore-morcote/IMG_9539.webp)
+![how paradise looks like - inside parco scherrer, morcote](/images/journal/san-salvatore-morcote/IMG_9547.webp)
 *How paradise looks like — inside Parco Scherrer, Morcote*
 
 From the port of Morcote, where all the restaurants and cute local shops are, you'll reach the most unique botanical garden, Parco Scherrer, if you walk westbound along the lake for ten minutes where the garden awaits behind an unassuming wall. And the best thing above all? It is all free for you to visit!
@@ -74,25 +75,23 @@ Inside you will find Italian sculptures that make you feel like you are in Star 
 
 ## A Dip in the Lake and the Ferry Back
 
-![](/images/journal/san-salvatore-morcote/vlcsnap-2023-07-15-00h04m52s823.webp)
+![wanna hop on in?](/images/journal/san-salvatore-morcote/vlcsnap-2023-07-15-00h04m52s823.webp)
+*Wanna hop on in?*
 
 Made it this far? Here's a true local gem! Here comes the favorite part of the day, where after a hike a refreshment in the lake washes away all the tiredness. Let me present to you the best place in the world to head for a dip. It's free. It has showers, bathrooms, a lawn where you can rent an umbrella and get ice cream from the restaurant, a swimming area, and a landing stage — the perfect place to dive in head first. From Parco Scherrer, it's a 15 minute walk, or you can take the bus!
 
 Although we haven't tried, Italy is on the other side of the lake!
 
-![waiting for the ferry!](/images/journal/san-salvatore-morcote/IMG_9547.webp)
-*Waiting for the ferry!*
-
-![looking back at morcote](/images/journal/san-salvatore-morcote/IMG_5943.webp)
-*Looking back at Morcote*
+![](/images/journal/san-salvatore-morcote/IMG_5943.webp)
 
 Be sure to not miss out on the last boat ride, which unfortunately leaves fairly early at 5:45 pm in summer. You can step out anywhere you like to fade out the evening with a dinner or ride all the way to Lugano.
 
-![san salvatore from parco ciani](/images/journal/san-salvatore-morcote/IMG_9579.webp)
+![waiting for the ferry!](/images/journal/san-salvatore-morcote/IMG_9579.webp)
+*Waiting for the ferry!*
+![looking back at morcote](/images/journal/san-salvatore-morcote/IMG_9585.webp)
+*Looking back at Morcote*
+![san salvatore from parco ciani. in summer, this is the few places of town that gets to see a sunset before the sun sets behind the mountains](/images/journal/san-salvatore-morcote/IMG_5972.webp)
 *San Salvatore from Parco Ciani. In summer, this is one of the few places in town that gets to see a sunset before the sun sets behind the mountains*
-
-![](/images/journal/san-salvatore-morcote/IMG_9585.webp)
-![](/images/journal/san-salvatore-morcote/IMG_5972.webp)
 
 *With 🐝 by Frank.*
 

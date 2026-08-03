@@ -15,31 +15,31 @@ Rewarding you with the most spectacular views, the hike to the Tugela Falls offe
 
 > ℹ Tugela Falls Hike — Distance: 7.9 mi (12.7 km) · Elevation gain: 1673 ft (510 m) · Highest point: 9961 ft (3036 m)
 
-![the way leading to the fall in the golden glow of winter](/images/journal/tugela-falls/IMG_1961.webp)
-*The way leading to the fall in the golden glow of winter*
+![](/images/journal/tugela-falls/IMG_5818.webp)
+![](/images/journal/tugela-falls/IMG_5884.webp)
+![](/images/journal/tugela-falls/IMG_5871.webp)
 
 The Tugela waterfall hike crosses between KwaZulu-Natal and the Free State province, near the Kingdom of Lesotho. The best part is saved for last — you won't see or hear the waterfall until you're almost there. It makes reaching the end feel like a real reward.
 
 You can picture three sections for the hike. The first part is well-developed and makes for a leisurely walk. It starts from the Sentinel Peak car park and leads up to Sentinel Peak, offering breathtaking views into the Tugela Gorge of KwaZulu-Natal. From there, the path narrows and winds around the rocks with little elevation gain until you reach the chain-ladders.
 
-![](/images/journal/tugela-falls/IMG_5818.webp)
-![](/images/journal/tugela-falls/IMG_5884.webp)
-![](/images/journal/tugela-falls/IMG_5871.webp)
+![the way leading to the fall in the golden glow of winter](/images/journal/tugela-falls/IMG_1898.webp)
+*The way leading to the fall in the golden glow of winter*
 
 The chain-ladders too remain hidden until the end, before you stand in front of them, while it takes your breath away. Above the ladders you walk on the plateau — incredibly close to Lesotho, about 1 kilometer as the crow flies — along a stream that plunges a staggering 948 meters into the valley below.
 
-![unfortunately, it was not the right season…](/images/journal/tugela-falls/IMG_1898.webp)
+![unfortunately, it was not the right season…](/images/journal/tugela-falls/IMG_5844.webp)
 *Unfortunately, it was not the right season…*
-![… to see the waterfall, and the fog limited visibility. better luck next time!](/images/journal/tugela-falls/IMG_5844.webp)
+![… to see the waterfall, and the fog limited visibility. better luck next time!](/images/journal/tugela-falls/IMG_5850.webp)
 *… to see the waterfall, and the fog limited visibility. Better luck next time!*
 
 ## What Is the Best Time to Visit the Tugela Falls?
 
-![in winter everything up here is dry and glowing in gold](/images/journal/tugela-falls/IMG_5850.webp)
+![in winter everything up here is dry and glowing in gold](/images/journal/tugela-falls/IMG_5870.webp)
 *In winter everything up here is dry and glowing in gold*
-![what usually is the tugela river is just a small stream…](/images/journal/tugela-falls/IMG_5870.webp)
+![what usually is the tugela river is just a small stream…](/images/journal/tugela-falls/IMG_5863.webp)
 *What usually is the Tugela River is just a small stream…*
-![so there wasn't too much water plunging down either!](/images/journal/tugela-falls/IMG_5863.webp)
+![so there wasn't too much water plunging down either!](/images/journal/tugela-falls/IMG_1986.webp)
 *So there wasn't too much water plunging down either!*
 
 The waterfall is a seasonal waterfall. We hiked Tugela Falls in winter, when the landscape glows a golden hue. Unfortunately, the falls had almost no water since we were at the end of the dry season in August.
@@ -48,24 +48,24 @@ According to locals, the best time to visit is between March and May, when the t
 
 ## How Do I Get to the Tugela Falls?
 
-![early morning drive to the tugela falls trailhead](/images/journal/tugela-falls/IMG_1986.webp)
-*Early morning drive to the Tugela Falls trailhead*
-
 We rented a car for our trip. While there are no specific requirements for the car, it's essential to drive cautiously as you will encounter a variety of potholes along the way.
 
 The Sentinel Peak car park — the car park to start the hike — is not accessible with a regular car. Instead, you must book an overpriced shuttle from the Witsieshoek Mountain Lodge to navigate the rugged gravel road.
 
 ### Where to Stay?
 
-![](/images/journal/tugela-falls/IMG_8087.webp)
-![](/images/journal/tugela-falls/IMG_5766.webp)
-![](/images/journal/tugela-falls/IMG_5875.webp)
+![early morning drive to the tugela falls trailhead](/images/journal/tugela-falls/IMG_8087.webp)
+*Early morning drive to the Tugela Falls trailhead*
+
+![](/images/journal/tugela-falls/IMG_5891.webp)
+![](/images/journal/tugela-falls/IMG_5889.webp)
+![](/images/journal/tugela-falls/IMG_5718.webp)
 
 The only municipal lodge in this national park is the Witsieshoek Mountain Lodge. We arrived at Witsieshoek in the morning, took the shuttle to the Sentinel Peak car park, hiked throughout the day and returned in the evening to spend the night there. It's a charming lodge with cozy bungalows and a restaurant that lives up to its name, offering expansive views and plenty of morning light for a sunny breakfast.
 
 ## All You Need to Know
 
-![above the clouds with an impressive view into the valley below](/images/journal/tugela-falls/3513014E-6E32-47AC-B879-0A07344C98C2_1_105_c.webp)
+![above the clouds with an impressive view into the valley below](/images/journal/tugela-falls/IMG_5766.webp)
 *Above the clouds with an impressive view into the valley below*
 
 ### Is the Hike Dangerous?
@@ -74,7 +74,7 @@ Up to the chain ladders, the hike is manageable with average fitness levels. It 
 
 Depending on the season, snowfields or wet conditions can make the hike dangerous, so it is crucial to check the weather before setting out.
 
-![](/images/journal/tugela-falls/DA677D2C-1129-420B-9259-7D5C5A96E8EF_1_105_c.webp)
+![](/images/journal/tugela-falls/IMG_5875.webp)
 
 The notorious chain-ladders at the end of the hike require a head for heights, concentration and a lot of self-trust — but they are not impossible. However, they will be even more perilous when wet.
 
@@ -86,14 +86,14 @@ We completed the hike with standard hiking gear without any special equipment fo
 
 ### What Wildlife Can I Encounter?
 
-![up close: a lizard camouflaged in the warm rocks](/images/journal/tugela-falls/IMG_5885.webp)
+![up close: a lizard camouflaged in the warm rocks](/images/journal/tugela-falls/3513014E-6E32-47AC-B879-0A07344C98C2_1_105_c.webp)
 *Up close: a lizard camouflaged in the warm rocks*
-![from afar: chacma baboons on the go](/images/journal/tugela-falls/180E2843-5619-45EE-9EBB-DC02A885DDC0.webp)
+![from afar: chacma baboons on the go](/images/journal/tugela-falls/DA677D2C-1129-420B-9259-7D5C5A96E8EF_1_105_c.webp)
 *From afar: chacma baboons on the go*
 
 Lizard or crocodile? During our hike, we spotted lizards darting between the rocks. Up on the high plateau, we observed chacma baboons from a distance, casually going about their monkey business. If you're luckier than we are, you might also encounter elands, mountain reedbucks, and the ever-curious rock dassies basking in the sun.
 
-![majestic views into the horizon in the golden light](/images/journal/tugela-falls/IMG_8644.webp)
+![majestic views into the horizon in the golden light](/images/journal/tugela-falls/IMG_5885.webp)
 *Majestic views into the horizon in the golden light*
 
 ### I'm Scared of the Chain-Ladder. Is There an Alternative Way?

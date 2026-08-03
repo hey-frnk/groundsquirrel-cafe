@@ -91,23 +91,23 @@ To learn more about this project, or discover ecoexist, a small but very importa
 
 ### Camden Area
 
-![](/images/journal/oxford-street-london/IMG_2359.jpg)
+![camden high street](/images/journal/oxford-street-london/IMG_2359.jpg)
+*Camden High Street*
 
 In the north of London lies the famous Camden area, once the center of London's alternative scene and celebrated for its unique independent vendors. Unfortunately, over the years, the neighborhood has become increasingly "touristified," resembling more of a market for cheaply made souvenirs. The markets are now so crowded that it can be difficult to appreciate their charm. Of course, it's a matter of personal preference — Frank and I are more inclined toward quieter, cozier spots. Depending on your tastes, it might still be worth taking a look at the market.
 
-![camden high street](/images/journal/oxford-street-london/IMG_2365.jpg)
-*Camden High Street*
-![camden market](/images/journal/oxford-street-london/IMG_2361.jpg)
+![camden market](/images/journal/oxford-street-london/IMG_2365.jpg)
 *Camden Market*
-![busy on weekends](/images/journal/oxford-street-london/IMG_5763.jpg)
+![busy on weekends](/images/journal/oxford-street-london/IMG_2361.jpg)
 *Busy on weekends*
-![walk along the canal](/images/journal/oxford-street-london/IMG_2369.jpg)
+![walk along the canal](/images/journal/oxford-street-london/IMG_5763.jpg)
 *Walk along the canal*
+![inside mandarin stone showroom](/images/journal/oxford-street-london/IMG_2369.jpg)
+*Inside Mandarin Stone showroom*
 
 Despite its transformation, Camden has some truly beautiful places to explore. Right next to the Camden markets, the Regent's Canal flows peacefully, inviting visitors for a relaxed walk along its banks.
 
-![inside mandarin stone showroom](/images/journal/oxford-street-london/IMG_2376.jpg)
-*Inside Mandarin Stone showroom*
+![](/images/journal/oxford-street-london/IMG_2376.jpg)
 
 A charming path leads to Gloucester Avenue, a quintessentially London street lined with smaller specialty shops. For those in search of beautiful tiles, the Mandarin Stone showroom offers a stunning selection worth visiting.
 

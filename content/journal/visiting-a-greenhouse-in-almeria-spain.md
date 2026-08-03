@@ -105,6 +105,7 @@ Our thanks go to all the people in Almería who, with their work and commitment,
 
 ![danke Almería](/images/journal/greenhouse-almeria/IMG_9183.webp)
 
-![](/images/journal/greenhouse-almeria/IMG_0666.webp)
+![thank you for having us!](/images/journal/greenhouse-almeria/IMG_0666.webp)
+*Thank you for having us!*
 
 *With 🐿️ by Evelyne*

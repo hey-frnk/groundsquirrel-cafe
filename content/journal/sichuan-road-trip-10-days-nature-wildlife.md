@@ -25,15 +25,18 @@ We created our itinerary to experience as much nature and wildlife as possible o
 
 ### Chengdu
 
-![a giant panda doing what it loves most](/images/journal/sichuan-road-trip/IMG_6312.jpg)
-![our panda-themed hotel chengdu](/images/journal/sichuan-road-trip/IMG_5700.jpg)
-![finally found someone that matches our energy](/images/journal/sichuan-road-trip/IMG_5541.jpg)
+![](/images/journal/sichuan-road-trip/IMG_6312.jpg)
+![a giant panda doing what it loves most](/images/journal/sichuan-road-trip/IMG_5700.jpg)
+*A giant panda doing what it loves most*
+![our panda-themed hotel chengdu](/images/journal/sichuan-road-trip/IMG_5541.jpg)
+*Our panda-themed hotel Chengdu*
 
 Our driver picked us up at Chengdu airport, and we got transferred into the most unique hotel ever: it's all aesthetic panda-themed. A short walk through the old town into a serene tea garden, time slowed. It was a peaceful, unspoken intuition where locals meet and take time for aromatic green tea.
 
 > ♥ Favorite Location: Tea Garden in Chengdu — Coordinates: (30°40'36.3"N, 104°4'15.2" E)
 
-![](/images/journal/sichuan-road-trip/IMG_5703.jpg)
+![finally found someone that matches our energy](/images/journal/sichuan-road-trip/IMG_5703.jpg)
+*Finally found someone that matches our energy*
 ![](/images/journal/sichuan-road-trip/Frame-20-01-2025-09-03-09.jpg)
 ![](/images/journal/sichuan-road-trip/Frame-20-01-2025-09-05-11.jpg)
 ![](/images/journal/sichuan-road-trip/Frame-20-01-2025-09-08-17.jpg)
@@ -65,25 +68,30 @@ Chengdu is synonymous with giant pandas, and visiting the panda research base is
 
 One of the truly spectacular and memorable moments of our trip was catching the sunrise above the clouds on Mount Emei, one of China's four sacred Buddhist mountains soaring 3000 meters into the sky. Just an hour away from Chengdu by high speed rail, it's a magical place for nature people and spiritual seekers.
 
-![peaking through](/images/journal/sichuan-road-trip/IMG_5732.jpg)
-*Peaking through*
+![on franks hike from lei dong ping shuttle station to golden summit of mt. emei, light started to peak through the fog](/images/journal/sichuan-road-trip/IMG_5732.jpg)
+*On Frank's hike from Lei Dong Ping shuttle station to golden summit of Mt. Emei, light started to peak through the fog*
 ![a golden sunrise](/images/journal/sichuan-road-trip/IMG_5807.jpg)
 *A golden sunrise*
-![above the clouds](/images/journal/sichuan-road-trip/IMG_5759.jpg)
-*Above the clouds*
+![above the clouds on mt. emei](/images/journal/sichuan-road-trip/IMG_5759.jpg)
+*Above the clouds on Mt. Emei*
 ![mt. emei golden summit](/images/journal/sichuan-road-trip/IMG_5794.jpg)
 *Mt. Emei golden summit*
 
 While we took the shuttle up to the mid-point Lei Dong Ping (雷洞坪) at sunset, we hiked down the whole day afterwards into the clouds and all the way to Mt. Emei station. On our way down, we came across a handful of monks making the pilgrimage, pausing to pray with each step.
 
 ![you can taste vegan food in some temples along the hike down](/images/journal/sichuan-road-trip/IMG_5830.jpg)
+*You can taste vegan food in some temples along the hike down*
 ![in other temples, you can stay overnight and take a rest for 10$](/images/journal/sichuan-road-trip/IMG_5855.jpg)
-![blooming flowers in april on emeishan](/images/journal/sichuan-road-trip/IMG_5877.jpg)
+*In other temples, you can stay overnight and take a rest for 10$*
+![blooming flowers in april on emeishan - mount emei](/images/journal/sichuan-road-trip/IMG_5877.jpg)
+*Blooming flowers in April on Emeishan — Mount Emei*
 
 Fair warning: this hike is quite a workout! If you're not up for a full day of trekking, break it into smaller sections, stay overnight in one of the temples and soak in the magic at your own pace.
 
 ![misty on the way down from mt. emei](/images/journal/sichuan-road-trip/DSC_4735.jpg)
+*Misty on the way down from Mt. Emei*
 ![lively in the grey when you listen closely](/images/journal/sichuan-road-trip/DSC_4713.jpg)
+*Lively in the grey when you listen closely*
 
 ### Finding a Place Where Wild Pandas Live
 
@@ -113,8 +121,11 @@ Driving through the reserve unfortunately felt like a stripped-down version of a
 On the road to iconic Jiuzhaigou, we made an off-the-itinerary stop at a little-known Tibetan town called Baxijia (扒昔加) and a nature park called Jiawuchi (甲勿池).
 
 ![the food at the restaurant in baxijia was exceptional!](/images/journal/sichuan-road-trip/vlcsnap-2025-04-12-21h45m43s476.jpg)
-![this tibetan town is so little-known that it doesn't appear on most maps](/images/journal/sichuan-road-trip/IMG_6203.jpg)
-![did you know that pandas live between a height of 5000 and 1000 ft?](/images/journal/sichuan-road-trip/IMG_6227-2.jpg)
+*The food at the restaurant in Baxijia was exceptional!*
+![this tibetan town is so little-known that it doesn't appear on most maps! it has one restaurant and a small shop](/images/journal/sichuan-road-trip/IMG_6203.jpg)
+*This Tibetan town is so little-known that it doesn't appear on most maps! It has one restaurant and a small shop*
+![did you know that pandas live between a height of 5000 and 1000 ft? this place in jiawuchi resembles much more of a panda's natural habitat](/images/journal/sichuan-road-trip/IMG_6227-2.jpg)
+*Did you know that pandas live between a height of 5000 and 1000 ft? This place in Jiawuchi resembles much more of a panda's natural habitat*
 
 > ♥ Favorite Location: Little known Tibetan town Baxijia 扒昔加 — Coordinates: (32°49'17.3"N, 104°12'12.2"E)
 

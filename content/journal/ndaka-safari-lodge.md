@@ -30,10 +30,10 @@ Cheerful and well-prepared, your guide drives you and your group towards the ris
 
 > "You will take away more from each drive than you ever imagined. Embrace it, and you will discover so much about yourself out there." — Evelyne
 
-![nambiti game reserve is full of diversity](/images/journal/ndaka-safari-lodge/28065623-9103-469B-BCE7-A556928BA45E.jpg)
-*Nambiti Game Reserve is full of diversity*
+![](/images/journal/ndaka-safari-lodge/28065623-9103-469B-BCE7-A556928BA45E.jpg)
 
-![](/images/journal/ndaka-safari-lodge/0E540063-0215-4ADA-8753-8A6B9E23BD57.jpeg)
+![nambiti game reserve is full of diversity](/images/journal/ndaka-safari-lodge/0E540063-0215-4ADA-8753-8A6B9E23BD57.jpeg)
+*Nambiti Game Reserve is full of diversity*
 ![](/images/journal/ndaka-safari-lodge/180E2843-5619-45EE-9EBB-DC02A885DDC0.jpeg)
 
 After an extensive drive full of surprises, your guide stops at a picturesque spot in the heart of nature for warming coffee and tea with delicious pastries. It's time to stretch your legs, and if you're lucky, some giraffes might be grazing not too far away from you. With many more wildlife encounters and newfound knowledge about your surroundings, your guide drives you back to the lodge, where the delicious aroma of a hearty sweet and savory breakfast awaits. Every day, new delights are prepared to surprise you upon your return. The generous breakfast buffet offers a wide selection for you to choose from, and you can eat as much as you like. If you have special requests, please inform Ndaka before your trip. The lodge goes to great lengths to provide you with the best possible experience.
@@ -54,14 +54,14 @@ After the sumptuous breakfast, you have plenty of time to yourself. Whether you 
 
 > "Naturally, you can ask your guide anything that interests, excites, or astonishes you. Ndaka has the absolute best guides I have ever met, and I have learned so much from them." — Evelyne
 
-![a beautiful cheetah taking a rest during afternoon time](/images/journal/ndaka-safari-lodge/93F00884-E222-4BE9-9AAD-684582C3FF91.jpeg)
-*A beautiful cheetah taking a rest during afternoon time*
+![](/images/journal/ndaka-safari-lodge/93F00884-E222-4BE9-9AAD-684582C3FF91.jpeg)
 
 ![](/images/journal/ndaka-safari-lodge/98EBB83B-8FD7-422A-A0FC-61513CDA891C.jpeg)
 ![](/images/journal/ndaka-safari-lodge/B68B3C83-F35A-4258-8160-4A42DEAC3AAB.jpeg)
 ![](/images/journal/ndaka-safari-lodge/IMG_0985.jpg)
 ![](/images/journal/ndaka-safari-lodge/070AAA54-A308-4B76-BABE-8B3DBAED1C55.jpeg)
-![](/images/journal/ndaka-safari-lodge/Bildschirmfoto-2024-05-31-um-18.14.19.png)
+![a beautiful cheetah taking a rest during afternoon time](/images/journal/ndaka-safari-lodge/Bildschirmfoto-2024-05-31-um-18.14.19.png)
+*A beautiful cheetah taking a rest during afternoon time*
 ![](/images/journal/ndaka-safari-lodge/6285AE9A-8900-4F5C-BFD4-6DFDD2ED063D.jpg)
 ![](/images/journal/ndaka-safari-lodge/06937D08-A097-4FCF-B72B-64F9DC5FEDA7.jpeg)
 ![](/images/journal/ndaka-safari-lodge/99507467-C494-4DCE-84B8-519D2605BD3B.jpg)
@@ -85,14 +85,14 @@ The sun now hangs low on the horizon. On a sunny rock ledge high above the valle
 
 Your stomach now growls as well, and it's time for the most exclusive dinner you've ever seen. In a three-course meal that you chose yourself at lunchtime, the guides and staff of Ndaka serve your food with great skill. The menus are crafted by highly talented and acclaimed chefs. Even now, my mouth waters at the memory of this delicious food. By the fire, enjoying a fun game with others, or at the bar, you end your day, tired and full of impressions that will help you sleep soundly. Ready for a new day, bringing new surprises.
 
-![ndaka safari by night - the tables are ready for dinner](/images/journal/ndaka-safari-lodge/2ABC29DB-C564-4CDA-9768-4CEAE606553C.jpg)
-*Ndaka safari by night — the tables are ready for dinner*
+![](/images/journal/ndaka-safari-lodge/2ABC29DB-C564-4CDA-9768-4CEAE606553C.jpg)
 
 ![](/images/journal/ndaka-safari-lodge/39254710-ADE6-4472-8B57-8525F6B681C6.jpg)
 ![](/images/journal/ndaka-safari-lodge/F1AE0FED-0F99-4134-85AD-A3AFAC5CEAAB.jpeg)
 ![](/images/journal/ndaka-safari-lodge/419E3060-C658-4FB7-922F-1F2C90C126E1.jpeg)
 ![](/images/journal/ndaka-safari-lodge/30FF5850-6296-4C7D-9E9C-D956E67D3DE8.jpeg)
-![](/images/journal/ndaka-safari-lodge/10264418-4CC1-460A-9890-B9435FC045D6.jpeg)
+![ndaka safari by night - the tables are ready for dinner](/images/journal/ndaka-safari-lodge/10264418-4CC1-460A-9890-B9435FC045D6.jpeg)
+*Ndaka safari by night — the tables are ready for dinner*
 
 *With 🐘 by Evelyne (and Frank).*
 
