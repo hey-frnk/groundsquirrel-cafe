@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Special_Elite } from "next/font/google";
 import "./globals.css";
 import SiteHeader from "@/components/SiteHeader";
@@ -37,6 +38,9 @@ export default function RootLayout({
           <CartDrawer />
         </CartProvider>
       </body>
+      {/* 100% privacy-first analytics — cookieless, no personal data, EU-hosted.
+          Counts page views only; see /datenschutz/. */}
+      <Script src="https://scripts.simpleanalyticscdn.com/latest.js" />
     </html>
   );
 }

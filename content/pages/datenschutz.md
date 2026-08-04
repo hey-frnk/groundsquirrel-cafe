@@ -14,13 +14,31 @@ This website is operated from Switzerland and personal data is processed in acco
 
 ## What this website does — and doesn't — do
 
-The Ground Squirrel Café is a static website: there is no user login, no database, no contact form, and — as far as we control it — **no cookies and no analytics or tracking scripts** are set by us. We don't know who you are unless you choose to email us or place an order.
+The Ground Squirrel Café is a static website: there is no user login, no database and no contact form. We set **no cookies**, we don't profile you, and we don't track you across websites or over time. We don't know who you are unless you choose to email us or place an order.
+
+We do count page views, using a privacy-friendly analytics service that works without cookies and without personal data — see "Visitor statistics" below.
 
 The one thing this site stores in your browser is your shopping basket, and only once you put something in it. See "Shop and payments" below.
 
 ## Hosting
 
 This site is hosted on **GitHub Pages** (GitHub, Inc., 88 Colin P. Kelly Jr. St, San Francisco, CA 94107, USA). Like any web server, GitHub's infrastructure automatically records standard technical access data for security and operational purposes (e.g. IP address, browser type, date and time of the request) when you load a page. We have no access to these server logs ourselves. See [GitHub's Privacy Statement](https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement) for details.
+
+## Visitor statistics (Simple Analytics)
+
+To find out how often our pages are read — and nothing more — we use **Simple Analytics**, a privacy-focused analytics service by Simple Analytics B.V., Amsterdam, the Netherlands. To do this, a small script is loaded from `scripts.simpleanalyticscdn.com` on every page.
+
+What this means for you:
+
+- **No cookies and no other storage on your device.** Nothing is written to or read from your browser for analytics purposes, which is why this site shows no cookie banner.
+- **No personal data and no profiles.** Simple Analytics does not store your IP address, does not use device fingerprinting, and does not create a persistent identifier. Individual visitors are not recognised — neither between pages, nor on a later visit, nor across other websites.
+- **What is recorded** is limited to aggregate, non-identifying information about the page view itself: the page visited, the referring website or campaign parameters, and coarse technical details such as country, device type, browser and operating system.
+- **Where.** The data is processed and stored on servers in the European Union.
+- **Do Not Track.** If your browser sends a "Do Not Track" signal, Simple Analytics does not count your visit.
+
+We only ever see aggregate statistics, such as "this journal post was read 120 times last month". Details are described in [Simple Analytics' privacy policy](https://docs.simpleanalytics.com/what-we-collect) and their [data protection information](https://docs.simpleanalytics.com/privacy-policy).
+
+**Legal basis.** Because no personal data is processed, no consent is required for these statistics. Insofar as the loading of the script and the associated transmission of technical connection data (in particular your IP address, which is necessary for any web request and is not stored by Simple Analytics) is nevertheless regarded as processing of personal data, we rely on our overriding legitimate interest in understanding the reach of our content and in operating our website in a needs-based way (Art. 31 para. 1 FADP; Art. 6 para. 1 lit. f GDPR). You can object to this at any time using the contact details above, or by enabling "Do Not Track" in your browser.
 
 ## Contact by email
 
