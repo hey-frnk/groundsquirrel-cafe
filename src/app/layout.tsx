@@ -29,7 +29,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${specialElite.variable} h-full`}>
+    // Browser extensions routinely add their own classes and attributes to
+    // <html> before React hydrates, which React then reports as a mismatch
+    // against the server's markup. Nothing in the app touches this element
+    // after render, so the DOM is allowed to win here. The opt-out is one
+    // element deep — real mismatches further down still surface.
+    <html lang="en" className={`${specialElite.variable} h-full`} suppressHydrationWarning>
       <body className="min-h-full flex flex-col antialiased tracking-wide">
         <CartProvider>
           <SiteHeader />

@@ -4,5 +4,5 @@ tagline: "A café on wheels, a studio, a journal — and a whole lot of ground s
 contactEmail: "hello@thegroundsquirrel.cafe"
 instagramUrl: "https://instagram.com/groundsquirrelcafe"
 youtubeUrl: "https://www.youtube.com/@weltenhummler"
-tiktokUrl: "[PLATZHALTER: TikTok-Link einfügen]"
+tiktokUrl: "https://www.tiktok.com/@groundsquirrelcafe"
 ---
