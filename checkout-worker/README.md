@@ -98,22 +98,44 @@ lässt sich also gefahrlos veröffentlichen, bevor Stripe fertig eingerichtet is
 > Falls einer doch irgendwo aufgetaucht ist: Dashboard → Entwickler →
 > API-Schlüssel → **Roll key**. Dauert Sekunden und macht den alten wertlos.
 
-## Schritt 3 — Versandtarife (macht ihr)
+## Schritt 3 — Versandtarife
 
-Unter **Einstellungen → Versand → Versandtarife** je Zone einen Tarif anlegen,
-z.B.:
+Die Zonen stehen in [`content/shipping.json`](../content/shipping.json). **Tragt
+dort zuerst eure echten Beträge ein** — die aktuellen Werte sind Platzhalter und
+stammen *nicht* aus den Etsy-Unterlagen. Was Prodigi euch für den Versand
+berechnet, wisst nur ihr.
 
-- Schweiz — CHF 7.00
-- Europa — CHF 12.00
-- Weltweit — CHF 18.00
+```bash
+export STRIPE_SECRET_KEY=sk_test_...
+node scripts/setup-shipping.mjs           # zeigt nur an, ändert nichts
+node scripts/setup-shipping.mjs --apply   # legt in Stripe an
+```
 
-Die IDs (`shr_...`) kommen in `wrangler.toml` unter `SHIPPING_RATES`,
-kommagetrennt, günstigster zuerst.
+Trockenlauf ist Absicht: ein falscher Versandbetrag kostet bei *jeder*
+Bestellung Geld. Das Skript legt die Tarife an und schreibt die `shr_…`-IDs
+selbst in `wrangler.toml`.
+
+### Warum die Zone nicht Stripe allein überlassen wird
+
+Stripe Checkout zeigt dem Kunden **alle** Versandoptionen, die die Session
+enthält — unabhängig von seiner Lieferadresse. Gäbe man alle drei Zonen mit,
+könnte ein Kunde in Australien die Schweizer Pauschale anklicken und ihr zahlt
+die Differenz.
+
+Deshalb wählt der Kunde das Land schon im Warenkorb, der Worker schlägt daraus
+die Zone nach und gibt Stripe **genau einen** Tarif mit. Zusätzlich wird die
+Länderauswahl im Stripe-Formular auf dieses eine Land gesperrt, damit Tarif und
+Adresse nicht auseinanderlaufen können.
+
+Wenn ihr Zonen ändert, müssen `content/shipping.json` und die Länderliste in
+[`src/lib/countries.ts`](../src/lib/countries.ts) zusammenpassen — jedes Land im
+Dropdown braucht eine Zone.
 
 > Ob ihr MwSt. ausweisen müsst, hängt von Umsatz und Zielländern ab — das
 > gehört vor dem ersten Verkauf einmal zum Treuhänder. `automatic_tax` ist im
 > Worker eingeschaltet; falls ihr noch nicht steuerpflichtig seid, in
-> `src/index.js` auf `"false"` setzen.
+> `src/index.js` auf `"false"` setzen und `taxBehavior` in `shipping.json` auf
+> `"unspecified"`.
 
 ## Schritt 4 — Worker deployen
 
