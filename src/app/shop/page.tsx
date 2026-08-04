@@ -90,7 +90,7 @@ export default function ShopPage() {
           {
             icon: "🖌️",
             title: "Painted by hand",
-            body: "Watercolour and pencil, start to finish. No AI, no traced photographs.",
+            body: "Painted with heart and soul and absolutely no AI.",
           },
           {
             icon: "🚐",
