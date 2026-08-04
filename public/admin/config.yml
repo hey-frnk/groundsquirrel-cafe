@@ -36,29 +36,57 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Produktname", name: "title", widget: "string" }
-      - { label: "Preis", name: "price", widget: "string", hint: "z.B. CHF 12.00" }
-      - { label: "Produktfoto", name: "image", widget: "image" }
-      - label: "Stripe Payment Link"
-        name: "stripeLink"
+      - label: "Kurzbeschreibung (ein Satz, unter dem Titel)"
+        name: "tagline"
         widget: "string"
         required: false
-        hint: "Erstellt einen Payment Link in eurem Stripe-Dashboard und fügt den Link hier ein. Leer lassen = Button zeigt 'Coming soon'."
+      - { label: "Vorschaubild (für die Shop-Übersicht)", name: "image", widget: "image" }
       - { label: "Reihenfolge", name: "order", widget: "number", default: 1 }
-      - label: "Varianten (z.B. Set / einzelne Designs)"
-        name: "variants"
+      - label: "Auszeichnungen (kleine Etiketten)"
+        name: "badges"
         widget: "list"
         required: false
-        hint: "Falls ausgefüllt, zeigt der Shop ein Auswahl-Dropdown statt eines festen Preises/Fotos. Leer lassen für ein Produkt ohne Varianten."
+        hint: "z.B. 'Painted by hand — never AI'"
+      - label: "Bildergalerie (falls eine Variante keine eigenen Bilder hat)"
+        name: "gallery"
+        widget: "list"
+        required: false
+        field: { label: "Bild", name: "image", widget: "image" }
+      - label: "Details ('Field notes'-Kasten)"
+        name: "specs"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Bezeichnung", name: "label", widget: "string", hint: "z.B. Size" }
+          - { label: "Angabe", name: "value", widget: "string", hint: "z.B. A3 — 29.7 × 42 cm" }
+      - label: "Versandhinweis"
+        name: "shippingNote"
+        widget: "text"
+        required: false
+      - label: "Varianten (Set / einzelne Designs)"
+        name: "variants"
+        widget: "list"
+        hint: "Jede Variante erscheint im Auswahl-Dropdown mit eigenem Preis und eigenen Bildern."
         fields:
           - { label: "Bezeichnung (im Dropdown)", name: "label", widget: "string" }
-          - { label: "Preis", name: "price", widget: "string", required: false, hint: "z.B. CHF 12.00" }
-          - { label: "Foto", name: "image", widget: "image", required: false }
-          - label: "Stripe Payment Link"
-            name: "stripeLink"
+          - label: "Preis in CHF"
+            name: "price"
+            widget: "number"
+            value_type: "float"
+            hint: "Nur die Zahl, z.B. 25 oder 12.50 — ohne 'CHF'."
+          - { label: "Kurznotiz (kursiv unter der Auswahl)", name: "note", widget: "string", required: false }
+          - label: "Bilder dieser Variante"
+            name: "images"
+            widget: "list"
+            required: false
+            field: { label: "Bild", name: "image", widget: "image" }
+          - { label: "Artikelnummer (SKU)", name: "sku", widget: "string", required: false }
+          - label: "Stripe Price ID"
+            name: "stripePriceId"
             widget: "string"
             required: false
-            hint: "Leer lassen = Button zeigt 'Coming soon'."
-      - { label: "Beschreibung", name: "body", widget: "markdown", required: false }
+            hint: "Aus dem Stripe-Dashboard, beginnt mit 'price_'. Solange leer, zeigt der Warenkorb 'Checkout opens soon'."
+      - { label: "Beschreibung / Geschichte", name: "body", widget: "markdown", required: false }
 
   - name: "crew"
     label: "Crew"

@@ -3,6 +3,9 @@ import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
+import type { ShopProduct, ShopVariant } from "./shop";
+
+export type { ShopProduct, ShopVariant } from "./shop";
 
 const CONTENT_DIR = path.join(process.cwd(), "content");
 
@@ -110,37 +113,33 @@ export async function getAllCrewMembers(): Promise<(CrewMember & { contentHtml: 
   );
 }
 
-export interface ShopProductVariant {
-  label: string;
-  price?: string;
-  image?: string;
-  stripeLink?: string;
+function normalizeVariants(variants: unknown): ShopVariant[] {
+  if (!Array.isArray(variants)) return [];
+  return variants
+    .filter((v): v is ShopVariant => Boolean(v) && typeof (v as ShopVariant).label === "string")
+    .map((v) => ({ ...v, price: Number(v.price) || 0, images: normalizePhotos(v.images) }));
 }
 
-export interface ShopProduct {
-  slug: string;
-  title: string;
-  price: string;
-  image: string;
-  stripeLink: string;
-  order: number;
-  variants?: ShopProductVariant[];
+function readShopProduct(filename: string) {
+  const { slug, data, content } = readEntry<ShopProduct>("shop", filename);
+  return {
+    ...data,
+    slug,
+    body: content.trim(),
+    gallery: normalizePhotos(data.gallery),
+    variants: normalizeVariants(data.variants),
+  };
 }
 
-// The CMS list widget stores an empty variants list as undefined/missing, so
-// normalize it away entirely rather than expose a variants: [] with no options.
-function normalizeVariants(variants: unknown): ShopProductVariant[] | undefined {
-  if (!Array.isArray(variants) || variants.length === 0) return undefined;
-  return variants as ShopProductVariant[];
-}
-
-export function getAllShopProducts(): (ShopProduct & { description: string })[] {
+export function getAllShopProducts(): (ShopProduct & { body: string })[] {
   return readDir("shop")
-    .map((filename) => {
-      const { slug, data, content } = readEntry<ShopProduct>("shop", filename);
-      return { ...data, slug, description: content.trim(), variants: normalizeVariants(data.variants) };
-    })
+    .map(readShopProduct)
     .sort((a, b) => a.order - b.order);
+}
+
+export async function getShopProduct(slug: string) {
+  const product = readShopProduct(`${slug}.md`);
+  return { ...product, bodyHtml: await markdownToHtml(product.body) };
 }
 
 export interface TourPhoto {

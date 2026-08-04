@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import CartButton from "@/components/shop/CartButton";
 
 const NAV_LINKS = [
   { href: "/tour", label: "Tour" },
@@ -49,16 +50,20 @@ export default function SiteHeader() {
               {link.label}
             </Link>
           ))}
+          <CartButton />
         </nav>
 
-        <button
-          className="md:hidden text-sm border border-ink/30 rounded px-3 py-1.5"
-          onClick={() => setOpen((v) => !v)}
-          aria-expanded={open}
-          aria-label="Toggle navigation"
-        >
-          {open ? "Close" : "Menu"}
-        </button>
+        <div className="flex items-center gap-2 md:hidden">
+          <CartButton />
+          <button
+            className="text-sm border border-ink/30 rounded px-3 py-1.5"
+            onClick={() => setOpen((v) => !v)}
+            aria-expanded={open}
+            aria-label="Toggle navigation"
+          >
+            {open ? "Close" : "Menu"}
+          </button>
+        </div>
       </div>
 
       {open && (
