@@ -98,7 +98,10 @@ export default function Home() {
     <div>
       {/* ---------- Hero: the intro film, with the nav living inside it ---------- */}
       <section className="relative isolate overflow-hidden">
-        <div className="relative h-[72vh] max-h-205 min-h-112 sm:h-[84vh] sm:min-h-140">
+        {/* On phones the hero is a flex column in normal flow, so the brand mark
+            and the welcome stack and the box grows to fit them. Only from sm up,
+            where there is room, do they get pinned to the top and bottom. */}
+        <div className="relative flex min-h-[max(36rem,85svh)] flex-col sm:block sm:h-[84vh] sm:max-h-205 sm:min-h-140">
           {/* object-position sits left of centre so the van stays in frame when a
               narrow viewport crops the sides off the 16:9 film */}
           <video
@@ -126,8 +129,8 @@ export default function Home() {
 
           {/* Brand mark and navigation, sitting on the film. The badge stays
               centred; from sm up the links move out to the top right corner. */}
-          <div className="absolute inset-x-0 top-0 z-10 px-5 pt-5 sm:pt-7">
-            <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-3">
+          <div className="relative z-10 px-5 pt-6 sm:absolute sm:inset-x-0 sm:top-0 sm:pt-7">
+            <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-4 sm:gap-3">
               <Link href="/" aria-label="The Ground Squirrel Café">
                 <Image
                   src="/images/brand/logo_badge_var.png"
@@ -157,15 +160,16 @@ export default function Home() {
 
           {/* The welcome — held to the left half so it doesn't land on top of
               Evelyne and Frank, who stand right of centre in the film */}
-          <div className="absolute inset-x-0 bottom-[5%] z-10 px-5 pb-10 sm:pb-16">
+          <div className="relative z-10 mt-auto px-5 pt-10 pb-9 sm:absolute sm:inset-x-0 sm:bottom-[5%] sm:mt-0 sm:pt-0 sm:pb-16">
             <div className="mx-auto max-w-6xl">
               <div className="max-w-xl text-center text-cream sm:text-left">
                 {/* a badge rather than bare text — it crosses the brightest part
-                    of the film, where a scrim alone can't hold it */}
-                <p className="inline-block rounded-full border border-cream/25 bg-ink/45 px-4 py-1.5 text-[0.62rem] uppercase tracking-[0.18em] text-cream backdrop-blur-[2px] sm:text-[0.7rem] sm:tracking-[0.3em]">
+                    of the film, where a scrim alone can't hold it. Hidden on
+                    phones, where the space is better spent on the welcome. */}
+                <p className="hidden rounded-full border border-cream/25 bg-ink/45 px-4 py-1.5 text-[0.7rem] uppercase tracking-[0.3em] text-cream backdrop-blur-[2px] sm:inline-block">
                   {home.heroKicker}
                 </p>
-                <h1 className="mt-3 text-4xl leading-tight drop-shadow-md sm:text-5xl lg:text-6xl">
+                <h1 className="text-4xl leading-tight drop-shadow-md sm:mt-3 sm:text-5xl lg:text-6xl">
                   {splitLines(home.heroHeadline).map((line) => (
                     <span key={line} className="block">
                       {line}
@@ -173,16 +177,16 @@ export default function Home() {
                   ))}
                 </h1>
                 <p className="mt-4 text-cream/90 drop-shadow-md">{home.heroSubline}</p>
-                <div className="mt-7 flex flex-wrap items-center justify-center gap-3 sm:justify-start">
+                <div className="mt-6 flex flex-wrap items-center justify-center gap-2.5 sm:mt-7 sm:gap-3 sm:justify-start">
                   <Link
                     href="/tour"
-                    className="rounded-full bg-rose px-7 py-3 text-ink shadow-lg transition-colors hover:bg-cream"
+                    className="rounded-full bg-rose px-5 py-2.5 text-sm text-ink shadow-lg transition-colors hover:bg-cream sm:px-7 sm:py-3 sm:text-base"
                   >
                     Visit the café
                   </Link>
                   <Link
                     href="/journal"
-                    className="rounded-full border border-cream/60 px-7 py-3 text-cream transition-colors hover:bg-cream/15"
+                    className="rounded-full border border-cream/60 px-5 py-2.5 text-sm text-cream transition-colors hover:bg-cream/15 sm:px-7 sm:py-3 sm:text-base"
                   >
                     Read the journal
                   </Link>
