@@ -40,10 +40,35 @@ Einzurichten:
 - Zahlungsarten aktivieren: Karten, TWINT, Apple Pay, Google Pay
 - Beleg-Mails aktivieren (Einstellungen → E-Mails → *Erfolgreiche Zahlungen*)
 
-## Schritt 2 — Produkte und Preise anlegen (macht ihr)
+## Schritt 2 — Produkte und Preise anlegen
 
-Im Stripe-Dashboard unter **Produktkatalog** für *jede* Variante einen Preis
-anlegen. Es sind 13 Stück:
+Das erledigt ein Skript, damit ihr 13 Preise nicht von Hand klickt. Es liest
+die Varianten direkt aus `content/shop/`, legt sie in Stripe an und trägt die
+zurückgegebenen Price-IDs wieder in die Dateien ein.
+
+```bash
+export STRIPE_SECRET_KEY=sk_test_...
+node scripts/setup-stripe.mjs --dry-run   # erst anschauen
+node scripts/setup-stripe.mjs             # dann wirklich anlegen
+```
+
+Der Schlüssel wird aus der Umgebung gelesen, nicht als Argument übergeben —
+so landet er nicht in der Shell-History. Mehrfaches Ausführen ist unschädlich:
+Produkte bekommen eine feste ID aus der SKU, Preise die SKU als `lookup_key`,
+also wird beim zweiten Lauf wiederverwendet statt dupliziert. Ändert ihr einen
+Preis im CMS und lasst das Skript erneut laufen, wird ein neuer Preis angelegt
+und der alte archiviert (Stripe-Preise sind unveränderlich).
+
+> **Test- und Live-Modus sind getrennte Welten.** Mit `sk_test_` angelegte
+> Preise existieren im Live-Modus nicht. Also: einmal mit dem Testschlüssel
+> anlegen und Checkout durchspielen, danach mit dem Live-Schlüssel erneut
+> laufen lassen und die Live-IDs committen.
+
+> Die Produktbilder werden als URLs auf `thegroundsquirrel.cafe` gesetzt und
+> erscheinen dann im Stripe-Checkout. Solange die Seite noch nicht deployt
+> ist, mit `--no-images` laufen lassen.
+
+Angelegt werden diese 13 Einträge:
 
 | Produkt | Variante | Preis |
 |---|---|---|
@@ -61,10 +86,17 @@ anlegen. Es sind 13 Stück:
 | Squirrel Stickers | Alpine Marmot | CHF 4.00 |
 | Squirrel Stickers | California Ground Squirrel | CHF 4.00 |
 
-Jeder Preis bekommt eine ID der Form `price_1AbC...`. Diese ID gehört ins CMS in
-das Feld **Stripe Price ID** der jeweiligen Variante (Shop → Produkt →
-Varianten). Solange ein Feld leer ist, zeigt der Warenkorb „Checkout opens
-soon" — der Shop lässt sich also gefahrlos schon veröffentlichen.
+Jeder Preis bekommt eine ID der Form `price_1AbC...`. Das Skript trägt sie
+selbst ein; wer lieber im Dashboard klickt, findet das Feld **Stripe Price ID**
+im CMS unter Shop → Produkt → Varianten.
+
+Solange ein Feld leer ist, zeigt der Warenkorb „Checkout opens soon" — der Shop
+lässt sich also gefahrlos veröffentlichen, bevor Stripe fertig eingerichtet ist.
+
+> **Schlüssel-Hygiene:** Der geheime Schlüssel gehört nur in die Umgebung oder
+> in `wrangler secret`. Nicht in Dateien, nicht in Commits, nicht in Chats.
+> Falls einer doch irgendwo aufgetaucht ist: Dashboard → Entwickler →
+> API-Schlüssel → **Roll key**. Dauert Sekunden und macht den alten wertlos.
 
 ## Schritt 3 — Versandtarife (macht ihr)
 
