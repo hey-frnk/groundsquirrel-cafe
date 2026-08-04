@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useCart } from "@/lib/cart";
 import { formatPrice } from "@/lib/shop";
+import { COUNTRY_GROUPS, DEFAULT_COUNTRY } from "@/lib/countries";
 
 /**
  * Set NEXT_PUBLIC_CHECKOUT_URL to the deployed Cloudflare Worker to switch the
@@ -15,6 +16,7 @@ export default function CartDrawer() {
   const { lines, subtotal, isOpen, closeCart, setQuantity, removeLine } = useCart();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [country, setCountry] = useState(DEFAULT_COUNTRY);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -44,6 +46,9 @@ export default function CartDrawer() {
             price: l.stripePriceId,
             quantity: l.quantity,
           })),
+          // Decides the shipping zone; the Worker locks Stripe's address form
+          // to this country so the rate and the address cannot disagree.
+          country,
         }),
       });
       if (!response.ok) throw new Error(`Checkout failed (${response.status})`);
@@ -161,9 +166,34 @@ export default function CartDrawer() {
               <span className="text-ink/60">Subtotal</span>
               <span className="text-lg">{formatPrice(subtotal)}</span>
             </div>
-            <p className="text-xs text-ink/50">
-              Shipping is calculated at checkout.
-            </p>
+
+            <div>
+              <label
+                htmlFor="cart-country"
+                className="block text-xs text-ink/55 mb-1.5"
+              >
+                Delivering to
+              </label>
+              <select
+                id="cart-country"
+                value={country}
+                onChange={(e) => setCountry(e.target.value)}
+                className="w-full rounded-xl border border-ink/20 bg-white/70 px-3 py-2.5 text-sm focus:border-rose focus:outline-none focus:ring-2 focus:ring-rose/30"
+              >
+                {COUNTRY_GROUPS.map((group) => (
+                  <optgroup key={group.label} label={group.label}>
+                    {group.countries.map((c) => (
+                      <option key={c.code} value={c.code}>
+                        {c.name}
+                      </option>
+                    ))}
+                  </optgroup>
+                ))}
+              </select>
+              <p className="mt-1.5 text-xs text-ink/50">
+                Shipping is added at checkout.
+              </p>
+            </div>
 
             {error && <p className="text-xs text-rose">{error}</p>}
 

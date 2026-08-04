@@ -7,12 +7,11 @@ ALLOWED_ORIGIN = "https://thegroundsquirrel.cafe"
 SUCCESS_URL = "https://thegroundsquirrel.cafe/shop/thank-you/"
 CANCEL_URL = "https://thegroundsquirrel.cafe/shop/"
 
-# Countries the shop ships to (ISO codes). Stripe shows only these at checkout.
-SHIPPING_COUNTRIES = "CH,DE,AT,FR,IT,LI,NL,BE,LU,DK,SE,NO,FI,ES,PT,IE,PL,CZ,GB,US,CA,AU,NZ"
-
-# Zone shipping rates, created in the Stripe Dashboard (Shipping rates).
-# Paste the shr_... IDs here, comma-separated, cheapest first.
-SHIPPING_RATES = ""
+# Shipping zones — which countries get which Stripe rate. Do not edit by hand:
+# `node scripts/setup-shipping.mjs --apply` creates the rates from
+# content/shipping.json and writes this line. The catch-all zone ("*") must
+# stay last, otherwise it swallows the zones after it.
+SHIPPING_ZONES = '[{"rate":"shr_1U0htRHz08i060C4zORtysjl","countries":["CH","LI"]},{"rate":"shr_1U0htRHz08i060C40SCLvWjR","countries":["DE","AT","FR","IT","NL","BE","LU","DK","SE","NO","FI","ES","PT","IE","PL","CZ","SK","SI","HU","HR","GR","EE","LV","LT","BG","RO","GB"]},{"rate":"shr_1U0htSHz08i060C4pCbyDoG2","countries":["*"]}]'
 
 # STRIPE_SECRET_KEY is NOT set here — it is a secret:
 #   npx wrangler secret put STRIPE_SECRET_KEY

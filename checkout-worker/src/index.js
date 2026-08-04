@@ -42,6 +42,26 @@ function json(body, status, env) {
  * Accepts only what we expect: a Stripe Price ID and a sane quantity. Anything
  * else is rejected rather than forwarded to Stripe.
  */
+/**
+ * Resolves a two-letter country code to its shipping zone. Zones are tried in
+ * order and the first match wins, so a catch-all zone ("*") must be last —
+ * `scripts/setup-shipping.mjs` enforces that when it writes the config.
+ */
+function zoneFor(country, env) {
+  let zones;
+  try {
+    zones = JSON.parse(env.SHIPPING_ZONES || "[]");
+  } catch {
+    console.error("SHIPPING_ZONES is not valid JSON");
+    return null;
+  }
+  return (
+    zones.find(
+      (z) => z.countries?.includes(country) || z.countries?.includes("*")
+    ) ?? null
+  );
+}
+
 function parseItems(raw) {
   if (!Array.isArray(raw) || raw.length === 0 || raw.length > MAX_ITEMS) {
     return null;
@@ -81,6 +101,11 @@ export default {
     const items = parseItems(payload?.items);
     if (!items) return json({ error: "Invalid basket" }, 400, env);
 
+    const country = payload?.country;
+    if (typeof country !== "string" || !/^[A-Z]{2}$/.test(country)) {
+      return json({ error: "Invalid country" }, 400, env);
+    }
+
     // Stripe's API takes form-encoded bodies with bracketed array keys.
     const form = new URLSearchParams();
     form.set("mode", "payment");
@@ -98,23 +123,18 @@ export default {
       form.set(`line_items[${i}][adjustable_quantity][maximum]`, String(MAX_QUANTITY));
     });
 
-    // Which countries we ship to, and at what price. Both are configured in
-    // Stripe so they can change without a redeploy.
-    (env.SHIPPING_COUNTRIES || "CH")
-      .split(",")
-      .map((c) => c.trim())
-      .filter(Boolean)
-      .forEach((country, i) => {
-        form.set(`shipping_address_collection[allowed_countries][${i}]`, country);
-      });
+    // Stripe Checkout shows every shipping option it is given, regardless of
+    // the delivery address — so offering all zones at once would let a customer
+    // in Australia pick the Swiss rate. Instead the zone is resolved here from
+    // the country the customer chose, Stripe is handed exactly one rate, and
+    // the address form is locked to that country so the two cannot diverge.
+    const zone = zoneFor(country, env);
+    if (!zone) {
+      return json({ error: "We do not ship to that country yet" }, 400, env);
+    }
 
-    (env.SHIPPING_RATES || "")
-      .split(",")
-      .map((r) => r.trim())
-      .filter(Boolean)
-      .forEach((rate, i) => {
-        form.set(`shipping_options[${i}][shipping_rate]`, rate);
-      });
+    form.set("shipping_address_collection[allowed_countries][0]", country);
+    form.set("shipping_options[0][shipping_rate]", zone.rate);
 
     const response = await fetch("https://api.stripe.com/v1/checkout/sessions", {
       method: "POST",

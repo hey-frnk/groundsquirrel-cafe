@@ -1,0 +1,49 @@
+{
+  "_comment": [
+    "Shipping zones for the shop. Edit the amounts here, then run:",
+    "  node scripts/setup-shipping.mjs            (dry run)",
+    "  node scripts/setup-shipping.mjs --apply    (create in Stripe)",
+    "",
+    "AMOUNTS ARE PLACEHOLDERS and must be confirmed against what Prodigi",
+    "actually charges for dispatch. They were NOT taken from the Etsy PDFs —",
+    "those export delivery profile names but no figures.",
+    "",
+    "Zones are matched top to bottom; the first zone containing the customer's",
+    "country wins, so keep the catch-all ('*') last.",
+    "",
+    "taxBehavior: 'exclusive' adds tax on top, 'inclusive' means the amount",
+    "already contains it, 'unspecified' only works with automatic tax off."
+  ],
+  "currency": "chf",
+  "taxBehavior": "exclusive",
+  "zones": [
+    {
+      "id": "ch",
+      "label": "Switzerland & Liechtenstein",
+      "amount": 10.0,
+      "minDays": 2,
+      "maxDays": 4,
+      "countries": ["CH", "LI"]
+    },
+    {
+      "id": "europe",
+      "label": "Europe",
+      "amount": 20.0,
+      "minDays": 3,
+      "maxDays": 8,
+      "countries": [
+        "DE", "AT", "FR", "IT", "NL", "BE", "LU", "DK", "SE", "NO", "FI",
+        "ES", "PT", "IE", "PL", "CZ", "SK", "SI", "HU", "HR", "GR", "EE",
+        "LV", "LT", "BG", "RO", "GB"
+      ]
+    },
+    {
+      "id": "world",
+      "label": "Rest of the world",
+      "amount": 30.0,
+      "minDays": 5,
+      "maxDays": 15,
+      "countries": ["*"]
+    }
+  ]
+}
