@@ -11,7 +11,7 @@ CANCEL_URL = "https://thegroundsquirrel.cafe/shop/"
 # `node scripts/setup-shipping.mjs --apply` creates the rates from
 # content/shipping.json and writes this line. The catch-all zone ("*") must
 # stay last, otherwise it swallows the zones after it.
-SHIPPING_ZONES = '[{"rate":"shr_1U0htRHz08i060C4zORtysjl","countries":["CH","LI"]},{"rate":"shr_1U0htRHz08i060C40SCLvWjR","countries":["DE","AT","FR","IT","NL","BE","LU","DK","SE","NO","FI","ES","PT","IE","PL","CZ","SK","SI","HU","HR","GR","EE","LV","LT","BG","RO","GB"]},{"rate":"shr_1U0htSHz08i060C4pCbyDoG2","countries":["*"]}]'
+SHIPPING_ZONES = '[{"rate":"shr_1U0iMcHhWAEQqbxLgJJv3V3K","countries":["CH","LI"]},{"rate":"shr_1U0iMcHhWAEQqbxL4mpWYa4k","countries":["DE","AT","FR","IT","NL","BE","LU","DK","SE","NO","FI","ES","PT","IE","PL","CZ","SK","SI","HU","HR","GR","EE","LV","LT","BG","RO","GB"]},{"rate":"shr_1U0iMdHhWAEQqbxLFU1z6oPR","countries":["*"]}]'
 
 # STRIPE_SECRET_KEY is NOT set here — it is a secret:
 #   npx wrangler secret put STRIPE_SECRET_KEY

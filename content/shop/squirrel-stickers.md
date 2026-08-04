@@ -30,7 +30,7 @@ variants:
   - label: "The full set — all six designs"
     price: 12
     sku: "GSC-STICKER-SET"
-    stripePriceId: "price_1U0hIAHz08i060C4pEKf5M40"
+    stripePriceId: "price_1U0hpKHhWAEQqbxLOUCBWg9p"
     images:
       - "/images/shop/squirrel-stickers/sticker-set.webp"
       - "/images/shop/squirrel-stickers/sticker-european-squirrel.webp"
@@ -38,42 +38,42 @@ variants:
   - label: "European Squirrel"
     price: 4
     sku: "GSC-STICKER-EUS"
-    stripePriceId: "price_1U0hIBHz08i060C4h0mgeZ6A"
+    stripePriceId: "price_1U0hpJHhWAEQqbxLSagDW9jh"
     note: "The red squirrel of European woodland, acorn in paw."
     images:
       - "/images/shop/squirrel-stickers/sticker-european-squirrel.webp"
   - label: "Eastern Gray Squirrel"
     price: 4
     sku: "GSC-STICKER-EGS"
-    stripePriceId: "price_1U0hICHz08i060C4JyXBO1Sr"
+    stripePriceId: "price_1U0hpLHhWAEQqbxLmyvzARqF"
     note: "Tail up, mid-forage — the one you'll meet in every city park."
     images:
       - "/images/shop/squirrel-stickers/sticker-eastern-grey-squirrel.webp"
   - label: "Golden-mantled Ground Squirrel"
     price: 4
     sku: "GSC-STICKER-GMGS"
-    stripePriceId: "price_1U0hIDHz08i060C4OXgDEQWq"
+    stripePriceId: "price_1U0hpFHhWAEQqbxLaVvdZJvb"
     note: "Often mistaken for a chipmunk. Never forgives it."
     images:
       - "/images/shop/squirrel-stickers/sticker-golden-mantled-ground-squirrel.webp"
   - label: "African Tree Squirrel"
     price: 4
     sku: "GSC-STICKER-ATS"
-    stripePriceId: "price_1U0hIEHz08i060C4vVfOJ8UA"
+    stripePriceId: "price_1U0hpIHhWAEQqbxLyzVRyzTi"
     note: "Painted on a branch, in the field, in southern Africa."
     images:
       - "/images/shop/squirrel-stickers/sticker-african-tree-squirrel.webp"
   - label: "Alpine Marmot"
     price: 4
     sku: "GSC-STICKER-AM"
-    stripePriceId: "price_1U0hIFHz08i060C4rAxnGltZ"
+    stripePriceId: "price_1U0hpGHhWAEQqbxLnZjC7JcU"
     note: "Not strictly a squirrel. Absolutely part of the family."
     images:
       - "/images/shop/squirrel-stickers/sticker-alpine-marmot.webp"
   - label: "California Ground Squirrel"
     price: 4
     sku: "GSC-STICKER-CGS"
-    stripePriceId: "price_1U0hIGHz08i060C4JRTmpat7"
+    stripePriceId: "price_1U0hpJHhWAEQqbxLrsqKONwY"
     note: "Round, sun-warmed, entirely unbothered."
     images:
       - "/images/shop/squirrel-stickers/sticker-california-ground-squirrel.webp"

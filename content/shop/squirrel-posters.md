@@ -30,7 +30,7 @@ variants:
   - label: "The full set — all five plates"
     price: 110
     sku: "GSC-POSTER-SET"
-    stripePriceId: "price_1U0hI3Hz08i060C4WtQh0mPh"
+    stripePriceId: "price_1U0hpMHhWAEQqbxL3hK7w59d"
     images:
       - "/images/shop/squirrel-posters/poster-set.webp"
       - "/images/shop/squirrel-posters/framed-eurasian-red-squirrel.webp"
@@ -39,7 +39,7 @@ variants:
   - label: "Eurasian Red Squirrel"
     price: 25
     sku: "GSC-POSTER-ERS"
-    stripePriceId: "price_1U0hI4Hz08i060C4qrnNgW1p"
+    stripePriceId: "price_1U0hpLHhWAEQqbxLlg3N6CwY"
     note: "Pine forest, fly agaric, and the squirrel Europe is quietly losing."
     images:
       - "/images/shop/squirrel-posters/framed-eurasian-red-squirrel.webp"
@@ -47,7 +47,7 @@ variants:
   - label: "Eastern Grey Squirrel"
     price: 25
     sku: "GSC-POSTER-EGS"
-    stripePriceId: "price_1U0hI5Hz08i060C4X7fxum1W"
+    stripePriceId: "price_1U0hpSHhWAEQqbxLOhmenG7H"
     note: "Sunflower heads and autumn berries, from eastern North America."
     images:
       - "/images/shop/squirrel-posters/framed-eastern-grey-squirrel.webp"
@@ -55,7 +55,7 @@ variants:
   - label: "Golden-mantled Ground Squirrel"
     price: 25
     sku: "GSC-POSTER-GMGS"
-    stripePriceId: "price_1U0hI6Hz08i060C4MU2HSQnj"
+    stripePriceId: "price_1U0hpKHhWAEQqbxLpVR3F7ks"
     note: "Alpine lupine and mountain ferns — painted beside a glacial river."
     images:
       - "/images/shop/squirrel-posters/framed-golden-mantled-ground-squirrel.webp"
@@ -63,7 +63,7 @@ variants:
   - label: "African Tree Squirrel"
     price: 25
     sku: "GSC-POSTER-ATS"
-    stripePriceId: "price_1U0hI8Hz08i060C4J6bZtYx0"
+    stripePriceId: "price_1U0hpFHhWAEQqbxLIyytQoci"
     note: "Painted during Evelyne's seasons as a field guide in southern Africa."
     images:
       - "/images/shop/squirrel-posters/framed-african-tree-squirrel.webp"
@@ -71,7 +71,7 @@ variants:
   - label: "California Ground Squirrel"
     price: 25
     sku: "GSC-POSTER-CGS"
-    stripePriceId: "price_1U0hI9Hz08i060C41K2lCv0q"
+    stripePriceId: "price_1U0hpKHhWAEQqbxL9tgZ9JZE"
     note: "Dry grass and coastal light, from the USA West Coast road trip."
     images:
       - "/images/shop/squirrel-posters/framed-california-ground-squirrel.webp"
