@@ -120,3 +120,62 @@ body {
   font-size: 0.875rem;
   margin-top: -0.5rem;
 }
+
+/* ---- Shop ---------------------------------------------------------------- */
+
+/* Artwork sits on a warm paper ground with a soft mount shadow, so a print
+   reads as an object on a page rather than a floating cut-out. */
+.specimen-plate {
+  background-image: radial-gradient(
+    circle at 50% 35%,
+    color-mix(in srgb, white 55%, transparent),
+    transparent 70%
+  );
+  border: 1px solid color-mix(in srgb, var(--color-ink) 12%, transparent);
+  box-shadow:
+    0 1px 2px color-mix(in srgb, var(--color-ink) 6%, transparent),
+    0 12px 28px -12px color-mix(in srgb, var(--color-ink) 22%, transparent);
+}
+
+/* Dotted leaders between a spec's label and its value, like a printed key. */
+.spec-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.spec-row::after {
+  content: "";
+  order: 1;
+  flex: 1 1 auto;
+  min-width: 1.5rem;
+  align-self: end;
+  margin-bottom: 0.3em;
+  border-bottom: 1px dotted color-mix(in srgb, var(--color-ink) 28%, transparent);
+}
+
+.spec-row dd {
+  order: 2;
+  flex: 0 1 auto;
+}
+
+@keyframes plate-in {
+  from {
+    opacity: 0;
+    transform: scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-plate-in {
+  animation: plate-in 0.45s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-plate-in {
+    animation: none;
+  }
+}

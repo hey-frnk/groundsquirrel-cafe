@@ -1,0 +1,18 @@
+name = "gsc-checkout"
+main = "src/index.js"
+compatibility_date = "2026-01-15"
+
+[vars]
+ALLOWED_ORIGIN = "https://thegroundsquirrel.cafe"
+SUCCESS_URL = "https://thegroundsquirrel.cafe/shop/thank-you/"
+CANCEL_URL = "https://thegroundsquirrel.cafe/shop/"
+
+# Countries the shop ships to (ISO codes). Stripe shows only these at checkout.
+SHIPPING_COUNTRIES = "CH,DE,AT,FR,IT,LI,NL,BE,LU,DK,SE,NO,FI,ES,PT,IE,PL,CZ,GB,US,CA,AU,NZ"
+
+# Zone shipping rates, created in the Stripe Dashboard (Shipping rates).
+# Paste the shr_... IDs here, comma-separated, cheapest first.
+SHIPPING_RATES = ""
+
+# STRIPE_SECRET_KEY is NOT set here — it is a secret:
+#   npx wrangler secret put STRIPE_SECRET_KEY
