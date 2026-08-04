@@ -20,7 +20,7 @@
     {
       "id": "ch",
       "label": "Switzerland & Liechtenstein",
-      "amount": 7.0,
+      "amount": 10.0,
       "minDays": 2,
       "maxDays": 4,
       "countries": ["CH", "LI"]
@@ -28,7 +28,7 @@
     {
       "id": "europe",
       "label": "Europe",
-      "amount": 12.0,
+      "amount": 20.0,
       "minDays": 3,
       "maxDays": 8,
       "countries": [
@@ -40,7 +40,7 @@
     {
       "id": "world",
       "label": "Rest of the world",
-      "amount": 18.0,
+      "amount": 30.0,
       "minDays": 5,
       "maxDays": 15,
       "countries": ["*"]
