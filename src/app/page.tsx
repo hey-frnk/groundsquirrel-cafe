@@ -26,10 +26,10 @@ function isPlaceholder(value?: string) {
 }
 
 /**
- * Headlines are written in the CMS, where the natural way to ask for a line
- * break is either a real newline or a typed <br>. Neither survives as-is in
- * JSX, so split on both and let the caller render the parts as blocks — no raw
- * HTML from content has to be trusted.
+ * Copy is written in the CMS, where the natural way to ask for a line or
+ * paragraph break is either a real newline or a typed <br>. Neither survives
+ * as-is in JSX, so split on both and let the caller render the parts as blocks
+ * — no raw HTML from content has to be trusted.
  */
 function splitLines(text: string): string[] {
   return text.split(/\s*(?:<br\s*\/?>|\n)\s*/).filter(Boolean);
@@ -102,10 +102,12 @@ export default function Home() {
             and the welcome stack and the box grows to fit them. Only from sm up,
             where there is room, do they get pinned to the top and bottom. */}
         <div className="relative flex min-h-[max(36rem,85svh)] flex-col sm:block sm:h-[84vh] sm:max-h-205 sm:min-h-140">
-          {/* object-position sits left of centre so the van stays in frame when a
-              narrow viewport crops the sides off the 16:9 film */}
+          {/* A phone crops the 16:9 film down to roughly its middle third, so it
+              stays centred there — that band holds the van *and* the two of us
+              waving beside it. From sm up the crop is shallow enough to shift
+              left, which gives the welcome text below a quieter half to sit on. */}
           <video
-            className="hero-video absolute inset-0 h-full w-full object-cover object-[30%_50%]"
+            className="hero-video absolute inset-0 h-full w-full object-cover object-center sm:object-[30%_50%]"
             autoPlay
             muted
             loop
@@ -120,7 +122,7 @@ export default function Home() {
           <img
             src="/images/home/intro-poster.webp"
             alt="Humbär parked on a clifftop above the sea, with Evelyne and Frank at the open side door"
-            className="hero-still absolute inset-0 h-full w-full object-cover object-[30%_50%]"
+            className="hero-still absolute inset-0 h-full w-full object-cover object-center sm:object-[30%_50%]"
           />
 
           <div className="absolute inset-0 bg-ink/15" />
@@ -285,7 +287,11 @@ export default function Home() {
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div>
             <h2 className="text-3xl leading-tight sm:text-4xl">{home.welcomeHeading}</h2>
-            <p className="mt-5 leading-relaxed text-ink/75">{home.welcomeText}</p>
+            {splitLines(home.welcomeText).map((paragraph) => (
+              <p key={paragraph} className="mt-5 leading-relaxed text-ink/75">
+                {paragraph}
+              </p>
+            ))}
             <Link
               href="/crew"
               className="mt-7 inline-block text-sm underline decoration-rose decoration-2 underline-offset-4 transition-colors hover:text-rose"

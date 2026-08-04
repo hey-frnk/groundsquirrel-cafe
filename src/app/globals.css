@@ -121,6 +121,29 @@ body {
   margin-top: -0.5rem;
 }
 
+/* ---- Journal ------------------------------------------------------------- */
+
+/* A journal card as a photo on warm paper: barely-there mount shadow at rest,
+   lifting into a longer one — with a rose edge — as it's reached for. */
+.paper-card {
+  background: color-mix(in srgb, white 60%, var(--color-cream));
+  border: 1px solid color-mix(in srgb, var(--color-ink) 12%, transparent);
+  box-shadow:
+    0 1px 2px color-mix(in srgb, var(--color-ink) 7%, transparent),
+    0 16px 32px -20px color-mix(in srgb, var(--color-ink) 45%, transparent);
+  transition:
+    box-shadow 0.5s ease,
+    border-color 0.5s ease,
+    transform 0.5s ease;
+}
+
+.group:hover .paper-card {
+  border-color: color-mix(in srgb, var(--color-rose) 60%, transparent);
+  box-shadow:
+    0 2px 4px color-mix(in srgb, var(--color-ink) 8%, transparent),
+    0 28px 48px -24px color-mix(in srgb, var(--color-ink) 55%, transparent);
+}
+
 /* ---- Shop ---------------------------------------------------------------- */
 
 /* Artwork sits on a warm paper ground with a soft mount shadow, so a print

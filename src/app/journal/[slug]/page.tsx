@@ -15,7 +15,19 @@ export async function generateMetadata({
   const posts = getAllJournalPosts();
   const post = posts.find((p) => p.slug === slug);
   if (!post) return {};
-  return { title: `${post.title} — The Ground Squirrel Café` };
+  return {
+    title: `${post.title} — The Ground Squirrel Café`,
+    description: post.excerpt,
+    // So a pinned or shared story carries its own cover photo and blurb.
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description: post.excerpt,
+      publishedTime: post.date,
+      authors: [post.author],
+      images: [post.cover],
+    },
+  };
 }
 
 export default async function JournalPostPage({

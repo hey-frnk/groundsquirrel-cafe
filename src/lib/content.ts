@@ -3,6 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
+import { imageSize, type ImageDimensions } from "./imageSize";
 import type { ShopProduct, ShopVariant } from "./shop";
 
 export type { ShopProduct, ShopVariant } from "./shop";
@@ -60,13 +61,27 @@ export interface JournalPost {
   excerpt: string;
   cover: string;
   tags: string[];
+  /** Intrinsic size of `cover`, when it could be read — see `measureCover`. */
+  coverWidth?: number;
+  coverHeight?: number;
+}
+
+/**
+ * The journal pinboard places covers in masonry columns at their own aspect
+ * ratio, so it needs the intrinsic size up front to reserve the space; without
+ * it the columns reshuffle as each photo lands.
+ */
+function measureCover(cover?: string): ImageDimensions | undefined {
+  if (!cover?.startsWith("/")) return undefined;
+  return imageSize(path.join(process.cwd(), "public", cover));
 }
 
 export function getAllJournalPosts(): JournalPost[] {
   return readDir("journal")
     .map((filename) => {
       const { slug, data } = readEntry<JournalPost>("journal", filename);
-      return { ...data, slug };
+      const size = measureCover(data.cover);
+      return { ...data, slug, coverWidth: size?.width, coverHeight: size?.height };
     })
     .sort((a, b) => (a.date < b.date ? 1 : -1));
 }
