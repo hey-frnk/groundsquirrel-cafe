@@ -14,7 +14,9 @@ This website is operated from Switzerland and personal data is processed in acco
 
 ## What this website does — and doesn't — do
 
-The Ground Squirrel Café is a static website: there is no user login, no database, no contact form, and — as far as we control it — **no cookies and no analytics or tracking scripts** are set by us. We don't know who you are unless you choose to email us.
+The Ground Squirrel Café is a static website: there is no user login, no database, no contact form, and — as far as we control it — **no cookies and no analytics or tracking scripts** are set by us. We don't know who you are unless you choose to email us or place an order.
+
+The one thing this site stores in your browser is your shopping basket, and only once you put something in it. See "Shop and payments" below.
 
 ## Hosting
 
@@ -26,7 +28,15 @@ If you write to us — for example via the "Get in touch" / "Say hello" links on
 
 ## Shop and payments
 
-Products may be purchased through **Stripe Payment Links**, which take you to a checkout page hosted by Stripe. Any payment and billing information you enter there is processed directly by Stripe, not by us. See [Stripe's Privacy Policy](https://stripe.com/privacy) for details. Some products may alternatively link to our shop on **Etsy** (Etsy, Inc.), where Etsy's own [privacy policy](https://www.etsy.com/legal/privacy/) applies.
+**Your basket.** When you add something to your basket, that selection is saved in your own browser using local storage — not a cookie. It holds only product identifiers and quantities, no personal data. It stays on your device, is never sent to us while you browse, and you can clear it at any time by emptying your basket or clearing your browser's site data.
+
+**Starting checkout.** When you press "Checkout", your basket contents and the delivery country you picked are sent to a small function we operate on **Cloudflare Workers** (Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA). Its only job is to create the payment session. Like any web server, Cloudflare handles technical data such as your IP address in the process. See [Cloudflare's Privacy Policy](https://www.cloudflare.com/privacypolicy/).
+
+**Paying.** You are then taken to a checkout page hosted by **Stripe** (Stripe Payments Europe Ltd., Dublin, Ireland, and Stripe, Inc., USA). The email address, name, delivery address and payment details you enter there are collected and processed by Stripe. **We never see or store your card details.** We do receive what we need to fulfil the order: your name, email address, delivery address, and what you bought. See [Stripe's Privacy Policy](https://stripe.com/privacy).
+
+**Fulfilment.** Prints and stickers are produced to order by our print partner **Prodigi** (Prodigi Group Ltd., United Kingdom), who dispatch directly to you. To do that, we pass on the delivery address and the items ordered — nothing else, and only for the purpose of shipping your order. See [Prodigi's Privacy Policy](https://www.prodigi.com/privacy/).
+
+**Why and how long.** We process this data to perform the purchase contract with you (Art. 31 para. 2 lit. a FADP; Art. 6 para. 1 lit. b GDPR) and keep order records for as long as Swiss bookkeeping obligations require.
 
 ## Social media and external links
 
