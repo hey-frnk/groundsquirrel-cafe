@@ -39,7 +39,7 @@ Ich habe an vielen Stellen bewusst **Platzhalter** eingebaut, statt Dinge zu erf
 | Bereich | Was fehlt |
 |---|---|
 | **Tour** | Echte Stopps (Orte, Daten, Fotos, Beschreibungen) — aktuell 2 Beispiel-Einträge |
-| **Studio** | Bilder zu «Deutsch mit Flex und Flora» (die Karte zeigt solange «Bilder folgen»), Unterrichtsmaterial + echter Eduki-Link |
+| **Studio** | Unterrichtsmaterial + echter Eduki-Link |
 | **Shop** | Echte Produkte, Preise, Fotos, Stripe Payment Links |
 | **Crew** | Text + Foto für Humbär und Bumblepuutz |
 | **Footer** | Instagram-, YouTube-, TikTok-Links (aktuell ausgeblendet, da leer) |

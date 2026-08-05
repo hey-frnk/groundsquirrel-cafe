@@ -77,6 +77,15 @@ plate "$WH/IMG_05.JPG"                      christmas/recorder-and-garland
 plate "$WH/Mostaccioli.TIF"                 christmas/mostaccioli
 plate "$SRC/IMG_11.JPG"                     christmas/cat-and-lamb
 
+echo "Deutsch mit Flex und Flora →"
+FF="$SRC/Flex&Flora"
+cover "$FF/IMG_2227.JPG"                    flex-flora/cover-a-page-in-the-forest
+plate "$FF/IMG_2227.JPG"                    flex-flora/a-page-in-the-forest
+plate "$FF/IMG_2198.JPG"                    flex-flora/the-two-workbooks
+plate "$FF/IMG_2211.JPG"                    flex-flora/comic-and-writing-task
+plate "$FF/IMG_2212.JPG"                    flex-flora/a-spread-on-moss
+plate "$FF/IMG_2217.JPG"                    flex-flora/lernjournal
+
 echo "The Power Cut →"
 PC="$SRC/The Power Cut"
 cover "$PC/IMG_8987.JPG"                    power-cut/cover-pantry-by-torchlight
