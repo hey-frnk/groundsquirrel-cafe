@@ -11,7 +11,6 @@ export interface CarouselProject {
   status?: string;
   teaser?: string;
   image?: string;
-  imageFit?: "cover" | "contain";
   description: string;
 }
 
@@ -82,9 +81,10 @@ export default function ProjectCarousel({ projects }: { projects: CarouselProjec
                     decoding="async"
                     draggable={false}
                     onContextMenu={(e) => e.preventDefault()}
-                    className={`art-protected absolute inset-0 h-full w-full transition-transform duration-500 group-hover:scale-[1.04] ${
-                      project.imageFit === "contain" ? "object-contain p-5" : "object-cover"
-                    }`}
+                    // Contained, never cropped: these are finished paintings and
+                    // book covers, and a card frame has no business deciding
+                    // which edge of one to cut off.
+                    className="art-protected absolute inset-0 h-full w-full object-contain p-5 transition-transform duration-500 group-hover:scale-[1.04]"
                   />
                 ) : (
                   <span className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-ivory/40 px-6 text-center">

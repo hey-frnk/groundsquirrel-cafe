@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import JsonLd from "@/components/JsonLd";
 import ArtGallery from "@/components/studio/ArtGallery";
 import ProjectCarousel from "@/components/studio/ProjectCarousel";
 import StudioWordmark from "@/components/studio/StudioWordmark";
@@ -10,6 +11,7 @@ import {
   getStudioTeaching,
   markdownToHtml,
 } from "@/lib/content";
+import { SITE_URL, evelynePerson } from "@/lib/seo";
 
 interface StudioIntro {
   title: string;
@@ -28,9 +30,18 @@ interface Settings {
 }
 
 export const metadata = {
-  title: "Studio — The Ground Squirrel Café",
+  title: "Evelyne Buttet — Illustrator | the ground squirrel studio",
   description:
-    "the ground squirrel studio — Evelyne's creative space. Hand-painted wildlife illustration, picture books and teaching material, made on the road.",
+    "Evelyne Buttet is a Swiss illustrator and author. Hand-painted wildlife illustration, picture books and teaching material from the ground squirrel studio — painted on the road, never by AI.",
+  alternates: { canonical: `${SITE_URL}/studio/` },
+  openGraph: {
+    type: "profile",
+    title: "Evelyne Buttet — Illustrator | the ground squirrel studio",
+    description:
+      "Wildlife illustration, picture books and teaching material by Swiss illustrator and author Evelyne Buttet.",
+    url: `${SITE_URL}/studio/`,
+    images: ["/images/studio/portfolio/field-guide-eurasian-red-squirrel.webp"],
+  },
 };
 
 function isPlaceholder(value?: string) {
@@ -80,13 +91,23 @@ export default async function StudioPage() {
 
   return (
     <div>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "ProfilePage",
+          url: `${SITE_URL}/studio/`,
+          name: "Evelyne Buttet — Illustrator | the ground squirrel studio",
+          mainEntity: evelynePerson(),
+        }}
+      />
+
       {/* ---- Hero ---------------------------------------------------------- */}
       <section className="sparkle-bg washed-bg wash-dawn relative overflow-hidden">
         <div className="relative mx-auto flex max-w-5xl flex-col items-center gap-10 px-5 pt-16 pb-24 sm:flex-row sm:gap-14 sm:pt-24 sm:pb-32">
           <div className="relative h-56 w-56 shrink-0 sm:h-80 sm:w-80">
             <Image
               src="/images/studio/hero-squirrel.webp"
-              alt="A golden-mantled ground squirrel, hand-painted by Evelyne"
+              alt="A golden-mantled ground squirrel, hand-painted by Evelyne Buttet"
               fill
               sizes="(max-width: 640px) 14rem, 20rem"
               priority
@@ -94,13 +115,13 @@ export default async function StudioPage() {
             />
           </div>
 
-          <div className="text-center sm:text-left">
+          <div className="text-center">
             <p className="mb-4 text-xs uppercase tracking-[0.35em] text-ink/50">
               {intro.kicker}
             </p>
-            <StudioWordmark className="mx-auto block w-full max-w-[19rem] sm:mx-0 sm:max-w-md" />
+            <StudioWordmark className="mx-auto block w-full max-w-[19rem] sm:max-w-md" />
             <p className="mt-6 text-base italic text-ink/70">{intro.subtitle}</p>
-            <p className="mt-5 max-w-md leading-relaxed text-ink/80">{intro.intro}</p>
+            <p className="mx-auto mt-5 max-w-md leading-relaxed text-ink/80">{intro.intro}</p>
           </div>
         </div>
 
@@ -122,8 +143,8 @@ export default async function StudioPage() {
       <div className="mx-auto max-w-4xl px-5">
         <ul className="grid gap-3 text-center text-xs leading-relaxed text-ink/65 sm:grid-cols-3 sm:gap-5">
           {[
-            "Painted by hand — never by a machine",
-            "Published in Switzerland, Germany & Austria",
+            "A love letter to nature born from the wild things",
+            "Painted with heart and soul and absolutely no AI",
             "10% of every sale funds wildlife conservation",
           ].map((line) => (
             <li key={line} className="rounded-full bg-ivory/40 px-5 py-3">
@@ -141,7 +162,7 @@ export default async function StudioPage() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/studio/evelyne-in-humbaer.webp"
-                alt="Evelyne painting inside Humbär, the studio on wheels"
+                alt="Illustrator Evelyne Buttet painting inside Humbär, the studio on wheels"
                 loading="lazy"
                 decoding="async"
                 draggable={false}
@@ -165,8 +186,11 @@ export default async function StudioPage() {
             {/* The bio opens with "as long as I can remember…", so the heading
                 introduces her instead of repeating the first line back. */}
             <h2 className="mt-4 text-3xl leading-snug sm:text-4xl">
-              Hej, I&rsquo;m Evelyne.
+              Hej, I&rsquo;m Evelyne Buttet.
             </h2>
+            <p className="mt-2 text-sm text-ink/60">
+              Illustrator &amp; author, Switzerland
+            </p>
             <div
               className="prose prose-sm mt-6 max-w-none prose-p:leading-relaxed"
               dangerouslySetInnerHTML={{ __html: bioHtml }}
@@ -187,7 +211,7 @@ export default async function StudioPage() {
 
       {/* ---- Portfolio ----------------------------------------------------- */}
       <section className="mx-auto max-w-5xl px-5 pt-24 sm:pt-32">
-        <SectionHead kicker="art portfolio" title="Painted mostly outdoors">
+        <SectionHead kicker="art portfolio" title="Painted on the road">
           {intro.portfolioNote}
         </SectionHead>
         <Ornament>🐿️</Ornament>
@@ -207,10 +231,7 @@ export default async function StudioPage() {
       {/* ---- Projects ------------------------------------------------------ */}
       <section className="mt-24 bg-ivory/35 py-20 sm:mt-32 sm:py-24">
         <div className="mx-auto max-w-5xl px-5">
-          <SectionHead kicker="publications & recent projects" title="Books, in the making">
-            Every project has its own page — the story behind it, and the
-            illustrations as they came together.
-          </SectionHead>
+          <SectionHead kicker="publications & recent projects" title="Books, in the making" />
           <div className="mt-12">
             <ProjectCarousel projects={projects} />
           </div>
@@ -304,7 +325,7 @@ export default async function StudioPage() {
           </p>
 
           <ul className="mx-auto mt-10 grid max-w-2xl gap-3 text-sm text-ink/75 sm:grid-cols-3 sm:gap-4">
-            {["Book projects", "Teaching material", "Flyers, cards & bespoke ideas"].map(
+            {["Book projects", "Personalized drawings", "Flyers, cards & bespoke ideas"].map(
               (item) => (
                 <li
                   key={item}
@@ -322,7 +343,9 @@ export default async function StudioPage() {
           >
             Get in touch
           </a>
-          <p className="mt-4 text-xs text-ink/50">{settings.contactEmail}</p>
+          <p className="mt-4 text-xs text-ink/50">
+            Evelyne Buttet — {settings.contactEmail}
+          </p>
         </div>
       </section>
     </div>

@@ -46,23 +46,24 @@ cover() { fit "$1" "$OUT/projects/$2.webp" 1000 72; }
 
 echo "Portfolio →"
 art "$SRC/ERS.JPG"                          field-guide-eurasian-red-squirrel
-art "$SRC/painting process.JPG"             squirrels-of-the-world-in-progress
+art "$SRC/painting process.JPG"             squirrels-of-the-world
 art "$SRC/IMG_0539.jpg"                     flamingos-above-the-clouds
 art "$SRC/IMG_8621.JPG"                     field-guide-california-ground-squirrel
 art "$SRC/IMG_3102.PNG"                     elephants-at-kilimanjaro
 art "$SRC/IMG_3987.JPG"                     drawing-from-the-van-window
 art "$SRC/IMG_4253.JPG"                     falling-from-a-branch
-art "$SRC/IMG_7694.JPG"                     squirrel-cards-on-the-rock
-art "$SRC/IMG_3110.PNG"                     chipmunk
-art "$SRC/IMG_9525.JPG"                     drawing-at-the-camp-table
+art "$SRC/IMG_7694.JPG"                     squirrel-stickers
+art "$SRC/IMG_3110.PNG"                     colorado-chipmunk
+art "$SRC/IMG_9525.JPG"                     at-the-camp-studio
 art "$SRC/Unbenanntes_Projekt.jpg"          sea-turtle-in-the-waves
 art "$SRC/IMG_1507.JPG"                     field-guide-african-bush-squirrel
 art "$SRC/IMG_3527.JPG"                     sea-stars
-art "$SRC/IMG_4256.JPG"                     tree-climbers-at-sundown
-art "$SRC/IMG_6779.JPG"                     bee-sticker-sheet
+art "$SRC/IMG_4256.JPG"                     rock-dassies-on-an-umbrella-thorn
+art "$SRC/IMG_6779.JPG"                     bumblebees-of-the-world
 art "$SRC/Unbenanntes_Projekt Kopie.jpg"    elephant-study
 art "$SRC/IMG_4254.JPG"                     riding-the-whale-shark
 art "$SRC/IMG_1927.JPG"                     a-studio-with-a-mountain-view
+art "$SRC/Wenn der Himmel Weihnachten berührt/IMG_11.JPG" drawing-for-the-christmas-book
 
 echo "Wenn der Himmel Weihnachten berührt →"
 WH="$SRC/Wenn der Himmel Weihnachten berührt"

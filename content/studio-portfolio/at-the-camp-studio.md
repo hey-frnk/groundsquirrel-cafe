@@ -1,6 +1,6 @@
 ---
-title: "At the camp table"
-image: "/images/studio/portfolio/drawing-at-the-camp-table.webp"
+title: "At the camp studio"
+image: "/images/studio/portfolio/at-the-camp-studio.webp"
 order: 10
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: "Chipmunk"
-image: "/images/studio/portfolio/chipmunk.webp"
+title: "Colorado chipmunk"
+image: "/images/studio/portfolio/colorado-chipmunk.webp"
 order: 9
 ---
 

@@ -1,6 +1,6 @@
 ---
-title: "Squirrels of the World, in progress"
-image: "/images/studio/portfolio/squirrels-of-the-world-in-progress.webp"
+title: "Squirrels of the world, watercolor on paper"
+image: "/images/studio/portfolio/squirrels-of-the-world.webp"
 order: 2
 ---
 

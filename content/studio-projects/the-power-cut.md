@@ -3,7 +3,6 @@ title: "The Power Cut"
 subtitle: "An English children's book, in the making"
 kind: "Children's book"
 image: "/images/studio/projects/power-cut/cover-pantry-by-torchlight.webp"
-imageFit: "cover"
 order: 3
 status: "Work in progress"
 teaser: "An English children's book project celebrating the small, everyday moments of life. Created in collaboration with a Swiss children's book author."

@@ -251,8 +251,6 @@ export interface StudioProject extends StudioItem {
   teaser?: string;
   /** Where the piece can be bought or borrowed, shown under the buttons. */
   availability?: string;
-  /** `contain` keeps a book cover whole; `cover` fills the frame. */
-  imageFit?: "cover" | "contain";
   links: StudioProjectLink[];
   gallery: StudioProjectPlate[];
   /** Stands in while the illustration series for a project is still coming. */

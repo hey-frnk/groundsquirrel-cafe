@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import JsonLd from "@/components/JsonLd";
 import ArtGallery from "@/components/studio/ArtGallery";
 import { getStudioProject, getStudioProjects } from "@/lib/content";
+import { SITE_URL, evelynePerson } from "@/lib/seo";
 
 export function generateStaticParams() {
   return getStudioProjects().map((project) => ({ slug: project.slug }));
@@ -16,11 +18,15 @@ export async function generateMetadata({
   const project = getStudioProjects().find((p) => p.slug === slug);
   if (!project) return {};
   return {
-    title: `${project.title} — The Ground Squirrel Café`,
-    description: project.teaser,
+    title: `${project.title} — Illustration by Evelyne Buttet`,
+    description: project.teaser
+      ? `${project.teaser} Illustrated by Evelyne Buttet, the ground squirrel studio.`
+      : `A project by illustrator Evelyne Buttet, the ground squirrel studio.`,
+    alternates: { canonical: `${SITE_URL}/studio/${slug}/` },
     openGraph: {
-      title: project.title,
+      title: `${project.title} — Illustration by Evelyne Buttet`,
       description: project.teaser,
+      url: `${SITE_URL}/studio/${slug}/`,
       images: project.image ? [project.image] : undefined,
     },
   };
@@ -41,6 +47,18 @@ export default async function StudioProjectPage({
 
   return (
     <div className="mx-auto max-w-4xl px-5 py-10 sm:py-14">
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          name: project.title,
+          url: `${SITE_URL}/studio/${slug}/`,
+          description: project.teaser ?? project.description,
+          image: project.image ? `${SITE_URL}${project.image}` : undefined,
+          creator: evelynePerson(),
+        }}
+      />
+
       <Link href="/studio" className="text-sm text-ink/55 transition-colors hover:text-rose">
         ← Zurück zum Studio
       </Link>
@@ -59,6 +77,12 @@ export default async function StudioProjectPage({
             {project.status}
           </p>
         )}
+        <p className="mt-4 text-sm text-ink/55">
+          Illustration:{" "}
+          <Link href="/studio/" className="transition-colors hover:text-rose">
+            Evelyne Buttet
+          </Link>
+        </p>
       </header>
 
       {/* The cover, when there is one to show */}

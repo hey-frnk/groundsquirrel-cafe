@@ -3,7 +3,6 @@ title: "Wenn der Himmel Weihnachten berührt"
 subtitle: "Geschichten über kleine Wunder im Alltag"
 kind: "Buch"
 image: "/images/studio/projects/christmas/cover.webp"
-imageFit: "contain"
 order: 1
 status: "Veröffentlichung: September 2026"
 teaser: "Ein besonderes Weihnachtsbuch mit 10 Geschichten über kleine Wunder im Weihnachtsalltag. Kreiert in Zusammenarbeit mit Tiziana Hartmann."

@@ -168,13 +168,6 @@ collections:
         widget: "image"
         required: false
         hint: "Leer lassen, solange es noch kein Bild gibt — die Karte zeigt dann «Bilder folgen»."
-      - label: "Bild einpassen"
-        name: "imageFit"
-        widget: "select"
-        options: ["cover", "contain"]
-        default: "cover"
-        required: false
-        hint: "«contain» zeigt ein Buchcover vollständig, «cover» füllt die Kachel."
       - label: "Kurztext (auf der Karte)"
         name: "teaser"
         widget: "text"
