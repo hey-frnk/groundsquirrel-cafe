@@ -1,9 +1,13 @@
 ---
-title: "hummel & bear"
-subtitle: "weltenhummler's creative space"
-intro: "Hummel & Bear was founded in 2025 by Evelyne as a creative studio dedicated to sharing her vivid illustrations, with a primary focus on wildlife, particularly endangered species."
-etsyUrl: "https://hummelandbear.etsy.com/"
-edukiUrl: "[PLATZHALTER: Link zu Eduki-Account einfügen]"
+title: "the ground squirrel studio"
+kicker: "welcome to"
+subtitle: "evelyne's creative space"
+intro: "the ground squirrel studio was founded in 2026 by Evelyne as a creative studio dedicated to sharing her vivid illustrations, with a primary focus on wildlife, particularly endangered species."
+shopUrl: "/shop"
+shopLabel: "shop my art"
+portfolioNote: "A warm hello from my mobile art space 🌿✨"
+edukiUrl: ""
+teachingNote: "Folgt demnächst."
 ---
 
 As long as I can remember, I've seen the world in pictures. From a young age, drawing became my way of understanding, remembering, and sharing what I saw and felt. Over time, this love for visual storytelling grew into a deep passion for illustration and literature.

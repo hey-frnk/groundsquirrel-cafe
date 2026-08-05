@@ -39,8 +39,12 @@ html {
   }
 }
 
-.sparkle-bg {
-  background-image:
+/* Ten scattered dots, tiled — the paper the whole site is printed on. Kept in
+   a variable so a section can lay them over its own wash without restating the
+   list (background-image is a single property; a Tailwind gradient utility on
+   the same element would simply replace them). */
+:root {
+  --sparkle-layers:
     radial-gradient(circle at 8% 20%, color-mix(in srgb, white 90%, transparent) 0 3px, transparent 3px),
     radial-gradient(circle at 22% 65%, color-mix(in srgb, white 80%, transparent) 0 2px, transparent 2px),
     radial-gradient(circle at 38% 15%, color-mix(in srgb, white 85%, transparent) 0 2.5px, transparent 2.5px),
@@ -51,8 +55,47 @@ html {
     radial-gradient(circle at 15% 88%, color-mix(in srgb, white 80%, transparent) 0 2px, transparent 2px),
     radial-gradient(circle at 47% 45%, color-mix(in srgb, white 70%, transparent) 0 1.5px, transparent 1.5px),
     radial-gradient(circle at 74% 85%, color-mix(in srgb, white 75%, transparent) 0 2px, transparent 2px);
+}
+
+.sparkle-bg {
+  background-image: var(--sparkle-layers);
   background-repeat: repeat;
   background-size: 220px 220px;
+}
+
+/* Sparkles over a warm wash: the studio's opening, and its closing invitation.
+   The wash sits on its own layer rather than joining the sparkle list —
+   background-size/-repeat cycle through every layer, so one extra gradient
+   would hand the tile size to the wrong ones. */
+.washed-bg {
+  position: relative;
+  isolation: isolate;
+}
+
+.washed-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--wash);
+}
+
+.wash-dawn {
+  --wash: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--color-rose) 45%, transparent),
+    color-mix(in srgb, var(--color-rose) 22%, transparent) 70%,
+    color-mix(in srgb, var(--color-rose) 12%, transparent)
+  );
+}
+
+.wash-dusk {
+  --wash: linear-gradient(
+    to bottom,
+    transparent,
+    color-mix(in srgb, var(--color-lilac) 30%, transparent) 45%,
+    color-mix(in srgb, var(--color-rose) 32%, transparent)
+  );
 }
 
 body {
@@ -142,6 +185,35 @@ body {
   box-shadow:
     0 2px 4px color-mix(in srgb, var(--color-ink) 8%, transparent),
     0 28px 48px -24px color-mix(in srgb, var(--color-ink) 55%, transparent);
+}
+
+/* ---- Studio -------------------------------------------------------------- */
+
+/* Every painting on this site is served well below print resolution on purpose
+   — that is what actually protects the originals. This only takes away the two
+   effortless ways to lift one: dragging it to the desktop and the long-press
+   save sheet. Selection stays off the image itself, not the page around it. */
+.art-protected {
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+/* A painting sits in a shallow paper mount that warms up as it's reached for. */
+.art-frame {
+  background: color-mix(in srgb, white 55%, var(--color-cream));
+  border: 1px solid color-mix(in srgb, var(--color-ink) 12%, transparent);
+  box-shadow: 0 1px 2px color-mix(in srgb, var(--color-ink) 6%, transparent);
+  transition:
+    box-shadow 0.5s ease,
+    border-color 0.5s ease;
+}
+
+.group:hover .art-frame {
+  border-color: color-mix(in srgb, var(--color-rose) 55%, transparent);
+  box-shadow:
+    0 2px 4px color-mix(in srgb, var(--color-ink) 8%, transparent),
+    0 22px 40px -24px color-mix(in srgb, var(--color-ink) 50%, transparent);
 }
 
 /* ---- Shop ---------------------------------------------------------------- */

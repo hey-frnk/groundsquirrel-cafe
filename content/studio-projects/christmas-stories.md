@@ -1,8 +1,0 @@
----
-title: "Christmas Stories"
-link: ""
-image: "/images/studio/book-christmas-stories.webp"
-order: 2
----
-
-A book project featuring short, meaningful and heartwarming Christmas stories, brought to life through illustrations. Created in collaboration with a Swiss author.

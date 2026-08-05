@@ -152,8 +152,62 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Titel", name: "title", widget: "string" }
-      - { label: "Link", name: "link", widget: "string", required: false }
-      - { label: "Bild", name: "image", widget: "image" }
+      - { label: "Untertitel", name: "subtitle", widget: "string", required: false, hint: "Kursive Zeile unter dem Titel" }
+      - label: "Art des Projekts"
+        name: "kind"
+        widget: "string"
+        required: false
+        hint: "Kleines Etikett auf der Karte, z.B. «Buch» oder «Lehrmittel»"
+      - label: "Status"
+        name: "status"
+        widget: "string"
+        required: false
+        hint: "z.B. «Veröffentlichung: September 2026» oder «Work in progress»"
+      - label: "Titelbild"
+        name: "image"
+        widget: "image"
+        required: false
+        hint: "Leer lassen, solange es noch kein Bild gibt — die Karte zeigt dann «Bilder folgen»."
+      - label: "Bild einpassen"
+        name: "imageFit"
+        widget: "select"
+        options: ["cover", "contain"]
+        default: "cover"
+        required: false
+        hint: "«contain» zeigt ein Buchcover vollständig, «cover» füllt die Kachel."
+      - label: "Kurztext (auf der Karte)"
+        name: "teaser"
+        widget: "text"
+        required: false
+      - label: "Verfügbarkeit"
+        name: "availability"
+        widget: "string"
+        required: false
+        hint: "Kleine Zeile unter den Buttons, z.B. «In der Schweiz, Deutschland und in Österreich erhältlich.»"
+      - label: "Buttons"
+        name: "links"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Beschriftung", name: "label", widget: "string", hint: "z.B. Hier geht's zum Buch" }
+          - { label: "Link", name: "url", widget: "string", hint: "Ganze Adresse, oder «/shop» für den eigenen Shop" }
+      - label: "Bilderreihe (Illustrationen & Erarbeitungen)"
+        name: "gallery"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Bild", name: "image", widget: "image" }
+          - { label: "Bildunterschrift", name: "caption", widget: "string", required: false }
+      - label: "Hinweis zur Bilderreihe"
+        name: "galleryNote"
+        widget: "string"
+        required: false
+        hint: "Steht über der Bilderreihe — oder an ihrer Stelle, solange sie leer ist."
+      - label: "Hinweis zu weiteren Infos"
+        name: "infoNote"
+        widget: "string"
+        required: false
+        hint: "z.B. «Nähere Infos folgen.»"
       - { label: "Reihenfolge", name: "order", widget: "number" }
       - { label: "Beschreibung", name: "body", widget: "markdown", required: false }
 
@@ -220,10 +274,18 @@ collections:
         file: "content/pages/studio-intro.md"
         fields:
           - { label: "Seitentitel", name: "title", widget: "string" }
-          - { label: "Untertitel", name: "subtitle", widget: "string", required: false }
+          - { label: "Kleine Zeile über dem Logo", name: "kicker", widget: "string", hint: "z.B. «welcome to»" }
+          - { label: "Untertitel", name: "subtitle", widget: "string", required: false, hint: "z.B. «evelyne's creative space»" }
           - { label: "Einleitungstext (kurz)", name: "intro", widget: "text" }
-          - { label: "Etsy-Shop-Link", name: "etsyUrl", widget: "string", required: false }
+          - { label: "Ziel des Shop-Buttons", name: "shopUrl", widget: "string", hint: "«/shop» für den eigenen Shop, oder eine ganze Adresse" }
+          - { label: "Beschriftung des Shop-Buttons", name: "shopLabel", widget: "string" }
+          - { label: "Zeile unter «art portfolio»", name: "portfolioNote", widget: "string", required: false }
           - { label: "Eduki-Account-Link", name: "edukiUrl", widget: "string", required: false }
+          - label: "Text unter «unterrichtsmaterial»"
+            name: "teachingNote"
+            widget: "string"
+            required: false
+            hint: "Wird gezeigt, solange es noch kein Unterrichtsmaterial gibt."
           - { label: "Bio-Text (länger, unter der Einleitung)", name: "body", widget: "markdown" }
 
       - name: "impressum"

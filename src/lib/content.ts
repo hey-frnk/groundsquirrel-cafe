@@ -206,22 +206,98 @@ export interface StudioItem {
   edukiLink?: string;
 }
 
-export function getStudioPortfolio(): (StudioItem & { description: string })[] {
+export interface StudioPortfolioItem extends StudioItem {
+  description: string;
+  /** Intrinsic size, so the masonry can reserve each frame before it loads. */
+  width?: number;
+  height?: number;
+}
+
+export function getStudioPortfolio(): StudioPortfolioItem[] {
   return readDir("studio-portfolio")
     .map((filename) => {
       const { slug, data, content } = readEntry<StudioItem>("studio-portfolio", filename);
-      return { ...data, slug, description: content.trim() };
+      const size = data.image?.startsWith("/")
+        ? imageSize(path.join(process.cwd(), "public", data.image))
+        : undefined;
+      return {
+        ...data,
+        slug,
+        description: content.trim(),
+        width: size?.width,
+        height: size?.height,
+      };
     })
     .sort((a, b) => a.order - b.order);
 }
 
-export function getStudioProjects(): (StudioItem & { description: string })[] {
+export interface StudioProjectLink {
+  label: string;
+  url: string;
+}
+
+export interface StudioProjectPlate {
+  image: string;
+  caption?: string;
+}
+
+export interface StudioProject extends StudioItem {
+  /** One-line note under the title, e.g. "Veröffentlichung: September 2026". */
+  status?: string;
+  subtitle?: string;
+  /** Small label on the carousel card, e.g. "Buch". */
+  kind?: string;
+  /** Card text on the carousel — the longer story lives in the body. */
+  teaser?: string;
+  /** Where the piece can be bought or borrowed, shown under the buttons. */
+  availability?: string;
+  /** `contain` keeps a book cover whole; `cover` fills the frame. */
+  imageFit?: "cover" | "contain";
+  links: StudioProjectLink[];
+  gallery: StudioProjectPlate[];
+  /** Stands in while the illustration series for a project is still coming. */
+  galleryNote?: string;
+  infoNote?: string;
+  description: string;
+}
+
+// Both lists come from the CMS, where a half-filled row is normal while a
+// project is still being written — drop anything without its essential field
+// rather than rendering an empty button or a broken frame.
+function normalizeProjectLinks(links: unknown): StudioProjectLink[] {
+  if (!Array.isArray(links)) return [];
+  return links.filter(
+    (l): l is StudioProjectLink => Boolean((l as StudioProjectLink)?.label && (l as StudioProjectLink)?.url)
+  );
+}
+
+function normalizeProjectGallery(plates: unknown): StudioProjectPlate[] {
+  if (!Array.isArray(plates)) return [];
+  return plates
+    .map((p) => (typeof p === "string" ? { image: p } : (p as StudioProjectPlate)))
+    .filter((p): p is StudioProjectPlate => Boolean(p?.image));
+}
+
+function readStudioProject(filename: string): StudioProject {
+  const { slug, data, content } = readEntry<StudioProject>("studio-projects", filename);
+  return {
+    ...data,
+    slug,
+    links: normalizeProjectLinks(data.links),
+    gallery: normalizeProjectGallery(data.gallery),
+    description: content.trim(),
+  };
+}
+
+export function getStudioProjects(): StudioProject[] {
   return readDir("studio-projects")
-    .map((filename) => {
-      const { slug, data, content } = readEntry<StudioItem>("studio-projects", filename);
-      return { ...data, slug, description: content.trim() };
-    })
+    .map(readStudioProject)
     .sort((a, b) => a.order - b.order);
+}
+
+export async function getStudioProject(slug: string) {
+  const project = readStudioProject(`${slug}.md`);
+  return { ...project, descriptionHtml: await markdownToHtml(project.description) };
 }
 
 export function getStudioTeaching(): (StudioItem & { description: string })[] {

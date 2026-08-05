@@ -29,6 +29,7 @@ npx serve out
 - `content/` — **alle Texte/Inhalte** als Markdown-Dateien, unterteilt nach Bereich (journal, shop, crew, tour-stops, studio-*, pages)
 - `public/images/` — alle Bilder
 - `public/admin/` — das CMS (Decap CMS)
+- `scripts/build-studio-images.sh` — macht aus den Originalen in `res/` die Web-Versionen der Studio-Bilder
 - `.github/workflows/deploy.yml` — automatischer Build + Deploy bei jedem Push auf `main`
 
 ## ⚠️ Was noch fehlt, bevor die Seite online geht
@@ -38,7 +39,7 @@ Ich habe an vielen Stellen bewusst **Platzhalter** eingebaut, statt Dinge zu erf
 | Bereich | Was fehlt |
 |---|---|
 | **Tour** | Echte Stopps (Orte, Daten, Fotos, Beschreibungen) — aktuell 2 Beispiel-Einträge |
-| **Studio** | Portfolio-Werke, Projekte/Veröffentlichungen, Unterrichtsmaterial + echter Eduki-Link |
+| **Studio** | Bilder zu «Deutsch mit Flex und Flora» (die Karte zeigt solange «Bilder folgen»), Unterrichtsmaterial + echter Eduki-Link |
 | **Shop** | Echte Produkte, Preise, Fotos, Stripe Payment Links |
 | **Crew** | Text + Foto für Humbär und Bumblepuutz |
 | **Footer** | Instagram-, YouTube-, TikTok-Links (aktuell ausgeblendet, da leer) |
@@ -51,6 +52,8 @@ Ich habe an vielen Stellen bewusst **Platzhalter** eingebaut, statt Dinge zu erf
 - **Fotos in den Blogposts:** Ich habe versucht, alle Fotos aus dem Archiv zu übernehmen (teils direkt von Squarespace heruntergeladen, teils aus euren lokalen Archivdateien kopiert). Die exakte Reihenfolge/Zuordnung von Bildunterschriften ist bei sehr vielen Bildern nicht zu 100% pixelgenau wie im Original, aber inhaltlich vollständig.
 - **Frank & Evelyne Crew-Bios:** 1:1 aus eurer alten "About Us"-Seite (weltenhummler) übernommen und übersetzt/angepasst, wo nötig.
 - **Schrift:** Special Elite wird komplett durchgehend verwendet (Überschriften, Fliesstext, Buttons) wie gewünscht, mit grosszügigem Letter-Spacing.
+- **Studio-Bilder sind bewusst klein:** Die Originale in `res/` sind Druckauflösung. Ins Web geht nur eine verkleinerte Fassung (lange Kante max. 1000–1200 px, Metadaten entfernt), erzeugt mit `./scripts/build-studio-images.sh` — gross genug, dass alles hübsch aussieht, zu klein für einen brauchbaren Nachdruck. Dazu sind Ziehen aufs Desktop und das Rechtsklick-Menü auf den Bildern abgeschaltet. Das ist Reibung, kein Schloss: Wer will, kommt an jedes Bild im Netz heran — der wirksame Schutz ist die Auflösung.
+- **Studio-Logo:** Der gemalte Schriftzug ist die Überschrift der Studio-Seite (`alt`-Text «the ground squirrel studio»), damit Vorleseprogramme und Suchmaschinen den Studionamen lesen statt «Bild».
 
 ## Nächste Schritte: Auf GitHub veröffentlichen
 
