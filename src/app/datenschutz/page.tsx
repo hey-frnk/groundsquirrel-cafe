@@ -13,9 +13,12 @@ export default async function DatenschutzPage() {
   const html = await markdownToHtml(page.content);
 
   return (
-    <div className="mx-auto max-w-2xl px-5 py-12">
-      <h1 className="text-3xl mb-8 text-center">{page.title}</h1>
-      <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: html }} />
+    <div className="mx-auto max-w-2xl px-6 pt-16 pb-20 sm:pt-24">
+      <h1 className="border-b border-ink/10 pb-8 text-4xl sm:text-5xl">{page.title}</h1>
+      <div
+        className="prose mt-12 max-w-none"
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
     </div>
   );
 }

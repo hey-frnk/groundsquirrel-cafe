@@ -47,14 +47,14 @@ export default function ProductDetail({
       <div className="grid lg:grid-cols-[minmax(0,1fr)_23rem] gap-10 lg:gap-14 items-start">
         {/* Gallery */}
         <div className="lg:sticky lg:top-24">
-          <div className="specimen-plate relative aspect-square rounded-2xl overflow-hidden bg-ivory/40">
+          <div className="specimen-plate relative aspect-square overflow-hidden">
             <Image
               key={activeImage}
               src={activeImage}
               alt={`${product.title} — ${variant?.label ?? ""}`}
               fill
               sizes="(max-width: 1024px) 100vw, 55vw"
-              className="object-contain p-3 sm:p-5 animate-plate-in"
+              className="animate-plate-in object-contain p-6 sm:p-10"
               priority
             />
           </div>
@@ -68,10 +68,10 @@ export default function ProductDetail({
                   onClick={() => setImageIndex(i)}
                   aria-label={`View image ${i + 1}`}
                   aria-current={i === imageIndex}
-                  className={`relative w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden bg-ivory/40 transition-all ${
+                  className={`relative h-16 w-16 overflow-hidden bg-ivory/40 transition-all sm:h-20 sm:w-20 ${
                     i === imageIndex
-                      ? "ring-2 ring-rose ring-offset-2 ring-offset-cream"
-                      : "ring-1 ring-ink/10 opacity-70 hover:opacity-100"
+                      ? "outline outline-1 outline-offset-[3px] outline-rose"
+                      : "opacity-65 outline outline-1 outline-ink/10 hover:opacity-100"
                   }`}
                 >
                   <Image
@@ -89,9 +89,10 @@ export default function ProductDetail({
 
         {/* Purchase panel */}
         <div>
-          <h1 className="text-2xl sm:text-3xl leading-tight">{product.title}</h1>
+          <p className="eyebrow">The Ground Squirrel Shop</p>
+          <h1 className="mt-4 text-3xl leading-[1.1] sm:text-4xl">{product.title}</h1>
           {product.tagline && (
-            <p className="mt-2 text-ink/70 leading-relaxed">{product.tagline}</p>
+            <p className="mt-4 leading-relaxed text-graphite">{product.tagline}</p>
           )}
 
           {product.badges && product.badges.length > 0 && (
@@ -99,7 +100,7 @@ export default function ProductDetail({
               {product.badges.map((badge) => (
                 <li
                   key={badge}
-                  className="text-[0.7rem] leading-none bg-lilac/25 border border-lilac/40 rounded-full px-3 py-1.5 text-ink/75"
+                  className="border border-ink/15 px-3 py-2 text-[0.62rem] uppercase tracking-[0.14em] text-graphite/80"
                 >
                   {badge}
                 </li>
@@ -107,10 +108,10 @@ export default function ProductDetail({
             </ul>
           )}
 
-          <div className="mt-7 border-t border-ink/10 pt-6">
+          <div className="mt-8 border-t border-ink/10 pt-7">
             <label
               htmlFor={`variant-${product.slug}`}
-              className="block text-xs uppercase tracking-[0.18em] text-ink/50 mb-2"
+              className="mb-3 block text-[0.7rem] uppercase tracking-[0.18em] text-graphite/65"
             >
               Choose your design
             </label>
@@ -118,7 +119,7 @@ export default function ProductDetail({
               id={`variant-${product.slug}`}
               value={variantIndex}
               onChange={(e) => selectVariant(Number(e.target.value))}
-              className="w-full rounded-xl border border-ink/20 bg-white/70 px-4 py-3 text-sm hover:border-ink/40 focus:border-rose focus:outline-none focus:ring-2 focus:ring-rose/30 transition-colors"
+              className="w-full border border-ink/20 bg-paper px-4 py-3.5 text-sm transition-colors hover:border-ink/40 focus:border-rose focus:outline-none"
             >
               {product.variants.map((v, i) => (
                 <option key={v.label} value={i}>
@@ -128,23 +129,21 @@ export default function ProductDetail({
             </select>
 
             {variant?.note && (
-              <p className="mt-3 text-sm text-ink/60 italic leading-relaxed">
+              <p className="mt-4 text-sm leading-relaxed text-graphite/80">
                 {variant.note}
               </p>
             )}
 
-            <p className="mt-6 text-3xl">{variant ? formatPrice(variant.price) : ""}</p>
+            <p className="mt-8 font-display text-4xl text-ink">
+              {variant ? formatPrice(variant.price) : ""}
+            </p>
 
-            <button
-              type="button"
-              onClick={addToCart}
-              className="mt-4 w-full rounded-full bg-rose px-6 py-3.5 text-ink transition-colors hover:bg-ink hover:text-cream focus:outline-none focus:ring-2 focus:ring-rose/40 focus:ring-offset-2 focus:ring-offset-cream"
-            >
-              {justAdded ? "Added to basket ✓" : "Add to basket"}
+            <button type="button" onClick={addToCart} className="btn btn-primary mt-6 w-full">
+              {justAdded ? "Added to basket" : "Add to basket"}
             </button>
 
             {product.shippingNote && (
-              <p className="mt-5 text-xs text-ink/55 leading-relaxed">
+              <p className="mt-6 text-xs leading-relaxed text-graphite/70">
                 {product.shippingNote}
               </p>
             )}
@@ -160,15 +159,13 @@ export default function ProductDetail({
         />
 
         {product.specs && product.specs.length > 0 && (
-          <aside className="field-notes rounded-2xl border border-ink/12 bg-ivory/30 p-6">
-            <h2 className="text-xs uppercase tracking-[0.18em] text-ink/50 mb-4">
-              Field notes
-            </h2>
+          <aside className="border border-ink/12 bg-ivory/30 p-7">
+            <h2 className="eyebrow mb-5">Field notes</h2>
             <dl className="space-y-3.5 text-sm">
               {product.specs.map((spec) => (
                 <div key={spec.label} className="spec-row">
-                  <dt className="text-ink/55 shrink-0">{spec.label}</dt>
-                  <dd className="text-right text-ink/85">{spec.value}</dd>
+                  <dt className="shrink-0 text-graphite/70">{spec.label}</dt>
+                  <dd className="text-right text-ink">{spec.value}</dd>
                 </div>
               ))}
             </dl>

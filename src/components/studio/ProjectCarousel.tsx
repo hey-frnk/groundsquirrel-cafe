@@ -52,7 +52,7 @@ export default function ProjectCarousel({ projects }: { projects: CarouselProjec
   if (projects.length === 0) return null;
 
   const arrow =
-    "w-10 h-10 rounded-full border border-ink/20 flex items-center justify-center transition-colors hover:bg-ivory disabled:opacity-30 disabled:hover:bg-transparent";
+    "flex h-11 w-11 items-center justify-center border border-ink/20 transition-colors hover:border-ink hover:bg-ink hover:text-cream disabled:opacity-25 disabled:hover:border-ink/20 disabled:hover:bg-transparent disabled:hover:text-ink";
 
   return (
     <div>
@@ -68,10 +68,10 @@ export default function ProjectCarousel({ projects }: { projects: CarouselProjec
         {projects.map((project) => (
           <li
             key={project.slug}
-            className="snap-start shrink-0 w-[82%] pr-5 sm:w-1/2 lg:w-1/3"
+            className="w-[82%] shrink-0 snap-start pr-6 sm:w-1/2 lg:w-1/3"
           >
             <Link href={`/studio/${project.slug}`} className="group flex h-full flex-col">
-              <div className="paper-card relative aspect-[4/5] overflow-hidden rounded-2xl">
+              <div className="paper-card relative aspect-[4/5] overflow-hidden">
                 {project.image ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
@@ -84,7 +84,7 @@ export default function ProjectCarousel({ projects }: { projects: CarouselProjec
                     // Contained, never cropped: these are finished paintings and
                     // book covers, and a card frame has no business deciding
                     // which edge of one to cut off.
-                    className="art-protected absolute inset-0 h-full w-full object-contain p-5 transition-transform duration-500 group-hover:scale-[1.04]"
+                    className="art-protected absolute inset-0 h-full w-full object-contain p-7 transition-transform duration-[900ms] ease-out group-hover:scale-[1.04]"
                   />
                 ) : (
                   <span className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-ivory/40 px-6 text-center">
@@ -96,32 +96,38 @@ export default function ProjectCarousel({ projects }: { projects: CarouselProjec
                       height={80}
                       className="w-16 opacity-45"
                     />
-                    <span className="text-xs text-ink/50">Bilder folgen</span>
+                    <span className="text-[0.7rem] uppercase tracking-[0.16em] text-graphite/60">
+                      Bilder folgen
+                    </span>
                   </span>
                 )}
                 {project.kind && (
-                  <span className="absolute left-4 top-4 rounded-full bg-cream/90 px-3 py-1.5 text-[0.7rem] leading-none text-ink/70 backdrop-blur">
+                  <span className="absolute top-0 left-0 bg-cream/90 px-3.5 py-2 text-[0.62rem] uppercase tracking-[0.14em] text-graphite backdrop-blur">
                     {project.kind}
                   </span>
                 )}
               </div>
 
-              <h3 className="mt-5 text-lg leading-snug transition-colors group-hover:text-rose">
+              <h3 className="mt-6 text-xl leading-snug transition-colors duration-300 group-hover:text-rose">
                 {project.title}
               </h3>
               {project.status && (
-                <p className="mt-1 text-xs text-ink/45">{project.status}</p>
+                <p className="mt-2 text-[0.7rem] uppercase tracking-[0.16em] text-graphite/60">
+                  {project.status}
+                </p>
               )}
-              <p className="mt-2 text-sm leading-relaxed text-ink/70">
+              <p className="mt-3 text-sm leading-relaxed text-graphite/85">
                 {project.teaser ?? project.description}
               </p>
-              <span className="mt-3 text-sm text-rose">Zum Projekt →</span>
+              <span className="mt-4 text-[0.7rem] uppercase tracking-[0.18em] text-rose">
+                Zum Projekt →
+              </span>
             </Link>
           </li>
         ))}
       </ul>
 
-      <div className="mt-6 flex items-center justify-center gap-3">
+      <div className="mt-10 flex items-center justify-center gap-3">
         <button
           type="button"
           onClick={() => page(-1)}

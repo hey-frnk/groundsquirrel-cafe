@@ -43,17 +43,24 @@ const NAV_LINKS = [
   { href: "/crew", label: "Crew" },
 ];
 
-// Deliberately mismatched aspect ratios — they're what turns the row of tiles
-// into a pinboard once the cards flow into columns.
+/**
+ * The index of the site, laid out as a magazine contents page: two wide plates
+ * on the first row, three tall ones on the second. `span` is the width in
+ * twelfths on desktop; everything below that is one or two even columns.
+ *
+ * The plates are sized by height rather than by aspect ratio, so that two
+ * neighbours of different widths still end on the same line and their captions
+ * read as a row — an aspect ratio would leave the narrower one hanging.
+ */
 const PLACES = [
   {
     href: "/tour",
     label: "Tour",
-    sub: "The café on wheels, and how to book it for your event",
+    sub: "The café on wheels, and how to book it for your day",
     image: "/images/tour/hero-3.webp",
     alt: "Humbär with his hatch open and the OPEN sign out",
-    aspect: "aspect-2/3",
-    feature: true,
+    span: "lg:col-span-7",
+    height: "h-[20rem] sm:h-[24rem] lg:h-[27rem]",
   },
   {
     href: "/journal",
@@ -61,31 +68,35 @@ const PLACES = [
     sub: "Stories from the road",
     image: "/images/journal/sichuan-road-trip/IMG_6312.jpg",
     alt: "A misty mountain road in Sichuan",
-    aspect: "aspect-4/5",
+    span: "lg:col-span-5",
+    height: "h-[20rem] sm:h-[24rem] lg:h-[27rem]",
   },
   {
     href: "/studio",
     label: "Studio",
-    sub: "Evelyne's wildlife art",
+    sub: "Evelyne's wildlife illustration",
     image: "/images/studio/evelyne-in-humbaer.webp",
     alt: "Evelyne drawing at the table inside the camper",
-    aspect: "aspect-square",
+    span: "lg:col-span-4",
+    height: "h-[24rem] sm:h-[28rem] lg:h-[30rem]",
   },
   {
     href: "/shop",
     label: "Shop",
-    sub: "Squirrel goods",
+    sub: "Prints, stickers and picture books",
     image: "/images/studio/stickers-on-table.webp",
     alt: "Hand-drawn squirrel stickers spread on a table",
-    aspect: "aspect-4/5",
+    span: "lg:col-span-4",
+    height: "h-[24rem] sm:h-[28rem] lg:h-[30rem]",
   },
   {
     href: "/crew",
     label: "Crew",
-    sub: "Meet everyone, van included",
+    sub: "The people, the van, the mascot",
     image: "/images/crew/evelyne-and-frank.webp",
     alt: "Evelyne and Frank together outside the camper",
-    aspect: "aspect-3/4",
+    span: "lg:col-span-4",
+    height: "h-[24rem] sm:h-[28rem] lg:h-[30rem]",
   },
 ];
 
@@ -101,7 +112,7 @@ export default function Home() {
         {/* On phones the hero is a flex column in normal flow, so the brand mark
             and the welcome stack and the box grows to fit them. Only from sm up,
             where there is room, do they get pinned to the top and bottom. */}
-        <div className="relative flex min-h-[max(36rem,85svh)] flex-col sm:block sm:h-[84vh] sm:max-h-205 sm:min-h-140">
+        <div className="relative flex min-h-[max(38rem,88svh)] flex-col sm:block sm:h-[92vh] sm:max-h-[56rem] sm:min-h-[38rem]">
           {/* A phone crops the 16:9 film down to roughly its middle third, so it
               stays centred there — that band holds the van *and* the two of us
               waving beside it. From sm up the crop is shallow enough to shift
@@ -125,33 +136,30 @@ export default function Home() {
             className="hero-still absolute inset-0 h-full w-full object-cover object-center sm:object-[30%_50%]"
           />
 
-          <div className="absolute inset-0 bg-ink/15" />
-          <div className="absolute inset-x-0 top-0 h-40 bg-linear-to-b from-ink/55 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 h-3/4 bg-linear-to-t from-ink/90 via-ink/55 to-transparent" />
+          <div className="absolute inset-0 bg-ink/20" />
+          <div className="absolute inset-x-0 top-0 h-48 bg-linear-to-b from-ink/55 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-4/5 bg-linear-to-t from-ink/90 via-ink/50 to-transparent" />
 
-          {/* Brand mark and navigation, sitting on the film. The badge stays
-              centred; from sm up the links move out to the top right corner. */}
-          <div className="relative z-10 px-5 pt-6 sm:absolute sm:inset-x-0 sm:top-0 sm:pt-7">
-            <div className="relative mx-auto flex max-w-6xl flex-col items-center gap-4 sm:gap-3">
-              <Link href="/" aria-label="The Ground Squirrel Café">
+          {/* Brand mark and navigation, sitting on the film. */}
+          <div className="relative z-10 px-6 pt-6 sm:absolute sm:inset-x-0 sm:top-0 sm:px-10 sm:pt-8">
+            <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-5 sm:flex-row sm:justify-between sm:gap-3">
+              <Link href="/" aria-label="The Ground Squirrel Café" className="shrink-0">
                 <Image
                   src="/images/brand/logo_badge_var.png"
                   alt="The Ground Squirrel Café"
                   width={132}
                   height={192}
-                  className="w-19 opacity-95 drop-shadow-lg sm:w-24"
+                  className="w-[4.25rem] drop-shadow-lg sm:w-[5.25rem]"
                   preload
                 />
               </Link>
 
-              {/* from sm up the links are pulled out of flow and centred on the
-                  badge's own mid-line, so the two sit level */}
-              <nav className="flex items-center gap-4 text-xs text-cream/90 drop-shadow sm:absolute sm:top-1/2 sm:right-0 sm:-translate-y-1/2 sm:gap-7 sm:text-sm">
+              <nav className="flex items-center gap-6 sm:gap-9">
                 {NAV_LINKS.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className="transition-colors hover:text-rose"
+                    className="link-underline text-[0.68rem] uppercase tracking-[0.2em] text-cream/85 drop-shadow transition-colors hover:text-cream sm:text-[0.7rem]"
                   >
                     {link.label}
                   </Link>
@@ -162,34 +170,28 @@ export default function Home() {
 
           {/* The welcome — held to the left half so it doesn't land on top of
               Evelyne and Frank, who stand right of centre in the film */}
-          <div className="relative z-10 mt-auto px-5 pt-10 pb-9 sm:absolute sm:inset-x-0 sm:bottom-[5%] sm:mt-0 sm:pt-0 sm:pb-16">
-            <div className="mx-auto max-w-6xl">
-              <div className="max-w-xl text-center text-cream sm:text-left">
-                {/* a badge rather than bare text — it crosses the brightest part
-                    of the film, where a scrim alone can't hold it. Hidden on
-                    phones, where the space is better spent on the welcome. */}
-                <p className="hidden rounded-full border border-cream/25 bg-ink/45 px-4 py-1.5 text-[0.7rem] uppercase tracking-[0.3em] text-cream backdrop-blur-[2px] sm:inline-block">
-                  {home.heroKicker}
-                </p>
-                <h1 className="text-4xl leading-tight drop-shadow-md sm:mt-3 sm:text-5xl lg:text-6xl">
+          <div className="relative z-10 mt-auto px-6 pt-10 pb-12 sm:absolute sm:inset-x-0 sm:bottom-0 sm:mt-0 sm:px-10 sm:pt-0 sm:pb-20">
+            <div className="mx-auto max-w-7xl">
+              <div className="max-w-2xl text-cream">
+                <div className="flex items-center gap-4">
+                  <span aria-hidden className="rule rule-light" />
+                  <p className="eyebrow eyebrow-light">{home.heroKicker}</p>
+                </div>
+                <h1 className="mt-6 text-[2.75rem] leading-[1.02] text-cream drop-shadow-md sm:text-6xl lg:text-7xl">
                   {splitLines(home.heroHeadline).map((line) => (
                     <span key={line} className="block">
                       {line}
                     </span>
                   ))}
                 </h1>
-                <p className="mt-4 text-cream/90 drop-shadow-md">{home.heroSubline}</p>
-                <div className="mt-6 flex flex-wrap items-center justify-center gap-2.5 sm:mt-7 sm:gap-3 sm:justify-start">
-                  <Link
-                    href="/tour"
-                    className="rounded-full bg-rose px-5 py-2.5 text-sm text-ink shadow-lg transition-colors hover:bg-cream sm:px-7 sm:py-3 sm:text-base"
-                  >
+                <p className="mt-6 max-w-md text-[0.95rem] leading-relaxed text-cream/85 drop-shadow-md sm:text-base">
+                  {home.heroSubline}
+                </p>
+                <div className="mt-9 flex flex-wrap items-center gap-3">
+                  <Link href="/tour" className="btn btn-light">
                     Visit the café
                   </Link>
-                  <Link
-                    href="/journal"
-                    className="rounded-full border border-cream/60 px-5 py-2.5 text-sm text-cream transition-colors hover:bg-cream/15 sm:px-7 sm:py-3 sm:text-base"
-                  >
+                  <Link href="/journal" className="btn btn-outline-light">
                     Read the journal
                   </Link>
                 </div>
@@ -199,45 +201,46 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------- Where to go next ---------- */}
-      <section className="mx-auto max-w-6xl px-5 pt-14 sm:pt-20">
-        <div className="text-center">
-          <p className="text-[0.7rem] uppercase tracking-[0.3em] text-ink/50">have a look around</p>
-          <h2 className="mt-3 text-3xl sm:text-4xl">Where would you like to go?</h2>
+      {/* ---------- The index ---------- */}
+      <section className="mx-auto max-w-7xl px-6 pt-24 sm:px-10 sm:pt-32">
+        <div className="flex flex-col gap-6 border-b border-ink/10 pb-8 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="eyebrow">Contents</p>
+            <h2 className="mt-4 max-w-lg text-3xl sm:text-[2.6rem]">
+              Five ways into the café
+            </h2>
+          </div>
+          <p className="max-w-sm text-sm leading-relaxed text-graphite/85">
+            {settings.tagline}
+          </p>
         </div>
 
-        {/* a pinboard rather than a row of equal tiles: CSS columns let the
-            different card heights settle into each other */}
-        <div className="mt-10 columns-2 gap-4 sm:mt-14 sm:gap-5 lg:columns-3">
-          {PLACES.map((place) => (
+        <div className="mt-12 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-12">
+          {PLACES.map((place, i) => (
             <Link
               key={place.href}
               href={place.href}
-              className="group mb-4 block break-inside-avoid sm:mb-5"
+              className={`group reveal block ${place.span}`}
             >
-              <div
-                className={`relative overflow-hidden rounded-[1.25rem] border border-ink/10 bg-ivory shadow-sm transition duration-500 group-hover:-translate-y-1.5 group-hover:shadow-xl ${place.aspect}`}
-              >
+              <div className={`relative overflow-hidden bg-ivory/40 ${place.height}`}>
                 <Image
                   src={place.image}
                   alt={place.alt}
                   fill
-                  sizes="(max-width: 640px) 45vw, (max-width: 1024px) 45vw, 30vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 33vw"
+                  className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.04]"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-ink/80 via-ink/20 to-transparent" />
+              </div>
 
-                <div className="absolute inset-x-0 bottom-0 p-4 text-cream sm:p-5">
-                  <span className="block h-0.5 w-8 rounded-full bg-rose transition-all duration-500 group-hover:w-16" />
-                  <div className="mt-2.5 flex items-baseline gap-2">
-                    <span className={place.feature ? "text-2xl sm:text-3xl" : "text-xl sm:text-2xl"}>
-                      {place.label}
-                    </span>
-                    <span className="-translate-x-2 text-rose opacity-0 transition duration-500 group-hover:translate-x-0 group-hover:opacity-100">
-                      →
-                    </span>
-                  </div>
-                  <p className="mt-1 text-xs leading-snug opacity-85 sm:text-sm">{place.sub}</p>
+              <div className="mt-5 flex items-start gap-5">
+                <span className="mt-1.5 shrink-0 font-stamp text-[0.7rem] tracking-[0.15em] text-rose/80">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <h3 className="text-2xl transition-colors duration-300 group-hover:text-rose">
+                    {place.label}
+                  </h3>
+                  <p className="mt-1.5 text-sm leading-relaxed text-graphite/85">{place.sub}</p>
                 </div>
               </div>
             </Link>
@@ -246,62 +249,61 @@ export default function Home() {
       </section>
 
       {/* ---------- The studio ---------- */}
-      <section id="studio" className="mx-auto max-w-6xl px-5 pt-16 scroll-mt-8 sm:pt-24">
-        <div className="overflow-hidden rounded-3xl border border-lilac bg-lilac/25">
-          {/* on desktop the squirrel leads on the left, the words follow */}
-          <div className="grid items-center lg:grid-cols-[0.85fr_1fr]">
-            <div className="px-6 py-10 sm:px-12 sm:py-14 lg:order-2">
-              <h2 className="text-3xl leading-tight sm:text-4xl">{home.studioHeading}</h2>
-              <p className="mt-5 leading-relaxed text-ink/80">{home.studioText}</p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <Link
-                  href="/studio"
-                  className="rounded-full bg-ink px-7 py-3 text-cream transition-colors hover:bg-cream hover:text-ink"
-                >
-                  Into the studio
-                </Link>
-                <Link
-                  href="/shop"
-                  className="rounded-full border border-ink/25 px-7 py-3 transition-colors hover:bg-cream/70"
-                >
-                  Visit the shop
-                </Link>
-              </div>
-            </div>
-
-            <div className="sparkle-bg relative min-h-64 lg:order-1 lg:min-h-full">
+      <section id="studio" className="mt-28 scroll-mt-24 sm:mt-40">
+        <div className="wash-cool border-y border-ink/8">
+          <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 sm:px-10 sm:py-28 lg:grid-cols-[0.9fr_1fr] lg:gap-20">
+            <div className="relative order-2 min-h-[16rem] lg:order-1 lg:min-h-[26rem]">
               <Image
                 src="/images/studio/hero-squirrel.webp"
                 alt="Evelyne's painting of a golden-mantled ground squirrel with a nut"
                 fill
-                sizes="(max-width: 1024px) 100vw, 40vw"
-                className="object-contain p-10"
+                sizes="(max-width: 1024px) 90vw, 40vw"
+                className="object-contain drop-shadow-[0_24px_40px_rgba(35,32,26,0.14)]"
               />
+            </div>
+
+            <div className="order-1 lg:order-2">
+              <p className="eyebrow">The Ground Squirrel Studio</p>
+              <h2 className="mt-5 max-w-lg text-balance text-3xl leading-[1.08] sm:text-[2.75rem]">
+                {home.studioHeading}
+              </h2>
+              <p className="mt-6 max-w-lg leading-relaxed text-graphite">{home.studioText}</p>
+              <div className="mt-9 flex flex-wrap gap-3">
+                <Link href="/studio" className="btn btn-primary">
+                  Into the studio
+                </Link>
+                <Link href="/shop" className="btn btn-outline">
+                  Visit the shop
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* ---------- Who we are ---------- */}
-      <section className="mx-auto max-w-6xl px-5 pt-16 sm:pt-24">
-        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-          <div>
-            <h2 className="text-3xl leading-tight sm:text-4xl">{home.welcomeHeading}</h2>
+      <section className="mx-auto max-w-7xl px-6 pt-24 sm:px-10 sm:pt-36">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+          <div className="reveal">
+            <p className="eyebrow">Evelyne &amp; Frank</p>
+            <h2 className="mt-5 text-3xl leading-[1.08] sm:text-[2.75rem]">
+              {home.welcomeHeading}
+            </h2>
             {splitLines(home.welcomeText).map((paragraph) => (
-              <p key={paragraph} className="mt-5 leading-relaxed text-ink/75">
+              <p key={paragraph} className="mt-6 max-w-xl leading-relaxed text-graphite">
                 {paragraph}
               </p>
             ))}
-            <Link
-              href="/crew"
-              className="mt-7 inline-block text-sm underline decoration-rose decoration-2 underline-offset-4 transition-colors hover:text-rose"
-            >
-              Meet the whole crew →
+            <Link href="/crew" className="link-arrow mt-9">
+              Meet the whole crew
+              <span data-arrow aria-hidden>
+                →
+              </span>
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 sm:gap-5">
-            <div className="col-span-2 overflow-hidden rounded-2xl border border-ink/10 shadow-sm">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4">
+            <div className="col-span-2 overflow-hidden bg-ivory/40">
               <Image
                 src="/images/home/welcome-van.webp"
                 alt="Evelyne and Frank with coffee beside Humbär, below the Swiss alps"
@@ -311,7 +313,7 @@ export default function Home() {
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="overflow-hidden rounded-2xl border border-ink/10 shadow-sm">
+            <div className="overflow-hidden bg-ivory/40">
               <Image
                 src="/images/home/welcome-frank.webp"
                 alt="Frank laughing in the driver's window with a golden retriever"
@@ -321,7 +323,7 @@ export default function Home() {
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="overflow-hidden rounded-2xl border border-ink/10 shadow-sm">
+            <div className="overflow-hidden bg-ivory/40">
               <Image
                 src="/images/home/welcome-table.webp"
                 alt="Baklava, granola bowls and two coffees on a sunlit wooden table"
@@ -336,8 +338,8 @@ export default function Home() {
       </section>
 
       {/* ---------- A quiet moment ---------- */}
-      <section className="relative mt-16 sm:mt-24">
-        <div className="relative h-84 sm:h-108 lg:h-144">
+      <section className="relative mt-24 sm:mt-36">
+        <div className="photo-scrim relative isolate h-[26rem] sm:h-[32rem] lg:h-[38rem]">
           <Image
             src="/images/home/band-wheel.webp"
             alt="A cappuccino with a heart in the foam, held in front of the VW steering wheel"
@@ -345,56 +347,54 @@ export default function Home() {
             sizes="100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-ink/25" />
-          <div className="absolute inset-0 flex items-center justify-center px-6">
-            <p className="max-w-2xl text-center text-xl leading-snug text-cream drop-shadow-md sm:text-3xl">
-              {home.bandCaption}
-            </p>
+          <div className="absolute inset-0 z-10 flex items-end">
+            <div className="mx-auto w-full max-w-7xl px-6 pb-14 sm:px-10 sm:pb-20">
+              <p className="max-w-3xl text-balance font-display text-3xl leading-[1.15] text-cream drop-shadow-md sm:text-5xl">
+                {home.bandCaption}
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ---------- Latest from the journal ---------- */}
       {posts.length > 0 && (
-        <section id="journal" className="mx-auto max-w-6xl px-5 pt-16 scroll-mt-8 sm:pt-24">
-          <div className="flex flex-wrap items-end justify-between gap-3">
+        <section id="journal" className="mx-auto max-w-7xl scroll-mt-24 px-6 pt-24 sm:px-10 sm:pt-36">
+          <div className="flex flex-wrap items-end justify-between gap-6 border-b border-ink/10 pb-8">
             <div>
-              <p className="text-[0.7rem] uppercase tracking-[0.3em] text-ink/50">
-                From the journal
-              </p>
-              <h2 className="mt-2 text-3xl sm:text-4xl">Lately, on the road</h2>
+              <p className="eyebrow">From the journal</p>
+              <h2 className="mt-4 text-3xl sm:text-[2.6rem]">Lately, on the road</h2>
             </div>
-            <Link
-              href="/journal"
-              className="text-sm underline decoration-rose decoration-2 underline-offset-4 transition-colors hover:text-rose"
-            >
-              All stories →
+            <Link href="/journal" className="link-arrow">
+              All stories
+              <span data-arrow aria-hidden>
+                →
+              </span>
             </Link>
           </div>
 
-          <div className="mt-10 grid gap-8 sm:grid-cols-3">
+          <div className="mt-12 grid gap-x-8 gap-y-12 sm:grid-cols-3">
             {posts.map((post) => (
-              <Link key={post.slug} href={`/journal/${post.slug}`} className="group block">
-                <div className="relative aspect-4/3 overflow-hidden rounded-2xl border border-ink/10 bg-ivory">
+              <Link key={post.slug} href={`/journal/${post.slug}`} className="group reveal block">
+                <div className="relative aspect-4/3 overflow-hidden bg-ivory/40">
                   <Image
                     src={post.cover}
                     alt={post.title}
                     fill
                     sizes="(max-width: 640px) 92vw, 30vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.04]"
                   />
                 </div>
-                <p className="mt-4 text-xs text-ink/50">
+                <p className="eyebrow mt-5">
                   {new Date(post.date).toLocaleDateString("en-US", {
                     year: "numeric",
                     month: "long",
-                  })}{" "}
-                  · {post.author}
+                  })}
                 </p>
-                <h3 className="mt-1 text-lg leading-snug transition-colors group-hover:text-rose">
+                <h3 className="mt-3 text-xl leading-snug transition-colors duration-300 group-hover:text-rose">
                   {post.title}
                 </h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-ink/70">{post.excerpt}</p>
+                <p className="mt-2.5 text-sm leading-relaxed text-graphite/85">{post.excerpt}</p>
               </Link>
             ))}
           </div>
@@ -402,8 +402,8 @@ export default function Home() {
       )}
 
       {/* ---------- Come find us ---------- */}
-      <section id="hello" className="relative mt-16 scroll-mt-8 sm:mt-24">
-        <div className="relative flex min-h-112 items-center justify-center px-5 sm:min-h-125">
+      <section id="hello" className="relative mt-24 scroll-mt-24 sm:mt-36">
+        <div className="relative isolate flex min-h-[34rem] items-center justify-center px-6 py-24">
           <Image
             src="/images/home/band-golden.webp"
             alt="The inside of the camper glowing orange in the evening sun"
@@ -411,22 +411,23 @@ export default function Home() {
             sizes="100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-ink/25" />
-          {/* frosted panel so the text stays readable over the bright evening glow */}
-          <div className="relative my-12 flex max-w-2xl flex-col items-center rounded-[2rem] bg-ink/45 px-6 py-12 text-center text-cream backdrop-blur-[3px] sm:px-12">
-            <h2 className="text-3xl sm:text-4xl">{home.closingHeading}</h2>
-            <p className="mt-5 leading-relaxed text-cream/90">{home.closingText}</p>
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <Link
-                href="/tour#book"
-                className="rounded-full bg-rose px-7 py-3 text-ink shadow-lg transition-colors hover:bg-cream"
-              >
+          {/* The evening light in this photograph is bright right where the
+              invitation sits, so it takes a flat scrim rather than the gradient
+              the other bands use — a gradient leaves the middle unreadable. */}
+          <div className="absolute inset-0 bg-ink/65" />
+          <div className="relative z-10 max-w-2xl text-center text-cream">
+            <p className="eyebrow eyebrow-light">Say hello</p>
+            <h2 className="mt-5 text-balance text-4xl leading-[1.08] text-cream sm:text-5xl">
+              {home.closingHeading}
+            </h2>
+            <p className="mx-auto mt-6 max-w-xl leading-relaxed text-cream/85">
+              {home.closingText}
+            </p>
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+              <Link href="/tour#book" className="btn btn-light">
                 Book the café
               </Link>
-              <a
-                href={`mailto:${settings.contactEmail}`}
-                className="rounded-full border border-cream/60 px-7 py-3 text-cream transition-colors hover:bg-cream/15"
-              >
+              <a href={`mailto:${settings.contactEmail}`} className="btn btn-outline-light">
                 Write to us
               </a>
               {!isPlaceholder(settings.instagramUrl) && (
@@ -434,7 +435,7 @@ export default function Home() {
                   href={settings.instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-full border border-cream/60 px-7 py-3 text-cream transition-colors hover:bg-cream/15"
+                  className="btn btn-outline-light"
                 >
                   Follow along
                 </a>

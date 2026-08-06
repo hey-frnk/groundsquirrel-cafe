@@ -81,34 +81,36 @@ export default function CartDrawer() {
         aria-modal="true"
         aria-label="Your basket"
         aria-hidden={!isOpen}
-        className={`fixed right-0 top-0 z-[61] h-full w-full max-w-sm bg-cream border-l border-ink/10 shadow-2xl flex flex-col transition-transform duration-300 ease-out ${
+        className={`fixed right-0 top-0 z-[61] flex h-full w-full max-w-sm flex-col border-l border-ink/10 bg-cream shadow-2xl transition-transform duration-300 ease-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <header className="flex items-center justify-between px-5 py-4 border-b border-ink/10">
-          <h2 className="text-lg">Your basket</h2>
+        <header className="flex items-center justify-between border-b border-ink/10 px-6 py-5">
+          <h2 className="eyebrow">Your basket</h2>
           <button
             type="button"
             onClick={closeCart}
             aria-label="Close basket"
-            className="w-9 h-9 rounded-full border border-ink/20 hover:bg-ivory transition-colors"
+            className="flex h-8 w-8 items-center justify-center text-graphite transition-colors hover:text-rose"
           >
-            ✕
+            <svg aria-hidden width="15" height="15" viewBox="0 0 16 16" stroke="currentColor" strokeWidth="1.3">
+              <path d="M2 2l12 12M14 2L2 14" />
+            </svg>
           </button>
         </header>
 
         {lines.length === 0 ? (
-          <div className="flex-1 flex flex-col items-center justify-center gap-3 px-8 text-center">
-            <span className="text-4xl">🐿️</span>
-            <p className="text-sm text-ink/60">
+          <div className="flex flex-1 flex-col items-center justify-center gap-4 px-10 text-center">
+            <span aria-hidden className="rule" />
+            <p className="text-sm leading-relaxed text-graphite/80">
               Nothing here yet. The squirrels are waiting.
             </p>
           </div>
         ) : (
-          <ul className="flex-1 overflow-y-auto px-5 py-4 space-y-4">
+          <ul className="flex-1 space-y-6 overflow-y-auto px-6 py-6">
             {lines.map((line) => (
               <li key={line.id} className="flex gap-3">
-                <div className="relative w-20 h-20 shrink-0 rounded-lg overflow-hidden bg-ivory/40 border border-ink/10">
+                <div className="relative h-20 w-20 shrink-0 overflow-hidden border border-ink/10 bg-ivory/40">
                   <Image
                     src={line.image}
                     alt=""
@@ -118,15 +120,15 @@ export default function CartDrawer() {
                   />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm leading-snug">{line.productTitle}</p>
-                  <p className="text-xs text-ink/55 mt-0.5">{line.variantLabel}</p>
+                  <p className="font-display text-base leading-snug text-ink">{line.productTitle}</p>
+                  <p className="mt-1 text-xs text-graphite/70">{line.variantLabel}</p>
                   <div className="mt-2 flex items-center gap-2">
-                    <div className="flex items-center border border-ink/20 rounded-full">
+                    <div className="flex items-center border border-ink/20">
                       <button
                         type="button"
                         onClick={() => setQuantity(line.id, line.quantity - 1)}
                         aria-label={`Decrease quantity of ${line.variantLabel}`}
-                        className="w-7 h-7 rounded-full hover:bg-ivory transition-colors"
+                        className="h-7 w-7 transition-colors hover:bg-ivory"
                       >
                         −
                       </button>
@@ -137,7 +139,7 @@ export default function CartDrawer() {
                         type="button"
                         onClick={() => setQuantity(line.id, line.quantity + 1)}
                         aria-label={`Increase quantity of ${line.variantLabel}`}
-                        className="w-7 h-7 rounded-full hover:bg-ivory transition-colors"
+                        className="h-7 w-7 transition-colors hover:bg-ivory"
                       >
                         +
                       </button>
@@ -151,9 +153,11 @@ export default function CartDrawer() {
                   type="button"
                   onClick={() => removeLine(line.id)}
                   aria-label={`Remove ${line.variantLabel}`}
-                  className="self-start text-ink/35 hover:text-rose transition-colors text-sm"
+                  className="self-start p-1 text-graphite/45 transition-colors hover:text-rose"
                 >
-                  ✕
+                  <svg aria-hidden width="12" height="12" viewBox="0 0 16 16" stroke="currentColor" strokeWidth="1.4">
+                    <path d="M2 2l12 12M14 2L2 14" />
+                  </svg>
                 </button>
               </li>
             ))}
@@ -161,16 +165,16 @@ export default function CartDrawer() {
         )}
 
         {lines.length > 0 && (
-          <footer className="border-t border-ink/10 px-5 py-4 space-y-3">
-            <div className="flex justify-between text-sm">
-              <span className="text-ink/60">Subtotal</span>
-              <span className="text-lg">{formatPrice(subtotal)}</span>
+          <footer className="space-y-4 border-t border-ink/10 px-6 py-5">
+            <div className="flex items-baseline justify-between">
+              <span className="eyebrow">Subtotal</span>
+              <span className="font-display text-xl text-ink">{formatPrice(subtotal)}</span>
             </div>
 
             <div>
               <label
                 htmlFor="cart-country"
-                className="block text-xs text-ink/55 mb-1.5"
+                className="mb-2 block text-[0.7rem] uppercase tracking-[0.14em] text-graphite/65"
               >
                 Delivering to
               </label>
@@ -178,7 +182,7 @@ export default function CartDrawer() {
                 id="cart-country"
                 value={country}
                 onChange={(e) => setCountry(e.target.value)}
-                className="w-full rounded-xl border border-ink/20 bg-white/70 px-3 py-2.5 text-sm focus:border-rose focus:outline-none focus:ring-2 focus:ring-rose/30"
+                className="w-full border border-ink/20 bg-paper px-3 py-2.5 text-sm focus:border-rose focus:outline-none"
               >
                 {COUNTRY_GROUPS.map((group) => (
                   <optgroup key={group.label} label={group.label}>
@@ -190,7 +194,7 @@ export default function CartDrawer() {
                   </optgroup>
                 ))}
               </select>
-              <p className="mt-1.5 text-xs text-ink/50">
+              <p className="mt-2 text-xs text-graphite/65">
                 Shipping is added at checkout.
               </p>
             </div>
@@ -202,14 +206,14 @@ export default function CartDrawer() {
                 type="button"
                 onClick={checkout}
                 disabled={busy}
-                className="w-full rounded-full bg-rose px-6 py-3 text-ink transition-colors hover:bg-ink hover:text-cream disabled:opacity-60"
+                className="btn btn-primary w-full disabled:opacity-60"
               >
                 {busy ? "Taking you to checkout…" : "Checkout"}
               </button>
             ) : (
-              <div className="rounded-xl bg-ivory/50 border border-ink/10 px-4 py-3 text-center">
-                <p className="text-sm">Checkout opens soon</p>
-                <p className="text-xs text-ink/55 mt-1">
+              <div className="border border-ink/10 bg-ivory/40 px-4 py-4 text-center">
+                <p className="text-sm text-ink">Checkout opens soon</p>
+                <p className="mt-1.5 text-xs text-graphite/70">
                   Your basket is saved — it will still be here.
                 </p>
               </div>

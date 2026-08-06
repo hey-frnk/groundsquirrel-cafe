@@ -37,25 +37,27 @@ export default async function ShopProductPage({
   const product = await getShopProduct(slug);
 
   return (
-    <div className="mx-auto max-w-6xl px-5 py-10 sm:py-14">
-      <Link href="/shop" className="text-sm text-ink/55 hover:text-rose transition-colors">
-        ← Back to shop
+    <div className="mx-auto max-w-7xl px-6 pt-12 pb-4 sm:px-10 sm:pt-16">
+      <Link href="/shop" className="link-arrow is-back">
+        <span data-arrow aria-hidden>
+          ←
+        </span>
+        Back to shop
       </Link>
 
-      <div className="mt-8">
+      <div className="mt-12">
         <ProductDetail product={product} bodyHtml={product.bodyHtml} />
       </div>
 
-      <div className="mt-24 text-center border-t border-ink/10 pt-12">
-        <p className="text-ink/60 text-sm">
-          Every order supports wildlife conservation and one very small art studio
-          on wheels.
+      <div className="mt-28 border-t border-ink/10 pt-12 text-center">
+        <p className="mx-auto max-w-md text-sm leading-relaxed text-graphite/85">
+          Every order supports wildlife conservation and one very small art studio on wheels.
         </p>
-        <Link
-          href="/shop"
-          className="inline-block mt-4 text-sm hover:text-rose transition-colors"
-        >
-          ← Back to all products
+        <Link href="/shop" className="link-arrow is-back mt-6">
+          <span data-arrow aria-hidden>
+            ←
+          </span>
+          All products
         </Link>
       </div>
     </div>

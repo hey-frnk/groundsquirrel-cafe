@@ -86,15 +86,17 @@ function Lightbox({
       aria-modal="true"
       aria-label={plate.caption ?? "Artwork"}
       onClick={onClose}
-      className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-ink/85 backdrop-blur-sm p-4 sm:p-8 animate-plate-in"
+      className="animate-plate-in fixed inset-0 z-[100] flex flex-col items-center justify-center bg-ink/92 p-4 backdrop-blur-sm sm:p-10"
     >
       <button
         type="button"
         onClick={onClose}
         aria-label="Close"
-        className="absolute top-4 right-4 w-10 h-10 rounded-full border border-cream/30 text-cream/80 hover:text-cream hover:border-cream/70 transition-colors"
+        className="absolute top-5 right-5 flex h-10 w-10 items-center justify-center border border-cream/25 text-cream/75 transition-colors hover:border-cream/70 hover:text-cream"
       >
-        ✕
+        <svg aria-hidden width="15" height="15" viewBox="0 0 16 16" stroke="currentColor" strokeWidth="1.2">
+          <path d="M2 2l12 12M14 2L2 14" />
+        </svg>
       </button>
 
       {plates.length > 1 && (
@@ -106,7 +108,7 @@ function Lightbox({
               e.stopPropagation();
               onMove((index - 1 + plates.length) % plates.length);
             }}
-            className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full border border-cream/30 text-cream/80 hover:text-cream hover:border-cream/70 transition-colors"
+            className="absolute top-1/2 left-2 flex h-11 w-11 -translate-y-1/2 items-center justify-center border border-cream/25 text-cream/75 transition-colors hover:border-cream/70 hover:text-cream sm:left-6"
           >
             ←
           </button>
@@ -117,7 +119,7 @@ function Lightbox({
               e.stopPropagation();
               onMove((index + 1) % plates.length);
             }}
-            className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full border border-cream/30 text-cream/80 hover:text-cream hover:border-cream/70 transition-colors"
+            className="absolute top-1/2 right-2 flex h-11 w-11 -translate-y-1/2 items-center justify-center border border-cream/25 text-cream/75 transition-colors hover:border-cream/70 hover:text-cream sm:right-6"
           >
             →
           </button>
@@ -128,10 +130,12 @@ function Lightbox({
         <Plate
           plate={plate}
           priority
-          className="max-h-[78vh] max-w-full w-auto h-auto rounded-lg shadow-2xl"
+          className="h-auto max-h-[78vh] w-auto max-w-full shadow-2xl"
         />
         {plate.caption && (
-          <p className="mt-4 text-center text-sm text-cream/75">{plate.caption}</p>
+          <p className="mt-5 text-center text-[0.7rem] uppercase tracking-[0.18em] text-cream/70">
+            {plate.caption}
+          </p>
         )}
       </div>
     </div>
@@ -156,17 +160,17 @@ export default function ArtGallery({
   if (plates.length === 0) return null;
 
   const frame =
-    "group block w-full text-left cursor-zoom-in focus:outline-none focus-visible:ring-2 focus-visible:ring-rose focus-visible:ring-offset-4 focus-visible:ring-offset-cream rounded-xl";
+    "group block w-full cursor-zoom-in text-left focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-rose";
 
   return (
     <>
       <div
         className={
           layout === "masonry"
-            ? "columns-2 md:columns-3 gap-4 sm:gap-5 [column-fill:_balance]"
+            ? "columns-2 gap-5 sm:gap-7 md:columns-3 [column-fill:_balance]"
             : layout === "single"
               ? "mx-auto max-w-xs sm:max-w-sm"
-              : "grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5"
+              : "grid grid-cols-2 gap-5 sm:gap-7 lg:grid-cols-3"
         }
       >
         {plates.map((plate, i) => (
@@ -175,9 +179,9 @@ export default function ArtGallery({
             type="button"
             onClick={() => setOpen(i)}
             aria-label={plate.caption ? `Open ${plate.caption}` : "Open artwork"}
-            className={`${frame} ${layout === "masonry" ? "mb-4 sm:mb-5 break-inside-avoid" : ""}`}
+            className={`${frame} ${layout === "masonry" ? "mb-5 break-inside-avoid sm:mb-7" : ""}`}
           >
-            <span className="art-frame block overflow-hidden rounded-xl">
+            <span className="art-frame block overflow-hidden p-2">
               <Plate
                 plate={plate}
                 priority={layout === "single"}
@@ -187,7 +191,7 @@ export default function ArtGallery({
               />
             </span>
             {plate.caption && (
-              <span className="mt-2 block text-xs leading-relaxed text-ink/60 group-hover:text-ink/85 transition-colors">
+              <span className="mt-3 block text-[0.78rem] leading-relaxed tracking-[0.01em] text-graphite/70 transition-colors group-hover:text-ink">
                 {plate.caption}
               </span>
             )}
