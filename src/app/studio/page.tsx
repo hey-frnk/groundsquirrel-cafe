@@ -48,17 +48,6 @@ function isPlaceholder(value?: string) {
   return !value || value.includes("PLATZHALTER");
 }
 
-/** A small drawn rule, so a new chapter of the page announces itself quietly. */
-function Ornament({ children = "🌿" }: { children?: string }) {
-  return (
-    <div className="mt-7 flex items-center justify-center gap-3 text-ink/25">
-      <span className="h-px w-12 bg-current" />
-      <span aria-hidden>{children}</span>
-      <span className="h-px w-12 bg-current" />
-    </div>
-  );
-}
-
 function SectionHead({
   kicker,
   title,
@@ -69,13 +58,13 @@ function SectionHead({
   children?: React.ReactNode;
 }) {
   return (
-    <div className="text-center">
-      <p className="text-xs uppercase tracking-[0.3em] text-ink/45">{kicker}</p>
-      <h2 className="mt-4 text-3xl sm:text-4xl">{title}</h2>
+    <div className="flex flex-col gap-6 border-b border-ink/10 pb-8 sm:flex-row sm:items-end sm:justify-between">
+      <div>
+        <p className="eyebrow">{kicker}</p>
+        <h2 className="mt-4 text-3xl sm:text-[2.6rem]">{title}</h2>
+      </div>
       {children && (
-        <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-ink/70">
-          {children}
-        </p>
+        <p className="max-w-sm text-sm leading-relaxed text-graphite/85">{children}</p>
       )}
     </div>
   );
@@ -102,8 +91,8 @@ export default async function StudioPage() {
       />
 
       {/* ---- Hero ---------------------------------------------------------- */}
-      <section className="sparkle-bg washed-bg wash-dawn relative overflow-hidden">
-        <div className="relative mx-auto flex max-w-5xl flex-col items-center gap-10 px-5 pt-16 pb-24 sm:flex-row sm:gap-14 sm:pt-24 sm:pb-32">
+      <section className="wash-warm border-b border-ink/10">
+        <div className="mx-auto flex max-w-5xl flex-col items-center gap-12 px-6 pt-20 pb-24 sm:flex-row sm:gap-16 sm:pt-28 sm:pb-32">
           <div className="relative h-56 w-56 shrink-0 sm:h-80 sm:w-80">
             <Image
               src="/images/studio/hero-squirrel.webp"
@@ -111,54 +100,42 @@ export default async function StudioPage() {
               fill
               sizes="(max-width: 640px) 14rem, 20rem"
               priority
-              className="object-contain drop-shadow-[0_18px_28px_rgba(74,66,53,0.18)]"
+              className="object-contain drop-shadow-[0_20px_32px_rgba(35,32,26,0.16)]"
             />
           </div>
 
-          <div className="text-center">
-            <p className="mb-4 text-xs uppercase tracking-[0.35em] text-ink/50">
-              {intro.kicker}
-            </p>
-            <StudioWordmark className="mx-auto block w-full max-w-[19rem] sm:max-w-md" />
-            <p className="mt-6 text-base italic text-ink/70">{intro.subtitle}</p>
-            <p className="mx-auto mt-5 max-w-md leading-relaxed text-ink/80">{intro.intro}</p>
+          <div className="text-center sm:text-left">
+            <p className="eyebrow">{intro.kicker}</p>
+            <StudioWordmark className="mx-auto mt-6 block w-full max-w-[19rem] sm:mx-0 sm:max-w-md" />
+            <p className="mt-7 font-display text-lg text-ink">{intro.subtitle}</p>
+            <p className="mt-4 max-w-md leading-relaxed text-graphite">{intro.intro}</p>
           </div>
         </div>
-
-        {/* A soft edge into the page, instead of a ruled line. */}
-        <svg
-          aria-hidden
-          viewBox="0 0 1440 90"
-          preserveAspectRatio="none"
-          className="absolute inset-x-0 bottom-0 h-12 w-full text-cream sm:h-20"
-        >
-          <path
-            fill="currentColor"
-            d="M0 90V44c120-22 240-33 360-33s240 11 360 33 240 33 360 22 240-33 360-44v68z"
-          />
-        </svg>
       </section>
 
       {/* What the studio stands for — the three things worth knowing up front. */}
-      <div className="mx-auto max-w-4xl px-5">
-        <ul className="grid gap-3 text-center text-xs leading-relaxed text-ink/65 sm:grid-cols-3 sm:gap-5">
+      <div className="border-b border-ink/10">
+        <ul className="mx-auto grid max-w-5xl divide-y divide-ink/10 px-6 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
           {[
             "A love letter to nature born from the wild things",
             "Painted with heart and soul and absolutely no AI",
             "10% of every sale funds wildlife conservation",
-          ].map((line) => (
-            <li key={line} className="rounded-full bg-ivory/40 px-5 py-3">
-              {line}
+          ].map((line, i) => (
+            <li key={line} className="flex gap-4 px-0 py-6 sm:px-7">
+              <span className="mt-0.5 shrink-0 font-stamp text-[0.7rem] tracking-[0.15em] text-ink/45">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <span className="text-sm leading-relaxed text-graphite">{line}</span>
             </li>
           ))}
         </ul>
       </div>
 
       {/* ---- About --------------------------------------------------------- */}
-      <section className="mx-auto max-w-5xl px-5 pt-20 sm:pt-28">
-        <div className="grid items-center gap-10 sm:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] sm:gap-14">
+      <section className="mx-auto max-w-6xl px-6 pt-24 sm:pt-32">
+        <div className="grid items-center gap-12 sm:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] sm:gap-16">
           <div className="relative mx-auto w-full max-w-sm">
-            <div className="paper-card overflow-hidden rounded-2xl">
+            <div className="art-frame overflow-hidden p-2.5">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/studio/evelyne-in-humbaer.webp"
@@ -175,32 +152,27 @@ export default async function StudioPage() {
               alt=""
               width={140}
               height={140}
-              className="absolute -bottom-6 -right-3 w-20 rotate-[-8deg] drop-shadow-md sm:-right-8 sm:w-28"
+              className="absolute -right-3 -bottom-6 w-20 drop-shadow-md sm:-right-8 sm:w-28"
             />
           </div>
 
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-ink/45">
-              about the studio
-            </p>
+            <p className="eyebrow">About the studio</p>
             {/* The bio opens with "as long as I can remember…", so the heading
                 introduces her instead of repeating the first line back. */}
-            <h2 className="mt-4 text-3xl leading-snug sm:text-4xl">
+            <h2 className="mt-5 text-3xl leading-[1.1] sm:text-[2.6rem]">
               Hej, I&rsquo;m Evelyne Buttet.
             </h2>
-            <p className="mt-2 text-sm text-ink/60">
+            <p className="mt-4 text-[0.7rem] uppercase tracking-[0.2em] text-graphite/65">
               Illustrator &amp; author, Switzerland
             </p>
             <div
-              className="prose prose-sm mt-6 max-w-none prose-p:leading-relaxed"
+              className="prose prose-sm mt-8 max-w-none prose-p:leading-relaxed"
               dangerouslySetInnerHTML={{ __html: bioHtml }}
             />
             {!isPlaceholder(intro.shopUrl) && (
-              <p className="mt-8">
-                <Link
-                  href={intro.shopUrl}
-                  className="inline-block rounded-full bg-ink px-8 py-3 text-cream transition-colors hover:bg-rose hover:text-ink"
-                >
+              <p className="mt-10">
+                <Link href={intro.shopUrl} className="btn btn-primary">
                   {intro.shopLabel ?? "shop my art"}
                 </Link>
               </p>
@@ -210,13 +182,12 @@ export default async function StudioPage() {
       </section>
 
       {/* ---- Portfolio ----------------------------------------------------- */}
-      <section className="mx-auto max-w-5xl px-5 pt-24 sm:pt-32">
-        <SectionHead kicker="art portfolio" title="Painted on the road">
+      <section className="mx-auto max-w-6xl px-6 pt-24 sm:pt-36">
+        <SectionHead kicker="Art portfolio" title="Painted on the road">
           {intro.portfolioNote}
         </SectionHead>
-        <Ornament>🐿️</Ornament>
 
-        <div className="mt-12">
+        <div className="mt-14">
           <ArtGallery
             plates={portfolio.map((item) => ({
               image: item.image,
@@ -229,20 +200,20 @@ export default async function StudioPage() {
       </section>
 
       {/* ---- Projects ------------------------------------------------------ */}
-      <section className="mt-24 bg-ivory/35 py-20 sm:mt-32 sm:py-24">
-        <div className="mx-auto max-w-5xl px-5">
-          <SectionHead kicker="publications & recent projects" title="Books, in the making" />
-          <div className="mt-12">
+      <section className="band-ivory mt-24 py-20 sm:mt-36 sm:py-28">
+        <div className="mx-auto max-w-6xl px-6">
+          <SectionHead kicker="Publications & recent projects" title="Books, in the making" />
+          <div className="mt-14">
             <ProjectCarousel projects={projects} />
           </div>
         </div>
       </section>
 
       {/* ---- Teaching material --------------------------------------------- */}
-      <section className="mx-auto max-w-5xl px-5 pt-20 sm:pt-24">
-        <SectionHead kicker="unterrichtsmaterial" title="Material für den Unterricht" />
+      <section className="mx-auto max-w-6xl px-6 pt-24 sm:pt-32">
+        <SectionHead kicker="Unterrichtsmaterial" title="Material für den Unterricht" />
         {teaching.length === 0 ? (
-          <p className="mt-6 text-center text-sm text-ink/60">
+          <p className="mt-8 max-w-xl text-sm leading-relaxed text-graphite/85">
             {intro.teachingNote}
             {!isPlaceholder(intro.edukiUrl) && (
               <>
@@ -251,9 +222,9 @@ export default async function StudioPage() {
                   href={intro.edukiUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-rose hover:underline"
+                  className="link-underline text-ink"
                 >
-                  Zum Eduki-Shop →
+                  Zum Eduki-Shop
                 </a>
               </>
             )}
@@ -261,38 +232,41 @@ export default async function StudioPage() {
         ) : (
           <>
             {!isPlaceholder(intro.edukiUrl) && (
-              <p className="mt-6 text-center text-sm text-ink/70">
+              <p className="mt-8">
                 <a
                   href={intro.edukiUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-rose hover:underline"
+                  className="link-arrow"
                 >
-                  Zum Eduki-Shop →
+                  Zum Eduki-Shop
+                  <span data-arrow aria-hidden>
+                    →
+                  </span>
                 </a>
               </p>
             )}
-            <div className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-3">
+            <div className="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-3">
               {teaching.map((item) => (
-                <div key={item.slug} className="flex flex-col">
-                  <div className="paper-card relative aspect-[4/3] overflow-hidden rounded-xl">
+                <div key={item.slug} className="group flex flex-col">
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-ink/10 bg-ivory/25">
                     <Image
                       src={item.image}
                       alt={item.title}
                       fill
                       sizes="(max-width: 640px) 50vw, 33vw"
-                      className="object-cover"
+                      className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.04]"
                     />
                   </div>
-                  <p className="mt-2 text-center text-sm">{item.title}</p>
+                  <p className="mt-3 text-sm leading-snug text-ink">{item.title}</p>
                   {!isPlaceholder(item.edukiLink) && (
                     <a
                       href={item.edukiLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-center text-xs text-rose hover:underline"
+                      className="link-underline mt-1.5 self-start text-[0.7rem] uppercase tracking-[0.16em] text-graphite/75"
                     >
-                      View on Eduki →
+                      View on Eduki
                     </a>
                   )}
                 </div>
@@ -303,33 +277,31 @@ export default async function StudioPage() {
       </section>
 
       {/* ---- Collaborations ------------------------------------------------ */}
-      <section
-        id="collaborations"
-        className="sparkle-bg washed-bg wash-dusk mt-24 py-20 sm:mt-32 sm:py-28"
-      >
-        <div className="mx-auto max-w-3xl px-5 text-center">
-          <p className="text-xs uppercase tracking-[0.3em] text-ink/45">collaborations</p>
-          <h2 className="mt-4 text-3xl leading-snug sm:text-5xl">
-            Let&rsquo;s make something<br className="hidden sm:inline" /> beautiful together
+      <section id="collaborations" className="wash-cool mt-24 border-t border-ink/10 py-24 sm:mt-36 sm:py-32">
+        <div className="mx-auto max-w-3xl px-6 text-center">
+          <p className="eyebrow">Collaborations</p>
+          <h2 className="mt-6 text-3xl leading-[1.1] sm:text-5xl">
+            Let&rsquo;s make something
+            <br className="hidden sm:inline" /> beautiful together
           </h2>
 
-          <p className="mx-auto mt-8 max-w-xl leading-relaxed text-ink/80">
-            Are you looking for a passionate illustrator to bring your vision to life? Have
-            one of my original paintings caught your eye, or do you have a special idea
-            you&rsquo;d love to see painted?
+          <p className="mx-auto mt-8 max-w-xl leading-relaxed text-graphite">
+            Are you looking for a passionate illustrator to bring your vision to life? Have one
+            of my original paintings caught your eye, or do you have a special idea you&rsquo;d
+            love to see painted?
           </p>
-          <p className="mx-auto mt-4 max-w-xl leading-relaxed text-ink/80">
-            Whether it is for a book project, a flyer, a business card, or any other
-            creative concept — don&rsquo;t hesitate to get in touch, I&rsquo;m looking
-            forward to meeting you!
+          <p className="mx-auto mt-4 max-w-xl leading-relaxed text-graphite">
+            Whether it is for a book project, a flyer, a business card, or any other creative
+            concept — don&rsquo;t hesitate to get in touch, I&rsquo;m looking forward to meeting
+            you!
           </p>
 
-          <ul className="mx-auto mt-10 grid max-w-2xl gap-3 text-sm text-ink/75 sm:grid-cols-3 sm:gap-4">
+          <ul className="mx-auto mt-12 grid max-w-2xl border-t border-ink/12 sm:grid-cols-3 sm:border-t-0">
             {["Book projects", "Personalized drawings", "Flyers, cards & bespoke ideas"].map(
               (item) => (
                 <li
                   key={item}
-                  className="rounded-2xl border border-ink/10 bg-cream/60 px-4 py-4 leading-snug"
+                  className="border-b border-ink/12 px-4 py-5 text-sm leading-snug text-graphite sm:border-t sm:border-b-0"
                 >
                   {item}
                 </li>
@@ -337,13 +309,10 @@ export default async function StudioPage() {
             )}
           </ul>
 
-          <a
-            href={`mailto:${settings.contactEmail}`}
-            className="mt-10 inline-block rounded-full bg-ink px-10 py-4 text-cream transition-colors hover:bg-rose hover:text-ink"
-          >
+          <a href={`mailto:${settings.contactEmail}`} className="btn btn-primary mt-12">
             Get in touch
           </a>
-          <p className="mt-4 text-xs text-ink/50">
+          <p className="mt-5 text-[0.7rem] uppercase tracking-[0.16em] text-graphite/60">
             Evelyne Buttet — {settings.contactEmail}
           </p>
         </div>

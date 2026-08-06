@@ -1,30 +1,396 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+/* ---------------------------------------------------------------------------
+   Palette
+
+   The five brand colours, unchanged. Everything else here is mixed from them:
+   `graphite` is the ink at reading weight, `paper` the warm white a print is
+   mounted on, and blush/mist the two pastels thinned out far enough to wash a
+   whole section without tinting the photographs on it.
+   --------------------------------------------------------------------------- */
 :root {
-  /* Brand palette */
   --color-cream: #f7f2e7; /* page background */
-  --color-ivory: #e1cd9e; /* RAL 1014 — cards, nav, dividers */
+  --color-ivory: #e1cd9e; /* RAL 1014 — cards, bands, dividers */
   --color-lilac: #c7b7db; /* accent — hover, borders */
   --color-rose: #e0a7bb; /* highlight / CTA */
   --color-ink: #4a4235; /* text */
+
+  --color-paper: #fffdf6; /* anything raised off the page */
+  --color-graphite: #6b6152; /* running text — the ink, a shade lighter */
+  --color-sand: #d9c69a; /* the edge of an ivory band */
+  --color-blush: #f0d3dd; /* rose, thinned to a wash */
+  --color-mist: #ded3ec; /* lilac, thinned to a wash */
+
+  /* Corners are soft again, but not as round as they were: enough to read as
+     handmade, not so much that everything looks like a sticker. */
+  --radius-tile: 0.75rem;
+  --radius-panel: 1.25rem;
 }
 
 @theme inline {
   --color-cream: var(--color-cream);
+  --color-paper: var(--color-paper);
   --color-ivory: var(--color-ivory);
-  --color-lilac: var(--color-lilac);
-  --color-rose: var(--color-rose);
+  --color-sand: var(--color-sand);
   --color-ink: var(--color-ink);
-  --font-display: var(--font-special-elite);
+  --color-graphite: var(--color-graphite);
+  --color-rose: var(--color-rose);
+  --color-blush: var(--color-blush);
+  --color-lilac: var(--color-lilac);
+  --color-mist: var(--color-mist);
+
+  --font-display: var(--font-display-serif);
+  --font-sans: var(--font-inter);
+  --font-stamp: var(--font-special-elite);
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* The homepage intro film, with a still for anyone who'd rather not have
-   motion — the poster frame stands in for the loop. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Type
+
+   Two voices and a stamp. DM Serif Display carries every heading — soft round
+   bowls and a high stroke contrast, warm enough to belong to a hand-painting
+   studio and formal enough to be taken seriously. Inter carries everything that
+   has to be *read*. Special Elite, the old house face, is kept for the small
+   letterspaced labels only: at eleven pixels a typewriter reads as a stamp
+   pressed onto the page rather than as a whole website typed out.
+   --------------------------------------------------------------------------- */
+/* These belong in the base layer: Tailwind's own utilities live in a later
+   layer, so an unlayered `h1 { color }` here would quietly beat every
+   `text-cream` on a heading standing over a photograph. */
+@layer base {
+  body {
+    background: var(--color-cream);
+    color: var(--color-graphite);
+    font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    letter-spacing: -0.006em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* One weight, so nothing here is ever set bold — size does the emphasis.
+     The face is already tightly fitted, so it needs far less negative
+     tracking than a text serif would. */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--font-display-serif), "Iowan Old Style", Georgia, serif;
+    font-weight: 400;
+    color: var(--color-ink);
+    line-height: 1.12;
+    letter-spacing: -0.012em;
+  }
+
+  /* Big display sizes want tighter setting than a sub-head does. */
+  h1 {
+    line-height: 1.05;
+    letter-spacing: -0.022em;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Marks and rules
+   --------------------------------------------------------------------------- */
+
+/* The letterpress label that opens a section. Block, not inline-block: it is
+   almost always a <p> introducing a heading, and an inline-block one lets the
+   next element sit down beside it. */
+.eyebrow {
+  display: block;
+  font-family: var(--font-special-elite), ui-monospace, monospace;
+  font-size: 0.6875rem;
+  line-height: 1;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-graphite) 80%, transparent);
+}
+
+/* This variant only ever stands on a photograph, and the photographs are no
+   longer dimmed enough to carry eleven-pixel letters on their own — so it keeps
+   its own shadow rather than asking the picture to go darker. */
+.eyebrow-light {
+  color: var(--color-cream);
+  text-shadow:
+    0 0 3px color-mix(in srgb, var(--color-ink) 75%, transparent),
+    0 1px 12px color-mix(in srgb, var(--color-ink) 95%, transparent);
+}
+
+/* A short rule, used where the old page used a leaf or a squirrel. */
+.rule {
+  display: block;
+  width: 2.5rem;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--color-rose);
+}
+
+.rule-light {
+  background: color-mix(in srgb, var(--color-cream) 60%, transparent);
+}
+
+/* ---------------------------------------------------------------------------
+   Buttons
+
+   Rounded, and set in the house typewriter like the section labels — the same
+   stamped voice, just bigger. Special Elite already carries a lot of air
+   between its letters, so the tracking is lighter here than on a grotesque.
+   --------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.95rem 1.9rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-family: var(--font-special-elite), ui-monospace, monospace;
+  font-size: 0.75rem;
+  line-height: 1;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.btn-sm {
+  padding: 0.72rem 1.35rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.11em;
+}
+
+/* The brand rose is a pale pink, so it carries ink rather than cream — the
+   other way round it disappears. */
+.btn-primary {
+  background: var(--color-ink);
+  color: var(--color-cream);
+}
+
+.btn-primary:hover {
+  background: var(--color-rose);
+  color: var(--color-ink);
+}
+
+.btn-outline {
+  border-color: color-mix(in srgb, var(--color-ink) 28%, transparent);
+  color: var(--color-ink);
+}
+
+.btn-outline:hover {
+  background: var(--color-rose);
+  border-color: var(--color-rose);
+  color: var(--color-ink);
+}
+
+/* The same two, standing on a photograph. */
+.btn-light {
+  background: var(--color-rose);
+  color: var(--color-ink);
+}
+
+.btn-light:hover {
+  background: var(--color-cream);
+  color: var(--color-ink);
+}
+
+.btn-outline-light {
+  border-color: color-mix(in srgb, white 62%, transparent);
+  color: var(--color-cream);
+}
+
+.btn-outline-light:hover {
+  background: color-mix(in srgb, var(--color-cream) 18%, transparent);
+  border-color: var(--color-cream);
+  color: var(--color-cream);
+}
+
+/* ---------------------------------------------------------------------------
+   Links
+   --------------------------------------------------------------------------- */
+
+/* A rule that draws itself in from the left, rather than a colour change. */
+.link-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: -0.25em;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.link-underline:hover::after,
+.link-underline:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* Already underlined; the arrow is what moves. */
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-ink) 30%, transparent);
+  padding-bottom: 0.4rem;
+  transition:
+    color 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.link-arrow span[data-arrow] {
+  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+/* The brand rose is too pale to carry small text on cream, so the hover keeps
+   the ink and moves the rose to the rule underneath it. */
+.link-arrow:hover {
+  color: var(--color-ink);
+  border-color: var(--color-rose);
+}
+
+.link-arrow:hover span[data-arrow] {
+  transform: translateX(0.3rem);
+}
+
+/* The same link pointing the other way — the arrow has to leave to the left. */
+.link-arrow.is-back:hover span[data-arrow] {
+  transform: translateX(-0.3rem);
+}
+
+/* ---------------------------------------------------------------------------
+   Surfaces
+
+   Everything raised off the page is a sheet of paper: soft corners, a warm
+   white ground, a hairline edge, and a shadow deep enough to lift it a little
+   off the cream.
+   --------------------------------------------------------------------------- */
+.paper-card {
+  background: var(--color-paper);
+  border: 1px solid color-mix(in srgb, var(--color-ink) 12%, transparent);
+  border-radius: var(--radius-tile);
+  box-shadow: 0 10px 26px -24px color-mix(in srgb, var(--color-ink) 80%, transparent);
+  transition:
+    border-color 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+.group:hover .paper-card {
+  border-color: color-mix(in srgb, var(--color-ink) 26%, transparent);
+  box-shadow: 0 20px 44px -30px color-mix(in srgb, var(--color-ink) 75%, transparent);
+}
+
+/* A painting hangs in a mount: generous white margin, hairline edge. */
+.art-frame {
+  background: var(--color-paper);
+  border: 1px solid color-mix(in srgb, var(--color-ink) 12%, transparent);
+  border-radius: var(--radius-tile);
+  box-shadow: 0 10px 26px -24px color-mix(in srgb, var(--color-ink) 80%, transparent);
+  transition:
+    border-color 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+.group:hover .art-frame {
+  border-color: color-mix(in srgb, var(--color-ink) 28%, transparent);
+  box-shadow: 0 20px 44px -30px color-mix(in srgb, var(--color-ink) 75%, transparent);
+}
+
+/* Bands that step off the cream without shouting. Ivory at full strength is a
+   deep RAL yellow — a third of it over the cream is the warmth without the
+   weight. */
+.band-ivory {
+  background: color-mix(in srgb, var(--color-ivory) 32%, var(--color-cream));
+  border-block: 1px solid color-mix(in srgb, var(--color-ink) 9%, transparent);
+}
+
+/* A soft wash, where the page used to sit on scattered white dots. */
+.wash-warm {
+  background:
+    radial-gradient(
+      120% 90% at 18% 0%,
+      color-mix(in srgb, var(--color-blush) 62%, transparent),
+      transparent 64%
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in srgb, var(--color-ivory) 28%, transparent),
+      transparent 72%
+    );
+}
+
+.wash-cool {
+  background:
+    radial-gradient(
+      110% 100% at 82% 100%,
+      color-mix(in srgb, var(--color-mist) 72%, transparent),
+      transparent 62%
+    ),
+    linear-gradient(
+      to bottom,
+      transparent,
+      color-mix(in srgb, var(--color-blush) 45%, transparent)
+    );
+}
+
+/* ---------------------------------------------------------------------------
+   Entrance
+
+   Sections settle in as they are scrolled to, driven entirely by the scroll
+   position rather than a timer — so it never runs ahead of the reader, and
+   browsers without view timelines simply get the finished page.
+   --------------------------------------------------------------------------- */
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    transform: translateY(1.35rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: reveal-in linear both;
+      animation-timeline: view();
+      animation-range: entry 4% cover 26%;
+    }
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   The homepage intro film, with a still for anyone who'd rather not have
+   motion — the poster frame stands in for the loop.
+   --------------------------------------------------------------------------- */
 .hero-still {
   display: none;
 }
@@ -39,69 +405,13 @@ html {
   }
 }
 
-/* Ten scattered dots, tiled — the paper the whole site is printed on. Kept in
-   a variable so a section can lay them over its own wash without restating the
-   list (background-image is a single property; a Tailwind gradient utility on
-   the same element would simply replace them). */
-:root {
-  --sparkle-layers:
-    radial-gradient(circle at 8% 20%, color-mix(in srgb, white 90%, transparent) 0 3px, transparent 3px),
-    radial-gradient(circle at 22% 65%, color-mix(in srgb, white 80%, transparent) 0 2px, transparent 2px),
-    radial-gradient(circle at 38% 15%, color-mix(in srgb, white 85%, transparent) 0 2.5px, transparent 2.5px),
-    radial-gradient(circle at 55% 75%, color-mix(in srgb, white 75%, transparent) 0 2px, transparent 2px),
-    radial-gradient(circle at 68% 30%, color-mix(in srgb, white 90%, transparent) 0 3px, transparent 3px),
-    radial-gradient(circle at 82% 60%, color-mix(in srgb, white 80%, transparent) 0 2px, transparent 2px),
-    radial-gradient(circle at 92% 12%, color-mix(in srgb, white 85%, transparent) 0 2.5px, transparent 2.5px),
-    radial-gradient(circle at 15% 88%, color-mix(in srgb, white 80%, transparent) 0 2px, transparent 2px),
-    radial-gradient(circle at 47% 45%, color-mix(in srgb, white 70%, transparent) 0 1.5px, transparent 1.5px),
-    radial-gradient(circle at 74% 85%, color-mix(in srgb, white 75%, transparent) 0 2px, transparent 2px);
-}
-
-.sparkle-bg {
-  background-image: var(--sparkle-layers);
-  background-repeat: repeat;
-  background-size: 220px 220px;
-}
-
-/* Sparkles over a warm wash: the studio's opening, and its closing invitation.
-   The wash sits on its own layer rather than joining the sparkle list —
-   background-size/-repeat cycle through every layer, so one extra gradient
-   would hand the tile size to the wrong ones. */
-.washed-bg {
-  position: relative;
-  isolation: isolate;
-}
-
-.washed-bg::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: var(--wash);
-}
-
-.wash-dawn {
-  --wash: linear-gradient(
-    to bottom,
-    color-mix(in srgb, var(--color-rose) 45%, transparent),
-    color-mix(in srgb, var(--color-rose) 22%, transparent) 70%,
-    color-mix(in srgb, var(--color-rose) 12%, transparent)
-  );
-}
-
-.wash-dusk {
-  --wash: linear-gradient(
-    to bottom,
-    transparent,
-    color-mix(in srgb, var(--color-lilac) 30%, transparent) 45%,
-    color-mix(in srgb, var(--color-rose) 32%, transparent)
-  );
-}
-
-body {
-  background: var(--color-cream);
-  color: var(--color-ink);
-  font-family: var(--font-special-elite), "Courier New", monospace;
+/* Text set in the middle of a bright photograph gets a pane of its own rather
+   than a scrim over the whole picture. */
+.frosted-panel {
+  background: color-mix(in srgb, var(--color-ink) 42%, transparent);
+  backdrop-filter: blur(3px);
+  border: 1px solid color-mix(in srgb, white 22%, transparent);
+  border-radius: var(--radius-panel);
 }
 
 ::selection {
@@ -109,38 +419,69 @@ body {
   color: var(--color-ink);
 }
 
+:focus-visible {
+  outline: 2px solid var(--color-rose);
+  outline-offset: 3px;
+}
+
+/* ---------------------------------------------------------------------------
+   Long-form reading
+   --------------------------------------------------------------------------- */
 .prose {
-  --tw-prose-body: var(--color-ink);
+  --tw-prose-body: var(--color-graphite);
   --tw-prose-headings: var(--color-ink);
+  --tw-prose-lead: var(--color-graphite);
   --tw-prose-bold: var(--color-ink);
   --tw-prose-links: var(--color-ink);
   --tw-prose-quotes: var(--color-ink);
   --tw-prose-quote-borders: var(--color-rose);
-  --tw-prose-bullets: var(--color-lilac);
-  --tw-prose-hr: var(--color-ivory);
-  --tw-prose-captions: color-mix(in srgb, var(--color-ink) 65%, transparent);
+  --tw-prose-bullets: var(--color-rose);
+  --tw-prose-counters: var(--color-graphite);
+  --tw-prose-hr: color-mix(in srgb, var(--color-ink) 12%, transparent);
+  --tw-prose-captions: color-mix(in srgb, var(--color-graphite) 70%, transparent);
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+.prose :is(h1, h2, h3, h4) {
+  font-family: var(--font-display-serif), "Iowan Old Style", Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.012em;
 }
 
 .prose a {
   color: var(--color-ink);
   text-decoration-color: var(--color-rose);
-  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: color 0.3s ease;
 }
 
 .prose a:hover {
-  color: color-mix(in srgb, var(--color-rose) 70%, var(--color-ink));
+  text-decoration-color: var(--color-rose);
+  text-decoration-thickness: 2px;
 }
 
 .prose img {
-  border-radius: 0.75rem;
+  border-radius: var(--radius-tile);
+}
+
+.prose blockquote {
+  font-family: var(--font-display-serif), Georgia, serif;
+  font-style: normal;
+  font-size: 1.25em;
+  line-height: 1.45;
+  letter-spacing: -0.015em;
+  color: var(--color-ink);
+  border-left-width: 2px;
+  padding-left: 1.6em;
 }
 
 .prose .img-gallery {
   display: grid;
   grid-template-columns: repeat(var(--gallery-cols, 2), minmax(0, 1fr));
-  gap: 0.75rem;
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
+  gap: 0.85rem;
+  margin-top: 1.8em;
+  margin-bottom: 1.8em;
 }
 
 .prose .img-gallery img {
@@ -157,37 +498,20 @@ body {
   }
 }
 
+/* A lone italic line under a photograph is its caption. */
 .prose em:only-child {
   display: block;
   text-align: center;
-  font-size: 0.875rem;
-  margin-top: -0.5rem;
+  font-style: normal;
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  color: color-mix(in srgb, var(--color-graphite) 72%, transparent);
+  margin-top: -0.4rem;
 }
 
-/* ---- Journal ------------------------------------------------------------- */
-
-/* A journal card as a photo on warm paper: barely-there mount shadow at rest,
-   lifting into a longer one — with a rose edge — as it's reached for. */
-.paper-card {
-  background: color-mix(in srgb, white 60%, var(--color-cream));
-  border: 1px solid color-mix(in srgb, var(--color-ink) 12%, transparent);
-  box-shadow:
-    0 1px 2px color-mix(in srgb, var(--color-ink) 7%, transparent),
-    0 16px 32px -20px color-mix(in srgb, var(--color-ink) 45%, transparent);
-  transition:
-    box-shadow 0.5s ease,
-    border-color 0.5s ease,
-    transform 0.5s ease;
-}
-
-.group:hover .paper-card {
-  border-color: color-mix(in srgb, var(--color-rose) 60%, transparent);
-  box-shadow:
-    0 2px 4px color-mix(in srgb, var(--color-ink) 8%, transparent),
-    0 28px 48px -24px color-mix(in srgb, var(--color-ink) 55%, transparent);
-}
-
-/* ---- Studio -------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------
+   Studio
+   --------------------------------------------------------------------------- */
 
 /* Every painting on this site is served well below print resolution on purpose
    — that is what actually protects the originals. This only takes away the two
@@ -199,37 +523,27 @@ body {
   user-select: none;
 }
 
-/* A painting sits in a shallow paper mount that warms up as it's reached for. */
-.art-frame {
-  background: color-mix(in srgb, white 55%, var(--color-cream));
-  border: 1px solid color-mix(in srgb, var(--color-ink) 12%, transparent);
-  box-shadow: 0 1px 2px color-mix(in srgb, var(--color-ink) 6%, transparent);
-  transition:
-    box-shadow 0.5s ease,
-    border-color 0.5s ease;
-}
+/* ---------------------------------------------------------------------------
+   Shop
+   --------------------------------------------------------------------------- */
 
-.group:hover .art-frame {
-  border-color: color-mix(in srgb, var(--color-rose) 55%, transparent);
-  box-shadow:
-    0 2px 4px color-mix(in srgb, var(--color-ink) 8%, transparent),
-    0 22px 40px -24px color-mix(in srgb, var(--color-ink) 50%, transparent);
-}
-
-/* ---- Shop ---------------------------------------------------------------- */
-
-/* Artwork sits on a warm paper ground with a soft mount shadow, so a print
-   reads as an object on a page rather than a floating cut-out. */
+/* Artwork sits on a warm paper ground, so a print reads as an object on a page
+   rather than a floating cut-out. */
 .specimen-plate {
-  background-image: radial-gradient(
-    circle at 50% 35%,
-    color-mix(in srgb, white 55%, transparent),
-    transparent 70%
-  );
-  border: 1px solid color-mix(in srgb, var(--color-ink) 12%, transparent);
-  box-shadow:
-    0 1px 2px color-mix(in srgb, var(--color-ink) 6%, transparent),
-    0 12px 28px -12px color-mix(in srgb, var(--color-ink) 22%, transparent);
+  border-radius: var(--radius-tile);
+  background:
+    radial-gradient(
+      circle at 50% 32%,
+      color-mix(in srgb, white 80%, transparent),
+      transparent 68%
+    ),
+    color-mix(in srgb, var(--color-ivory) 35%, var(--color-cream));
+  border: 1px solid color-mix(in srgb, var(--color-ink) 10%, transparent);
+  transition: border-color 0.5s ease;
+}
+
+.group:hover .specimen-plate {
+  border-color: color-mix(in srgb, var(--color-ink) 26%, transparent);
 }
 
 /* Dotted leaders between a spec's label and its value, like a printed key. */
@@ -246,7 +560,7 @@ body {
   min-width: 1.5rem;
   align-self: end;
   margin-bottom: 0.3em;
-  border-bottom: 1px dotted color-mix(in srgb, var(--color-ink) 28%, transparent);
+  border-bottom: 1px dotted color-mix(in srgb, var(--color-ink) 24%, transparent);
 }
 
 .spec-row dd {
@@ -257,7 +571,7 @@ body {
 @keyframes plate-in {
   from {
     opacity: 0;
-    transform: scale(0.985);
+    transform: scale(0.99);
   }
   to {
     opacity: 1;

@@ -42,34 +42,41 @@ export default async function JournalPostPage({
   const post = await getJournalPost(slug);
 
   return (
-    <article className="mx-auto max-w-[52.5rem] px-5 py-12">
-      <Link href="/journal" className="text-sm text-ink/60 hover:text-rose">
-        ← Back to journal
+    <article className="mx-auto max-w-[52.5rem] px-6 pt-12 pb-20 sm:pt-16">
+      <Link href="/journal" className="link-arrow is-back">
+        <span data-arrow aria-hidden>
+          ←
+        </span>
+        Back to journal
       </Link>
 
-      <header className="mt-6 mb-10 text-center">
-        <p className="text-xs text-ink/50 mb-2">
+      <header className="mt-12 border-b border-ink/10 pb-10 text-center sm:mt-16">
+        <p className="eyebrow">
           {new Date(post.date).toLocaleDateString("en-US", {
             year: "numeric",
             month: "long",
             day: "numeric",
-          })}{" "}
-          · Written by {post.author}
+          })}
         </p>
-        <h1 className="text-2xl sm:text-4xl leading-snug">{post.title}</h1>
+        <h1 className="mx-auto mt-6 max-w-3xl text-balance text-3xl leading-[1.12] sm:text-5xl">
+          {post.title}
+        </h1>
+        <p className="mt-6 text-[0.7rem] uppercase tracking-[0.2em] text-graphite/60">
+          Written by {post.author}
+        </p>
       </header>
 
       <div
-        className="prose prose-lg max-w-none"
+        className="prose prose-lg mt-12 max-w-none"
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}
       />
 
       {post.tags?.length > 0 && (
-        <div className="mt-10 flex flex-wrap gap-2 justify-center">
+        <div className="mt-14 flex flex-wrap justify-center gap-2 border-t border-ink/10 pt-8">
           {post.tags.map((tag) => (
             <span
               key={tag}
-              className="text-xs bg-ivory rounded-full px-3 py-1 text-ink/70"
+              className="rounded-full border border-ink/12 bg-ivory/25 px-3.5 py-1.5 text-[0.65rem] uppercase tracking-[0.16em] text-graphite/75"
             >
               {tag}
             </span>
@@ -77,9 +84,12 @@ export default async function JournalPostPage({
         </div>
       )}
 
-      <div className="mt-12 text-center">
-        <Link href="/journal" className="text-sm hover:text-rose transition-colors">
-          ← Back to all journal entries
+      <div className="mt-14 text-center">
+        <Link href="/journal" className="link-arrow is-back">
+          <span data-arrow aria-hidden className="inline-block rotate-180">
+            →
+          </span>
+          All journal entries
         </Link>
       </div>
     </article>

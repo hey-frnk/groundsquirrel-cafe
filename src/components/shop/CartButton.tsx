@@ -12,13 +12,27 @@ export default function CartButton({ className = "" }: { className?: string }) {
       aria-label={
         itemCount > 0 ? `Open basket, ${itemCount} item(s)` : "Open basket"
       }
-      className={`relative w-9 h-9 rounded-full border border-ink/20 hover:bg-cream/60 transition-colors flex items-center justify-center ${className}`}
+      className={`relative flex h-9 w-9 items-center justify-center text-ink transition-colors hover:text-rose ${className}`}
     >
-      <span aria-hidden className="text-base leading-none">
-        🧺
-      </span>
+      {/* A drawn basket rather than an emoji — the emoji rendered as a different
+          picture on every platform, and none of them matched the site. */}
+      <svg
+        aria-hidden
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M4 8h16l-1.4 10.2A2 2 0 0 1 16.6 20H7.4a2 2 0 0 1-2-1.8L4 8Z" />
+        <path d="M8.5 8 12 3l3.5 5" />
+        <path d="M9.5 12v4M14.5 12v4" />
+      </svg>
       {itemCount > 0 && (
-        <span className="absolute -top-1 -right-1 min-w-[1.15rem] h-[1.15rem] px-1 rounded-full bg-rose text-ink text-[0.65rem] leading-[1.15rem] text-center tabular-nums">
+        <span className="absolute -top-0.5 -right-0.5 flex h-[1.1rem] min-w-[1.1rem] items-center justify-center rounded-full bg-rose px-1 text-[0.62rem] leading-none text-ink tabular-nums">
           {itemCount}
         </span>
       )}

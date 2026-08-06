@@ -9,108 +9,98 @@ export const metadata = {
     "Hand-painted squirrel art prints and vinyl stickers. Made on the road, never by AI — 10% of every order funds wildlife conservation.",
 };
 
+const PROMISES = [
+  {
+    title: "Painted by hand",
+    body: "Painted with heart and soul and absolutely no AI.",
+  },
+  {
+    title: "Made on the road",
+    body: "Each design was sketched where the animal actually lives, from inside Humbär.",
+  },
+  {
+    title: "Printed near you",
+    body: "Dispatched from the partner studio closest to your address, not shipped across the world.",
+  },
+];
+
 export default function ShopPage() {
   const products = getAllShopProducts();
 
   return (
-    <div className="pb-24">
+    <div className="pb-4">
       {/* Masthead */}
-      <section className="px-5 pt-14 pb-12 text-center">
-        <p className="text-xs uppercase tracking-[0.3em] text-ink/45">
-          The Ground Squirrel Café
-        </p>
-        <h1 className="mt-4 text-4xl sm:text-5xl leading-tight">Shop</h1>
-        <p className="mt-5 mx-auto max-w-xl text-ink/70 leading-relaxed">
-          Watercolour field guides to the animals most people walk straight past.
-          Painted by hand from inside a vintage camper van — and never, ever by a
-          machine.
-        </p>
-        <div className="mt-7 flex items-center justify-center gap-3 text-ink/30">
-          <span className="h-px w-12 bg-current" />
-          <span aria-hidden>🐿️</span>
-          <span className="h-px w-12 bg-current" />
+      <section className="mx-auto max-w-7xl px-6 pt-16 sm:px-10 sm:pt-24">
+        <div className="border-b border-ink/10 pb-10">
+          <p className="eyebrow">The Ground Squirrel Café</p>
+          <h1 className="mt-5 text-5xl sm:text-7xl">Shop</h1>
         </div>
       </section>
 
       {/* Products */}
-      <section className="mx-auto max-w-5xl px-5 grid sm:grid-cols-2 gap-8 sm:gap-10">
+      <section className="mx-auto mt-14 grid max-w-7xl gap-x-10 gap-y-14 px-6 sm:grid-cols-2 sm:px-10">
         {products.map((product) => (
-          <Link
-            key={product.slug}
-            href={`/shop/${product.slug}`}
-            className="group block"
-          >
-            <div className="specimen-plate relative aspect-[4/5] rounded-2xl overflow-hidden bg-ivory/40">
+          <Link key={product.slug} href={`/shop/${product.slug}`} className="group reveal block">
+            <div className="specimen-plate relative aspect-[4/5] overflow-hidden">
               <Image
                 src={product.image}
                 alt={product.title}
                 fill
                 sizes="(max-width: 640px) 100vw, 45vw"
-                className="object-contain p-4 transition-transform duration-500 group-hover:scale-[1.04]"
+                className="object-contain p-6 transition-transform duration-[900ms] ease-out group-hover:scale-[1.04]"
               />
-              <span className="absolute top-4 left-4 text-[0.7rem] leading-none bg-cream/90 backdrop-blur rounded-full px-3 py-1.5 text-ink/70">
+              <span className="absolute top-4 left-4 rounded-full bg-cream/92 px-4 py-2 text-[0.65rem] uppercase tracking-[0.16em] text-graphite backdrop-blur">
                 from {formatPrice(lowestPrice(product))}
               </span>
             </div>
 
-            <h2 className="mt-5 text-xl group-hover:text-rose transition-colors">
-              {product.title}
-            </h2>
+            <div className="mt-6 flex items-baseline justify-between gap-6">
+              <h2 className="text-2xl transition-colors duration-300 group-hover:text-rose">
+                {product.title}
+              </h2>
+              <span className="shrink-0 text-[0.7rem] uppercase tracking-[0.16em] text-graphite/60">
+                {product.variants.length} options
+              </span>
+            </div>
             {product.tagline && (
-              <p className="mt-1.5 text-sm text-ink/65 leading-relaxed">
-                {product.tagline}
-              </p>
+              <p className="mt-2 text-sm leading-relaxed text-graphite/85">{product.tagline}</p>
             )}
-            <p className="mt-3 text-sm text-ink/45 group-hover:text-rose transition-colors">
-              {product.variants.length} options →
-            </p>
           </Link>
         ))}
       </section>
 
       {/* Conservation band */}
-      <section className="mt-24 bg-ivory/40 border-y border-ink/10 py-14 px-5">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-4xl mb-4" aria-hidden>
-            🌿
-          </p>
-          <h2 className="text-2xl leading-snug">
+      <section className="band-ivory mt-28 px-6 py-20 sm:mt-36 sm:py-24">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="eyebrow">Why it matters</p>
+          <h2 className="mt-6 text-balance text-3xl leading-[1.15] sm:text-[2.6rem]">
             Ten percent of every order funds wildlife conservation
           </h2>
-          <p className="mt-4 text-ink/70 leading-relaxed">
-            Not a marketing line. These animals sat still long enough to be
-            painted, and this is the rent.
+          <p className="mx-auto mt-6 max-w-xl leading-relaxed text-graphite">
+            Not a marketing line. These animals sat still long enough to be painted, and this
+            is the rent.
           </p>
         </div>
       </section>
 
       {/* Promises */}
-      <section className="mx-auto max-w-4xl px-5 mt-16 grid sm:grid-cols-3 gap-8 text-center">
-        {[
-          {
-            icon: "🖌️",
-            title: "Painted by hand",
-            body: "Painted with heart and soul and absolutely no AI.",
-          },
-          {
-            icon: "🚐",
-            title: "Made on the road",
-            body: "Each design was sketched where the animal actually lives, from inside Humbär.",
-          },
-          {
-            icon: "📦",
-            title: "Printed near you",
-            body: "Dispatched from the partner studio closest to your address, not shipped across the world.",
-          },
-        ].map((item) => (
-          <div key={item.title}>
-            <p className="text-2xl mb-3" aria-hidden>
-              {item.icon}
-            </p>
-            <h3 className="text-base mb-2">{item.title}</h3>
-            <p className="text-sm text-ink/65 leading-relaxed">{item.body}</p>
-          </div>
-        ))}
+      <section className="mx-auto mt-20 max-w-6xl px-6 sm:px-10">
+        <div className="grid border-t border-ink/10 sm:grid-cols-3">
+          {PROMISES.map((item, i) => (
+            <div
+              key={item.title}
+              className="flex gap-5 border-b border-ink/10 py-8 sm:border-b-0 sm:px-7 sm:first:pl-0 sm:last:pr-0"
+            >
+              <span className="mt-1 shrink-0 font-stamp text-[0.7rem] tracking-[0.15em] text-ink/45">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <div>
+                <h3 className="text-lg leading-tight">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-graphite/85">{item.body}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
     </div>
   );

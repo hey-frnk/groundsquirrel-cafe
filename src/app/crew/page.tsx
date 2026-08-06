@@ -14,95 +14,111 @@ export default async function CrewPage() {
   const settings = getPage<Settings>("settings");
 
   return (
-    <div className="mx-auto max-w-4xl px-5 py-12">
-      <h1 className="text-3xl sm:text-4xl text-center mb-4">Crew</h1>
-      <p className="text-center text-ink/80 max-w-xl mx-auto mb-16">
-        The people, the van, and the mascot behind the ground squirrel café.
-      </p>
+    <div className="pb-4">
+      <header className="mx-auto max-w-7xl px-6 pt-16 sm:px-10 sm:pt-24">
+        <div className="border-b border-ink/10 pb-10">
+          <p className="eyebrow">The Ground Squirrel Café</p>
+          <h1 className="mt-5 text-5xl sm:text-7xl">Crew</h1>
+        </div>
+      </header>
 
-      <div className="flex flex-col gap-16">
+      <div className="mx-auto max-w-6xl px-6 sm:px-10">
         {crew.map((member, i) => (
-          <div
+          <article
             key={member.slug}
-            className={`flex flex-col md:flex-row gap-8 items-center ${
-              i % 2 === 1 ? "md:flex-row-reverse" : ""
-            }`}
+            className="reveal grid items-start gap-10 border-b border-ink/10 py-16 sm:gap-14 sm:py-20 md:grid-cols-[20rem_1fr] md:gap-16"
           >
-            {member.photos && member.photos.length > 0 ? (
-              <div className="flex flex-col gap-4 shrink-0 w-56 sm:w-64">
-                {member.photos.map((photo) => (
-                  <div
-                    key={photo}
-                    className="rounded-2xl overflow-hidden border-4 border-ivory shadow-sm"
-                  >
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={photo}
-                      alt={member.name}
-                      loading="lazy"
-                      className="block w-full h-auto"
-                    />
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <div className="relative w-56 h-56 sm:w-64 sm:h-64 shrink-0 rounded-full overflow-hidden border-4 border-ivory shadow-sm">
-                <Image
-                  src={member.photo}
-                  alt={member.name}
-                  fill
-                  sizes="256px"
-                  className="object-cover"
-                />
-              </div>
-            )}
-            <div className="text-center md:text-left">
-              <h2 className="text-2xl mb-1">{member.name}</h2>
-              <p className="text-sm text-rose mb-4">{member.role}</p>
-              <div
-                className="prose prose-sm max-w-md mx-auto md:mx-0"
-                dangerouslySetInnerHTML={{ __html: member.contentHtml }}
-              />
-              {(member.spiritAnimal || member.inspiredBy) && (
-                <div className="mt-4 text-sm text-ink/70 space-y-1">
-                  {member.spiritAnimal && (
-                    <p>
-                      <span className="text-ink/50">Spirit animal:</span> {member.spiritAnimal}
-                    </p>
-                  )}
-                  {member.inspiredBy && (
-                    <p>
-                      <span className="text-ink/50">Inspired by:</span> {member.inspiredBy}
-                    </p>
-                  )}
+            <div>
+              {member.photos && member.photos.length > 0 ? (
+                <div className="flex flex-col gap-4">
+                  {member.photos.map((photo) => (
+                    <div key={photo} className="overflow-hidden rounded-xl border border-ink/10 bg-ivory/25">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={photo}
+                        alt={member.name}
+                        loading="lazy"
+                        className="block h-auto w-full"
+                      />
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl border border-ink/10 bg-ivory/25">
+                  <Image
+                    src={member.photo}
+                    alt={member.name}
+                    fill
+                    sizes="(max-width: 768px) 90vw, 18rem"
+                    className="object-cover"
+                  />
                 </div>
               )}
+            </div>
+
+            <div>
+              <p className="font-stamp text-[0.7rem] tracking-[0.2em] text-ink/45">
+                {String(i + 1).padStart(2, "0")}
+              </p>
+              <h2 className="mt-4 text-3xl sm:text-4xl">{member.name}</h2>
+              <p className="mt-3 text-[0.7rem] uppercase tracking-[0.22em] text-graphite/65">
+                {member.role}
+              </p>
+              <div
+                className="prose prose-sm mt-7 max-w-xl"
+                dangerouslySetInnerHTML={{ __html: member.contentHtml }}
+              />
+
+              {(member.spiritAnimal || member.inspiredBy) && (
+                <dl className="mt-8 grid max-w-lg grid-cols-[7.5rem_1fr] gap-x-5 gap-y-3 border-t border-ink/10 pt-5 text-sm">
+                  {member.spiritAnimal && (
+                    <>
+                      <dt className="pt-[0.2rem] text-[0.7rem] uppercase leading-relaxed tracking-[0.14em] text-graphite/60">
+                        Spirit animal
+                      </dt>
+                      <dd className="leading-relaxed text-ink">{member.spiritAnimal}</dd>
+                    </>
+                  )}
+                  {member.inspiredBy && (
+                    <>
+                      <dt className="pt-[0.2rem] text-[0.7rem] uppercase leading-relaxed tracking-[0.14em] text-graphite/60">
+                        Inspired by
+                      </dt>
+                      <dd className="leading-relaxed text-ink">{member.inspiredBy}</dd>
+                    </>
+                  )}
+                </dl>
+              )}
+
               {member.qualifications && member.qualifications.length > 0 && (
-                <ul className="mt-3 text-xs text-ink/60 list-disc list-inside text-left inline-block">
+                <ul className="mt-6 max-w-md space-y-1.5 text-xs leading-relaxed text-graphite/75">
                   {member.qualifications.map((q) => (
-                    <li key={q}>{q}</li>
+                    <li key={q} className="flex gap-3">
+                      <span aria-hidden className="mt-2 h-0.5 w-3 shrink-0 rounded-full bg-rose" />
+                      {q}
+                    </li>
                   ))}
                 </ul>
               )}
             </div>
-          </div>
+          </article>
         ))}
       </div>
 
-      <div className="mt-20 rounded-2xl bg-lilac/30 border border-lilac px-6 py-10 text-center">
-        <h2 className="text-2xl mb-3">Get in touch</h2>
-        <p className="max-w-xl mx-auto mb-6 text-ink/80">
-          Feeling inspired? Join us on our daily adventures and get a closer look at who we
-          are and what we love. We&rsquo;re open to meaningful collaborations and would be
-          delighted to connect with you!
-        </p>
-        <a
-          href={`mailto:${settings.contactEmail}`}
-          className="inline-block rounded-full bg-ink text-cream px-8 py-3 transition-colors hover:bg-rose hover:text-ink"
-        >
-          Say hello
-        </a>
-      </div>
+      <section className="band-ivory mt-24 px-6 py-20 sm:mt-32 sm:py-24">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="eyebrow">Say hello</p>
+          <h2 className="mt-6 text-3xl sm:text-[2.6rem]">Get in touch</h2>
+          <p className="mx-auto mt-6 max-w-xl leading-relaxed text-graphite">
+            Feeling inspired? Join us on our daily adventures and get a closer look at who we
+            are and what we love. We&rsquo;re open to meaningful collaborations and would be
+            delighted to connect with you!
+          </p>
+          <a href={`mailto:${settings.contactEmail}`} className="btn btn-primary mt-10">
+            Write to us
+          </a>
+        </div>
+      </section>
     </div>
   );
 }
