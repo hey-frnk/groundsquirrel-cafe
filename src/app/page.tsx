@@ -141,19 +141,21 @@ export default function Home() {
 
           {/* Brand mark and navigation, sitting on the film. */}
           <div className="relative z-10 px-6 pt-6 sm:absolute sm:inset-x-0 sm:top-0 sm:px-10 sm:pt-8">
-            <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-5 sm:flex-row sm:justify-between sm:gap-3">
+            <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-5 sm:gap-3">
               <Link href="/" aria-label="The Ground Squirrel Café" className="shrink-0">
                 <Image
                   src="/images/brand/logo_badge_var.png"
                   alt="The Ground Squirrel Café"
                   width={132}
                   height={192}
-                  className="w-[4.25rem] drop-shadow-lg sm:w-[5.25rem]"
+                  className="w-[4.7rem] drop-shadow-lg sm:w-[5.8rem]"
                   preload
                 />
               </Link>
 
-              <nav className="flex items-center gap-6 sm:gap-9">
+              {/* from sm up the links leave the flow and centre on the badge's
+                  own mid-line, so the two sit level */}
+              <nav className="flex items-center gap-6 sm:absolute sm:top-1/2 sm:right-0 sm:-translate-y-1/2 sm:gap-9">
                 {NAV_LINKS.map((link) => (
                   <Link
                     key={link.href}
@@ -334,7 +336,7 @@ export default function Home() {
 
       {/* ---------- A quiet moment ---------- */}
       <section className="relative mt-24 sm:mt-36">
-        <div className="photo-scrim relative isolate h-[26rem] sm:h-[32rem] lg:h-[38rem]">
+        <div className="relative isolate h-[26rem] sm:h-[32rem] lg:h-[38rem]">
           <Image
             src="/images/home/band-wheel.webp"
             alt="A cappuccino with a heart in the foam, held in front of the VW steering wheel"
@@ -342,12 +344,11 @@ export default function Home() {
             sizes="100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 z-10 flex items-end">
-            <div className="mx-auto w-full max-w-7xl px-6 pb-14 sm:px-10 sm:pb-20">
-              <p className="max-w-3xl text-balance font-display text-3xl leading-[1.15] text-cream drop-shadow-md sm:text-5xl">
-                {home.bandCaption}
-              </p>
-            </div>
+          <div className="absolute inset-0 bg-ink/30" />
+          <div className="absolute inset-0 flex items-center justify-center px-6">
+            <p className="max-w-2xl text-center font-stamp text-xl leading-snug tracking-[0.02em] text-cream drop-shadow-md sm:text-3xl">
+              {home.bandCaption}
+            </p>
           </div>
         </div>
       </section>

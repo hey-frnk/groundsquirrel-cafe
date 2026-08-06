@@ -117,13 +117,7 @@ export default function JournalPage() {
     <div className="mx-auto max-w-7xl px-6 pt-16 pb-24 sm:px-10 sm:pt-24">
       <header className="border-b border-ink/10 pb-10">
         <p className="eyebrow">The Ground Squirrel Café</p>
-        <div className="mt-5 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-          <h1 className="text-5xl sm:text-7xl">Journal</h1>
-          <p className="max-w-sm text-sm leading-relaxed text-graphite/85">
-            Stories, hikes and slow travel from wherever Humbär takes us —
-            newest first.
-          </p>
-        </div>
+        <h1 className="mt-5 text-5xl sm:text-7xl">Journal</h1>
       </header>
 
       <div className="mt-14 sm:mt-20">

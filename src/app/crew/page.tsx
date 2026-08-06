@@ -18,12 +18,7 @@ export default async function CrewPage() {
       <header className="mx-auto max-w-7xl px-6 pt-16 sm:px-10 sm:pt-24">
         <div className="border-b border-ink/10 pb-10">
           <p className="eyebrow">The Ground Squirrel Café</p>
-          <div className="mt-5 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
-            <h1 className="text-5xl sm:text-7xl">Crew</h1>
-            <p className="max-w-sm text-sm leading-relaxed text-graphite/85">
-              The people, the van, and the mascot behind the ground squirrel café.
-            </p>
-          </div>
+          <h1 className="mt-5 text-5xl sm:text-7xl">Crew</h1>
         </div>
       </header>
 
@@ -75,22 +70,22 @@ export default async function CrewPage() {
               />
 
               {(member.spiritAnimal || member.inspiredBy) && (
-                <dl className="mt-8 max-w-md border-t border-ink/10 pt-5 text-sm">
+                <dl className="mt-8 grid max-w-lg grid-cols-[7.5rem_1fr] gap-x-5 gap-y-3 border-t border-ink/10 pt-5 text-sm">
                   {member.spiritAnimal && (
-                    <div className="spec-row py-1">
-                      <dt className="shrink-0 text-[0.7rem] uppercase tracking-[0.14em] text-graphite/60">
+                    <>
+                      <dt className="pt-[0.2rem] text-[0.7rem] uppercase leading-relaxed tracking-[0.14em] text-graphite/60">
                         Spirit animal
                       </dt>
-                      <dd className="text-ink">{member.spiritAnimal}</dd>
-                    </div>
+                      <dd className="leading-relaxed text-ink">{member.spiritAnimal}</dd>
+                    </>
                   )}
                   {member.inspiredBy && (
-                    <div className="spec-row py-1">
-                      <dt className="shrink-0 text-[0.7rem] uppercase tracking-[0.14em] text-graphite/60">
+                    <>
+                      <dt className="pt-[0.2rem] text-[0.7rem] uppercase leading-relaxed tracking-[0.14em] text-graphite/60">
                         Inspired by
                       </dt>
-                      <dd className="text-ink">{member.inspiredBy}</dd>
-                    </div>
+                      <dd className="leading-relaxed text-ink">{member.inspiredBy}</dd>
+                    </>
                   )}
                 </dl>
               )}

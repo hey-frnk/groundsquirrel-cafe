@@ -146,9 +146,9 @@ html {
 /* ---------------------------------------------------------------------------
    Buttons
 
-   Rounded again — the pill is part of how this place feels — but set in the
-   small letterspaced caps the rest of the site uses. The shape stays friendly
-   while the lettering keeps it from reading as a sticker.
+   Rounded, and set in the house typewriter like the section labels — the same
+   stamped voice, just bigger. Special Elite already carries a lot of air
+   between its letters, so the tracking is lighter here than on a grotesque.
    --------------------------------------------------------------------------- */
 .btn {
   display: inline-flex;
@@ -158,9 +158,10 @@ html {
   padding: 0.95rem 1.9rem;
   border: 1px solid transparent;
   border-radius: 999px;
-  font-size: 0.7rem;
+  font-family: var(--font-special-elite), ui-monospace, monospace;
+  font-size: 0.75rem;
   line-height: 1;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
   white-space: nowrap;
   transition:
@@ -171,8 +172,8 @@ html {
 
 .btn-sm {
   padding: 0.72rem 1.35rem;
-  font-size: 0.65rem;
-  letter-spacing: 0.16em;
+  font-size: 0.7rem;
+  letter-spacing: 0.11em;
 }
 
 /* The brand rose is a pale pink, so it carries ink rather than cream — the
@@ -402,21 +403,6 @@ html {
   .hero-still {
     display: block;
   }
-}
-
-/* A caption standing on a full-width photograph needs somewhere to sit, but the
-   photographs are the point — so the shade is confined to the bottom third and
-   the rest of the frame keeps its own light. */
-.photo-scrim::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    color-mix(in srgb, var(--color-ink) 62%, transparent),
-    color-mix(in srgb, var(--color-ink) 22%, transparent) 34%,
-    transparent 62%
-  );
 }
 
 /* Text set in the middle of a bright photograph gets a pane of its own rather

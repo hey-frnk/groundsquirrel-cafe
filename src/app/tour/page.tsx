@@ -224,7 +224,7 @@ export default function TourPage() {
 
       {/* ---------- Wide breath of dusk ---------- */}
       <section className="relative mt-24 sm:mt-32">
-        <div className="photo-scrim relative isolate h-[22rem] sm:h-[28rem] lg:h-[32rem]">
+        <div className="relative isolate h-[22rem] sm:h-[28rem] lg:h-[32rem]">
           <Image
             src="/images/tour/band-lake.webp"
             alt="A still lake at dusk, with mountains and a treeline reflected in the water"
@@ -234,12 +234,11 @@ export default function TourPage() {
             // however wide the viewport gets
             className="object-cover object-bottom"
           />
-          <div className="absolute inset-0 z-10 flex items-end">
-            <div className="mx-auto w-full max-w-7xl px-6 pb-12 sm:px-10 sm:pb-16">
-              <p className="max-w-3xl text-balance font-display text-3xl leading-[1.15] text-cream drop-shadow-md sm:text-5xl">
-                Wherever we park, that&rsquo;s the café.
-              </p>
-            </div>
+          <div className="absolute inset-0 bg-ink/30" />
+          <div className="absolute inset-0 flex items-center justify-center px-6">
+            <p className="max-w-2xl text-center font-stamp text-xl leading-snug tracking-[0.02em] text-cream drop-shadow-md sm:text-3xl">
+              Wherever we park, that&rsquo;s the café.
+            </p>
           </div>
         </div>
       </section>
