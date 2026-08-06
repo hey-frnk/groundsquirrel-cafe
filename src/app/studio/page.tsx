@@ -122,7 +122,7 @@ export default async function StudioPage() {
             "10% of every sale funds wildlife conservation",
           ].map((line, i) => (
             <li key={line} className="flex gap-4 px-0 py-6 sm:px-7">
-              <span className="mt-0.5 shrink-0 font-stamp text-[0.7rem] tracking-[0.15em] text-rose/80">
+              <span className="mt-0.5 shrink-0 font-stamp text-[0.7rem] tracking-[0.15em] text-ink/45">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <span className="text-sm leading-relaxed text-graphite">{line}</span>
@@ -249,7 +249,7 @@ export default async function StudioPage() {
             <div className="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-3">
               {teaching.map((item) => (
                 <div key={item.slug} className="group flex flex-col">
-                  <div className="relative aspect-[4/3] overflow-hidden bg-ivory/40">
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-ink/10 bg-ivory/25">
                     <Image
                       src={item.image}
                       alt={item.title}

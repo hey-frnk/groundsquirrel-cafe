@@ -32,7 +32,7 @@ export default function CartButton({ className = "" }: { className?: string }) {
         <path d="M9.5 12v4M14.5 12v4" />
       </svg>
       {itemCount > 0 && (
-        <span className="absolute -top-0.5 -right-0.5 flex h-[1.1rem] min-w-[1.1rem] items-center justify-center bg-rose px-1 text-[0.62rem] leading-none text-cream tabular-nums">
+        <span className="absolute -top-0.5 -right-0.5 flex h-[1.1rem] min-w-[1.1rem] items-center justify-center rounded-full bg-rose px-1 text-[0.62rem] leading-none text-ink tabular-nums">
           {itemCount}
         </span>
       )}

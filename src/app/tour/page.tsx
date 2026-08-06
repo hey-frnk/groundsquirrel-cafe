@@ -73,7 +73,11 @@ const EVENT_TYPES = [
   "Just because",
 ];
 
-/** A photograph in a shallow paper mount, the way a print is hung. */
+/**
+ * A photograph, either mounted on a card the way a print is hung (`mount`) or
+ * set straight into the page with a soft frame. Both keep the same corner
+ * radius so the two treatments read as one family.
+ */
 function Plate({
   src,
   alt,
@@ -81,6 +85,7 @@ function Plate({
   ratio = "aspect-4/5",
   sizes,
   priority,
+  mount = false,
 }: {
   src: string;
   alt: string;
@@ -88,10 +93,15 @@ function Plate({
   ratio?: string;
   sizes: string;
   priority?: boolean;
+  mount?: boolean;
 }) {
   return (
-    <figure className="group">
-      <div className={`relative overflow-hidden bg-ivory/40 ${ratio}`}>
+    <figure className={mount ? "paper-card group overflow-hidden p-2.5" : "group"}>
+      <div
+        className={`relative overflow-hidden rounded-lg bg-ivory/25 ${
+          mount ? "" : "border border-ink/10 shadow-[0_10px_26px_-24px_rgba(74,66,53,0.9)]"
+        } ${ratio}`}
+      >
         <Image
           src={src}
           alt={alt}
@@ -102,7 +112,11 @@ function Plate({
         />
       </div>
       {caption && (
-        <figcaption className="mt-3 text-[0.7rem] uppercase tracking-[0.16em] text-graphite/60">
+        <figcaption
+          className={`text-[0.7rem] uppercase tracking-[0.16em] text-graphite/60 ${
+            mount ? "px-1 pt-3 pb-1 text-center" : "mt-3"
+          }`}
+        >
           {caption}
         </figcaption>
       )}
@@ -141,7 +155,7 @@ export default function TourPage() {
             the page at the very bottom. A single top-to-bottom gradient washed
             the lower third out to nearly cream — which is exactly where the two
             buttons stand, and the outlined one disappeared into it. */}
-        <div className="absolute inset-0 bg-ink/58" />
+        <div className="absolute inset-0 bg-ink/45" />
         <div className="absolute inset-x-0 bottom-0 h-28 bg-linear-to-b from-transparent to-cream" />
 
         <div className="relative mx-auto max-w-4xl px-6 pt-24 pb-32 text-center text-cream sm:pt-32 sm:pb-40">
@@ -192,9 +206,10 @@ export default function TourPage() {
                 alt={item.alt}
                 sizes="(max-width: 640px) 90vw, 30vw"
                 priority={i === 0}
+                mount
               />
               <div className="mt-6 flex items-start gap-5">
-                <span className="mt-1.5 shrink-0 font-stamp text-[0.7rem] tracking-[0.15em] text-rose/80">
+                <span className="mt-1.5 shrink-0 font-stamp text-[0.7rem] tracking-[0.15em] text-ink/45">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div>
@@ -263,7 +278,7 @@ export default function TourPage() {
               >
                 {/* Story */}
                 <div className={`lg:sticky lg:top-28 ${index % 2 === 1 ? "lg:order-2" : ""}`}>
-                  <p className="font-stamp text-[0.7rem] tracking-[0.2em] text-rose/80">
+                  <p className="font-stamp text-[0.7rem] tracking-[0.2em] text-ink/45">
                     {String(stop.order).padStart(2, "0")}
                   </p>
                   <h3 className="mt-4 text-4xl leading-none sm:text-5xl">{stop.country}</h3>
@@ -329,6 +344,7 @@ export default function TourPage() {
               alt="A guest smiling over a bowl and a cinnamon bun at a forest table"
               caption="the moment we do it all for"
               sizes="(max-width: 1024px) 80vw, 32vw"
+              mount
             />
           </div>
 
@@ -343,7 +359,7 @@ export default function TourPage() {
             <ol className="mt-12 border-t border-ink/10">
               {STEPS.map((step, i) => (
                 <li key={step.title} className="flex gap-6 border-b border-ink/10 py-6">
-                  <span className="mt-1 shrink-0 font-stamp text-[0.7rem] tracking-[0.15em] text-rose/80">
+                  <span className="mt-1 shrink-0 font-stamp text-[0.7rem] tracking-[0.15em] text-ink/45">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div>
@@ -372,7 +388,7 @@ export default function TourPage() {
                 {EVENT_TYPES.map((type) => (
                   <li
                     key={type}
-                    className="border border-ink/15 px-3.5 py-2 text-[0.65rem] uppercase tracking-[0.14em] text-graphite/80"
+                    className="rounded-full border border-ink/15 bg-cream/50 px-3.5 py-2 text-[0.65rem] uppercase tracking-[0.14em] text-graphite/80"
                   >
                     {type}
                   </li>

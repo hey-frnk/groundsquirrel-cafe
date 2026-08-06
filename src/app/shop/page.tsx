@@ -56,7 +56,7 @@ export default function ShopPage() {
                 sizes="(max-width: 640px) 100vw, 45vw"
                 className="object-contain p-6 transition-transform duration-[900ms] ease-out group-hover:scale-[1.04]"
               />
-              <span className="absolute top-0 left-0 bg-cream/90 px-4 py-2.5 text-[0.65rem] uppercase tracking-[0.16em] text-graphite backdrop-blur">
+              <span className="absolute top-4 left-4 rounded-full bg-cream/92 px-4 py-2 text-[0.65rem] uppercase tracking-[0.16em] text-graphite backdrop-blur">
                 from {formatPrice(lowestPrice(product))}
               </span>
             </div>
@@ -98,7 +98,7 @@ export default function ShopPage() {
               key={item.title}
               className="flex gap-5 border-b border-ink/10 py-8 sm:border-b-0 sm:px-7 sm:first:pl-0 sm:last:pr-0"
             >
-              <span className="mt-1 shrink-0 font-stamp text-[0.7rem] tracking-[0.15em] text-rose/80">
+              <span className="mt-1 shrink-0 font-stamp text-[0.7rem] tracking-[0.15em] text-ink/45">
                 {String(i + 1).padStart(2, "0")}
               </span>
               <div>

@@ -37,7 +37,7 @@ export default async function CrewPage() {
               {member.photos && member.photos.length > 0 ? (
                 <div className="flex flex-col gap-4">
                   {member.photos.map((photo) => (
-                    <div key={photo} className="overflow-hidden bg-ivory/40">
+                    <div key={photo} className="overflow-hidden rounded-xl border border-ink/10 bg-ivory/25">
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={photo}
@@ -49,7 +49,7 @@ export default async function CrewPage() {
                   ))}
                 </div>
               ) : (
-                <div className="relative aspect-[4/5] w-full overflow-hidden bg-ivory/40">
+                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-xl border border-ink/10 bg-ivory/25">
                   <Image
                     src={member.photo}
                     alt={member.name}
@@ -62,7 +62,7 @@ export default async function CrewPage() {
             </div>
 
             <div>
-              <p className="font-stamp text-[0.7rem] tracking-[0.2em] text-rose/80">
+              <p className="font-stamp text-[0.7rem] tracking-[0.2em] text-ink/45">
                 {String(i + 1).padStart(2, "0")}
               </p>
               <h2 className="mt-4 text-3xl sm:text-4xl">{member.name}</h2>
@@ -99,7 +99,7 @@ export default async function CrewPage() {
                 <ul className="mt-6 max-w-md space-y-1.5 text-xs leading-relaxed text-graphite/75">
                   {member.qualifications.map((q) => (
                     <li key={q} className="flex gap-3">
-                      <span aria-hidden className="mt-2 h-px w-3 shrink-0 bg-rose/60" />
+                      <span aria-hidden className="mt-2 h-0.5 w-3 shrink-0 rounded-full bg-rose" />
                       {q}
                     </li>
                   ))}

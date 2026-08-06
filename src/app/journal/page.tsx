@@ -36,7 +36,7 @@ function Card({ post, eager }: { post: JournalPost; eager?: boolean }) {
   return (
     <Link href={`/journal/${post.slug}`} className="group block">
       <article>
-        <div className="overflow-hidden bg-ivory/40">
+        <div className="overflow-hidden rounded-xl border border-ink/10 bg-ivory/25 shadow-[0_10px_26px_-24px_rgba(74,66,53,0.9)]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={post.cover}

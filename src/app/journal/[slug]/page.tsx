@@ -76,7 +76,7 @@ export default async function JournalPostPage({
           {post.tags.map((tag) => (
             <span
               key={tag}
-              className="border border-ink/12 px-3.5 py-1.5 text-[0.65rem] uppercase tracking-[0.16em] text-graphite/75"
+              className="rounded-full border border-ink/12 bg-ivory/25 px-3.5 py-1.5 text-[0.65rem] uppercase tracking-[0.16em] text-graphite/75"
             >
               {tag}
             </span>

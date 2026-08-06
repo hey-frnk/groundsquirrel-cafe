@@ -3,7 +3,6 @@ import Link from "next/link";
 import { getPage } from "@/lib/content";
 
 interface Settings {
-  tagline: string;
   contactEmail: string;
   instagramUrl: string;
   youtubeUrl: string;
@@ -79,7 +78,6 @@ export default function SiteFooter() {
                 Squirrel Café
               </span>
             </Link>
-            <p className="mt-6 text-sm leading-relaxed text-cream/55">{settings.tagline}</p>
           </div>
 
           {/* Where to go */}
@@ -141,7 +139,7 @@ export default function SiteFooter() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={label}
-                    className="flex h-10 w-10 items-center justify-center border border-cream/20 text-cream/70 transition-colors hover:border-cream/60 hover:text-cream"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-cream/20 text-cream/70 transition-colors hover:border-cream/60 hover:text-cream"
                   >
                     <Icon />
                   </a>
@@ -153,7 +151,10 @@ export default function SiteFooter() {
 
         <div className="mt-16 flex flex-col gap-3 border-t border-cream/12 pt-8 text-[0.7rem] tracking-[0.1em] text-cream/45 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} The Ground Squirrel Café</p>
-          <p>Built and drawn by hand in Switzerland — never by AI.</p>
+          <p>
+            with <span aria-hidden>🐿️</span>
+            <span className="sr-only">love</span> by Evelyne and Frank
+          </p>
         </div>
       </div>
     </footer>

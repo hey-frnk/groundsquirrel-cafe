@@ -74,7 +74,7 @@ export default async function StudioProjectPage({
           <p className="mt-5 font-display text-lg text-graphite">{project.subtitle}</p>
         )}
         {project.status && (
-          <p className="mt-7 inline-block border border-ink/15 px-4 py-2 text-[0.62rem] uppercase tracking-[0.14em] text-graphite/80">
+          <p className="mt-7 inline-block rounded-full border border-ink/15 bg-ivory/25 px-4 py-2 text-[0.62rem] uppercase tracking-[0.14em] text-graphite/80">
             {project.status}
           </p>
         )}
@@ -160,7 +160,7 @@ export default async function StudioProjectPage({
             <ArtGallery plates={project.gallery} layout="grid" />
           </div>
         ) : (
-          <p className="mt-10 border border-ink/12 px-6 py-14 text-center text-sm text-graphite/70">
+          <p className="mt-10 rounded-2xl border border-ink/12 bg-ivory/20 px-6 py-14 text-center text-sm text-graphite/70">
             {project.galleryNote ?? "Bilder zum Projekt folgen."}
           </p>
         )}

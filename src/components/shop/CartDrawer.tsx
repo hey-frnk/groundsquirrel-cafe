@@ -110,7 +110,7 @@ export default function CartDrawer() {
           <ul className="flex-1 space-y-6 overflow-y-auto px-6 py-6">
             {lines.map((line) => (
               <li key={line.id} className="flex gap-3">
-                <div className="relative h-20 w-20 shrink-0 overflow-hidden border border-ink/10 bg-ivory/40">
+                <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-lg border border-ink/10 bg-ivory/25">
                   <Image
                     src={line.image}
                     alt=""
@@ -123,7 +123,7 @@ export default function CartDrawer() {
                   <p className="font-display text-base leading-snug text-ink">{line.productTitle}</p>
                   <p className="mt-1 text-xs text-graphite/70">{line.variantLabel}</p>
                   <div className="mt-2 flex items-center gap-2">
-                    <div className="flex items-center border border-ink/20">
+                    <div className="flex items-center rounded-full border border-ink/20">
                       <button
                         type="button"
                         onClick={() => setQuantity(line.id, line.quantity - 1)}
@@ -182,7 +182,7 @@ export default function CartDrawer() {
                 id="cart-country"
                 value={country}
                 onChange={(e) => setCountry(e.target.value)}
-                className="w-full border border-ink/20 bg-paper px-3 py-2.5 text-sm focus:border-rose focus:outline-none"
+                className="w-full rounded-lg border border-ink/20 bg-paper px-3 py-2.5 text-sm focus:border-rose focus:outline-none"
               >
                 {COUNTRY_GROUPS.map((group) => (
                   <optgroup key={group.label} label={group.label}>
@@ -211,7 +211,7 @@ export default function CartDrawer() {
                 {busy ? "Taking you to checkout…" : "Checkout"}
               </button>
             ) : (
-              <div className="border border-ink/10 bg-ivory/40 px-4 py-4 text-center">
+              <div className="rounded-xl border border-ink/10 bg-ivory/25 px-4 py-4 text-center">
                 <p className="text-sm text-ink">Checkout opens soon</p>
                 <p className="mt-1.5 text-xs text-graphite/70">
                   Your basket is saved — it will still be here.

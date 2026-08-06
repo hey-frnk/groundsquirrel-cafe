@@ -68,7 +68,7 @@ export default function ProductDetail({
                   onClick={() => setImageIndex(i)}
                   aria-label={`View image ${i + 1}`}
                   aria-current={i === imageIndex}
-                  className={`relative h-16 w-16 overflow-hidden bg-ivory/40 transition-all sm:h-20 sm:w-20 ${
+                  className={`relative h-16 w-16 overflow-hidden rounded-lg bg-ivory/25 transition-all sm:h-20 sm:w-20 ${
                     i === imageIndex
                       ? "outline outline-1 outline-offset-[3px] outline-rose"
                       : "opacity-65 outline outline-1 outline-ink/10 hover:opacity-100"
@@ -100,7 +100,7 @@ export default function ProductDetail({
               {product.badges.map((badge) => (
                 <li
                   key={badge}
-                  className="border border-ink/15 px-3 py-2 text-[0.62rem] uppercase tracking-[0.14em] text-graphite/80"
+                  className="rounded-full border border-ink/15 bg-ivory/25 px-3 py-2 text-[0.62rem] uppercase tracking-[0.14em] text-graphite/80"
                 >
                   {badge}
                 </li>
@@ -119,7 +119,7 @@ export default function ProductDetail({
               id={`variant-${product.slug}`}
               value={variantIndex}
               onChange={(e) => selectVariant(Number(e.target.value))}
-              className="w-full border border-ink/20 bg-paper px-4 py-3.5 text-sm transition-colors hover:border-ink/40 focus:border-rose focus:outline-none"
+              className="w-full rounded-lg border border-ink/20 bg-paper px-4 py-3.5 text-sm transition-colors hover:border-ink/40 focus:border-rose focus:outline-none"
             >
               {product.variants.map((v, i) => (
                 <option key={v.label} value={i}>
@@ -159,7 +159,7 @@ export default function ProductDetail({
         />
 
         {product.specs && product.specs.length > 0 && (
-          <aside className="border border-ink/12 bg-ivory/30 p-7">
+          <aside className="rounded-2xl border border-ink/12 bg-ivory/25 p-7">
             <h2 className="eyebrow mb-5">Field notes</h2>
             <dl className="space-y-3.5 text-sm">
               {product.specs.map((spec) => (

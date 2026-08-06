@@ -136,9 +136,8 @@ export default function Home() {
             className="hero-still absolute inset-0 h-full w-full object-cover object-center sm:object-[30%_50%]"
           />
 
-          <div className="absolute inset-0 bg-ink/20" />
-          <div className="absolute inset-x-0 top-0 h-48 bg-linear-to-b from-ink/55 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 h-4/5 bg-linear-to-t from-ink/90 via-ink/50 to-transparent" />
+          <div className="absolute inset-x-0 top-0 h-44 bg-linear-to-b from-ink/50 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-3/4 bg-linear-to-t from-ink/85 via-ink/35 to-transparent" />
 
           {/* Brand mark and navigation, sitting on the film. */}
           <div className="relative z-10 px-6 pt-6 sm:absolute sm:inset-x-0 sm:top-0 sm:px-10 sm:pt-8">
@@ -203,16 +202,10 @@ export default function Home() {
 
       {/* ---------- The index ---------- */}
       <section className="mx-auto max-w-7xl px-6 pt-24 sm:px-10 sm:pt-32">
-        <div className="flex flex-col gap-6 border-b border-ink/10 pb-8 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p className="eyebrow">Contents</p>
-            <h2 className="mt-4 max-w-lg text-3xl sm:text-[2.6rem]">
-              Five ways into the café
-            </h2>
-          </div>
-          <p className="max-w-sm text-sm leading-relaxed text-graphite/85">
-            {settings.tagline}
-          </p>
+        <div className="text-center">
+          <p className="eyebrow">have a look around</p>
+          <h2 className="mt-4 text-3xl sm:text-[2.6rem]">Where would you like to go?</h2>
+          <span aria-hidden className="rule mx-auto mt-6" />
         </div>
 
         <div className="mt-12 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-12">
@@ -222,7 +215,9 @@ export default function Home() {
               href={place.href}
               className={`group reveal block ${place.span}`}
             >
-              <div className={`relative overflow-hidden bg-ivory/40 ${place.height}`}>
+              <div
+                className={`relative overflow-hidden rounded-xl border border-ink/10 bg-ivory/25 shadow-[0_10px_26px_-24px_rgba(74,66,53,0.9)] ${place.height}`}
+              >
                 <Image
                   src={place.image}
                   alt={place.alt}
@@ -233,7 +228,7 @@ export default function Home() {
               </div>
 
               <div className="mt-5 flex items-start gap-5">
-                <span className="mt-1.5 shrink-0 font-stamp text-[0.7rem] tracking-[0.15em] text-rose/80">
+                <span className="mt-1.5 shrink-0 font-stamp text-[0.7rem] tracking-[0.15em] text-ink/45">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div>
@@ -303,7 +298,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-2 gap-3 sm:gap-4">
-            <div className="col-span-2 overflow-hidden bg-ivory/40">
+            <div className="col-span-2 overflow-hidden rounded-xl border border-ink/10 bg-ivory/25">
               <Image
                 src="/images/home/welcome-van.webp"
                 alt="Evelyne and Frank with coffee beside Humbär, below the Swiss alps"
@@ -313,7 +308,7 @@ export default function Home() {
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="overflow-hidden bg-ivory/40">
+            <div className="overflow-hidden rounded-xl border border-ink/10 bg-ivory/25">
               <Image
                 src="/images/home/welcome-frank.webp"
                 alt="Frank laughing in the driver's window with a golden retriever"
@@ -323,7 +318,7 @@ export default function Home() {
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="overflow-hidden bg-ivory/40">
+            <div className="overflow-hidden rounded-xl border border-ink/10 bg-ivory/25">
               <Image
                 src="/images/home/welcome-table.webp"
                 alt="Baklava, granola bowls and two coffees on a sunlit wooden table"
@@ -376,7 +371,7 @@ export default function Home() {
           <div className="mt-12 grid gap-x-8 gap-y-12 sm:grid-cols-3">
             {posts.map((post) => (
               <Link key={post.slug} href={`/journal/${post.slug}`} className="group reveal block">
-                <div className="relative aspect-4/3 overflow-hidden bg-ivory/40">
+                <div className="relative aspect-4/3 overflow-hidden rounded-xl border border-ink/10 bg-ivory/25">
                   <Image
                     src={post.cover}
                     alt={post.title}
@@ -411,11 +406,11 @@ export default function Home() {
             sizes="100vw"
             className="object-cover"
           />
-          {/* The evening light in this photograph is bright right where the
-              invitation sits, so it takes a flat scrim rather than the gradient
-              the other bands use — a gradient leaves the middle unreadable. */}
-          <div className="absolute inset-0 bg-ink/65" />
-          <div className="relative z-10 max-w-2xl text-center text-cream">
+          {/* The evening light is brightest exactly where the invitation sits.
+              Rather than shade the whole photograph down to read the words, the
+              words get a frosted pane and the picture keeps its glow. */}
+          <div className="absolute inset-0 bg-ink/20" />
+          <div className="frosted-panel relative z-10 max-w-2xl px-6 py-14 text-center text-cream sm:px-14">
             <p className="eyebrow eyebrow-light">Say hello</p>
             <h2 className="mt-5 text-balance text-4xl leading-[1.08] text-cream sm:text-5xl">
               {home.closingHeading}

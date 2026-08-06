@@ -52,7 +52,7 @@ export default function ProjectCarousel({ projects }: { projects: CarouselProjec
   if (projects.length === 0) return null;
 
   const arrow =
-    "flex h-11 w-11 items-center justify-center border border-ink/20 transition-colors hover:border-ink hover:bg-ink hover:text-cream disabled:opacity-25 disabled:hover:border-ink/20 disabled:hover:bg-transparent disabled:hover:text-ink";
+    "flex h-11 w-11 items-center justify-center rounded-full border border-ink/20 transition-colors hover:border-ink hover:bg-ink hover:text-cream disabled:opacity-25 disabled:hover:border-ink/20 disabled:hover:bg-transparent disabled:hover:text-ink";
 
   return (
     <div>
@@ -102,7 +102,7 @@ export default function ProjectCarousel({ projects }: { projects: CarouselProjec
                   </span>
                 )}
                 {project.kind && (
-                  <span className="absolute top-0 left-0 bg-cream/90 px-3.5 py-2 text-[0.62rem] uppercase tracking-[0.14em] text-graphite backdrop-blur">
+                  <span className="absolute top-3 left-3 rounded-full bg-cream/92 px-3.5 py-1.5 text-[0.62rem] uppercase tracking-[0.14em] text-graphite backdrop-blur">
                     {project.kind}
                   </span>
                 )}
