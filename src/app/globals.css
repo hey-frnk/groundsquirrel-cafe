@@ -40,7 +40,7 @@
   --color-lilac: var(--color-lilac);
   --color-mist: var(--color-mist);
 
-  --font-display: var(--font-fraunces);
+  --font-display: var(--font-display-serif);
   --font-sans: var(--font-inter);
   --font-stamp: var(--font-special-elite);
 }
@@ -58,12 +58,12 @@ html {
 /* ---------------------------------------------------------------------------
    Type
 
-   Two voices and a stamp. Fraunces carries every heading — a serif with enough
-   character to belong to a hand-painting studio and enough restraint to be
-   taken seriously. Inter carries everything that has to be *read*. Special
-   Elite, the old house face, is kept for the small letterspaced labels only:
-   at eleven pixels a typewriter reads as a stamp pressed onto the page rather
-   than as a whole website typed out.
+   Two voices and a stamp. DM Serif Display carries every heading — soft round
+   bowls and a high stroke contrast, warm enough to belong to a hand-painting
+   studio and formal enough to be taken seriously. Inter carries everything that
+   has to be *read*. Special Elite, the old house face, is kept for the small
+   letterspaced labels only: at eleven pixels a typewriter reads as a stamp
+   pressed onto the page rather than as a whole website typed out.
    --------------------------------------------------------------------------- */
 /* These belong in the base layer: Tailwind's own utilities live in a later
    layer, so an unlayered `h1 { color }` here would quietly beat every
@@ -81,22 +81,25 @@ html {
     text-rendering: optimizeLegibility;
   }
 
+  /* One weight, so nothing here is ever set bold — size does the emphasis.
+     The face is already tightly fitted, so it needs far less negative
+     tracking than a text serif would. */
   h1,
   h2,
   h3,
   h4,
   h5 {
-    font-family: var(--font-fraunces), "Iowan Old Style", Georgia, serif;
-    font-optical-sizing: auto;
+    font-family: var(--font-display-serif), "Iowan Old Style", Georgia, serif;
     font-weight: 400;
     color: var(--color-ink);
-    line-height: 1.1;
-    letter-spacing: -0.021em;
+    line-height: 1.12;
+    letter-spacing: -0.012em;
   }
 
   /* Big display sizes want tighter setting than a sub-head does. */
   h1 {
-    letter-spacing: -0.03em;
+    line-height: 1.05;
+    letter-spacing: -0.022em;
   }
 }
 
@@ -117,8 +120,14 @@ html {
   color: color-mix(in srgb, var(--color-graphite) 80%, transparent);
 }
 
+/* This variant only ever stands on a photograph, and the photographs are no
+   longer dimmed enough to carry eleven-pixel letters on their own — so it keeps
+   its own shadow rather than asking the picture to go darker. */
 .eyebrow-light {
-  color: color-mix(in srgb, var(--color-cream) 80%, transparent);
+  color: var(--color-cream);
+  text-shadow:
+    0 0 3px color-mix(in srgb, var(--color-ink) 75%, transparent),
+    0 1px 12px color-mix(in srgb, var(--color-ink) 95%, transparent);
 }
 
 /* A short rule, used where the old page used a leaf or a squirrel. */
@@ -448,9 +457,9 @@ html {
 }
 
 .prose :is(h1, h2, h3, h4) {
-  font-family: var(--font-fraunces), "Iowan Old Style", Georgia, serif;
+  font-family: var(--font-display-serif), "Iowan Old Style", Georgia, serif;
   font-weight: 400;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.012em;
 }
 
 .prose a {
@@ -471,7 +480,7 @@ html {
 }
 
 .prose blockquote {
-  font-family: var(--font-fraunces), Georgia, serif;
+  font-family: var(--font-display-serif), Georgia, serif;
   font-style: normal;
   font-size: 1.25em;
   line-height: 1.45;

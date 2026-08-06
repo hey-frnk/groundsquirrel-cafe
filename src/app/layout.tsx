@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Fraunces, Inter, Special_Elite } from "next/font/google";
+import { DM_Serif_Display, Inter, Special_Elite } from "next/font/google";
 import "./globals.css";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import CartDrawer from "@/components/shop/CartDrawer";
 import { CartProvider } from "@/lib/cart";
 
-// Headlines. Optical sizing is the reason this one is here: the same serif
-// firms up at caption size and opens out at display size, which is what keeps a
-// 60px headline elegant without a second font file.
-const fraunces = Fraunces({
+// Headlines. A display face: soft round bowls, high contrast, one weight only —
+// which is why nothing on the site ever asks a heading to be bold. The size is
+// the emphasis.
+const displaySerif = DM_Serif_Display({
+  weight: "400",
   subsets: ["latin"],
-  variable: "--font-fraunces",
+  variable: "--font-display-serif",
   display: "swap",
-  axes: ["opsz"],
 });
 
 // Running text, labels, buttons — everything that has to be read rather than
@@ -57,7 +57,7 @@ export default function RootLayout({
     // element deep — real mismatches further down still surface.
     <html
       lang="en"
-      className={`${fraunces.variable} ${inter.variable} ${specialElite.variable} h-full`}
+      className={`${displaySerif.variable} ${inter.variable} ${specialElite.variable} h-full`}
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col antialiased">
