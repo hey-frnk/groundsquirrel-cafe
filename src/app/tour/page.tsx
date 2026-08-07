@@ -13,7 +13,8 @@ interface TourIntro {
 }
 
 export const metadata = {
-  title: "Tour — The Ground Squirrel Café",
+  title: "Tour",
+  alternates: { canonical: "/tour/" },
   description:
     "A café on wheels: Humbär, our self-built 1992 VW camper, brings coffee, tea and homemade cake to your event.",
 };

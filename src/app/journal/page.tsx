@@ -2,7 +2,8 @@ import Link from "next/link";
 import { getAllJournalPosts, type JournalPost } from "@/lib/content";
 
 export const metadata = {
-  title: "Journal — The Ground Squirrel Café",
+  title: "Journal",
+  alternates: { canonical: "/journal/" },
   description:
     "Stories, hikes and slow travel from wherever Humbär takes us — newest first.",
   openGraph: {

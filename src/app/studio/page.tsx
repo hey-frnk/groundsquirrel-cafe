@@ -30,7 +30,7 @@ interface Settings {
 }
 
 export const metadata = {
-  title: "Evelyne Buttet — Illustrator | the ground squirrel studio",
+  title: { absolute: "Evelyne Buttet — Illustrator | the ground squirrel studio" },
   description:
     "Evelyne Buttet is a Swiss illustrator and author. Hand-painted wildlife illustration, picture books and teaching material from the ground squirrel studio — painted on the road, never by AI.",
   alternates: { canonical: `${SITE_URL}/studio/` },

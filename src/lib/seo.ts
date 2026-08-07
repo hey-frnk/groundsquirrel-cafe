@@ -9,6 +9,55 @@ interface Settings {
   tiktokUrl?: string;
 }
 
+/** The social profiles that are actually filled in. */
+function socialProfiles(settings: Settings): string[] {
+  return [settings.instagramUrl, settings.youtubeUrl, settings.tiktokUrl].filter(
+    (url): url is string => Boolean(url) && !url!.includes("PLATZHALTER")
+  );
+}
+
+/**
+ * The café itself, as an organisation.
+ *
+ * Given a stable `@id` so that every other block on the site — a blog post's
+ * publisher, a product's seller — can point at this one node instead of
+ * restating it. Search engines then read one organisation, not five.
+ */
+export function organization() {
+  const settings = getPage<Settings>("settings");
+
+  return {
+    "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
+    name: "The Ground Squirrel Café",
+    url: SITE_URL,
+    logo: {
+      "@type": "ImageObject",
+      url: `${SITE_URL}/images/brand/logo_badge.png`,
+      width: 1190,
+      height: 1200,
+    },
+    image: `${SITE_URL}/images/og-default.jpg`,
+    description:
+      "A café on wheels, an art studio and a journal of the road, run by Evelyne Buttet and Frank Zheng from a self-built 1992 VW LT camper.",
+    email: `mailto:${settings.contactEmail}`,
+    founder: [{ "@id": `${SITE_URL}/studio/#evelyne-buttet` }],
+    sameAs: socialProfiles(settings),
+  };
+}
+
+/** The site as a whole, so a search engine has one node for "this website". */
+export function webSite() {
+  return {
+    "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
+    url: SITE_URL,
+    name: "The Ground Squirrel Café",
+    inLanguage: "en-GB",
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  };
+}
+
 /**
  * Structured data for Evelyne Buttet.
  *
@@ -47,8 +96,6 @@ export function evelynePerson() {
       foundingDate: "2026",
       founder: { "@id": `${SITE_URL}/studio/#evelyne-buttet` },
     },
-    sameAs: [settings.instagramUrl, settings.youtubeUrl, settings.tiktokUrl].filter(
-      (url): url is string => Boolean(url) && !url!.includes("PLATZHALTER")
-    ),
+    sameAs: socialProfiles(settings),
   };
 }

@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import JsonLd from "@/components/JsonLd";
 import { getAllJournalPosts, getPage } from "@/lib/content";
+import { organization, webSite } from "@/lib/seo";
 
 interface Settings {
   tagline: string;
@@ -100,6 +102,13 @@ const PLACES = [
   },
 ];
 
+export const metadata = {
+  // Stated here rather than in the root layout: a canonical set on the layout
+  // is inherited by every page that does not override it, which quietly claims
+  // that those pages are this one.
+  alternates: { canonical: "/" },
+};
+
 export default function Home() {
   const settings = getPage<Settings>("settings");
   const home = getPage<HomeContent>("home");
@@ -107,6 +116,15 @@ export default function Home() {
 
   return (
     <div>
+      {/* One graph rather than two blocks, so the site node and the
+          organisation node can reference each other by @id. */}
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@graph": [organization(), webSite()],
+        }}
+      />
+
       {/* ---------- Hero: the intro film, with the nav living inside it ---------- */}
       <section className="relative isolate overflow-hidden">
         {/* On phones the hero is a flex column in normal flow, so the brand mark

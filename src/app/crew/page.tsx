@@ -6,7 +6,10 @@ interface Settings {
 }
 
 export const metadata = {
-  title: "Crew — The Ground Squirrel Café",
+  title: "Crew",
+  description:
+    "Evelyne, Frank, Humbär the 1992 VW camper and Bumblepuutz the mascot — the crew behind the ground squirrel café.",
+  alternates: { canonical: "/crew/" },
 };
 
 export default async function CrewPage() {

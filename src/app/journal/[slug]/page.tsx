@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import JsonLd from "@/components/JsonLd";
 import { getAllJournalPosts, getJournalPost } from "@/lib/content";
+import { SITE_URL, organization } from "@/lib/seo";
 
 export function generateStaticParams() {
   return getAllJournalPosts().map((post) => ({ slug: post.slug }));
@@ -16,8 +18,9 @@ export async function generateMetadata({
   const post = posts.find((p) => p.slug === slug);
   if (!post) return {};
   return {
-    title: `${post.title} — The Ground Squirrel Café`,
+    title: post.title,
     description: post.excerpt,
+    alternates: { canonical: `/journal/${slug}/` },
     // So a pinned or shared story carries its own cover photo and blurb.
     openGraph: {
       type: "article",
@@ -43,6 +46,27 @@ export default async function JournalPostPage({
 
   return (
     <article className="mx-auto max-w-[52.5rem] px-6 pt-12 pb-20 sm:pt-16">
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          "@id": `${SITE_URL}/journal/${slug}/#post`,
+          mainEntityOfPage: `${SITE_URL}/journal/${slug}/`,
+          url: `${SITE_URL}/journal/${slug}/`,
+          headline: post.title,
+          description: post.excerpt,
+          image: post.cover ? `${SITE_URL}${post.cover}` : undefined,
+          datePublished: post.date,
+          // Nothing on this site records an edit date, so the publication date
+          // is the only honest answer to "when was this last touched".
+          dateModified: post.date,
+          keywords: post.tags?.length ? post.tags.join(", ") : undefined,
+          author: { "@type": "Person", name: post.author },
+          publisher: organization(),
+          isPartOf: { "@id": `${SITE_URL}/#website` },
+        }}
+      />
+
       <Link href="/journal" className="link-arrow is-back">
         <span data-arrow aria-hidden>
           ←
