@@ -16,9 +16,8 @@ import { SITE_URL } from "@/lib/seo";
  */
 
 // Pages that exist as their own route but should never be indexed: the
-// thank-you page is a post-checkout receipt, /fonts is a scratch route, and
-// /admin is the CMS shell.
-const EXCLUDED = ["/shop/thank-you/", "/fonts/", "/admin/"];
+// thank-you page is a post-checkout receipt and /admin is the CMS shell.
+const EXCLUDED = ["/shop/thank-you/", "/admin/"];
 
 const STATIC_ROUTES: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }[] = [
   { path: "/", priority: 1, changeFrequency: "weekly" },
