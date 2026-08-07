@@ -18,7 +18,7 @@ export async function generateMetadata({
   const project = getStudioProjects().find((p) => p.slug === slug);
   if (!project) return {};
   return {
-    title: `${project.title} — Illustration by Evelyne Buttet`,
+    title: { absolute: `${project.title} — Illustration by Evelyne Buttet` },
     description: project.teaser
       ? `${project.teaser} Illustrated by Evelyne Buttet, the ground squirrel studio.`
       : `A project by illustrator Evelyne Buttet, the ground squirrel studio.`,

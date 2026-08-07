@@ -5,7 +5,8 @@ interface LegalPage {
 }
 
 export const metadata = {
-  title: "Datenschutz — The Ground Squirrel Café",
+  title: "Datenschutz",
+  alternates: { canonical: "/datenschutz/" },
 };
 
 export default async function DatenschutzPage() {

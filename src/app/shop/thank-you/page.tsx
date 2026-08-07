@@ -2,7 +2,7 @@ import Link from "next/link";
 import ClearCartOnMount from "@/components/shop/ClearCartOnMount";
 
 export const metadata = {
-  title: "Thank you — The Ground Squirrel Café",
+  title: "Thank you",
   robots: { index: false },
 };
 

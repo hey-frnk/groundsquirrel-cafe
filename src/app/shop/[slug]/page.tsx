@@ -1,7 +1,10 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import JsonLd from "@/components/JsonLd";
 import { getAllShopProducts, getShopProduct } from "@/lib/content";
 import ProductDetail from "@/components/shop/ProductDetail";
+import { CURRENCY } from "@/lib/shop";
+import { SITE_URL, organization } from "@/lib/seo";
 
 export function generateStaticParams() {
   return getAllShopProducts().map((product) => ({ slug: product.slug }));
@@ -16,8 +19,9 @@ export async function generateMetadata({
   const product = getAllShopProducts().find((p) => p.slug === slug);
   if (!product) return {};
   return {
-    title: `${product.title} — The Ground Squirrel Café`,
+    title: product.title,
     description: product.tagline,
+    alternates: { canonical: `/shop/${slug}/` },
     openGraph: {
       title: product.title,
       description: product.tagline,
@@ -38,6 +42,33 @@ export default async function ShopProductPage({
 
   return (
     <div className="mx-auto max-w-7xl px-6 pt-12 pb-4 sm:px-10 sm:pt-16">
+      {/* Every field below is read off the same content file the page renders,
+          so the rich result and the page can never drift apart. Prints are made
+          to order, which is why availability is unconditional. */}
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "@id": `${SITE_URL}/shop/${slug}/#product`,
+          name: product.title,
+          description: product.tagline,
+          image: [`${SITE_URL}${product.image}`],
+          url: `${SITE_URL}/shop/${slug}/`,
+          brand: { "@type": "Brand", name: "the ground squirrel studio" },
+          offers: {
+            "@type": "AggregateOffer",
+            offerCount: product.variants.length,
+            lowPrice: Math.min(...product.variants.map((v) => v.price)),
+            highPrice: Math.max(...product.variants.map((v) => v.price)),
+            priceCurrency: CURRENCY,
+            availability: "https://schema.org/InStock",
+            itemCondition: "https://schema.org/NewCondition",
+            url: `${SITE_URL}/shop/${slug}/`,
+            seller: organization(),
+          },
+        }}
+      />
+
       <Link href="/shop" className="link-arrow is-back">
         <span data-arrow aria-hidden>
           ←

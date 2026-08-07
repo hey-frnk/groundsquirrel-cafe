@@ -5,7 +5,8 @@ interface LegalPage {
 }
 
 export const metadata = {
-  title: "Impressum — The Ground Squirrel Café",
+  title: "Impressum",
+  alternates: { canonical: "/impressum/" },
 };
 
 export default async function ImpressumPage() {

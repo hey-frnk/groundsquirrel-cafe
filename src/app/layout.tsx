@@ -6,6 +6,7 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import CartDrawer from "@/components/shop/CartDrawer";
 import { CartProvider } from "@/lib/cart";
+import { SITE_URL } from "@/lib/seo";
 
 // Headlines. A display face: soft round bowls, high contrast, one weight only —
 // which is why nothing on the site ever asks a heading to be bold. The size is
@@ -35,13 +36,55 @@ const specialElite = Special_Elite({
   display: "swap",
 });
 
+const DESCRIPTION =
+  "A café on wheels, an art studio, and a journal of the road — the ground squirrel café.";
+
 export const metadata: Metadata = {
   // Without this, per-page Open Graph images resolve against localhost and
   // shared links show a broken preview.
-  metadataBase: new URL("https://thegroundsquirrel.cafe"),
-  title: "The Ground Squirrel Café",
-  description:
-    "A café on wheels, an art studio, and a journal of the road — the ground squirrel café.",
+  metadataBase: new URL(SITE_URL),
+  // `%s` is filled in by each page's own title; the homepage uses `default`.
+  title: {
+    default: "The Ground Squirrel Café — a café, a studio and a journal on wheels",
+    template: "%s — The Ground Squirrel Café",
+  },
+  description: DESCRIPTION,
+  applicationName: "The Ground Squirrel Café",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      // The site is mostly photographs and paintings; without this Google
+      // shows them as thumbnails at best and often not at all.
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    siteName: "The Ground Squirrel Café",
+    locale: "en_GB",
+    url: SITE_URL,
+    title: "The Ground Squirrel Café",
+    description: DESCRIPTION,
+    images: [
+      {
+        url: "/images/og-default.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Humbär, a 1992 VW camper, parked on a clifftop above the sea with Evelyne and Frank beside it",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Ground Squirrel Café",
+    description: DESCRIPTION,
+    images: ["/images/og-default.jpg"],
+  },
 };
 
 export default function RootLayout({
