@@ -45,7 +45,6 @@ variants:
       design: "The full set — all five plates"
       size: "A5 — 14.8 × 21 cm"
       language: "English"
-    note: "All five field-guide plates, in one size and one language."
     images:
       - "/images/shop/squirrel-posters/poster-set.webp"
       - "/images/shop/squirrel-posters/framed-eurasian-red-squirrel.webp"
@@ -59,7 +58,6 @@ variants:
       design: "The full set — all five plates"
       size: "A5 — 14.8 × 21 cm"
       language: "Deutsch"
-    note: "All five field-guide plates, in one size and one language."
     images:
       - "/images/shop/squirrel-posters/poster-set.webp"
       - "/images/shop/squirrel-posters/framed-eurasian-red-squirrel.webp"
@@ -73,7 +71,6 @@ variants:
       design: "The full set — all five plates"
       size: "A4 — 21 × 29.7 cm"
       language: "English"
-    note: "All five field-guide plates, in one size and one language."
     images:
       - "/images/shop/squirrel-posters/poster-set.webp"
       - "/images/shop/squirrel-posters/framed-eurasian-red-squirrel.webp"
@@ -87,7 +84,6 @@ variants:
       design: "The full set — all five plates"
       size: "A4 — 21 × 29.7 cm"
       language: "Deutsch"
-    note: "All five field-guide plates, in one size and one language."
     images:
       - "/images/shop/squirrel-posters/poster-set.webp"
       - "/images/shop/squirrel-posters/framed-eurasian-red-squirrel.webp"
@@ -101,7 +97,6 @@ variants:
       design: "The full set — all five plates"
       size: "A3 — 29.7 × 42 cm"
       language: "English"
-    note: "All five field-guide plates, in one size and one language."
     images:
       - "/images/shop/squirrel-posters/poster-set.webp"
       - "/images/shop/squirrel-posters/framed-eurasian-red-squirrel.webp"
@@ -115,7 +110,6 @@ variants:
       design: "The full set — all five plates"
       size: "A3 — 29.7 × 42 cm"
       language: "Deutsch"
-    note: "All five field-guide plates, in one size and one language."
     images:
       - "/images/shop/squirrel-posters/poster-set.webp"
       - "/images/shop/squirrel-posters/framed-eurasian-red-squirrel.webp"
@@ -129,7 +123,6 @@ variants:
       design: "Eurasian Red Squirrel"
       size: "A5 — 14.8 × 21 cm"
       language: "English"
-    note: "Pine forest, fly agaric, and the squirrel Europe is quietly losing."
     images:
       - "/images/shop/squirrel-posters/framed-eurasian-red-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-eurasian-red-squirrel.webp"
@@ -142,7 +135,6 @@ variants:
       design: "Eurasian Red Squirrel"
       size: "A5 — 14.8 × 21 cm"
       language: "Deutsch"
-    note: "Pine forest, fly agaric, and the squirrel Europe is quietly losing."
     images:
       - "/images/shop/squirrel-posters/framed-eurasian-red-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-eurasian-red-squirrel.webp"
@@ -155,7 +147,6 @@ variants:
       design: "Eurasian Red Squirrel"
       size: "A4 — 21 × 29.7 cm"
       language: "English"
-    note: "Pine forest, fly agaric, and the squirrel Europe is quietly losing."
     images:
       - "/images/shop/squirrel-posters/framed-eurasian-red-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-eurasian-red-squirrel.webp"
@@ -168,7 +159,6 @@ variants:
       design: "Eurasian Red Squirrel"
       size: "A4 — 21 × 29.7 cm"
       language: "Deutsch"
-    note: "Pine forest, fly agaric, and the squirrel Europe is quietly losing."
     images:
       - "/images/shop/squirrel-posters/framed-eurasian-red-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-eurasian-red-squirrel.webp"
@@ -181,7 +171,6 @@ variants:
       design: "Eurasian Red Squirrel"
       size: "A3 — 29.7 × 42 cm"
       language: "English"
-    note: "Pine forest, fly agaric, and the squirrel Europe is quietly losing."
     images:
       - "/images/shop/squirrel-posters/framed-eurasian-red-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-eurasian-red-squirrel.webp"
@@ -194,7 +183,6 @@ variants:
       design: "Eurasian Red Squirrel"
       size: "A3 — 29.7 × 42 cm"
       language: "Deutsch"
-    note: "Pine forest, fly agaric, and the squirrel Europe is quietly losing."
     images:
       - "/images/shop/squirrel-posters/framed-eurasian-red-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-eurasian-red-squirrel.webp"
@@ -207,7 +195,6 @@ variants:
       design: "Eastern Grey Squirrel"
       size: "A5 — 14.8 × 21 cm"
       language: "English"
-    note: "Sunflower heads and autumn berries, from eastern North America."
     images:
       - "/images/shop/squirrel-posters/framed-eastern-grey-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-eastern-grey-squirrel.webp"
@@ -220,7 +207,6 @@ variants:
       design: "Eastern Grey Squirrel"
       size: "A5 — 14.8 × 21 cm"
       language: "Deutsch"
-    note: "Sunflower heads and autumn berries, from eastern North America."
     images:
       - "/images/shop/squirrel-posters/framed-eastern-grey-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-eastern-grey-squirrel.webp"
@@ -233,7 +219,6 @@ variants:
       design: "Eastern Grey Squirrel"
       size: "A4 — 21 × 29.7 cm"
       language: "English"
-    note: "Sunflower heads and autumn berries, from eastern North America."
     images:
       - "/images/shop/squirrel-posters/framed-eastern-grey-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-eastern-grey-squirrel.webp"
@@ -246,7 +231,6 @@ variants:
       design: "Eastern Grey Squirrel"
       size: "A4 — 21 × 29.7 cm"
       language: "Deutsch"
-    note: "Sunflower heads and autumn berries, from eastern North America."
     images:
       - "/images/shop/squirrel-posters/framed-eastern-grey-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-eastern-grey-squirrel.webp"
@@ -259,7 +243,6 @@ variants:
       design: "Eastern Grey Squirrel"
       size: "A3 — 29.7 × 42 cm"
       language: "English"
-    note: "Sunflower heads and autumn berries, from eastern North America."
     images:
       - "/images/shop/squirrel-posters/framed-eastern-grey-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-eastern-grey-squirrel.webp"
@@ -272,7 +255,6 @@ variants:
       design: "Eastern Grey Squirrel"
       size: "A3 — 29.7 × 42 cm"
       language: "Deutsch"
-    note: "Sunflower heads and autumn berries, from eastern North America."
     images:
       - "/images/shop/squirrel-posters/framed-eastern-grey-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-eastern-grey-squirrel.webp"
@@ -285,7 +267,6 @@ variants:
       design: "Golden-mantled Ground Squirrel"
       size: "A5 — 14.8 × 21 cm"
       language: "English"
-    note: "Alpine lupine and mountain ferns — painted beside a glacial river."
     images:
       - "/images/shop/squirrel-posters/framed-golden-mantled-ground-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-golden-mantled-ground-squirrel.webp"
@@ -298,7 +279,6 @@ variants:
       design: "Golden-mantled Ground Squirrel"
       size: "A5 — 14.8 × 21 cm"
       language: "Deutsch"
-    note: "Alpine lupine and mountain ferns — painted beside a glacial river."
     images:
       - "/images/shop/squirrel-posters/framed-golden-mantled-ground-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-golden-mantled-ground-squirrel.webp"
@@ -311,7 +291,6 @@ variants:
       design: "Golden-mantled Ground Squirrel"
       size: "A4 — 21 × 29.7 cm"
       language: "English"
-    note: "Alpine lupine and mountain ferns — painted beside a glacial river."
     images:
       - "/images/shop/squirrel-posters/framed-golden-mantled-ground-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-golden-mantled-ground-squirrel.webp"
@@ -324,7 +303,6 @@ variants:
       design: "Golden-mantled Ground Squirrel"
       size: "A4 — 21 × 29.7 cm"
       language: "Deutsch"
-    note: "Alpine lupine and mountain ferns — painted beside a glacial river."
     images:
       - "/images/shop/squirrel-posters/framed-golden-mantled-ground-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-golden-mantled-ground-squirrel.webp"
@@ -337,7 +315,6 @@ variants:
       design: "Golden-mantled Ground Squirrel"
       size: "A3 — 29.7 × 42 cm"
       language: "English"
-    note: "Alpine lupine and mountain ferns — painted beside a glacial river."
     images:
       - "/images/shop/squirrel-posters/framed-golden-mantled-ground-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-golden-mantled-ground-squirrel.webp"
@@ -350,7 +327,6 @@ variants:
       design: "Golden-mantled Ground Squirrel"
       size: "A3 — 29.7 × 42 cm"
       language: "Deutsch"
-    note: "Alpine lupine and mountain ferns — painted beside a glacial river."
     images:
       - "/images/shop/squirrel-posters/framed-golden-mantled-ground-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-golden-mantled-ground-squirrel.webp"
@@ -363,7 +339,6 @@ variants:
       design: "African Tree Squirrel"
       size: "A5 — 14.8 × 21 cm"
       language: "English"
-    note: "Painted during Evelyne's seasons as a field guide in southern Africa."
     images:
       - "/images/shop/squirrel-posters/framed-african-tree-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-african-tree-squirrel.webp"
@@ -376,7 +351,6 @@ variants:
       design: "African Tree Squirrel"
       size: "A5 — 14.8 × 21 cm"
       language: "Deutsch"
-    note: "Painted during Evelyne's seasons as a field guide in southern Africa."
     images:
       - "/images/shop/squirrel-posters/framed-african-tree-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-african-tree-squirrel.webp"
@@ -389,7 +363,6 @@ variants:
       design: "African Tree Squirrel"
       size: "A4 — 21 × 29.7 cm"
       language: "English"
-    note: "Painted during Evelyne's seasons as a field guide in southern Africa."
     images:
       - "/images/shop/squirrel-posters/framed-african-tree-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-african-tree-squirrel.webp"
@@ -402,7 +375,6 @@ variants:
       design: "African Tree Squirrel"
       size: "A4 — 21 × 29.7 cm"
       language: "Deutsch"
-    note: "Painted during Evelyne's seasons as a field guide in southern Africa."
     images:
       - "/images/shop/squirrel-posters/framed-african-tree-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-african-tree-squirrel.webp"
@@ -415,7 +387,6 @@ variants:
       design: "African Tree Squirrel"
       size: "A3 — 29.7 × 42 cm"
       language: "English"
-    note: "Painted during Evelyne's seasons as a field guide in southern Africa."
     images:
       - "/images/shop/squirrel-posters/framed-african-tree-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-african-tree-squirrel.webp"
@@ -428,7 +399,6 @@ variants:
       design: "African Tree Squirrel"
       size: "A3 — 29.7 × 42 cm"
       language: "Deutsch"
-    note: "Painted during Evelyne's seasons as a field guide in southern Africa."
     images:
       - "/images/shop/squirrel-posters/framed-african-tree-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-african-tree-squirrel.webp"
@@ -441,7 +411,6 @@ variants:
       design: "California Ground Squirrel"
       size: "A5 — 14.8 × 21 cm"
       language: "English"
-    note: "Dry grass and coastal light, from the USA West Coast road trip."
     images:
       - "/images/shop/squirrel-posters/framed-california-ground-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-california-ground-squirrel.webp"
@@ -454,7 +423,6 @@ variants:
       design: "California Ground Squirrel"
       size: "A5 — 14.8 × 21 cm"
       language: "Deutsch"
-    note: "Dry grass and coastal light, from the USA West Coast road trip."
     images:
       - "/images/shop/squirrel-posters/framed-california-ground-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-california-ground-squirrel.webp"
@@ -467,7 +435,6 @@ variants:
       design: "California Ground Squirrel"
       size: "A4 — 21 × 29.7 cm"
       language: "English"
-    note: "Dry grass and coastal light, from the USA West Coast road trip."
     images:
       - "/images/shop/squirrel-posters/framed-california-ground-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-california-ground-squirrel.webp"
@@ -480,7 +447,6 @@ variants:
       design: "California Ground Squirrel"
       size: "A4 — 21 × 29.7 cm"
       language: "Deutsch"
-    note: "Dry grass and coastal light, from the USA West Coast road trip."
     images:
       - "/images/shop/squirrel-posters/framed-california-ground-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-california-ground-squirrel.webp"
@@ -493,7 +459,6 @@ variants:
       design: "California Ground Squirrel"
       size: "A3 — 29.7 × 42 cm"
       language: "English"
-    note: "Dry grass and coastal light, from the USA West Coast road trip."
     images:
       - "/images/shop/squirrel-posters/framed-california-ground-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-california-ground-squirrel.webp"
@@ -506,18 +471,9 @@ variants:
       design: "California Ground Squirrel"
       size: "A3 — 29.7 × 42 cm"
       language: "Deutsch"
-    note: "Dry grass and coastal light, from the USA West Coast road trip."
     images:
       - "/images/shop/squirrel-posters/framed-california-ground-squirrel.webp"
       - "/images/shop/squirrel-posters/poster-california-ground-squirrel.webp"
 ---
-
-Every plate begins the same way: a squirrel appears, everything stops, and the sketchbook comes out.
-
-These five prints are field-guide pages for animals most people walk straight past. Each one is painted entirely by hand — habitat, tracks, forage, range map and all the small marginal notes that come from actually sitting and watching. No AI, no filters, no traced photographs. Where a plate looks like it was made on a riverbank in the mountains or on a headland above the Atlantic, it's because it was: they were painted on the road, from inside a vintage VW camper called Humbär.
-
-Choose your size — A5 for a desk or a gallery wall, A4 for a frame that won't dominate a room, A3 when the animal deserves to be looked at properly. Every plate is available with English or German lettering, so the notes read in the language you think in.
-
-Printed on heavyweight museum-quality art paper with a smooth matte finish, they hold the softness of the original watercolour rather than flattening it. Framed or pinned straight to the wall, they bring a bit of undergrowth indoors.
 
 **Ten percent of everything you spend here goes to wildlife conservation.**

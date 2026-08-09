@@ -41,7 +41,6 @@ variants:
     sku: "GSC-STICKER-EUS"
     shippingProfile: "stickers"
     stripePriceId: "price_1U0hpJHhWAEQqbxLSagDW9jh"
-    note: "The red squirrel of European woodland, acorn in paw."
     images:
       - "/images/shop/squirrel-stickers/sticker-european-squirrel.webp"
   - label: "Eastern Gray Squirrel"
@@ -49,7 +48,6 @@ variants:
     sku: "GSC-STICKER-EGS"
     shippingProfile: "stickers"
     stripePriceId: "price_1U0hpLHhWAEQqbxLmyvzARqF"
-    note: "Tail up, mid-forage — the one you'll meet in every city park."
     images:
       - "/images/shop/squirrel-stickers/sticker-eastern-grey-squirrel.webp"
   - label: "Golden-mantled Ground Squirrel"
@@ -57,7 +55,6 @@ variants:
     sku: "GSC-STICKER-GMGS"
     shippingProfile: "stickers"
     stripePriceId: "price_1U0hpFHhWAEQqbxLaVvdZJvb"
-    note: "Often mistaken for a chipmunk. Never forgives it."
     images:
       - "/images/shop/squirrel-stickers/sticker-golden-mantled-ground-squirrel.webp"
   - label: "African Tree Squirrel"
@@ -65,7 +62,6 @@ variants:
     sku: "GSC-STICKER-ATS"
     shippingProfile: "stickers"
     stripePriceId: "price_1U0hpIHhWAEQqbxLyzVRyzTi"
-    note: "Painted on a branch, in the field, in southern Africa."
     images:
       - "/images/shop/squirrel-stickers/sticker-african-tree-squirrel.webp"
   - label: "Alpine Marmot"
@@ -73,7 +69,6 @@ variants:
     sku: "GSC-STICKER-AM"
     shippingProfile: "stickers"
     stripePriceId: "price_1U0hpGHhWAEQqbxLnZjC7JcU"
-    note: "Not strictly a squirrel. Absolutely part of the family."
     images:
       - "/images/shop/squirrel-stickers/sticker-alpine-marmot.webp"
   - label: "California Ground Squirrel"
@@ -81,15 +76,8 @@ variants:
     sku: "GSC-STICKER-CGS"
     shippingProfile: "stickers"
     stripePriceId: "price_1U0hpJHhWAEQqbxLrsqKONwY"
-    note: "Round, sun-warmed, entirely unbothered."
     images:
       - "/images/shop/squirrel-stickers/sticker-california-ground-squirrel.webp"
 ---
-
-Small enough for a laptop corner, a water bottle, a notebook you actually use.
-
-Each of the six designs is a hand-painted watercolour before it's ever a sticker — the same brushwork as the large prints, shrunk down to pocket scale. The Alpine Marmot snuck in because, strictly speaking, marmots *are* ground squirrels, and because nobody who has heard one whistle across a valley ever forgets it.
-
-They're printed on removable white vinyl with a matte finish, so they sit flat and don't throw glare. Removable means you can change your mind: peel one off a laptop lid and it won't leave a grey ghost behind.
 
 **Ten percent of everything you spend here goes to wildlife conservation.**

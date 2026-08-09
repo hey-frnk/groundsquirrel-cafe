@@ -59,12 +59,4 @@ variants:
     note: "Stars, but softer."
 ---
 
-Six animals from six very different places, painted the same way: sitting still somewhere, watching, with a brush in hand.
-
-A greater flamingo mid-stride through shallow water. A Eurasian red squirrel reaching across the gap between two branches. A green sea turtle in no hurry whatsoever. Rock dassies piled on a warm rock like they were poured there. An African elephant walking with the herd. And a scatter of Mediterranean sea stars, which are not stars at all, but are doing a convincing job.
-
-Small enough to put in the post, sturdy enough that people keep them and pin them up instead.
-
 **Ten percent of everything you spend here goes to wildlife conservation.**
-
-*Photographs of the cards are on their way — the paintings are finished, the camera is not.*
