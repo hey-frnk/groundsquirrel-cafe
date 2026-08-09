@@ -134,22 +134,35 @@ async function ensurePrice({ productId, sku, amountMinor }) {
 
 /**
  * Fills in stripePriceId for the variant carrying this SKU, touching only that
- * one value so the rest of the file keeps its formatting. Handles the key
- * appearing either before or after the SKU.
+ * one value so the rest of the file keeps its formatting.
+ *
+ * Works on the variant's whole block rather than on adjacent lines: the keys
+ * within a variant may appear in any order, and an earlier version of this
+ * function assumed stripePriceId directly followed sku. It silently failed the
+ * moment another key was added between them, leaving the file pointing at
+ * prices that had just been archived.
  */
 function patchPriceId(source, sku, priceId) {
   const quoted = sku.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const after = new RegExp(
-    `(sku:\\s*["']${quoted}["']\\s*\\n(?:\\s*#[^\\n]*\\n)*\\s*stripePriceId:\\s*)(["'][^"']*["']|\\S*)`,
-  );
-  if (after.test(source)) return source.replace(after, `$1"${priceId}"`);
+  const skuLine = new RegExp(`^([ \\t]*)sku:\\s*["']${quoted}["']\\s*$`, "m");
+  const match = skuLine.exec(source);
+  if (!match) return null;
 
-  const before = new RegExp(
-    `(stripePriceId:\\s*)(["'][^"']*["']|\\S*)(\\s*\\n\\s*sku:\\s*["']${quoted}["'])`,
-  );
-  if (before.test(source)) return source.replace(before, `$1"${priceId}"$3`);
+  // The variant runs from its "- " bullet to the next bullet at the same indent.
+  const indent = match[1];
+  const bullet = new RegExp(`^${indent.slice(0, -2)}- `, "m");
+  const before = source.slice(0, match.index);
+  const blockStart = before.lastIndexOf(`\n${indent.slice(0, -2)}- `) + 1;
+  const rest = source.slice(match.index);
+  const nextBullet = bullet.exec(rest.slice(1));
+  const blockEnd = nextBullet ? match.index + 1 + nextBullet.index : source.length;
 
-  return null;
+  const block = source.slice(blockStart, blockEnd);
+  const priceLine = /^([ \t]*)stripePriceId:[ \t]*(["'][^"']*["']|\S*)[ \t]*$/m;
+  if (!priceLine.test(block)) return null;
+
+  const patched = block.replace(priceLine, `$1stripePriceId: "${priceId}"`);
+  return source.slice(0, blockStart) + patched + source.slice(blockEnd);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -241,8 +254,16 @@ console.log(
 );
 
 if (failures.length > 0) {
-  console.log(`\n  ${failures.length} problem(s):`);
-  failures.forEach((f) => console.log(`    - ${f}`));
+  console.error(`\n  ${failures.length} problem(s):`);
+  failures.forEach((f) => console.error(`    - ${f}`));
+  // Exit non-zero so a `setup-stripe && sync-worker-config && wrangler deploy`
+  // chain stops here. A price ID that failed to reach the content file means
+  // the site still names the price this run just archived, and deploying on top
+  // of that publishes a shop whose checkout fails.
+  console.error(
+    "\n  Stopping: the site would still reference prices this run replaced.\n"
+  );
+  process.exit(1);
 }
 
 if (MODE === "TEST" && !DRY_RUN && created + repriced > 0) {
@@ -253,6 +274,7 @@ if (MODE === "TEST" && !DRY_RUN && created + repriced > 0) {
 }
 
 console.log(
-  "\n  Next: shipping rates (Dashboard → Settings → Shipping), then\n" +
-    "  checkout-worker/README.md step 4.\n"
+  "\n  Next, so the Worker knows what postage each price attracts:\n" +
+    "    node scripts/sync-worker-config.mjs\n" +
+    "    cd checkout-worker && npx wrangler deploy\n"
 );

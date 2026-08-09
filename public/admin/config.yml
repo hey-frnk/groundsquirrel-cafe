@@ -63,12 +63,34 @@ collections:
         name: "shippingNote"
         widget: "text"
         required: false
+      - label: "Auswahl-Achsen (mehrere Dropdowns statt einem)"
+        name: "optionAxes"
+        widget: "list"
+        required: false
+        hint: "Leer lassen = ein einziges Dropdown mit allen Varianten. Gefüllt = je Achse ein eigenes Dropdown (z.B. Design / Size / Language). Jede Variante muss dann unten passende Werte tragen."
+        fields:
+          - { label: "Kennung", name: "id", widget: "string", hint: "z.B. size" }
+          - { label: "Beschriftung", name: "label", widget: "string", hint: "z.B. Size" }
       - label: "Varianten (Set / einzelne Designs)"
         name: "variants"
         widget: "list"
-        hint: "Jede Variante erscheint im Auswahl-Dropdown mit eigenem Preis und eigenen Bildern."
+        hint: "Jede Variante ist ein eigener Stripe-Artikel mit eigenem Preis und eigener Artikelnummer."
         fields:
           - { label: "Bezeichnung (im Dropdown)", name: "label", widget: "string" }
+          - label: "Versandprofil"
+            name: "shippingProfile"
+            widget: "select"
+            options: ["stickers", "postcards", "print-a5", "print-a4", "print-a3"]
+            hint: "Bestimmt das Porto. Die Beträge stehen in content/shipping.json."
+          - label: "Achsenwerte (nur bei mehreren Dropdowns)"
+            name: "options"
+            widget: "object"
+            required: false
+            collapsed: true
+            fields:
+              - { label: "Design", name: "design", widget: "string", required: false }
+              - { label: "Size", name: "size", widget: "string", required: false }
+              - { label: "Language", name: "language", widget: "string", required: false }
           - label: "Preis in CHF"
             name: "price"
             widget: "number"

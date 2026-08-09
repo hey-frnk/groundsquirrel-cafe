@@ -21,6 +21,16 @@ export interface ShopVariant {
   stripePriceId?: string;
   note?: string;
   images?: string[];
+  /** Key into content/shipping.json profiles — decides the postage. */
+  shippingProfile?: string;
+  /** Values for each axis in ShopProduct.optionAxes, e.g. { size: "A3" }. */
+  options?: Record<string, string>;
+}
+
+/** One dropdown on the product page, e.g. Design / Size / Language. */
+export interface ShopOptionAxis {
+  id: string;
+  label: string;
 }
 
 export interface ShopProduct {
@@ -34,6 +44,47 @@ export interface ShopProduct {
   shippingNote?: string;
   gallery?: string[];
   variants: ShopVariant[];
+  /** When set, the page shows one dropdown per axis instead of a single list. */
+  optionAxes?: ShopOptionAxis[];
+}
+
+/** Distinct values for one axis, in the order the variants first mention them. */
+export function choicesFor(product: ShopProduct, axisId: string): string[] {
+  const seen = new Set<string>();
+  for (const variant of product.variants) {
+    const value = variant.options?.[axisId];
+    if (value) seen.add(value);
+  }
+  return [...seen];
+}
+
+/**
+ * The variant matching every selected option. Falls back to the closest match
+ * so a selection that has no exact counterpart still lands somewhere sensible
+ * rather than leaving the page with nothing to sell.
+ */
+export function variantFor(
+  product: ShopProduct,
+  selection: Record<string, string>
+): ShopVariant | undefined {
+  const axes = product.optionAxes ?? [];
+  if (axes.length === 0) return product.variants[0];
+
+  const exact = product.variants.find((v) =>
+    axes.every((axis) => v.options?.[axis.id] === selection[axis.id])
+  );
+  if (exact) return exact;
+
+  let best: ShopVariant | undefined;
+  let bestScore = -1;
+  for (const variant of product.variants) {
+    const score = axes.filter((a) => variant.options?.[a.id] === selection[a.id]).length;
+    if (score > bestScore) {
+      best = variant;
+      bestScore = score;
+    }
+  }
+  return best;
 }
 
 export function formatPrice(amount: number): string {
