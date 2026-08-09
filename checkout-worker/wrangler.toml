@@ -7,11 +7,11 @@ ALLOWED_ORIGIN = "https://thegroundsquirrel.cafe"
 SUCCESS_URL = "https://thegroundsquirrel.cafe/shop/thank-you/"
 CANCEL_URL = "https://thegroundsquirrel.cafe/shop/"
 
-# Shipping zones — which countries get which Stripe rate. Do not edit by hand:
-# `node scripts/setup-shipping.mjs --apply` creates the rates from
-# content/shipping.json and writes this line. The catch-all zone ("*") must
-# stay last, otherwise it swallows the zones after it.
-SHIPPING_ZONES = '[{"rate":"shr_1U0iMcHhWAEQqbxLgJJv3V3K","countries":["CH","LI"]},{"rate":"shr_1U0iMcHhWAEQqbxL4mpWYa4k","countries":["DE","AT","FR","IT","NL","BE","LU","DK","SE","NO","FI","ES","PT","IE","PL","CZ","SK","SI","HU","HR","GR","EE","LV","LT","BG","RO","GB"]},{"rate":"shr_1U0iMdHhWAEQqbxLFU1z6oPR","countries":["*"]}]'
+# Shipping configuration. Do not edit by hand — run:
+#   node scripts/sync-worker-config.mjs
+# which derives both from content/shipping.json and content/shop/*.md.
+SHIPPING_TABLE = '{"currency":"chf","taxBehavior":"exclusive","taxCode":"txcd_92010001","europe":["AT","BE","BG","CH","CZ","DE","DK","EE","ES","FI","FR","GB","GR","HR","HU","IE","IT","LI","LT","LU","LV","NL","NO","PL","PT","RO","SE","SI","SK"],"profiles":{"stickers":{"label":"Stickers","minDays":3,"maxDays":8,"rates":{"CH":4.5,"GB":2.5,"US":30,"AU":6.5,"CA":4,"IT":4,"DE":4,"AT":5,"FR":5,"_EUROPE":5,"_WORLD":15}},"postcards":{"label":"Postcards","minDays":3,"maxDays":8,"rates":{"CH":6,"GB":2,"US":27,"AU":5,"CA":4.5,"IT":7.5,"DE":4.3,"AT":5.3,"FR":5.3,"_EUROPE":6,"_WORLD":15}},"print-a5":{"label":"Art print (A5)","minDays":3,"maxDays":8,"rates":{"CH":5,"GB":5,"US":6,"AU":9,"CA":6,"IT":5,"DE":6,"AT":4,"FR":5,"_EUROPE":6,"_WORLD":10}},"print-a4":{"label":"Art print (A4)","minDays":3,"maxDays":8,"rates":{"CH":5,"GB":5,"US":6,"AU":9,"CA":6,"IT":5,"DE":6,"AT":4,"FR":5,"_EUROPE":6,"_WORLD":10}},"print-a3":{"label":"Art print (A3)","minDays":3,"maxDays":8,"rates":{"CH":10,"NL":12,"DE":7,"AT":6,"IT":8,"FR":6,"GB":7,"US":12,"CA":8,"AU":9,"_EUROPE":10,"_WORLD":10}}}}'
+PRICE_PROFILES = '{"price_1U0hpKHhWAEQqbxLOUCBWg9p":"stickers","price_1U0hpJHhWAEQqbxLSagDW9jh":"stickers","price_1U0hpLHhWAEQqbxLmyvzARqF":"stickers","price_1U0hpFHhWAEQqbxLaVvdZJvb":"stickers","price_1U0hpIHhWAEQqbxLyzVRyzTi":"stickers","price_1U0hpGHhWAEQqbxLnZjC7JcU":"stickers","price_1U0hpJHhWAEQqbxLrsqKONwY":"stickers"}'
 
 # STRIPE_SECRET_KEY is NOT set here — it is a secret:
 #   npx wrangler secret put STRIPE_SECRET_KEY

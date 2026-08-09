@@ -253,6 +253,7 @@ if (MODE === "TEST" && !DRY_RUN && created + repriced > 0) {
 }
 
 console.log(
-  "\n  Next: shipping rates (Dashboard → Settings → Shipping), then\n" +
-    "  checkout-worker/README.md step 4.\n"
+  "\n  Next, so the Worker knows what postage each price attracts:\n" +
+    "    node scripts/sync-worker-config.mjs\n" +
+    "    cd checkout-worker && npx wrangler deploy\n"
 );

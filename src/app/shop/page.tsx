@@ -77,10 +77,6 @@ export default function ShopPage() {
           <h2 className="mt-6 text-balance text-3xl leading-[1.15] sm:text-[2.6rem]">
             Ten percent of every order funds wildlife conservation
           </h2>
-          <p className="mx-auto mt-6 max-w-xl leading-relaxed text-graphite">
-            Not a marketing line. These animals sat still long enough to be painted, and this
-            is the rent.
-          </p>
         </div>
       </section>
 

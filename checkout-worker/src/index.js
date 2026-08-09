@@ -6,17 +6,23 @@
  * creating a Stripe Checkout Session requires the secret key — which must never
  * reach the browser.
  *
- * Security note: the browser sends only Stripe Price IDs and quantities. Stripe
- * looks up the actual amount from those IDs, so a customer editing their basket
- * in devtools cannot set their own price.
+ * Two things are deliberately decided here rather than in the browser:
+ *
+ *   Price. The browser sends only Stripe Price IDs and quantities; Stripe looks
+ *   up the amount from those IDs. A basket edited in devtools cannot set its
+ *   own price.
+ *
+ *   Shipping. The rate is computed from PRICE_PROFILES and SHIPPING_TABLE, both
+ *   configured here, never from anything the browser claims. Stripe Checkout
+ *   shows every shipping option a session carries regardless of the delivery
+ *   address, so exactly one rate is passed and the address form is locked to
+ *   the country it was calculated for.
  *
  * Secrets (set with `wrangler secret put`, never committed):
- *   STRIPE_SECRET_KEY   sk_live_... / sk_test_...
- * Vars (in wrangler.toml):
- *   ALLOWED_ORIGIN      https://thegroundsquirrel.cafe
- *   SUCCESS_URL         https://thegroundsquirrel.cafe/shop/thank-you/
- *   CANCEL_URL          https://thegroundsquirrel.cafe/shop/
- *   SHIPPING_RATES      comma-separated Stripe shipping rate IDs (shr_...)
+ *   STRIPE_SECRET_KEY   sk_live_… / sk_test_…
+ * Vars (written by scripts/sync-worker-config.mjs):
+ *   SHIPPING_TABLE      profiles, rates and the Europe country list
+ *   PRICE_PROFILES      Stripe Price ID → shipping profile name
  */
 
 const MAX_ITEMS = 20;
@@ -27,7 +33,7 @@ function corsHeaders(env) {
     "Access-Control-Allow-Origin": env.ALLOWED_ORIGIN,
     "Access-Control-Allow-Methods": "POST, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type",
-    "Vary": "Origin",
+    Vary: "Origin",
   };
 }
 
@@ -38,34 +44,9 @@ function json(body, status, env) {
   });
 }
 
-/**
- * Accepts only what we expect: a Stripe Price ID and a sane quantity. Anything
- * else is rejected rather than forwarded to Stripe.
- */
-/**
- * Resolves a two-letter country code to its shipping zone. Zones are tried in
- * order and the first match wins, so a catch-all zone ("*") must be last —
- * `scripts/setup-shipping.mjs` enforces that when it writes the config.
- */
-function zoneFor(country, env) {
-  let zones;
-  try {
-    zones = JSON.parse(env.SHIPPING_ZONES || "[]");
-  } catch {
-    console.error("SHIPPING_ZONES is not valid JSON");
-    return null;
-  }
-  return (
-    zones.find(
-      (z) => z.countries?.includes(country) || z.countries?.includes("*")
-    ) ?? null
-  );
-}
-
+/** Accepts only a Stripe Price ID and a sane quantity; anything else is rejected. */
 function parseItems(raw) {
-  if (!Array.isArray(raw) || raw.length === 0 || raw.length > MAX_ITEMS) {
-    return null;
-  }
+  if (!Array.isArray(raw) || raw.length === 0 || raw.length > MAX_ITEMS) return null;
   const items = [];
   for (const item of raw) {
     const price = item?.price;
@@ -77,6 +58,42 @@ function parseItems(raw) {
   return items;
 }
 
+/** The rate for one profile in one country, or null if that profile has none. */
+export function rateFor(profile, country, europe) {
+  const rates = profile?.rates;
+  if (!rates) return null;
+  if (typeof rates[country] === "number") return rates[country];
+  if (europe.includes(country) && typeof rates._EUROPE === "number") return rates._EUROPE;
+  if (typeof rates._WORLD === "number") return rates._WORLD;
+  return null;
+}
+
+/**
+ * Highest applicable rate across everything in the basket. An order ships as
+ * one parcel, so charging the sum would overcharge; charging the highest covers
+ * the most expensive thing in it.
+ *
+ * Returns null when any item has no known profile — better to refuse the
+ * checkout than to guess a shipping price and eat the difference.
+ */
+export function shippingFor(items, country, table, priceProfiles) {
+  const europe = table.europe ?? [];
+  let best = null;
+
+  for (const item of items) {
+    const profileName = priceProfiles[item.price];
+    if (!profileName) return null;
+    const profile = table.profiles?.[profileName];
+    if (!profile) return null;
+
+    const amount = rateFor(profile, country, europe);
+    if (amount === null) return null;
+    if (!best || amount > best.amount) best = { amount, profile };
+  }
+
+  return best;
+}
+
 export default {
   async fetch(request, env) {
     if (request.method === "OPTIONS") {
@@ -85,8 +102,8 @@ export default {
     if (request.method !== "POST") {
       return json({ error: "Method not allowed" }, 405, env);
     }
-    // The browser sends Origin on cross-origin POSTs; reject anything that is
-    // not our own site so the endpoint cannot be driven from elsewhere.
+    // Browsers send Origin on cross-origin POSTs; reject anything that is not
+    // our own site so the endpoint cannot be driven from elsewhere.
     if (request.headers.get("Origin") !== env.ALLOWED_ORIGIN) {
       return json({ error: "Forbidden" }, 403, env);
     }
@@ -106,13 +123,28 @@ export default {
       return json({ error: "Invalid country" }, 400, env);
     }
 
-    // Stripe's API takes form-encoded bodies with bracketed array keys.
+    let table;
+    let priceProfiles;
+    try {
+      table = JSON.parse(env.SHIPPING_TABLE || "{}");
+      priceProfiles = JSON.parse(env.PRICE_PROFILES || "{}");
+    } catch {
+      console.error("SHIPPING_TABLE or PRICE_PROFILES is not valid JSON");
+      return json({ error: "Could not start checkout" }, 500, env);
+    }
+
+    const shipping = shippingFor(items, country, table, priceProfiles);
+    if (!shipping) {
+      console.error("No shipping rate for", { country, items });
+      return json({ error: "We cannot ship this order to that country yet" }, 400, env);
+    }
+
+    const currency = table.currency ?? "chf";
     const form = new URLSearchParams();
     form.set("mode", "payment");
     form.set("success_url", `${env.SUCCESS_URL}?session_id={CHECKOUT_SESSION_ID}`);
     form.set("cancel_url", env.CANCEL_URL);
     form.set("billing_address_collection", "required");
-    form.set("phone_number_collection[enabled]", "false");
     form.set("automatic_tax[enabled]", "true");
 
     items.forEach((item, i) => {
@@ -123,18 +155,26 @@ export default {
       form.set(`line_items[${i}][adjustable_quantity][maximum]`, String(MAX_QUANTITY));
     });
 
-    // Stripe Checkout shows every shipping option it is given, regardless of
-    // the delivery address — so offering all zones at once would let a customer
-    // in Australia pick the Swiss rate. Instead the zone is resolved here from
-    // the country the customer chose, Stripe is handed exactly one rate, and
-    // the address form is locked to that country so the two cannot diverge.
-    const zone = zoneFor(country, env);
-    if (!zone) {
-      return json({ error: "We do not ship to that country yet" }, 400, env);
-    }
-
     form.set("shipping_address_collection[allowed_countries][0]", country);
-    form.set("shipping_options[0][shipping_rate]", zone.rate);
+
+    // Created inline rather than referenced by ID: the rate depends on both the
+    // destination and what is in the basket, which would otherwise mean
+    // registering a rate in Stripe for every profile/country combination.
+    const rate = "shipping_options[0][shipping_rate_data]";
+    form.set(`${rate}[type]`, "fixed_amount");
+    form.set(`${rate}[fixed_amount][amount]`, String(Math.round(shipping.amount * 100)));
+    form.set(`${rate}[fixed_amount][currency]`, currency);
+    form.set(`${rate}[display_name]`, shipping.profile.label ?? "Shipping");
+    if (table.taxBehavior) form.set(`${rate}[tax_behavior]`, table.taxBehavior);
+    if (table.taxCode) form.set(`${rate}[tax_code]`, table.taxCode);
+    if (shipping.profile.minDays) {
+      form.set(`${rate}[delivery_estimate][minimum][unit]`, "business_day");
+      form.set(`${rate}[delivery_estimate][minimum][value]`, String(shipping.profile.minDays));
+    }
+    if (shipping.profile.maxDays) {
+      form.set(`${rate}[delivery_estimate][maximum][unit]`, "business_day");
+      form.set(`${rate}[delivery_estimate][maximum][value]`, String(shipping.profile.maxDays));
+    }
 
     const response = await fetch("https://api.stripe.com/v1/checkout/sessions", {
       method: "POST",

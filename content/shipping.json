@@ -1,49 +1,124 @@
 {
   "_comment": [
-    "Shipping zones for the shop. Edit the amounts here, then run:",
-    "  node scripts/setup-shipping.mjs            (dry run)",
-    "  node scripts/setup-shipping.mjs --apply    (create in Stripe)",
+    "Shipping rates per product profile and destination.",
     "",
-    "AMOUNTS ARE PLACEHOLDERS and must be confirmed against what Prodigi",
-    "actually charges for dispatch. They were NOT taken from the Etsy PDFs —",
-    "those export delivery profile names but no figures.",
+    "Every variant in content/shop/*.md names a shippingProfile. A basket may",
+    "mix profiles (stickers plus a print, say); the customer is then charged the",
+    "HIGHEST applicable rate once, not the sum, because the order ships together.",
     "",
-    "Zones are matched top to bottom; the first zone containing the customer's",
-    "country wins, so keep the catch-all ('*') last.",
+    "Country codes are matched first. _EUROPE catches the remaining countries in",
+    "the europe list below, _WORLD catches everything else.",
     "",
-    "taxBehavior: 'exclusive' adds tax on top, 'inclusive' means the amount",
-    "already contains it, 'unspecified' only works with automatic tax off."
+    "After editing, run:  node scripts/sync-worker-config.mjs",
+    "then:                cd checkout-worker && npx wrangler deploy",
+    "No Stripe key needed — rates are created inline per checkout, so nothing",
+    "has to be registered in the Stripe dashboard.",
+    "",
+    "taxCode txcd_92010001 is Stripe's 'Shipping' code, so Stripe Tax applies the",
+    "right rate to postage rather than guessing."
   ],
   "currency": "chf",
   "taxBehavior": "exclusive",
-  "zones": [
-    {
-      "id": "ch",
-      "label": "Switzerland & Liechtenstein",
-      "amount": 10.0,
-      "minDays": 2,
-      "maxDays": 4,
-      "countries": ["CH", "LI"]
-    },
-    {
-      "id": "europe",
-      "label": "Europe",
-      "amount": 20.0,
+  "taxCode": "txcd_92010001",
+  "rule": "highest",
+
+  "europe": [
+    "AT", "BE", "BG", "CH", "CZ", "DE", "DK", "EE", "ES", "FI", "FR", "GB",
+    "GR", "HR", "HU", "IE", "IT", "LI", "LT", "LU", "LV", "NL", "NO", "PL",
+    "PT", "RO", "SE", "SI", "SK"
+  ],
+
+  "profiles": {
+    "stickers": {
+      "label": "Stickers",
       "minDays": 3,
       "maxDays": 8,
-      "countries": [
-        "DE", "AT", "FR", "IT", "NL", "BE", "LU", "DK", "SE", "NO", "FI",
-        "ES", "PT", "IE", "PL", "CZ", "SK", "SI", "HU", "HR", "GR", "EE",
-        "LV", "LT", "BG", "RO", "GB"
-      ]
+      "rates": {
+        "CH": 4.5,
+        "GB": 2.5,
+        "US": 30.0,
+        "AU": 6.5,
+        "CA": 4.0,
+        "IT": 4.0,
+        "DE": 4.0,
+        "AT": 5.0,
+        "FR": 5.0,
+        "_EUROPE": 5.0,
+        "_WORLD": 15.0
+      }
     },
-    {
-      "id": "world",
-      "label": "Rest of the world",
-      "amount": 30.0,
-      "minDays": 5,
-      "maxDays": 15,
-      "countries": ["*"]
+    "postcards": {
+      "label": "Postcards",
+      "minDays": 3,
+      "maxDays": 8,
+      "rates": {
+        "CH": 6.0,
+        "GB": 2.0,
+        "US": 27.0,
+        "AU": 5.0,
+        "CA": 4.5,
+        "IT": 7.5,
+        "DE": 4.3,
+        "AT": 5.3,
+        "FR": 5.3,
+        "_EUROPE": 6.0,
+        "_WORLD": 15.0
+      }
+    },
+    "print-a5": {
+      "label": "Art print (A5)",
+      "minDays": 3,
+      "maxDays": 8,
+      "rates": {
+        "CH": 5.0,
+        "GB": 5.0,
+        "US": 6.0,
+        "AU": 9.0,
+        "CA": 6.0,
+        "IT": 5.0,
+        "DE": 6.0,
+        "AT": 4.0,
+        "FR": 5.0,
+        "_EUROPE": 6.0,
+        "_WORLD": 10.0
+      }
+    },
+    "print-a4": {
+      "label": "Art print (A4)",
+      "minDays": 3,
+      "maxDays": 8,
+      "rates": {
+        "CH": 5.0,
+        "GB": 5.0,
+        "US": 6.0,
+        "AU": 9.0,
+        "CA": 6.0,
+        "IT": 5.0,
+        "DE": 6.0,
+        "AT": 4.0,
+        "FR": 5.0,
+        "_EUROPE": 6.0,
+        "_WORLD": 10.0
+      }
+    },
+    "print-a3": {
+      "label": "Art print (A3)",
+      "minDays": 3,
+      "maxDays": 8,
+      "rates": {
+        "CH": 10.0,
+        "NL": 12.0,
+        "DE": 7.0,
+        "AT": 6.0,
+        "IT": 8.0,
+        "FR": 6.0,
+        "GB": 7.0,
+        "US": 12.0,
+        "CA": 8.0,
+        "AU": 9.0,
+        "_EUROPE": 10.0,
+        "_WORLD": 10.0
+      }
     }
-  ]
+  }
 }

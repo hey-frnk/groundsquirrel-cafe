@@ -3,7 +3,13 @@
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import { useCart } from "@/lib/cart";
-import { formatPrice, imagesFor, type ShopProduct } from "@/lib/shop";
+import {
+  choicesFor,
+  formatPrice,
+  imagesFor,
+  variantFor,
+  type ShopProduct,
+} from "@/lib/shop";
 
 export default function ProductDetail({
   product,
@@ -12,12 +18,19 @@ export default function ProductDetail({
   product: ShopProduct;
   bodyHtml: string;
 }) {
+  const axes = useMemo(() => product.optionAxes ?? [], [product.optionAxes]);
   const [variantIndex, setVariantIndex] = useState(0);
+  const [selection, setSelection] = useState<Record<string, string>>(() =>
+    Object.fromEntries(
+      axes.map((axis) => [axis.id, product.variants[0]?.options?.[axis.id] ?? ""])
+    )
+  );
   const [imageIndex, setImageIndex] = useState(0);
   const [justAdded, setJustAdded] = useState(false);
   const { addLine } = useCart();
 
-  const variant = product.variants[variantIndex];
+  const variant =
+    axes.length > 0 ? variantFor(product, selection) : product.variants[variantIndex];
   const images = useMemo(() => imagesFor(product, variant), [product, variant]);
   const activeImage = images[Math.min(imageIndex, images.length - 1)];
 
@@ -26,13 +39,31 @@ export default function ProductDetail({
     setImageIndex(0);
   }
 
+  function selectOption(axisId: string, value: string) {
+    setSelection((current) => ({ ...current, [axisId]: value }));
+    setImageIndex(0);
+  }
+
+  /** "Eurasian Red Squirrel · A3 · Deutsch" — the label alone is not unique. */
+  const variantDescription = variant
+    ? axes.length > 0
+      ? axes
+          .map((axis) => variant.options?.[axis.id])
+          .filter(Boolean)
+          .join(" · ")
+      : variant.label
+    : "";
+
   function addToCart() {
     if (!variant) return;
     addLine({
-      id: `${product.slug}::${variant.label}`,
+      // Keyed on the SKU: with three option axes, six variants share the label
+      // "Eurasian Red Squirrel", and keying on that would merge A3 English with
+      // A5 German into one basket line.
+      id: variant.sku ?? `${product.slug}::${variantDescription}`,
       productSlug: product.slug,
       productTitle: product.title,
-      variantLabel: variant.label,
+      variantLabel: variantDescription,
       price: variant.price,
       image: images[0],
       sku: variant.sku,
@@ -109,24 +140,53 @@ export default function ProductDetail({
           )}
 
           <div className="mt-8 border-t border-ink/10 pt-7">
-            <label
-              htmlFor={`variant-${product.slug}`}
-              className="mb-3 block text-[0.7rem] uppercase tracking-[0.18em] text-graphite/65"
-            >
-              Choose your design
-            </label>
-            <select
-              id={`variant-${product.slug}`}
-              value={variantIndex}
-              onChange={(e) => selectVariant(Number(e.target.value))}
-              className="w-full rounded-lg border border-ink/20 bg-paper px-4 py-3.5 text-sm transition-colors hover:border-ink/40 focus:border-rose focus:outline-none"
-            >
-              {product.variants.map((v, i) => (
-                <option key={v.label} value={i}>
-                  {v.label} — {formatPrice(v.price)}
-                </option>
-              ))}
-            </select>
+            {axes.length > 0 ? (
+              <div className="space-y-5">
+                {axes.map((axis) => (
+                  <div key={axis.id}>
+                    <label
+                      htmlFor={`${product.slug}-${axis.id}`}
+                      className="mb-3 block text-[0.7rem] uppercase tracking-[0.18em] text-graphite/65"
+                    >
+                      {axis.label}
+                    </label>
+                    <select
+                      id={`${product.slug}-${axis.id}`}
+                      value={selection[axis.id] ?? ""}
+                      onChange={(e) => selectOption(axis.id, e.target.value)}
+                      className="w-full rounded-lg border border-ink/20 bg-paper px-4 py-3.5 text-sm transition-colors hover:border-ink/40 focus:border-rose focus:outline-none"
+                    >
+                      {choicesFor(product, axis.id).map((choice) => (
+                        <option key={choice} value={choice}>
+                          {choice}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <>
+                <label
+                  htmlFor={`variant-${product.slug}`}
+                  className="mb-3 block text-[0.7rem] uppercase tracking-[0.18em] text-graphite/65"
+                >
+                  Choose your design
+                </label>
+                <select
+                  id={`variant-${product.slug}`}
+                  value={variantIndex}
+                  onChange={(e) => selectVariant(Number(e.target.value))}
+                  className="w-full rounded-lg border border-ink/20 bg-paper px-4 py-3.5 text-sm transition-colors hover:border-ink/40 focus:border-rose focus:outline-none"
+                >
+                  {product.variants.map((v, i) => (
+                    <option key={v.label} value={i}>
+                      {v.label} — {formatPrice(v.price)}
+                    </option>
+                  ))}
+                </select>
+              </>
+            )}
 
             {variant?.note && (
               <p className="mt-4 text-sm leading-relaxed text-graphite/80">

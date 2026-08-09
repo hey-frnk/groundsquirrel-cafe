@@ -68,23 +68,23 @@ und der alte archiviert (Stripe-Preise sind unveränderlich).
 > erscheinen dann im Stripe-Checkout. Solange die Seite noch nicht deployt
 > ist, mit `--no-images` laufen lassen.
 
-Angelegt werden diese 13 Einträge:
+Angelegt werden **50 Einträge** — jede Variante ist ein eigener Stripe-Artikel,
+damit auf Beleg und Prodigi-Auftrag eindeutig steht, was gedruckt werden soll:
 
-| Produkt | Variante | Preis |
+| Produkt | Varianten | Preise |
 |---|---|---|
-| Squirrel Posters | Set (5 Blätter) | CHF 110.00 |
-| Squirrel Posters | Eurasian Red Squirrel | CHF 25.00 |
-| Squirrel Posters | Eastern Grey Squirrel | CHF 25.00 |
-| Squirrel Posters | Golden-mantled Ground Squirrel | CHF 25.00 |
-| Squirrel Posters | African Tree Squirrel | CHF 25.00 |
-| Squirrel Posters | California Ground Squirrel | CHF 25.00 |
-| Squirrel Stickers | Set (6 Designs) | CHF 12.00 |
-| Squirrel Stickers | European Squirrel | CHF 4.00 |
-| Squirrel Stickers | Eastern Gray Squirrel | CHF 4.00 |
-| Squirrel Stickers | Golden-mantled Ground Squirrel | CHF 4.00 |
-| Squirrel Stickers | African Tree Squirrel | CHF 4.00 |
-| Squirrel Stickers | Alpine Marmot | CHF 4.00 |
-| Squirrel Stickers | California Ground Squirrel | CHF 4.00 |
+| Squirrel Field Guide | 36 (6 Designs × 3 Grössen × 2 Sprachen) | Einzeln 10 / 15 / 20 · Set 40 / 60 / 80 |
+| Squirrel Stickers | 7 (6 Designs + Set) | Einzeln 3 · Set 12 |
+| Fine Art Postcards | 7 (6 Designs + Set) | Einzeln 3 · Set 12 |
+
+36 klingt viel, ist aber der Grund, warum niemand raten muss, ob ein Print auf
+Deutsch oder Englisch gedruckt wird: Die Sprache steckt in der Artikelnummer
+(`GSC-PRINT-ERS-A3-DE`), nicht in einer Bemerkung.
+
+> **Alte Poster-Artikel archivieren.** Die früheren `GSC-POSTER-*`-Artikel
+> (CHF 25 / 110) werden nicht mehr verwendet. Das Skript rührt sie nicht an, weil
+> es nur anlegt, was in den Content-Dateien steht. Archiviert sie im Dashboard
+> unter Produktkatalog, sonst tauchen sie in Berichten weiter auf.
 
 Jeder Preis bekommt eine ID der Form `price_1AbC...`. Das Skript trägt sie
 selbst ein; wer lieber im Dashboard klickt, findet das Feld **Stripe Price ID**
@@ -98,44 +98,49 @@ lässt sich also gefahrlos veröffentlichen, bevor Stripe fertig eingerichtet is
 > Falls einer doch irgendwo aufgetaucht ist: Dashboard → Entwickler →
 > API-Schlüssel → **Roll key**. Dauert Sekunden und macht den alten wertlos.
 
-## Schritt 3 — Versandtarife
+## Schritt 3 — Versandkosten
 
-Die Zonen stehen in [`content/shipping.json`](../content/shipping.json). **Tragt
-dort zuerst eure echten Beträge ein** — die aktuellen Werte sind Platzhalter und
-stammen *nicht* aus den Etsy-Unterlagen. Was Prodigi euch für den Versand
-berechnet, wisst nur ihr.
+Die Sätze stehen in [`content/shipping.json`](../content/shipping.json), nach
+**Versandprofil** und Zielland. Profile: `stickers`, `postcards`, `print-a5`,
+`print-a4`, `print-a3`. Jede Variante in `content/shop/*.md` nennt ihr Profil.
+
+In Stripe muss dafür **nichts** angelegt werden — der Worker erzeugt den Tarif
+pro Bezahlvorgang inline. Nach einer Änderung:
 
 ```bash
-export STRIPE_SECRET_KEY=sk_test_...
-node scripts/setup-shipping.mjs           # zeigt nur an, ändert nichts
-node scripts/setup-shipping.mjs --apply   # legt in Stripe an
+node scripts/sync-worker-config.mjs
+cd checkout-worker && npx wrangler deploy
 ```
 
-Trockenlauf ist Absicht: ein falscher Versandbetrag kostet bei *jeder*
-Bestellung Geld. Das Skript legt die Tarife an und schreibt die `shr_…`-IDs
-selbst in `wrangler.toml`.
+Das erste Kommando braucht keinen Stripe-Schlüssel. Es schreibt zwei Werte in
+`wrangler.toml`: die Satztabelle und die Zuordnung Price-ID → Profil. Es bricht
+ab, wenn eine Variante kein Profil hat oder ein Profil keinen `_WORLD`-Satz —
+beides würde sonst erst beim Kunden auffallen.
 
-### Warum die Zone nicht Stripe allein überlassen wird
+### Gemischte Warenkörbe
 
-Stripe Checkout zeigt dem Kunden **alle** Versandoptionen, die die Session
-enthält — unabhängig von seiner Lieferadresse. Gäbe man alle drei Zonen mit,
-könnte ein Kunde in Australien die Schweizer Pauschale anklicken und ihr zahlt
-die Differenz.
+Ein Warenkorb kann Profile mischen. Berechnet wird dann **einmal der höchste**
+Satz, nicht die Summe — die Bestellung geht als ein Paket raus.
 
-Deshalb wählt der Kunde das Land schon im Warenkorb, der Worker schlägt daraus
-die Zone nach und gibt Stripe **genau einen** Tarif mit. Zusätzlich wird die
-Länderauswahl im Stripe-Formular auf dieses eine Land gesperrt, damit Tarif und
-Adresse nicht auseinanderlaufen können.
+> Sticker (CH 4.50) + A3-Print (CH 10.00) + Postkarten (CH 6.00) → 10.00 CHF
 
-Wenn ihr Zonen ändert, müssen `content/shipping.json` und die Länderliste in
-[`src/lib/countries.ts`](../src/lib/countries.ts) zusammenpassen — jedes Land im
-Dropdown braucht eine Zone.
+Ist das falsch, weil Prodigi getrennt verschickt, muss `shippingFor()` in
+`src/index.js` von `Math.max` auf Summenbildung umgestellt werden.
 
-> Ob ihr MwSt. ausweisen müsst, hängt von Umsatz und Zielländern ab — das
-> gehört vor dem ersten Verkauf einmal zum Treuhänder. `automatic_tax` ist im
-> Worker eingeschaltet; falls ihr noch nicht steuerpflichtig seid, in
-> `src/index.js` auf `"false"` setzen und `taxBehavior` in `shipping.json` auf
-> `"unspecified"`.
+### Warum die Zone nicht Stripe überlassen wird
+
+Stripe Checkout zeigt **alle** Versandoptionen, die die Session enthält,
+unabhängig von der Lieferadresse. Gäbe man mehrere mit, könnte ein Kunde in den
+USA den Schweizer Satz anklicken. Deshalb wählt der Kunde das Land im
+Warenkorb, der Worker rechnet daraus genau einen Satz aus und sperrt das
+Adressformular auf dieses Land.
+
+Wer Länder ergänzt, muss sie in `content/shipping.json` **und** in
+[`src/lib/countries.ts`](../src/lib/countries.ts) eintragen.
+
+> `automatic_tax` ist eingeschaltet, der Versand trägt Stripes Steuercode
+> `txcd_92010001`. Ob ihr überhaupt MwSt. ausweisen müsst, gehört einmal zum
+> Treuhänder.
 
 ## Schritt 4 — Worker deployen
 
