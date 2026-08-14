@@ -1,7 +1,7 @@
 ---
 title: Wildlife Around the World — Fine Art Postcards
 tagline: 'Six hand-painted animals, small enough to send and good enough to keep.'
-image: /images/shop/wildlife-postcards/postcard-set.webp
+image: /images/shop/wildlife-postcards/all-six-cards.webp
 order: 3
 badges:
   - Painted by hand — never AI
@@ -32,7 +32,7 @@ variants:
       One of each: flamingo, red squirrel, sea turtle, dassies, elephant and sea
       stars.
     images:
-      - /images/shop/wildlife-postcards/postcard-set.webp
+      - /images/shop/wildlife-postcards/all-six-cards.webp
       - /images/shop/wildlife-postcards/flamingo.webp
       - /images/shop/wildlife-postcards/squirrel.webp
       - /images/shop/wildlife-postcards/turtle.webp
@@ -105,7 +105,7 @@ variants:
       - /images/shop/wildlife-postcards/seastars-pair.webp
       - /images/shop/wildlife-postcards/seastars-back.webp
 gallery:
-  - /images/shop/wildlife-postcards/postcard-set.webp
+  - /images/shop/wildlife-postcards/all-six-cards.webp
   - /images/shop/wildlife-postcards/flamingo.webp
   - /images/shop/wildlife-postcards/elephant.webp
   - /images/shop/wildlife-postcards/seastars.webp
