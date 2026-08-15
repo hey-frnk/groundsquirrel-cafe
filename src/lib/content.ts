@@ -197,6 +197,27 @@ export function getAllTourStops(): (TourStop & { description: string })[] {
     .sort((a, b) => a.order - b.order);
 }
 
+export interface Collab {
+  slug: string;
+  partner: string;
+  title: string;
+  format?: string;
+  year?: string;
+  image: string;
+  imageAlt?: string;
+  link?: string;
+  order: number;
+}
+
+export function getAllCollabs(): (Collab & { description: string })[] {
+  return readDir("collabs")
+    .map((filename) => {
+      const { slug, data, content } = readEntry<Collab>("collabs", filename);
+      return { ...data, slug, description: content.trim() };
+    })
+    .sort((a, b) => a.order - b.order);
+}
+
 export interface StudioItem {
   slug: string;
   title: string;

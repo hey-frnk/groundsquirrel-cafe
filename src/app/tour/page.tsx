@@ -1,5 +1,15 @@
 import Image from "next/image";
-import { getAllTourStops, getPage, type TourPhoto } from "@/lib/content";
+import { getAllCollabs, getAllTourStops, getPage, type TourPhoto } from "@/lib/content";
+
+interface Format {
+  title: string;
+  text: string;
+}
+
+interface ReachItem {
+  label: string;
+  value: string;
+}
 
 interface TourIntro {
   title: string;
@@ -7,6 +17,19 @@ interface TourIntro {
   heroHeadline: string;
   heroSubline?: string;
   intro: string;
+  collabKicker: string;
+  collabHeading: string;
+  collabText: string;
+  formats?: Format[];
+  casesKicker: string;
+  casesHeading: string;
+  reachHeading: string;
+  reachNote?: string;
+  reach?: ReachItem[];
+  stepsHeading: string;
+  stepsText: string;
+  bookingHeading: string;
+  bookingText: string;
   ctaHeading: string;
   ctaText: string;
   ctaEmail: string;
@@ -16,8 +39,12 @@ export const metadata = {
   title: "Tour",
   alternates: { canonical: "/tour/" },
   description:
-    "A café on wheels: Humbär, our self-built 1992 VW camper, brings coffee, tea and homemade cake to your event.",
+    "A café on wheels: we take products, places and ideas along in Humbär, our 1992 VW camper, and bring back reels, photos and stories.",
 };
+
+function isPlaceholder(value?: string) {
+  return !value || value.includes("PLATZHALTER");
+}
 
 const HERO_PHOTOS = [
   { src: "/images/tour/hero-1.webp", alt: "Cake carried out into the evening light on Furka Pass" },
@@ -50,16 +77,16 @@ const OFFERINGS = [
 
 const STEPS = [
   {
-    title: "Say hello",
-    text: "Write us a few lines about your day: where, roughly when, and how many people you're expecting.",
+    title: "Tell us what you make",
+    text: "Send us the product, or the place. Tell us what you'd like people to feel when they see it — that's usually more useful than a brief.",
   },
   {
-    title: "We plan the menu together",
-    text: "We bake to the season and the place — tell us your favourites and anything your guests can't eat.",
+    title: "We plan it into the road",
+    text: "We pick the stop, the season and the light, and write the story around it. You know the idea before anything is filmed.",
   },
   {
-    title: "Humbär rolls in",
-    text: "We arrive early, fold open the hatch, and the coffee starts flowing.",
+    title: "You get the material",
+    text: "Reels, photos and a journal entry. Where and how long you can use them, we agree together before we start.",
   },
 ];
 
@@ -128,6 +155,11 @@ function Plate({
 export default function TourPage() {
   const intro = getPage<TourIntro>("tour-intro");
   const stops = getAllTourStops();
+  const collabs = getAllCollabs();
+  const formats = intro.formats ?? [];
+  // Only show figures that have actually been filled in — a half-empty stats
+  // row is worse for a brand reading this than none at all.
+  const reach = (intro.reach ?? []).filter((item) => !isPlaceholder(item.value));
 
   return (
     <div>
@@ -178,8 +210,8 @@ export default function TourPage() {
           )}
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-            <a href="#book" className="btn btn-light">
-              Book us for your event
+            <a href="#collab" className="btn btn-light">
+              Work with us
             </a>
             <a href="#tour" className="btn btn-outline-light">
               See where we&rsquo;ve been
@@ -220,6 +252,138 @@ export default function TourPage() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* ---------- What we can make together ---------- */}
+      <section id="collab" className="mx-auto max-w-7xl scroll-mt-24 px-6 pt-24 sm:px-10 sm:pt-32">
+        <div className="max-w-2xl">
+          <p className="eyebrow">{intro.collabKicker}</p>
+          <h2 className="mt-4 text-3xl sm:text-[2.6rem]">{intro.collabHeading}</h2>
+          <p className="mt-6 leading-relaxed text-graphite">{intro.collabText}</p>
+        </div>
+
+        {formats.length > 0 && (
+          <ol className="mt-14 grid gap-x-10 gap-y-2 border-t border-ink/10 sm:grid-cols-2">
+            {formats.map((format, i) => (
+              <li key={format.title} className="reveal flex gap-6 border-b border-ink/10 py-7">
+                <span className="mt-1 shrink-0 font-stamp text-[0.7rem] tracking-[0.15em] text-ink/45">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <div>
+                  <h3 className="text-lg leading-tight">{format.title}</h3>
+                  <p className="mt-2 text-sm leading-relaxed text-graphite/85">{format.text}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        )}
+      </section>
+
+      {/* ---------- Collaborations we've already done ---------- */}
+      {collabs.length > 0 && (
+        <section className="mx-auto max-w-7xl px-6 pt-24 sm:px-10 sm:pt-32">
+          <div className="border-b border-ink/10 pb-8">
+            <p className="eyebrow">{intro.casesKicker}</p>
+            <h2 className="mt-4 text-3xl sm:text-[2.6rem]">{intro.casesHeading}</h2>
+          </div>
+
+          <div className="mt-12 grid gap-12 lg:grid-cols-2 lg:gap-10">
+            {collabs.map((collab) => (
+              <article key={collab.slug} className="reveal flex flex-col">
+                <Plate
+                  src={collab.image}
+                  alt={isPlaceholder(collab.imageAlt) ? collab.title : collab.imageAlt!}
+                  ratio="aspect-3/2"
+                  sizes="(max-width: 1024px) 92vw, 46vw"
+                />
+                <div className="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                  <span className="font-stamp text-[0.7rem] uppercase tracking-[0.18em] text-ink">
+                    {collab.partner}
+                  </span>
+                  {collab.format && (
+                    <span className="text-[0.7rem] uppercase tracking-[0.14em] text-graphite/60">
+                      {collab.format}
+                    </span>
+                  )}
+                  {!isPlaceholder(collab.year) && (
+                    <span className="text-[0.7rem] uppercase tracking-[0.14em] text-graphite/60">
+                      {collab.year}
+                    </span>
+                  )}
+                </div>
+                <h3 className="mt-3 text-2xl leading-tight">{collab.title}</h3>
+                <p className="mt-3 leading-relaxed text-graphite/85">{collab.description}</p>
+                {!isPlaceholder(collab.link) && (
+                  <a
+                    href={collab.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-arrow mt-4 self-start text-sm"
+                  >
+                    See it
+                  </a>
+                )}
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* ---------- Reach ---------- */}
+      {reach.length > 0 && (
+        <section className="mx-auto max-w-7xl px-6 pt-24 sm:px-10 sm:pt-32">
+          <div className="band-ivory rounded-lg px-6 py-12 sm:px-12 sm:py-14">
+            <p className="eyebrow">{intro.reachHeading}</p>
+            <dl className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+              {reach.map((item) => (
+                <div key={item.label}>
+                  <dt className="text-[0.7rem] uppercase tracking-[0.16em] text-graphite/70">
+                    {item.label}
+                  </dt>
+                  <dd className="mt-2 font-display text-2xl text-ink sm:text-3xl">{item.value}</dd>
+                </div>
+              ))}
+            </dl>
+            {intro.reachNote && (
+              <p className="mt-8 text-sm text-graphite/80">{intro.reachNote}</p>
+            )}
+          </div>
+        </section>
+      )}
+
+      {/* ---------- How it works ---------- */}
+      <section className="mx-auto max-w-7xl px-6 pt-24 sm:px-10 sm:pt-36">
+        <div className="grid items-center gap-12 lg:grid-cols-[0.75fr_1fr] lg:gap-20">
+          <div className="mx-auto w-full max-w-sm lg:max-w-none">
+            <Plate
+              src="/images/tour/cta-1.webp"
+              alt="A guest smiling over a bowl and a cinnamon bun at a forest table"
+              caption="the moment we do it all for"
+              sizes="(max-width: 1024px) 80vw, 32vw"
+              mount
+            />
+          </div>
+
+          <div>
+            <p className="eyebrow">How it works</p>
+            <h2 className="mt-5 text-3xl sm:text-[2.6rem]">{intro.stepsHeading}</h2>
+            <p className="mt-5 max-w-xl leading-relaxed text-graphite">{intro.stepsText}</p>
+
+            <ol className="mt-12 border-t border-ink/10">
+              {STEPS.map((step, i) => (
+                <li key={step.title} className="flex gap-6 border-b border-ink/10 py-6">
+                  <span className="mt-1 shrink-0 font-stamp text-[0.7rem] tracking-[0.15em] text-ink/45">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div>
+                    <h3 className="text-lg leading-tight">{step.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-graphite/85">{step.text}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
       </section>
 
@@ -335,82 +499,55 @@ export default function TourPage() {
         </div>
       </section>
 
-      {/* ---------- How it works ---------- */}
-      <section className="mx-auto max-w-7xl px-6 pt-24 sm:px-10 sm:pt-36">
-        <div className="grid items-center gap-12 lg:grid-cols-[0.75fr_1fr] lg:gap-20">
-          <div className="mx-auto w-full max-w-sm lg:max-w-none">
-            <Plate
-              src="/images/tour/cta-1.webp"
-              alt="A guest smiling over a bowl and a cinnamon bun at a forest table"
-              caption="the moment we do it all for"
-              sizes="(max-width: 1024px) 80vw, 32vw"
-              mount
-            />
-          </div>
-
+      {/* ---------- Booking the café: still possible, no longer the headline ---------- */}
+      <section id="book" className="mx-auto max-w-7xl scroll-mt-24 px-6 pt-24 sm:px-10 sm:pt-32">
+        <div className="grid gap-10 border-t border-ink/10 pt-10 lg:grid-cols-[0.9fr_1fr] lg:gap-16">
           <div>
-            <p className="eyebrow">How it works</p>
-            <h2 className="mt-5 text-3xl sm:text-[2.6rem]">And at your event?</h2>
-            <p className="mt-5 max-w-xl leading-relaxed text-graphite">
-              It&rsquo;s wonderfully uncomplicated. Three steps and there&rsquo;s a café where
-              there wasn&rsquo;t one before.
-            </p>
-
-            <ol className="mt-12 border-t border-ink/10">
-              {STEPS.map((step, i) => (
-                <li key={step.title} className="flex gap-6 border-b border-ink/10 py-6">
-                  <span className="mt-1 shrink-0 font-stamp text-[0.7rem] tracking-[0.15em] text-ink/45">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <div>
-                    <h3 className="text-lg leading-tight">{step.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-graphite/85">{step.text}</p>
-                  </div>
+            <p className="eyebrow">Bookings</p>
+            <h2 className="mt-4 text-2xl leading-tight sm:text-[1.9rem]">
+              {intro.bookingHeading}
+            </h2>
+          </div>
+          <div>
+            <p className="leading-relaxed text-graphite">{intro.bookingText}</p>
+            <ul className="mt-7 flex flex-wrap gap-2">
+              {EVENT_TYPES.map((type) => (
+                <li
+                  key={type}
+                  className="rounded-full border border-ink/15 bg-paper/60 px-3.5 py-2 text-[0.65rem] uppercase tracking-[0.14em] text-graphite/80"
+                >
+                  {type}
                 </li>
               ))}
-            </ol>
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* ---------- Book us ---------- */}
-      <section id="book" className="mt-24 scroll-mt-24 sm:mt-36">
+      {/* ---------- Let's make something together ---------- */}
+      <section className="mt-24 sm:mt-32">
         <div className="wash-warm border-y border-ink/10">
           <div className="mx-auto grid max-w-7xl lg:grid-cols-[1.1fr_1fr]">
             <div className="px-6 py-20 sm:px-10 sm:py-28">
-              <p className="eyebrow">Bookings</p>
+              <p className="eyebrow">Collaborations</p>
               <h2 className="mt-5 max-w-lg text-balance text-3xl leading-[1.08] sm:text-[2.75rem]">
                 {intro.ctaHeading}
               </h2>
               <p className="mt-6 max-w-lg leading-relaxed text-graphite">{intro.ctaText}</p>
 
-              <ul className="mt-9 flex flex-wrap gap-2">
-                {EVENT_TYPES.map((type) => (
-                  <li
-                    key={type}
-                    className="rounded-full border border-ink/15 bg-cream/50 px-3.5 py-2 text-[0.65rem] uppercase tracking-[0.14em] text-graphite/80"
-                  >
-                    {type}
-                  </li>
-                ))}
-              </ul>
-
               <div className="mt-10">
                 <a
                   href={`mailto:${intro.ctaEmail}?subject=${encodeURIComponent(
-                    "The Ground Squirrel Café at our event"
+                    "Collaboration with The Ground Squirrel Café"
                   )}`}
                   className="btn btn-primary"
                 >
-                  Let&rsquo;s plan your day
+                  Start a conversation
                 </a>
               </div>
               <p className="mt-5 text-sm text-graphite/80">
                 or write to{" "}
-                <a
-                  href={`mailto:${intro.ctaEmail}`}
-                  className="link-underline text-ink"
-                >
+                <a href={`mailto:${intro.ctaEmail}`} className="link-underline text-ink">
                   {intro.ctaEmail}
                 </a>
               </p>
