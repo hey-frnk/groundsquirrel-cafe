@@ -46,7 +46,7 @@ collections:
         name: "badges"
         widget: "list"
         required: false
-        hint: "z.B. 'Painted by hand — never AI'"
+        hint: "Kurze Etiketten unter dem Titel, z.B. '10% funds wildlife conservation'"
       - label: "Bildergalerie (falls eine Variante keine eigenen Bilder hat)"
         name: "gallery"
         widget: "list"

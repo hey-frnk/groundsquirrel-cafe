@@ -4,7 +4,6 @@ tagline: 'Six hand-painted animals, small enough to send and good enough to keep
 image: /images/shop/wildlife-postcards/all-six-cards.webp
 order: 3
 badges:
-  - Painted by hand — never AI
   - 10% funds wildlife conservation
 specs:
   - label: Size
@@ -17,8 +16,6 @@ specs:
     value: 'Blank for writing, printed with the conservation note'
   - label: Made
     value: 'To order, 3–5 days before dispatch'
-  - label: Set contains
-    value: One of each of the six designs
 shippingNote: >-
   Worldwide shipping. The rate is worked out from your country and the largest
   item in your basket.
@@ -31,11 +28,14 @@ variants:
     note: >-
       One of each: flamingo, red squirrel, sea turtle, dassies, elephant and sea
       stars.
-    images:
+    images: &ref_0
       - /images/shop/wildlife-postcards/all-six-cards.webp
       - /images/shop/wildlife-postcards/flamingo.webp
       - /images/shop/wildlife-postcards/squirrel.webp
       - /images/shop/wildlife-postcards/turtle.webp
+      - /images/shop/wildlife-postcards/dassies.webp
+      - /images/shop/wildlife-postcards/elephant.webp
+      - /images/shop/wildlife-postcards/seastars.webp
   - label: Greater Flamingo
     price: 3
     sku: GSC-POSTCARD-FLAMINGO
@@ -104,11 +104,7 @@ variants:
       - /images/shop/wildlife-postcards/seastars-front.webp
       - /images/shop/wildlife-postcards/seastars-pair.webp
       - /images/shop/wildlife-postcards/seastars-back.webp
-gallery:
-  - /images/shop/wildlife-postcards/all-six-cards.webp
-  - /images/shop/wildlife-postcards/flamingo.webp
-  - /images/shop/wildlife-postcards/elephant.webp
-  - /images/shop/wildlife-postcards/seastars.webp
+gallery: *ref_0
 ---
 
 **Ten percent of everything you spend here goes to wildlife conservation.**
