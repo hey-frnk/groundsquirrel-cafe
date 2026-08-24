@@ -300,29 +300,43 @@ export default function TourPage() {
           <div className="mt-12 grid gap-12 lg:grid-cols-2 lg:gap-10">
             {collabs.map((collab) => (
               <article key={collab.slug} className="reveal flex flex-col">
-                <Plate
-                  src={collab.image}
-                  alt={isPlaceholder(collab.imageAlt) ? collab.title : collab.imageAlt!}
-                  ratio="aspect-3/2"
-                  sizes="(max-width: 1024px) 92vw, 46vw"
-                />
-                {collab.photos && collab.photos.length > 0 && (
-                  <div
-                    className={`mt-3 grid gap-3 ${
-                      collab.photos.length >= 3 ? "grid-cols-3" : "grid-cols-2"
-                    }`}
-                  >
-                    {collab.photos.slice(0, 3).map((photo) => (
-                      <Plate
-                        key={photo.image}
+                {/* A justified row: every photo is scaled to the same height
+                    from its own aspect ratio, so they line up without a single
+                    one being cropped to fit a fixed frame. */}
+                <div
+                  className={`grid grid-cols-2 gap-2.5 sm:flex ${
+                    collab.gallery.length === 1 ? "sm:max-w-xs" : ""
+                  }`}
+                >
+                  {collab.gallery.map((photo, i) => (
+                    <div
+                      key={photo.image}
+                      // Three across is too small to read on a phone, so the
+                      // lead photo takes the full width there and the rest pair
+                      // up beneath it. The flex values only bite from sm up.
+                      className={`overflow-hidden rounded-lg border border-ink/10 bg-ivory/25 shadow-[0_10px_26px_-24px_rgba(74,66,53,0.9)] ${
+                        i === 0 ? "col-span-2 sm:col-span-1" : ""
+                      }`}
+                      style={{
+                        flexGrow: (photo.width ?? 3) / (photo.height ?? 4),
+                        flexBasis: 0,
+                      }}
+                    >
+                      <Image
                         src={photo.image}
-                        alt={photo.caption ?? collab.title}
-                        ratio="aspect-square"
-                        sizes="(max-width: 1024px) 30vw, 15vw"
+                        alt={
+                          isPlaceholder(photo.caption)
+                            ? `${collab.partner} — ${collab.title}`
+                            : photo.caption!
+                        }
+                        width={photo.width ?? 900}
+                        height={photo.height ?? 1200}
+                        sizes="(max-width: 1024px) 31vw, 16vw"
+                        className="h-auto w-full"
                       />
-                    ))}
-                  </div>
-                )}
+                    </div>
+                  ))}
+                </div>
                 <div className="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-1">
                   <span className="font-stamp text-[0.7rem] uppercase tracking-[0.18em] text-ink">
                     {collab.partner}

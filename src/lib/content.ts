@@ -200,6 +200,8 @@ export function getAllTourStops(): (TourStop & { description: string })[] {
 export interface CollabPhoto {
   image: string;
   caption?: string;
+  width?: number;
+  height?: number;
 }
 
 export interface Collab {
@@ -215,18 +217,30 @@ export interface Collab {
   order: number;
 }
 
-export function getAllCollabs(): (Collab & { description: string })[] {
+/**
+ * The lead photo and the extra ones are laid out as a single justified row, so
+ * they are merged into one list here and each measured. The row scales every
+ * photo to a common height from its own aspect ratio, which means none of them
+ * has to be cropped to fit — but it can only do that if the intrinsic sizes are
+ * known before the browser has the files.
+ */
+function collabGallery(data: Collab): CollabPhoto[] {
+  const extras = normalizeTourPhotos(data.photos);
+  return [{ image: data.image, caption: data.imageAlt }, ...extras]
+    .filter((photo) => Boolean(photo.image))
+    .map((photo) => {
+      const size = photo.image.startsWith("/")
+        ? imageSize(path.join(process.cwd(), "public", photo.image))
+        : undefined;
+      return { ...photo, width: size?.width, height: size?.height };
+    });
+}
+
+export function getAllCollabs(): (Collab & { description: string; gallery: CollabPhoto[] })[] {
   return readDir("collabs")
     .map((filename) => {
       const { slug, data, content } = readEntry<Collab>("collabs", filename);
-      return {
-        ...data,
-        slug,
-        // same shape as the tour stops, so a half-filled CMS row is dropped
-        // rather than rendering an empty frame
-        photos: normalizeTourPhotos(data.photos),
-        description: content.trim(),
-      };
+      return { ...data, slug, gallery: collabGallery(data), description: content.trim() };
     })
     .sort((a, b) => a.order - b.order);
 }
