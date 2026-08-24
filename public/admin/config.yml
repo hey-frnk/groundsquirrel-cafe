@@ -323,6 +323,8 @@ collections:
               - { label: "Wert", name: "value", widget: "string" }
               - { label: "Zusatz (klein darunter)", name: "note", widget: "string", required: false, hint: "z.B. «+89% in 30 days»" }
           - { label: "Reichweite: Hervorgehobener Satz", name: "reachStat", widget: "text", required: false }
+          - { label: "Wachstum: Überschrift", name: "growthHeading", widget: "string", required: false }
+          - { label: "Wachstum: Text (hervorgehobener Kasten)", name: "growthText", widget: "text", required: false }
           - { label: "Publikum: Überschrift", name: "audienceHeading", widget: "string", required: false }
           - label: "Publikum: Länder"
             name: "audience"

@@ -45,7 +45,9 @@ audience:
     percent: 5
   - label: "France"
     percent: 2.9
-audienceNote: "86% are between 25 and 54. 43% speak German, 25% English."
+growthHeading: "Still early — and that is the point"
+growthText: "We nearly doubled in a month: 89% more people following along in the last 30 days, and the reach is already running well ahead of the follower count. Come along now and you grow with us, instead of buying into something already finished."
+audienceNote: "Nearly 40% of them sit in Germany and Switzerland — two of the strongest purchasing-power markets in Europe — and the rest of the top five is the United States, the United Kingdom and France. 43% follow along in German, 25% in English. And 86% are between 25 and 54: the age at which people actually buy the van, the machine and the trip."
 reachNote: "Instagram, last 30 days. Numbers move — ask us for the current ones."
 stepsHeading: "How a collaboration works"
 stepsText: "No media kit, no rate card, no jargon. Three steps and a lot of honesty about what will and won't look good."

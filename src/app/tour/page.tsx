@@ -31,6 +31,8 @@ interface TourIntro {
   casesHeading: string;
   reachHeading: string;
   reachStat?: string;
+  growthHeading?: string;
+  growthText?: string;
   reachNote?: string;
   reach?: ReachItem[];
   audienceHeading?: string;
@@ -357,6 +359,18 @@ export default function TourPage() {
               <p className="mt-11 max-w-2xl border-t border-ink/10 pt-9 leading-relaxed text-graphite">
                 {intro.reachStat}
               </p>
+            )}
+
+            {/* The growth line gets its own frame: for a café this size it is
+                the strongest argument on the page, and it reads as an aside
+                when it sits in the same running text as everything else. */}
+            {intro.growthText && (
+              <div className="mt-9 rounded-lg border-l-2 border-rose bg-paper/70 px-6 py-7 sm:px-8 sm:py-8">
+                {intro.growthHeading && <p className="eyebrow">{intro.growthHeading}</p>}
+                <p className="mt-3 max-w-2xl font-display text-xl leading-[1.4] text-ink sm:text-[1.6rem]">
+                  {intro.growthText}
+                </p>
+              </div>
             )}
 
             {audience.length > 0 && (
