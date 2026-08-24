@@ -19,16 +19,34 @@ formats:
 casesKicker: "Partners"
 casesHeading: "Who we have worked with"
 reachHeading: "Who is following our journey"
-reachNote: "Numbers move — ask us for the current ones and for who exactly is watching."
+reachStat: "470,500 views from 2,381 followers — most of the people who watch us haven't followed us yet. Last month our reels were saved 1,900 times and shared 1,200 times, and the best one brought 591 new people along."
 reach:
+  - label: "Views, last 30 days"
+    value: "470,500"
+    note: ""
   - label: "Followers"
-    value: "[PLATZHALTER: z.B. 4'200]"
-  - label: "Views, last 90 days"
-    value: "[PLATZHALTER: z.B. 310'000]"
+    value: "2,381"
+    note: "+89% in 30 days"
   - label: "Best reel"
-    value: "[PLATZHALTER: z.B. 84'000 Views]"
-  - label: "Mostly watching from"
-    value: "[PLATZHALTER: z.B. Schweiz, Deutschland, Schweden]"
+    value: "321,000"
+    note: "views"
+  - label: "Profile visits"
+    value: "7,047"
+    note: ""
+audienceHeading: "Where they watch from"
+audience:
+  - label: "Germany"
+    percent: 29.6
+  - label: "Switzerland"
+    percent: 10.1
+  - label: "United States"
+    percent: 7.5
+  - label: "United Kingdom"
+    percent: 5
+  - label: "France"
+    percent: 2.9
+audienceNote: "86% are between 25 and 54. 43% speak German, 25% English."
+reachNote: "Instagram, last 30 days. Numbers move — ask us for the current ones."
 stepsHeading: "How a collaboration works"
 stepsText: "No media kit, no rate card, no jargon. Three steps and a lot of honesty about what will and won't look good."
 bookingHeading: "You can also book us as a café"

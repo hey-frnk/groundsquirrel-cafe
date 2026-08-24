@@ -319,8 +319,20 @@ collections:
             required: false
             hint: "Zeilen mit «[PLATZHALTER…]» werden auf der Website ausgeblendet — einfach den echten Wert eintragen, dann erscheinen sie."
             fields:
-              - { label: "Kanal / Bezeichnung", name: "label", widget: "string" }
+              - { label: "Bezeichnung", name: "label", widget: "string" }
               - { label: "Wert", name: "value", widget: "string" }
+              - { label: "Zusatz (klein darunter)", name: "note", widget: "string", required: false, hint: "z.B. «+89% in 30 days»" }
+          - { label: "Reichweite: Hervorgehobener Satz", name: "reachStat", widget: "text", required: false }
+          - { label: "Publikum: Überschrift", name: "audienceHeading", widget: "string", required: false }
+          - label: "Publikum: Länder"
+            name: "audience"
+            widget: "list"
+            required: false
+            hint: "Die Balken werden relativ zum grössten Wert gezeichnet, die Prozentzahl steht daneben."
+            fields:
+              - { label: "Land", name: "label", widget: "string" }
+              - { label: "Prozent", name: "percent", widget: "number", value_type: "float" }
+          - { label: "Publikum: Zusatzzeile", name: "audienceNote", widget: "text", required: false }
           - { label: "Reichweite: Fussnote", name: "reachNote", widget: "text", required: false }
 
           - { label: "Ablauf: Überschrift", name: "stepsHeading", widget: "string" }
