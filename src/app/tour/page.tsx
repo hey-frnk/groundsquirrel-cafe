@@ -10,6 +10,12 @@ interface ReachItem {
   label: string;
   value: string;
   note?: string;
+  accent?: boolean;
+}
+
+interface AudienceFact {
+  value: string;
+  label: string;
 }
 
 interface AudienceItem {
@@ -30,14 +36,11 @@ interface TourIntro {
   casesKicker: string;
   casesHeading: string;
   reachHeading: string;
-  reachStat?: string;
-  growthHeading?: string;
-  growthText?: string;
   reachNote?: string;
   reach?: ReachItem[];
   audienceHeading?: string;
   audience?: AudienceItem[];
-  audienceNote?: string;
+  audienceFacts?: AudienceFact[];
   stepsHeading: string;
   stepsText: string;
   bookingHeading: string;
@@ -165,6 +168,7 @@ export default function TourPage() {
   // Bars are drawn relative to the largest share, not to 100 — otherwise every
   // country is a sliver. The exact percentage is printed beside each one.
   const audienceMax = Math.max(...audience.map((item) => item.percent), 1);
+  const facts = intro.audienceFacts ?? [];
 
   return (
     <div>
@@ -335,69 +339,68 @@ export default function TourPage() {
         </section>
       )}
 
-      {/* ---------- Reach ---------- */}
+      {/* ---------- Reach: figures, not adjectives ---------- */}
       {reach.length > 0 && (
         <section className="mx-auto max-w-7xl px-6 pt-24 sm:px-10 sm:pt-32">
           <div className="band-ivory rounded-lg px-6 py-12 sm:px-12 sm:py-14">
             <p className="eyebrow">{intro.reachHeading}</p>
 
-            <dl className="mt-9 grid gap-9 sm:grid-cols-2 lg:grid-cols-4">
+            <dl className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4">
               {reach.map((item) => (
                 <div key={item.label}>
-                  <dd className="font-display text-4xl leading-none text-ink sm:text-[2.75rem]">
+                  {/* the accent marks the one figure we most want read; rose as
+                      text would sit too close to the ivory band to be legible */}
+                  {item.accent && (
+                    <span aria-hidden className="mb-3 block h-[3px] w-9 rounded-full bg-rose" />
+                  )}
+                  <dd className="font-display text-[2rem] leading-none text-ink sm:text-[2.75rem]">
                     {item.value}
                   </dd>
                   <dt className="mt-3 text-[0.7rem] uppercase tracking-[0.16em] text-graphite/70">
                     {item.label}
                   </dt>
-                  {item.note && <p className="mt-1 text-sm text-graphite/80">{item.note}</p>}
+                  {item.note && <p className="mt-1 text-xs text-graphite/70">{item.note}</p>}
                 </div>
               ))}
             </dl>
 
-            {intro.reachStat && (
-              <p className="mt-11 max-w-2xl border-t border-ink/10 pt-9 leading-relaxed text-graphite">
-                {intro.reachStat}
-              </p>
-            )}
-
-            {/* The growth line gets its own frame: for a café this size it is
-                the strongest argument on the page, and it reads as an aside
-                when it sits in the same running text as everything else. */}
-            {intro.growthText && (
-              <div className="mt-9 rounded-lg border-l-2 border-rose bg-paper/70 px-6 py-7 sm:px-8 sm:py-8">
-                {intro.growthHeading && <p className="eyebrow">{intro.growthHeading}</p>}
-                <p className="mt-3 max-w-2xl font-display text-xl leading-[1.4] text-ink sm:text-[1.6rem]">
-                  {intro.growthText}
-                </p>
-              </div>
-            )}
-
             {audience.length > 0 && (
-              <div className="mt-11 border-t border-ink/10 pt-9">
-                <p className="text-[0.7rem] uppercase tracking-[0.16em] text-graphite/70">
-                  {intro.audienceHeading}
-                </p>
-                <ul className="mt-6 grid gap-3.5 sm:max-w-lg">
-                  {audience.map((item) => (
-                    <li key={item.label} className="flex items-center gap-4">
-                      <span className="w-32 shrink-0 text-sm text-graphite sm:w-40">
-                        {item.label}
-                      </span>
-                      <span className="h-1.5 flex-1 overflow-hidden rounded-full bg-ink/10">
-                        <span
-                          className="block h-full rounded-full bg-rose"
-                          style={{ width: `${(item.percent / audienceMax) * 100}%` }}
-                        />
-                      </span>
-                      <span className="w-14 shrink-0 text-right text-sm tabular-nums text-graphite">
-                        {item.percent.toFixed(1)}%
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-                {intro.audienceNote && (
-                  <p className="mt-6 text-sm text-graphite/85">{intro.audienceNote}</p>
+              <div className="mt-12 grid gap-10 border-t border-ink/10 pt-10 lg:grid-cols-[1fr_0.8fr] lg:gap-16">
+                <div>
+                  <p className="text-[0.7rem] uppercase tracking-[0.16em] text-graphite/70">
+                    {intro.audienceHeading}
+                  </p>
+                  <ul className="mt-6 grid gap-3.5">
+                    {audience.map((item) => (
+                      <li key={item.label} className="flex items-center gap-4">
+                        <span className="w-32 shrink-0 text-sm text-graphite sm:w-40">
+                          {item.label}
+                        </span>
+                        <span className="h-1.5 flex-1 overflow-hidden rounded-full bg-ink/10">
+                          <span
+                            className="block h-full rounded-full bg-rose"
+                            style={{ width: `${(item.percent / audienceMax) * 100}%` }}
+                          />
+                        </span>
+                        <span className="w-14 shrink-0 text-right text-sm tabular-nums text-graphite">
+                          {item.percent.toFixed(1)}%
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {facts.length > 0 && (
+                  <dl className="grid gap-7 self-start sm:grid-cols-3 lg:grid-cols-1">
+                    {facts.map((fact) => (
+                      <div key={fact.label} className="flex items-baseline gap-3">
+                        <dd className="font-display text-2xl leading-none text-ink">
+                          {fact.value}
+                        </dd>
+                        <dt className="text-sm text-graphite">{fact.label}</dt>
+                      </div>
+                    ))}
+                  </dl>
                 )}
               </div>
             )}

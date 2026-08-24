@@ -319,12 +319,11 @@ collections:
             required: false
             hint: "Zeilen mit «[PLATZHALTER…]» werden auf der Website ausgeblendet — einfach den echten Wert eintragen, dann erscheinen sie."
             fields:
+              - { label: "Zahl", name: "value", widget: "string", hint: "z.B. 470,500 oder +89% oder 8.3%" }
               - { label: "Bezeichnung", name: "label", widget: "string" }
-              - { label: "Wert", name: "value", widget: "string" }
-              - { label: "Zusatz (klein darunter)", name: "note", widget: "string", required: false, hint: "z.B. «+89% in 30 days»" }
-          - { label: "Reichweite: Hervorgehobener Satz", name: "reachStat", widget: "text", required: false }
-          - { label: "Wachstum: Überschrift", name: "growthHeading", widget: "string", required: false }
-          - { label: "Wachstum: Text (hervorgehobener Kasten)", name: "growthText", widget: "text", required: false }
+              - { label: "Zusatz (klein darunter)", name: "note", widget: "string", required: false, hint: "z.B. «last 30 days»" }
+              - { label: "Hervorheben", name: "accent", widget: "boolean", required: false, default: false, hint: "Setzt einen rosa Strich über die Zahl. Am besten nur bei einer Kachel." }
+
           - { label: "Publikum: Überschrift", name: "audienceHeading", widget: "string", required: false }
           - label: "Publikum: Länder"
             name: "audience"
@@ -334,7 +333,14 @@ collections:
             fields:
               - { label: "Land", name: "label", widget: "string" }
               - { label: "Prozent", name: "percent", widget: "number", value_type: "float" }
-          - { label: "Publikum: Zusatzzeile", name: "audienceNote", widget: "text", required: false }
+          - label: "Publikum: Eckwerte"
+            name: "audienceFacts"
+            widget: "list"
+            required: false
+            hint: "Kurze Zahl-Label-Paare neben den Länderbalken, z.B. «40%» / «Germany & Switzerland»."
+            fields:
+              - { label: "Zahl", name: "value", widget: "string" }
+              - { label: "Bezeichnung", name: "label", widget: "string" }
           - { label: "Reichweite: Fussnote", name: "reachNote", widget: "text", required: false }
 
           - { label: "Ablauf: Überschrift", name: "stepsHeading", widget: "string" }
