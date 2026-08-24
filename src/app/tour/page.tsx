@@ -39,7 +39,7 @@ export const metadata = {
   title: "Tour",
   alternates: { canonical: "/tour/" },
   description:
-    "A café on wheels: we take products, places and ideas along in Humbär, our 1992 VW camper, and bring back reels, photos and stories.",
+    "The café at the edge of the world: we open our self-built 1992 VW camper wherever we are on the road, and tell the story of the products and places that travel with us.",
 };
 
 function isPlaceholder(value?: string) {
@@ -88,17 +88,6 @@ const STEPS = [
     title: "You get the material",
     text: "Reels, photos and a journal entry. Where and how long you can use them, we agree together before we start.",
   },
-];
-
-const EVENT_TYPES = [
-  "Weddings",
-  "Markets",
-  "Festivals",
-  "Company gatherings",
-  "Birthdays",
-  "Workshops",
-  "Film sets",
-  "Just because",
 ];
 
 /**
@@ -499,28 +488,19 @@ export default function TourPage() {
         </div>
       </section>
 
-      {/* ---------- Booking the café: still possible, no longer the headline ---------- */}
-      <section id="book" className="mx-auto max-w-7xl scroll-mt-24 px-6 pt-24 sm:px-10 sm:pt-32">
-        <div className="grid gap-10 border-t border-ink/10 pt-10 lg:grid-cols-[0.9fr_1fr] lg:gap-16">
-          <div>
-            <p className="eyebrow">Bookings</p>
-            <h2 className="mt-4 text-2xl leading-tight sm:text-[1.9rem]">
-              {intro.bookingHeading}
-            </h2>
-          </div>
-          <div>
-            <p className="leading-relaxed text-graphite">{intro.bookingText}</p>
-            <ul className="mt-7 flex flex-wrap gap-2">
-              {EVENT_TYPES.map((type) => (
-                <li
-                  key={type}
-                  className="rounded-full border border-ink/15 bg-paper/60 px-3.5 py-2 text-[0.65rem] uppercase tracking-[0.14em] text-graphite/80"
-                >
-                  {type}
-                </li>
-              ))}
-            </ul>
-          </div>
+      {/* ---------- Booking the café: a footnote, not an offer ---------- */}
+      <section id="book" className="mx-auto max-w-7xl scroll-mt-24 px-6 pt-20 sm:px-10 sm:pt-28">
+        <div className="flex flex-col gap-3 border-t border-ink/10 pt-8 sm:flex-row sm:items-baseline sm:gap-8">
+          <h2 className="shrink-0 text-[0.7rem] uppercase tracking-[0.18em] text-graphite/70">
+            {intro.bookingHeading}
+          </h2>
+          <p className="text-sm leading-relaxed text-graphite/85">
+            {intro.bookingText}{" "}
+            <a href={`mailto:${intro.ctaEmail}`} className="link-underline text-ink">
+              Get in touch
+            </a>
+            .
+          </p>
         </div>
       </section>
 
