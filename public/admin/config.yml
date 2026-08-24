@@ -145,6 +145,13 @@ collections:
       - { label: "Jahr", name: "year", widget: "string", required: false }
       - { label: "Bild", name: "image", widget: "image", hint: "Solange kein Bild da ist, bleibt der Platzhalter stehen." }
       - { label: "Bildbeschreibung", name: "imageAlt", widget: "string", required: false }
+      - label: "Weitere Fotos (bis zu 3, quadratisch dargestellt)"
+        name: "photos"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Foto", name: "image", widget: "image" }
+          - { label: "Bildbeschreibung", name: "caption", widget: "string", required: false }
       - { label: "Link (Reel, Post, Partnerseite)", name: "link", widget: "string", required: false, hint: "Leer lassen = kein Link-Button." }
       - { label: "Reihenfolge", name: "order", widget: "number", default: 1 }
       - { label: "Beschreibung", name: "body", widget: "markdown" }

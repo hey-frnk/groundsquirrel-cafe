@@ -306,6 +306,23 @@ export default function TourPage() {
                   ratio="aspect-3/2"
                   sizes="(max-width: 1024px) 92vw, 46vw"
                 />
+                {collab.photos && collab.photos.length > 0 && (
+                  <div
+                    className={`mt-3 grid gap-3 ${
+                      collab.photos.length >= 3 ? "grid-cols-3" : "grid-cols-2"
+                    }`}
+                  >
+                    {collab.photos.slice(0, 3).map((photo) => (
+                      <Plate
+                        key={photo.image}
+                        src={photo.image}
+                        alt={photo.caption ?? collab.title}
+                        ratio="aspect-square"
+                        sizes="(max-width: 1024px) 30vw, 15vw"
+                      />
+                    ))}
+                  </div>
+                )}
                 <div className="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-1">
                   <span className="font-stamp text-[0.7rem] uppercase tracking-[0.18em] text-ink">
                     {collab.partner}

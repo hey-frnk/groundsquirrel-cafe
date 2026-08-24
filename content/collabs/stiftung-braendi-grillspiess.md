@@ -2,11 +2,16 @@
 partner: "Stiftung Brändi"
 title: "A campfire session with the Grillspiess"
 format: "Campfire session"
-year: "[PLATZHALTER: Jahr, z.B. 2025]"
-image: "/images/collabs/placeholder.svg"
-imageAlt: "[PLATZHALTER: Bildbeschreibung ergänzen]"
+year: "2025"
+image: "/images/collabs/braendi-1.webp"
+imageAlt: "Evelyne holding up the Brändi Grillspiess, loaded with vegetables, in the late afternoon sun"
+photos:
+  - image: "/images/collabs/braendi-2.webp"
+    caption: "Corn and peppers going onto the grate"
+  - image: "/images/collabs/braendi-3.webp"
+    caption: "Everything on the table afterwards"
 link: ""
 order: 2
 ---
 
-An evening around the fire with Stiftung Brändi's Grillspiess: dinner turning slowly over the embers, coffee after, and the light going orange behind the trees. Filmed the way the evening actually went, at the speed it actually went.
+An afternoon of cooking over charcoal with Stiftung Brändi's Grillspiess: corn, peppers and mushrooms clamped into the skewer, turned over the grate in the low sun, and eaten off a checked cloth with rice, beans and flatbread. Filmed the way the afternoon actually went, at the speed it actually went.

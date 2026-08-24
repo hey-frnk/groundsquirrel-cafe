@@ -197,6 +197,11 @@ export function getAllTourStops(): (TourStop & { description: string })[] {
     .sort((a, b) => a.order - b.order);
 }
 
+export interface CollabPhoto {
+  image: string;
+  caption?: string;
+}
+
 export interface Collab {
   slug: string;
   partner: string;
@@ -205,6 +210,7 @@ export interface Collab {
   year?: string;
   image: string;
   imageAlt?: string;
+  photos?: CollabPhoto[];
   link?: string;
   order: number;
 }
@@ -213,7 +219,14 @@ export function getAllCollabs(): (Collab & { description: string })[] {
   return readDir("collabs")
     .map((filename) => {
       const { slug, data, content } = readEntry<Collab>("collabs", filename);
-      return { ...data, slug, description: content.trim() };
+      return {
+        ...data,
+        slug,
+        // same shape as the tour stops, so a half-filled CMS row is dropped
+        // rather than rendering an empty frame
+        photos: normalizeTourPhotos(data.photos),
+        description: content.trim(),
+      };
     })
     .sort((a, b) => a.order - b.order);
 }
