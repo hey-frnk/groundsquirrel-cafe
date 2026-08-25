@@ -1,14 +1,18 @@
 import Image from "next/image";
+import JsonLd from "@/components/JsonLd";
 import { getAllCrewMembers, getPage } from "@/lib/content";
+import { SITE_URL, evelynePerson, frankPerson } from "@/lib/seo";
 
 interface Settings {
   contactEmail: string;
 }
 
 export const metadata = {
-  title: "Crew",
+  // The full names carry the search weight — "Evelyne" alone matches nothing a
+  // person would type when they are looking for her.
+  title: { absolute: "Evelyne Buttet & Frank Zheng — the crew | The Ground Squirrel Café" },
   description:
-    "Evelyne, Frank, Humbär the 1992 VW camper and Bumblepuutz the mascot — the crew behind the ground squirrel café.",
+    "Evelyne Buttet, illustrator and author, and Frank Zheng, engineer and barista, travel Europe in Humbär, a self-built 1992 VW LT camper, and run The Ground Squirrel Café.",
   alternates: { canonical: "/crew/" },
 };
 
@@ -18,6 +22,29 @@ export default async function CrewPage() {
 
   return (
     <div className="pb-4">
+      {/* Both people as one graph, sharing the ids used elsewhere on the site,
+          so the studio page, the journal by-lines and this page resolve to the
+          same two entities rather than to look-alikes. */}
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "ProfilePage",
+              "@id": `${SITE_URL}/crew/#page`,
+              url: `${SITE_URL}/crew/`,
+              name: "The crew behind The Ground Squirrel Café",
+              about: [
+                { "@id": `${SITE_URL}/studio/#evelyne-buttet` },
+                { "@id": `${SITE_URL}/crew/#frank-zheng` },
+              ],
+              isPartOf: { "@id": `${SITE_URL}/#website` },
+            },
+            evelynePerson(),
+            frankPerson(),
+          ],
+        }}
+      />
       <header className="mx-auto max-w-7xl px-6 pt-16 sm:px-10 sm:pt-24">
         <div className="border-b border-ink/10 pb-10">
           <p className="eyebrow">The Ground Squirrel Café</p>

@@ -118,7 +118,7 @@ export default async function StudioPage() {
         <ul className="mx-auto grid max-w-5xl divide-y divide-ink/10 px-6 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
           {[
             "A love letter to nature born from the wild things",
-            "Painted with heart and soul and absolutely no AI",
+            "Painted with heart and soul",
             "10% of every sale funds wildlife conservation",
           ].map((line, i) => (
             <li key={line} className="flex gap-4 px-0 py-6 sm:px-7">

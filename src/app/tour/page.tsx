@@ -1,5 +1,8 @@
 import Image from "next/image";
 import { getAllCollabs, getAllTourStops, getPage, type TourPhoto } from "@/lib/content";
+import { splitLines } from "@/lib/text";
+import JsonLd from "@/components/JsonLd";
+import { SITE_URL, collaborationService } from "@/lib/seo";
 
 interface Format {
   title: string;
@@ -42,7 +45,7 @@ interface TourIntro {
   audience?: AudienceItem[];
   audienceFacts?: AudienceFact[];
   stepsHeading: string;
-  stepsText: string;
+  stepsNote?: string;
   bookingHeading: string;
   bookingText: string;
   ctaHeading: string;
@@ -51,22 +54,26 @@ interface TourIntro {
 }
 
 export const metadata = {
-  title: "Tour",
+  // Written for the search that brings a brand here — "vanlife content
+  // creator", "UGC Schweiz", "brand collaboration camper" — rather than for the
+  // one that brings a neighbour looking for a coffee.
+  title: { absolute: "Brand collaborations & UGC — The Ground Squirrel Café on tour" },
   alternates: { canonical: "/tour/" },
   description:
-    "The café at the edge of the world: we open our self-built 1992 VW camper wherever we are on the road, and tell the story of the products and places that travel with us.",
+    "Vanlife content creation from Switzerland: product placement, UGC and brand collaborations filmed on the road in a self-built 1992 VW camper. Reels and photography in German and English, 470'500 views in 30 days.",
 };
 
 function isPlaceholder(value?: string) {
   return !value || value.includes("PLATZHALTER");
 }
 
+// Four, not five — five made the band restless. The Furka photo sits last so
+// the figure in it looks into the strip rather than off the edge of the page.
 const HERO_PHOTOS = [
-  { src: "/images/tour/hero-1.webp", alt: "Cake carried out into the evening light on Furka Pass" },
   { src: "/images/tour/hero-2.webp", alt: "A tray of freshly baked bagels below a Norwegian mountain" },
   { src: "/images/tour/hero-3.webp", alt: "Humbär with his hatch open and the OPEN sign out" },
-  { src: "/images/tour/hero-4.webp", alt: "Coffee and cake served by the Greek sea" },
   { src: "/images/tour/hero-5.webp", alt: "A table for two beside the camper in a Swedish forest" },
+  { src: "/images/tour/hero-1.webp", alt: "Cake carried out into the evening light on Furka Pass" },
 ];
 
 const OFFERINGS = [
@@ -79,13 +86,13 @@ const OFFERINGS = [
   {
     title: "Baked from scratch",
     image: "/images/tour/card-bakes.webp",
-    alt: "A long table set with homemade buns and plates",
-    text: "Heartwarming local baked goods, made for the place we're in — an Engadin walnut cake in the Alps, a strawberry cake in the forest.",
+    alt: "A loaf fresh from the oven beside the handwritten café menu",
+    text: "Heartwarming local baked goods, made for the place we're in: an Engadin walnut cake in the Alps, a strawberry cake in the forest.",
   },
   {
     title: "Coffee & tea, poured by hand",
     image: "/images/tour/card-coffee.webp",
-    alt: "The espresso machine and a tray of pastries inside the camper",
+    alt: "A flat white and a jar of wildflowers on the wooden counter",
     text: "Proper espresso from the little Zurich-made machine on board, pots of tea, and a heart in the milk foam.",
   },
 ];
@@ -93,15 +100,15 @@ const OFFERINGS = [
 const STEPS = [
   {
     title: "Tell us what you make",
-    text: "Send us the product, or the place. Tell us what you'd like people to feel when they see it — that's usually more useful than a brief.",
+    text: "Tell us about the product or the place. Let's talk about the story you want to tell, your expectations, and the format in which you'd like to collaborate with us.",
   },
   {
     title: "We plan it into the road",
-    text: "We pick the stop, the season and the light, and write the story around it. You know the idea before anything is filmed.",
+    text: "We pick the stop, the season and the light, and write the story around it. We hold ourselves to high standards, take the work seriously, and let you see it before it goes out into the world.",
   },
   {
-    title: "You get the material",
-    text: "Reels, photos and a journal entry. Where and how long you can use them, we agree together before we start.",
+    title: "Your product finds its place",
+    text: "Depending on what we agree on, your product or place becomes part of our social media content, or you receive the content material to use yourself.",
   },
 ];
 
@@ -172,9 +179,26 @@ export default function TourPage() {
 
   return (
     <div>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": `${SITE_URL}/tour/#page`,
+              url: `${SITE_URL}/tour/`,
+              name: "Brand collaborations with The Ground Squirrel Café",
+              isPartOf: { "@id": `${SITE_URL}/#website` },
+              about: { "@id": `${SITE_URL}/tour/#collaboration` },
+            },
+            collaborationService(),
+          ],
+        }}
+      />
+
       {/* ---------- Hero: a contact sheet of the road ---------- */}
       <section className="relative isolate overflow-hidden">
-        <div className="absolute inset-0 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
+        <div className="absolute inset-0 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
           {HERO_PHOTOS.map((photo, i) => (
             <div
               key={photo.src}
@@ -185,7 +209,7 @@ export default function TourPage() {
                 src={photo.src}
                 alt={photo.alt}
                 fill
-                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 20vw"
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 className="object-cover"
                 preload={i < 2}
               />
@@ -210,20 +234,31 @@ export default function TourPage() {
           />
           {intro.kicker && <p className="eyebrow eyebrow-light">{intro.kicker}</p>}
           <h1 className="mt-6 text-4xl leading-[1.05] text-balance text-cream drop-shadow-md sm:text-6xl lg:text-7xl">
-            {intro.heroHeadline}
+            {splitLines(intro.heroHeadline).map((line) => (
+              <span key={line} className="block">
+                {line}
+              </span>
+            ))}
           </h1>
           {intro.heroSubline && (
-            <p className="mx-auto mt-7 max-w-xl leading-relaxed text-cream/85">
-              {intro.heroSubline}
+            <p className="mx-auto mt-7 max-w-2xl leading-relaxed text-cream/85">
+              {splitLines(intro.heroSubline).map((line) => (
+                <span key={line} className="block">
+                  {line}
+                </span>
+              ))}
             </p>
           )}
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-            <a href="#collab" className="btn btn-light">
-              Work with us
+            <a href="#get-in-touch" className="btn btn-light">
+              Get in touch
             </a>
-            <a href="#tour" className="btn btn-outline-light">
-              See where we&rsquo;ve been
+            <a href="#partners" className="btn btn-outline-light">
+              Previous partners
+            </a>
+            <a href="#how-it-works" className="btn btn-outline-light">
+              How it works
             </a>
           </div>
         </div>
@@ -246,6 +281,7 @@ export default function TourPage() {
               <Plate
                 src={item.image}
                 alt={item.alt}
+                ratio="aspect-3/4"
                 sizes="(max-width: 640px) 90vw, 30vw"
                 priority={i === 0}
                 mount
@@ -291,7 +327,7 @@ export default function TourPage() {
 
       {/* ---------- Collaborations we've already done ---------- */}
       {collabs.length > 0 && (
-        <section className="mx-auto max-w-7xl px-6 pt-24 sm:px-10 sm:pt-32">
+        <section id="partners" className="mx-auto max-w-7xl scroll-mt-24 px-6 pt-24 sm:px-10 sm:pt-32">
           <div className="border-b border-ink/10 pb-8">
             <p className="eyebrow">{intro.casesKicker}</p>
             <h2 className="mt-4 text-3xl sm:text-[2.6rem]">{intro.casesHeading}</h2>
@@ -444,7 +480,7 @@ export default function TourPage() {
       )}
 
       {/* ---------- How it works ---------- */}
-      <section className="mx-auto max-w-7xl px-6 pt-24 sm:px-10 sm:pt-36">
+      <section id="how-it-works" className="mx-auto max-w-7xl scroll-mt-24 px-6 pt-24 sm:px-10 sm:pt-36">
         <div className="grid items-center gap-12 lg:grid-cols-[0.75fr_1fr] lg:gap-20">
           <div className="mx-auto w-full max-w-sm lg:max-w-none">
             <Plate
@@ -459,7 +495,6 @@ export default function TourPage() {
           <div>
             <p className="eyebrow">How it works</p>
             <h2 className="mt-5 text-3xl sm:text-[2.6rem]">{intro.stepsHeading}</h2>
-            <p className="mt-5 max-w-xl leading-relaxed text-graphite">{intro.stepsText}</p>
 
             <ol className="mt-12 border-t border-ink/10">
               {STEPS.map((step, i) => (
@@ -474,6 +509,12 @@ export default function TourPage() {
                 </li>
               ))}
             </ol>
+
+            {intro.stepsNote && (
+              <p className="mt-9 max-w-xl border-l-2 border-rose pl-5 leading-relaxed text-graphite">
+                {intro.stepsNote}
+              </p>
+            )}
           </div>
         </div>
       </section>
@@ -522,8 +563,6 @@ export default function TourPage() {
         <div className="mt-16 flex flex-col gap-24 sm:gap-32">
           {stops.map((stop, index) => {
             const photos: TourPhoto[] = stop.photos ?? [];
-            const stripCols =
-              photos.length >= 3 ? "grid-cols-3" : photos.length === 2 ? "grid-cols-2" : "grid-cols-1";
 
             return (
               <article
@@ -570,16 +609,34 @@ export default function TourPage() {
                     sizes="(max-width: 1024px) 92vw, 46vw"
                   />
                   {photos.length > 0 && (
-                    <div className={`mt-4 grid gap-4 ${stripCols}`}>
+                    // Justified: each photo keeps its own aspect ratio and is
+                    // scaled to a shared height, so a portrait among squares
+                    // lines up without being cut down to one.
+                    <div className="mt-4 flex items-start gap-4">
                       {photos.slice(0, 3).map((photo) => (
-                        <Plate
+                        <figure
                           key={photo.image}
-                          src={photo.image}
-                          alt={photo.caption ?? `The Ground Squirrel Café in ${stop.country}`}
-                          caption={photo.caption}
-                          ratio="aspect-square"
-                          sizes="(max-width: 1024px) 30vw, 15vw"
-                        />
+                          style={{
+                            flexGrow: (photo.width ?? 1) / (photo.height ?? 1),
+                            flexBasis: 0,
+                          }}
+                        >
+                          <div className="overflow-hidden rounded-lg border border-ink/10 bg-ivory/25 shadow-[0_10px_26px_-24px_rgba(74,66,53,0.9)]">
+                            <Image
+                              src={photo.image}
+                              alt={photo.caption ?? `The Ground Squirrel Café in ${stop.country}`}
+                              width={photo.width ?? 1000}
+                              height={photo.height ?? 1000}
+                              sizes="(max-width: 1024px) 30vw, 15vw"
+                              className="h-auto w-full"
+                            />
+                          </div>
+                          {photo.caption && (
+                            <figcaption className="mt-3 text-[0.7rem] uppercase tracking-[0.16em] text-graphite/60">
+                              {photo.caption}
+                            </figcaption>
+                          )}
+                        </figure>
                       ))}
                     </div>
                   )}
@@ -590,24 +647,31 @@ export default function TourPage() {
         </div>
       </section>
 
-      {/* ---------- Booking the café: a footnote, not an offer ---------- */}
+      {/* ---------- Booking the café: still an aside, but a visible one ---------- */}
       <section id="book" className="mx-auto max-w-7xl scroll-mt-24 px-6 pt-20 sm:px-10 sm:pt-28">
-        <div className="flex flex-col gap-3 border-t border-ink/10 pt-8 sm:flex-row sm:items-baseline sm:gap-8">
-          <h2 className="shrink-0 text-[0.7rem] uppercase tracking-[0.18em] text-graphite/70">
-            {intro.bookingHeading}
-          </h2>
-          <p className="text-sm leading-relaxed text-graphite/85">
-            {intro.bookingText}{" "}
-            <a href={`mailto:${intro.ctaEmail}`} className="link-underline text-ink">
+        <div className="band-ivory rounded-lg px-6 py-10 sm:px-12 sm:py-12">
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
+            <div>
+              <p className="eyebrow">Bookings</p>
+              <h2 className="mt-4 text-2xl leading-tight sm:text-[1.9rem]">
+                {intro.bookingHeading}
+              </h2>
+              <p className="mt-4 max-w-xl leading-relaxed text-graphite">{intro.bookingText}</p>
+            </div>
+            <a
+              href={`mailto:${intro.ctaEmail}?subject=${encodeURIComponent(
+                "The Ground Squirrel Café — a pop-up"
+              )}`}
+              className="btn btn-primary shrink-0 self-start lg:self-auto"
+            >
               Get in touch
             </a>
-            .
-          </p>
+          </div>
         </div>
       </section>
 
       {/* ---------- Let's make something together ---------- */}
-      <section className="mt-24 sm:mt-32">
+      <section id="get-in-touch" className="mt-24 scroll-mt-24 sm:mt-32">
         <div className="wash-warm border-y border-ink/10">
           <div className="mx-auto grid max-w-7xl lg:grid-cols-[1.1fr_1fr]">
             <div className="px-6 py-20 sm:px-10 sm:py-28">

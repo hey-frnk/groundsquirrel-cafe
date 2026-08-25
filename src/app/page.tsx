@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
 import { getAllJournalPosts, getPage } from "@/lib/content";
+import { splitLines } from "@/lib/text";
 import { organization, webSite } from "@/lib/seo";
 
 interface Settings {
@@ -27,15 +28,6 @@ function isPlaceholder(value?: string) {
   return !value || value.includes("PLATZHALTER");
 }
 
-/**
- * Copy is written in the CMS, where the natural way to ask for a line or
- * paragraph break is either a real newline or a typed <br>. Neither survives
- * as-is in JSX, so split on both and let the caller render the parts as blocks
- * — no raw HTML from content has to be trusted.
- */
-function splitLines(text: string): string[] {
-  return text.split(/\s*(?:<br\s*\/?>|\n)\s*/).filter(Boolean);
-}
 
 const NAV_LINKS = [
   { href: "/tour", label: "Tour" },

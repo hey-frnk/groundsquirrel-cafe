@@ -160,6 +160,14 @@ export async function getShopProduct(slug: string) {
 export interface TourPhoto {
   image: string;
   caption?: string;
+  width?: number;
+  height?: number;
+}
+
+/** Intrinsic size of a public-folder image, for layouts that must not crop. */
+function measure(image?: string): ImageDimensions | undefined {
+  if (!image?.startsWith("/")) return undefined;
+  return imageSize(path.join(process.cwd(), "public", image));
 }
 
 export interface TourStop {
@@ -180,7 +188,8 @@ function normalizeTourPhotos(photos: unknown): TourPhoto[] {
   if (!Array.isArray(photos)) return [];
   return photos
     .map((p) => (typeof p === "string" ? { image: p } : (p as TourPhoto)))
-    .filter((p): p is TourPhoto => Boolean(p?.image));
+    .filter((p): p is TourPhoto => Boolean(p?.image))
+    .map((p) => ({ ...p, ...measure(p.image) }));
 }
 
 export function getAllTourStops(): (TourStop & { description: string })[] {
@@ -229,10 +238,7 @@ function collabGallery(data: Collab): CollabPhoto[] {
   return [{ image: data.image, caption: data.imageAlt }, ...extras]
     .filter((photo) => Boolean(photo.image))
     .map((photo) => {
-      const size = photo.image.startsWith("/")
-        ? imageSize(path.join(process.cwd(), "public", photo.image))
-        : undefined;
-      return { ...photo, width: size?.width, height: size?.height };
+      return { ...photo, ...measure(photo.image) };
     });
 }
 

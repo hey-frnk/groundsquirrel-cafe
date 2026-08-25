@@ -13,7 +13,7 @@ export const metadata = {
 const PROMISES = [
   {
     title: "Painted by hand",
-    body: "Painted with heart and soul and absolutely no AI.",
+    body: "Painted with heart and soul.",
   },
   {
     title: "Made on the road",
