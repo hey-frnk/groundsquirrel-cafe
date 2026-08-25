@@ -165,7 +165,7 @@ export interface TourPhoto {
 }
 
 /** Intrinsic size of a public-folder image, for layouts that must not crop. */
-function measure(image?: string): ImageDimensions | undefined {
+export function measureImage(image?: string): ImageDimensions | undefined {
   if (!image?.startsWith("/")) return undefined;
   return imageSize(path.join(process.cwd(), "public", image));
 }
@@ -189,7 +189,7 @@ function normalizeTourPhotos(photos: unknown): TourPhoto[] {
   return photos
     .map((p) => (typeof p === "string" ? { image: p } : (p as TourPhoto)))
     .filter((p): p is TourPhoto => Boolean(p?.image))
-    .map((p) => ({ ...p, ...measure(p.image) }));
+    .map((p) => ({ ...p, ...measureImage(p.image) }));
 }
 
 export function getAllTourStops(): (TourStop & { description: string })[] {
@@ -238,7 +238,7 @@ function collabGallery(data: Collab): CollabPhoto[] {
   return [{ image: data.image, caption: data.imageAlt }, ...extras]
     .filter((photo) => Boolean(photo.image))
     .map((photo) => {
-      return { ...photo, ...measure(photo.image) };
+      return { ...photo, ...measureImage(photo.image) };
     });
 }
 

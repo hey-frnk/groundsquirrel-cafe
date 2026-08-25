@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { getAllCollabs, getAllTourStops, getPage, type TourPhoto } from "@/lib/content";
+import { getAllCollabs, getAllTourStops, getPage, measureImage, type TourPhoto } from "@/lib/content";
 import { splitLines } from "@/lib/text";
 import JsonLd from "@/components/JsonLd";
 import { SITE_URL, collaborationService } from "@/lib/seo";
@@ -125,6 +125,7 @@ function Plate({
   sizes,
   priority,
   mount = false,
+  natural = false,
 }: {
   src: string;
   alt: string;
@@ -133,22 +134,39 @@ function Plate({
   sizes: string;
   priority?: boolean;
   mount?: boolean;
+  /** Render at the file's own aspect ratio instead of inside a fixed frame,
+      for rows whose photos must be shown whole. */
+  natural?: boolean;
 }) {
+  const size = natural ? measureImage(src) : undefined;
+
   return (
     <figure className={mount ? "paper-card group overflow-hidden p-2.5" : "group"}>
       <div
         className={`relative overflow-hidden rounded-lg bg-ivory/25 ${
           mount ? "" : "border border-ink/10 shadow-[0_10px_26px_-24px_rgba(74,66,53,0.9)]"
-        } ${ratio}`}
+        } ${size ? "" : ratio}`}
       >
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          sizes={sizes}
-          priority={priority}
-          className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.04]"
-        />
+        {size ? (
+          <Image
+            src={src}
+            alt={alt}
+            width={size.width}
+            height={size.height}
+            sizes={sizes}
+            priority={priority}
+            className="h-auto w-full"
+          />
+        ) : (
+          <Image
+            src={src}
+            alt={alt}
+            fill
+            sizes={sizes}
+            priority={priority}
+            className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.04]"
+          />
+        )}
       </div>
       {caption && (
         <figcaption
@@ -281,7 +299,7 @@ export default function TourPage() {
               <Plate
                 src={item.image}
                 alt={item.alt}
-                ratio="aspect-3/4"
+                natural
                 sizes="(max-width: 640px) 90vw, 30vw"
                 priority={i === 0}
                 mount
