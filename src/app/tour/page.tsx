@@ -4,7 +4,7 @@ import { splitLines } from "@/lib/text";
 import JsonLd from "@/components/JsonLd";
 import { SITE_URL, collaborationService } from "@/lib/seo";
 
-interface Format {
+interface Pillar {
   title: string;
   text: string;
 }
@@ -34,8 +34,7 @@ interface TourIntro {
   intro: string;
   collabKicker: string;
   collabHeading: string;
-  collabText: string;
-  formats?: Format[];
+  pillars?: Pillar[];
   casesKicker: string;
   casesHeading: string;
   reachHeading: string;
@@ -76,24 +75,19 @@ const HERO_PHOTOS = [
   { src: "/images/tour/hero-1.webp", alt: "Cake carried out into the evening light on Furka Pass" },
 ];
 
-const OFFERINGS = [
+// One photo per pillar, in the same order: the camper, the food, the ritual.
+const PILLAR_PHOTOS = [
   {
-    title: "Humbär, the café",
     image: "/images/tour/card-humbaer.webp",
     alt: "Humbär parked at the forest edge with his café hatch open",
-    text: "A 1992 VW camper, born in Schaffhausen, rebuilt by hand into a solar-powered café. He parks almost anywhere and folds open into a counter.",
   },
   {
-    title: "Baked from scratch",
     image: "/images/tour/card-bakes.webp",
     alt: "A loaf fresh from the oven beside the handwritten café menu",
-    text: "Heartwarming local baked goods, made for the place we're in: an Engadin walnut cake in the Alps, a strawberry cake in the forest.",
   },
   {
-    title: "Coffee & tea, poured by hand",
     image: "/images/tour/card-coffee.webp",
-    alt: "A flat white and a jar of wildflowers on the wooden counter",
-    text: "Proper espresso from the little Zurich-made machine on board, pots of tea, and a heart in the milk foam.",
+    alt: "The espresso machine and a tray of pastries inside the camper",
   },
 ];
 
@@ -185,7 +179,7 @@ export default function TourPage() {
   const intro = getPage<TourIntro>("tour-intro");
   const stops = getAllTourStops();
   const collabs = getAllCollabs();
-  const formats = intro.formats ?? [];
+  const pillars = intro.pillars ?? [];
   // Only show figures that have actually been filled in — a half-empty stats
   // row is worse for a brand reading this than none at all.
   const reach = (intro.reach ?? []).filter((item) => !isPlaceholder(item.value));
@@ -291,56 +285,41 @@ export default function TourPage() {
         <span aria-hidden className="rule mx-auto mt-10" />
       </section>
 
-      {/* ---------- What comes with us ---------- */}
-      <section className="mx-auto max-w-7xl px-6 pt-20 sm:px-10 sm:pt-28">
-        <div className="grid gap-10 sm:grid-cols-3 sm:gap-8">
-          {OFFERINGS.map((item, i) => (
-            <div key={item.title} className="reveal flex flex-col">
-              <Plate
-                src={item.image}
-                alt={item.alt}
-                natural
-                sizes="(max-width: 640px) 90vw, 30vw"
-                priority={i === 0}
-                mount
-              />
-              <div className="mt-6 flex items-start gap-5">
-                <span className="mt-1.5 shrink-0 font-stamp text-[0.7rem] tracking-[0.15em] text-ink/45">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <div>
-                  <h2 className="text-xl">{item.title}</h2>
-                  <p className="mt-2 text-sm leading-relaxed text-graphite/85">{item.text}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ---------- What we can make together ---------- */}
-      <section id="collab" className="mx-auto max-w-7xl scroll-mt-24 px-6 pt-24 sm:px-10 sm:pt-32">
+      {/* ---------- What the café is, and what a brand gets out of it ---------- */}
+      <section id="collab" className="mx-auto max-w-7xl scroll-mt-24 px-6 pt-20 sm:px-10 sm:pt-28">
         <div className="max-w-2xl">
           <p className="eyebrow">{intro.collabKicker}</p>
           <h2 className="mt-4 text-3xl sm:text-[2.6rem]">{intro.collabHeading}</h2>
-          <p className="mt-6 leading-relaxed text-graphite">{intro.collabText}</p>
         </div>
 
-        {formats.length > 0 && (
-          <ol className="mt-14 grid gap-x-10 gap-y-2 border-t border-ink/10 sm:grid-cols-2">
-            {formats.map((format, i) => (
-              <li key={format.title} className="reveal flex gap-6 border-b border-ink/10 py-7">
-                <span className="mt-1 shrink-0 font-stamp text-[0.7rem] tracking-[0.15em] text-ink/45">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <div>
-                  <h3 className="text-lg leading-tight">{format.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-graphite/85">{format.text}</p>
+        <div className="mt-14 grid gap-10 sm:grid-cols-3 sm:gap-8">
+          {pillars.map((pillar, i) => {
+            const photo = PILLAR_PHOTOS[i];
+            return (
+              <div key={pillar.title} className="reveal flex flex-col">
+                {photo && (
+                  <Plate
+                    src={photo.image}
+                    alt={photo.alt}
+                    natural
+                    sizes="(max-width: 640px) 90vw, 30vw"
+                    priority={i === 0}
+                    mount
+                  />
+                )}
+                <div className="mt-6 flex items-start gap-5">
+                  <span className="mt-1.5 shrink-0 font-stamp text-[0.7rem] tracking-[0.15em] text-ink/45">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <div>
+                    <h3 className="text-xl">{pillar.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-graphite/85">{pillar.text}</p>
+                  </div>
                 </div>
-              </li>
-            ))}
-          </ol>
-        )}
+              </div>
+            );
+          })}
+        </div>
       </section>
 
       {/* ---------- Collaborations we've already done ---------- */}
