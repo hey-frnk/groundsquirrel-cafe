@@ -132,6 +132,30 @@ collections:
       - { label: "Qualifikationen", name: "qualifications", widget: "list", required: false }
       - { label: "Bio", name: "body", widget: "markdown" }
 
+  - name: "collabs"
+    label: "Kooperationen"
+    label_singular: "Kooperation"
+    folder: "content/collabs"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Partner / Marke", name: "partner", widget: "string" }
+      - { label: "Titel", name: "title", widget: "string", hint: "Wie ihr die Zusammenarbeit nennt, z.B. «A campfire session with the Grillspiess»" }
+      - { label: "Format", name: "format", widget: "string", required: false, hint: "z.B. «Produkt im Café» oder «Campfire Session»" }
+      - { label: "Jahr", name: "year", widget: "string", required: false }
+      - { label: "Bild", name: "image", widget: "image", hint: "Solange kein Bild da ist, bleibt der Platzhalter stehen." }
+      - { label: "Bildbeschreibung", name: "imageAlt", widget: "string", required: false }
+      - label: "Weitere Fotos (bis zu 3, quadratisch dargestellt)"
+        name: "photos"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Foto", name: "image", widget: "image" }
+          - { label: "Bildbeschreibung", name: "caption", widget: "string", required: false }
+      - { label: "Link (Reel, Post, Partnerseite)", name: "link", widget: "string", required: false, hint: "Leer lassen = kein Link-Button." }
+      - { label: "Reihenfolge", name: "order", widget: "number", default: 1 }
+      - { label: "Beschreibung", name: "body", widget: "markdown" }
+
   - name: "tour-stops"
     label: "Tour Stopps"
     label_singular: "Stopp"
@@ -280,6 +304,58 @@ collections:
           - { label: "Grosse Überschrift (Hero)", name: "heroHeadline", widget: "string" }
           - { label: "Unterzeile (Hero)", name: "heroSubline", widget: "text", required: false }
           - { label: "Einleitungstext", name: "intro", widget: "text" }
+
+          - { label: "Kooperationen: Kleine Zeile", name: "collabKicker", widget: "string" }
+          - { label: "Kooperationen: Überschrift", name: "collabHeading", widget: "string" }
+          - { label: "Kooperationen: Text", name: "collabText", widget: "text" }
+          - label: "Kooperationen: Formate"
+            name: "formats"
+            widget: "list"
+            hint: "Was ihr anbietet — z.B. «Produkt im Café», «Campfire Session», «Pop-up», «Ein Ort, richtig erzählt»."
+            fields:
+              - { label: "Titel", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+
+          - { label: "Referenzen: Kleine Zeile", name: "casesKicker", widget: "string" }
+          - { label: "Referenzen: Überschrift", name: "casesHeading", widget: "string" }
+
+          - { label: "Reichweite: Überschrift", name: "reachHeading", widget: "string" }
+          - label: "Reichweite: Zahlen"
+            name: "reach"
+            widget: "list"
+            required: false
+            hint: "Zeilen mit «[PLATZHALTER…]» werden auf der Website ausgeblendet — einfach den echten Wert eintragen, dann erscheinen sie."
+            fields:
+              - { label: "Zahl", name: "value", widget: "string", hint: "z.B. 470,500 oder +89% oder 8.3%" }
+              - { label: "Bezeichnung", name: "label", widget: "string" }
+              - { label: "Zusatz (klein darunter)", name: "note", widget: "string", required: false, hint: "z.B. «last 30 days»" }
+              - { label: "Hervorheben", name: "accent", widget: "boolean", required: false, default: false, hint: "Setzt einen rosa Strich über die Zahl. Am besten nur bei einer Kachel." }
+
+          - { label: "Publikum: Überschrift", name: "audienceHeading", widget: "string", required: false }
+          - label: "Publikum: Länder"
+            name: "audience"
+            widget: "list"
+            required: false
+            hint: "Die Balken werden relativ zum grössten Wert gezeichnet, die Prozentzahl steht daneben."
+            fields:
+              - { label: "Land", name: "label", widget: "string" }
+              - { label: "Prozent", name: "percent", widget: "number", value_type: "float" }
+          - label: "Publikum: Eckwerte"
+            name: "audienceFacts"
+            widget: "list"
+            required: false
+            hint: "Kurze Zahl-Label-Paare neben den Länderbalken, z.B. «40%» / «Germany & Switzerland»."
+            fields:
+              - { label: "Zahl", name: "value", widget: "string" }
+              - { label: "Bezeichnung", name: "label", widget: "string" }
+          - { label: "Reichweite: Fussnote", name: "reachNote", widget: "text", required: false }
+
+          - { label: "Ablauf: Überschrift", name: "stepsHeading", widget: "string" }
+          - { label: "Ablauf: Text", name: "stepsText", widget: "text" }
+
+          - { label: "Buchung: Überschrift", name: "bookingHeading", widget: "string" }
+          - { label: "Buchung: Text", name: "bookingText", widget: "text" }
+
           - { label: "CTA-Überschrift", name: "ctaHeading", widget: "string" }
           - { label: "CTA-Text", name: "ctaText", widget: "text" }
           - { label: "CTA-E-Mail", name: "ctaEmail", widget: "string" }
