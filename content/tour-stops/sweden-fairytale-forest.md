@@ -8,9 +8,9 @@ photos:
   - image: "/images/tour/sweden-2.webp"
     caption: "Table for two, between the pines"
   - image: "/images/tour/sweden-3.webp"
-    caption: "A rainbow over the red cottage"
+    caption: "The Jordgubbstårta, and the day's menu"
   - image: "/images/tour/sweden-4.webp"
-    caption: "Neighbours stopping by the window"
+    caption: "Our first guests, keeping their distance"
 order: 4
 ---
 

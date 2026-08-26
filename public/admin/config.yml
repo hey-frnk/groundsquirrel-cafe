@@ -145,7 +145,7 @@ collections:
       - { label: "Jahr", name: "year", widget: "string", required: false }
       - { label: "Bild", name: "image", widget: "image", hint: "Solange kein Bild da ist, bleibt der Platzhalter stehen." }
       - { label: "Bildbeschreibung", name: "imageAlt", widget: "string", required: false }
-      - label: "Weitere Fotos (bis zu 3, quadratisch dargestellt)"
+      - label: "Weitere Fotos (bis zu 3)"
         name: "photos"
         widget: "list"
         required: false
@@ -307,11 +307,10 @@ collections:
 
           - { label: "Kooperationen: Kleine Zeile", name: "collabKicker", widget: "string" }
           - { label: "Kooperationen: Überschrift", name: "collabHeading", widget: "string" }
-          - { label: "Kooperationen: Text", name: "collabText", widget: "text" }
-          - label: "Kooperationen: Formate"
-            name: "formats"
+          - label: "Kooperationen: Die drei Blöcke"
+            name: "pillars"
             widget: "list"
-            hint: "Was ihr anbietet — z.B. «Produkt im Café», «Campfire Session», «Pop-up», «Ein Ort, richtig erzählt»."
+            hint: "Drei Abschnitte mit je einem Foto. Die Fotos stehen im Code und folgen der Reihenfolge: Humbär, Gebäck, Kaffee."
             fields:
               - { label: "Titel", name: "title", widget: "string" }
               - { label: "Text", name: "text", widget: "text" }
@@ -351,7 +350,7 @@ collections:
           - { label: "Reichweite: Fussnote", name: "reachNote", widget: "text", required: false }
 
           - { label: "Ablauf: Überschrift", name: "stepsHeading", widget: "string" }
-          - { label: "Ablauf: Text", name: "stepsText", widget: "text" }
+          - { label: "Ablauf: Hinweis unter den Schritten", name: "stepsNote", widget: "text", required: false }
 
           - { label: "Buchung: Überschrift", name: "bookingHeading", widget: "string" }
           - { label: "Buchung: Text", name: "bookingText", widget: "text" }

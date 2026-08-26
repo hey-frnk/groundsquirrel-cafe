@@ -14,4 +14,4 @@ link: ""
 order: 2
 ---
 
-An afternoon of cooking over charcoal with Stiftung Brändi's Grillspiess: corn, peppers and mushrooms clamped into the skewer, turned over the grate in the low sun, and eaten off a checked cloth with rice, beans and flatbread. Filmed the way the afternoon actually went, at the speed it actually went.
+An afternoon of cooking over charcoal with Stiftung Brändi's Grillspiess: corn, peppers and mushrooms clamped into the skewer, turned over the grate in the low sun, and eaten off a checked cloth with rice, beans and flatbread. We brought this skewer all the way to Kruger National Park, South Africa, and took the pictures inside one of our most beloved camps, filmed the way the afternoon actually went, fitting naturally into our evening cooking session.

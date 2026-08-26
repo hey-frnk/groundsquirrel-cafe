@@ -99,3 +99,49 @@ export function evelynePerson() {
     sameAs: socialProfiles(settings),
   };
 }
+
+/**
+ * Structured data for Frank Zheng.
+ *
+ * Same reasoning as `evelynePerson`: one node, one `@id`, so the crew page and
+ * the journal by-lines are read as the same person rather than three.
+ */
+export function frankPerson() {
+  const settings = getPage<Settings>("settings");
+
+  return {
+    "@type": "Person",
+    "@id": `${SITE_URL}/crew/#frank-zheng`,
+    name: "Frank Zheng",
+    givenName: "Frank",
+    familyName: "Zheng",
+    jobTitle: "Engineer, barista & photographer",
+    description:
+      "Frank Zheng is a Swiss electrical engineer who converted a 1992 VW LT camper into a solar-powered café and photographs the road it travels.",
+    url: `${SITE_URL}/crew/`,
+    email: `mailto:${settings.contactEmail}`,
+    knowsAbout: ["Van conversion", "Solar power", "Specialty coffee", "Photography"],
+    worksFor: { "@id": `${SITE_URL}/#organization` },
+    sameAs: socialProfiles(settings),
+  };
+}
+
+/**
+ * What a brand can actually commission: content made on the road, either for
+ * our own channels or handed over for theirs. Declared as a Service so that the
+ * collaboration page is legible as an offer and not just as a photo essay.
+ */
+export function collaborationService() {
+  return {
+    "@type": "Service",
+    "@id": `${SITE_URL}/tour/#collaboration`,
+    name: "Brand collaborations and content creation",
+    serviceType: "Content creation, product placement and UGC",
+    provider: { "@id": `${SITE_URL}/#organization` },
+    areaServed: ["Switzerland", "Germany", "Austria", "Europe"],
+    availableLanguage: ["de", "en"],
+    description:
+      "Product placement, campfire sessions, pop-up café days and destination storytelling, filmed on the road in a 1992 VW camper. Reels, photography and journal writing for a brand's own channels or ours, in German and English.",
+    url: `${SITE_URL}/tour/`,
+  };
+}

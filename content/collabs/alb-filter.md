@@ -14,4 +14,4 @@ link: ""
 order: 1
 ---
 
-Every cup we pour starts as water from a tap we have never seen before. The Alb Filter sits in Humbär's water line between the hose and the tank, so a flat white on a mountain pass tastes the way it should — and the filter got to show what it does somewhere more interesting than a kitchen.
+Every cup we pour starts as water from a tap we have never seen before. The Alb Filter sits in Humbär's water line between the hose and the tank, so a flat white on a mountain pass tastes the way it should and the filter got to show what it does at the most stunning places.
