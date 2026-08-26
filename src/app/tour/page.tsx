@@ -1,4 +1,5 @@
 import Image from "next/image";
+import HeroVideo from "@/components/HeroVideo";
 import { getAllCollabs, getAllTourStops, getPage, measureImage, type TourPhoto } from "@/lib/content";
 import { splitLines } from "@/lib/text";
 import JsonLd from "@/components/JsonLd";
@@ -28,9 +29,7 @@ interface AudienceItem {
 
 interface TourIntro {
   title: string;
-  kicker?: string;
   heroHeadline: string;
-  heroSubline?: string;
   intro: string;
   collabKicker: string;
   collabHeading: string;
@@ -68,13 +67,6 @@ function isPlaceholder(value?: string) {
 
 // Four, not five — five made the band restless. The Furka photo sits last so
 // the figure in it looks into the strip rather than off the edge of the page.
-const HERO_PHOTOS = [
-  { src: "/images/tour/hero-2.webp", alt: "A tray of freshly baked bagels below a Norwegian mountain" },
-  { src: "/images/tour/hero-3.webp", alt: "Humbär with his hatch open and the OPEN sign out" },
-  { src: "/images/tour/hero-5.webp", alt: "A table for two beside the camper in a Swedish forest" },
-  { src: "/images/tour/hero-1.webp", alt: "Cake carried out into the evening light on Furka Pass" },
-];
-
 // One photo per pillar, in the same order: the camper, the food, the ritual.
 const PILLAR_PHOTOS = [
   {
@@ -210,23 +202,22 @@ export default function TourPage() {
 
       {/* ---------- Hero: a contact sheet of the road ---------- */}
       <section className="relative isolate overflow-hidden">
-        <div className="absolute inset-0 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
-          {HERO_PHOTOS.map((photo, i) => (
-            <div
-              key={photo.src}
-              // 2 photos on phones, 3 on tablets, all 5 on desktop
-              className={`relative ${i === 2 ? "hidden sm:block" : ""} ${i > 2 ? "hidden lg:block" : ""}`}
-            >
-              <Image
-                src={photo.src}
-                alt={photo.alt}
-                fill
-                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                className="object-cover"
-                preload={i < 2}
-              />
-            </div>
-          ))}
+        {/* The poster is picked by the browser through <picture>, which
+            honours `media` and fetches exactly one file; the film on top is
+            chosen after mount for the same reason. See HeroVideo. */}
+        <div className="absolute inset-0">
+          <div
+            role="img"
+            aria-label="Humbär and a second camper parked by the shore in the evening sun, seen from above"
+            className="tour-hero-still absolute inset-0"
+          />
+          <HeroVideo
+            tallSrc="/videos/tour-hero-tall.mp4"
+            tallPoster="/images/tour/hero-poster-tall.webp"
+            wideSrc="/videos/tour-hero-wide.mp4"
+            widePoster="/images/tour/hero-poster-wide.webp"
+            label="Humbär and a second camper parked by the shore in the evening sun, seen from above"
+          />
         </div>
 
         {/* An even scrim across the whole contact sheet, and a short melt into
@@ -244,24 +235,13 @@ export default function TourPage() {
             height={160}
             className="mx-auto mb-9 w-[4.5rem] drop-shadow-lg"
           />
-          {intro.kicker && <p className="eyebrow eyebrow-light">{intro.kicker}</p>}
-          <h1 className="mt-6 text-4xl leading-[1.05] text-balance text-cream drop-shadow-md sm:text-6xl lg:text-7xl">
+          <h1 className="text-4xl leading-[1.05] text-balance text-cream drop-shadow-md sm:text-6xl lg:text-7xl">
             {splitLines(intro.heroHeadline).map((line) => (
               <span key={line} className="block">
                 {line}
               </span>
             ))}
           </h1>
-          {intro.heroSubline && (
-            <p className="mx-auto mt-7 max-w-2xl leading-relaxed text-cream/85">
-              {splitLines(intro.heroSubline).map((line) => (
-                <span key={line} className="block">
-                  {line}
-                </span>
-              ))}
-            </p>
-          )}
-
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
             <a href="#get-in-touch" className="btn btn-light">
               Get in touch

@@ -1,8 +1,6 @@
 ---
 title: "Tour"
-kicker: "The café at the edge of the world"
 heroHeadline: "Tell your story with<br>The Ground Squirrel Café"
-heroSubline: "We make you part of our café on wheels that we open up<br>wherever we're on the road."
 intro: "Once in a while, we turn our vintage Volkswagen camper into The Ground Squirrel Café, bringing coffee, community, friendship and inspiration wherever the road takes us. Through stories, pop-ups and adventures, we create a space where like-minded brands can join the journey and connect with our curious, engaged community."
 collabKicker: "Bring your product along for the journey"
 collabHeading: "Work with us"
