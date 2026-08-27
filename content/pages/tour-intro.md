@@ -1,7 +1,7 @@
 ---
 title: "Tour"
 heroHeadline: "Tell your story with<br>The Ground Squirrel Café"
-intro: "Once in a while, we turn our vintage Volkswagen camper into The Ground Squirrel Café, bringing coffee, community, friendship and inspiration wherever the road takes us. Through stories, pop-ups and adventures, we create a space where like-minded brands can join the journey and connect with our curious, engaged community."
+intro: "Once in a while, we turn our vintage Volkswagen camper into The Ground Squirrel Café, bringing coffee, community, friendship and inspiration wherever the road takes us.<br>Through stories, pop-ups and adventures, we create a space where like-minded brands can join the journey and connect with our curious, engaged community."
 collabKicker: "Bring your product along for the journey"
 collabHeading: "Work with us"
 pillars:

@@ -225,7 +225,7 @@ export default function TourPage() {
             the lower third out to nearly cream — which is exactly where the two
             buttons stand, and the outlined one disappeared into it. */}
         <div className="absolute inset-0 bg-ink/45" />
-        <div className="absolute inset-x-0 bottom-0 h-28 bg-linear-to-b from-transparent to-cream" />
+        <div className="absolute inset-x-0 bottom-0 h-28 bg-linear-to-b from-cream/0 to-cream" />
 
         <div className="relative mx-auto max-w-4xl px-6 pt-24 pb-32 text-center text-cream sm:pt-32 sm:pb-40">
           <Image
@@ -257,12 +257,28 @@ export default function TourPage() {
       </section>
 
       {/* ---------- What this is ---------- */}
-      {/* relative + z-10 so it sits above the hero's absolutely positioned overlay */}
-      <section className="relative z-10 mx-auto max-w-2xl px-6 text-center">
-        <p className="text-pretty leading-[1.85] text-graphite">
-          {intro.intro}
-        </p>
-        <span aria-hidden className="rule mx-auto mt-10" />
+      {/* Lifted onto a card that overlaps the foot of the film. The paragraph
+          used to sit in the gap between the hero and the next section with no
+          padding of its own, which read as a caption under the video rather
+          than the opening line of the page. A <br> in the CMS text splits it:
+          the first sentence is who we are, the rest is what that is worth to a
+          brand, and they want different weights. */}
+      <section className="relative z-10 mx-auto -mt-16 max-w-3xl px-6 sm:-mt-24">
+        <div className="paper-card px-7 py-12 text-center sm:px-16 sm:py-16">
+          <span aria-hidden className="rule mx-auto" />
+          {splitLines(intro.intro).map((para, i) => (
+            <p
+              key={para}
+              className={
+                i === 0
+                  ? "mt-9 text-pretty text-lg leading-[1.7] text-ink sm:text-xl"
+                  : "mt-6 text-pretty leading-[1.85] text-graphite"
+              }
+            >
+              {para}
+            </p>
+          ))}
+        </div>
       </section>
 
       {/* ---------- What the café is, and what a brand gets out of it ---------- */}

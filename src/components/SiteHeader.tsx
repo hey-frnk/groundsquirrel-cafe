@@ -59,10 +59,14 @@ export default function SiteHeader() {
             alt="The Ground Squirrel Café"
             width={40}
             height={40}
-            className="w-9"
+            // Over the sunlit film the mark washed out; the shadow gives it an
+            // edge without putting a plate behind it.
+            className={`w-9 ${overlay ? "drop-shadow-[0_1px_3px_rgb(0_0_0/0.45)]" : ""}`}
           />
           <span
-            className={`hidden text-[0.72rem] uppercase leading-none tracking-[0.24em] sm:inline ${
+            // Held back to lg: between 768 and ~850 the wordmark and the five
+            // links were fighting for the same row and overlapping.
+            className={`hidden text-[0.72rem] uppercase leading-none tracking-[0.24em] lg:inline ${
               overlay ? "text-cream drop-shadow" : "text-ink"
             }`}
           >
