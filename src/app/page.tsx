@@ -214,9 +214,15 @@ export default function Home() {
       {/* Out of the page margins entirely: the band runs the full width of the
           window, which is what makes it read as one piece of film rather than
           five pictures placed on a page. */}
-      {/* No gap above: the band begins where the intro film ends. */}
-      <section>
+      {/* No gap above: the band begins where the intro film ends. Just a
+          10px lip of the hero's own dark carried over the top of the films, so
+          the join is a join rather than a cut. */}
+      <section className="relative">
         <SectionFilmstrip items={PLACES} />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 top-0 h-2.5 bg-linear-to-b from-ink/85 to-ink/0"
+        />
 
         {/* Only says anything where the band actually scrolls. */}
         <p className="mt-5 text-center text-[0.65rem] uppercase tracking-[0.2em] text-graphite/50 lg:hidden">
