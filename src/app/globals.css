@@ -11,9 +11,6 @@
    --------------------------------------------------------------------------- */
 :root {
   --color-cream: #f7f2e7; /* page background */
-  /* The same cream at zero alpha. A gradient that ends at `transparent` ends
-     at transparent *black*, and fades through grey on the way there. */
-  --color-cream-0: #f7f2e700;
   --color-ivory: #e1cd9e; /* RAL 1014 — cards, bands, dividers */
   --color-lilac: #c7b7db; /* accent — hover, borders */
   --color-rose: #e0a7bb; /* highlight / CTA */
@@ -430,12 +427,12 @@ html {
 
 .band-fade::before {
   top: 0;
-  background: linear-gradient(to bottom, var(--color-cream), var(--color-cream-0));
+  background: linear-gradient(to bottom, var(--color-cream), transparent);
 }
 
 .band-fade::after {
   bottom: 0;
-  background: linear-gradient(to top, var(--color-cream), var(--color-cream-0));
+  background: linear-gradient(to top, var(--color-cream), transparent);
 }
 
 @media (min-width: 640px) {

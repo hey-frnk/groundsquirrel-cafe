@@ -140,10 +140,10 @@ export default function Home() {
 
           <div className="absolute inset-x-0 top-0 h-44 bg-linear-to-b from-ink/50 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 h-3/4 bg-linear-to-t from-ink/85 via-ink/42 to-transparent" />
-          {/* The film used to end on a hard line against the cream. Kept
-              shallower than the welcome's own bottom padding so it never
-              reaches the words. */}
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-8 bg-linear-to-b from-cream/0 to-cream sm:h-14" />
+          {/* The film hands over to the dark passage below rather than
+              stopping on a line: its last inch settles onto exactly the
+              colour that section is painted in. */}
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-14 bg-linear-to-b from-ink/0 to-ink sm:h-20" />
 
           {/* Brand mark and navigation, sitting on the film. */}
           <div className="relative z-10 px-6 pt-6 sm:absolute sm:inset-x-0 sm:top-0 sm:px-10 sm:pt-8">
@@ -209,24 +209,29 @@ export default function Home() {
       </section>
 
       {/* ---------- The index ---------- */}
-      <section className="pt-24 sm:pt-32">
-        <div className="mx-auto max-w-7xl px-6 text-center sm:px-10">
-          <p className="eyebrow">have a look around</p>
-          <h2 className="mt-4 text-3xl sm:text-[2.6rem]">Where would you like to go?</h2>
-          <span aria-hidden className="rule mx-auto mt-6" />
+      {/* The lights go down between the hero and the films. The page is warm
+          and pale everywhere else, so this passage is the one dark room in it:
+          the intro film settles into ink, the question is asked in cream on
+          that ink, the five films surface out of it and sink back, and then
+          the page comes up into daylight again. */}
+      <section className="relative bg-ink">
+        <div className="mx-auto max-w-7xl px-6 pt-24 pb-14 text-center sm:px-10 sm:pt-32 sm:pb-16">
+          <p className="eyebrow eyebrow-light">have a look around</p>
+          <h2 className="mt-4 text-3xl text-cream sm:text-[2.6rem]">Where would you like to go?</h2>
+          <span aria-hidden className="rule rule-light mx-auto mt-6" />
         </div>
 
-        {/* Out of the page margins entirely: the band runs the full width of
-            the window, which is what makes it read as one piece of film rather
-            than five pictures placed on a page. */}
-        <div className="mt-14">
-          <SectionFilmstrip items={PLACES} />
-        </div>
+        <SectionFilmstrip items={PLACES} />
 
         {/* Only says anything where the band actually scrolls. */}
-        <p className="mt-5 text-center text-[0.65rem] uppercase tracking-[0.2em] text-graphite/50 lg:hidden">
+        <p className="mt-6 text-center text-[0.65rem] uppercase tracking-[0.2em] text-cream/40 lg:hidden">
           Swipe through
         </p>
+
+        {/* Back up into the daylight of the page. Deep enough that the ink is
+            still ink for the first stretch of it, so the band has room to
+            stand in the dark before the warmth returns. */}
+        <div className="h-40 bg-linear-to-b from-ink to-cream sm:h-56" />
       </section>
 
       {/* ---------- The studio ---------- */}

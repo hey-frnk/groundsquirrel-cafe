@@ -178,7 +178,7 @@ export default function SectionFilmstrip({ items }: { items: FilmstripItem[] }) 
       // Full bleed and butted edge to edge: five columns of 9:16 across the
       // whole window make one continuous band of film rather than five cards
       // on a shelf, and at exactly 9:16 nothing of any frame is cropped away.
-      className="filmstrip flex snap-x snap-mandatory overflow-x-auto border-y border-ink/8 lg:grid lg:grid-cols-5 lg:overflow-visible"
+      className="filmstrip flex snap-x snap-mandatory overflow-x-auto lg:grid lg:grid-cols-5 lg:overflow-visible"
     >
       {items.map((item, i) => {
         const on = active === i;
@@ -223,9 +223,13 @@ export default function SectionFilmstrip({ items }: { items: FilmstripItem[] }) 
                 />
               )}
 
-              {/* Deep at the foot to carry the lettering, and a veil over the
-                  whole column that lifts for the one being watched. */}
-              <div className="absolute inset-0 bg-linear-to-t from-ink/90 via-ink/20 to-ink/25" />
+              {/* Each film surfaces out of the dark and sinks back into it:
+                  full ink at the very foot — which is also what carries the
+                  lettering — clear through the middle, and a second wash at
+                  the head. Against the ink the section is painted in, that
+                  means no edge at all, top or bottom. */}
+              <div className="absolute inset-0 bg-linear-to-t from-ink from-0% via-ink/10 via-22% to-ink/0 to-48%" />
+              <div className="absolute inset-x-0 top-0 h-16 bg-linear-to-b from-ink to-ink/0 sm:h-20" />
               <div
                 className={`absolute inset-0 bg-ink/30 transition-opacity duration-[850ms] ease-out ${
                   on ? "opacity-0" : "opacity-100"
