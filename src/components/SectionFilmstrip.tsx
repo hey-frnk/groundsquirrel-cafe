@@ -178,7 +178,7 @@ export default function SectionFilmstrip({ items }: { items: FilmstripItem[] }) 
       // Full bleed and butted edge to edge: five columns of 9:16 across the
       // whole window make one continuous band of film rather than five cards
       // on a shelf, and at exactly 9:16 nothing of any frame is cropped away.
-      className="filmstrip flex snap-x snap-mandatory overflow-x-auto border-y border-ink/10 lg:grid lg:grid-cols-5 lg:overflow-visible"
+      className="filmstrip flex snap-x snap-mandatory overflow-x-auto border-y border-ink/8 lg:grid lg:grid-cols-5 lg:overflow-visible"
     >
       {items.map((item, i) => {
         const on = active === i;
@@ -210,7 +210,7 @@ export default function SectionFilmstrip({ items }: { items: FilmstripItem[] }) 
                   ref={(el) => {
                     videos.current[i] = el;
                   }}
-                  className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
+                  className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-[850ms] ease-out ${
                     on ? "opacity-100" : "opacity-0"
                   }`}
                   src={item.video}
@@ -227,7 +227,7 @@ export default function SectionFilmstrip({ items }: { items: FilmstripItem[] }) 
                   whole column that lifts for the one being watched. */}
               <div className="absolute inset-0 bg-linear-to-t from-ink/90 via-ink/20 to-ink/25" />
               <div
-                className={`absolute inset-0 bg-ink/30 transition-opacity duration-700 ${
+                className={`absolute inset-0 bg-ink/30 transition-opacity duration-[850ms] ease-out ${
                   on ? "opacity-0" : "opacity-100"
                 }`}
               />
@@ -242,7 +242,7 @@ export default function SectionFilmstrip({ items }: { items: FilmstripItem[] }) 
                     that steps in beside it. */}
                 <span
                   aria-hidden
-                  className={`block h-px origin-left bg-rose transition-transform duration-700 ease-out ${
+                  className={`block h-px origin-left bg-rose transition-transform duration-[900ms] ease-out ${
                     on ? "scale-x-100" : "scale-x-0"
                   }`}
                 />
@@ -254,7 +254,7 @@ export default function SectionFilmstrip({ items }: { items: FilmstripItem[] }) 
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="1.8"
-                    className={`h-[0.62em] w-[0.62em] shrink-0 transition-all duration-500 ${
+                    className={`h-[0.62em] w-[0.62em] shrink-0 transition-all duration-700 ease-out ${
                       on ? "translate-x-0 opacity-100" : "-translate-x-2 opacity-0"
                     }`}
                   >
@@ -263,7 +263,7 @@ export default function SectionFilmstrip({ items }: { items: FilmstripItem[] }) 
                 </h3>
                 {/* Held in the flow so the name never shifts as it appears. */}
                 <p
-                  className={`mt-2.5 max-w-[22ch] text-[0.84rem] leading-snug text-cream/80 transition-all duration-500 ${
+                  className={`mt-2.5 max-w-[22ch] text-[0.84rem] leading-snug text-cream/80 transition-all duration-700 ease-out ${
                     on ? "translate-y-0 opacity-100" : "translate-y-1.5 opacity-0"
                   }`}
                 >

@@ -47,10 +47,10 @@ const PLACES: FilmstripItem[] = [
   {
     href: "/tour",
     label: "Tour",
-    sub: "The café at the edge of the world",
+    sub: "The café on wheels, and how to bring your products alive",
     poster: "/images/home/tiles/tour.webp",
     video: "/videos/home/tour.mp4",
-    alt: "Two people at the table inside the camper over cake and coffee",
+    alt: "Cake, coffee and the handwritten café menu on the table in the camper",
   },
   {
     href: "/journal",
@@ -63,7 +63,7 @@ const PLACES: FilmstripItem[] = [
   {
     href: "/studio",
     label: "Studio",
-    sub: "Evelyne's wildlife illustration",
+    sub: "Evelyne's wildlife art studio",
     poster: "/images/home/tiles/studio.webp",
     video: "/videos/home/studio.mp4",
     alt: "Painting a squirrel onto a card at a window above the rooftops",
@@ -71,7 +71,7 @@ const PLACES: FilmstripItem[] = [
   {
     href: "/shop",
     label: "Shop",
-    sub: "Prints, stickers and picture books",
+    sub: "Prints, stickers and more",
     poster: "/images/home/tiles/shop.webp",
     video: "/videos/home/shop.mp4",
     alt: "An open picture book showing two hand-painted squirrels",
@@ -79,7 +79,7 @@ const PLACES: FilmstripItem[] = [
   {
     href: "/crew",
     label: "Crew",
-    sub: "The people, the van, the mascot",
+    sub: "The people behind",
     poster: "/images/home/tiles/crew.webp",
     video: "/videos/home/crew.mp4",
     alt: "Two people sitting on a rock above the fjord at sunrise",
@@ -140,6 +140,10 @@ export default function Home() {
 
           <div className="absolute inset-x-0 top-0 h-44 bg-linear-to-b from-ink/50 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 h-3/4 bg-linear-to-t from-ink/85 via-ink/42 to-transparent" />
+          {/* The film used to end on a hard line against the cream. Kept
+              shallower than the welcome's own bottom padding so it never
+              reaches the words. */}
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-8 bg-linear-to-b from-cream/0 to-cream sm:h-14" />
 
           {/* Brand mark and navigation, sitting on the film. */}
           <div className="relative z-10 px-6 pt-6 sm:absolute sm:inset-x-0 sm:top-0 sm:px-10 sm:pt-8">
@@ -227,7 +231,7 @@ export default function Home() {
 
       {/* ---------- The studio ---------- */}
       <section id="studio" className="mt-28 scroll-mt-24 sm:mt-40">
-        <div className="wash-cool border-y border-ink/8">
+        <div className="wash-cool wash-soft">
           <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 sm:px-10 sm:py-28 lg:grid-cols-[0.9fr_1fr] lg:gap-20">
             <div className="relative order-2 min-h-[16rem] lg:order-1 lg:min-h-[26rem]">
               <Image
@@ -244,7 +248,11 @@ export default function Home() {
               <h2 className="mt-5 max-w-lg text-balance text-3xl leading-[1.08] sm:text-[2.75rem]">
                 {home.studioHeading}
               </h2>
-              <p className="mt-6 max-w-lg leading-relaxed text-graphite">{home.studioText}</p>
+              {splitLines(home.studioText).map((paragraph) => (
+                <p key={paragraph} className="mt-6 max-w-lg leading-relaxed text-graphite">
+                  {paragraph}
+                </p>
+              ))}
               <div className="mt-9 flex flex-wrap gap-3">
                 <Link href="/studio" className="btn btn-primary">
                   Into the studio
@@ -316,7 +324,7 @@ export default function Home() {
 
       {/* ---------- A quiet moment ---------- */}
       <section className="relative mt-24 sm:mt-36">
-        <div className="relative isolate h-[26rem] sm:h-[32rem] lg:h-[38rem]">
+        <div className="band-fade relative isolate h-[26rem] sm:h-[32rem] lg:h-[38rem]">
           <Image
             src="/images/home/band-wheel.webp"
             alt="A cappuccino with a heart in the foam, held in front of the VW steering wheel"
@@ -379,7 +387,7 @@ export default function Home() {
 
       {/* ---------- Come find us ---------- */}
       <section id="hello" className="relative mt-24 scroll-mt-24 sm:mt-36">
-        <div className="relative isolate flex min-h-[34rem] items-center justify-center px-6 py-24">
+        <div className="band-fade relative isolate flex min-h-[34rem] items-center justify-center px-6 py-24">
           <Image
             src="/images/home/band-golden.webp"
             alt="The inside of the camper glowing orange in the evening sun"

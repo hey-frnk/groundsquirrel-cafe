@@ -11,6 +11,9 @@
    --------------------------------------------------------------------------- */
 :root {
   --color-cream: #f7f2e7; /* page background */
+  /* The same cream at zero alpha. A gradient that ends at `transparent` ends
+     at transparent *black*, and fades through grey on the way there. */
+  --color-cream-0: #f7f2e700;
   --color-ivory: #e1cd9e; /* RAL 1014 — cards, bands, dividers */
   --color-lilac: #c7b7db; /* accent — hover, borders */
   --color-rose: #e0a7bb; /* highlight / CTA */
@@ -330,6 +333,23 @@ html {
   border-block: 1px solid color-mix(in srgb, var(--color-ink) 9%, transparent);
 }
 
+/* A wash band has no business drawing a line across the page to announce
+   itself — it is a change of light, so it can arrive as one. Opt in with
+   `wash-soft` beside the wash: the pages that still rule their bands off with
+   a border keep doing so, since a mask would fade that border away and leave
+   the band looking half-finished. */
+.wash-soft {
+  --wash-edge: 5rem;
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black var(--wash-edge),
+    black calc(100% - var(--wash-edge)),
+    transparent
+  );
+}
+
 /* A soft wash, where the page used to sit on scattered white dots. */
 .wash-warm {
   background:
@@ -369,7 +389,7 @@ html {
 @keyframes reveal-in {
   from {
     opacity: 0;
-    transform: translateY(1.35rem);
+    transform: translateY(1rem);
   }
   to {
     opacity: 1;
@@ -380,10 +400,48 @@ html {
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
     .reveal {
-      animation: reveal-in linear both;
+      /* Eased rather than linear, and spread over more of the scroll: the
+         section is most of the way there by the time it is properly on
+         screen, so it arrives instead of snapping into place. */
+      animation: reveal-in cubic-bezier(0.22, 0.61, 0.36, 1) both;
       animation-timeline: view();
-      animation-range: entry 4% cover 26%;
+      animation-range: entry 2% cover 34%;
     }
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Where a full-bleed band meets the page
+
+   A photograph that runs the width of the window used to stop dead against the
+   cream, top and bottom. These dissolve it instead: the page colour is carried
+   a little way into the picture, so the band begins and ends rather than being
+   cut. Put on a wrapper with the band inside it.
+   --------------------------------------------------------------------------- */
+.band-fade::before,
+.band-fade::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  height: 4.5rem;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.band-fade::before {
+  top: 0;
+  background: linear-gradient(to bottom, var(--color-cream), var(--color-cream-0));
+}
+
+.band-fade::after {
+  bottom: 0;
+  background: linear-gradient(to top, var(--color-cream), var(--color-cream-0));
+}
+
+@media (min-width: 640px) {
+  .band-fade::before,
+  .band-fade::after {
+    height: 7rem;
   }
 }
 
@@ -412,8 +470,8 @@ html {
 @media (hover: hover) and (pointer: fine) and (min-width: 1024px) {
   .filmstrip > * {
     transition:
-      opacity 700ms ease,
-      filter 700ms ease;
+      opacity 850ms cubic-bezier(0.22, 0.61, 0.36, 1),
+      filter 850ms cubic-bezier(0.22, 0.61, 0.36, 1);
   }
 
   .filmstrip:hover > * {
