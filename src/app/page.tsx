@@ -146,9 +146,6 @@ export default function Home() {
 
           <div className="absolute inset-x-0 top-0 h-44 bg-linear-to-b from-ink/50 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 h-3/4 bg-linear-to-t from-ink/85 via-ink/42 to-transparent" />
-          {/* Kept shallower than the welcome's own bottom padding, and under
-              it rather than over it, so it never reaches the words. */}
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] h-8 bg-linear-to-b from-cream/0 to-cream sm:h-14" />
 
           {/* Brand mark and navigation, sitting on the film. */}
           <div className="relative z-10 px-6 pt-6 sm:absolute sm:inset-x-0 sm:top-0 sm:px-10 sm:pt-8">
@@ -217,7 +214,8 @@ export default function Home() {
       {/* Out of the page margins entirely: the band runs the full width of the
           window, which is what makes it read as one piece of film rather than
           five pictures placed on a page. */}
-      <section className="pt-24 sm:pt-32">
+      {/* No gap above: the band begins where the intro film ends. */}
+      <section>
         <SectionFilmstrip items={PLACES} />
 
         {/* Only says anything where the band actually scrolls. */}
@@ -227,7 +225,7 @@ export default function Home() {
       </section>
 
       {/* ---------- The studio ---------- */}
-      <section id="studio" className="mt-28 scroll-mt-24 sm:mt-40">
+      <section id="studio" className="mt-14 scroll-mt-24 sm:mt-20">
         <div className="wash-cool wash-soft">
           <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 sm:px-10 sm:py-28 lg:grid-cols-[0.9fr_1fr] lg:gap-20">
             <div className="relative order-2 min-h-[16rem] lg:order-1 lg:min-h-[26rem]">
