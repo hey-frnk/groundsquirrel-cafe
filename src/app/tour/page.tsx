@@ -1,5 +1,8 @@
 import Image from "next/image";
 import HeroVideo from "@/components/HeroVideo";
+import CountUp from "@/components/CountUp";
+import GrowBar from "@/components/GrowBar";
+import { InstagramIcon } from "@/components/icons";
 import { getAllCollabs, getAllTourStops, getPage, measureImage, type TourPhoto } from "@/lib/content";
 import { splitLines } from "@/lib/text";
 import JsonLd from "@/components/JsonLd";
@@ -169,6 +172,12 @@ function Plate({
 
 export default function TourPage() {
   const intro = getPage<TourIntro>("tour-intro");
+  const { instagramUrl } = getPage<{ instagramUrl: string }>("settings");
+  // The handle is read off the URL rather than written twice, so changing the
+  // account in the CMS can't leave a stale @name behind.
+  const instagramHandle = isPlaceholder(instagramUrl)
+    ? ""
+    : `@${instagramUrl.replace(/\/+$/, "").split("/").pop()}`;
   const stops = getAllTourStops();
   const collabs = getAllCollabs();
   const pillars = intro.pillars ?? [];
@@ -397,7 +406,23 @@ export default function TourPage() {
       {reach.length > 0 && (
         <section className="mx-auto max-w-7xl px-6 pt-24 sm:px-10 sm:pt-32">
           <div className="band-ivory rounded-lg px-6 py-12 sm:px-12 sm:py-14">
-            <p className="eyebrow">{intro.reachHeading}</p>
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <p className="eyebrow">{intro.reachHeading}</p>
+              {/* The figures are all from one account, so the account itself
+                  belongs next to them — anyone weighing them up will want to
+                  go and look. */}
+              {instagramHandle && (
+                <a
+                  href={instagramUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="link-underline inline-flex items-center gap-2 text-[0.7rem] uppercase tracking-[0.16em] text-graphite/80 transition-colors hover:text-ink"
+                >
+                  <InstagramIcon size={15} />
+                  {instagramHandle}
+                </a>
+              )}
+            </div>
 
             <dl className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4">
               {reach.map((item) => (
@@ -408,7 +433,7 @@ export default function TourPage() {
                     <span aria-hidden className="mb-3 block h-[3px] w-9 rounded-full bg-rose" />
                   )}
                   <dd className="font-display text-[2rem] leading-none text-ink sm:text-[2.75rem]">
-                    {item.value}
+                    <CountUp value={item.value} />
                   </dd>
                   <dt className="mt-3 text-[0.7rem] uppercase tracking-[0.16em] text-graphite/70">
                     {item.label}
@@ -425,19 +450,14 @@ export default function TourPage() {
                     {intro.audienceHeading}
                   </p>
                   <ul className="mt-6 grid gap-3.5">
-                    {audience.map((item) => (
+                    {audience.map((item, i) => (
                       <li key={item.label} className="flex items-center gap-4">
                         <span className="w-32 shrink-0 text-sm text-graphite sm:w-40">
                           {item.label}
                         </span>
-                        <span className="h-1.5 flex-1 overflow-hidden rounded-full bg-ink/10">
-                          <span
-                            className="block h-full rounded-full bg-rose"
-                            style={{ width: `${(item.percent / audienceMax) * 100}%` }}
-                          />
-                        </span>
+                        <GrowBar width={(item.percent / audienceMax) * 100} delay={i * 90} />
                         <span className="w-14 shrink-0 text-right text-sm tabular-nums text-graphite">
-                          {item.percent.toFixed(1)}%
+                          <CountUp value={`${item.percent.toFixed(1)}%`} />
                         </span>
                       </li>
                     ))}
@@ -449,7 +469,7 @@ export default function TourPage() {
                     {facts.map((fact) => (
                       <div key={fact.label} className="flex items-baseline gap-3">
                         <dd className="font-display text-2xl leading-none text-ink">
-                          {fact.value}
+                          <CountUp value={fact.value} />
                         </dd>
                         <dt className="text-sm text-graphite">{fact.label}</dt>
                       </div>
