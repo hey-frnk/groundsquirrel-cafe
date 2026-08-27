@@ -257,28 +257,22 @@ export default function TourPage() {
       </section>
 
       {/* ---------- What this is ---------- */}
-      {/* Lifted onto a card that overlaps the foot of the film. The paragraph
-          used to sit in the gap between the hero and the next section with no
-          padding of its own, which read as a caption under the video rather
-          than the opening line of the page. A <br> in the CMS text splits it:
-          the first sentence is who we are, the rest is what that is worth to a
-          brand, and they want different weights. */}
-      <section className="relative z-10 mx-auto -mt-16 max-w-3xl px-6 sm:-mt-24">
-        <div className="paper-card px-7 py-12 text-center sm:px-16 sm:py-16">
-          <span aria-hidden className="rule mx-auto" />
-          {splitLines(intro.intro).map((para, i) => (
-            <p
-              key={para}
-              className={
-                i === 0
-                  ? "mt-9 text-pretty text-lg leading-[1.7] text-ink sm:text-xl"
-                  : "mt-6 text-pretty leading-[1.85] text-graphite"
-              }
-            >
-              {para}
-            </p>
-          ))}
-        </div>
+      {/* No frame, no accent, no overlap — the film ends, then a long, quiet
+          breath, then the words. All the emphasis comes from the space around
+          the paragraph and the air inside the lines; nothing is set louder
+          than anything else. relative + z-10 keeps it above the hero's
+          absolutely positioned overlay. */}
+      <section className="relative z-10 mx-auto max-w-[42rem] px-6 pt-32 pb-6 text-center sm:pt-44 sm:pb-14">
+        {splitLines(intro.intro).map((para, i) => (
+          <p
+            key={para}
+            className={`text-pretty text-[1.0625rem] leading-[2.1] tracking-[0.02em] text-graphite sm:text-[1.15rem] ${
+              i === 0 ? "" : "mt-9"
+            }`}
+          >
+            {para}
+          </p>
+        ))}
       </section>
 
       {/* ---------- What the café is, and what a brand gets out of it ---------- */}
