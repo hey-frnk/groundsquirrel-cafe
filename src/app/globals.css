@@ -404,6 +404,34 @@ html {
 }
 
 /* ---------------------------------------------------------------------------
+   The filmstrip of five sections on the homepage. Hovering one panel quiets
+   the other four, so the eye is told where to look instead of being left to
+   choose between five things all shouting at once. Only where there is a real
+   pointer and room for the full row.
+   --------------------------------------------------------------------------- */
+@media (hover: hover) and (pointer: fine) and (min-width: 1024px) {
+  .filmstrip > * {
+    transition:
+      opacity 500ms ease,
+      transform 500ms ease;
+  }
+
+  .filmstrip:hover > * {
+    opacity: 0.45;
+  }
+
+  .filmstrip > *:hover {
+    opacity: 1;
+    transform: translateY(-8px);
+  }
+}
+
+/* One panel per swipe on touch, rather than skidding past two or three. */
+.filmstrip > * {
+  scroll-snap-stop: always;
+}
+
+/* ---------------------------------------------------------------------------
    The homepage intro film, with a still for anyone who'd rather not have
    motion — the poster frame stands in for the loop.
    --------------------------------------------------------------------------- */

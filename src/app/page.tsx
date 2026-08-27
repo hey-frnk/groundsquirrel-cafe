@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
+import SectionFilmstrip, { type FilmstripItem } from "@/components/SectionFilmstrip";
 import { getAllJournalPosts, getPage } from "@/lib/content";
 import { splitLines } from "@/lib/text";
 import { organization, webSite } from "@/lib/seo";
@@ -38,59 +39,50 @@ const NAV_LINKS = [
 ];
 
 /**
- * The index of the site, laid out as a magazine contents page: two wide plates
- * on the first row, three tall ones on the second. `span` is the width in
- * twelfths on desktop; everything below that is one or two even columns.
- *
- * The plates are sized by height rather than by aspect ratio, so that two
- * neighbours of different widths still end on the same line and their captions
- * read as a row — an aspect ratio would leave the narrower one hanging.
+ * The index of the site: five vertical films side by side, one per section,
+ * each of them a moment from that part of the road. They only move when
+ * someone asks — see SectionFilmstrip for what that costs.
  */
-const PLACES = [
+const PLACES: FilmstripItem[] = [
   {
     href: "/tour",
     label: "Tour",
-    sub: "The café on wheels, and how to book it for your day",
-    image: "/images/tour/hero-3.webp",
-    alt: "Humbär with his hatch open and the OPEN sign out",
-    span: "lg:col-span-7",
-    height: "h-[20rem] sm:h-[24rem] lg:h-[27rem]",
+    sub: "The café at the edge of the world",
+    poster: "/images/home/tiles/tour.webp",
+    video: "/videos/home/tour.mp4",
+    alt: "Two people at the table inside the camper over cake and coffee",
   },
   {
     href: "/journal",
     label: "Journal",
     sub: "Stories from the road",
-    image: "/images/journal/sichuan-road-trip/IMG_6312.jpg",
-    alt: "A misty mountain road in Sichuan",
-    span: "lg:col-span-5",
-    height: "h-[20rem] sm:h-[24rem] lg:h-[27rem]",
+    poster: "/images/home/tiles/journal.webp",
+    video: "/videos/home/journal.mp4",
+    alt: "Driving the camper down a long road through the forest",
   },
   {
     href: "/studio",
     label: "Studio",
     sub: "Evelyne's wildlife illustration",
-    image: "/images/studio/evelyne-in-humbaer.webp",
-    alt: "Evelyne drawing at the table inside the camper",
-    span: "lg:col-span-4",
-    height: "h-[24rem] sm:h-[28rem] lg:h-[30rem]",
+    poster: "/images/home/tiles/studio.webp",
+    video: "/videos/home/studio.mp4",
+    alt: "Painting a squirrel onto a card at a window above the rooftops",
   },
   {
     href: "/shop",
     label: "Shop",
     sub: "Prints, stickers and picture books",
-    image: "/images/studio/stickers-on-table.webp",
-    alt: "Hand-drawn squirrel stickers spread on a table",
-    span: "lg:col-span-4",
-    height: "h-[24rem] sm:h-[28rem] lg:h-[30rem]",
+    poster: "/images/home/tiles/shop.webp",
+    video: "/videos/home/shop.mp4",
+    alt: "An open picture book showing two hand-painted squirrels",
   },
   {
     href: "/crew",
     label: "Crew",
     sub: "The people, the van, the mascot",
-    image: "/images/crew/evelyne-and-frank.webp",
-    alt: "Evelyne and Frank together outside the camper",
-    span: "lg:col-span-4",
-    height: "h-[24rem] sm:h-[28rem] lg:h-[30rem]",
+    poster: "/images/home/tiles/crew.webp",
+    video: "/videos/home/crew.mp4",
+    alt: "Two people sitting on a rock above the fjord at sunrise",
   },
 ];
 
@@ -220,39 +212,14 @@ export default function Home() {
           <span aria-hidden className="rule mx-auto mt-6" />
         </div>
 
-        <div className="mt-12 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-12">
-          {PLACES.map((place, i) => (
-            <Link
-              key={place.href}
-              href={place.href}
-              className={`group reveal block ${place.span}`}
-            >
-              <div
-                className={`relative overflow-hidden rounded-xl border border-ink/10 bg-ivory/25 shadow-[0_10px_26px_-24px_rgba(74,66,53,0.9)] ${place.height}`}
-              >
-                <Image
-                  src={place.image}
-                  alt={place.alt}
-                  fill
-                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 33vw"
-                  className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.04]"
-                />
-              </div>
-
-              <div className="mt-5 flex items-start gap-5">
-                <span className="mt-1.5 shrink-0 font-stamp text-[0.7rem] tracking-[0.15em] text-ink/45">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <div>
-                  <h3 className="text-2xl transition-colors duration-300 group-hover:text-rose">
-                    {place.label}
-                  </h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-graphite/85">{place.sub}</p>
-                </div>
-              </div>
-            </Link>
-          ))}
+        <div className="mt-12">
+          <SectionFilmstrip items={PLACES} />
         </div>
+
+        {/* Only says anything where the strip actually scrolls. */}
+        <p className="mt-4 text-center text-[0.65rem] uppercase tracking-[0.2em] text-graphite/50 lg:hidden">
+          Swipe through
+        </p>
       </section>
 
       {/* ---------- The studio ---------- */}
