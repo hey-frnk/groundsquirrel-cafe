@@ -321,7 +321,7 @@ export default function Home() {
 
       {/* ---------- A quiet moment ---------- */}
       <section className="relative mt-24 sm:mt-36">
-        <div className="band-fade relative isolate h-[26rem] sm:h-[32rem] lg:h-[38rem]">
+        <div className="relative isolate h-[26rem] sm:h-[32rem] lg:h-[38rem]">
           <Image
             src="/images/home/band-wheel.webp"
             alt="A cappuccino with a heart in the foam, held in front of the VW steering wheel"
@@ -384,7 +384,7 @@ export default function Home() {
 
       {/* ---------- Come find us ---------- */}
       <section id="hello" className="relative mt-24 scroll-mt-24 sm:mt-36">
-        <div className="band-fade relative isolate flex min-h-[34rem] items-center justify-center px-6 py-24">
+        <div className="relative isolate flex min-h-[34rem] items-center justify-center px-6 py-24">
           <Image
             src="/images/home/band-golden.webp"
             alt="The inside of the camper glowing orange in the evening sun"
