@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import JsonLd from "@/components/JsonLd";
+import SectionFilmstrip, { type FilmstripItem } from "@/components/SectionFilmstrip";
 import { getAllJournalPosts, getPage } from "@/lib/content";
 import { splitLines } from "@/lib/text";
 import { organization, webSite } from "@/lib/seo";
@@ -38,59 +39,50 @@ const NAV_LINKS = [
 ];
 
 /**
- * The index of the site, laid out as a magazine contents page: two wide plates
- * on the first row, three tall ones on the second. `span` is the width in
- * twelfths on desktop; everything below that is one or two even columns.
- *
- * The plates are sized by height rather than by aspect ratio, so that two
- * neighbours of different widths still end on the same line and their captions
- * read as a row — an aspect ratio would leave the narrower one hanging.
+ * The index of the site: five vertical films side by side, one per section,
+ * each of them a moment from that part of the road. They only move when
+ * someone asks — see SectionFilmstrip for what that costs.
  */
-const PLACES = [
+const PLACES: FilmstripItem[] = [
   {
     href: "/tour",
     label: "Tour",
-    sub: "The café on wheels, and how to book it for your day",
-    image: "/images/tour/hero-3.webp",
-    alt: "Humbär with his hatch open and the OPEN sign out",
-    span: "lg:col-span-7",
-    height: "h-[20rem] sm:h-[24rem] lg:h-[27rem]",
+    sub: "The café on wheels, and how to bring your products alive",
+    poster: "/images/home/tiles/tour.webp",
+    video: "/videos/home/tour.mp4",
+    alt: "Cake, coffee and the handwritten café menu on the table in the camper",
   },
   {
     href: "/journal",
     label: "Journal",
     sub: "Stories from the road",
-    image: "/images/journal/sichuan-road-trip/IMG_6312.jpg",
-    alt: "A misty mountain road in Sichuan",
-    span: "lg:col-span-5",
-    height: "h-[20rem] sm:h-[24rem] lg:h-[27rem]",
+    poster: "/images/home/tiles/journal.webp",
+    video: "/videos/home/journal.mp4",
+    alt: "Driving the camper down a long road through the forest",
   },
   {
     href: "/studio",
     label: "Studio",
-    sub: "Evelyne's wildlife illustration",
-    image: "/images/studio/evelyne-in-humbaer.webp",
-    alt: "Evelyne drawing at the table inside the camper",
-    span: "lg:col-span-4",
-    height: "h-[24rem] sm:h-[28rem] lg:h-[30rem]",
+    sub: "Evelyne's wildlife art studio",
+    poster: "/images/home/tiles/studio.webp",
+    video: "/videos/home/studio.mp4",
+    alt: "Painting a squirrel onto a card at a window above the rooftops",
   },
   {
     href: "/shop",
     label: "Shop",
-    sub: "Prints, stickers and picture books",
-    image: "/images/studio/stickers-on-table.webp",
-    alt: "Hand-drawn squirrel stickers spread on a table",
-    span: "lg:col-span-4",
-    height: "h-[24rem] sm:h-[28rem] lg:h-[30rem]",
+    sub: "Prints, stickers and more",
+    poster: "/images/home/tiles/shop.webp",
+    video: "/videos/home/shop.mp4",
+    alt: "An open picture book showing two hand-painted squirrels",
   },
   {
     href: "/crew",
     label: "Crew",
-    sub: "The people, the van, the mascot",
-    image: "/images/crew/evelyne-and-frank.webp",
-    alt: "Evelyne and Frank together outside the camper",
-    span: "lg:col-span-4",
-    height: "h-[24rem] sm:h-[28rem] lg:h-[30rem]",
+    sub: "The people behind",
+    poster: "/images/home/tiles/crew.webp",
+    video: "/videos/home/crew.mp4",
+    alt: "Two people sitting on a rock above the fjord at sunrise",
   },
 ];
 
@@ -122,7 +114,13 @@ export default function Home() {
         {/* On phones the hero is a flex column in normal flow, so the brand mark
             and the welcome stack and the box grows to fit them. Only from sm up,
             where there is room, do they get pinned to the top and bottom. */}
-        <div className="relative flex min-h-[max(38rem,88svh)] flex-col sm:block sm:h-[92vh] sm:max-h-[56rem] sm:min-h-[38rem]">
+        {/* A full screen, always: nothing of the band below may show until
+            the visitor has scrolled for it. dvh rather than vh or svh, so the
+            film still fills the window exactly when a phone's chrome slides
+            away — svh would leave a strip of the films peeking, vh would hide
+            the buttons behind the chrome. The 38rem floor is for a very short
+            window, where filling it would leave no room for the welcome. */}
+        <div className="relative flex min-h-[max(38rem,100dvh)] flex-col sm:block sm:h-dvh sm:min-h-[38rem]">
           {/* A phone crops the 16:9 film down to roughly its middle third, so it
               stays centred there — that band holds the van *and* the two of us
               waving beside it. From sm up the crop is shallow enough to shift
@@ -213,51 +211,28 @@ export default function Home() {
       </section>
 
       {/* ---------- The index ---------- */}
-      <section className="mx-auto max-w-7xl px-6 pt-24 sm:px-10 sm:pt-32">
-        <div className="text-center">
-          <p className="eyebrow">have a look around</p>
-          <h2 className="mt-4 text-3xl sm:text-[2.6rem]">Where would you like to go?</h2>
-          <span aria-hidden className="rule mx-auto mt-6" />
-        </div>
+      {/* Out of the page margins entirely: the band runs the full width of the
+          window, which is what makes it read as one piece of film rather than
+          five pictures placed on a page. */}
+      {/* No gap above: the band begins where the intro film ends. Just a
+          10px lip of the hero's own dark carried over the top of the films, so
+          the join is a join rather than a cut. */}
+      <section className="relative">
+        <SectionFilmstrip items={PLACES} />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 top-0 h-2.5 bg-linear-to-b from-ink/85 to-ink/0"
+        />
 
-        <div className="mt-12 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-12">
-          {PLACES.map((place, i) => (
-            <Link
-              key={place.href}
-              href={place.href}
-              className={`group reveal block ${place.span}`}
-            >
-              <div
-                className={`relative overflow-hidden rounded-xl border border-ink/10 bg-ivory/25 shadow-[0_10px_26px_-24px_rgba(74,66,53,0.9)] ${place.height}`}
-              >
-                <Image
-                  src={place.image}
-                  alt={place.alt}
-                  fill
-                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 33vw"
-                  className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.04]"
-                />
-              </div>
-
-              <div className="mt-5 flex items-start gap-5">
-                <span className="mt-1.5 shrink-0 font-stamp text-[0.7rem] tracking-[0.15em] text-ink/45">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <div>
-                  <h3 className="text-2xl transition-colors duration-300 group-hover:text-rose">
-                    {place.label}
-                  </h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-graphite/85">{place.sub}</p>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
+        {/* Only says anything where the band actually scrolls. */}
+        <p className="mt-5 text-center text-[0.65rem] uppercase tracking-[0.2em] text-graphite/50 lg:hidden">
+          Swipe through
+        </p>
       </section>
 
       {/* ---------- The studio ---------- */}
-      <section id="studio" className="mt-28 scroll-mt-24 sm:mt-40">
-        <div className="wash-cool border-y border-ink/8">
+      <section id="studio" className="mt-14 scroll-mt-24 sm:mt-20">
+        <div className="wash-cool wash-soft">
           <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 sm:px-10 sm:py-28 lg:grid-cols-[0.9fr_1fr] lg:gap-20">
             <div className="relative order-2 min-h-[16rem] lg:order-1 lg:min-h-[26rem]">
               <Image
@@ -274,7 +249,11 @@ export default function Home() {
               <h2 className="mt-5 max-w-lg text-balance text-3xl leading-[1.08] sm:text-[2.75rem]">
                 {home.studioHeading}
               </h2>
-              <p className="mt-6 max-w-lg leading-relaxed text-graphite">{home.studioText}</p>
+              {splitLines(home.studioText).map((paragraph) => (
+                <p key={paragraph} className="mt-6 max-w-lg leading-relaxed text-graphite">
+                  {paragraph}
+                </p>
+              ))}
               <div className="mt-9 flex flex-wrap gap-3">
                 <Link href="/studio" className="btn btn-primary">
                   Into the studio

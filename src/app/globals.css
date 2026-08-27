@@ -330,6 +330,23 @@ html {
   border-block: 1px solid color-mix(in srgb, var(--color-ink) 9%, transparent);
 }
 
+/* A wash band has no business drawing a line across the page to announce
+   itself — it is a change of light, so it can arrive as one. Opt in with
+   `wash-soft` beside the wash: the pages that still rule their bands off with
+   a border keep doing so, since a mask would fade that border away and leave
+   the band looking half-finished. */
+.wash-soft {
+  --wash-edge: 5rem;
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black var(--wash-edge),
+    black calc(100% - var(--wash-edge)),
+    transparent
+  );
+}
+
 /* A soft wash, where the page used to sit on scattered white dots. */
 .wash-warm {
   background:
@@ -369,7 +386,7 @@ html {
 @keyframes reveal-in {
   from {
     opacity: 0;
-    transform: translateY(1.35rem);
+    transform: translateY(1rem);
   }
   to {
     opacity: 1;
@@ -380,27 +397,43 @@ html {
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
     .reveal {
-      animation: reveal-in linear both;
+      /* Eased rather than linear, and spread over more of the scroll: the
+         section is most of the way there by the time it is properly on
+         screen, so it arrives instead of snapping into place. */
+      animation: reveal-in cubic-bezier(0.22, 0.61, 0.36, 1) both;
       animation-timeline: view();
-      animation-range: entry 4% cover 26%;
+      animation-range: entry 2% cover 34%;
     }
   }
 }
 
-/* The tour hero still, behind the film. A background image rather than a
-   <picture>: its fallback <img> can still be fetched while React hydrates,
-   whereas a background is only ever pulled in when its media query applies —
-   so a phone never pays for the desktop crop, or the other way round. */
-.tour-hero-still {
-  background-image: url("/images/tour/hero-poster-tall.webp");
-  background-size: cover;
-  background-position: center;
+/* ---------------------------------------------------------------------------
+   The band of five films on the homepage. Pointing at one column quiets the
+   other four, so the eye is told where to look instead of being left to choose
+   between five things all shouting at once. Nothing moves and nothing lifts —
+   the band stays one unbroken piece; only the light changes.
+   --------------------------------------------------------------------------- */
+@media (hover: hover) and (pointer: fine) and (min-width: 1024px) {
+  .filmstrip > * {
+    transition:
+      opacity 850ms cubic-bezier(0.22, 0.61, 0.36, 1),
+      filter 850ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+
+  .filmstrip:hover > * {
+    opacity: 0.55;
+    filter: saturate(0.7);
+  }
+
+  .filmstrip > *:hover {
+    opacity: 1;
+    filter: none;
+  }
 }
 
-@media (min-width: 640px) {
-  .tour-hero-still {
-    background-image: url("/images/tour/hero-poster-wide.webp");
-  }
+/* One column per swipe on touch, rather than skidding past two or three. */
+.filmstrip > * {
+  scroll-snap-stop: always;
 }
 
 /* ---------------------------------------------------------------------------

@@ -290,7 +290,12 @@ collections:
           - { label: "Text «Wer wir sind»", name: "welcomeText", widget: "text" }
           - { label: "Bildzeile über dem Kaffeefoto", name: "bandCaption", widget: "string" }
           - { label: "Überschrift Studio-Abschnitt", name: "studioHeading", widget: "string" }
-          - { label: "Text Studio-Abschnitt", name: "studioText", widget: "text" }
+          - {
+              label: "Text Studio-Abschnitt",
+              name: "studioText",
+              widget: "text",
+              hint: "Eine Leerzeile bzw. ein Zeilenumbruch beginnt einen neuen Absatz.",
+            }
           - { label: "Überschrift Schluss-Abschnitt", name: "closingHeading", widget: "string" }
           - { label: "Text Schluss-Abschnitt", name: "closingText", widget: "text" }
 
