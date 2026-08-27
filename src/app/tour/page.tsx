@@ -210,7 +210,11 @@ export default function TourPage() {
       />
 
       {/* ---------- Hero: a contact sheet of the road ---------- */}
-      <section className="relative isolate overflow-hidden">
+      {/* A full screen, always. dvh rather than vh, so the film still fills
+          the window exactly when a phone's chrome slides away — and min-h
+          rather than h, so a short window lets the block grow instead of
+          cropping the buttons off the bottom. */}
+      <section className="relative isolate flex min-h-[100dvh] flex-col justify-center overflow-hidden">
         {/* The poster is picked by the browser through <picture>, which
             honours `media` and fetches exactly one file; the film on top is
             chosen after mount for the same reason. See HeroVideo. */}
