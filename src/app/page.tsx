@@ -143,7 +143,7 @@ export default function Home() {
           {/* The film hands over to the dark passage below rather than
               stopping on a line: its last inch settles onto exactly the
               colour that section is painted in. */}
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-14 bg-linear-to-b from-ink/0 to-ink sm:h-20" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] h-14 bg-linear-to-b from-ink/0 to-ink sm:h-20" />
 
           {/* Brand mark and navigation, sitting on the film. */}
           <div className="relative z-10 px-6 pt-6 sm:absolute sm:inset-x-0 sm:top-0 sm:px-10 sm:pt-8">
@@ -209,18 +209,12 @@ export default function Home() {
       </section>
 
       {/* ---------- The index ---------- */}
-      {/* The lights go down between the hero and the films. The page is warm
-          and pale everywhere else, so this passage is the one dark room in it:
-          the intro film settles into ink, the question is asked in cream on
-          that ink, the five films surface out of it and sink back, and then
-          the page comes up into daylight again. */}
+      {/* No heading, no label: the intro film simply keeps going and becomes
+          the five. Its last stretch settles onto ink, this section is painted
+          in the same ink with no gap between them, and each film surfaces out
+          of that dark — so the hand-over reads as one continuous shot rather
+          than the end of one thing and the start of another. */}
       <section className="relative bg-ink">
-        <div className="mx-auto max-w-7xl px-6 pt-24 pb-14 text-center sm:px-10 sm:pt-32 sm:pb-16">
-          <p className="eyebrow eyebrow-light">have a look around</p>
-          <h2 className="mt-4 text-3xl text-cream sm:text-[2.6rem]">Where would you like to go?</h2>
-          <span aria-hidden className="rule rule-light mx-auto mt-6" />
-        </div>
-
         <SectionFilmstrip items={PLACES} />
 
         {/* Only says anything where the band actually scrolls. */}
@@ -228,10 +222,9 @@ export default function Home() {
           Swipe through
         </p>
 
-        {/* Back up into the daylight of the page. Deep enough that the ink is
-            still ink for the first stretch of it, so the band has room to
-            stand in the dark before the warmth returns. */}
-        <div className="h-40 bg-linear-to-b from-ink to-cream sm:h-56" />
+        {/* Back up into the daylight of the page — short, because the foot of
+            each film is already ink and has done most of the work. */}
+        <div className="h-24 bg-linear-to-b from-ink to-cream sm:h-32" />
       </section>
 
       {/* ---------- The studio ---------- */}
