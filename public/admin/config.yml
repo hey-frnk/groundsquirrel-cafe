@@ -286,7 +286,6 @@ collections:
             name: "heroHeadline"
             widget: "string"
             hint: "Für einen Zeilenumbruch <br> einfügen, z.B. «Come in,<br>coffee's ready»"
-          - { label: "Unterzeile (Hero)", name: "heroSubline", widget: "text" }
           - { label: "Überschrift «Wer wir sind»", name: "welcomeHeading", widget: "string" }
           - { label: "Text «Wer wir sind»", name: "welcomeText", widget: "text" }
           - { label: "Bildzeile über dem Kaffeefoto", name: "bandCaption", widget: "string" }
@@ -300,9 +299,7 @@ collections:
         file: "content/pages/tour-intro.md"
         fields:
           - { label: "Seitentitel", name: "title", widget: "string" }
-          - { label: "Kleine Zeile über dem Titel", name: "kicker", widget: "string", required: false }
           - { label: "Grosse Überschrift (Hero)", name: "heroHeadline", widget: "string" }
-          - { label: "Unterzeile (Hero)", name: "heroSubline", widget: "text", required: false }
           - { label: "Einleitungstext", name: "intro", widget: "text" }
 
           - { label: "Kooperationen: Kleine Zeile", name: "collabKicker", widget: "string" }

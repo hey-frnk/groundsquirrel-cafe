@@ -387,6 +387,22 @@ html {
   }
 }
 
+/* The tour hero still, behind the film. A background image rather than a
+   <picture>: its fallback <img> can still be fetched while React hydrates,
+   whereas a background is only ever pulled in when its media query applies —
+   so a phone never pays for the desktop crop, or the other way round. */
+.tour-hero-still {
+  background-image: url("/images/tour/hero-poster-tall.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 640px) {
+  .tour-hero-still {
+    background-image: url("/images/tour/hero-poster-wide.webp");
+  }
+}
+
 /* ---------------------------------------------------------------------------
    The homepage intro film, with a still for anyone who'd rather not have
    motion — the poster frame stands in for the loop.
