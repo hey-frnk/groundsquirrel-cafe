@@ -83,13 +83,29 @@ export default function SectionFilmstrip({ items }: { items: FilmstripItem[] }) 
   const videos = useRef<(HTMLVideoElement | null)[]>([]);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const activate = useCallback(
+  const activate = useCallback((index: number | null) => {
+    setActive(index);
+    if (index !== null) setLoaded((prev) => (prev.has(index) ? prev : new Set(prev).add(index)));
+  }, []);
+
+  // A mouse swept along the row passes over all five panels; without a moment
+  // of intent that would start five downloads on the way past. Leaving is
+  // immediate — only arriving waits.
+  const hoverIntent = useCallback(
     (index: number | null) => {
-      setActive(index);
-      if (index !== null) setLoaded((prev) => (prev.has(index) ? prev : new Set(prev).add(index)));
+      if (timer.current) clearTimeout(timer.current);
+      if (index === null) {
+        activate(null);
+        return;
+      }
+      timer.current = setTimeout(() => activate(index), 130);
     },
-    []
+    [activate]
   );
+
+  useEffect(() => () => {
+    if (timer.current) clearTimeout(timer.current);
+  }, []);
 
   // Play or rewind whenever the active panel changes, rather than from the
   // event handlers — that way hover and scroll can't fight over the same
@@ -167,13 +183,13 @@ export default function SectionFilmstrip({ items }: { items: FilmstripItem[] }) 
           href={item.href}
           className="group relative w-[70vw] shrink-0 snap-center overflow-hidden rounded-xl border border-ink/10 bg-ink shadow-[0_18px_40px_-30px_rgba(74,66,53,0.95)] sm:w-[42vw] lg:w-auto"
           onPointerEnter={(e) => {
-            if (allowed && hoverable && e.pointerType === "mouse") activate(i);
+            if (allowed && hoverable && e.pointerType === "mouse") hoverIntent(i);
           }}
           onPointerLeave={(e) => {
-            if (hoverable && e.pointerType === "mouse") activate(null);
+            if (hoverable && e.pointerType === "mouse") hoverIntent(null);
           }}
           onFocus={() => allowed && hoverable && activate(i)}
-          onBlur={() => hoverable && activate(null)}
+          onBlur={() => hoverable && hoverIntent(null)}
         >
           <div className="relative aspect-9/16">
             <Image
