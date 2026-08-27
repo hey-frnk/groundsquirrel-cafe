@@ -244,7 +244,11 @@ export default function TourPage() {
             height={160}
             className="mx-auto mb-9 w-[4.5rem] drop-shadow-lg"
           />
-          <h1 className="text-4xl leading-[1.05] text-balance text-cream drop-shadow-md sm:text-6xl lg:text-7xl">
+          {/* A text shadow rather than drop-shadow-md: it follows the letter
+              shapes instead of the block, so the serif keeps its edges against
+              the bright grass behind it. Two layers — a tight one for the edge,
+              a wide soft one to lift the whole line off the film. */}
+          <h1 className="text-4xl leading-[1.05] text-balance text-cream [text-shadow:0_1px_2px_rgb(35_32_26/0.5),0_3px_24px_rgb(35_32_26/0.6)] sm:text-6xl lg:text-7xl">
             {splitLines(intro.heroHeadline).map((line) => (
               <span key={line} className="block">
                 {line}
