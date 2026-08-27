@@ -175,82 +175,105 @@ export default function SectionFilmstrip({ items }: { items: FilmstripItem[] }) 
   return (
     <div
       ref={scroller}
-      className="filmstrip -mx-6 flex snap-x snap-mandatory gap-3 overflow-x-auto px-6 pb-4 sm:-mx-10 sm:px-10 lg:mx-0 lg:grid lg:grid-cols-5 lg:gap-4 lg:overflow-visible lg:px-0 lg:pb-0"
+      // Full bleed and butted edge to edge: five columns of 9:16 across the
+      // whole window make one continuous band of film rather than five cards
+      // on a shelf, and at exactly 9:16 nothing of any frame is cropped away.
+      className="filmstrip flex snap-x snap-mandatory overflow-x-auto border-y border-ink/10 lg:grid lg:grid-cols-5 lg:overflow-visible"
     >
-      {items.map((item, i) => (
-        <Link
-          key={item.href}
-          href={item.href}
-          className="group relative w-[70vw] shrink-0 snap-center overflow-hidden rounded-xl border border-ink/10 bg-ink shadow-[0_18px_40px_-30px_rgba(74,66,53,0.95)] sm:w-[42vw] lg:w-auto"
-          onPointerEnter={(e) => {
-            if (allowed && hoverable && e.pointerType === "mouse") hoverIntent(i);
-          }}
-          onPointerLeave={(e) => {
-            if (hoverable && e.pointerType === "mouse") hoverIntent(null);
-          }}
-          onFocus={() => allowed && hoverable && activate(i)}
-          onBlur={() => hoverable && hoverIntent(null)}
-        >
-          <div className="relative aspect-9/16">
-            <Image
-              src={item.poster}
-              alt={item.alt}
-              fill
-              sizes="(max-width: 640px) 70vw, (max-width: 1024px) 42vw, 20vw"
-              className="object-cover"
-            />
-
-            {loaded.has(i) && (
-              <video
-                ref={(el) => {
-                  videos.current[i] = el;
-                }}
-                className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-500 ${
-                  active === i ? "opacity-100" : "opacity-0"
-                }`}
-                src={item.video}
-                muted
-                loop
-                playsInline
-                preload="none"
-                aria-hidden
-                tabIndex={-1}
+      {items.map((item, i) => {
+        const on = active === i;
+        return (
+          <Link
+            key={item.href}
+            href={item.href}
+            className="group relative w-[78vw] shrink-0 snap-center overflow-hidden bg-ink sm:w-[46vw] lg:w-auto"
+            onPointerEnter={(e) => {
+              if (allowed && hoverable && e.pointerType === "mouse") hoverIntent(i);
+            }}
+            onPointerLeave={(e) => {
+              if (hoverable && e.pointerType === "mouse") hoverIntent(null);
+            }}
+            onFocus={() => allowed && hoverable && activate(i)}
+            onBlur={() => hoverable && hoverIntent(null)}
+          >
+            <div className="relative aspect-9/16">
+              <Image
+                src={item.poster}
+                alt={item.alt}
+                fill
+                sizes="(max-width: 640px) 78vw, (max-width: 1024px) 46vw, 20vw"
+                className="object-cover"
               />
-            )}
 
-            {/* Deep enough at the foot to hold the lettering, and a light veil
-                over the whole panel that lifts when the panel is the one being
-                watched. */}
-            <div className="absolute inset-0 bg-linear-to-t from-ink/85 via-ink/15 to-ink/10" />
-            <div
-              className={`absolute inset-0 bg-ink/25 transition-opacity duration-500 ${
-                active === i ? "opacity-0" : "opacity-100"
-              }`}
-            />
+              {loaded.has(i) && (
+                <video
+                  ref={(el) => {
+                    videos.current[i] = el;
+                  }}
+                  className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
+                    on ? "opacity-100" : "opacity-0"
+                  }`}
+                  src={item.video}
+                  muted
+                  loop
+                  playsInline
+                  preload="none"
+                  aria-hidden
+                  tabIndex={-1}
+                />
+              )}
 
-            <span className="absolute left-5 top-5 font-stamp text-[0.7rem] tracking-[0.18em] text-cream/70">
-              {String(i + 1).padStart(2, "0")}
-            </span>
+              {/* Deep at the foot to carry the lettering, and a veil over the
+                  whole column that lifts for the one being watched. */}
+              <div className="absolute inset-0 bg-linear-to-t from-ink/90 via-ink/20 to-ink/25" />
+              <div
+                className={`absolute inset-0 bg-ink/30 transition-opacity duration-700 ${
+                  on ? "opacity-0" : "opacity-100"
+                }`}
+              />
 
-            <div className="absolute inset-x-0 bottom-0 p-5">
-              <h3 className="font-display text-[1.6rem] leading-none text-cream">{item.label}</h3>
-              <p className="mt-2.5 text-[0.82rem] leading-snug text-cream/75">{item.sub}</p>
-
-              {/* The whole panel is the link; this is what it looks like, so it
-                  must not be a button of its own inside one. */}
-              <span
-                aria-hidden
-                className="mt-4 inline-flex items-center gap-2 rounded-full border border-cream/45 px-4 py-2 text-[0.62rem] uppercase tracking-[0.18em] text-cream transition-colors duration-300 group-hover:border-rose group-hover:bg-rose group-hover:text-ink"
-              >
-                Enter
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
-                  <path d="M5 12h13M12 5l7 7-7 7" />
-                </svg>
+              <span className="absolute left-7 top-7 font-stamp text-[0.7rem] tracking-[0.22em] text-cream/60 sm:left-8 sm:top-8">
+                {String(i + 1).padStart(2, "0")}
               </span>
+
+              <div className="absolute inset-x-0 bottom-0 p-7 sm:p-8">
+                {/* No button on any of the five: the mark of the live column is
+                    this rule drawing itself out under its name, and the arrow
+                    that steps in beside it. */}
+                <span
+                  aria-hidden
+                  className={`block h-px origin-left bg-rose transition-transform duration-700 ease-out ${
+                    on ? "scale-x-100" : "scale-x-0"
+                  }`}
+                />
+                <h3 className="mt-6 flex items-center gap-3 font-display text-[clamp(1.65rem,2.5vw,2.9rem)] leading-none text-cream">
+                  {item.label}
+                  <svg
+                    aria-hidden
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    className={`h-[0.62em] w-[0.62em] shrink-0 transition-all duration-500 ${
+                      on ? "translate-x-0 opacity-100" : "-translate-x-2 opacity-0"
+                    }`}
+                  >
+                    <path d="M5 12h13M12 5l7 7-7 7" />
+                  </svg>
+                </h3>
+                {/* Held in the flow so the name never shifts as it appears. */}
+                <p
+                  className={`mt-2.5 max-w-[22ch] text-[0.84rem] leading-snug text-cream/80 transition-all duration-500 ${
+                    on ? "translate-y-0 opacity-100" : "translate-y-1.5 opacity-0"
+                  }`}
+                >
+                  {item.sub}
+                </p>
+              </div>
             </div>
-          </div>
-        </Link>
-      ))}
+          </Link>
+        );
+      })}
     </div>
   );
 }

@@ -205,19 +205,22 @@ export default function Home() {
       </section>
 
       {/* ---------- The index ---------- */}
-      <section className="mx-auto max-w-7xl px-6 pt-24 sm:px-10 sm:pt-32">
-        <div className="text-center">
+      <section className="pt-24 sm:pt-32">
+        <div className="mx-auto max-w-7xl px-6 text-center sm:px-10">
           <p className="eyebrow">have a look around</p>
           <h2 className="mt-4 text-3xl sm:text-[2.6rem]">Where would you like to go?</h2>
           <span aria-hidden className="rule mx-auto mt-6" />
         </div>
 
-        <div className="mt-12">
+        {/* Out of the page margins entirely: the band runs the full width of
+            the window, which is what makes it read as one piece of film rather
+            than five pictures placed on a page. */}
+        <div className="mt-14">
           <SectionFilmstrip items={PLACES} />
         </div>
 
-        {/* Only says anything where the strip actually scrolls. */}
-        <p className="mt-4 text-center text-[0.65rem] uppercase tracking-[0.2em] text-graphite/50 lg:hidden">
+        {/* Only says anything where the band actually scrolls. */}
+        <p className="mt-5 text-center text-[0.65rem] uppercase tracking-[0.2em] text-graphite/50 lg:hidden">
           Swipe through
         </p>
       </section>

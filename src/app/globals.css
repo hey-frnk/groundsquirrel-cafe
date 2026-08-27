@@ -404,29 +404,30 @@ html {
 }
 
 /* ---------------------------------------------------------------------------
-   The filmstrip of five sections on the homepage. Hovering one panel quiets
-   the other four, so the eye is told where to look instead of being left to
-   choose between five things all shouting at once. Only where there is a real
-   pointer and room for the full row.
+   The band of five films on the homepage. Pointing at one column quiets the
+   other four, so the eye is told where to look instead of being left to choose
+   between five things all shouting at once. Nothing moves and nothing lifts —
+   the band stays one unbroken piece; only the light changes.
    --------------------------------------------------------------------------- */
 @media (hover: hover) and (pointer: fine) and (min-width: 1024px) {
   .filmstrip > * {
     transition:
-      opacity 500ms ease,
-      transform 500ms ease;
+      opacity 700ms ease,
+      filter 700ms ease;
   }
 
   .filmstrip:hover > * {
-    opacity: 0.45;
+    opacity: 0.55;
+    filter: saturate(0.7);
   }
 
   .filmstrip > *:hover {
     opacity: 1;
-    transform: translateY(-8px);
+    filter: none;
   }
 }
 
-/* One panel per swipe on touch, rather than skidding past two or three. */
+/* One column per swipe on touch, rather than skidding past two or three. */
 .filmstrip > * {
   scroll-snap-stop: always;
 }
