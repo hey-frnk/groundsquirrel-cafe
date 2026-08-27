@@ -8,4 +8,4 @@ photos: []
 order: 3
 ---
 
-Between fjords and late summer roses, you could taste freshly baked bagels filled with cream cheese and freshly harvested chanterelles from the forest — picked in the morning, on a tray by the evening.
+Between fjords and late summer roses, you could taste freshly baked bagels filled with cream cheese and freshly harvested chanterelles from the forest.
