@@ -15,7 +15,7 @@ London, a bustling metropolis with nearly 9 million residents, thousands of shop
 ![](/images/journal/oxford-street-london/IMG_5437.jpg)
 ![](/images/journal/oxford-street-london/IMG_5411.jpg)
 
-What if you're searching for more than just the crowds and international brands swarming Oxford Street? What if you already know London's iconic sights like the back of your hand — or want to redefine them for yourself? The tranquility of a Sunday morning, authentic shops and small businesses, quiet cafés, and the comforting feeling of finding a little piece of home.
+What if you're searching for more than just the crowds and international brands swarming Oxford Street? What if you already know London's iconic sights like the back of your hand - or want to redefine them for yourself? The tranquility of a Sunday morning, authentic shops and small businesses, quiet cafés, and the comforting feeling of finding a little piece of home.
 
 In November 2024, Frank and I embarked on a heartfelt quest to discover these magical, one-of-a-kind places during our trip to London. And we found them! Places that are uniquely "London," supporting small businesses and sparking dreams. On the opposite side of Oxford Street, you'll find some of London's most distinctive neighborhoods, brimming with character and charm.
 
@@ -52,7 +52,7 @@ Close to Columbia Road, you'll find a lesser-known street called Redchurch Stree
 ### Brick Lane
 
 ![vintage find from 1920 - sadly evelyne missed her chance, it was gone the next day!](/images/journal/oxford-street-london/IMG_5887.jpg)
-*Vintage find from 1920 — sadly Evelyne missed her chance, it was gone the next day!*
+*Vintage find from 1920 - sadly Evelyne missed her chance, it was gone the next day!*
 
 Adjacent to Redchurch Street is what we believe to be London's coolest shopping street: Brick Lane. It's the complete opposite of the well-known Oxford Street. If, like us, you adore secondhand and vintage finds, this street is paradise. The shops here, many of which are vintage-focused, sell high-quality, well-curated secondhand clothing. Many have distinct themes, offering pieces from decades past.
 
@@ -94,7 +94,7 @@ To learn more about this project, or discover ecoexist, a small but very importa
 ![camden high street](/images/journal/oxford-street-london/IMG_2359.jpg)
 *Camden High Street*
 
-In the north of London lies the famous Camden area, once the center of London's alternative scene and celebrated for its unique independent vendors. Unfortunately, over the years, the neighborhood has become increasingly "touristified," resembling more of a market for cheaply made souvenirs. The markets are now so crowded that it can be difficult to appreciate their charm. Of course, it's a matter of personal preference — Frank and I are more inclined toward quieter, cozier spots. Depending on your tastes, it might still be worth taking a look at the market.
+In the north of London lies the famous Camden area, once the center of London's alternative scene and celebrated for its unique independent vendors. Unfortunately, over the years, the neighborhood has become increasingly "touristified," resembling more of a market for cheaply made souvenirs. The markets are now so crowded that it can be difficult to appreciate their charm. Of course, it's a matter of personal preference - Frank and I are more inclined toward quieter, cozier spots. Depending on your tastes, it might still be worth taking a look at the market.
 
 ![camden market](/images/journal/oxford-street-london/IMG_2365.jpg)
 *Camden Market*
@@ -159,13 +159,13 @@ Portobello Road intersects with another fascinating street, Westbourne Grove. Wh
 In west London lies the iconic and royal Hyde Park. It has hosted legendary figures like Nelson Mandela and the Rolling Stones, and was the starting point for the UK's first Pride march. Nicknamed "the people's park," Hyde Park is also a haven for wildlife. At its center is the Serpentine, offering scenic lakeside paths, waterfront cafés, the Royal Parks shop, and even hardy swimmers at the Lido, home to Britain's oldest swimming club.
 
 ![hyde park family photo - our most beloved photo we've ever taken!](/images/journal/oxford-street-london/IMG_6162.jpg)
-*Hyde Park family photo — our most beloved photo we've ever taken!*
+*Hyde Park family photo - our most beloved photo we've ever taken!*
 ![a grey squirrel in hyde park](/images/journal/oxford-street-london/IMG_6135.jpg)
 *A grey squirrel in Hyde Park*
 ![evelyne trying to make friends with a grey squirrel](/images/journal/oxford-street-london/IMG_6148.jpg)
 *Evelyne trying to make friends with a grey squirrel*
 
-Support wildlife and us by purchasing our digital postcard — the "aquarelle squirrels of the world" postcard, painted by Evelyne. We donate 5% of all proceeds directly to wildlife conservation.
+Support wildlife and us by purchasing our digital postcard - the "aquarelle squirrels of the world" postcard, painted by Evelyne. We donate 5% of all proceeds directly to wildlife conservation.
 
 ![aquarelle squirrels of the world postcard painted by evelyne](/images/journal/oxford-street-london/painting-process.jpg)
 *Aquarelle squirrels of the world postcard, painted by Evelyne*

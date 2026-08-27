@@ -37,7 +37,7 @@ const specialElite = Special_Elite({
 });
 
 const DESCRIPTION =
-  "A café on wheels, an art studio, and a journal of the road — the ground squirrel café.";
+  "A café on wheels, an art studio, and a journal of the road, the ground squirrel café.";
 
 export const metadata: Metadata = {
   // Without this, per-page Open Graph images resolve against localhost and

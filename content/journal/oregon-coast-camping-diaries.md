@@ -26,7 +26,7 @@ We stopped in Tillamook for an iced coffee with oat milk at Dutch Bros, it was r
 ![with the journal along the journey](/images/journal/oregon-coast-camping-diaries/IMG_1425.jpg)
 *With the journal along the journey*
 
-That night we tried to find a cute restaurant by the sea, but figured they weren't too much of our vibe either. It was a much better idea to chase the wild setting sun — on a sandy beach with calm rocks embraced by the soft sand, surrounded by blackberry bushes and delicate magenta flowers. We put our bags on the sand and just ran towards the sun that was now one with the horizon, and the water, and the sand. Like we were the fire.
+That night we tried to find a cute restaurant by the sea, but figured they weren't too much of our vibe either. It was a much better idea to chase the wild setting sun - on a sandy beach with calm rocks embraced by the soft sand, surrounded by blackberry bushes and delicate magenta flowers. We put our bags on the sand and just ran towards the sun that was now one with the horizon, and the water, and the sand. Like we were the fire.
 
 ![what a fiery sunset! when the horizon is just water and air](/images/journal/oregon-coast-camping-diaries/2022-08-17-05-14-50.jpg)
 *What a fiery sunset! When the horizon is just water and air*

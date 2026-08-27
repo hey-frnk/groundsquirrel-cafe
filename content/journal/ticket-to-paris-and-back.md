@@ -2,7 +2,7 @@
 title: "Ticket to Paris and Back: A Weekend Travel Blog from Switzerland to France"
 date: "2024-10-10"
 author: "Evelyne"
-excerpt: "When the rain clouds trap you in Switzerland for the weekend, it's time to leave for some place in the sun — in our case, Paris."
+excerpt: "When the rain clouds trap you in Switzerland for the weekend, it's time to leave for some place in the sun - in our case, Paris."
 cover: "/images/journal/paris-weekend/D0123047-D5E0-4783-9D81-B449BB3347BF.webp"
 tags: ["city trip", "sustainable travel", "wanderlust", "granola girl", "food", "foodie", "vegan", "vegetarian", "europe", "france", "paris"]
 ---
@@ -15,7 +15,7 @@ tags: ["city trip", "sustainable travel", "wanderlust", "granola girl", "food", 
 ![](/images/journal/paris-weekend/79886825-9922-433A-BAFA-13F90AA0532C.webp)
 ![](/images/journal/paris-weekend/1147BC3C-A36A-47C6-99EB-3A0AE411866F.webp)
 
-Where do you end up, when you're back in Switzerland, reunited with your love, and finally, the possibilities of exploring summer in the Swiss Alps open up? In Paris! That's right — when the rain clouds trap the country for our full-time job weekend, it's time to leave for some place in the sun.
+Where do you end up, when you're back in Switzerland, reunited with your love, and finally, the possibilities of exploring summer in the Swiss Alps open up? In Paris! That's right - when the rain clouds trap the country for our full-time job weekend, it's time to leave for some place in the sun.
 
 ## How We Got to Paris
 
@@ -44,7 +44,7 @@ Frank and I slept in a 4-bed bunk. We hardly got to know our roommates. We came 
 ## Our Time in Paris
 
 ![they tumbled into the seine](/images/journal/paris-weekend/IMG_2018.webp)
-*They tumbled into the Seine. Paris was raining us a river — seems about right next to an English book store*
+*They tumbled into the Seine. Paris was raining us a river - seems about right next to an English book store*
 
 Of course, Frank and I visited many of the typical sights. After a Friday full of sightseeing the touristy places, our curiosity led us to discover our very own special spots in a city with millions of possibilities. We can't wait to share them with you.
 
@@ -53,7 +53,7 @@ Of course, Frank and I visited many of the typical sights. After a Friday full o
 ![rue de l'Université, a great spot to capture the eiffel tower](/images/journal/paris-weekend/IMG_7974.webp)
 *Rue de l'Université, a great spot to capture the Eiffel Tower*
 
-In the sacred heart of the city — Evelyne's favorite place in Paris — Montmartre: "Since the first time I came to Paris, I knew I could live here one day, paint oil paintings, sell my own art, and just be," I said to Frank.
+In the sacred heart of the city - Evelyne's favorite place in Paris - Montmartre: "Since the first time I came to Paris, I knew I could live here one day, paint oil paintings, sell my own art, and just be," I said to Frank.
 
 ![](/images/journal/paris-weekend/FCCBD830-9B7D-498A-9944-3B2F28F6CA12.webp)
 
@@ -64,7 +64,7 @@ My eyes were sparkling. It's been ten years since, and I couldn't wait to be her
 ![a dreamy sunrise above paris](/images/journal/paris-weekend/F18B44FC-45F7-4AF0-8915-45712DCE6025.webp)
 *A dreamy sunrise above Paris*
 
-If there's one advice we could offer you — Montmartre is most magical early in the morning, when most people, even scammers, are still cuddled up in their blankets and only birds are out there. Then the sun rises in front of Sacré-Cœur and bathes Paris in a golden light. The square of the cathedral offers an incredible view over the city. Early on, most streets are empty, and you can take beautiful pictures. No wonder you might casually become part of a film shoot. Place du Tertre, which all artists call their home, is covered in a peaceful atmosphere.
+If there's one advice we could offer you - Montmartre is most magical early in the morning, when most people, even scammers, are still cuddled up in their blankets and only birds are out there. Then the sun rises in front of Sacré-Cœur and bathes Paris in a golden light. The square of the cathedral offers an incredible view over the city. Early on, most streets are empty, and you can take beautiful pictures. No wonder you might casually become part of a film shoot. Place du Tertre, which all artists call their home, is covered in a peaceful atmosphere.
 
 ![](/images/journal/paris-weekend/4F31D0FF-6FA9-40A7-95EA-5BCC424908B6.webp)
 
@@ -97,13 +97,13 @@ For us, the places of Saint-Paul, Le Marais and Hôtel de Ville are the best for
 ![](/images/journal/paris-weekend/7CA00770-219D-4204-AB5C-F201BE4EC651.webp)
 ![](/images/journal/paris-weekend/07493BBE-4E59-4119-8EFB-A4B5D55B8C8C.webp)
 
-An aesthetic, all-vegan place to nourish your foodie soul we know from a friend of Frank — you can find it all across town.
+An aesthetic, all-vegan place to nourish your foodie soul we know from a friend of Frank - you can find it all across town.
 
 ### Baobar
 
 ![](/images/journal/paris-weekend/290CB460-B25F-45A8-A246-8DB997001AFB.webp)
 
-Neon lights, bao, noodles & dumplings — this is a truly special one, and the food is absolutely incredible. Don't miss out on the tender and juicy hong shao (red-fried) eggplant.
+Neon lights, bao, noodles & dumplings - this is a truly special one, and the food is absolutely incredible. Don't miss out on the tender and juicy hong shao (red-fried) eggplant.
 
 ### Fabula
 
@@ -122,9 +122,9 @@ Just an amazing place for amazing Neapolitan pizza in pink neon light. Although 
 
 ![](/images/journal/paris-weekend/EFBE7F54-BC4C-4829-BEED-2AFC94AC281F.webp)
 
-**Créatures** — on the roofs of a Galeries Lafayette, Créatures offers fine vegetarian snacks with a Middle-Eastern touch and wine with a view.
+**Créatures** - on the roofs of a Galeries Lafayette, Créatures offers fine vegetarian snacks with a Middle-Eastern touch and wine with a view.
 
-**Mesa de Hoy Paris** — Frank says that on a honeymoon Paris trip, this is the hotel we're going to stay in. It's a yoga place, offers an all-vegan restaurant.
+**Mesa de Hoy Paris** - Frank says that on a honeymoon Paris trip, this is the hotel we're going to stay in. It's a yoga place, offers an all-vegan restaurant.
 
 **The Brooklyn Pizzeria**
 
@@ -150,8 +150,8 @@ For us, music always has a very special place wherever we go. On our first night
 Do you fancy jazz? We spent a night listening to live jazz at Le Baiser Salé. Paris is a big city, and there's always someone going live for each and every music taste. If you're a concert lover, don't miss the chance that one of your favorite artists might just play down your street.
 
 ![do you fancy jazz? to spend a night listening to live jazz. le baiser sale](/images/journal/paris-weekend/469218D2-96B0-4011-862E-19774ECCBD34.webp)
-*Do you fancy jazz? To spend a night listening to live jazz — Le Baiser Salé*
+*Do you fancy jazz? To spend a night listening to live jazz - Le Baiser Salé*
 
-We went inside a jazz bar Le Baiser Salé on the second night — it's a cozy, small jazz bar that offers live jazz concerts on a daily basis. Our concert was 10 euro per person, and two hours of jazz lift you into the feeling of being the main characters of La La Land.
+We went inside a jazz bar Le Baiser Salé on the second night - it's a cozy, small jazz bar that offers live jazz concerts on a daily basis. Our concert was 10 euro per person, and two hours of jazz lift you into the feeling of being the main characters of La La Land.
 
 *With 🐝 by Evelyne.*

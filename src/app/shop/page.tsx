@@ -7,7 +7,7 @@ export const metadata = {
   title: "Shop",
   alternates: { canonical: "/shop/" },
   description:
-    "Hand-painted squirrel art prints and vinyl stickers. Made on the road, never by AI — 10% of every order funds wildlife conservation.",
+    "Hand-painted squirrel art prints and vinyl stickers. Made on the road, never by AI. 10% of every order funds wildlife conservation.",
 };
 
 const PROMISES = [

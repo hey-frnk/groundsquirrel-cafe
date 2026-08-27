@@ -1,5 +1,5 @@
 ---
-title: Wildlife Around the World — Fine Art Postcards
+title: Wildlife Around the World - Fine Art Postcards
 tagline: 'Six hand-painted animals, small enough to send and good enough to keep.'
 image: /images/shop/wildlife-postcards/all-six-cards.webp
 order: 3
@@ -20,7 +20,7 @@ shippingNote: >-
   Worldwide shipping. The rate is worked out from your country and the largest
   item in your basket.
 variants:
-  - label: The full set — all six cards
+  - label: The full set - all six cards
     price: 12
     sku: GSC-POSTCARD-SET
     stripePriceId: price_1U2YJ9HhWAEQqbxLejgLhRPu

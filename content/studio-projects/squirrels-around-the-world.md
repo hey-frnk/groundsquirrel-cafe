@@ -5,7 +5,7 @@ kind: "Ongoing series"
 image: "/images/studio/portfolio/squirrels-of-the-world.webp"
 order: 6
 status: "Ongoing"
-teaser: "Watercolour portraits of the world's squirrels, gathered on one sheet — and turned into prints and stickers."
+teaser: "Watercolour portraits of the world's squirrels, gathered on one sheet, and turned into prints and stickers."
 availability: "10% of every purchase goes to wildlife conservation."
 links:
   - label: "Hier geht's zum Shop"

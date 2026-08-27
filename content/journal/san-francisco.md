@@ -7,7 +7,7 @@ cover: "/images/journal/san-francisco/DSC_0316.jpg"
 tags: ["westcoast-roadtrip", "san francisco", "california", "city trip", "sightseeing", "vsco", "granola girl", "bay area", "pacific northwest", "road trip", "streetart", "golden gate", "golden gate bridge", "tiburon"]
 ---
 
-> "Walking the streets of San Francisco was one of my biggest childhood dreams. Back then, I listened to Scott McKenzie for hours, while my father told me stories about his time he road tripped Northern California while he was young." — Evelyne
+> "Walking the streets of San Francisco was one of my biggest childhood dreams. Back then, I listened to Scott McKenzie for hours, while my father told me stories about his time he road tripped Northern California while he was young." - Evelyne
 
 It was 3 am, when Frank reluctantly turned on the engine of our 4Runner at a beach campsite we have found way too late after getting lost in the redwoods, to start heading to San Francisco. Better early than getting stuck in traffic, he thought.
 
@@ -27,7 +27,7 @@ From Portland we've learned to visit downtown not in the early morning, but when
 ![hipster coffee from philz, red lanterns from san francisco chinatown](/images/journal/san-francisco/IMG_0873.jpg)
 *Hipster coffee from Philz, red lanterns from San Francisco Chinatown*
 
-First stop? Philz Coffee — Emma Chamberlain knows her coffee, right? When Frank finally figured out how ordering a coffee works, we headed uphill to Chinatown by foot. The red dragons at the gate welcomed us into the bustling streets of Chinatown with delicate lanterns, Chinese characters, typical tourist souvenirs and occasional glimpses of the Californian houses all the way down to the city's coastline. We shared Chinese food together for the first time until we headed down North Beach (Little Italy) all the way until Pier 39.
+First stop? Philz Coffee - Emma Chamberlain knows her coffee, right? When Frank finally figured out how ordering a coffee works, we headed uphill to Chinatown by foot. The red dragons at the gate welcomed us into the bustling streets of Chinatown with delicate lanterns, Chinese characters, typical tourist souvenirs and occasional glimpses of the Californian houses all the way down to the city's coastline. We shared Chinese food together for the first time until we headed down North Beach (Little Italy) all the way until Pier 39.
 
 ## Fisherman's Wharf & Pier 39
 
@@ -46,7 +46,7 @@ Evelyne already got her share of souvenirs in the shape of a beautifully designe
 *A turtle bracelet*
 
 ![the sunset ferry back](/images/journal/san-francisco/IMG_1032.jpg)
-*The sunset ferry back — Golden Gate Bridge at sunset. We were above the clouds, literally and figuratively!*
+*The sunset ferry back - Golden Gate Bridge at sunset. We were above the clouds, literally and figuratively!*
 
 We boarded the last ferry of the day that would take us to Tiburon, where our 4Runner waited for us. It was a little race against the clock, but we made it just in time for a sunset on the iconic Golden Gate Bridge!
 

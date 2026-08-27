@@ -2,7 +2,7 @@
 title: "The Dream of Sweden: A Road Trip Through the Heart of the Swedish Countryside"
 date: "2023-06-21"
 author: "Evelyne"
-excerpt: "Frank and I love to dream. And when dreams come true after a long wait, it feels exactly like diving into the dream itself — a little red lakeside cottage in the middle of nowhere, and just being."
+excerpt: "Frank and I love to dream. And when dreams come true after a long wait, it feels exactly like diving into the dream itself - a little red lakeside cottage in the middle of nowhere, and just being."
 cover: "/images/journal/dream-of-sweden/IMG_0976.jpg"
 tags: ["sweden", "granola girl", "summer", "inspiration", "camping", "wilderness", "wanderlust", "campfire", "granola", "hiking", "wholesome", "dreams", "travel", "dalsland", "gustavsfors", "bengtsfors", "indie folk", "bluegrass", "acoustic", "lakes", "canoeing", "europe"]
 ---
@@ -94,14 +94,14 @@ Together, we sprinted across the lush green summer grass. We picked up corn and 
 ![you can smell the picture!](/images/journal/dream-of-sweden/IMG_1307.jpg)
 ![happy evelyne!](/images/journal/dream-of-sweden/IMG_1306.jpg)
 
-The sun was already close to the horizon casting the most lively and vibrant tones as we set out on the canoe again. The darker the sky became, the more intense the colors grew. Once again, Frank took out the guitar, and together we practiced a hauntingly beautiful song, "Flume" by Bon Iver, for the very first time after we've discovered it on one of Kristoffer's records. It will forever describe Sweden for us — the time when we became children again, felt alive and could have stayed forever.
+The sun was already close to the horizon casting the most lively and vibrant tones as we set out on the canoe again. The darker the sky became, the more intense the colors grew. Once again, Frank took out the guitar, and together we practiced a hauntingly beautiful song, "Flume" by Bon Iver, for the very first time after we've discovered it on one of Kristoffer's records. It will forever describe Sweden for us - the time when we became children again, felt alive and could have stayed forever.
 
 ![i move in water, shore to shore](/images/journal/dream-of-sweden/IMG_1328.jpg)
 *I move in water, shore to shore*
 ![sky is womb and she's the moon](/images/journal/dream-of-sweden/Screenshot-2023-05-25-at-11.54.01-AM.jpg)
 *Sky is womb and she's the moon*
 
-We tried to capture the moment. But my camera was subpar, and Frank's, just like on our USA West Coast road trip, was struggling with storage. We attempted to record it countless times — me cautiously crawling through the boat again and again to start the recording, sitting in the freezing puddles of water at the bottom of the canoe, Frank barely feeling his knees from contortions, let alone his hands, which must have turned into icicles in the cold. Over and over again, just to see that the video had been interrupted due to insufficient storage. Frank and I looked at each other furtively. He deleted everything imaginable on his phone until it finally worked on the seventh attempt, during the most magical blue hour we could've imagined.
+We tried to capture the moment. But my camera was subpar, and Frank's, just like on our USA West Coast road trip, was struggling with storage. We attempted to record it countless times - me cautiously crawling through the boat again and again to start the recording, sitting in the freezing puddles of water at the bottom of the canoe, Frank barely feeling his knees from contortions, let alone his hands, which must have turned into icicles in the cold. Over and over again, just to see that the video had been interrupted due to insufficient storage. Frank and I looked at each other furtively. He deleted everything imaginable on his phone until it finally worked on the seventh attempt, during the most magical blue hour we could've imagined.
 
 Back on the shore, we ran into our cottage, snuggled under the warm blanket, and watched our video. Countless times until sleep eventually caught up with us late at night. It was the most perfect video in the most perfect moment.
 
@@ -110,7 +110,7 @@ Back on the shore, we ran into our cottage, snuggled under the warm blanket, and
 ![in the village of gustavsfors, there is a little cafe](/images/journal/dream-of-sweden/IMG_1418.jpg)
 *In the village of Gustavsfors, there is a little cafe*
 ![kanelbullar - a swedish cinnamon bun in a sixties cafe](/images/journal/dream-of-sweden/IMG_1414.jpg)
-*Kanelbullar — a Swedish cinnamon bun in a sixties cafe*
+*Kanelbullar - a Swedish cinnamon bun in a sixties cafe*
 
 The next morning, we decided to extend our stay for one more night, both dreaming in our innermost thoughts of easily adding indefinite nights. But for now, that had to remain a dream.
 
@@ -174,7 +174,7 @@ I hope that with this little blog post we could bring the dream of Sweden closer
 
 Feeling inspired? Here are some resources (we're not affiliated with any of the links) you might find useful if you would like to follow our footsteps:
 
-- Park4Night place for Frankfurt, where Frank grew up — he and his kindergarten would take him to the Königsbrunnen spring
+- Park4Night place for Frankfurt, where Frank grew up - he and his kindergarten would take him to the Königsbrunnen spring
 - Park4Night farm in northern Germany with beautiful facilities, sheep and an incredibly kind host
 - Vänna Gård, our magical and infinitely wholesome Airbnb in Sweden
 - Park4Night at a lake inside a nature reserve, where we had a beautiful breakfast the next morning

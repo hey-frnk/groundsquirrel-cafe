@@ -32,7 +32,7 @@ interface Settings {
 export const metadata = {
   title: { absolute: "Evelyne Buttet — Illustrator | the ground squirrel studio" },
   description:
-    "Evelyne Buttet is a Swiss illustrator and author. Hand-painted wildlife illustration, picture books and teaching material from the ground squirrel studio — painted on the road, never by AI.",
+    "Evelyne Buttet is a Swiss illustrator and author. Hand-painted wildlife illustration, picture books and teaching material from the ground squirrel studio, painted on the road, never by AI.",
   alternates: { canonical: `${SITE_URL}/studio/` },
   openGraph: {
     type: "profile",
@@ -292,7 +292,7 @@ export default async function StudioPage() {
           </p>
           <p className="mx-auto mt-4 max-w-xl leading-relaxed text-graphite">
             Whether it is for a book project, a flyer, a business card, or any other creative
-            concept — don&rsquo;t hesitate to get in touch, I&rsquo;m looking forward to meeting
+            concept, don&rsquo;t hesitate to get in touch, I&rsquo;m looking forward to meeting
             you!
           </p>
 
@@ -313,7 +313,7 @@ export default async function StudioPage() {
             Get in touch
           </a>
           <p className="mt-5 text-[0.7rem] uppercase tracking-[0.16em] text-graphite/60">
-            Evelyne Buttet — {settings.contactEmail}
+            Evelyne Buttet - {settings.contactEmail}
           </p>
         </div>
       </section>

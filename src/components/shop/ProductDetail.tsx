@@ -82,7 +82,7 @@ export default function ProductDetail({
             <Image
               key={activeImage}
               src={activeImage}
-              alt={`${product.title} — ${variant?.label ?? ""}`}
+              alt={`${product.title}, ${variant?.label ?? ""}`}
               fill
               sizes="(max-width: 1024px) 100vw, 55vw"
               className="animate-plate-in object-contain p-6 sm:p-10"
@@ -181,7 +181,7 @@ export default function ProductDetail({
                 >
                   {product.variants.map((v, i) => (
                     <option key={v.label} value={i}>
-                      {v.label} — {formatPrice(v.price)}
+                      {v.label} - {formatPrice(v.price)}
                     </option>
                   ))}
                 </select>

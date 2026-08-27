@@ -2,11 +2,11 @@
 title: "Impressum"
 ---
 
-*This is not legal advice — if your situation changes (address, legal form, etc.), please update this page or have it checked by a professional.*
+*This is not legal advice - if your situation changes (address, legal form, etc.), please update this page or have it checked by a professional.*
 
 ## Site owner & contact
 
-![Evelyne Buttet, Sonnhalde 42, 6013 Eigenthal, Switzerland — evelyne.buttet@bluewin.ch](/images/legal/impressum-contact.png)
+![Evelyne Buttet, Sonnhalde 42, 6013 Eigenthal, Switzerland - evelyne.buttet@bluewin.ch](/images/legal/impressum-contact.png)
 
 *(Shown as an image rather than plain text to reduce automated address/email harvesting.)*
 

@@ -1,8 +1,8 @@
 ---
-title: "Campfire by the Beach — Cannon Beach, Oregon"
+title: "Campfire by the Beach - Cannon Beach, Oregon"
 date: "2022-11-06"
 author: "Evelyne"
-excerpt: "Cannon Beach is a picturesque stretch of sand along the Oregon coast, just a short drive away from Portland — home to Haystack Rock, tufted puffins, and our first beachside campfire."
+excerpt: "Cannon Beach is a picturesque stretch of sand along the Oregon coast, just a short drive away from Portland - home to Haystack Rock, tufted puffins, and our first beachside campfire."
 cover: "/images/journal/cannon-beach-campfire/2022-08-15-19-35-30.jpg"
 tags: ["cannon beach", "oregon", "pacific northwest", "beach", "haystack rock", "puffins", "campfire", "bonfire", "oregon coast", "road trip", "westcoast-roadtrip"]
 ---

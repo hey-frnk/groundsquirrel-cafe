@@ -5,7 +5,7 @@ export const metadata = {
   title: "Journal",
   alternates: { canonical: "/journal/" },
   description:
-    "Stories, hikes and slow travel from wherever Humbär takes us — newest first.",
+    "Stories, hikes and slow travel from wherever Humbär takes us. Newest first.",
   openGraph: {
     title: "Journal — The Ground Squirrel Café",
     description: "Stories, hikes and slow travel from wherever Humbär takes us.",

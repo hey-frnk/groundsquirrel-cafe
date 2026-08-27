@@ -2,7 +2,7 @@
 title: "A Day Well Spent in Portland, Oregon"
 date: "2022-10-31"
 author: "Frank"
-excerpt: "Portland, Oregon — the city of roses and good coffee. A place I have dreamt about visiting for a long time. Here's how we made the most of a day in town."
+excerpt: "Portland, Oregon - the city of roses and good coffee. A place I have dreamt about visiting for a long time. Here's how we made the most of a day in town."
 cover: "/images/journal/portland-oregon/DSC_0673.jpg"
 tags: ["westcoast-roadtrip", "portland", "pacific northwest", "oregon", "city trip", "sightseeing", "hipster", "coffee", "stumptown", "vsco", "granola", "roadtrip", "bookshop", "inspiration"]
 ---
@@ -97,7 +97,7 @@ Touring through downtown was eye opening, and unless fundamental societal issues
 This blog post is part of our one month USA West Coast road trip blog series. Feeling inspired? Here are some resources you might find useful if you would like to follow our footsteps:
 
 - Waterfront Park & White Stag sign
-- Stumptown Coffee Roasters — also available at other places in the country
+- Stumptown Coffee Roasters - also available at other places in the country
 - Powell's City of Books
 - Deschutes Brewery
 - REI, a great place we shopped outdoor gear

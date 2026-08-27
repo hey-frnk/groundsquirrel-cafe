@@ -13,7 +13,7 @@ Those were the very first words I asked Frank when we met. I didn't have to wait
 
 ## Our Adventure Awaits
 
-Three months have passed since and Frank's dream — we have made it possible over the past few months. With two plane tickets, a large enough car and two nights of pre-booked accommodation, we stood at the Zurich airport with two big suitcases and a lot of hand luggage. Our most important things in our luggage: our two sleeping bags, a three-person tent for two, waterproof hiking boots, my favorite hammock, Polaroid film, our two Fjällräven, camera and ukulele. Our flight had a stopover in Reykjavik and then took us to Seattle with a total flight time of 12.5h, where we started our road trip along the West Coast.
+Three months have passed since and Frank's dream - we have made it possible over the past few months. With two plane tickets, a large enough car and two nights of pre-booked accommodation, we stood at the Zurich airport with two big suitcases and a lot of hand luggage. Our most important things in our luggage: our two sleeping bags, a three-person tent for two, waterproof hiking boots, my favorite hammock, Polaroid film, our two Fjällräven, camera and ukulele. Our flight had a stopover in Reykjavik and then took us to Seattle with a total flight time of 12.5h, where we started our road trip along the West Coast.
 
 ![welcome to chinatown in seattle!](/images/journal/seattle-adventure-begins/IMG_0615.jpg)
 *Welcome to Chinatown in Seattle!*

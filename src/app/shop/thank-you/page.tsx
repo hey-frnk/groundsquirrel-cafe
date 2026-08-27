@@ -16,7 +16,7 @@ export default function ThankYouPage() {
       <span aria-hidden className="rule mx-auto mt-8" />
       <p className="mt-8 leading-relaxed text-graphite">
         Your order is in. A receipt is on its way to your inbox, and your prints
-        are about to be made — everything is printed to order, so give it 3–5 days
+        are about to be made. Everything is printed to order, so give it 3–5 days
         before it goes in the post.
       </p>
       <p className="mt-4 leading-relaxed text-graphite">

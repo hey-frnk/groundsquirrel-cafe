@@ -2,12 +2,12 @@
 title: "San Salvatore to Morcote: Scenic Hiking Day Trip from Lugano"
 date: "2023-07-15"
 author: "Frank"
-excerpt: "From Monte San Salvatore overlooking Lugano through a panoramic trail to the picturesque village of Morcote — our favorite day hike in Ticino, and why it should be on every bucket list."
+excerpt: "From Monte San Salvatore overlooking Lugano through a panoramic trail to the picturesque village of Morcote - our favorite day hike in Ticino, and why it should be on every bucket list."
 cover: "/images/journal/san-salvatore-morcote/IMG_9520.webp"
 tags: ["day trip", "day hike", "lugano", "ticino", "morcote", "san salvatore", "botanical garden", "swim", "ferry", "lakes", "switzerland", "hiking", "scenic"]
 ---
 
-From Monte San Salvatore overlooking Lugano through the panoramic trail to the picturesque village of Morcote, where you'll find the most beautifully curated botanical garden and where you can head for a swim in the lake, and later take the boat back — I'm so excited to tell you all about our favorite day hike in Ticino, the Italian-speaking part of Switzerland — and why it better be mandatory on every bucket list!
+From Monte San Salvatore overlooking Lugano through the panoramic trail to the picturesque village of Morcote, where you'll find the most beautifully curated botanical garden and where you can head for a swim in the lake, and later take the boat back - I'm so excited to tell you all about our favorite day hike in Ticino, the Italian-speaking part of Switzerland - and why it better be mandatory on every bucket list!
 
 There is no wrong way to get the day hike started, whether it is enjoying a chill morning in the old town of Lugano or going up San Salvatore. Let me tell you all about it!
 
@@ -33,7 +33,7 @@ If you follow the sign to the public bathroom, you will find a nice panoramic sp
 
 ### Swing the World
 
-Along the following hike from San Salvatore to Morcote, you will find two swings for a good break — the first one is a little detour from Parco San Grato, the second one right next to the church of Morcote!
+Along the following hike from San Salvatore to Morcote, you will find two swings for a good break - the first one is a little detour from Parco San Grato, the second one right next to the church of Morcote!
 
 ![same swing…](/images/journal/san-salvatore-morcote/vlcsnap-2023-07-13-23h26m29s313.webp)
 *Same swing…*
@@ -47,7 +47,7 @@ Along the following hike from San Salvatore to Morcote, you will find two swings
 
 The main hike of the day starts in the charming village of Carona on the hills. If you spent the morning in Lugano, you can again take line 434. It runs from Lugano Belvedere and Lugano Paradiso, and you wanna get off at the last station, Carona Paese.
 
-> ℹ From San Salvatore/Carona to Morcote — Distance: 5.8 mi (9.4 km) · Difficulty: Easy · Elevation gain: 778 ft (237 m)
+> ℹ From San Salvatore/Carona to Morcote - Distance: 5.8 mi (9.4 km) · Difficulty: Easy · Elevation gain: 778 ft (237 m)
 
 You wanna follow the signs to Morcote, which will first guide you through a botanical park, Parco San Grato, where you, by the way, can book a bed to sleep under the stars. Be sure to stop for a minute for some snacks, take in the view and some water to stay hydrated. Do you smell the scent of dry pine forest and orange peel? How refreshing! The trail stays on top of the mountain with occasional peeks of Lake Lugano until you reach a glade with a restaurant beneath it.
 
@@ -62,12 +62,12 @@ From there, it's all easy stair-downhill, where once in a while, lizards will pa
 ![through the narrow alleyways](/images/journal/san-salvatore-morcote/IMG_9539.webp)
 *Through the narrow alleyways*
 
-Hearing that Morcote is considered as one of the most beautiful villages in Switzerland shouldn't be a surprise. There is not a single spot that is not picture-worthy — from the ferry port where restaurants have a lake terrace to the boats parked by the lake to cute ice cream shops inside the arcade.
+Hearing that Morcote is considered as one of the most beautiful villages in Switzerland shouldn't be a surprise. There is not a single spot that is not picture-worthy - from the ferry port where restaurants have a lake terrace to the boats parked by the lake to cute ice cream shops inside the arcade.
 
 ### Parco Scherrer, Morcote
 
 ![how paradise looks like - inside parco scherrer, morcote](/images/journal/san-salvatore-morcote/IMG_9547.webp)
-*How paradise looks like — inside Parco Scherrer, Morcote*
+*How paradise looks like - inside Parco Scherrer, Morcote*
 
 From the port of Morcote, where all the restaurants and cute local shops are, you'll reach the most unique botanical garden, Parco Scherrer, if you walk westbound along the lake for ten minutes where the garden awaits behind an unassuming wall. And the best thing above all? It is all free for you to visit!
 
@@ -78,7 +78,7 @@ Inside you will find Italian sculptures that make you feel like you are in Star 
 ![wanna hop on in?](/images/journal/san-salvatore-morcote/vlcsnap-2023-07-15-00h04m52s823.webp)
 *Wanna hop on in?*
 
-Made it this far? Here's a true local gem! Here comes the favorite part of the day, where after a hike a refreshment in the lake washes away all the tiredness. Let me present to you the best place in the world to head for a dip. It's free. It has showers, bathrooms, a lawn where you can rent an umbrella and get ice cream from the restaurant, a swimming area, and a landing stage — the perfect place to dive in head first. From Parco Scherrer, it's a 15 minute walk, or you can take the bus!
+Made it this far? Here's a true local gem! Here comes the favorite part of the day, where after a hike a refreshment in the lake washes away all the tiredness. Let me present to you the best place in the world to head for a dip. It's free. It has showers, bathrooms, a lawn where you can rent an umbrella and get ice cream from the restaurant, a swimming area, and a landing stage - the perfect place to dive in head first. From Parco Scherrer, it's a 15 minute walk, or you can take the bus!
 
 Although we haven't tried, Italy is on the other side of the lake!
 
@@ -105,5 +105,5 @@ Feeling inspired? Here are some resources you might find useful if you would lik
 - Parco San Grato, the botanical park on the hike
 - Parco Scherrer, the botanical garden in Morcote, as well as the Grotto del Parco restaurant
 - The best place in the world to head for a dip, Riva Pubblica di Morcote
-- Ristorante della Posta — a great restaurant in Morcote by the lake
+- Ristorante della Posta - a great restaurant in Morcote by the lake
 - Ferry timetable

@@ -25,4 +25,4 @@ galleryNote: "Weitere Illustrationen und Erarbeitungen folgen."
 infoNote: "Nähere Infos folgen."
 ---
 
-A project portraying animals around the globe with the aim to contribute to their protection by selling art. Wild postcards, created completely in nature — a warm hello from the beautiful side of planet earth.
+A project portraying animals around the globe with the aim to contribute to their protection by selling art. Wild postcards, created completely in nature, a warm hello from the beautiful side of planet earth.

@@ -58,7 +58,7 @@ collections:
         required: false
         fields:
           - { label: "Bezeichnung", name: "label", widget: "string", hint: "z.B. Size" }
-          - { label: "Angabe", name: "value", widget: "string", hint: "z.B. A3 — 29.7 × 42 cm" }
+          - { label: "Angabe", name: "value", widget: "string", hint: "z.B. A3 - 29.7 × 42 cm" }
       - label: "Versandhinweis"
         name: "shippingNote"
         widget: "text"
@@ -95,7 +95,7 @@ collections:
             name: "price"
             widget: "number"
             value_type: "float"
-            hint: "Nur die Zahl, z.B. 25 oder 12.50 — ohne 'CHF'."
+            hint: "Nur die Zahl, z.B. 25 oder 12.50, ohne 'CHF'."
           - { label: "Kurznotiz (kursiv unter der Auswahl)", name: "note", widget: "string", required: false }
           - label: "Bilder dieser Variante"
             name: "images"
@@ -164,9 +164,9 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Land", name: "country", widget: "string", hint: "Grosse Überschrift, z.B. Schweden" }
-      - { label: "Ort", name: "place", widget: "string", required: false, hint: "z.B. Furka Pass — steht klein unter dem Land" }
+      - { label: "Ort", name: "place", widget: "string", required: false, hint: "z.B. Furka Pass, steht klein unter dem Land" }
       - { label: "Kurzzeile", name: "tagline", widget: "string", required: false, hint: "Ein poetischer Halbsatz, z.B. «Rentiere waren unsere ersten Gäste»" }
-      - { label: "Das gab es", name: "treat", widget: "string", required: false, hint: "z.B. Jordgubbstårta — erscheint als kleines Schildchen" }
+      - { label: "Das gab es", name: "treat", widget: "string", required: false, hint: "z.B. Jordgubbstårta, erscheint als kleines Schildchen" }
       - { label: "Hauptfoto", name: "photo", widget: "image" }
       - label: "Weitere Fotos (bis zu 3)"
         name: "photos"
@@ -213,7 +213,7 @@ collections:
         name: "image"
         widget: "image"
         required: false
-        hint: "Leer lassen, solange es noch kein Bild gibt — die Karte zeigt dann «Bilder folgen»."
+        hint: "Leer lassen, solange es noch kein Bild gibt, die Karte zeigt dann «Bilder folgen»."
       - label: "Kurztext (auf der Karte)"
         name: "teaser"
         widget: "text"
@@ -241,7 +241,7 @@ collections:
         name: "galleryNote"
         widget: "string"
         required: false
-        hint: "Steht über der Bilderreihe — oder an ihrer Stelle, solange sie leer ist."
+        hint: "Steht über der Bilderreihe, oder an ihrer Stelle, solange sie leer ist."
       - label: "Hinweis zu weiteren Infos"
         name: "infoNote"
         widget: "string"
@@ -325,7 +325,7 @@ collections:
             name: "reach"
             widget: "list"
             required: false
-            hint: "Zeilen mit «[PLATZHALTER…]» werden auf der Website ausgeblendet — einfach den echten Wert eintragen, dann erscheinen sie."
+            hint: "Zeilen mit «[PLATZHALTER…]» werden auf der Website ausgeblendet, einfach den echten Wert eintragen, dann erscheinen sie."
             fields:
               - { label: "Zahl", name: "value", widget: "string", hint: "z.B. 470,500 oder +89% oder 8.3%" }
               - { label: "Bezeichnung", name: "label", widget: "string" }

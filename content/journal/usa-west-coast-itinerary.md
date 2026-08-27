@@ -15,7 +15,7 @@ tags: ["westcoast-roadtrip", "usa", "west coast", "pacific northwest", "californ
 
 In mid August, Evelyne and I left Switzerland for a month road tripping the West Coast of the United States. With our rental Toyota 4Runner from Seattle, we have traveled 5,001 miles of open roads, seen breathtaking sunsets on giant rocks, two brown bears, explored thousand year old forests, jumped into glacier lakes, escaped a wildfire, slept on the road, and made friends with squirrels.
 
-We designed our route the scenic way, to see as much as possible in a very short time, so you will find the itinerary most helpful if you like to drive as much as we do. This blog post is meant to be a summary where we show you our entire itinerary with all the highlights we loved on our road trip. Evelyne and I are working hard to post articles and thoughts about the individual places — they will be up soon!
+We designed our route the scenic way, to see as much as possible in a very short time, so you will find the itinerary most helpful if you like to drive as much as we do. This blog post is meant to be a summary where we show you our entire itinerary with all the highlights we loved on our road trip. Evelyne and I are working hard to post articles and thoughts about the individual places - they will be up soon!
 
 ## Our Itinerary
 
@@ -83,7 +83,7 @@ We started our adventures in Seattle to get used to how things work in the U.S, 
 ![happy evelyne and sleepy and happy me, 5 am, driving from klipchuck campground to portland, oregon. we had a long drive ahead, but saw misty magic in the morning hours on the countryside](/images/journal/usa-west-coast-itinerary/09-North-Cascades-National-Park-Highway-in-the-Morning-Fog.jpg)
 *Happy Evelyne and sleepy and happy me, 5 am, driving from Klipchuck Campground to Portland, Oregon. We had a long drive ahead, but saw misty magic in the morning hours on the countryside*
 
-From there, we traveled north. Close to the borders to Canada to see real wilderness, swim in glacier lakes — Diablo Lake, Rainy Lake and Blue Lake — and old pine forests in the North Cascades National Park. While we have seen all of that, Evelyne and I also shared a famous caramelized green apple from a candy shop in western village Winthrop.
+From there, we traveled north. Close to the borders to Canada to see real wilderness, swim in glacier lakes - Diablo Lake, Rainy Lake and Blue Lake - and old pine forests in the North Cascades National Park. While we have seen all of that, Evelyne and I also shared a famous caramelized green apple from a candy shop in western village Winthrop.
 
 ![evelyne in the last light, mount baker national forest](/images/journal/usa-west-coast-itinerary/10-Baker-Lake-Mount-Baker-National-Forest-Sunset-Camping.jpg)
 *Evelyne in the last light, Mount Baker National Forest*
@@ -201,7 +201,7 @@ We certainly did not see enough of the desert, which is why we took a four hour 
 ![no nature was harmed. just red sand from beside the street](/images/journal/usa-west-coast-itinerary/53-Valley-of-Fire-State-Park-Red-Sand-Road-Trip-Mouse-27s-Tank-Road.jpg)
 *No nature was harmed. Just red sand from beside the street*
 
-After we had our hottest camping experience close to Las Vegas, we went into the city of Las Vegas for a smoothie at Pressed and to see the welcome sign, Eiffel Tower, the Statue of Liberty, Venice and oversized luxury malls — well we did not really, we just drove past. But did you know that Trump Tower in Las Vegas is located on a road called Fashion Show Dr?
+After we had our hottest camping experience close to Las Vegas, we went into the city of Las Vegas for a smoothie at Pressed and to see the welcome sign, Eiffel Tower, the Statue of Liberty, Venice and oversized luxury malls - well we did not really, we just drove past. But did you know that Trump Tower in Las Vegas is located on a road called Fashion Show Dr?
 
 Anyway, we were looking for a more wholesome experience and guess where we drove to next? Right, it's Sequoia National Park in California!
 

@@ -1,5 +1,5 @@
 ---
-title: Squirrel Stickers — Vinyl Decals
+title: Squirrel Stickers - Vinyl Decals
 tagline: 'Six hand-painted squirrels, cut from matte vegan vinyl.'
 image: /images/shop/squirrel-stickers/sticker-set.webp
 order: 2
@@ -14,11 +14,11 @@ specs:
   - label: Finish
     value: 'Matte, no glare'
   - label: Durability
-    value: Made for indoors — survives outdoors up to 18 months
+    value: Made for indoors, survives outdoors up to 18 months
   - label: Made
     value: 'To order, 3–5 days before dispatch'
 shippingNote: >-
-  Printed and dispatched from the Netherlands, the UK or the USA — whichever
+  Printed and dispatched from the Netherlands, the UK or the USA, whichever
   sits closest to you, so your stickers take the short route.
 gallery:
   - /images/shop/squirrel-stickers/sticker-set.webp
@@ -26,7 +26,7 @@ gallery:
   - /images/shop/squirrel-stickers/sticker-alpine-marmot.webp
   - /images/shop/squirrel-stickers/sticker-california-ground-squirrel.webp
 variants:
-  - label: The full set — all six designs
+  - label: The full set - all six designs
     price: 12
     sku: GSC-STICKER-SET
     shippingProfile: stickers

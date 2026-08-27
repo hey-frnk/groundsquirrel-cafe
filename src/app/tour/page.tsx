@@ -366,7 +366,7 @@ export default function TourPage() {
                         src={photo.image}
                         alt={
                           isPlaceholder(photo.caption)
-                            ? `${collab.partner} — ${collab.title}`
+                            ? `${collab.partner}, ${collab.title}`
                             : photo.caption!
                         }
                         width={photo.width ?? 900}
@@ -675,7 +675,7 @@ export default function TourPage() {
             </div>
             <a
               href={`mailto:${intro.ctaEmail}?subject=${encodeURIComponent(
-                "The Ground Squirrel Café — a pop-up"
+                "The Ground Squirrel Café, a pop-up"
               )}`}
               className="btn btn-primary shrink-0 self-start lg:self-auto"
             >

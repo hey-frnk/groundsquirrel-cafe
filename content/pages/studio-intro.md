@@ -16,4 +16,4 @@ As wildlife holds a special place in my heart, my illustrations often celebrate 
 
 Thank you for being part of this project.
 
-— Evelyne Buttet
+Evelyne Buttet

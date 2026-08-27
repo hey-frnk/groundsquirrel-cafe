@@ -2,7 +2,7 @@
 title: "3 Week South Africa Road Trip - From the Bush to Cape Town"
 date: "2025-02-12"
 author: "Frank"
-excerpt: "From elephants in the bush to sunsets in Cape Town — our 3-week South Africa road trip through game reserves, Kruger National Park, the Garden Route, and the Cape."
+excerpt: "From elephants in the bush to sunsets in Cape Town - our 3-week South Africa road trip through game reserves, Kruger National Park, the Garden Route, and the Cape."
 cover: "/images/journal/south-africa-road-trip/IMG_7740.webp"
 tags: ["road trip", "africa", "beach", "nature", "wildlife", "cape town", "south africa", "hiking", "inspiration", "mpumalanga", "kwazulu-natal", "limpopo", "kruger national park", "national park", "manyeleti game reserve", "elephants", "big five"]
 ---
@@ -12,7 +12,7 @@ tags: ["road trip", "africa", "beach", "nature", "wildlife", "cape town", "south
 ![south africa: from the bush… there's an interactive map of the places we visited if you scroll down!](/images/journal/south-africa-road-trip/south-africa-the-bush-roadtrip-map.webp)
 *South Africa: from the bush… there's an interactive map of the places we visited if you scroll down!*
 
-Sometimes, I close my eyes, and it takes me back to the terrace of our tented camp, where a soft crackling sound of the warm campfire peeks through the sea of frogs quacking. It has rained in the bush. And what Evelyne describes as golden and dry is a lush, green and lively summer where everything breathes and flows. I start singing Caamp with Evelyne on the ukulele until we got interrupted — our dinner is ready!
+Sometimes, I close my eyes, and it takes me back to the terrace of our tented camp, where a soft crackling sound of the warm campfire peeks through the sea of frogs quacking. It has rained in the bush. And what Evelyne describes as golden and dry is a lush, green and lively summer where everything breathes and flows. I start singing Caamp with Evelyne on the ukulele until we got interrupted - our dinner is ready!
 
 ## Our Itinerary
 
@@ -47,7 +47,7 @@ Excited and curious? No more beating around the bush, here's our itinerary!
 
 ## How We Traveled
 
-When Evelyne left Switzerland to become a field guide in the bush of South Africa, I was most excited about the opportunity for a South African road trip. A little while ago, I started drafting an itinerary for two separate road trips: one for the bush in Mpumalanga and Limpopo, and one for the Garden Route. We connected the dots and added a few more exciting spots along the way — here's the result!
+When Evelyne left Switzerland to become a field guide in the bush of South Africa, I was most excited about the opportunity for a South African road trip. A little while ago, I started drafting an itinerary for two separate road trips: one for the bush in Mpumalanga and Limpopo, and one for the Garden Route. We connected the dots and added a few more exciting spots along the way - here's the result!
 
 Of course, we've mapped it out after our road trip, so you don't have to go to places we thought were lame and can look at the exciting part!
 
@@ -64,11 +64,11 @@ Gas prices are expensive for South Africa. Be prepared that while pumping gas, y
 
 ![](/images/journal/south-africa-road-trip/DSC_0717-2.webp)
 
-**How is the weather?** We visited South Africa in February, which is summer. In the bush, summer is rainy — in the Western Cape it is dry. In winter, it is the other way around. Although rainy, the temperatures were always comfortable in the 20s centigrade during our travels.
+**How is the weather?** We visited South Africa in February, which is summer. In the bush, summer is rainy - in the Western Cape it is dry. In winter, it is the other way around. Although rainy, the temperatures were always comfortable in the 20s centigrade during our travels.
 
-While most places accept credit cards, have cash with you for highway toll stations, smaller payments and tipping. Accommodation, restaurants and groceries are affordable if you are accustomed to prices in Switzerland — expect to pay around half to an eighth of what you'd shell out back home. National parks and scenic attractions typically require a conservation or entrance fee. We purchased a Wild Card, which paid off on our Kruger National Park camping trip.
+While most places accept credit cards, have cash with you for highway toll stations, smaller payments and tipping. Accommodation, restaurants and groceries are affordable if you are accustomed to prices in Switzerland - expect to pay around half to an eighth of what you'd shell out back home. National parks and scenic attractions typically require a conservation or entrance fee. We purchased a Wild Card, which paid off on our Kruger National Park camping trip.
 
-We got an MTN SIM card at Johannesburg airport right when we got off the airplane. Honestly, we're pretty phone addicted — but at the end, we didn't even come close to the 50 GB prepaid data we've purchased.
+We got an MTN SIM card at Johannesburg airport right when we got off the airplane. Honestly, we're pretty phone addicted - but at the end, we didn't even come close to the 50 GB prepaid data we've purchased.
 
 ## Places We Visited
 
@@ -81,7 +81,7 @@ We started our adventures in Johannesburg, where we picked up our rental car and
 ![…elephants in the bush](/images/journal/south-africa-road-trip/IMG_0704.webp)
 *…elephants in the bush*
 
-From there, we picked up Evelyne in a mall parking lot, who joined us from high up north in Kruger National Park. Together, we visited a wildlife rehab and sanctuary called Moholoholo. Given the rarity of some animals in the wild — such as leopards and wild dogs — this is a fantastic opportunity to catch sight of them for the first time.
+From there, we picked up Evelyne in a mall parking lot, who joined us from high up north in Kruger National Park. Together, we visited a wildlife rehab and sanctuary called Moholoholo. Given the rarity of some animals in the wild - such as leopards and wild dogs - this is a fantastic opportunity to catch sight of them for the first time.
 
 ![giraffe and a gnu](/images/journal/south-africa-road-trip/DSC_0835-2.webp)
 *Giraffe and a gnu*
@@ -123,7 +123,7 @@ At sunset, another chance awaits for a coffee, rusks, and a break to capture the
 ![and a closeup of it…](/images/journal/south-africa-road-trip/IMG_1566.webp)
 *And a closeup of it…*
 ![farsightedness on the panorama route - some rainclouds are coming](/images/journal/south-africa-road-trip/IMG_1579.webp)
-*Farsightedness on the Panorama Route — some rainclouds are coming*
+*Farsightedness on the Panorama Route - some rainclouds are coming*
 ![frank secretly wished to be able to swim in this bucket of water. as far as it seems, berlin falls is on private land and not accessible](/images/journal/south-africa-road-trip/IMG_7584.webp)
 *Frank secretly wished to be able to swim in this bucket of water. As far as it seems, Berlin Falls is on private land and not accessible*
 
@@ -147,9 +147,9 @@ Things got much worse when we continued onto Kruger National Park. Our initial h
 Nevertheless, in the few hours we were incredibly lucky to witness a pride of lions eating a zebra very close to the road.
 
 ![flooded crocodile river - kruger national park is on the other side](/images/journal/south-africa-road-trip/IMG_7760.webp)
-*Flooded Crocodile River — Kruger National Park is on the other side*
+*Flooded Crocodile River - Kruger National Park is on the other side*
 
-> 📖 Read more: [Kruger National Park Camping Road Trip – The Ultimate Self-Drive Safari Experience](/journal/kruger-national-park-camping-road-trip) — dreaming of falling asleep to the sounds of howling hyena and truly living under the stars with the elephants? That post tells you all about camping and self-traveling inside Africa's largest national park.
+> 📖 Read more: [Kruger National Park Camping Road Trip – The Ultimate Self-Drive Safari Experience](/journal/kruger-national-park-camping-road-trip) - dreaming of falling asleep to the sounds of howling hyena and truly living under the stars with the elephants? That post tells you all about camping and self-traveling inside Africa's largest national park.
 
 We had much more luck in our camping road trip through Kruger National Park. There we went from Malelane Gate all the way to Punda Maria Rest Camp in Makuleke: through a little detour we made it to the other side of Crocodile Bridge, where we could sleep next to hippos and hear hyenas howling at night.
 
@@ -195,7 +195,7 @@ It doesn't matter in which quaint coastal town you stop along the way, whether i
 
 ## Ostriches in Klein Karoo & Swartberg Pass
 
-From the lush green maritime fynbos vegetation along the sea, here's where you travel inland to the "worldwide capital of ostrich" — Oudtshoorn.
+From the lush green maritime fynbos vegetation along the sea, here's where you travel inland to the "worldwide capital of ostrich" - Oudtshoorn.
 
 ![pristine fynbos flora](/images/journal/south-africa-road-trip/IMG_8706.webp)
 *Pristine fynbos flora*
@@ -204,7 +204,7 @@ From the lush green maritime fynbos vegetation along the sea, here's where you t
 
 Frank's absolute favorite part is driving Swartberg Pass, where on the other side the landscape gets dry and Colorado-red, and the sky dark blue.
 
-On the other side, a small town, Prince Albert, awaits. On the main road you'll find a café — The Lazy Lizard — which embodies the relaxing spirit of the town. There isn't anything more relaxing than to stop for a tasty coffee and bread, and shop for delightful locally made treats.
+On the other side, a small town, Prince Albert, awaits. On the main road you'll find a café - The Lazy Lizard - which embodies the relaxing spirit of the town. There isn't anything more relaxing than to stop for a tasty coffee and bread, and shop for delightful locally made treats.
 
 ![time for local fruits](/images/journal/south-africa-road-trip/IMG_8757.webp)
 *Time for local fruits*
@@ -213,7 +213,7 @@ On the other side, a small town, Prince Albert, awaits. On the main road you'll 
 
 ## The Best Wine in Stellenbosch
 
-The region surrounding Stellenbosch is world famous for its legendary wine. A South African road trip isn't complete without a vineyard tour, wine tasting — or for us, an elevated picnic experience.
+The region surrounding Stellenbosch is world famous for its legendary wine. A South African road trip isn't complete without a vineyard tour, wine tasting - or for us, an elevated picnic experience.
 
 ![our vegan picnic under a tree at hazendal wine estate](/images/journal/south-africa-road-trip/IMG_8841.webp)
 *Our vegan picnic under a tree at Hazendal Wine Estate*
@@ -222,7 +222,7 @@ Stellenbosch is full of impressive wineries. We visited Hazendal Wine Estate and
 
 We stayed in Stellenbosch for two days. In the peaceful and dry summer, waking up with a view to the mountains, it feels so much like vacationing. Jump into the pool when it's hot, and have a braai and some ukulele music by the fire.
 
-## Cape Town — Sightseeing, Penguins on the Beach and Hiking Lion's Head
+## Cape Town - Sightseeing, Penguins on the Beach and Hiking Lion's Head
 
 ![colorful muizenberg](/images/journal/south-africa-road-trip/IMG_9008.webp)
 *Colorful Muizenberg*
@@ -231,14 +231,14 @@ In Cape Town, we stayed in Muizenberg, a surfer town known for its colorful beac
 
 ![](/images/journal/south-africa-road-trip/IMG_0385.webp)
 
-Not too far away from Muizenberg lies Boulders Beach. It's not only the place to meet a colony of adorable African penguins — rock dassies also make a reappearance!
+Not too far away from Muizenberg lies Boulders Beach. It's not only the place to meet a colony of adorable African penguins - rock dassies also make a reappearance!
 
 ![african penguins chillin' on the beach](/images/journal/south-africa-road-trip/IMG_9193.webp)
 *African penguins chillin' on the beach*
 
-Drive all the way down to Cape Point National Park to catch a glimpse of the Cape of Good Hope (which is the most southwestern tip of Africa!). If you start heading back to Cape Town, don't miss out Whole Earth Café and driving the iconic rugged coastal highway Chapman's Peak Drive. If you have a drone, fly it with caution — Frank sadly crashed his drone into the sea.
+Drive all the way down to Cape Point National Park to catch a glimpse of the Cape of Good Hope (which is the most southwestern tip of Africa!). If you start heading back to Cape Town, don't miss out Whole Earth Café and driving the iconic rugged coastal highway Chapman's Peak Drive. If you have a drone, fly it with caution - Frank sadly crashed his drone into the sea.
 
-We explored the city of Cape Town on the red double-decker hop-on hop-off buses. It takes you from the city center with its incredibly diverse food scene and colorful markets through the modern waterfront — which reminds you more of the Copenhagen waterfront until you see Table Mountain in the background — to Camps Bay. Time for the white sandy beach and a good smoothie!
+We explored the city of Cape Town on the red double-decker hop-on hop-off buses. It takes you from the city center with its incredibly diverse food scene and colorful markets through the modern waterfront - which reminds you more of the Copenhagen waterfront until you see Table Mountain in the background - to Camps Bay. Time for the white sandy beach and a good smoothie!
 
 Inside Kirstenbosch Botanical Garden, Frank went for some delicious traditional, all-vegan South African pap, morogo, butternut and chakalaka. Look out for the colorful nectarivore sunbirds on the most gorgeous flowers and take a walk on the tree canopy trail.
 

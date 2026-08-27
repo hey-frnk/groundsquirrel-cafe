@@ -2,16 +2,16 @@
 title: "Epic Sichuan Road Trip: 10-Day Itinerary for Nature & Wildlife in the Heart of China"
 date: "2024-12-25"
 author: "Frank"
-excerpt: "In April, Evelyne and I set out on a journey to explore Sichuan — the heart of China, famous for its stunning landscapes, incredible biodiversity, and spicy food. Here's our 10-day road trip itinerary."
+excerpt: "In April, Evelyne and I set out on a journey to explore Sichuan - the heart of China, famous for its stunning landscapes, incredible biodiversity, and spicy food. Here's our 10-day road trip itinerary."
 cover: "/images/journal/sichuan-road-trip/IMG_6571.jpg"
 tags: ["asia", "china", "wildlife", "nature", "jiuzhaigou", "huanglong", "emei", "chengdu", "sichuan", "tangjiahe", "giant panda", "safari"]
 ---
 
-In April, Evelyne and I set out on a journey to explore Sichuan. It's the heart of China that is famous for its stunning landscapes, incredible biodiversity — home to a whopping 40% of China's mammal species — and its vibrant culture and spicy food. In this blog you can read all about our 10-day road trip through Sichuan, things we did, places we visited and things we loved.
+In April, Evelyne and I set out on a journey to explore Sichuan. It's the heart of China that is famous for its stunning landscapes, incredible biodiversity - home to a whopping 40% of China's mammal species - and its vibrant culture and spicy food. In this blog you can read all about our 10-day road trip through Sichuan, things we did, places we visited and things we loved.
 
 ## The Perfect Itinerary
 
-We created our itinerary to experience as much nature and wildlife as possible over these 10 days — without missing out on the most beautiful cultural highlights. The result? An epic, vibrant journey packed with unforgettable moments, from watching the sun rise on sacred Mount Emei to tasting hand-pulled noodles in the Tibetan town of Songpan. If we were to do it again, this is how we would plan it now:
+We created our itinerary to experience as much nature and wildlife as possible over these 10 days - without missing out on the most beautiful cultural highlights. The result? An epic, vibrant journey packed with unforgettable moments, from watching the sun rise on sacred Mount Emei to tasting hand-pulled noodles in the Tibetan town of Songpan. If we were to do it again, this is how we would plan it now:
 
 - 2 days Chengdu 成都
 - 2 days Mt. Emei 峨眉山
@@ -33,7 +33,7 @@ We created our itinerary to experience as much nature and wildlife as possible o
 
 Our driver picked us up at Chengdu airport, and we got transferred into the most unique hotel ever: it's all aesthetic panda-themed. A short walk through the old town into a serene tea garden, time slowed. It was a peaceful, unspoken intuition where locals meet and take time for aromatic green tea.
 
-> ♥ Favorite Location: Tea Garden in Chengdu — Coordinates: (30°40'36.3"N, 104°4'15.2" E)
+> ♥ Favorite Location: Tea Garden in Chengdu - Coordinates: (30°40'36.3"N, 104°4'15.2" E)
 
 ![finally found someone that matches our energy](/images/journal/sichuan-road-trip/IMG_5703.jpg)
 *Finally found someone that matches our energy*
@@ -52,13 +52,13 @@ The most poetic place in Chengdu undoubtedly is Jinli pedestrian street, lined w
 
 Chengdu is synonymous with giant pandas, and visiting the panda research base is a good way to have a 100% chance of seeing pandas. Arrive early to beat the crowds and enjoy some more peaceful panda moments.
 
-> ♥ Favorite Location: Panda Themed Hotel Xishu Garden Inn 熙蜀酒店 — Coordinates: (30°40'30.7"N, 104°4'20.1"E)
+> ♥ Favorite Location: Panda Themed Hotel Xishu Garden Inn 熙蜀酒店 - Coordinates: (30°40'30.7"N, 104°4'20.1"E)
 
 ![our hotel in the heart of chengdu was a real gem](/images/journal/sichuan-road-trip/IMG_5674.jpg)
 ![pa-pa-gan season! evelyne trying these juicy mandarin oranges](/images/journal/sichuan-road-trip/IMG_5982.jpg)
 ![a must try: a vegan buffet in chengdu for 5$ per person in a restaurant called 万物美](/images/journal/sichuan-road-trip/IMG_0801.jpg)
 
-> ♥ Favorite Location: Vegan buffet restaurant 万物美 — Coordinates: (30°38'52.3"N, 104°00'04.8"E)
+> ♥ Favorite Location: Vegan buffet restaurant 万物美 - Coordinates: (30°38'52.3"N, 104°00'04.8"E)
 
 ### A Golden Sunrise Mission on Mount Emei
 
@@ -84,7 +84,7 @@ While we took the shuttle up to the mid-point Lei Dong Ping (雷洞坪) at sunse
 ![in other temples, you can stay overnight and take a rest for 10$](/images/journal/sichuan-road-trip/IMG_5855.jpg)
 *In other temples, you can stay overnight and take a rest for 10$*
 ![blooming flowers in april on emeishan - mount emei](/images/journal/sichuan-road-trip/IMG_5877.jpg)
-*Blooming flowers in April on Emeishan — Mount Emei*
+*Blooming flowers in April on Emeishan - Mount Emei*
 
 Fair warning: this hike is quite a workout! If you're not up for a full day of trekking, break it into smaller sections, stay overnight in one of the temples and soak in the magic at your own pace.
 
@@ -127,7 +127,7 @@ On the road to iconic Jiuzhaigou, we made an off-the-itinerary stop at a little-
 ![did you know that pandas live between a height of 5000 and 1000 ft? this place in jiawuchi resembles much more of a panda's natural habitat](/images/journal/sichuan-road-trip/IMG_6227-2.jpg)
 *Did you know that pandas live between a height of 5000 and 1000 ft? This place in Jiawuchi resembles much more of a panda's natural habitat*
 
-> ♥ Favorite Location: Little known Tibetan town Baxijia 扒昔加 — Coordinates: (32°49'17.3"N, 104°12'12.2"E)
+> ♥ Favorite Location: Little known Tibetan town Baxijia 扒昔加 - Coordinates: (32°49'17.3"N, 104°12'12.2"E)
 
 It's home to five pandas and a tranquil lake nestled at the end of the scenic hike. This fairly unknown spot was a peaceful prelude to what came next: the dreamlike landscapes of Jiuzhaigou.
 
@@ -149,13 +149,13 @@ Jiuzhaigou is like stepping into a postcard. Think turquoise alpine lakes, tower
 ![at 3500 meters above sea level, the ponds were still snow-capped in april](/images/journal/sichuan-road-trip/IMG_6551.jpg)
 ![however, the hiking trails were perfectly snow-free and accessible](/images/journal/sichuan-road-trip/IMG_6564.jpg)
 
-Our final day trip was hiking the stunning Huanglong National Park, renowned for its terraced calcite pools that shimmer in shades of turquoise and gold. The drive there alone was worth the trip — winding roads offered jaw-dropping views of snow-capped peaks that felt like something out of a Pacific Northwest dream.
+Our final day trip was hiking the stunning Huanglong National Park, renowned for its terraced calcite pools that shimmer in shades of turquoise and gold. The drive there alone was worth the trip - winding roads offered jaw-dropping views of snow-capped peaks that felt like something out of a Pacific Northwest dream.
 
 ![](/images/journal/sichuan-road-trip/IMG_6601.jpg)
 ![](/images/journal/sichuan-road-trip/IMG_6607.jpg)
 ![](/images/journal/sichuan-road-trip/IMG_6661.jpg)
 
-> ♥ Favorite Location: Lan Zhou Hand Pulled Noodles — Coordinates: (32°38'41.74"N, 103°35'48.71"E)
+> ♥ Favorite Location: Lan Zhou Hand Pulled Noodles - Coordinates: (32°38'41.74"N, 103°35'48.71"E)
 
 When we arrived, we discovered that the pools were mostly dry. But even with less water than the end of a rain season, their beauty was captivating.
 
@@ -165,11 +165,11 @@ We ended the day in Songpan 松潘, a historic town where our tour guide helped 
 
 ## How We Traveled
 
-We were a group of six — Frank arranged a tour through Sunrise China Expeditions, so we were accompanied by an enthusiastic and knowledgeable guide who made the experience truly special and easy.
+We were a group of six - Frank arranged a tour through Sunrise China Expeditions, so we were accompanied by an enthusiastic and knowledgeable guide who made the experience truly special and easy.
 
 We had a private bus and driver, and all national park entrance tickets were taken care of in advance. Our hotels were custom tailored to our preferences, so we really didn't have to worry about a thing.
 
-Our trip connected the Avatar Mountains in Zhangjiajie with Jiuzhaigou. We flew from the small airport in Zhangjiajie to Chengdu. On the way back, we took the brand-new high-speed train — back then, it only went as far as Zhenjiangguan. Today, the line goes further, all the way to Songpan and even directly to Jiuzhaigou. From Chengdu, we took a flight to Beijing.
+Our trip connected the Avatar Mountains in Zhangjiajie with Jiuzhaigou. We flew from the small airport in Zhangjiajie to Chengdu. On the way back, we took the brand-new high-speed train - back then, it only went as far as Zhenjiangguan. Today, the line goes further, all the way to Songpan and even directly to Jiuzhaigou. From Chengdu, we took a flight to Beijing.
 
 ![](/images/journal/sichuan-road-trip/IMG_1332.jpg)
 ![](/images/journal/sichuan-road-trip/page0.jpg)

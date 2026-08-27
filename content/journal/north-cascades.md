@@ -2,7 +2,7 @@
 title: "North Cascades Adventure: Exploring Glacier Lakes & Wilderness in the Pacific Northwest"
 date: "2022-10-30"
 author: "Frank"
-excerpt: "Our first outdoor adventure takes us up north of Seattle into the North Cascades — a mountainous hiking paradise with over 300 glaciers and nothing but wilderness and the magical vibes of the Pacific Northwest."
+excerpt: "Our first outdoor adventure takes us up north of Seattle into the North Cascades - a mountainous hiking paradise with over 300 glaciers and nothing but wilderness and the magical vibes of the Pacific Northwest."
 cover: "/images/journal/north-cascades/DSC_0600.jpg"
 tags: ["westcoast-roadtrip", "mountains", "washington", "pacific northwest", "hiking", "wanderlust", "travel", "inspiration", "nature", "forests", "wilderness", "glacier lakes", "west coast", "camping", "roadtrip", "campground", "national park", "granola"]
 ---
@@ -73,7 +73,7 @@ On the main road of the national park, be sure to stop by the Diablo Lake Vista 
 
 For the afternoon, Evelyne and I went for an easy, 2 mile round-trip hike from the Rainy Lake parking lot to Rainy Lake. It is an accessible, wide and paved trail that takes you to an alpine lake at 4800 ft elevation. Evelyne and I sat down at the lake, took a dip into the chill water to escape the mosquitos and sang "Missing Piece" by Vance Joy next to giant ice blocks.
 
-> ℹ Rainy Lake — Distance: 2.0 mi (3.2 km) · Elevation gain: 70 ft (21 m) · Highest point: 4800 ft (1463 m)
+> ℹ Rainy Lake - Distance: 2.0 mi (3.2 km) · Elevation gain: 70 ft (21 m) · Highest point: 4800 ft (1463 m)
 
 ![the feeling of being wild and free. washington pass](/images/journal/north-cascades/IMG_1016.jpg)
 *The feeling of being wild and free. Washington Pass*
@@ -92,7 +92,7 @@ We love to start a hike early in the morning. The trails are less crowded, the l
 
 ![](/images/journal/north-cascades/DSC_0395.jpg)
 
-> ℹ Blue Lake — Distance: 4.4 mi (7.1 km) · Elevation gain: 1050 ft (320 m) · Highest point: 6254 ft (1906 m)
+> ℹ Blue Lake - Distance: 4.4 mi (7.1 km) · Elevation gain: 1050 ft (320 m) · Highest point: 6254 ft (1906 m)
 
 ![frank, appreciating the view](/images/journal/north-cascades/IMG_1146.jpg)
 *Frank, appreciating the view*
@@ -120,7 +120,7 @@ If you ever get to stop at the gas station in town, be sure to check out the non
 
 So many memories! When we arrived at our campground, Klipchuck, the second night, we made some quick dinner, Evelyne started watercoloring into our journal and both of us fell asleep quickly.
 
-Oh wait, the story doesn't end here. For our way out of the North Cascades, I decided to start driving at 3 am to beat the traffic. It was 5 am when we stepped out of our car to the sound of rooster into the misty morning light and tried to capture as much of the magic as we could — morning magic, on our way out of the North Cascades.
+Oh wait, the story doesn't end here. For our way out of the North Cascades, I decided to start driving at 3 am to beat the traffic. It was 5 am when we stepped out of our car to the sound of rooster into the misty morning light and tried to capture as much of the magic as we could - morning magic, on our way out of the North Cascades.
 
 *With 🐝 by Frank.*
 

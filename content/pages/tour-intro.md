@@ -6,7 +6,7 @@ collabKicker: "Bring your product along for the journey"
 collabHeading: "Work with us"
 pillars:
   - title: "A moving place for your brand"
-    text: "Humbär is our self-built 1992 VW camper and the heart of The Ground Squirrel Café — a traveling space for stories, connection, and good things along the way. We take products out of the studio and into real moments: on the road, around the campfire, up a mountain, or into a quiet morning by the lake."
+    text: "Humbär is our self-built 1992 VW camper and the heart of The Ground Squirrel Café, a traveling space for stories, connection, and good things along the way. We take products out of the studio and into real moments: on the road, around the campfire, up a mountain, or into a quiet morning by the lake."
   - title: "A taste of the journey"
     text: "We build each story around where we are. Local food, beautiful places, and everyday rituals become the backdrop for products we genuinely enjoy and use. From morning coffee to evenings around the fire, your product becomes part of an experience rather than simply being placed in front of a camera."
   - title: "The ritual that brings us together"

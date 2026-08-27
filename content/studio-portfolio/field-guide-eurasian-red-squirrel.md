@@ -1,5 +1,5 @@
 ---
-title: "Eurasian Red Squirrel — field notes"
+title: "Eurasian Red Squirrel - field notes"
 image: "/images/studio/portfolio/field-guide-eurasian-red-squirrel.webp"
 order: 1
 ---

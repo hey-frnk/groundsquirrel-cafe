@@ -11,7 +11,7 @@
     "",
     "After editing, run:  node scripts/sync-worker-config.mjs",
     "then:                cd checkout-worker && npx wrangler deploy",
-    "No Stripe key needed — rates are created inline per checkout, so nothing",
+    "No Stripe key needed - rates are created inline per checkout, so nothing",
     "has to be registered in the Stripe dashboard.",
     "",
     "taxCode txcd_92010001 is Stripe's 'Shipping' code, so Stripe Tax applies the",

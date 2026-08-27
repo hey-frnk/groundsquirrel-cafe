@@ -214,7 +214,7 @@ export default function CartDrawer() {
               <div className="rounded-xl border border-ink/10 bg-ivory/25 px-4 py-4 text-center">
                 <p className="text-sm text-ink">Checkout opens soon</p>
                 <p className="mt-1.5 text-xs text-graphite/70">
-                  Your basket is saved — it will still be here.
+                  Your basket is saved. It will still be here.
                 </p>
               </div>
             )}

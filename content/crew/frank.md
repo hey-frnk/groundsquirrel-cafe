@@ -13,4 +13,4 @@ qualifications:
 
 Frank likes lavender, fluffy bumblebees, golden larch trees in fall, and playing the guitar with just four chords. He spent his teenage years living in specialty coffee shops in Berlin before he left the artist capital for his master's degree in the Swiss mountains.
 
-He dreams of traveling the world sustainably, protecting nature and the environment, and building his own solar system for vanlife. His dreams became true in March 2025 — and since then, his projects are powered by the sun and produced on the road.
+He dreams of traveling the world sustainably, protecting nature and the environment, and building his own solar system for vanlife. His dreams became true in March 2025 - and since then, his projects are powered by the sun and produced on the road.

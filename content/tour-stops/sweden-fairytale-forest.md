@@ -14,4 +14,4 @@ photos:
 order: 4
 ---
 
-In a magic fairytale forest, The Ground Squirrel Café opened its doors with a Jordgubbstårta — a traditional Swedish strawberry cake. Reindeers were our first guests!
+In a magic fairytale forest, The Ground Squirrel Café opened its doors with a Jordgubbstårta, a traditional Swedish strawberry cake. Reindeers were our first guests!

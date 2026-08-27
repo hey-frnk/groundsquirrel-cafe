@@ -14,4 +14,4 @@ qualifications:
 
 Evelyne Buttet likes African wildlife and everything that can fly or lives above the tree line. She grew up in a small Swiss mountain valley on the foot of Mount Pilatus. When she's not exploring the bushes, she loves to play the ukulele, eat granola or turn her vivid imagination into creative texts and colorful illustrations.
 
-She dreams of traveling the world sustainably and protecting wildlife. Her dream became true in March 2025 — and since then, you can find her on the road, running the ground squirrel café.
+She dreams of traveling the world sustainably and protecting wildlife. Her dream became true in March 2025 - and since then, you can find her on the road, running the ground squirrel café.

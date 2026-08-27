@@ -12,7 +12,7 @@ tags: ["westcoast-roadtrip", "oregon", "california", "coast", "roadtrip", "samue
 ![the granola couple. from the sand of the trail around us, frank's hiking shoes look almost the same color as evelyne's](/images/journal/natural-bridge-redwoods/2022-08-17-15-57-55.jpg)
 *The granola couple. From the sand of the trail around us, Frank's hiking shoes look almost the same color as Evelyne's*
 
-We hiked through the foggy forest through an unofficial side trail to reach the stunning Natural Bridge, feeling like we were in a mystical movie set in the Pacific Northwest. While I was nervous about the steep cliffs, Evelyne bravely stepped ahead to capture beautiful pictures for us. We sat on the bridge and flew over it with my drone, just like heyxnatalie — well, we didn't know we were on the bridge until we saw it from the drone camera!
+We hiked through the foggy forest through an unofficial side trail to reach the stunning Natural Bridge, feeling like we were in a mystical movie set in the Pacific Northwest. While I was nervous about the steep cliffs, Evelyne bravely stepped ahead to capture beautiful pictures for us. We sat on the bridge and flew over it with my drone, just like heyxnatalie - well, we didn't know we were on the bridge until we saw it from the drone camera!
 
 As we made our way back, the sun peeked through the fog and magically cleared it, bringing a completely new vibe to the scenery.
 

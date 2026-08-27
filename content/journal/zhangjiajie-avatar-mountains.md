@@ -2,14 +2,14 @@
 title: "The Avatar Mountains of Zhangjiajie - All You Need to Know"
 date: "2024-12-04"
 author: "Frank"
-excerpt: "This blog tells you all about how to travel the Avatar Mountains in Zhang Jia Jie, China — just like the mountains, the names of this place are confusing, so we hope to make things easier for you."
+excerpt: "This blog tells you all about how to travel the Avatar Mountains in Zhang Jia Jie, China - just like the mountains, the names of this place are confusing, so we hope to make things easier for you."
 cover: "/images/journal/zhangjiajie-avatar-mountains/IMG_5362.jpg"
 tags: ["china", "zhangjiajie", "asia", "travel", "national park", "hiking", "outdoors", "nature", "wulingyuan", "baofeng lake", "zhangjiajie national park", "tianzi mountain", "tianzishan", "zhangjiajie itinerary"]
 ---
 
 This blog tells you all about how to travel the Avatar Mountains in Zhang Jia Jie in China. Just like the mountains, the names of this place are confusing and used interchangeably, so we really hope to make things easier for you with this blog.
 
-**Small heads up:** we are separating the Chinese pinyin names (Zhangjiajie becomes Zhang Jia Jie) so they are less of a pain to read or memorize, and adding the Chinese characters 张家界 — and a translation whenever it makes sense, so you can look them up!
+**Small heads up:** we are separating the Chinese pinyin names (Zhangjiajie becomes Zhang Jia Jie) so they are less of a pain to read or memorize, and adding the Chinese characters 张家界 - and a translation whenever it makes sense, so you can look them up!
 
 ## Things to Know About Zhang Jia Jie (I)
 
@@ -20,7 +20,7 @@ This blog tells you all about how to travel the Avatar Mountains in Zhang Jia Ji
 
 Zhang Jia Jie as a name is pretty confusing, because that is just how the region is called. There's a city with this name, but where Avatar was filmed is actually inside a scenic area called Wu Ling Yuan (武陵源), which unfortunately is also called Zhang Jia Jie unofficially.
 
-There's a half an hour drive from the city of Zhang Jia Jie — where your train or plane will likely arrive — to Wu Ling Yuan. Okay, this is as confusing as it gets, we promise it is getting better!
+There's a half an hour drive from the city of Zhang Jia Jie - where your train or plane will likely arrive - to Wu Ling Yuan. Okay, this is as confusing as it gets, we promise it is getting better!
 
 ### How Did We Travel?
 
@@ -50,14 +50,14 @@ It is true that Zhang Jia Jie has more than 200 rainy days a year. Depending on 
 
 We worked out three day-programs in advance, two for good weather and one where the weather was less of a factor:
 
-- **Hike from the bottom up to Yuan Jia Jie (袁家界)** — where Avatar was filmed. The South Sky Pillar (南天一柱) became the floating Hallelujah Mountain in Avatar. There's also the Bailong Elevator, which goes up to 326m in under 1:30. Don't miss out on the Natural Bridge (天下第一桥) and many viewpoints, e.g. (迷魂台), of the special mountains.
-- **Hike up to Tian Zi Shan (天子山)** — a similarly scenic area with a pavilion and a park at the end of the hike. We even combined it with a hike in Yang Jia Jie (杨家界) to the Natural Great Wall (天然长城) in the afternoon where the shuttle takes you there.
+- **Hike from the bottom up to Yuan Jia Jie (袁家界)** - where Avatar was filmed. The South Sky Pillar (南天一柱) became the floating Hallelujah Mountain in Avatar. There's also the Bailong Elevator, which goes up to 326m in under 1:30. Don't miss out on the Natural Bridge (天下第一桥) and many viewpoints, e.g. (迷魂台), of the special mountains.
+- **Hike up to Tian Zi Shan (天子山)** - a similarly scenic area with a pavilion and a park at the end of the hike. We even combined it with a hike in Yang Jia Jie (杨家界) to the Natural Great Wall (天然长城) in the afternoon where the shuttle takes you there.
 - **Calm walk along the Golden Whip Stream (金鞭溪)**, drinking out of a holy water fountain and possibly checking out Huang Shi Village (黄石寨).
 
 ![the shuttle stop at golden whip stream at sunset](/images/journal/zhangjiajie-avatar-mountains/IMG_5363.jpg)
 *The shuttle stop at Golden Whip Stream at sunset*
 
-## Hiking Up the Hallelujah Mountains — a Peaceful Walk in the Valley
+## Hiking Up the Hallelujah Mountains - a Peaceful Walk in the Valley
 
 ![a peaceful walk in the valley](/images/journal/zhangjiajie-avatar-mountains/IMG_9783.jpg)
 *A peaceful walk in the valley*
@@ -91,14 +91,14 @@ While a part of our group took the shuttle to head to the elevator, we hiked the
 
 After a sporty day in the wild, there are numerous restaurants outside the national park waiting for you with hearty Tu Jia cuisine. From delicious Zhang Jia Jie specialty beer to wild vegetables and mushrooms, we really had a great time as vegetarians. In our experience, the chefs are very flexible and made many things to our liking.
 
-But there are also numerous street food vendors on the streets of Wu Ling Yuan — the hotel town in front of the eastern gates of the national park.
+But there are also numerous street food vendors on the streets of Wu Ling Yuan - the hotel town in front of the eastern gates of the national park.
 
-Evelyne's highlight? Pa pa gan (the finest mandarins from Japan) or local Chinese bananas — they are so sweet and have so much character! For Frank, it was definitely the beer!
+Evelyne's highlight? Pa pa gan (the finest mandarins from Japan) or local Chinese bananas - they are so sweet and have so much character! For Frank, it was definitely the beer!
 
 ![the steaming warm, legendary 'sticky corn' from a tu jia food stand](/images/journal/zhangjiajie-avatar-mountains/IMG_5221.jpg)
 *The steaming warm, legendary "sticky corn" from a Tu Jia food stand*
 ![peeling a pa pa gan - with unmatched sweetness](/images/journal/zhangjiajie-avatar-mountains/IMG_0104.jpg)
-*Peeling a pa pa gan — with unmatched sweetness*
+*Peeling a pa pa gan - with unmatched sweetness*
 ![cheers to a delicious locally brewed zhang jia jie beer!](/images/journal/zhangjiajie-avatar-mountains/IMG_5443.jpg)
 *Cheers to a delicious locally brewed Zhang Jia Jie beer!*
 
@@ -111,7 +111,7 @@ We haven't had enough on our first hiking day. So that is why on our second day,
 
 The journey begins in the valley, where you can take a shuttle to the picturesque Ten-Mile Natural Gallery (十里画廊). From there, you'll walk along the panoramic railroad. While the train passes quite close to the trail and there's no alternate route, don't let that dampen your spirits!
 
-Once you reach the end of the railroad, stay optimistic — even if the crowds grow thicker near the monkey attraction. Beyond that point, you'll be rewarded with plenty of peaceful, expansive nature to explore and admire. Follow the signs to Tian Zi Shan…
+Once you reach the end of the railroad, stay optimistic - even if the crowds grow thicker near the monkey attraction. Beyond that point, you'll be rewarded with plenty of peaceful, expansive nature to explore and admire. Follow the signs to Tian Zi Shan…
 
 ![having a good time on tian tai…](/images/journal/zhangjiajie-avatar-mountains/IMG_6247.jpg)
 *Having a good time on Tian Tai…*
@@ -138,19 +138,19 @@ While you can enjoy the view while having American McDonald's, we continued our 
 ![the golden whip stream flowing between the majestic canyon](/images/journal/zhangjiajie-avatar-mountains/IMG_0056.jpg)
 *The Golden Whip Stream flowing between the majestic canyon*
 ![pure peacefulness - a pond reflecting the rocks of zhang jia jie](/images/journal/zhangjiajie-avatar-mountains/IMG_0424.JPG)
-*Pure peacefulness — a pond reflecting the rocks of Zhang Jia Jie*
+*Pure peacefulness - a pond reflecting the rocks of Zhang Jia Jie*
 
 Just like you would hike up Yuan Jia Jie on day one, the walk starts at Water Winding Four Gates (水绕四门). But instead of taking the stairs up to Yuan Jia Jie, you keep following the stream. A lot of exciting and entertaining things await you along the walk. Although as in all Chinese national parks, taking a cold plunge is not allowed, there is a water fountain before you reach Oxygen Bar Square (氧吧广场). The cold spring water promises eternal life, so be sure to not miss out on the opportunity to taste the water!
 
-As the stroll progresses, it becomes gradually busier with visitors. Guides enthusiastically share stories how the valley's rock formations served as backdrop for "Journey to the West" — a must-know film for every Chinese. You'll encounter amusing attractions such as a wobbly wooden bridge, and of course delicious local produce.
+As the stroll progresses, it becomes gradually busier with visitors. Guides enthusiastically share stories how the valley's rock formations served as backdrop for "Journey to the West" - a must-know film for every Chinese. You'll encounter amusing attractions such as a wobbly wooden bridge, and of course delicious local produce.
 
-This is the southwest gate of the national park. From here, you can take the cable car up to Huang Shi Village (黄石寨), hike up on foot, or do what we did — exit the gate. We decided to leave because we still wanted to visit Bao Feng Lake (宝峰湖). To get there, we took a taxi.
+This is the southwest gate of the national park. From here, you can take the cable car up to Huang Shi Village (黄石寨), hike up on foot, or do what we did - exit the gate. We decided to leave because we still wanted to visit Bao Feng Lake (宝峰湖). To get there, we took a taxi.
 
 ![](/images/journal/zhangjiajie-avatar-mountains/IMG_0177.JPG)
 ![](/images/journal/zhangjiajie-avatar-mountains/IMG_0186.JPG)
 ![](/images/journal/zhangjiajie-avatar-mountains/IMG_0162.JPG)
 
-The serene Bao Feng Lake feels like a tranquil escape from the bustling Zhang Jia Jie National Park and a good bonus if you have some extra time. The park's separately sold entrance includes a boat ride across its emerald waters accompanied by traditional Tu Jia folk songs performed by local artists. You are not allowed to swim in the lake however — neither does it have hiking infrastructure.
+The serene Bao Feng Lake feels like a tranquil escape from the bustling Zhang Jia Jie National Park and a good bonus if you have some extra time. The park's separately sold entrance includes a boat ride across its emerald waters accompanied by traditional Tu Jia folk songs performed by local artists. You are not allowed to swim in the lake however - neither does it have hiking infrastructure.
 
 ## Things to Know About Zhang Jia Jie (II)
 
@@ -163,14 +163,14 @@ Those who have seen the traffic outside of the national park know it's absolutel
 
 ### People Mountain, People Sea
 
-Ren shan ren hai (人山人海) — this is a Chinese saying that made it all the way to America. It accurately describes giant crowds of people: as mountains and lakes full of people! It is not too hard to grasp that when visiting the most popular national park of the second most populous country in the world there will be lots of people.
+Ren shan ren hai (人山人海) - this is a Chinese saying that made it all the way to America. It accurately describes giant crowds of people: as mountains and lakes full of people! It is not too hard to grasp that when visiting the most popular national park of the second most populous country in the world there will be lots of people.
 
 ![the main attractions are breathtaking, but easily accessible by shuttle and thus full of people](/images/journal/zhangjiajie-avatar-mountains/IMG_0232.jpg)
 *The main attractions are breathtaking, but easily accessible by shuttle and thus full of people*
 ![hundreds of people lining up (the chinese way) to catch the shuttle](/images/journal/zhangjiajie-avatar-mountains/IMG_5364.jpg)
 *Hundreds of people lining up (the Chinese way) to catch the shuttle*
 
-While it is hardly possible to avoid people mountain people sea at the most popular spots like the Hallelujah Mountain viewing platform, there are simple tricks how you can make a relaxing time out of most of your visit. For this you have to know that Chinese travelers value comfort and familiarity — this means if for example you take the hiking trail instead of the cable car, you will have the entire place to yourself.
+While it is hardly possible to avoid people mountain people sea at the most popular spots like the Hallelujah Mountain viewing platform, there are simple tricks how you can make a relaxing time out of most of your visit. For this you have to know that Chinese travelers value comfort and familiarity - this means if for example you take the hiking trail instead of the cable car, you will have the entire place to yourself.
 
 ### How Did We Get to Zhang Jia Jie?
 

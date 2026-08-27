@@ -2,7 +2,7 @@
 title: "Beautiful Three-Day Hike from Verzasca to Maggia Valley in Switzerland"
 date: "2022-08-04"
 author: "Evelyne"
-excerpt: "Three days crossing from Verzasca Valley into Maggia Valley, over 9 hours, 23 kilometers, going 1643 meters up and 2048 meters down — and a new friendship made along the way."
+excerpt: "Three days crossing from Verzasca Valley into Maggia Valley, over 9 hours, 23 kilometers, going 1643 meters up and 2048 meters down - and a new friendship made along the way."
 cover: "/images/journal/verzasca-maggia-hike/C637D566-D216-487B-9FFA-B3EEE9787BAB.jpeg"
 tags: ["verzasca valley", "switzerland", "ticino", "camping", "mountains", "mountain hut hike", "hiking", "capanna osola", "capanna alpe spluga", "maggia valley", "giumaglio", "brione verzasca", "inspiration", "travel", "wanderlust", "hüttenwanderung", "mountain cabin", "multi-day hike"]
 ---
@@ -12,7 +12,7 @@ Going on a three-day hike in Ticino? That's what Frank decided to spend our firs
 ![view into val d'osola](/images/journal/verzasca-maggia-hike/C637D566-D216-487B-9FFA-B3EEE9787BAB.jpeg)
 *View into Val d'Osola*
 
-## Day 1 — Brione to Capanna Osola
+## Day 1 - Brione to Capanna Osola
 
 ![on our way to our first milestone called capanna osola](/images/journal/verzasca-maggia-hike/5DCA241B-DF0F-4BAE-B173-85773996D9F1.jpeg)
 *On our way to our first milestone called Capanna Osola*
@@ -22,7 +22,7 @@ We woke up at quarter past five to catch the first train that would take us into
 ![hello little friend](/images/journal/verzasca-maggia-hike/C70BF639-702F-4C26-A3EE-FBF0D8FAD1D0.jpeg)
 *Hello little friend*
 
-To get ready for the adventures, we got traditional Italian pizza. When we arrived in Brione, a trailer waited for us to get us homemade vegan ice cream out of wild strawberries and lemon ginger. It brought us along the hiking trail through the valley of Osola to our first milestone: a cozy little brick cabin called Capanna Osola (1418 m.a.s.l.) embedded in a magical larch forest surrounded by cows with great hair and — for whatever reason — a donkey in the late evening.
+To get ready for the adventures, we got traditional Italian pizza. When we arrived in Brione, a trailer waited for us to get us homemade vegan ice cream out of wild strawberries and lemon ginger. It brought us along the hiking trail through the valley of Osola to our first milestone: a cozy little brick cabin called Capanna Osola (1418 m.a.s.l.) embedded in a magical larch forest surrounded by cows with great hair and - for whatever reason - a donkey in the late evening.
 
 ![frank crossing one of our favorite bridges on the way](/images/journal/verzasca-maggia-hike/C5B8D0CE-C7A5-4ADF-A552-223573581594.jpeg)
 *Frank crossing one of our favorite bridges on the way*
@@ -36,7 +36,7 @@ The sun went down quickly and with the upcoming strong mountain breeze surroundi
 
 It was no sooner than I started talking with the younger woman called Mia when one of the men flinched inside, telling me one of the cows made her way over the fence, stealing food from our backpacks. It probably was the quickest I ever went outside a hut. Luckily enough, the backpack was just slobbered by the cow, but the things were still there. The cow peacefully took her way to a little open wood shed. We all started laughing when a newly arrived camper then tried to chase off the entire herd of cows with a broom while Mia took a misstep into… well you probably know what… of the one cow that went inside our place earlier. While watching the first stars appearing in the navy blue sky, I started playing songs on my ukulele that Frank and I brought with us. After a short while, Mia joined our music session, and we started singing and playing Coldplay songs into the late night, talking about dreams and laughing about adventures. We all knew it was the start of a new friendship.
 
-## Day 2 — Alpine Crossing Into Maggia Valley, Capanna Alpe Spluga
+## Day 2 - Alpine Crossing Into Maggia Valley, Capanna Alpe Spluga
 
 ![](/images/journal/verzasca-maggia-hike/6DCD5109-1405-44D2-BE00-6CE48A4E1CBD.jpeg)
 
@@ -74,7 +74,7 @@ On the Alpe Spluga above the cabin there was the most magical swing we had ever 
 ![frank playing guitar](/images/journal/verzasca-maggia-hike/IMG_0131.jpeg)
 *Frank playing guitar*
 
-## Day 3 — Capanna Alpe Spluga to Giumaglio
+## Day 3 - Capanna Alpe Spluga to Giumaglio
 
 The next morning Mia surprised us with a whole bowl full of wild blueberries, which she had picked in the early morning hours. The Capanna Alpe Spluga was already very busy early in the morning since one should start long hikes supposedly early in the morning. The three of us, however, enjoyed the now deserted hut with homemade breakfast until late in the morning. Mia asked us if she could join our hiking trip today, to which we happily agreed.
 
