@@ -258,8 +258,8 @@ export default function TourPage() {
 
       {/* ---------- What this is ---------- */}
       {/* relative + z-10 so it sits above the hero's absolutely positioned overlay */}
-      <section className="relative z-10 mx-auto max-w-3xl px-6 text-center">
-        <p className="text-pretty font-display text-2xl leading-[1.35] text-ink sm:text-[1.85rem]">
+      <section className="relative z-10 mx-auto max-w-2xl px-6 text-center">
+        <p className="text-pretty leading-[1.85] text-graphite">
           {intro.intro}
         </p>
         <span aria-hidden className="rule mx-auto mt-10" />

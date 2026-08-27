@@ -17,6 +17,10 @@ const NAV_LINKS = [
 export default function SiteHeader() {
   const pathname = usePathname();
   const isHome = pathname === "/";
+  // The tour page opens on a full-bleed film, so the bar rides on top of it
+  // rather than pushing it down: transparent, cream lettering, and it scrolls
+  // away with the hero the way the homepage nav does.
+  const overlay = pathname.startsWith("/tour");
   const [open, setOpen] = useState(false);
   const [lifted, setLifted] = useState(false);
 
@@ -36,11 +40,17 @@ export default function SiteHeader() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-colors duration-500 ${
-        lifted || open
-          ? "border-b border-ink/10 bg-cream/92 backdrop-blur-md"
-          : "border-b border-transparent bg-cream"
-      }`}
+      className={
+        overlay
+          ? `absolute inset-x-0 top-0 z-50 transition-colors duration-500 ${
+              open ? "bg-ink/90 backdrop-blur-md" : "bg-transparent"
+            }`
+          : `sticky top-0 z-50 transition-colors duration-500 ${
+              lifted || open
+                ? "border-b border-ink/10 bg-cream/92 backdrop-blur-md"
+                : "border-b border-transparent bg-cream"
+            }`
+      }
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 sm:px-10">
         <Link href="/" className="flex shrink-0 items-center gap-3.5">
@@ -51,7 +61,11 @@ export default function SiteHeader() {
             height={40}
             className="w-9"
           />
-          <span className="hidden text-[0.72rem] uppercase leading-none tracking-[0.24em] text-ink sm:inline">
+          <span
+            className={`hidden text-[0.72rem] uppercase leading-none tracking-[0.24em] sm:inline ${
+              overlay ? "text-cream drop-shadow" : "text-ink"
+            }`}
+          >
             The Ground Squirrel Café
           </span>
         </Link>
@@ -65,19 +79,23 @@ export default function SiteHeader() {
                 href={link.href}
                 aria-current={active ? "page" : undefined}
                 className={`link-underline text-[0.7rem] uppercase tracking-[0.2em] transition-colors ${
-                  active ? "text-rose" : "text-ink/75 hover:text-ink"
+                  overlay
+                    ? `drop-shadow ${active ? "text-rose" : "text-cream/85 hover:text-cream"}`
+                    : active
+                      ? "text-rose"
+                      : "text-ink/75 hover:text-ink"
                 }`}
               >
                 {link.label}
               </Link>
             );
           })}
-          <span aria-hidden className="h-4 w-px bg-ink/15" />
-          <CartButton />
+          <span aria-hidden className={`h-4 w-px ${overlay ? "bg-cream/30" : "bg-ink/15"}`} />
+          <CartButton className={overlay ? "text-cream!" : ""} />
         </nav>
 
         <div className="flex items-center gap-4 md:hidden">
-          <CartButton />
+          <CartButton className={overlay ? "text-cream!" : ""} />
           <button
             className="flex h-9 w-9 flex-col items-center justify-center gap-[5px]"
             onClick={() => setOpen((v) => !v)}
@@ -85,28 +103,38 @@ export default function SiteHeader() {
             aria-label="Toggle navigation"
           >
             <span
-              className={`block h-px w-5 bg-ink transition-transform duration-300 ${
-                open ? "translate-y-[3px] rotate-45" : ""
-              }`}
+              className={`block h-px w-5 transition-transform duration-300 ${
+                overlay ? "bg-cream" : "bg-ink"
+              } ${open ? "translate-y-[3px] rotate-45" : ""}`}
             />
             <span
-              className={`block h-px w-5 bg-ink transition-transform duration-300 ${
-                open ? "-translate-y-[3px] -rotate-45" : ""
-              }`}
+              className={`block h-px w-5 transition-transform duration-300 ${
+                overlay ? "bg-cream" : "bg-ink"
+              } ${open ? "-translate-y-[3px] -rotate-45" : ""}`}
             />
           </button>
         </div>
       </div>
 
       {open && (
-        <nav className="border-t border-ink/10 px-6 pb-6 pt-2 md:hidden">
+        <nav
+          className={`px-6 pb-6 pt-2 md:hidden ${
+            overlay ? "border-t border-cream/15" : "border-t border-ink/10"
+          }`}
+        >
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className={`block border-b border-ink/8 py-3.5 text-[0.72rem] uppercase tracking-[0.2em] ${
-                pathname.startsWith(link.href) ? "text-rose" : "text-ink"
+              className={`block py-3.5 text-[0.72rem] uppercase tracking-[0.2em] ${
+                overlay ? "border-b border-cream/12" : "border-b border-ink/8"
+              } ${
+                pathname.startsWith(link.href)
+                  ? "text-rose"
+                  : overlay
+                    ? "text-cream"
+                    : "text-ink"
               }`}
             >
               {link.label}
