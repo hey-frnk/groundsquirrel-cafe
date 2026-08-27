@@ -262,12 +262,12 @@ export default function TourPage() {
           the paragraph and the air inside the lines; nothing is set louder
           than anything else. relative + z-10 keeps it above the hero's
           absolutely positioned overlay. */}
-      <section className="relative z-10 mx-auto max-w-[42rem] px-6 pt-32 pb-6 text-center sm:pt-44 sm:pb-14">
+      <section className="relative z-10 mx-auto max-w-[42rem] px-6 pt-24 pb-2 text-center sm:pt-28 sm:pb-8">
         {splitLines(intro.intro).map((para, i) => (
           <p
             key={para}
-            className={`text-pretty text-[1.0625rem] leading-[2.1] tracking-[0.02em] text-graphite sm:text-[1.15rem] ${
-              i === 0 ? "" : "mt-9"
+            className={`text-pretty text-[1.0625rem] leading-[1.95] tracking-[0.02em] text-graphite sm:text-[1.15rem] ${
+              i === 0 ? "" : "mt-7"
             }`}
           >
             {para}
