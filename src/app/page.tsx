@@ -114,7 +114,13 @@ export default function Home() {
         {/* On phones the hero is a flex column in normal flow, so the brand mark
             and the welcome stack and the box grows to fit them. Only from sm up,
             where there is room, do they get pinned to the top and bottom. */}
-        <div className="relative flex min-h-[max(38rem,88svh)] flex-col sm:block sm:h-[92vh] sm:max-h-[56rem] sm:min-h-[38rem]">
+        {/* A full screen, always: nothing of the band below may show until
+            the visitor has scrolled for it. dvh rather than vh or svh, so the
+            film still fills the window exactly when a phone's chrome slides
+            away — svh would leave a strip of the films peeking, vh would hide
+            the buttons behind the chrome. The 38rem floor is for a very short
+            window, where filling it would leave no room for the welcome. */}
+        <div className="relative flex min-h-[max(38rem,100dvh)] flex-col sm:block sm:h-dvh sm:min-h-[38rem]">
           {/* A phone crops the 16:9 film down to roughly its middle third, so it
               stays centred there — that band holds the van *and* the two of us
               waving beside it. From sm up the crop is shallow enough to shift
@@ -140,10 +146,9 @@ export default function Home() {
 
           <div className="absolute inset-x-0 top-0 h-44 bg-linear-to-b from-ink/50 to-transparent" />
           <div className="absolute inset-x-0 bottom-0 h-3/4 bg-linear-to-t from-ink/85 via-ink/42 to-transparent" />
-          {/* The film hands over to the dark passage below rather than
-              stopping on a line: its last inch settles onto exactly the
-              colour that section is painted in. */}
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] h-14 bg-linear-to-b from-ink/0 to-ink sm:h-20" />
+          {/* Kept shallower than the welcome's own bottom padding, and under
+              it rather than over it, so it never reaches the words. */}
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] h-8 bg-linear-to-b from-cream/0 to-cream sm:h-14" />
 
           {/* Brand mark and navigation, sitting on the film. */}
           <div className="relative z-10 px-6 pt-6 sm:absolute sm:inset-x-0 sm:top-0 sm:px-10 sm:pt-8">
@@ -209,22 +214,16 @@ export default function Home() {
       </section>
 
       {/* ---------- The index ---------- */}
-      {/* No heading, no label: the intro film simply keeps going and becomes
-          the five. Its last stretch settles onto ink, this section is painted
-          in the same ink with no gap between them, and each film surfaces out
-          of that dark — so the hand-over reads as one continuous shot rather
-          than the end of one thing and the start of another. */}
-      <section className="relative bg-ink">
+      {/* Out of the page margins entirely: the band runs the full width of the
+          window, which is what makes it read as one piece of film rather than
+          five pictures placed on a page. */}
+      <section className="pt-24 sm:pt-32">
         <SectionFilmstrip items={PLACES} />
 
         {/* Only says anything where the band actually scrolls. */}
-        <p className="mt-6 text-center text-[0.65rem] uppercase tracking-[0.2em] text-cream/40 lg:hidden">
+        <p className="mt-5 text-center text-[0.65rem] uppercase tracking-[0.2em] text-graphite/50 lg:hidden">
           Swipe through
         </p>
-
-        {/* Back up into the daylight of the page — short, because the foot of
-            each film is already ink and has done most of the work. */}
-        <div className="h-24 bg-linear-to-b from-ink to-cream sm:h-32" />
       </section>
 
       {/* ---------- The studio ---------- */}
