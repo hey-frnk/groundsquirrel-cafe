@@ -230,7 +230,7 @@ collections:
         options:
           - { label: "Englisch (Standard)", value: "en" }
           - { label: "Deutsch", value: "de" }
-        hint: "Sorgt im Blocksatz für korrekte Silbentrennung."
+        hint: "Für Vorlese-Programme und Suchmaschinen."
       - label: "Kurz und knapp"
         name: "highlights"
         widget: "list"

@@ -44,7 +44,6 @@ export default async function StudioProjectPage({
   const project = await getStudioProject(slug);
   const at = all.findIndex((p) => p.slug === slug);
   const next = all[(at + 1) % all.length];
-  const isLongDescription = (project.descriptionHtml.match(/<p>/g) ?? []).length > 1;
 
   return (
     <div className="mx-auto max-w-4xl px-6 pt-12 pb-4 sm:pt-16">
@@ -96,14 +95,9 @@ export default async function StudioProjectPage({
         </div>
       )}
 
-      {/* A one-paragraph project reads as a caption under the cover and is set
-          centred; anything longer is running text, and is justified so the
-          column sits square under the centred masthead. */}
       <div
         lang={project.lang}
-        className={`prose prose-sm mx-auto mt-14 max-w-2xl ${
-          isLongDescription ? "text-justify hyphens-auto" : "text-center"
-        }`}
+        className="prose prose-sm mx-auto mt-14 max-w-2xl text-center"
         dangerouslySetInnerHTML={{ __html: project.descriptionHtml }}
       />
 
