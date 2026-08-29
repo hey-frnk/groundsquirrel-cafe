@@ -97,10 +97,12 @@ export default async function StudioProjectPage({
       )}
 
       {/* A one-paragraph project reads as a caption under the cover and is set
-          centred; anything longer is running text, and wants a left edge. */}
+          centred; anything longer is running text, and is justified so the
+          column sits square under the centred masthead. */}
       <div
+        lang={project.lang}
         className={`prose prose-sm mx-auto mt-14 max-w-2xl ${
-          isLongDescription ? "text-left" : "text-center"
+          isLongDescription ? "text-justify hyphens-auto" : "text-center"
         }`}
         dangerouslySetInnerHTML={{ __html: project.descriptionHtml }}
       />

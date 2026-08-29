@@ -311,6 +311,12 @@ export interface StudioProject extends StudioItem {
   teaser?: string;
   /** Where the piece can be bought or borrowed, shown under the buttons. */
   availability?: string;
+  /**
+   * Language of the body text, when it isn't the site's English — the running
+   * text is justified, and hyphenation only breaks words correctly if it knows
+   * which language's rules to apply.
+   */
+  lang?: string;
   /** Short selling points, set above the body text. */
   highlights: string[];
   /** Publisher's data — ISBN, format, pages — as a labelled panel. */

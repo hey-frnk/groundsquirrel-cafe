@@ -6,6 +6,7 @@ image: "/images/studio/projects/flex-flora/cover-a-page-in-the-forest.webp"
 order: 2
 status: "Erschienen bei Westermann Schweiz"
 teaser: "Mitarbeit als Autorin und Illustratorin am Schweizer Deutsch-Lehrmittel Flex und Flora für das 5. und 6. Schuljahr. Kreiert in Zusammenarbeit mit Westermann Schweiz."
+lang: "de"
 hideCredit: true
 links:
   - label: "Hier geht's zum Lehrmittel - 5. Schuljahr"
@@ -23,7 +24,6 @@ gallery:
     caption: "Eine Doppelseite aus dem Arbeitsheft"
   - image: "/images/studio/projects/flex-flora/lernjournal.webp"
     caption: "«Ein Lernjournal kennenlernen»"
-galleryNote: "Weitere Illustrationen und Erarbeitungen folgen."
 ---
 
 Mitarbeit als Autorin und Illustratorin am Schweizer Deutsch-Lehrmittel Flex und Flora für das 5. und 6. Schuljahr. Kreiert in Zusammenarbeit mit Westermann Schweiz.

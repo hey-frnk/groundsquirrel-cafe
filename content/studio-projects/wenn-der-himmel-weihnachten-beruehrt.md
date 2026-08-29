@@ -7,6 +7,7 @@ order: 1
 status: "Veröffentlichung: September 2026"
 teaser: "Ein besonderes Weihnachtsbuch mit 10 Geschichten über kleine Wunder im Weihnachtsalltag. Kreiert in Zusammenarbeit mit Tiziana Hartmann."
 availability: "In der Schweiz, Deutschland und in Österreich erhältlich."
+lang: "de"
 hideCredit: true
 highlights:
   - "Zehn berührende Geschichten"
