@@ -6,7 +6,7 @@ image: "/images/studio/projects/flex-flora/cover-a-page-in-the-forest.webp"
 order: 2
 status: "Erschienen bei Westermann Schweiz"
 teaser: "Mitarbeit als Autorin und Illustratorin am Schweizer Deutsch-Lehrmittel Flex und Flora für das 5. und 6. Schuljahr. Kreiert in Zusammenarbeit mit Westermann Schweiz."
-availability: "Das umfangreiche Deutsch-Lehrmittel ist aufbauend und erhältlich von der 1. bis 6. Klasse."
+hideCredit: true
 links:
   - label: "Hier geht's zum Lehrmittel - 5. Schuljahr"
     url: "https://www.westermann-schweiz.ch/artikel/978-3-0359-0631-8/Deutsch-mit-Flex-und-Flora-Lernpaket-5"
@@ -24,7 +24,8 @@ gallery:
   - image: "/images/studio/projects/flex-flora/lernjournal.webp"
     caption: "«Ein Lernjournal kennenlernen»"
 galleryNote: "Weitere Illustrationen und Erarbeitungen folgen."
-infoNote: "Nähere Infos folgen."
 ---
 
 Mitarbeit als Autorin und Illustratorin am Schweizer Deutsch-Lehrmittel Flex und Flora für das 5. und 6. Schuljahr. Kreiert in Zusammenarbeit mit Westermann Schweiz.
+
+«Flex und Flora» ist ein neues Lehrmittel für die Primarschule (1. bis 6. Schuljahr), das mit kompetenzorientierten Themenheften auf drei Niveaustufen den offenen und individualisierten Unterricht in heterogenen Lerngruppen unterstützt. Klar strukturierte Aufgaben, die Lernbegleiter-Figuren Flex und Flora sowie Instrumente zur Selbsteinschätzung fördern selbstständiges Arbeiten und geben Schülerinnen und Schülern wie Lehrpersonen jederzeit einen sicheren Überblick über den Lernstand. Ergänzt wird die Reihe durch ein Rundum-Paket aus Kopiervorlagen, Lösungen und didaktischen Erläuterungen, online wie offline.

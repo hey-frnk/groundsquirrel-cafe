@@ -44,6 +44,7 @@ export default async function StudioProjectPage({
   const project = await getStudioProject(slug);
   const at = all.findIndex((p) => p.slug === slug);
   const next = all[(at + 1) % all.length];
+  const isLongDescription = (project.descriptionHtml.match(/<p>/g) ?? []).length > 1;
 
   return (
     <div className="mx-auto max-w-4xl px-6 pt-12 pb-4 sm:pt-16">
@@ -78,12 +79,14 @@ export default async function StudioProjectPage({
             {project.status}
           </p>
         )}
-        <p className="mt-7 text-[0.7rem] uppercase tracking-[0.2em] text-graphite/65">
-          Illustration:{" "}
-          <Link href="/studio/" className="link-underline text-ink">
-            Evelyne Buttet
-          </Link>
-        </p>
+        {!project.hideCredit && (
+          <p className="mt-7 text-[0.7rem] uppercase tracking-[0.2em] text-graphite/65">
+            Illustration:{" "}
+            <Link href="/studio/" className="link-underline text-ink">
+              Evelyne Buttet
+            </Link>
+          </p>
+        )}
       </header>
 
       {/* The cover, when there is one to show */}
@@ -93,10 +96,30 @@ export default async function StudioProjectPage({
         </div>
       )}
 
+      {/* A one-paragraph project reads as a caption under the cover and is set
+          centred; anything longer is running text, and wants a left edge. */}
       <div
-        className="prose prose-sm mx-auto mt-14 max-w-2xl text-center"
+        className={`prose prose-sm mx-auto mt-14 max-w-2xl ${
+          isLongDescription ? "text-left" : "text-center"
+        }`}
         dangerouslySetInnerHTML={{ __html: project.descriptionHtml }}
       />
+
+      {project.highlights.length > 0 && (
+        <ul className="mx-auto mt-10 flex max-w-2xl flex-wrap items-center justify-center gap-x-8 gap-y-3">
+          {project.highlights.map((highlight) => (
+            <li
+              key={highlight}
+              className="flex items-center gap-2.5 text-sm leading-relaxed text-graphite"
+            >
+              <span aria-hidden className="text-[0.55rem] text-rose">
+                ◆
+              </span>
+              {highlight}
+            </li>
+          ))}
+        </ul>
+      )}
 
       {project.infoNote && (
         <p className="mx-auto mt-8 max-w-2xl text-center text-sm leading-relaxed text-graphite/70">
@@ -141,6 +164,26 @@ export default async function StudioProjectPage({
         <p className="mt-8 text-center text-[0.7rem] uppercase tracking-[0.14em] text-graphite/65">
           {project.availability}
         </p>
+      )}
+
+      {/* The publisher's own particulars */}
+      {project.details.length > 0 && (
+        <section className="mx-auto mt-16 max-w-2xl rounded-2xl border border-ink/12 bg-ivory/20 px-7 py-9 sm:px-10">
+          <h2 className="eyebrow text-center">Angaben zum Buch</h2>
+          <dl className="mt-7 space-y-0">
+            {project.details.map((detail) => (
+              <div
+                key={detail.label}
+                className="flex flex-col gap-1 border-t border-ink/10 py-3 first:border-t-0 first:pt-0 sm:flex-row sm:gap-6"
+              >
+                <dt className="text-[0.62rem] uppercase tracking-[0.14em] text-graphite/70 sm:w-40 sm:shrink-0 sm:pt-1">
+                  {detail.label}
+                </dt>
+                <dd className="text-sm leading-relaxed text-graphite">{detail.value}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
       )}
 
       {/* Illustrations and working drawings */}

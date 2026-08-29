@@ -223,6 +223,25 @@ collections:
         widget: "string"
         required: false
         hint: "Kleine Zeile unter den Buttons, z.B. «In der Schweiz, Deutschland und in Österreich erhältlich.»"
+      - label: "Kurz und knapp"
+        name: "highlights"
+        widget: "list"
+        required: false
+        field: { label: "Punkt", name: "text", widget: "string" }
+        hint: "Kurze Stichpunkte unter dem Text, z.B. «Zehn berührende Geschichten»"
+      - label: "Angaben zum Buch"
+        name: "details"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Bezeichnung", name: "label", widget: "string", hint: "z.B. Verlag, ISBN, Umfang" }
+          - { label: "Angabe", name: "value", widget: "string" }
+      - label: "Zeile «Illustration: Evelyne Buttet» ausblenden"
+        name: "hideCredit"
+        widget: "boolean"
+        required: false
+        default: false
+        hint: "Anwählen, wenn die Mitwirkenden bereits unter «Angaben zum Buch» stehen."
       - label: "Buttons"
         name: "links"
         widget: "list"
