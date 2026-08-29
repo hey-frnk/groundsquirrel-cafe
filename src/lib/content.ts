@@ -295,6 +295,12 @@ export interface StudioProjectPlate {
   caption?: string;
 }
 
+/** One row of the "Angaben" panel, e.g. Verlag / St. Benno Verlag. */
+export interface StudioProjectDetail {
+  label: string;
+  value: string;
+}
+
 export interface StudioProject extends StudioItem {
   /** One-line note under the title, e.g. "Veröffentlichung: September 2026". */
   status?: string;
@@ -305,6 +311,18 @@ export interface StudioProject extends StudioItem {
   teaser?: string;
   /** Where the piece can be bought or borrowed, shown under the buttons. */
   availability?: string;
+  /** Language of the body text, when it isn't the site's English. */
+  lang?: string;
+  /** Short selling points, set above the body text. */
+  highlights: string[];
+  /** Publisher's data — ISBN, format, pages — as a labelled panel. */
+  details: StudioProjectDetail[];
+  /**
+   * The masthead names Evelyne as the illustrator by default. Projects that
+   * spell their credits out themselves (in `details`) set this, so the line
+   * isn't said twice.
+   */
+  hideCredit?: boolean;
   links: StudioProjectLink[];
   gallery: StudioProjectPlate[];
   /** Stands in while the illustration series for a project is still coming. */
@@ -330,6 +348,21 @@ function normalizeProjectGallery(plates: unknown): StudioProjectPlate[] {
     .filter((p): p is StudioProjectPlate => Boolean(p?.image));
 }
 
+function normalizeProjectHighlights(items: unknown): string[] {
+  if (!Array.isArray(items)) return [];
+  return items
+    .map((i) => (typeof i === "string" ? i : (i as { text?: string })?.text))
+    .filter((i): i is string => Boolean(i?.trim()));
+}
+
+function normalizeProjectDetails(rows: unknown): StudioProjectDetail[] {
+  if (!Array.isArray(rows)) return [];
+  return rows.filter(
+    (r): r is StudioProjectDetail =>
+      Boolean((r as StudioProjectDetail)?.label && (r as StudioProjectDetail)?.value)
+  );
+}
+
 function readStudioProject(filename: string): StudioProject {
   const { slug, data, content } = readEntry<StudioProject>("studio-projects", filename);
   return {
@@ -337,6 +370,8 @@ function readStudioProject(filename: string): StudioProject {
     slug,
     links: normalizeProjectLinks(data.links),
     gallery: normalizeProjectGallery(data.gallery),
+    highlights: normalizeProjectHighlights(data.highlights),
+    details: normalizeProjectDetails(data.details),
     description: content.trim(),
   };
 }
