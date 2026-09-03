@@ -5,6 +5,7 @@ import "./globals.css";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import CartDrawer from "@/components/shop/CartDrawer";
+import AlbFilterBanner from "@/components/AlbFilterBanner";
 import { CartProvider } from "@/lib/cart";
 import { SITE_URL } from "@/lib/seo";
 
@@ -109,6 +110,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <SiteFooter />
           <CartDrawer />
+          <AlbFilterBanner />
         </CartProvider>
       </body>
       {/* 100% privacy-first analytics — cookieless, no personal data, EU-hosted.
