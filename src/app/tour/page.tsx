@@ -394,15 +394,36 @@ export default function TourPage() {
                 </div>
                 <h3 className="mt-3 text-2xl leading-tight">{collab.title}</h3>
                 <p className="mt-3 leading-relaxed text-graphite/85">{collab.description}</p>
-                {!isPlaceholder(collab.link) && (
-                  <a
-                    href={collab.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link-arrow mt-4 self-start text-sm"
-                  >
-                    See it
-                  </a>
+                {(!isPlaceholder(collab.reel) || !isPlaceholder(collab.link)) && (
+                  <div className="mt-4 flex flex-wrap items-center gap-x-7 gap-y-3">
+                    {!isPlaceholder(collab.reel) && (
+                      <a
+                        href={collab.reel}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="link-arrow text-sm"
+                      >
+                        <InstagramIcon size={15} />
+                        Watch the reel
+                        <span data-arrow aria-hidden>
+                          →
+                        </span>
+                      </a>
+                    )}
+                    {!isPlaceholder(collab.link) && (
+                      <a
+                        href={collab.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="link-arrow text-sm"
+                      >
+                        See it
+                        <span data-arrow aria-hidden>
+                          →
+                        </span>
+                      </a>
+                    )}
+                  </div>
                 )}
               </article>
             ))}

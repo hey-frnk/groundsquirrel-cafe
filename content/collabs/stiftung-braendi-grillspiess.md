@@ -11,6 +11,7 @@ photos:
   - image: "/images/collabs/braendi-3.webp"
     caption: "Everything on the table afterwards"
 link: ""
+reel: "https://www.instagram.com/reel/DPohjWaD3Ob/"
 order: 2
 ---
 

@@ -11,6 +11,7 @@ photos:
   - image: "/images/collabs/albfilter-3.webp"
     caption: "Filling up at the shore, seen from inside the café"
 link: ""
+reel: "https://www.instagram.com/reel/DVbToS7DDex/"
 order: 1
 ---
 
