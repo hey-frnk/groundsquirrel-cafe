@@ -230,48 +230,11 @@ export default function Home() {
         </p>
       </section>
 
-      {/* ---------- The studio ---------- */}
-      <section id="studio" className="mt-14 scroll-mt-24 sm:mt-20">
-        <div className="wash-cool wash-soft">
-          <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 sm:px-10 sm:py-28 lg:grid-cols-[0.9fr_1fr] lg:gap-20">
-            <div className="relative order-2 min-h-[16rem] lg:order-1 lg:min-h-[26rem]">
-              <Image
-                src="/images/studio/hero-squirrel.webp"
-                alt="Evelyne's painting of a golden-mantled ground squirrel with a nut"
-                fill
-                sizes="(max-width: 1024px) 90vw, 40vw"
-                className="object-contain drop-shadow-[0_24px_40px_rgba(35,32,26,0.14)]"
-              />
-            </div>
-
-            <div className="order-1 lg:order-2">
-              <p className="eyebrow">The Ground Squirrel Studio</p>
-              <h2 className="mt-5 max-w-lg text-balance text-3xl leading-[1.08] sm:text-[2.75rem]">
-                {home.studioHeading}
-              </h2>
-              {splitLines(home.studioText).map((paragraph) => (
-                <p key={paragraph} className="mt-6 max-w-lg leading-relaxed text-graphite">
-                  {paragraph}
-                </p>
-              ))}
-              <div className="mt-9 flex flex-wrap gap-3">
-                <Link href="/studio" className="btn btn-primary">
-                  Into the studio
-                </Link>
-                <Link href="/shop" className="btn btn-outline">
-                  Visit the shop
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ---------- Who we are ---------- */}
-      <section className="mx-auto max-w-7xl px-6 pt-24 sm:px-10 sm:pt-36">
+      <section className="mx-auto max-w-7xl px-6 pt-20 sm:px-10 sm:pt-28">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <div className="reveal">
-            <p className="eyebrow">Evelyne &amp; Frank</p>
+            <p className="eyebrow">Evelyne Buttet &amp; Frank Zheng</p>
             <h2 className="mt-5 text-3xl leading-[1.08] sm:text-[2.75rem]">
               {home.welcomeHeading}
             </h2>
@@ -318,6 +281,43 @@ export default function Home() {
                 sizes="(max-width: 1024px) 45vw, 23vw"
                 className="h-full w-full object-cover"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ---------- The studio ---------- */}
+      <section id="studio" className="mt-24 scroll-mt-24 sm:mt-36">
+        <div className="wash-cool wash-soft">
+          <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 sm:px-10 sm:py-28 lg:grid-cols-[0.9fr_1fr] lg:gap-20">
+            <div className="relative order-2 min-h-[16rem] lg:order-1 lg:min-h-[26rem]">
+              <Image
+                src="/images/studio/hero-squirrel.webp"
+                alt="Evelyne's painting of a golden-mantled ground squirrel with a nut"
+                fill
+                sizes="(max-width: 1024px) 90vw, 40vw"
+                className="object-contain drop-shadow-[0_24px_40px_rgba(35,32,26,0.14)]"
+              />
+            </div>
+
+            <div className="order-1 lg:order-2">
+              <p className="eyebrow">The Ground Squirrel Studio</p>
+              <h2 className="mt-5 max-w-lg text-balance text-3xl leading-[1.08] sm:text-[2.75rem]">
+                {home.studioHeading}
+              </h2>
+              {splitLines(home.studioText).map((paragraph) => (
+                <p key={paragraph} className="mt-6 max-w-lg leading-relaxed text-graphite">
+                  {paragraph}
+                </p>
+              ))}
+              <div className="mt-9 flex flex-wrap gap-3">
+                <Link href="/studio" className="btn btn-primary">
+                  Into the studio
+                </Link>
+                <Link href="/shop" className="btn btn-outline">
+                  Visit the shop
+                </Link>
+              </div>
             </div>
           </div>
         </div>

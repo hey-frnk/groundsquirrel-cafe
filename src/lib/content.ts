@@ -223,6 +223,8 @@ export interface Collab {
   imageAlt?: string;
   photos?: CollabPhoto[];
   link?: string;
+  /** The reel the collaboration was published as, on Instagram. */
+  reel?: string;
   order: number;
 }
 
