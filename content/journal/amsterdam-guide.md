@@ -4,6 +4,7 @@ date: "2023-03-10"
 author: "Evelyne"
 excerpt: "Instead of popular attractions, we tried to feel the city's soul and uncover off-beat neighborhoods not found in any guidebook - our own Amsterdam."
 cover: "/images/journal/amsterdam-guide/IMG_3807.webp"
+categories: ["travel"]
 tags: ["city trip", "inspiration", "sustainable travel", "travel", "wanderlust", "granola girl", "food", "foodie", "vegan", "vegetarian", "europe", "amsterdam", "the netherlands", "holland", "cycling", "sightseeing"]
 ---
 

@@ -4,7 +4,8 @@ date: "2024-06-06"
 author: "Evelyne"
 excerpt: "What does a perfect day in the middle of the South African bush look like? Evelyne was part of the Ndaka team during her field guide internship - and Ndaka Safari Lodge still feels like a second home to her."
 cover: "/images/journal/ndaka-safari-lodge/IMG_8732.JPG"
-tags: ["travel", "south africa", "safari", "wildlife", "kwazulu-natal", "mpumalanga", "lodge", "safari lodge", "big five", "game drive", "game reserve", "sunset", "africa", "luxury lodge", "national park", "ndaka safari lodge", "ndaka", "african wildlife", "nambiti", "nambiti game reserve", "game viewer", "private game reserve", "durban", "bush experience", "field guide experience"]
+categories: ["travel"]
+tags: ["travel", "south africa", "safari", "wildlife", "kwazulu-natal", "mpumalanga", "lodge", "safari lodge", "big five", "game drive", "game reserve", "sunset", "africa", "luxury lodge", "national park", "ndaka safari lodge", "ndaka", "african wildlife", "nambiti", "nambiti game reserve", "game viewer", "private game reserve", "durban", "bush experience", "field guide experience", "malariafree", "children friendly", "kids activities"]
 ---
 
 What does a perfect day in the middle of the South African bush look like? Evelyne was part of the Ndaka team while completing her half-year internship at Ndaka Safari Lodge as a field guide, and to this day, Ndaka Safari Lodge feels like a second home to her.

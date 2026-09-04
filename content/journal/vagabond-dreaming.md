@@ -4,6 +4,7 @@ date: "2022-07-29"
 author: "Evelyne"
 excerpt: "Have you ever asked yourself what a happy life looks like? The feeling of almost touching the sky, experiencing a perfect balance in your life like there is already everything inside you that you ever wished for?"
 cover: "/images/journal/vagabond-dreaming/C2F930CF-0DD7-4E36-9E7F-B74090FE4082.jpeg"
+categories: ["thoughts"]
 tags: ["thoughts", "inspiration", "travel", "wanderlust", "dreams"]
 ---
 

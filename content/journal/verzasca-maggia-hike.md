@@ -4,6 +4,7 @@ date: "2022-08-04"
 author: "Evelyne"
 excerpt: "Three days crossing from Verzasca Valley into Maggia Valley, over 9 hours, 23 kilometers, going 1643 meters up and 2048 meters down - and a new friendship made along the way."
 cover: "/images/journal/verzasca-maggia-hike/C637D566-D216-487B-9FFA-B3EEE9787BAB.jpeg"
+categories: ["travel"]
 tags: ["verzasca valley", "switzerland", "ticino", "camping", "mountains", "mountain hut hike", "hiking", "capanna osola", "capanna alpe spluga", "maggia valley", "giumaglio", "brione verzasca", "inspiration", "travel", "wanderlust", "hüttenwanderung", "mountain cabin", "multi-day hike"]
 ---
 

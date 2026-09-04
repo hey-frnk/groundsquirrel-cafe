@@ -4,6 +4,7 @@ date: "2024-12-09"
 author: "Evelyne"
 excerpt: "What if you're searching for more than just the crowds and international brands swarming Oxford Street? A guide to the hidden gems that offer a different, more authentic side of London."
 cover: "/images/journal/oxford-street-london/FullSizeRender-3.jpg"
+categories: ["travel"]
 tags: ["london", "city trip", "hidden gems", "vintage", "food", "wildlife", "parks", "england", "europe"]
 ---
 

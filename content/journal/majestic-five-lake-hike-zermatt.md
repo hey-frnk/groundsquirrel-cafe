@@ -4,7 +4,8 @@ date: "2024-12-14"
 author: "Frank"
 excerpt: "Seeking postcard-perfect moments in Switzerland? Don't miss Zermatt's Five-Lake Hike (Fünf-Seen-Wanderung) - stunning alpine scenery, pristine lakes for a refreshing swim, and iconic Matterhorn views."
 cover: "/images/journal/zermatt-five-lake-hike/IMG_9504.webp"
-tags: ["switzerland", "zermatt", "wallis", "valais", "hiking", "day hike", "sustainable travel", "nature", "lakes", "glacier lakes"]
+categories: ["travel"]
+tags: ["switzerland", "zermatt", "wallis", "valais", "hiking", "day hike", "sustainable travel", "nature", "lakes", "glacier lakes", "day trip"]
 ---
 
 ![](/images/journal/zermatt-five-lake-hike/IMG_9504.webp)

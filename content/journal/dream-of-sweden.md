@@ -4,7 +4,8 @@ date: "2023-06-21"
 author: "Evelyne"
 excerpt: "Frank and I love to dream. And when dreams come true after a long wait, it feels exactly like diving into the dream itself - a little red lakeside cottage in the middle of nowhere, and just being."
 cover: "/images/journal/dream-of-sweden/IMG_0976.jpg"
-tags: ["sweden", "granola girl", "summer", "inspiration", "camping", "wilderness", "wanderlust", "campfire", "granola", "hiking", "wholesome", "dreams", "travel", "dalsland", "gustavsfors", "bengtsfors", "indie folk", "bluegrass", "acoustic", "lakes", "canoeing", "europe"]
+categories: ["thoughts", "travel"]
+tags: ["sweden", "granola girl", "summer", "inspiration", "camping", "wilderness", "wanderlust", "campfire", "granola", "hiking", "wholesome", "dreams", "travel", "dalsland", "gustavsfors", "bengtsfors", "indie folk", "bluegrass", "acoustic", "lakes", "canoeing", "europe", "indie"]
 ---
 
 Frank and I love to dream. Dreams make us laugh, wish, dance, cry and celebrate. And when dreams come true after a long wait, it feels exactly like diving into the dream itself. Feeling emotions, seeing natural wonders and hearing sounds you hardly knew existed.

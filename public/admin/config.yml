@@ -25,6 +25,12 @@ collections:
       - { label: "Autor:in", name: "author", widget: "string" }
       - { label: "Kurzbeschreibung", name: "excerpt", widget: "text" }
       - { label: "Titelbild", name: "cover", widget: "image" }
+      - label: "Kategorien"
+        name: "categories"
+        widget: "select"
+        multiple: true
+        default: ["travel"]
+        options: ["travel", "thoughts", "creativity", "vegan"]
       - { label: "Tags", name: "tags", widget: "list", default: [] }
       - { label: "Inhalt", name: "body", widget: "markdown" }
 

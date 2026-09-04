@@ -4,6 +4,7 @@ date: "2025-02-12"
 author: "Frank"
 excerpt: "From elephants in the bush to sunsets in Cape Town - our 3-week South Africa road trip through game reserves, Kruger National Park, the Garden Route, and the Cape."
 cover: "/images/journal/south-africa-road-trip/IMG_7740.webp"
+categories: ["travel"]
 tags: ["road trip", "africa", "beach", "nature", "wildlife", "cape town", "south africa", "hiking", "inspiration", "mpumalanga", "kwazulu-natal", "limpopo", "kruger national park", "national park", "manyeleti game reserve", "elephants", "big five"]
 ---
 

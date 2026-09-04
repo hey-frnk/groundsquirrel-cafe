@@ -4,6 +4,7 @@ date: "2024-12-04"
 author: "Frank"
 excerpt: "One of the world's highest waterfalls, plunging 958 meters along the dramatic Drakensberg amphitheatre - the hike to Tugela Falls offers a unique blend of natural beauty and personal achievement."
 cover: "/images/journal/tugela-falls/IMG_1979.webp"
+categories: ["travel"]
 tags: ["road trip", "day trip", "day hike", "africa", "south africa", "drakensberg", "kwazulu-natal", "hiking", "royal natal national park", "drakensberg mountains", "tugela falls", "world's second tallest waterfall", "bucketlist"]
 ---
 

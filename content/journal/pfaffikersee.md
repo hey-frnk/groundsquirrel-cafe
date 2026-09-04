@@ -4,7 +4,8 @@ date: "2022-08-04"
 author: "Frank"
 excerpt: "A lake to dream a little and slow down the world. Have you ever seen a lake in such a magical teal that you legitimately wonder if someone dropped a giant jug of paint into it?"
 cover: "/images/journal/pfaffikersee/IMG_9318.jpg"
-tags: ["lake", "pfäffikersee", "romantic", "inspiration", "lifestyle", "travel", "day trip", "sunset", "swim", "switzerland", "zürich"]
+categories: ["travel"]
+tags: ["lakes", "pfäffikersee", "romantic", "inspiration", "lifestyle", "travel", "day trip", "sunset", "swim", "switzerland", "zürich"]
 ---
 
 ![say hi to the duckies](/images/journal/pfaffikersee/IMG_9318.jpg)

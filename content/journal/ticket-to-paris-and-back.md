@@ -4,7 +4,8 @@ date: "2024-10-10"
 author: "Evelyne"
 excerpt: "When the rain clouds trap you in Switzerland for the weekend, it's time to leave for some place in the sun - in our case, Paris."
 cover: "/images/journal/paris-weekend/D0123047-D5E0-4783-9D81-B449BB3347BF.webp"
-tags: ["city trip", "sustainable travel", "wanderlust", "granola girl", "food", "foodie", "vegan", "vegetarian", "europe", "france", "paris"]
+categories: ["travel"]
+tags: ["city trip", "sustainable travel", "wanderlust", "granola girl", "food", "foodie", "vegan", "vegetarian", "europe", "france", "paris", "inspiration", "travel"]
 ---
 
 ![](/images/journal/paris-weekend/D0123047-D5E0-4783-9D81-B449BB3347BF.webp)

@@ -4,7 +4,8 @@ date: "2025-03-26"
 author: "Frank"
 excerpt: "Dreaming of falling asleep to the sounds of howling hyena and truly living under the stars with the elephants? Everything about camping and self-traveling inside Africa's largest national park."
 cover: "/images/journal/kruger-national-park-camping-road-trip/DSC_0858.webp"
-tags: ["road trip", "punda maria", "skukuza", "big five", "nature", "elephants", "wildlife", "africa", "south africa", "hiking", "camping", "safari", "game drive", "inspiration", "self-travel", "limpopo", "kruger national park", "national park", "game reserve"]
+categories: ["travel"]
+tags: ["road trip", "punda maria", "skukuza", "big five", "nature", "elephants", "wildlife", "africa", "south africa", "hiking", "camping", "safari", "game drive", "inspiration", "self-travel", "limpopo", "kruger national park", "national park", "game reserve", "olifants rest camp", "tamboti", "berg en dal", "tsendze", "malelane", "letaba", "shingwedzi"]
 ---
 
 Dreaming of falling asleep to the sounds of howling hyena and truly living under the stars with the elephants? This blog is telling you all about camping and self-traveling inside Africa's largest national park.

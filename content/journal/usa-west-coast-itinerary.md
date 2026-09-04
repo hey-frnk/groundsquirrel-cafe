@@ -4,6 +4,7 @@ date: "2022-09-15"
 author: "Frank"
 excerpt: "In mid August, Evelyne and I left Switzerland for a month road tripping the West Coast of the United States. 5,001 miles of open roads, breathtaking sunsets, two brown bears, thousand year old forests, glacier lakes, and one wildfire we escaped."
 cover: "/images/journal/usa-west-coast-itinerary/00-Valley-of-Fire-State-Park-2C-Nevada-on-the-main-road-past-sunset.jpg"
+categories: ["travel"]
 tags: ["westcoast-roadtrip", "usa", "west coast", "pacific northwest", "california", "oregon", "washington", "nevada", "road trip", "camping", "national park", "itinerary"]
 ---
 

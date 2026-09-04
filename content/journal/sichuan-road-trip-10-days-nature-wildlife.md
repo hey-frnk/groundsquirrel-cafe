@@ -4,7 +4,8 @@ date: "2024-12-25"
 author: "Frank"
 excerpt: "In April, Evelyne and I set out on a journey to explore Sichuan - the heart of China, famous for its stunning landscapes, incredible biodiversity, and spicy food. Here's our 10-day road trip itinerary."
 cover: "/images/journal/sichuan-road-trip/IMG_6571.jpg"
-tags: ["asia", "china", "wildlife", "nature", "jiuzhaigou", "huanglong", "emei", "chengdu", "sichuan", "tangjiahe", "giant panda", "safari"]
+categories: ["travel"]
+tags: ["asia", "china", "wildlife", "nature", "jiuzhaigou", "huanglong", "emei", "chengdu", "sichuan", "tangjiahe", "giant panda", "safari", "outdoor travel china", "rigi", "red panda", "takin"]
 ---
 
 In April, Evelyne and I set out on a journey to explore Sichuan. It's the heart of China that is famous for its stunning landscapes, incredible biodiversity - home to a whopping 40% of China's mammal species - and its vibrant culture and spicy food. In this blog you can read all about our 10-day road trip through Sichuan, things we did, places we visited and things we loved.
