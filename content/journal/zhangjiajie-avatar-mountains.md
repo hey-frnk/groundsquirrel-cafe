@@ -31,7 +31,7 @@ A park pass into Wu Ling Yuan Scenic Area (武陵源景区) is valid for four da
 ![](/images/journal/zhangjiajie-avatar-mountains/IMG_5497.jpg)
 ![](/images/journal/zhangjiajie-avatar-mountains/IMG_0100.jpg)
 
-Just like Kruger National Park in South Africa, Wu Ling Yuan Scenic Area has multiple gates for you to enter the park. You can think of the park as half of it being on a high plain, and the other half on the valley plain. Whenever the high plain and the valley plain meet you find the stunning rock formations.
+Just like [Kruger National Park](/journal/?tag=kruger%20national%20park) in South Africa, Wu Ling Yuan Scenic Area has multiple gates for you to enter the park. You can think of the park as half of it being on a high plain, and the other half on the valley plain. Whenever the high plain and the valley plain meet you find the stunning rock formations.
 
 On both plains, there are free shuttle busses driving you between the places. They are available anytime and leave when they are full. To get from the high plain to the valley plain and vice versa there are cable cars, elevators, or you can hike.
 

@@ -101,3 +101,5 @@ Your stomach now growls as well, and it's time for the most exclusive dinner you
 
 - Ndaka Safari Lodge: [ndaka.co.za](https://ndaka.co.za) - for bookings and information about the lodge
 - Nambiti Game Reserve: [nambiti.com](https://nambiti.com) - for information about the game reserve
+
+Further information: [Ndaka Safari Lodge on Tripadvisor](https://www.tripadvisor.ch/Hotel_Review-g1055401-d4610830-Reviews-Ndaka_Safari_Lodge-Ladysmith_KwaZulu_Natal.html)

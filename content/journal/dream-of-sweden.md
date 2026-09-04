@@ -102,7 +102,7 @@ The sun was already close to the horizon casting the most lively and vibrant ton
 ![sky is womb and she's the moon](/images/journal/dream-of-sweden/Screenshot-2023-05-25-at-11.54.01-AM.jpg)
 *Sky is womb and she's the moon*
 
-We tried to capture the moment. But my camera was subpar, and Frank's, just like on our USA West Coast road trip, was struggling with storage. We attempted to record it countless times - me cautiously crawling through the boat again and again to start the recording, sitting in the freezing puddles of water at the bottom of the canoe, Frank barely feeling his knees from contortions, let alone his hands, which must have turned into icicles in the cold. Over and over again, just to see that the video had been interrupted due to insufficient storage. Frank and I looked at each other furtively. He deleted everything imaginable on his phone until it finally worked on the seventh attempt, during the most magical blue hour we could've imagined.
+We tried to capture the moment. But my camera was subpar, and Frank's, just like on [our USA West Coast road trip](/journal/usa-west-coast-itinerary/), was struggling with storage. We attempted to record it countless times - me cautiously crawling through the boat again and again to start the recording, sitting in the freezing puddles of water at the bottom of the canoe, Frank barely feeling his knees from contortions, let alone his hands, which must have turned into icicles in the cold. Over and over again, just to see that the video had been interrupted due to insufficient storage. Frank and I looked at each other furtively. He deleted everything imaginable on his phone until it finally worked on the seventh attempt, during the most magical blue hour we could've imagined.
 
 Back on the shore, we ran into our cottage, snuggled under the warm blanket, and watched our video. Countless times until sleep eventually caught up with us late at night. It was the most perfect video in the most perfect moment.
 
@@ -175,7 +175,7 @@ I hope that with this little blog post we could bring the dream of Sweden closer
 
 Feeling inspired? Here are some resources (we're not affiliated with any of the links) you might find useful if you would like to follow our footsteps:
 
-- Park4Night place for Frankfurt, where Frank grew up - he and his kindergarten would take him to the Königsbrunnen spring
-- Park4Night farm in northern Germany with beautiful facilities, sheep and an incredibly kind host
-- Vänna Gård, our magical and infinitely wholesome Airbnb in Sweden
-- Park4Night at a lake inside a nature reserve, where we had a beautiful breakfast the next morning
+- [Park4Night place for Frankfurt](https://park4night.com/en/place/122997), where Frank grew up - he and his kindergarten would take him to the Königsbrunnen spring
+- [Park4Night farm](https://www.park4night.com/en/place/228463) in northern Germany with beautiful facilities, sheep and an incredibly kind host
+- [Vänna Gård](https://www.airbnb.se/rooms/49879834?adults=1&guests=1&s=67&unique_share_id=2c19c74e-c17c-4e72-8489-3065942c0b3b), our magical and infinitely wholesome Airbnb in Sweden
+- [Park4Night at a lake](https://www.park4night.com/en/place/96203) inside a nature reserve, where we had a beautiful breakfast the next morning

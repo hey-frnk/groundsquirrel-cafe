@@ -201,7 +201,7 @@ Accommodations in the national park are not expensive, especially when staying i
 - The **safari camp** costs about ZAR 1000. Ours theoretically had 4 spots.
 - The **bungalows** were the most expensive. A bungalow for two costs about ZAR 1300.
 
-Accommodations can only be reserved through the official website, sanparks.org. They must be booked in a logical sequence without any gaps.
+Accommodations can only be reserved through the official website, [sanparks.org](http://sanparks.org/). They must be booked in a logical sequence without any gaps.
 
 > **Tip: book early.** Bungalows, as well as tent sites, are very popular and almost always fully booked. We booked six months in advance and recommend it to everyone.
 
@@ -224,4 +224,4 @@ Restaurants are a bit more expensive than outside the national park. So if you p
 
 Feeling inspired? Here are some resources you might find useful if you would like to follow our footsteps:
 
-- The only place to book accommodation inside Kruger National Park: sanparks.org
+- The only place to [book accommodation inside Kruger National Park](https://www.sanparks.org/parks/kruger/camps): sanparks.org

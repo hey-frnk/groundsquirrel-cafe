@@ -13,7 +13,7 @@ Going on a three-day hike in Ticino? That's what Frank decided to spend our firs
 ![view into val d'osola](/images/journal/verzasca-maggia-hike/C637D566-D216-487B-9FFA-B3EEE9787BAB.jpeg)
 *View into Val d'Osola*
 
-## Day 1 - Brione to Capanna Osola
+## Day 1 - Brione to [Capanna Osola](https://capannaosola.ch/en/home)
 
 ![on our way to our first milestone called capanna osola](/images/journal/verzasca-maggia-hike/5DCA241B-DF0F-4BAE-B173-85773996D9F1.jpeg)
 *On our way to our first milestone called Capanna Osola*
@@ -37,7 +37,7 @@ The sun went down quickly and with the upcoming strong mountain breeze surroundi
 
 It was no sooner than I started talking with the younger woman called Mia when one of the men flinched inside, telling me one of the cows made her way over the fence, stealing food from our backpacks. It probably was the quickest I ever went outside a hut. Luckily enough, the backpack was just slobbered by the cow, but the things were still there. The cow peacefully took her way to a little open wood shed. We all started laughing when a newly arrived camper then tried to chase off the entire herd of cows with a broom while Mia took a misstep into… well you probably know what… of the one cow that went inside our place earlier. While watching the first stars appearing in the navy blue sky, I started playing songs on my ukulele that Frank and I brought with us. After a short while, Mia joined our music session, and we started singing and playing Coldplay songs into the late night, talking about dreams and laughing about adventures. We all knew it was the start of a new friendship.
 
-## Day 2 - Alpine Crossing Into Maggia Valley, Capanna Alpe Spluga
+## Day 2 - Alpine Crossing Into Maggia Valley, [Capanna Alpe Spluga](https://www.alpespluga.ch/?lang=de&page_id=26)
 
 ![](/images/journal/verzasca-maggia-hike/6DCD5109-1405-44D2-BE00-6CE48A4E1CBD.jpeg)
 
@@ -106,9 +106,12 @@ If there's one thing I've learned from this trip then it is to never ask too man
 
 *With 🐝 by Evelyne.*
 
+Visit our etsy shop: [hummel & bear](https://hummelandbear.etsy.com/)
+
 ## Useful Information
 
 Feeling inspired? Here's some information you might find useful if you would like to follow our footsteps for the hike:
 
+- [Hike description](https://wegwandern.ch/listing/brione-verzasca-capanna-osola-bocchetta-canova-alpe-spluga-giumaglio-maggiatal-wandern-wanderung/) of the whole route
 - Reservations for the mountain cabins: Capanna Osola, Capanna Alpe Spluga
-- Our campsite close to Giumaglio: TCS Camping Gordevio-Maggiatal
+- Our campsite close to Giumaglio: [TCS Camping Gordevio-Maggiatal](https://www.tcs.ch/en/camping-travelling/camping-insider/campsites/tcs-campsites/campsite-gordevio-maggiatal.php)

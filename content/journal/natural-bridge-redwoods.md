@@ -44,6 +44,6 @@ Both for Evelyne and for me, it was our first time seeing trees this big. It rem
 
 This blog post is part of our one month USA West Coast road trip blog series. Feeling inspired? Here are some resources you might find useful if you would like to follow our footsteps:
 
-- The Franklyne route: our entire route with every spot we went to
-- The natural bridge at Samuel H. Boardman State Scenic Corridor
-- Lady Bird Johnson Grove Trail
+- [The Franklyne route: our entire route with every spot we went to](/journal/usa-west-coast-itinerary/)
+- The natural bridge at Samuel H. Boardman State Scenic Corridor: [Google Maps](https://goo.gl/maps/PnmPuovJ4A1xhhtz6)
+- Lady Bird Johnson Grove Trail: [Google Maps](https://goo.gl/maps/RWh3cKFL3YxTwN3J6)

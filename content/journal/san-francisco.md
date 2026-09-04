@@ -10,7 +10,7 @@ tags: ["westcoast-roadtrip", "san francisco", "california", "city trip", "sights
 
 > "Walking the streets of San Francisco was one of my biggest childhood dreams. Back then, I listened to Scott McKenzie for hours, while my father told me stories about his time he road tripped Northern California while he was young." - Evelyne
 
-It was 3 am, when Frank reluctantly turned on the engine of our 4Runner at a beach campsite we have found way too late after getting lost in the redwoods, to start heading to San Francisco. Better early than getting stuck in traffic, he thought.
+It was 3 am, when Frank reluctantly turned on the engine of our 4Runner at a beach campsite we have found way too late after [getting lost in the redwoods](/journal/natural-bridge-redwoods/), to start heading to San Francisco. Better early than getting stuck in traffic, he thought.
 
 ## Welcome to San Francisco
 
@@ -62,6 +62,8 @@ Wrapped in the coziness of our hotel we slept through breakfast and had a late s
 
 ## Moraga Steps
 
+[Google Maps](https://goo.gl/maps/da743v9wvJKye8x88) · [Apple Maps](https://maps.apple.com/?address=16th%20Ave%20%26%20Moraga%20St%2C%20San%20Francisco%2C%20CA%2094122%2C%20United%20States&auid=14338351789408289359&ll=37.756259%2C-122.473194&lsp=9902&q=16th%20Avenue%20Tiled%20Steps) · [OpenStreetMap](https://www.openstreetmap.org/way/39333460)
+
 ![a spark in the streets of san francisco](/images/journal/san-francisco/DSC_0381.jpg)
 *A spark in the streets of San Francisco*
 
@@ -82,8 +84,8 @@ Smoothie time! We headed to Pressed for a little refreshment, now the California
 
 This blog post is part of our one month USA West Coast road trip blog series. Feeling inspired? Here are some resources you might find useful if you would like to follow our footsteps:
 
-- The Franklyne route: our entire route with every spot we went to
-- Information on the Tiburon to San Francisco ferry
-- Carmel Honey Company, the place we got the plush bee (das Puutz)
-- Our favorite viewpoint of the Golden Gate Bridge
+- [The Franklyne route: our entire route with every spot we went to](/journal/usa-west-coast-itinerary/)
+- Information on the [Tiburon to San Francisco ferry](https://www.goldengate.org/ferry/ferry-fares-payment/)
+- [Carmel Honey Company](https://carmelhoneycompany.com/), the place we got the plush bee (das Puutz)
+- Our favorite viewpoint of the Golden Gate Bridge · [Google Maps](https://goo.gl/maps/LGGWD69ppFmLkyBE8) · [Apple Maps](https://maps.apple.com/?address=Marin%20Headlands%2C%20Conzelman%20Rd%2C%20Sausalito%2C%20CA%2094965%2C%20United%20States&auid=16842623828439429752&ll=37.828709%2C-122.486036&lsp=9902&q=Golden%20Gate%20Bridge%20Vista%20Point) · [OpenStreetMap](https://www.openstreetmap.org/node/1183476394)
 - Mosaic-tiled steps (Moraga Steps)

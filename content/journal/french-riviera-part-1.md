@@ -52,4 +52,4 @@ Tess and Felix joined our round of joy. We celebrated life. How lucky we are to 
 
 Feeling inspired? Here are some resources you might find useful if you would like to follow our footsteps:
 
-- Our favorite campsite, Camping Olbia in Hyères
+- Our favorite campsite, [Camping Olbia in Hyères](https://www.camping-olbia.co.uk/)

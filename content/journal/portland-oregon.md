@@ -76,12 +76,12 @@ A friend told us about the ice cream shop with unorthodox, creative flavors, Sal
 
 On the actual road trip, we then ended up shopping for groceries in Whole Foods in the suburbs, and tried to find a travel guitar for me.
 
-If we had more time, we would have visited the Japanese Garden with the International Rose Garden inside for a sunset. We would have checked out much more coffee shops and indie concept stores. We would have headed out for the nature around Portland. Here are the things we haven't seen, but would love to visit when we come back:
+If we had more time, we would have visited the [Japanese Garden](https://g.page/PortlandJapaneseGarden?share) with the International Rose Garden inside for a sunset. We would have checked out much more coffee shops and indie concept stores. We would have headed out for the nature around Portland. Here are the things we haven't seen, but would love to visit when we come back:
 
-- The Hood River lavender farms
-- Mount Hood
-- Silver Falls State Park
-- Multnomah Falls
+- [The Hood River lavender farms](https://g.page/hoodriverlavenderfarms?share)
+- [Mount Hood](https://goo.gl/maps/KoW3FRj8soTKdBRF6)
+- [Silver Falls State Park](https://goo.gl/maps/81v9tyvCnSN9YrYEA)
+- [Multnomah Falls](https://goo.gl/maps/wVD6na1qQMAeyp966)
 
 ## Bottom Line
 
@@ -97,10 +97,10 @@ Touring through downtown was eye opening, and unless fundamental societal issues
 
 This blog post is part of our one month USA West Coast road trip blog series. Feeling inspired? Here are some resources you might find useful if you would like to follow our footsteps:
 
-- Waterfront Park & White Stag sign
-- Stumptown Coffee Roasters - also available at other places in the country
-- Powell's City of Books
-- Deschutes Brewery
-- REI, a great place we shopped outdoor gear
-- Tender Loving Empire, a sweet indie gift shop
-- Harlow, the place we went to for dinner (legendary)
+- [Waterfront Park & White Stag sign](https://goo.gl/maps/u4tJXcHGf7dHuHW3A)
+- [Stumptown Coffee Roasters](https://www.stumptowncoffee.com/) - also available at other places in the country
+- [Powell's City of Books](https://g.page/powells-city-of-books?share) ([website](https://www.powells.com/))
+- [Deschutes Brewery](https://goo.gl/maps/p73soxoDEZj71yh5A)
+- [REI](https://goo.gl/maps/ZnYF13ZNsGJH9i3x5), a great place we shopped outdoor gear
+- [Tender Loving Empire](https://g.page/tender-loving-empire-nw23rd?share), a sweet indie gift shop
+- [Harlow](https://goo.gl/maps/ahVgjwGamLJtw6Ny8), the place we went to for dinner (legendary)

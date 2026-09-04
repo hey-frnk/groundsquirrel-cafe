@@ -148,7 +148,7 @@ When you make it to Broek in Waterland, don't miss out on De Witte Swaen, the pl
 ## Birding in Vondelpark
 
 ![eurasian coot - we call them taubenraucher!](/images/journal/amsterdam-guide/DSC_4151.webp#right)
-*Eurasian coot - we call them "Taubenraucher"!*
+*Eurasian coot - we call them "[Taubenraucher](/journal/pfaffikersee/)"!*
 
 As a South African field and nature guide, Evelyne can't resist exploring wildlife wherever she is. Amsterdam with its rich network of water canals is a prime spot for bird viewing. While we were in Vondelpark, we were able to spot the following birds: white storks, Egyptian geese, Eurasian magpies, green parakeets, European starlings, blue tits, grey herons, coots, moorhens - and of course mallards and pigeons.
 

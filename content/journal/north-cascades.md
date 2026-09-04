@@ -43,7 +43,7 @@ Past Washington Pass, the climate gets dry and you wonder whether you are still 
 ![frank and the lake](/images/journal/north-cascades/DSC_0171.jpg)
 *Frank and the lake*
 
-Getting to Baker Lake felt like the old days where phone service got lost miles ago. We haven't done anything prior besides booking the campground on recreation.gov and navigated ourselves blindly into the national forest, into our campground. "Look, there's my name on it!" Evelyne said. We've found our intimate, serene camping space just next to the deep teal painted lake surrounded by evergreen trees overgrown by a thick layer of moss, feeling like in a rainforest.
+Getting to Baker Lake felt like the old days where phone service got lost miles ago. We haven't done anything prior besides booking the campground on [recreation.gov](https://recreation.gov/) and navigated ourselves blindly into the national forest, into [our campground](https://www.fs.usda.gov/recarea/mbs/recarea/?recid=17632). "Look, there's my name on it!" Evelyne said. We've found our intimate, serene camping space just next to the deep teal painted lake surrounded by evergreen trees overgrown by a thick layer of moss, feeling like in a rainforest.
 
 ![mmmmh, our breakfast the next morning, ready to start a day full of adventures!](/images/journal/north-cascades/DSC_0153.jpg)
 *Mmmmh, our breakfast the next morning, ready to start a day full of adventures!*
@@ -63,7 +63,7 @@ In this moment, nothing felt better when we tucked into our freshly set up sleep
 
 ![](/images/journal/north-cascades/DSC_0229.jpg)
 
-In the next morning, we took a walk through the local forest trail at our campsite before heading east into the national park. Visiting North Cascades is free. Though at our first destination, the visitors center, we got an annual America the Beautiful pass for $80, which we would use throughout our entire journey. It pays for itself after a few national park visits and I highly recommend getting it for your travels.
+In the next morning, we took a walk through the local forest trail at our campsite before heading east into the national park. Visiting North Cascades is free. Though at our first destination, the visitors center, we got an annual [America the Beautiful pass](https://www.nps.gov/planyourvisit/passes.htm) for $80, which we would use throughout our entire journey. It pays for itself after a few national park visits and I highly recommend getting it for your travels.
 
 > **Tip:** if you walk behind the visitors center, there is a viewing platform to the cascade peaks.
 
@@ -74,12 +74,12 @@ On the main road of the national park, be sure to stop by the Diablo Lake Vista 
 
 For the afternoon, Evelyne and I went for an easy, 2 mile round-trip hike from the Rainy Lake parking lot to Rainy Lake. It is an accessible, wide and paved trail that takes you to an alpine lake at 4800 ft elevation. Evelyne and I sat down at the lake, took a dip into the chill water to escape the mosquitos and sang "Missing Piece" by Vance Joy next to giant ice blocks.
 
-> ℹ Rainy Lake - Distance: 2.0 mi (3.2 km) · Elevation gain: 70 ft (21 m) · Highest point: 4800 ft (1463 m)
+> ℹ Rainy Lake - Distance: 2.0 mi (3.2 km) · Elevation gain: 70 ft (21 m) · Highest point: 4800 ft (1463 m) · [Google Maps](https://goo.gl/maps/5EWjJUm6nEsN77YeA) · [Apple Maps](https://maps.apple.com/?address=Washington,%20United%20States&auid=13829437635375852436&ll=48.501145,-120.738243&lsp=9902&q=Rainy%20Lake&_ext=Ch8KBAgDEBIKBAgFEAMKBAgKEAAKBAhVEAwKBQinARAAEiQpZFNTN7w/SEAxMyzro3gvXsA5OFlZkYdASEBBUYqxp/guXsA%3D) · [OpenStreetMap](https://www.openstreetmap.org/way/339423897)
 
 ![the feeling of being wild and free. washington pass](/images/journal/north-cascades/IMG_1016.jpg)
 *The feeling of being wild and free. Washington Pass*
 
-While the evening was still young, we drove past the most impressive bend of Washington Pass. We got reminded of what we came for: untouched, untamed nature, wide, wild forests, chalk white stones and Liberty Bell Mountain, with red giant rocks shooting up into the sky. Read our unbelievable pasta story when we tried to cook pasta without fire, made a friend and watched the sun fade away in the warm and dry pine scent up in our campground we've found and stayed for two nights: Klipchuck Campground.
+While the evening was still young, we drove past the most impressive bend of Washington Pass. We got reminded of what we came for: untouched, untamed nature, wide, wild forests, chalk white stones and Liberty Bell Mountain, with red giant rocks shooting up into the sky. Read our unbelievable pasta story when we tried to cook pasta without fire, made a friend and watched the sun fade away in the warm and dry pine scent up in our campground we've found and stayed for two nights: [Klipchuck Campground](https://www.fs.usda.gov/recarea/okawen/recarea/?recid=59281).
 
 ![another evelyne's heyxnatalie moment!](/images/journal/north-cascades/IMG_1067.jpg)
 *Another Evelyne's heyxnatalie moment!*
@@ -93,12 +93,12 @@ We love to start a hike early in the morning. The trails are less crowded, the l
 
 ![](/images/journal/north-cascades/DSC_0395.jpg#left)
 
-> ℹ Blue Lake - Distance: 4.4 mi (7.1 km) · Elevation gain: 1050 ft (320 m) · Highest point: 6254 ft (1906 m)
+> ℹ Blue Lake - Distance: 4.4 mi (7.1 km) · Elevation gain: 1050 ft (320 m) · Highest point: 6254 ft (1906 m) · [Google Maps](https://goo.gl/maps/RjrEvCNrRCq5nFgr5) · [Apple Maps](https://maps.apple.com/?_ext=EiYpWwtyi05BSEAxDKxXC1srXsA52eCX53RCSEBB8JeV3HwqXsBQBA%3D%3D&address=Blue%20Lake%20Trailhead%2C%20Stehekin%2C%20WA%20%2098852%2C%20United%20States&ll=48.514698%2C-120.670648&q=Blue%20Lake%20Trailhead) · [OpenStreetMap](https://www.openstreetmap.org/way/301865978)
 
 ![frank, appreciating the view](/images/journal/north-cascades/IMG_1146.jpg)
 *Frank, appreciating the view*
 
-Of course, no lake is cold enough, and when the sun shined through the cracks of the clouds Evelyne and I went for a swim inside the lake that washed away all of our weariness. We then calmly hiked back to our car to continue our journey. Remember Skyler? The evening he told us we really have to check out a candy store in western village Winthrop, so we set out on an adventure further east.
+Of course, no lake is cold enough, and when the sun shined through the cracks of the clouds Evelyne and I went for a swim inside the lake that washed away all of our weariness. We then calmly hiked back to our car to continue our journey. Remember Skyler? The evening he told us we really have to check out a candy store in western village [Winthrop](https://www.google.com/maps/place/Winthrop,+WA+98862,+USA/data=!4m2!3m1!1s0x549cafa623b96aab:0x28449a3362c3528d?sa=X&ved=2ahUKEwi-mZODrYb7AhUy_rsIHe4uBG8Q8gF6BQiDARAB), so we set out on an adventure further east.
 
 The transition into east of the Cascade Mountains is dramatic. From lush green fields to deeply saturated evergreen forests, it suddenly changes into a golden hilly landscape (I swear it is not just because of the late afternoon light!). Dry and dusty, but on the highway you follow the creek flowing down all the way into Winthrop, and it is a glorious feeling knowing where the water comes from.
 
@@ -129,9 +129,9 @@ Oh wait, the story doesn't end here. For our way out of the North Cascades, I de
 
 This blog post is part of our one month USA West Coast road trip blog series. Feeling inspired? Here are some resources you might find useful if you would like to follow our footsteps:
 
-- The Franklyne route: our entire route with every spot we went to
-- Our first night at Bayview Campground
-- North Cascades National Park (official nps.gov information)
-- Our second and third night in our favorite campground: Klipchuck Campground
-- Rainy Lake
-- Blue Lake
+- [The Franklyne route: our entire route with every spot we went to](/journal/usa-west-coast-itinerary/)
+- Our first night at [Bayview Campground](https://www.fs.usda.gov/recarea/mbs/recreation/recarea/?actid=33&recid=17632)
+- [North Cascades National Park](https://www.nps.gov/noca/index.htm) (official nps.gov information)
+- Our second and third night in our favorite campground: [Klipchuck Campground](https://www.fs.usda.gov/recarea/okawen/recarea/?recid=59281)
+- Rainy Lake: [Google Maps](https://goo.gl/maps/5EWjJUm6nEsN77YeA) · [Apple Maps](https://maps.apple.com/?address=Washington,%20United%20States&auid=13829437635375852436&ll=48.501145,-120.738243&lsp=9902&q=Rainy%20Lake&_ext=Ch8KBAgDEBIKBAgFEAMKBAgKEAAKBAhVEAwKBQinARAAEiQpZFNTN7w/SEAxMyzro3gvXsA5OFlZkYdASEBBUYqxp/guXsA%3D) · [OpenstreetmAP](https://www.openstreetmap.org/way/339423897)
+- Blue Lake: [Google Maps](https://goo.gl/maps/RjrEvCNrRCq5nFgr5) · [Apple Maps](https://maps.apple.com/?_ext=EiYpWwtyi05BSEAxDKxXC1srXsA52eCX53RCSEBB8JeV3HwqXsBQBA%3D%3D&address=Blue%20Lake%20Trailhead%2C%20Stehekin%2C%20WA%20%2098852%2C%20United%20States&ll=48.514698%2C-120.670648&q=Blue%20Lake%20Trailhead) · [OpenStreetMap](https://www.openstreetmap.org/way/301865978)

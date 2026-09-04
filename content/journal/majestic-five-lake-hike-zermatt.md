@@ -44,7 +44,7 @@ Absolutely! We don't hike to reach "the destination"; we hike to enjoy the time 
 ![the zermatt five-lake hike is both scenic and beginner friendly](/images/journal/zermatt-five-lake-hike/IMG_9282.webp)
 *The Zermatt Five-Lake Hike is both scenic and beginner friendly*
 
-> ℹ Five-Lake Hike (Sunnegga) - Distance: 5.6 mi (9 km) · Elevation gain: 1312 ft (400 m) · Highest point: 7546 ft (2300 m)
+> ℹ Five-Lake Hike (Sunnegga) - Distance: 5.6 mi (9 km) · Elevation gain: 1312 ft (400 m) · Highest point: 7546 ft (2300 m) · [Google Maps](https://maps.app.goo.gl/T4FdvQZMnDfsvH4u7) · [Apple Maps](https://maps.apple.com/?address=Zermatt,%20Switzerland&auid=13121941170556836808&ll=46.017375,7.770002&lsp=9902&q=Sunnegga) · [OpenStreetMap](https://www.openstreetmap.org/node/632377709#map=18/46.017320/7.769904)
 
 ## How to Get to the Five-Lake Hike?
 
@@ -157,6 +157,6 @@ Whether you're spending a summer in Switzerland, seeking a getaway from the city
 
 Feeling inspired? Here are some resources you might find useful if you would like to follow our footsteps:
 
-- Online booking of tickets from Zermatt to Sunnegga
-- Live webcam of Sunnegga (start of the hike)
-- Weather forecast for Zermatt
+- Online booking of [tickets](https://www.matterhornparadise.ch/en/book/tickets/sunnegga) from Zermatt to Sunnegga
+- [Live webcam](https://www.bergfex.ch/zermatt/webcams/c6108/) of Sunnegga (start of the hike)
+- [Weather forecast](https://meteonews.ch/de/Wetter/G2657928/Zermatt) for Zermatt

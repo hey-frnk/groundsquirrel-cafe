@@ -7,7 +7,7 @@ excerpt: "Vom Gewächshaus ins Supermarktregal - woher kommt das Gemüse, das wi
 
 Produziert in Spanien – so oder ähnlich steht es auf vielen Gemüsesorten, die wir in der Schweiz im Supermarkt finden. Doch was bedeutet das eigentlich genau? Woher stammt dieses Gemüse konkret, wie wird es angebaut und wer sind die Menschen hinter dieser Arbeit?
 
-Unsere Reise durch Spanien führte uns an der Region Almería vorbei – eine landschaftlich eindrucksvolle Gegend, die zugleich durch ein riesiges Netz an Gewächshäusern geprägt ist. Diese Gewächshauslandschaft ist so weitläufig, dass sie sogar auf Satellitenbildern als große weiße Fläche sichtbar ist. In Europa leben derzeit (Stand April 2025) rund 720 Millionen Menschen – und alle benötigen Zugang zu Nahrungsmitteln. Dafür braucht es eine zuverlässige Versorgung durch Landwirtschaftsbetriebe, die auch unter anspruchsvollen Bedingungen Anbau betreiben können.
+Unsere Reise durch Spanien führte uns an der Region Almería vorbei – eine landschaftlich eindrucksvolle Gegend, die zugleich durch ein riesiges Netz an Gewächshäusern geprägt ist. Diese Gewächshauslandschaft ist so weitläufig, dass sie sogar auf Satellitenbildern als große weiße Fläche sichtbar ist. In Europa leben derzeit (Stand April 2025) rund 720 Millionen Menschen – und alle benötigen Zugang zu Nahrungsmitteln. Dafür braucht es eine zuverlässige Versorgung durch Landwirtschaftsbetriebe, die auch unter anspruchsvollen Bedingungen Anbau betreiben können ([Quelle](https://populationtoday.com/de/continents/europe/)).
 
 Während unseres Aufenthalts in Almería erhielten wir die Möglichkeit, eines der Gewächshäuser zu besichtigen. Im Rahmen einer Führung lernten wir viel über die Funktionsweise dieser Betriebe – und darüber, wie viel Wissen, Planung und Engagement in jedem einzelnen Gemüse stecken, das schließlich in unseren Regalen landet. Einige Eindrücke möchten wir hier teilen – in der Hoffnung, ein besseres Verständnis für diese Form der Landwirtschaft zu vermitteln und Interesse daran zu wecken, sich bei Gelegenheit selbst ein Bild vor Ort zu machen.
 
@@ -105,5 +105,10 @@ Unser Dank gilt allen Menschen in Almería, die mit ihrer Arbeit und ihrem Engag
 
 ![danke, dass wir da sein durften!](/images/journal/greenhouse-almeria/IMG_0666.webp)
 *Danke, dass wir da sein durften!*
+
+## Nützliche Links
+
+- [Website](https://clisol.com/) des Gewächshauses, das wir besucht haben. Reservationen sind nur telefonisch möglich.
+- Die Gewächshauslandschaft von oben auf [Google Maps](https://www.google.de/maps/@36.8164056,-2.7902329,48517m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D)
 
 *Mit 🐿️ von Evelyne*

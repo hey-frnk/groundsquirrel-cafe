@@ -12,7 +12,7 @@ tags: ["spain", "sustainability", "slow travel", "vegetables", "almeria", "green
 
 Many vegetables we find in Swiss supermarkets are labeled as "produced in Spain" - or something similar. But what does that really mean? Where does this produce actually come from, how is it grown, and who are the people behind it?
 
-Our journey through Spain took us past the Almería region - a strikingly scenic area that is also characterized by a vast network of greenhouses. This greenhouse landscape is so extensive that it can even be seen on satellite images as a large white area. As of April 2025, Europe is home to around 720 million people - all of whom need access to food. To meet this demand, reliable agricultural operations are essential, capable of farming even under challenging conditions.
+Our journey through Spain took us past the Almería region - a strikingly scenic area that is also characterized by a vast network of greenhouses. This greenhouse landscape is so extensive that it can even be seen on satellite images as a large white area. As of April 2025, Europe is home to around 720 million people - all of whom need access to food. To meet this demand, reliable agricultural operations are essential, capable of farming even under challenging conditions ([source](https://populationtoday.com/de/continents/europe/)).
 
 During our stay in Almería, we had the opportunity to tour one of the greenhouses. During the guided tour, we learned a great deal about how these operations function - and how much knowledge, planning, and dedication go into every single vegetable that ultimately ends up on our shelves. We'd like to share a few impressions here, hoping to provide a better understanding of this form of agriculture and spark interest in visiting one of these farms firsthand when the opportunity arises.
 
@@ -108,5 +108,10 @@ Our thanks go to all the people in Almería who, with their work and commitment,
 
 ![thank you for having us!](/images/journal/greenhouse-almeria/IMG_0666.webp#left)
 *Thank you for having us!*
+
+## Useful Links
+
+- [Website](https://clisol.com/) of the greenhouse we visited. Please note that reservations are only possible by telephone.
+- The greenhouse landscape from above on [Google Maps](https://www.google.de/maps/@36.8164056,-2.7902329,48517m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D)
 
 *With 🐿️ by Evelyne*

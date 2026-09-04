@@ -8,13 +8,13 @@ categories: ["travel"]
 tags: ["road trip", "day trip", "day hike", "africa", "south africa", "drakensberg", "kwazulu-natal", "hiking", "royal natal national park", "drakensberg mountains", "tugela falls", "world's second tallest waterfall", "bucketlist"]
 ---
 
-During our South Africa road trip, we took a detour to explore Tugela Falls, one of the world's highest waterfalls, plunging 958 meters along the dramatic Drakensberg amphitheatre. This hike was the perfect balance between the intimate wilderness and warm hospitality of Ndaka Safari Lodge and the vast nature of Kruger National Park.
+During our South Africa road trip, we took a detour to explore Tugela Falls, one of the world's highest waterfalls, plunging 958 meters along the dramatic Drakensberg amphitheatre. This hike was the perfect balance between the [intimate wilderness and warm hospitality of Ndaka Safari Lodge](/journal/ndaka-safari-lodge/) and the [vast nature of Kruger National Park](/journal/kruger-national-park-camping-road-trip/).
 
 Rewarding you with the most spectacular views, the hike to the Tugela Falls offers a unique blend of natural beauty and personal achievement.
 
 ## The Hike
 
-> ℹ Tugela Falls Hike - Distance: 7.9 mi (12.7 km) · Elevation gain: 1673 ft (510 m) · Highest point: 9961 ft (3036 m)
+> ℹ Tugela Falls Hike - Distance: 7.9 mi (12.7 km) · Elevation gain: 1673 ft (510 m) · Highest point: 9961 ft (3036 m) · [Google Maps](https://maps.app.goo.gl/PE21DgisRakYZWTk9) · [Apple Maps](https://maps.apple.com/?address=Maluti%20A%20Phofung,%20Qwa-Qwa,%20Free%20State,%20South%20Africa&auid=14999001461646938950&ll=-28.727113,28.890958&lsp=9902&q=Sentinel%20Car%20Park) · [OpenStreetMap](https://www.openstreetmap.org/way/36102818)
 
 ![](/images/journal/tugela-falls/IMG_5818.webp)
 ![](/images/journal/tugela-falls/IMG_5884.webp)
@@ -107,5 +107,5 @@ There seems to be an alternative way of getting to the Tugela Falls called the B
 
 Feeling inspired? Here are some resources you might find useful if you would like to follow our footsteps:
 
-- Official website of Witsieshoek Mountain Lodge
-- Detailed hike at AllTrails
+- [Official website](https://www.witsieshoek.co.za/) of Witsieshoek Mountain Lodge · [Google Maps](https://maps.app.goo.gl/xH1tFziy5kn7bE7C7) · [Apple Maps](https://maps.apple.com/?address=Gudu%20Pass%20Trail,%20Qwa-Qwa,%20Free%20State,%20South%20Africa&auid=3568866683715815003&ll=-28.685740,28.899165&lsp=9902&q=Wietsieshoek%20Mountain%20Lodge) · [OpenStreetMap](https://www.openstreetmap.org/way/128438181)
+- [Detailed hike](https://www.alltrails.com/trail/south-africa/kwazulu-natal/tugela-falls-hike-via-sentinel-peak) at AllTrails

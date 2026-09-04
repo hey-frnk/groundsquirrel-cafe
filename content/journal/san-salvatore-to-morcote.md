@@ -19,7 +19,7 @@ There is no wrong way to get the day hike started, whether it is enjoying a chil
 ![the colorful shops of via cattedrale](/images/journal/san-salvatore-morcote/IMG_9438.webp#right)
 *The colorful shops of Via Cattedrale*
 
-What is more perfect than starting out the day by sitting at the teal blue lake with some fresh papaya and having pistachio-filled croissants (Swiss German: Gipfeli) from the old town? We took a dip at around Parco Belvedere at 9 am on a Tuesday morning (like your unemployed friend), leaving locals and tourists wondering.
+What is more perfect than starting out the day by sitting at the teal blue lake with some fresh papaya and [having pistachio-filled croissants](https://goo.gl/maps/W64xCrgomcGHKqce9) (Swiss German: Gipfeli) from the old town? We took a dip at around [Parco Belvedere](https://goo.gl/maps/QbogSigbm5Lpj4349) at 9 am on a Tuesday morning (like your unemployed friend), leaving locals and tourists wondering.
 
 The colorful buildings, fountains, local shops and restaurants make you truly feel like you are somewhere in gelato-vino-Italy. After all the Italian border is just a few miles, and you'll see later, a swim away.
 
@@ -28,11 +28,13 @@ The colorful buildings, fountains, local shops and restaurants make you truly fe
 
 ## Monte San Salvatore
 
-San Salvatore is one of the magical two local peaks, where you can overlook the city of Lugano. From Lugano Paradiso, you can either take the rail up, or take the yellow bus, line 434, to the station called Carona Ciona and hike to the top for an easy one hour.
+San Salvatore is one of the magical two local peaks, where you can overlook the city of Lugano. From Lugano Paradiso, you can either take the rail up ([website](https://www.montesansalvatore.ch/en/), [timetable & prices](https://www.montesansalvatore.ch/en/timetable-and-fares/)), or take the yellow bus, line 434, to the station called Carona Ciona and hike to the top for an easy one hour.
 
 If you follow the sign to the public bathroom, you will find a nice panoramic spot, as well as walking up the stairs. You'll even find a museum, although neither the rail, nor the museum was open when I hiked up Monte San Salvatore at 8 am.
 
-### Swing the World
+### [Swing the World](https://www.morcoteturismo.ch/Swing-the-World-Panoramic-Swing-0f4d4100)
+
+Swing 1: [Google Maps](https://goo.gl/maps/cHft3x63HW56NVpw9) - swing 2: [Google Maps](https://goo.gl/maps/W2wuVCGQVDJ2zHMh6)
 
 Along the following hike from San Salvatore to Morcote, you will find two swings for a good break - the first one is a little detour from Parco San Grato, the second one right next to the church of Morcote!
 
@@ -50,7 +52,7 @@ The main hike of the day starts in the charming village of Carona on the hills. 
 
 > ℹ From San Salvatore/Carona to Morcote - Distance: 5.8 mi (9.4 km) · Difficulty: Easy · Elevation gain: 778 ft (237 m)
 
-You wanna follow the signs to Morcote, which will first guide you through a botanical park, Parco San Grato, where you, by the way, can book a bed to sleep under the stars. Be sure to stop for a minute for some snacks, take in the view and some water to stay hydrated. Do you smell the scent of dry pine forest and orange peel? How refreshing! The trail stays on top of the mountain with occasional peeks of Lake Lugano until you reach a glade with a restaurant beneath it.
+You wanna follow the signs to Morcote, which will first guide you through a botanical park, [Parco San Grato](https://parcosangrato.ch/en/welcome-at-the-san-grato-park), where you, by the way, can book a bed to sleep under the stars. Be sure to stop for a minute for some snacks, take in the view and some water to stay hydrated. Do you smell the scent of dry pine forest and orange peel? How refreshing! The trail stays on top of the mountain with occasional peeks of Lake Lugano until you reach a glade with a restaurant beneath it.
 
 ![](/images/journal/san-salvatore-morcote/IMG_9493.webp)
 ![time for a break. what's better than a fluffy homemade olive oil ciabatta with homemade guacamole and homegrown cress?](/images/journal/san-salvatore-morcote/IMG_3708.webp)
@@ -67,25 +69,29 @@ Hearing that Morcote is considered as one of the most beautiful villages in Swit
 
 ### Parco Scherrer, Morcote
 
+[Google Maps](https://goo.gl/maps/j13pZesbmm6CWa5A8) · [Apple Maps](https://maps.apple.com/?address=Riva%20di%20Pilastri%2020%2C%206922%20Morcote%2C%20Switzerland&auid=12526076838386396010&ll=45.923894%2C8.910988&lsp=9902&q=Parco%20Scherrer) · [OpenStreetMap](https://www.openstreetmap.org/way/283588418)
+
 ![how paradise looks like - inside parco scherrer, morcote](/images/journal/san-salvatore-morcote/IMG_9547.webp#right)
 *How paradise looks like - inside Parco Scherrer, Morcote*
 
-From the port of Morcote, where all the restaurants and cute local shops are, you'll reach the most unique botanical garden, Parco Scherrer, if you walk westbound along the lake for ten minutes where the garden awaits behind an unassuming wall. And the best thing above all? It is all free for you to visit!
+From the port of Morcote, where all the restaurants and cute local shops are, you'll reach the most unique botanical garden, [Parco Scherrer](https://www.ticino.ch/de/commons/details/Park-Scherrer/4553.html), if you walk westbound along the lake for ten minutes where the garden awaits behind an unassuming wall. And the best thing above all? It is all free for you to visit!
 
-Inside you will find Italian sculptures that make you feel like you are in Star Wars, lush tropical plants that take you deep down Mediterranean, or to East Asia. Check out the restaurant, Grotto del Parco at the park exit, that treats you with yummy Ticinese food as well as pizza!
+Inside you will find Italian sculptures that make you feel like you are in Star Wars, lush tropical plants that take you deep down Mediterranean, or to East Asia. Check out the [restaurant, Grotto del Parco at the park exit](http://www.grottodelparco.ch/), that treats you with yummy Ticinese food as well as pizza!
 
 ## A Dip in the Lake and the Ferry Back
 
 ![wanna hop on in?](/images/journal/san-salvatore-morcote/vlcsnap-2023-07-15-00h04m52s823.webp)
 *Wanna hop on in?*
 
-Made it this far? Here's a true local gem! Here comes the favorite part of the day, where after a hike a refreshment in the lake washes away all the tiredness. Let me present to you the best place in the world to head for a dip. It's free. It has showers, bathrooms, a lawn where you can rent an umbrella and get ice cream from the restaurant, a swimming area, and a landing stage - the perfect place to dive in head first. From Parco Scherrer, it's a 15 minute walk, or you can take the bus!
+Made it this far? Here's a true local gem! Here comes the favorite part of the day, where after a hike a refreshment in the lake washes away all the tiredness. Let me present to you [the best place in the world to head for a dip](https://goo.gl/maps/Fy5hrabNpvdiMv8z8). It's free. It has showers, bathrooms, a lawn where you can rent an umbrella and get ice cream from the restaurant, a swimming area, and a landing stage - the perfect place to dive in head first. From Parco Scherrer, it's a 15 minute walk, or you can take the bus!
 
 Although we haven't tried, Italy is on the other side of the lake!
 
+[Google Maps](https://goo.gl/maps/MtrzgLHV1W8CCWZc9)
+
 ![](/images/journal/san-salvatore-morcote/IMG_5943.webp#right)
 
-Be sure to not miss out on the last boat ride, which unfortunately leaves fairly early at 5:45 pm in summer. You can step out anywhere you like to fade out the evening with a dinner or ride all the way to Lugano.
+Be sure to not miss out on the [last boat ride](https://www.lakelugano.ch/en/top/timetableticket), which unfortunately leaves fairly early at 5:45 pm in summer. You can step out anywhere you like to fade out the evening with a dinner or ride all the way to Lugano.
 
 ![waiting for the ferry!](/images/journal/san-salvatore-morcote/IMG_9579.webp)
 *Waiting for the ferry!*
@@ -100,11 +106,11 @@ Be sure to not miss out on the last boat ride, which unfortunately leaves fairly
 
 Feeling inspired? Here are some resources you might find useful if you would like to follow our footsteps:
 
-- Website of the Monte San Salvatore rail
+- [Website](https://www.montesansalvatore.ch/en/) of the Monte San Salvatore rail
 - Official tourism website of Morcote
 - Swing the World!
-- Parco San Grato, the botanical park on the hike
-- Parco Scherrer, the botanical garden in Morcote, as well as the Grotto del Parco restaurant
-- The best place in the world to head for a dip, Riva Pubblica di Morcote
-- Ristorante della Posta - a great restaurant in Morcote by the lake
+- [Parco San Grato](https://parcosangrato.ch/en/welcome-at-the-san-grato-park), the botanical park on the hike
+- [Parco Scherrer](https://www.ticino.ch/de/commons/details/Park-Scherrer/4553.html), the botanical garden in Morcote, as well as the [Grotto del Parco restaurant](https://www.grottodelparco.ch/)
+- [The best place in the world to head for a dip](https://goo.gl/maps/Fy5hrabNpvdiMv8z8), Riva Pubblica di Morcote
+- [Ristorante della Posta](https://goo.gl/maps/pgWcFPAm4NGxtoGR9) - a great restaurant in Morcote by the lake
 - Ferry timetable

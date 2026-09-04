@@ -54,6 +54,6 @@ Frank and I headed towards the North Cascades National Park today, where we woul
 
 This blog post is part of our one month USA West Coast road trip blog series. Feeling inspired? Here are some resources you might find useful if you would like to follow our footsteps:
 
-- Our first stop, ever: Zeitgeist Coffee
-- Markets by the waterfront: Public Market, Pike Place Market
-- Lovely plants & veggie cafe: Café Flora
+- Our first stop, ever: [Zeitgeist Coffee](https://goo.gl/maps/buNUpyq2EQZutDDJ6)
+- Markets by the waterfront: [Public Market](https://goo.gl/maps/JksyvMonFHfHymPR6), [Pike Place Market](https://g.page/pikeplacepublicmarket?share)
+- Lovely plants & veggie cafe: [Café Flora](https://g.page/CafeFloraVeg?share)

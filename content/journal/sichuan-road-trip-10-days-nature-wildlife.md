@@ -51,7 +51,7 @@ The most poetic place in Chengdu undoubtedly is Jinli pedestrian street, lined w
 ![](/images/journal/sichuan-road-trip/DSC_4527.jpg)
 ![](/images/journal/sichuan-road-trip/DSC_4586.jpg)
 
-Chengdu is synonymous with giant pandas, and visiting the panda research base is a good way to have a 100% chance of seeing pandas. Arrive early to beat the crowds and enjoy some more peaceful panda moments.
+Chengdu is synonymous with giant pandas, and visiting the [panda research base](https://maps.app.goo.gl/4uJTTP9ev1tCBKic7) is a good way to have a 100% chance of seeing pandas. Arrive early to beat the crowds and enjoy some more peaceful panda moments.
 
 > ♥ Favorite Location: Panda Themed Hotel Xishu Garden Inn 熙蜀酒店 - Coordinates: (30°40'30.7"N, 104°4'20.1"E)
 
@@ -166,11 +166,11 @@ We ended the day in Songpan 松潘, a historic town where our tour guide helped 
 
 ## How We Traveled
 
-We were a group of six - Frank arranged a tour through Sunrise China Expeditions, so we were accompanied by an enthusiastic and knowledgeable guide who made the experience truly special and easy.
+We were a group of six - Frank arranged a tour through [Sunrise China Expeditions](https://www.scexpeditions.com/), so we were accompanied by an enthusiastic and knowledgeable guide who made the experience truly special and easy.
 
 We had a private bus and driver, and all national park entrance tickets were taken care of in advance. Our hotels were custom tailored to our preferences, so we really didn't have to worry about a thing.
 
-Our trip connected the Avatar Mountains in Zhangjiajie with Jiuzhaigou. We flew from the small airport in Zhangjiajie to Chengdu. On the way back, we took the brand-new high-speed train - back then, it only went as far as Zhenjiangguan. Today, the line goes further, all the way to Songpan and even directly to Jiuzhaigou. From Chengdu, we took a flight to Beijing.
+Our trip connected [the Avatar Mountains in Zhangjiajie](/journal/zhangjiajie-avatar-mountains/) with Jiuzhaigou. We flew from the small airport in Zhangjiajie to Chengdu. On the way back, we took the brand-new high-speed train - back then, it only went as far as Zhenjiangguan. Today, the line goes further, all the way to Songpan and even directly to Jiuzhaigou. From Chengdu, we took a flight to Beijing.
 
 ![](/images/journal/sichuan-road-trip/IMG_1332.jpg)
 ![](/images/journal/sichuan-road-trip/page0.jpg)

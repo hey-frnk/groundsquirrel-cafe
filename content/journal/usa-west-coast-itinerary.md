@@ -19,9 +19,9 @@ We designed our route the scenic way, to see as much as possible in a very short
 
 Excited and curious? No more beating around the bush, here's our itinerary!
 
-- 1 day Seattle
-- 2 days North Cascades National Park
-- 1 day Portland, Oregon
+- 1 day [Seattle](/journal/seattle-adventure-begins/)
+- 2 days [North Cascades National Park](/journal/north-cascades/)
+- 1 day [Portland, Oregon](/journal/portland-oregon/)
 - 2 days Cannon Beach
 - 2 days Oregon Coast
 - 1 day Redwoods National Park
@@ -57,7 +57,7 @@ Excited and curious? No more beating around the bush, here's our itinerary!
 
 Most nights we stayed in official campsites inside national forests, national parks and state parks. We never booked anything more than 2–3 days in advance, but if you don't enjoy the uncertainty, book early! Popular sites, especially during weekends and national holidays, tend to be booked out months in advance.
 
-All official, public campgrounds can be booked through recreation.gov.
+All official, public campgrounds can be booked through [recreation.gov](https://www.recreation.gov/).
 
 There were two times where we couldn't find anything for the night (we really tried our best) and had to sleep on the roadside. Once around Big Sur in California, and once in central Oregon around Umpqua National Forest.
 
@@ -141,7 +141,7 @@ The next morning, I woke up very early to beat the morning traffic on our way to
 
 In the city, we explored Chinatown, watched sea lions on Pier 39 before we took the ferry back, crossed the Golden Gate Bridge and checked into our hotel near the Apple HQ in Cupertino.
 
-If you are doing this route, the Golden Gate Bridge was the only toll road we encountered. You can do a one-time payment, and do not have to pay any extra for toll handling service on your car rental.
+If you are doing this route, the Golden Gate Bridge was the only toll road we encountered. You can do a [one-time payment](https://www.bayareafastrak.org/en/tolls/one-time-payment.shtml), and do not have to pay any extra for toll handling service on your car rental.
 
 ![what a poetic moment! golden gate bridge in the pink sky above fluffy clouds of san francisco](/images/journal/usa-west-coast-itinerary/34-Golden-City-San-Francisco-2C-Golden-Gate-Bridge-Sunset-Viewpoint.jpg)
 *What a poetic moment! Golden Gate Bridge in the pink sky above fluffy clouds of San Francisco*
@@ -291,4 +291,6 @@ We've deep cleaned our 4Runner and went to Café Flora in Seattle for some vegan
 *With 🐝 by Frank.*
 
 ![a digital postcard showing the squirrels of the world](/images/journal/usa-west-coast-itinerary/79-painting-process.jpg#right)
+
+Visit our etsy shop: [hummel & bear](https://hummelandbear.etsy.com/)
 *A digital postcard showing the squirrels of the world*

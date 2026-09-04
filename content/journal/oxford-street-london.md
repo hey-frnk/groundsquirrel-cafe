@@ -26,7 +26,7 @@ What follows is a guide to the hidden gems that offer a different, more authenti
 
 Without a doubt, the east of London is the area we fell in love with the most and, as a result, spent the most time exploring. Here, life and its residents thrive, with streets brimming with character, charm, and uniqueness. This is the London we had been searching for. Below are some of the most beautiful places you must visit:
 
-### Columbia Road
+### [Columbia Road](https://columbiaroad.info/)
 
 Frank and I consider Columbia Road to be the most beautiful street in London! Located in the East End, it sits on the edge of the city, with Shoreditch to the west and Brick Lane and Spitalfields nearby. Columbia Road is one of the few streets in the country comprised of around sixty independent businesses.
 
@@ -84,7 +84,9 @@ For wildlife enthusiasts, Brushfield Street is a must-visit, especially for thos
 
 Every day, around 55 elephants die due to ivory poaching, climate change, deforestation, and human-wildlife conflict. This devastation impacts entire ecosystems. Elephants are nature's environmentalists, creating water pathways and maintaining habitats essential for other species and flora. During my ranger training in southern Africa, I witnessed firsthand the tragic extent of their endangerment. Gillie and Marc's sculptures aim to raise awareness about the plight of these gentle giants, whose existence is increasingly threatened.
 
-To learn more about this project, or discover ecoexist, a small but very important not-for-profit NGO in Botswana that deals with the challenges between humans and elephants.
+To learn more about this project, click [here](https://gillieandmarc.com/blogs/find-our-art/the-orphans-marble-arch-london-uk?srsltid=AfmBOoqQYOOjgYWn3A4o3Ra6A2q9Dq87pG9kukX_RvbOYXJrdKnHWH6S).
+
+To learn more about this project, or discover [ecoexist](https://www.ecoexistproject.org/), a small but very important not-for-profit NGO in Botswana that deals with the challenges between humans and elephants.
 
 ![](/images/journal/oxford-street-london/ecoexist-logo.jpg#left)
 
@@ -123,7 +125,7 @@ At the end of the street lies the stunning Primrose Hill Park, offering visitors
 
 ### Northern Parks
 
-Directly connected to Primrose Hill Park lies the iconic Regent's Park, a haven for wildlife enthusiasts like us. If you share our passion for observing animals in their natural habitats, this park is an absolute must-visit. In the early morning hours, with a bit of patience and luck, you can spot rare bird species such as reed warblers, peregrine falcons, and green woodpeckers. The park is also alive with waterfowl, grey herons, and squirrels, offering countless opportunities to connect with nature.
+Directly connected to Primrose Hill Park lies the iconic [Regent's Park](https://www.friendsofregentspark.org/), a haven for wildlife enthusiasts like us. If you share our passion for observing animals in their natural habitats, this park is an absolute must-visit. In the early morning hours, with a bit of patience and luck, you can spot rare bird species such as reed warblers, peregrine falcons, and green woodpeckers. The park is also alive with waterfowl, grey herons, and squirrels, offering countless opportunities to connect with nature.
 
 Most notably, Regent's Park is home to the last confirmed breeding population of hedgehogs in central London, a rare and precious presence in the heart of the city. For cherry blossom lovers, springtime in Regent's Park is an enchanting experience, and the park even features ancient tree trunks estimated to be around 30 million years old.
 
@@ -147,7 +149,7 @@ Depending on the time of day, Portobello attracts a mix of visitors. In our opin
 ![](/images/journal/oxford-street-london/IMG_6106.jpg)
 ![](/images/journal/oxford-street-london/IMG_6085.jpg)
 
-If you're a fan of exclusive cuisine, Holy Carrot on Portobello Road is an excellent choice. This restaurant offers vegetable-forward dining, a chic and sophisticated ambience, and a strong commitment to low waste and sustainability. We celebrated Frank's birthday here and felt as though we were in seventh heaven.
+If you're a fan of exclusive cuisine, [Holy Carrot](https://www.holycarrot.co.uk/) on [Portobello Road](https://visitportobello.com/) is an excellent choice. This restaurant offers vegetable-forward dining, a chic and sophisticated ambience, and a strong commitment to low waste and sustainability. We celebrated Frank's birthday here and felt as though we were in seventh heaven.
 
 ![](/images/journal/oxford-street-london/IMG_2399.jpg)
 ![](/images/journal/oxford-street-london/IMG_5792.jpg)
@@ -157,7 +159,7 @@ Portobello Road intersects with another fascinating street, Westbourne Grove. Wh
 
 ### Western Parks
 
-In west London lies the iconic and royal Hyde Park. It has hosted legendary figures like Nelson Mandela and the Rolling Stones, and was the starting point for the UK's first Pride march. Nicknamed "the people's park," Hyde Park is also a haven for wildlife. At its center is the Serpentine, offering scenic lakeside paths, waterfront cafés, the Royal Parks shop, and even hardy swimmers at the Lido, home to Britain's oldest swimming club.
+In west London lies the iconic and royal [Hyde Park](https://www.royalparks.org.uk/visit/parks/hyde-park). It has hosted legendary figures like Nelson Mandela and the Rolling Stones, and was the starting point for the UK's first Pride march. Nicknamed "the people's park," Hyde Park is also a haven for wildlife. At its center is the Serpentine, offering scenic lakeside paths, waterfront cafés, the Royal Parks shop, and even hardy swimmers at the Lido, home to Britain's oldest swimming club.
 
 ![hyde park family photo - our most beloved photo we've ever taken!](/images/journal/oxford-street-london/IMG_6162.jpg)
 *Hyde Park family photo - our most beloved photo we've ever taken!*
@@ -168,10 +170,12 @@ In west London lies the iconic and royal Hyde Park. It has hosted legendary figu
 
 Support wildlife and us by purchasing our digital postcard - the "aquarelle squirrels of the world" postcard, painted by Evelyne. We donate 5% of all proceeds directly to wildlife conservation.
 
+Visit our etsy shop: [hummel & bear](https://hummelandbear.etsy.com/)
+
 ![aquarelle squirrels of the world postcard painted by evelyne](/images/journal/oxford-street-london/painting-process.jpg)
 *Aquarelle squirrels of the world postcard, painted by Evelyne*
 
-Furthermore, there is St. James's Park right next to Hyde Park. Its centerpiece is a tranquil lake where swans, geese, and an iconic colony of pelicans reside. Duck Island, a sanctuary within the park, attracts birdwatchers with its waterfowl and other wildlife.
+Furthermore, there is [St. James's Park](https://www.royalparks.org.uk/visit/parks/st-jamess-park) right next to Hyde Park. Its centerpiece is a tranquil lake where swans, geese, and an iconic colony of pelicans reside. Duck Island, a sanctuary within the park, attracts birdwatchers with its waterfowl and other wildlife.
 
 ![can you spot the squirrel?](/images/journal/oxford-street-london/IMG_2169.jpg)
 *Can you spot the squirrel?*
@@ -187,7 +191,7 @@ For the south of London, we unfortunately didn't have much time during our stay.
 ![inside nola coffee, peckham](/images/journal/oxford-street-london/IMG_2303.jpg#right)
 *Inside Nola Coffee, Peckham*
 
-Since the opening of this café, Frank has dreamed of one day sitting here, sipping coffee at his leisure. Nola was founded by the English band Oh Wonder, who have been among Frank's favorite musicians since his youth. So, why not stop by on his 28th birthday? In fact, Nola was the main reason we decided to travel to London. And the café, along with its surroundings, did not disappoint.
+Since the opening of this café, Frank has dreamed of one day sitting here, sipping coffee at his leisure. [Nola](https://www.nolacoffee.co.uk/) was founded by the English band [Oh Wonder](https://ohwondermusic.com/), who have been among Frank's favorite musicians since his youth. So, why not stop by on his 28th birthday? In fact, Nola was the main reason we decided to travel to London. And the café, along with its surroundings, did not disappoint.
 
 ![peckham rye station](/images/journal/oxford-street-london/IMG_2273.jpg#left)
 *Peckham Rye station*

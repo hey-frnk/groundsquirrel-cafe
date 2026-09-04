@@ -56,7 +56,7 @@ Before we left, we got a bag of fresh blackberries from the cute local farmers m
 
 This blog post is part of our one month USA West Coast road trip blog series. Feeling inspired? Here are some resources you might find useful if you would like to follow our footsteps:
 
-- Haystack Rock, the famous monolith rock for birdwatching
-- Tolovana Inn, the hotel we found for the night
-- RV Resort at Cannon Beach, the friendly campsite where we could stay
-- Cannon Beach Farmers' Market
+- [Haystack Rock](https://goo.gl/maps/or7TkD8mFcayJ9cc8), the famous monolith rock for birdwatching
+- [Tolovana Inn](https://goo.gl/maps/Z4Q1z9Q1kf4MMTh5A), the hotel we found for the night
+- [RV Resort at Cannon Beach](https://goo.gl/maps/jB4auUKhouC9LMtG9), the friendly campsite where we could stay
+- [Cannon Beach Farmers' Market](https://goo.gl/maps/U8XuSghbja4XyrpL7)

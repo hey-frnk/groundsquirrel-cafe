@@ -64,7 +64,7 @@ Gas prices are expensive for South Africa. Be prepared that while pumping gas, y
 
 **How is the weather?** We visited South Africa in February, which is summer. In the bush, summer is rainy - in the Western Cape it is dry. In winter, it is the other way around. Although rainy, the temperatures were always comfortable in the 20s centigrade during our travels.
 
-While most places accept credit cards, have cash with you for highway toll stations, smaller payments and tipping. Accommodation, restaurants and groceries are affordable if you are accustomed to prices in Switzerland - expect to pay around half to an eighth of what you'd shell out back home. National parks and scenic attractions typically require a conservation or entrance fee. We purchased a Wild Card, which paid off on our Kruger National Park camping trip.
+While most places accept credit cards, have cash with you for highway toll stations, smaller payments and tipping. Accommodation, restaurants and groceries are affordable if you are accustomed to prices in Switzerland - expect to pay around half to an eighth of what you'd shell out back home. National parks and scenic attractions typically require a conservation or entrance fee. We purchased a [Wild Card](https://www.sanparks.org/wild-card/overview), which paid off on our [Kruger National Park camping trip](/journal/kruger-national-park-camping-road-trip/).
 
 We got an MTN SIM card at Johannesburg airport right when we got off the airplane. Honestly, we're pretty phone addicted - but at the end, we didn't even come close to the 50 GB prepaid data we've purchased.
 
@@ -147,7 +147,7 @@ Nevertheless, in the few hours we were incredibly lucky to witness a pride of li
 ![flooded crocodile river - kruger national park is on the other side](/images/journal/south-africa-road-trip/IMG_7760.webp#right)
 *Flooded Crocodile River - Kruger National Park is on the other side*
 
-> 📖 Read more: [Kruger National Park Camping Road Trip – The Ultimate Self-Drive Safari Experience](/journal/kruger-national-park-camping-road-trip) - dreaming of falling asleep to the sounds of howling hyena and truly living under the stars with the elephants? That post tells you all about camping and self-traveling inside Africa's largest national park.
+> 📖 Read more: [Kruger National Park Camping Road Trip – The Ultimate Self-Drive Safari Experience](/journal/kruger-national-park-camping-road-trip/) - dreaming of falling asleep to the sounds of howling hyena and truly living under the stars with the elephants? That post tells you all about camping and self-traveling inside Africa's largest national park.
 
 We had much more luck in our camping road trip through Kruger National Park. There we went from Malelane Gate all the way to Punda Maria Rest Camp in Makuleke: through a little detour we made it to the other side of Crocodile Bridge, where we could sleep next to hippos and hear hyenas howling at night.
 
