@@ -132,6 +132,19 @@ export function JournalFallback({ posts }: { posts: JournalPost[] }) {
   );
 }
 
+/**
+ * Travel is by far the biggest category, so it gets a second row: the corners
+ * of the world we have written from. They are ordinary tag filters — the same
+ * ones the tag list at the foot of the page offers — just lifted to the top
+ * where they are worth having.
+ */
+const LOCATIONS = [
+  { label: "Switzerland", tag: "switzerland" },
+  { label: "Europe", tag: "europe" },
+  { label: "Asia", tag: "asia" },
+  { label: "North America", tag: "north america" },
+];
+
 /** `/journal/?category=travel&tag=hiking`, with empty values left out. */
 function journalHref(next: { category?: string | null; tag?: string | null }) {
   const params = new URLSearchParams();
@@ -139,6 +152,16 @@ function journalHref(next: { category?: string | null; tag?: string | null }) {
   if (next.tag) params.set("tag", next.tag);
   const query = params.toString();
   return query ? `/journal/?${query}` : "/journal/";
+}
+
+/** The location row sits below the categories, and reads as the quieter one. */
+function smallPill(active: boolean) {
+  return [
+    "rounded-full border px-3.5 py-1 text-[0.65rem] uppercase tracking-[0.16em] transition-colors duration-200",
+    active
+      ? "border-rose/50 bg-rose/10 text-ink"
+      : "border-ink/12 bg-ivory/25 text-graphite/70 hover:border-ink/25 hover:text-ink",
+  ].join(" ");
 }
 
 function pill(active: boolean) {
@@ -176,9 +199,9 @@ export default function JournalBrowser({
       posts.filter(
         (post) =>
           (!category || post.categories.includes(category)) &&
-          (!tag || post.tags.includes(tag))
+          (!tag || post.tags.includes(tag)),
       ),
-    [posts, category, tag]
+    [posts, category, tag],
   );
 
   // Only tags that still lead somewhere within the chosen category, so the list
@@ -190,7 +213,7 @@ export default function JournalBrowser({
       for (const t of post.tags) counts.set(t, (counts.get(t) ?? 0) + 1);
     }
     return [...counts.entries()].sort(
-      (a, b) => b[1] - a[1] || a[0].localeCompare(b[0])
+      (a, b) => b[1] - a[1] || a[0].localeCompare(b[0]),
     );
   }, [posts, category]);
 
@@ -198,23 +221,45 @@ export default function JournalBrowser({
     <>
       <JournalHeader
         filters={
-          <nav
-            aria-label="Filter by category"
-            className="flex flex-wrap gap-2.5 sm:justify-end"
-          >
-            <Link href={journalHref({ tag })} className={pill(!category)}>
-              Everything
-            </Link>
-            {categories.map((c) => (
-              <Link
-                key={c}
-                href={journalHref({ category: c, tag })}
-                className={pill(category === c)}
-              >
-                {c}
+          <div className="flex flex-col gap-3 sm:items-end">
+            <nav
+              aria-label="Filter by category"
+              className="flex flex-wrap gap-2.5 sm:justify-end"
+            >
+              <Link href={journalHref({ tag })} className={pill(!category)}>
+                Everything
               </Link>
-            ))}
-          </nav>
+              {categories.map((c) => (
+                <Link
+                  key={c}
+                  href={journalHref({ category: c, tag })}
+                  className={pill(category === c)}
+                >
+                  {c}
+                </Link>
+              ))}
+            </nav>
+
+            {category === "travel" && (
+              <nav
+                aria-label="Filter by location"
+                className="flex flex-wrap gap-2.5 sm:justify-end"
+              >
+                {LOCATIONS.map((location) => (
+                  <Link
+                    key={location.tag}
+                    href={journalHref({
+                      category,
+                      tag: location.tag === tag ? null : location.tag,
+                    })}
+                    className={smallPill(location.tag === tag)}
+                  >
+                    {location.label}
+                  </Link>
+                ))}
+              </nav>
+            )}
+          </div>
         }
       />
 

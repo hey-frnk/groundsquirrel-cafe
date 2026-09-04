@@ -5,7 +5,7 @@ author: "Frank"
 excerpt: "Flying our drone over the Natural Bridge on the Samuel H. Boardman State Scenic Corridor, then heading south into California's ancient redwood groves."
 cover: "/images/journal/natural-bridge-redwoods/vlcsnap-2022-12-22-18h08m38s871.jpg"
 categories: ["travel", "thoughts"]
-tags: ["westcoast-roadtrip", "oregon", "california", "coast", "road trip", "samuel h boardman state scenic corridor", "redwoods", "sequoia", "forest", "pacific northwest", "main character", "indie", "granola", "vsco", "hiking", "nature"]
+tags: ["westcoast-roadtrip", "oregon", "california", "coast", "road trip", "samuel h boardman state scenic corridor", "redwoods", "sequoia", "forest", "pacific northwest", "main character", "indie", "granola", "vsco", "hiking", "nature", "north america", "usa"]
 ---
 
 "If you were a tree, what tree would you be? Big tree!" These were the words in "I Went on a Road Trip with a Stranger" by Aiden and Pip that stuck with me, just as much as Natalie Lynn's struggle to find the natural bridges on the Samuel H. Boardman State Scenic Corridor. Re-living the adventures of my biggest inspiration and finally flying over the bridge holding Evelyne's hand felt like living our own coming-of-age indie movie.

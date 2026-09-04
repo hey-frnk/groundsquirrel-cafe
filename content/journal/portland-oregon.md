@@ -5,7 +5,7 @@ author: "Frank"
 excerpt: "Portland, Oregon - the city of roses and good coffee. A place I have dreamt about visiting for a long time. Here's how we made the most of a day in town."
 cover: "/images/journal/portland-oregon/DSC_0673.jpg"
 categories: ["travel"]
-tags: ["westcoast-roadtrip", "portland", "pacific northwest", "oregon", "city trip", "sightseeing", "hipster", "coffee", "stumptown", "vsco", "granola", "road trip", "bookshop", "inspiration"]
+tags: ["westcoast-roadtrip", "portland", "pacific northwest", "oregon", "city trip", "sightseeing", "hipster", "coffee", "stumptown", "vsco", "granola", "road trip", "bookshop", "inspiration", "north america", "usa"]
 ---
 
 I can't believe three years ago I sat inside the floor-to-ceiling windows of Stumptown Coffee, looking up to the Empire State Building peaking through ironcast buildings of Manhattan and catching my mind slowly drift away to a place. A place, an artist hub colorful as Berlin, with the great outdoors of the mystic and wild Pacific Northwest. Portland, Oregon, the city of roses and good coffee. A place I have dreamt about visiting for a long time.

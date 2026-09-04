@@ -5,7 +5,7 @@ author: "Frank"
 excerpt: "Our first outdoor adventure takes us up north of Seattle into the North Cascades - a mountainous hiking paradise with over 300 glaciers and nothing but wilderness and the magical vibes of the Pacific Northwest."
 cover: "/images/journal/north-cascades/DSC_0600.jpg"
 categories: ["travel"]
-tags: ["westcoast-roadtrip", "mountains", "washington", "pacific northwest", "hiking", "wanderlust", "travel", "inspiration", "nature", "forests", "wilderness", "glacier lakes", "west coast", "camping", "road trip", "campground", "national park", "granola"]
+tags: ["westcoast-roadtrip", "mountains", "washington", "pacific northwest", "hiking", "wanderlust", "travel", "inspiration", "nature", "forests", "wilderness", "glacier lakes", "west coast", "camping", "road trip", "campground", "national park", "granola", "north america", "usa"]
 ---
 
 Our first outdoor adventure takes us up north of Seattle into the North Cascades. A mountainous hiking paradise with over 300 glaciers and nothing but wilderness and the magical vibes of the Pacific Northwest.

@@ -5,7 +5,7 @@ author: "Frank"
 excerpt: "From Monte San Salvatore overlooking Lugano through a panoramic trail to the picturesque village of Morcote - our favorite day hike in Ticino, and why it should be on every bucket list."
 cover: "/images/journal/san-salvatore-morcote/IMG_9520.webp"
 categories: ["travel"]
-tags: ["day trip", "day hike", "lugano", "ticino", "morcote", "san salvatore", "botanical garden", "swim", "ferry", "lakes", "switzerland", "hiking", "scenic", "tessin", "parco scherrer", "parco san grato", "carona", "swing the world", "wanderlust", "travel", "inspiration", "restaurant", "food", "sightseeing"]
+tags: ["day trip", "day hike", "lugano", "ticino", "morcote", "san salvatore", "botanical garden", "swim", "ferry", "lakes", "switzerland", "hiking", "scenic", "tessin", "parco scherrer", "parco san grato", "carona", "swing the world", "wanderlust", "travel", "inspiration", "restaurant", "food", "sightseeing", "europe"]
 ---
 
 From Monte San Salvatore overlooking Lugano through the panoramic trail to the picturesque village of Morcote, where you'll find the most beautifully curated botanical garden and where you can head for a swim in the lake, and later take the boat back - I'm so excited to tell you all about our favorite day hike in Ticino, the Italian-speaking part of Switzerland - and why it better be mandatory on every bucket list!

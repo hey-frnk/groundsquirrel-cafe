@@ -5,7 +5,7 @@ author: "Evelyne"
 excerpt: "\"If you could pack up your things right now and go, where would you go?\" Those were the very first words I asked Frank when we met. His answer became a three-month dream, and then a plane ticket to Seattle."
 cover: "/images/journal/seattle-adventure-begins/IMG_3243.jpg"
 categories: ["travel", "thoughts"]
-tags: ["westcoast-roadtrip", "seattle", "usa", "west coast", "pacific northwest", "vegan", "travel", "city trip", "america", "road trip"]
+tags: ["westcoast-roadtrip", "seattle", "usa", "west coast", "pacific northwest", "vegan", "travel", "city trip", "america", "road trip", "north america"]
 ---
 
 "If you could pack up your things right now and go, where would you go?"
