@@ -47,7 +47,7 @@ Getting to Baker Lake felt like the old days where phone service got lost miles 
 
 ![mmmmh, our breakfast the next morning, ready to start a day full of adventures!](/images/journal/north-cascades/DSC_0153.jpg)
 *Mmmmh, our breakfast the next morning, ready to start a day full of adventures!*
-![raw moments from the campground](/images/journal/north-cascades/IMG_1165.jpg)
+![raw moments from the campground](/images/journal/north-cascades/IMG_1165.jpg#right)
 *Raw moments from the campground*
 
 Our camping space offered a fireplace, a parking spot, a tent spot and some trees perfect for a hammock. So Evelyne built one and started playing ukulele. Busy me, being more of the organizer, unpacked all our luggage and set up our cozy beds with fairy lights for the next month in the back of our Toyota 4Runner.
@@ -91,7 +91,7 @@ While the evening was still young, we drove past the most impressive bend of Was
 
 We love to start a hike early in the morning. The trails are less crowded, the light is more magical, and the air fresh. We headed to an absolute natural wonder, Blue Lake, through the calming scent of a dry and tall fir forest. When we heard the sound of a creek we knew we were close to the lake. Right on the transition from larch trees that will turn yellow in fall into alpine meadows lies the calm glacier lake.
 
-![](/images/journal/north-cascades/DSC_0395.jpg)
+![](/images/journal/north-cascades/DSC_0395.jpg#left)
 
 > ℹ Blue Lake - Distance: 4.4 mi (7.1 km) · Elevation gain: 1050 ft (320 m) · Highest point: 6254 ft (1906 m)
 

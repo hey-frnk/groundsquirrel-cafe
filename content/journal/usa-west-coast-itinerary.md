@@ -137,7 +137,7 @@ Towards the end of the day we decided we'd still go up to the Redwoods National 
 
 The next morning, I woke up very early to beat the morning traffic on our way to San Francisco. We found a safe spot to drop off our car in suburban Tiburon, and traveled to the busy city by ferry.
 
-![](/images/journal/usa-west-coast-itinerary/33-San-Francisco-Downtown-California.jpg)
+![](/images/journal/usa-west-coast-itinerary/33-San-Francisco-Downtown-California.jpg#right)
 
 In the city, we explored Chinatown, watched sea lions on Pier 39 before we took the ferry back, crossed the Golden Gate Bridge and checked into our hotel near the Apple HQ in Cupertino.
 
@@ -242,7 +242,7 @@ We hiked up the four-mile trail and said hi to all hikers that were just as lege
 
 After camping in Yosemite, we had a swimming day, where we first started swimming in the river of Yosemite Valley, Merced River, and then traveled through Tioga Pass over the Mammoth Lakes all the way to a campsite near Lake Tahoe. Inside Emerald Bay State Park, we found a secluded, hidden cove with a sandy beach where we stayed there all day.
 
-![emerald bay state park at lake tahoe](/images/journal/usa-west-coast-itinerary/64-Lake-Tahoe-Emerald-Bay-State-Park-View-Point-Nevada-California-West-Coast-Road-Trip.jpg)
+![emerald bay state park at lake tahoe](/images/journal/usa-west-coast-itinerary/64-Lake-Tahoe-Emerald-Bay-State-Park-View-Point-Nevada-California-West-Coast-Road-Trip.jpg#right)
 *Emerald Bay State Park at Lake Tahoe*
 
 ### The Pacific Northwest, Part 2
@@ -290,5 +290,5 @@ We've deep cleaned our 4Runner and went to Café Flora in Seattle for some vegan
 
 *With 🐝 by Frank.*
 
-![a digital postcard showing the squirrels of the world](/images/journal/usa-west-coast-itinerary/79-painting-process.jpg)
+![a digital postcard showing the squirrels of the world](/images/journal/usa-west-coast-itinerary/79-painting-process.jpg#right)
 *A digital postcard showing the squirrels of the world*

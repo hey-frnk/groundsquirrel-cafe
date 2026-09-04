@@ -42,7 +42,7 @@ The larger camps offer a gas station, so don't worry, you don't have to leave th
 
 Activities can be booked at the rest camp, such as guided walking safaris and guided game drives.
 
-![](/images/journal/kruger-national-park-camping-road-trip/IMG_6509.webp)
+![](/images/journal/kruger-national-park-camping-road-trip/IMG_6509.webp#left)
 
 We highly recommend the walking safari. It's not about experiencing animals up close but getting to know nature precisely. You wake up very early with the tour group and learn interactively about what the animals eat in the bush, how to tell the droppings, and what tracks can be read from the ground.
 
@@ -50,7 +50,7 @@ We also did a guided game drive. Unfortunately, we'd much rather recommend doing
 
 ### Etiquette and Survival Tips by Evelyne
 
-![observing an elephant in the dust from a safe distance](/images/journal/kruger-national-park-camping-road-trip/IMG_8998.webp)
+![observing an elephant in the dust from a safe distance](/images/journal/kruger-national-park-camping-road-trip/IMG_8998.webp#right)
 *Observing an elephant in the dust from a safe distance*
 
 - Always **give animals enough space**. If you see a group of zebras wanting to cross the road (zebra crossing) - or any other animal, don't get too close and let them cross the road safely.
@@ -61,7 +61,7 @@ We also did a guided game drive. Unfortunately, we'd much rather recommend doing
 - **Leave no trace.** Don't leave any traces and take nothing but moments and memories with you. Also, stay on marked paths with your car and don't off-road.
 - Plan your toilet break well and **only leave the car at marked places**. Observe and listen to your surroundings carefully before getting out.
 
-![only leave the car at marked places, such as this view point](/images/journal/kruger-national-park-camping-road-trip/IMG_6188.webp)
+![only leave the car at marked places, such as this view point](/images/journal/kruger-national-park-camping-road-trip/IMG_6188.webp#left)
 *Only leave the car at marked places, such as this view point*
 
 ### A Wild Highlight
@@ -136,7 +136,7 @@ The rest camps in Kruger National Park couldn't be more diverse. Depending on th
 *Campsite romance: a granola bowl with fresh berries and a stroopwafel*
 ![a typical rest camp in kruger national park](/images/journal/kruger-national-park-camping-road-trip/IMG_6711.webp)
 *A typical rest camp in Kruger National Park. The communal kitchen can be seen on the right*
-![yes, this train is actually a restaurant!](/images/journal/kruger-national-park-camping-road-trip/IMG_8551.webp)
+![yes, this train is actually a restaurant!](/images/journal/kruger-national-park-camping-road-trip/IMG_8551.webp#right)
 *Yes, this train is actually a restaurant! It's located inside Skukuza Rest Camp*
 
 - **The camp.** A perfect place to sleep under the starry sky and hear the animals at night. Motorhome, tent, bush lapa, everything can fit in here.
@@ -145,7 +145,7 @@ The rest camps in Kruger National Park couldn't be more diverse. Depending on th
 
 A few private lodges offer their luxurious accommodations inside the park, including game drives with a private guide. The prices for these have no limits.
 
-![](/images/journal/kruger-national-park-camping-road-trip/IMG_8793.webp)
+![](/images/journal/kruger-national-park-camping-road-trip/IMG_8793.webp#right)
 
 ### The Camp
 
@@ -175,7 +175,7 @@ Our safari camp at Tamboti had a terrace and a view of the dry river in the dry 
 
 ### The Bungalow
 
-![a bungalow, olifants rest camp](/images/journal/kruger-national-park-camping-road-trip/IMG_6245.webp)
+![a bungalow, olifants rest camp](/images/journal/kruger-national-park-camping-road-trip/IMG_6245.webp#right)
 *A bungalow, Olifants Rest Camp*
 
 The most comfortable option with the most luxury. We wanted to experience nature as closely as possible - hear everything. Honestly, this was our least favorite option.
@@ -184,7 +184,7 @@ The most comfortable option with the most luxury. We wanted to experience nature
 
 The costs in the national park can be divided into the following categories: the conservation fee, accommodation costs, transportation costs and meals.
 
-![](/images/journal/kruger-national-park-camping-road-trip/DSC_0908.webp)
+![](/images/journal/kruger-national-park-camping-road-trip/DSC_0908.webp#left)
 
 ### Wild Card and Entrance
 
@@ -194,8 +194,8 @@ As of now, the park entrance fee is ZAR 460 per day for international guests. Th
 
 Accommodations in the national park are not expensive, especially when staying in a camp.
 
-![](/images/journal/kruger-national-park-camping-road-trip/IMG_6254.webp)
-![](/images/journal/kruger-national-park-camping-road-trip/IMG_8508.webp)
+![](/images/journal/kruger-national-park-camping-road-trip/IMG_6254.webp#right)
+![](/images/journal/kruger-national-park-camping-road-trip/IMG_8508.webp#right)
 
 - For **the camp**, we paid about ZAR 400. There's a variable surcharge per person.
 - The **safari camp** costs about ZAR 1000. Ours theoretically had 4 spots.

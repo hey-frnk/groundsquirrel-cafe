@@ -738,3 +738,53 @@ html {
   outline: 2px solid color-mix(in srgb, var(--color-ink) 55%, transparent);
   outline-offset: 3px;
 }
+
+/* ---------------------------------------------------------------------------
+   Photos set into the text — `![alt](/photo.webp#left)`
+   --------------------------------------------------------------------------- */
+
+/* A tall photo at full width fills the screen and stops the reading; at roughly
+   half the column, with the words running beside it, the story keeps going.
+   The text wraps back to the full measure as soon as the photo ends. */
+.prose .img-float {
+  width: min(46%, 22rem);
+  margin: 0.4em 0 1.4em;
+  clear: both;
+}
+
+.prose .img-float.is-left {
+  float: left;
+  margin-right: 2rem;
+}
+
+.prose .img-float.is-right {
+  float: right;
+  margin-left: 2rem;
+}
+
+.prose .img-float img {
+  margin: 0;
+  width: 100%;
+}
+
+/* Whatever comes next starts on a clean line rather than in the gap beside a
+   photo that has almost run out. */
+.prose h2,
+.prose h3,
+.prose blockquote,
+.prose .img-gallery,
+.prose .img-single,
+.prose .map-embed {
+  clear: both;
+}
+
+/* On a phone there is no room for text beside a photo — it goes back to being
+   a photo with the story above and below it. */
+@media (max-width: 640px) {
+  .prose .img-float {
+    float: none;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

@@ -25,7 +25,7 @@ It wasn't long, until the sky gradually faded into a sleepy morning blue and the
 
 From Portland we've learned to visit downtown not in the early morning, but when it is already filled with tourists and locals. This time, we have safely parked our car in Tiburon, north of San Francisco, with only a ferry ride on a beautiful stretch of water separating us from the city. Taking advantage of this, we boarded the ferry that would welcome us to the golden city.
 
-![hipster coffee from philz, red lanterns from san francisco chinatown](/images/journal/san-francisco/IMG_0873.jpg)
+![hipster coffee from philz, red lanterns from san francisco chinatown](/images/journal/san-francisco/IMG_0873.jpg#right)
 *Hipster coffee from Philz, red lanterns from San Francisco Chinatown*
 
 First stop? Philz Coffee - Emma Chamberlain knows her coffee, right? When Frank finally figured out how ordering a coffee works, we headed uphill to Chinatown by foot. The red dragons at the gate welcomed us into the bustling streets of Chinatown with delicate lanterns, Chinese characters, typical tourist souvenirs and occasional glimpses of the Californian houses all the way down to the city's coastline. We shared Chinese food together for the first time until we headed down North Beach (Little Italy) all the way until Pier 39.
@@ -36,7 +36,7 @@ No visit to San Francisco is complete without exploring Fisherman's Wharf and th
 
 ![sea lions call pier 39 their home](/images/journal/san-francisco/IMG_0963.jpg)
 *Sea lions call Pier 39 their home. Put some hot summer day jazz and horns and you'll find the sea lions groove exactly to the rhythm!*
-![the newest addition to our family, das puutz from pier 39!](/images/journal/san-francisco/IMG_0986.jpg)
+![the newest addition to our family, das puutz from pier 39!](/images/journal/san-francisco/IMG_0986.jpg#left)
 *The newest addition to our family, das Puutz from Pier 39!*
 
 Evelyne already got her share of souvenirs in the shape of a beautifully designed San Francisco hoodie, so it was Frank's turn when all of a sudden a smile spread across Frank's face as he gently picked up a buzzing plush bee inside a honey store, squeezing it tight while imagining the whimsical adventures it could embark on with us. Introducing das Puutz! Our new baby, the cutest fluffy plush bee Frank could not leave the store without. With our new family member, we joyfully strolled through the waterfront until we reached the pier, while trying to find a new name for it. Beenoccio? Beekatchu? Turtle! Frank has found the cutest arm bracelet with a ceramic turtle for Evelyne on the street side while we were discussing baby names!
@@ -58,7 +58,7 @@ While the bridge was hidden in a mystic fog during the day, it cleared just for 
 Wrapped in the coziness of our hotel we slept through breakfast and had a late start into a morning, which 2016-hipster-Frank would enjoy: Apple Campus in Cupertino. Don't miss out on the Apple latte art if you order a coffee at the Apple Store bar!
 
 ![](/images/journal/san-francisco/DSC_0278.jpg)
-![](/images/journal/san-francisco/DSC_0338.jpg)
+![](/images/journal/san-francisco/DSC_0338.jpg#right)
 
 ## Moraga Steps
 

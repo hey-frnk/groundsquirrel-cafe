@@ -29,7 +29,7 @@ Exhausted, we fell onto the benches left and right of a picnic table on the ferr
 
 Right before our ferry, we booked our little lakeside cottage in Sweden. We started out in a small fishing village called Smögen, where Frank almost bought a wooden mallard and drove all the way up to Sweden's lake province, Dalsland, where our little cottage waited for us.
 
-![](/images/journal/dream-of-sweden/IMG_0846.jpg)
+![](/images/journal/dream-of-sweden/IMG_0846.jpg#right)
 ![plenty of wildflowers by the lakeside sauna](/images/journal/dream-of-sweden/IMG_1037.jpg)
 ![have you ever had green tomatoes? they are so yummy!](/images/journal/dream-of-sweden/IMG_0994.jpg)
 ![this is the place to take a shower! view from our wooden patio](/images/journal/dream-of-sweden/IMG_1012.jpg)
@@ -52,7 +52,7 @@ From the first minute, it took us far away from the busy, from the stress of eve
 
 May we interrupt you for a sec with our heartfelt playlist we have carefully curated? It peacefully and profoundly resembles our feeling of the perfect Swedish summer and has some of Kristoffer's tunes from the stack of records. Dive right in!
 
-![](/images/journal/dream-of-sweden/IMG_0990.jpg)
+![](/images/journal/dream-of-sweden/IMG_0990.jpg#right)
 *Granola for the granola couple to get the next day started: Oatly, fresh strawberries, a cup of coffee, sparkling apple, cantuccini and cookies!*
 
 ## Day 2: A Perfect Day
@@ -62,7 +62,7 @@ May we interrupt you for a sec with our heartfelt playlist we have carefully cur
 
 The next morning, I was awakened by the tickling sunrays that peeked through our window. Frank was already preparing a delicious breakfast, and me, I just felt happier than I have ever been. On my way to our composting toilet across the garden, I watched as Kristoffer played his banjo by the shore. Spontaneously, we sat down next to him with our guitar and ukulele, and the three of us played together. Kristoffer taught us the song "Jamboree," and we learned one of his self-written songs about Asheville, the happiest and most wholesome song ever! Frank and I shared our favorite granola tunes by Caamp with him.
 
-![](/images/journal/dream-of-sweden/IMG_1099.jpg)
+![](/images/journal/dream-of-sweden/IMG_1099.jpg#right)
 *Happy us after the little music session*
 
 We laughed, talked, played and sang. And life seemed to stand still. I was exactly where I wanted to be, I wouldn't mind if the moment could have lasted forever.
@@ -115,12 +115,12 @@ Back on the shore, we ran into our cottage, snuggled under the warm blanket, and
 
 The next morning, we decided to extend our stay for one more night, both dreaming in our innermost thoughts of easily adding indefinite nights. But for now, that had to remain a dream.
 
-![the tracks of a big big animal](/images/journal/dream-of-sweden/IMG_1434.jpg)
+![the tracks of a big big animal](/images/journal/dream-of-sweden/IMG_1434.jpg#left)
 *The tracks of a big, big animal*
 
 Kristoffer and Johanna were away for the weekend, which meant that today we had the entire property to ourselves. We danced and ran around, slipping all naked into the ice-cold lake water, played music on our favorite hammock right by the lake access, and made time stand still.
 
-![frank, singing to the animals](/images/journal/dream-of-sweden/IMG_1439.jpg)
+![frank, singing to the animals](/images/journal/dream-of-sweden/IMG_1439.jpg#right)
 *Frank, singing to the animals*
 
 Together, we explored the surrounding forests and for the first time since I returned to Europe, I realized how much knowledge I could just use here, whether it was animal tracks, food remnants or clues. As we crossed paths with a fox, two deer and finally, just when we were almost giving up hope of encountering Sweden's national animal, I spotted a rhinoceros in the distance! Habits can really trick your mind! It took me a few seconds to realize that what stood before us was indeed what we both dreamed of since our arrival: a female moose, beautifully and healthily grown.
@@ -150,9 +150,9 @@ The next morning, we didn't want to think of what was ahead of us. We turned up 
 
 ![whenever each one of us would leave for the restroom, the other would wait with open arms and we would hug intensely](/images/journal/dream-of-sweden/IMG_1655.jpg)
 *Whenever each one of us would leave for the restroom, the other would wait with open arms and we would hug intensely*
-![porridge bowl and a swedish delight](/images/journal/dream-of-sweden/IMG_1616.jpg)
+![porridge bowl and a swedish delight](/images/journal/dream-of-sweden/IMG_1616.jpg#right)
 *Porridge bowl and a Swedish delight*
-![the path to our little lake access](/images/journal/dream-of-sweden/IMG_1651.jpg)
+![the path to our little lake access](/images/journal/dream-of-sweden/IMG_1651.jpg#right)
 *The path to our little lake access*
 
 We sang and laughed, and as we enjoyed our breakfast outside, I felt that late spring sensation once again, the one I always experienced as a child. The sun warmed my skin like a gentle silk blanket, new light green buds sprouted from the firs around me, blackbirds, chickadees and finches serenaded each other with tender melodies above our heads, and the scent carried the freshness of leaves and lush grass. With shining eyes, I embraced Frank and told him that after all this time, I had finally rediscovered my childhood spring. He kissed my cheek softly; he was the reason why.

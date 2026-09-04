@@ -112,7 +112,7 @@ A four-hour drive from Chengdu past Qingxi, a small Tibetan town, took us deep i
 ![](/images/journal/sichuan-road-trip/DSC_4915.jpg)
 ![](/images/journal/sichuan-road-trip/DSC_5141.jpg)
 
-![what wild animal could evelyne be looking at?](/images/journal/sichuan-road-trip/IMG_6114.jpg)
+![what wild animal could evelyne be looking at?](/images/journal/sichuan-road-trip/IMG_6114.jpg#right)
 *What wild animal could Evelyne be looking at?*
 
 Driving through the reserve unfortunately felt like a stripped-down version of an African safari as the safari shuttle is poorly organized. While wild pandas are nearly impossible to spot, the Chinese redbud flowers blooming along the valley still made the journey worthwhile. Pro tip: one day here is enough unless you're a hardcore wildlife enthusiast.
@@ -139,7 +139,7 @@ It's home to five pandas and a tranquil lake nestled at the end of the scenic hi
 ![](/images/journal/sichuan-road-trip/IMG_6326.jpg)
 ![](/images/journal/sichuan-road-trip/IMG_6333.jpg)
 
-![native tibetan accents in jiuzhaigou](/images/journal/sichuan-road-trip/IMG_1246.jpg)
+![native tibetan accents in jiuzhaigou](/images/journal/sichuan-road-trip/IMG_1246.jpg#right)
 *Native Tibetan accents in Jiuzhaigou*
 
 Jiuzhaigou is like stepping into a postcard. Think turquoise alpine lakes, towering snow-capped peaks with traditional Tibetan villages. While swimming and hiking off-path aren't allowed, the park's well-maintained trails make it easy to explore this natural wonder while accommodating a whopping number of 17,000 visitors with incredible shuttle-bus organization.

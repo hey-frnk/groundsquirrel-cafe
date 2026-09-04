@@ -16,7 +16,7 @@ Those were the very first words I asked Frank when we met. I didn't have to wait
 
 Three months have passed since and Frank's dream - we have made it possible over the past few months. With two plane tickets, a large enough car and two nights of pre-booked accommodation, we stood at the Zurich airport with two big suitcases and a lot of hand luggage. Our most important things in our luggage: our two sleeping bags, a three-person tent for two, waterproof hiking boots, my favorite hammock, Polaroid film, our two Fjällräven, camera and ukulele. Our flight had a stopover in Reykjavik and then took us to Seattle with a total flight time of 12.5h, where we started our road trip along the West Coast.
 
-![welcome to chinatown in seattle!](/images/journal/seattle-adventure-begins/IMG_0615.jpg)
+![welcome to chinatown in seattle!](/images/journal/seattle-adventure-begins/IMG_0615.jpg#left)
 *Welcome to Chinatown in Seattle!*
 
 Seattle was a little overwhelming to the two of us going there for the first time, knowing nobody and nothing about it. Our hostel for the first night was located downtown near the subway line that connects the airport of Seattle with Downtown. As we checked in to what was midnight to us, we fell asleep immediately.

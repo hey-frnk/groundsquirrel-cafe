@@ -17,7 +17,7 @@ And for the first time, I glimpsed into the open of our wild spot we set up our 
 ![dispersed camping in the almost wild](/images/journal/french-riviera-part-1/IMG_6283.jpg)
 *Dispersed camping in the almost wild*
 
-![some snacks while exploring the old town of nice](/images/journal/french-riviera-part-1/IMG_6054.jpg)
+![some snacks while exploring the old town of nice](/images/journal/french-riviera-part-1/IMG_6054.jpg#right)
 *Some snacks while exploring the old town of Nice*
 
 Nice is well known for carjacking, so it's always best to keep the car parked inside a supervised lot. That is what we did. We shopped for a cozy picnic by the beach and strolled through the old town's pastel and orange. As if they had an unspoken rule to paint their cities the liveliest and dreamiest colors possible. We had countless rounds of ice cream and iced coffee, I lost my credit card before we arrived at a viewing platform and finally, there it was. The ocean.

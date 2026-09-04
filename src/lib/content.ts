@@ -30,6 +30,8 @@ function readEntry<T extends object>(
 interface Photo {
   img: string;
   caption?: string;
+  /** Set when the photo is meant to sit in the text, with words beside it. */
+  float?: "left" | "right";
 }
 
 /** A paragraph holding nothing but photos and their captions. */
@@ -37,8 +39,21 @@ const PHOTO_PARAGRAPH = /^(?:\s|<img[^>]*>|<em>[^<]*<\/em>|<br\s*\/?>)+$/;
 
 /** A photo is portrait when it is clearly taller than it is wide. */
 function isPortrait(img: string): boolean {
-  const size = measureImage(/src="([^"]*)"/.exec(img)?.[1]);
+  const size = measureImage(/src="([^"]*)"/.exec(img)?.[1]?.split("#")[0]);
   return !!size && size.height > size.width * 1.05;
+}
+
+/**
+ * `![alt](/photo.webp#left)` asks for the photo to be set into the text with the
+ * words running beside it, the way the Squarespace posts did with a half-width
+ * image block. The marker rides along in the `src` because that survives both
+ * the CMS and any markdown editor; browsers ignore the fragment on an image.
+ */
+function floatOf(img: string): Photo["float"] {
+  const src = /src="([^"]*)"/.exec(img)?.[1] ?? "";
+  if (src.endsWith("#left")) return "left";
+  if (src.endsWith("#right")) return "right";
+  return undefined;
 }
 
 /**
@@ -50,7 +65,7 @@ function isPortrait(img: string): boolean {
 function appendPhotos(inner: string, photos: Photo[]): void {
   for (const m of inner.matchAll(/<img[^>]*>|<em>([^<]*)<\/em>/g)) {
     const last = photos[photos.length - 1];
-    if (m[0].startsWith("<img")) photos.push({ img: m[0] });
+    if (m[0].startsWith("<img")) photos.push({ img: m[0], float: floatOf(m[0]) });
     else if (last && last.caption === undefined) last.caption = m[1];
   }
 }
@@ -74,14 +89,26 @@ function isLooseCaption(inner: string, photos: Photo[]): boolean {
 function layOutPhotos(photos: Photo[]): string {
   const grid = (cells: string[], cols: number, extra = "") =>
     `<div class="img-gallery${extra}" style="--gallery-cols:${cols}">${cells.join("")}</div>`;
-  const figure = (p: Photo) =>
-    `<figure>${p.img}${p.caption ? `<figcaption>${p.caption}</figcaption>` : ""}</figure>`;
+  const figure = (p: Photo, className = "") =>
+    `<figure${className ? ` class="${className}"` : ""}>${p.img}` +
+    `${p.caption ? `<figcaption>${p.caption}</figcaption>` : ""}</figure>`;
 
   const parts: string[] = [];
   let i = 0;
   while (i < photos.length) {
+    // A photo set into the text belongs to the words that follow it, so it is
+    // never gathered into a grid or paired with its neighbour. It also needs
+    // text to wrap around: with another photo right behind it there is nothing
+    // to flow beside, and it goes back to being an ordinary photo.
+    if (photos[i].float && i === photos.length - 1) {
+      parts.push(figure(photos[i], `img-float is-${photos[i].float}`));
+      i++;
+      continue;
+    }
+
     let plain = i;
-    while (plain < photos.length && photos[plain].caption === undefined) plain++;
+    while (plain < photos.length && photos[plain].caption === undefined && !photos[plain].float)
+      plain++;
     if (plain - i >= 2) {
       const run = photos.slice(i, plain);
       parts.push(grid(run.map((p) => p.img), run.length >= 3 ? 3 : 2));
@@ -90,13 +117,13 @@ function layOutPhotos(photos: Photo[]): string {
     }
 
     const [first, second] = [photos[i], photos[i + 1]];
-    if (second && isPortrait(first.img) && isPortrait(second.img)) {
+    if (second && !second.float && isPortrait(first.img) && isPortrait(second.img)) {
       parts.push(grid([figure(first), figure(second)], 2, " is-pair"));
       i += 2;
       continue;
     }
 
-    parts.push(`<p>${first.img}</p>`);
+    parts.push(`<p class="img-single">${first.img}</p>`);
     if (first.caption) parts.push(`<p><em>${first.caption}</em></p>`);
     i++;
   }
@@ -305,6 +332,8 @@ export function getJournalCategories(): string[] {
 export interface JournalAuthor {
   /** The name as the posts spell it — "Frank", "Evelyne". */
   author: string;
+  /** Their entry on the crew page, for the link to the longer story. */
+  slug: string;
   name: string;
   role: string;
   photo: string;
@@ -320,11 +349,12 @@ export interface JournalAuthor {
 export function getJournalAuthor(author: string): JournalAuthor | undefined {
   const wanted = author.trim().toLowerCase();
   for (const filename of readDir("crew")) {
-    const { data, content } = readEntry<CrewMember>("crew", filename);
+    const { slug, data, content } = readEntry<CrewMember>("crew", filename);
     if (!data.name?.toLowerCase().startsWith(wanted)) continue;
     const [opening] = content.trim().split(/(?<=\.)\s/);
     return {
       author: author.trim(),
+      slug,
       name: data.name,
       role: data.role,
       photo: data.photo,

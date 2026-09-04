@@ -24,7 +24,7 @@ The Tugela waterfall hike crosses between KwaZulu-Natal and the Free State provi
 
 You can picture three sections for the hike. The first part is well-developed and makes for a leisurely walk. It starts from the Sentinel Peak car park and leads up to Sentinel Peak, offering breathtaking views into the Tugela Gorge of KwaZulu-Natal. From there, the path narrows and winds around the rocks with little elevation gain until you reach the chain-ladders.
 
-![the way leading to the fall in the golden glow of winter](/images/journal/tugela-falls/IMG_1898.webp)
+![the way leading to the fall in the golden glow of winter](/images/journal/tugela-falls/IMG_1898.webp#right)
 *The way leading to the fall in the golden glow of winter*
 
 The chain-ladders too remain hidden until the end, before you stand in front of them, while it takes your breath away. Above the ladders you walk on the plateau - incredibly close to Lesotho, about 1 kilometer as the crow flies - along a stream that plunges a staggering 948 meters into the valley below.
@@ -55,7 +55,7 @@ The Sentinel Peak car park - the car park to start the hike - is not accessible 
 
 ### Where to Stay?
 
-![early morning drive to the tugela falls trailhead](/images/journal/tugela-falls/IMG_8087.webp)
+![early morning drive to the tugela falls trailhead](/images/journal/tugela-falls/IMG_8087.webp#left)
 *Early morning drive to the Tugela Falls trailhead*
 
 ![](/images/journal/tugela-falls/IMG_5891.webp)
@@ -66,7 +66,7 @@ The only municipal lodge in this national park is the Witsieshoek Mountain Lodge
 
 ## All You Need to Know
 
-![above the clouds with an impressive view into the valley below](/images/journal/tugela-falls/IMG_5766.webp)
+![above the clouds with an impressive view into the valley below](/images/journal/tugela-falls/IMG_5766.webp#right)
 *Above the clouds with an impressive view into the valley below*
 
 ### Is the Hike Dangerous?
@@ -75,7 +75,7 @@ Up to the chain ladders, the hike is manageable with average fitness levels. It 
 
 Depending on the season, snowfields or wet conditions can make the hike dangerous, so it is crucial to check the weather before setting out.
 
-![](/images/journal/tugela-falls/IMG_5875.webp)
+![](/images/journal/tugela-falls/IMG_5875.webp#left)
 
 The notorious chain-ladders at the end of the hike require a head for heights, concentration and a lot of self-trust - but they are not impossible. However, they will be even more perilous when wet.
 
@@ -94,7 +94,7 @@ We completed the hike with standard hiking gear without any special equipment fo
 
 Lizard or crocodile? During our hike, we spotted lizards darting between the rocks. Up on the high plateau, we observed chacma baboons from a distance, casually going about their monkey business. If you're luckier than we are, you might also encounter elands, mountain reedbucks, and the ever-curious rock dassies basking in the sun.
 
-![majestic views into the horizon in the golden light](/images/journal/tugela-falls/IMG_5885.webp)
+![majestic views into the horizon in the golden light](/images/journal/tugela-falls/IMG_5885.webp#right)
 *Majestic views into the horizon in the golden light*
 
 ### I'm Scared of the Chain-Ladder. Is There an Alternative Way?
