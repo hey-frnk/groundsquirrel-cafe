@@ -711,3 +711,30 @@ html {
     aspect-ratio: 3 / 4;
   }
 }
+
+/* A pair of portrait photos set beside each other keeps its captions. */
+.prose .img-gallery.is-pair figure {
+  margin: 0;
+}
+
+.prose .img-gallery.is-pair img {
+  aspect-ratio: 3 / 4;
+}
+
+.prose .img-gallery figcaption {
+  margin-top: 0.6rem;
+  text-align: center;
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  color: color-mix(in srgb, var(--color-graphite) 72%, transparent);
+}
+
+/* Photos in a post open full size — see ImageZoom. */
+.prose img.is-zoomable {
+  cursor: zoom-in;
+}
+
+.prose img.is-zoomable:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--color-ink) 55%, transparent);
+  outline-offset: 3px;
+}

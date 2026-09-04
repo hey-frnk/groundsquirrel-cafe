@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import ImageZoom from "@/components/ImageZoom";
 import JsonLd from "@/components/JsonLd";
 import LanguageSwitch from "@/components/LanguageSwitch";
 import MapEmbeds from "@/components/MapEmbeds";
@@ -139,6 +140,8 @@ export default async function JournalPostPage({
       )}
       {/* Wires the click-to-load buttons of any [map:…] embeds in the post. */}
       <MapEmbeds />
+      {/* Makes every photo in the post open full size. */}
+      <ImageZoom />
 
       {post.tags?.length > 0 && (
         <div className="mt-14 flex flex-wrap justify-center gap-2 border-t border-ink/10 pt-8">
