@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import AuthorCard from "@/components/AuthorCard";
 import ImageZoom from "@/components/ImageZoom";
 import JsonLd from "@/components/JsonLd";
 import LanguageSwitch from "@/components/LanguageSwitch";
 import MapEmbeds from "@/components/MapEmbeds";
-import { getAllJournalPosts, getJournalPost } from "@/lib/content";
+import ShareRow from "@/components/ShareRow";
+import { getAllJournalPosts, getJournalAuthor, getJournalPost } from "@/lib/content";
 import { SITE_URL, organization } from "@/lib/seo";
 
 export function generateStaticParams() {
@@ -46,6 +48,7 @@ export default async function JournalPostPage({
   if (!posts.some((p) => p.slug === slug)) notFound();
 
   const post = await getJournalPost(slug);
+  const author = getJournalAuthor(post.author);
 
   return (
     <article className="mx-auto max-w-[52.5rem] px-6 pt-12 pb-20 sm:pt-16">
@@ -158,6 +161,15 @@ export default async function JournalPostPage({
           ))}
         </div>
       )}
+
+      {author && <AuthorCard author={author} />}
+
+      <ShareRow
+        slug={slug}
+        title={post.title}
+        excerpt={post.excerpt}
+        cover={post.cover}
+      />
 
       <div className="mt-14 text-center">
         <Link href="/journal" className="link-arrow is-back">

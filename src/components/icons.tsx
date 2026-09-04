@@ -68,3 +68,53 @@ export function ChFlag({ size = 18 }: { size?: number }) {
     </Flag>
   );
 }
+
+/* The places a story gets passed on to. Drawn in the same single-weight line as
+   the icons above, so a row of them reads as one set. */
+
+export function FacebookIcon({ size = 17 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+      <path d="M14.5 8.5V6.8c0-.7.4-1.1 1.2-1.1H17V3h-2c-2.2 0-3.4 1.3-3.4 3.5v2h-2V11h2v10h2.9V11h2.2l.4-2.5h-2.6Z" />
+    </svg>
+  );
+}
+
+export function XIcon({ size = 17 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+      <path d="M4 4l7.2 9.3L4.4 20" />
+      <path d="M20 20l-7.2-9.3L19.6 4" />
+    </svg>
+  );
+}
+
+export function PinterestIcon({ size = 17 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round">
+      <path d="M12 3a7 7 0 0 0-2.6 13.5" />
+      <path d="M12 3a7 7 0 0 1 .6 14" />
+      <path d="M12.6 17c-1 0-1.9-.5-2.3-1.3" />
+      <path d="M11.6 10.5 9.4 21" />
+      <path d="M11.4 12.3c.3.9 1.1 1.4 2 1.4 1.7 0 2.9-1.6 2.9-3.7 0-2-1.6-3.4-3.7-3.4-2.5 0-4.1 1.7-4.1 3.7 0 .9.3 1.7.9 2.2" />
+    </svg>
+  );
+}
+
+export function WhatsappIcon({ size = 17 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round">
+      <path d="M4 20l1.2-3.7A8 8 0 1 1 8.3 19L4 20Z" />
+      <path d="M9.2 9c.3 1.6 1.4 3.5 3.2 4.6.6.4 1.3.6 1.9.7l.8-1.2 1.6.8-.5 1.3c-1.6.5-3.7-.5-5.3-1.9-1.4-1.2-2.4-2.9-2.6-4.2l1.2-.7.8 1.6L9.2 9Z" />
+    </svg>
+  );
+}
+
+export function MailIcon({ size = 17 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round">
+      <rect x="3" y="5" width="18" height="14" rx="3" />
+      <path d="m4 7.5 7.1 5a1.5 1.5 0 0 0 1.8 0l7.1-5" />
+    </svg>
+  );
+}

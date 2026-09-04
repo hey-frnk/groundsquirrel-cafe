@@ -301,6 +301,39 @@ export function getJournalCategories(): string[] {
     .map(([category]) => category);
 }
 
+/** The person behind a post, as the crew page already describes them. */
+export interface JournalAuthor {
+  /** The name as the posts spell it — "Frank", "Evelyne". */
+  author: string;
+  name: string;
+  role: string;
+  photo: string;
+  /** The opening sentence of their crew entry, enough to say who they are. */
+  excerpt: string;
+}
+
+/**
+ * Pairs the author of a post with their crew entry. Posts carry a first name
+ * and the crew a full one, so the first name is what matches; an author with no
+ * crew entry simply has no card, and the post still reads fine without one.
+ */
+export function getJournalAuthor(author: string): JournalAuthor | undefined {
+  const wanted = author.trim().toLowerCase();
+  for (const filename of readDir("crew")) {
+    const { data, content } = readEntry<CrewMember>("crew", filename);
+    if (!data.name?.toLowerCase().startsWith(wanted)) continue;
+    const [opening] = content.trim().split(/(?<=\.)\s/);
+    return {
+      author: author.trim(),
+      name: data.name,
+      role: data.role,
+      photo: data.photo,
+      excerpt: opening,
+    };
+  }
+  return undefined;
+}
+
 export interface CrewMember {
   slug: string;
   name: string;
