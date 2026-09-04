@@ -20,7 +20,7 @@ Going on a three-day hike in Ticino? That's what Frank decided to spend our firs
 
 We woke up at quarter past five to catch the first train that would take us into a gorgeous valley called Verzasca. By the time we got there, the sun was already high above the sky bringing along an oppressive heat. This was the first time where going with the intuition brought us to the best decisions. Even though we knew there was a long hike ahead of us and we probably should get going, we started our adventure with a dip into crystal clear glacier water that peacefully slid along the canyon. Having cleared our minds from all the thoughts and tiredness we brought with us, we finally were ready to get back to the state we both dreamed of living in.
 
-![hello little friend](/images/journal/verzasca-maggia-hike/C70BF639-702F-4C26-A3EE-FBF0D8FAD1D0.jpeg)
+![hello little friend](/images/journal/verzasca-maggia-hike/C70BF639-702F-4C26-A3EE-FBF0D8FAD1D0.jpeg#left)
 *Hello little friend*
 
 To get ready for the adventures, we got traditional Italian pizza. When we arrived in Brione, a trailer waited for us to get us homemade vegan ice cream out of wild strawberries and lemon ginger. It brought us along the hiking trail through the valley of Osola to our first milestone: a cozy little brick cabin called Capanna Osola (1418 m.a.s.l.) embedded in a magical larch forest surrounded by cows with great hair and - for whatever reason - a donkey in the late evening.
@@ -56,7 +56,7 @@ The view into both valleys at the same time was tremendous and one of the most b
 
 On the other side of the mountain, the vegetation was a bit denser. The rocky landscape was now replaced more and more by dry grass and small shrubs, which made finding the trail a challenge at times. Where the trail markings on the Verzasca Valley side were very clear, they had not been repainted on this side for quite some time. After a good hour, hungry and already a bit tired, we reached our second stage destination. Mia, who followed the same route, greeted us happily and we told each other what we had experienced on the hike. The Capanna Alpe Spluga is run by a lovely family that offers dinner and breakfast in addition to the cabin service. The overnight domicile consisted of several stone huts and was the starting point of many hikes. Therefore, the hut was also well-occupied. Frank and I decided to spend this night in our own brought tent. It was much milder on this side of the mountain.
 
-![capanna alpe spluga (1838 m.a.s.l.)](/images/journal/verzasca-maggia-hike/F3FCB36C-FECC-4151-9990-FC724CB909C8.jpeg)
+![capanna alpe spluga (1838 m.a.s.l.)](/images/journal/verzasca-maggia-hike/F3FCB36C-FECC-4151-9990-FC724CB909C8.jpeg#right)
 *Capanna Alpe Spluga (1838 m.a.s.l.)*
 
 ![](/images/journal/verzasca-maggia-hike/007917F7-651E-46A0-99F1-C47FAA9D6450.jpeg)
@@ -102,7 +102,7 @@ The sun soon set behind the Bocchetta Canòva and left us in peaceful dusk, in w
 If there's one thing I've learned from this trip then it is to never ask too many questions about whether it is possible or whatever could happen on the way. Doubts like these lead to a dead end of not even trying. Listen to your heart and if it feels right, craft a good plan and just go for it.
 
 ![](/images/journal/verzasca-maggia-hike/097FFED3-7287-49EB-BE58-2D9C1CCF612E.jpeg)
-![](/images/journal/verzasca-maggia-hike/IMG_6779.jpg)
+![](/images/journal/verzasca-maggia-hike/IMG_6779.jpg#left)
 
 *With 🐝 by Evelyne.*
 

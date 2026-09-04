@@ -108,7 +108,13 @@ export default async function JournalPostPage({
           </h1>
         )}
         <p className="mt-6 text-[0.7rem] uppercase tracking-[0.2em] text-graphite/60">
-          Written by {post.author}
+          Written by{" "}
+          <Link
+            href={`/journal/?author=${encodeURIComponent(post.author)}`}
+            className="transition-colors duration-200 hover:text-ink"
+          >
+            {post.author}
+          </Link>
           {post.categories.map((category) => (
             <span key={category}>
               <span aria-hidden className="mx-2.5 text-graphite/30">

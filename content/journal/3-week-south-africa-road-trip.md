@@ -51,7 +51,7 @@ Of course, we've mapped it out after our road trip, so you don't have to go to p
 
 ### Getting Around in South Africa
 
-![getting around by car is easiest in south africa](/images/journal/south-africa-road-trip/IMG_7754.webp)
+![getting around by car is easiest in south africa](/images/journal/south-africa-road-trip/IMG_7754.webp#right)
 *Getting around by car is easiest in South Africa*
 
 It was our first time visiting South Africa. Arguably, it is the best place to find accommodations that connect you to nature. All of our nights on the road were spent in Airbnbs and hotels along the way. We rented a car with Bluu as this is the easiest and most convenient way to get around. Since we transited through Eswatini, it was super important to ask for a paper, which allows the car to be transferred in and out of Eswatini.
@@ -144,7 +144,7 @@ Things got much worse when we continued onto Kruger National Park. Our initial h
 
 Nevertheless, in the few hours we were incredibly lucky to witness a pride of lions eating a zebra very close to the road.
 
-![flooded crocodile river - kruger national park is on the other side](/images/journal/south-africa-road-trip/IMG_7760.webp)
+![flooded crocodile river - kruger national park is on the other side](/images/journal/south-africa-road-trip/IMG_7760.webp#right)
 *Flooded Crocodile River - Kruger National Park is on the other side*
 
 > 📖 Read more: [Kruger National Park Camping Road Trip – The Ultimate Self-Drive Safari Experience](/journal/kruger-national-park-camping-road-trip) - dreaming of falling asleep to the sounds of howling hyena and truly living under the stars with the elephants? That post tells you all about camping and self-traveling inside Africa's largest national park.
@@ -157,7 +157,7 @@ The good night's rest so close to Kruger prepared us to travel to KwaZulu-Natal 
 
 From St. Lucia, at the edge of the village, there's an entrance to iSimangaliso National Park. Once inside, you can observe many native wild animals such as kudus, hippos, buffalo, and even crocodiles when the time's right. There are plenty of opportunities for a good time on a beach too.
 
-![our favorite forest lodge in mtunzini](/images/journal/south-africa-road-trip/IMG_7825.webp)
+![our favorite forest lodge in mtunzini](/images/journal/south-africa-road-trip/IMG_7825.webp#right)
 *Our favorite forest lodge in Mtunzini*
 
 If you are into hippos like us, in the town of St. Lucia, hop onto a boat tour for the evening. It took us out into the wetlands and we saw plenty of hippos (and they were really active). At the same time we learned lots about the ecosystem around, the yellow weavers who craft their nests in the reeds where hippos and crocodiles hide.
@@ -168,7 +168,7 @@ We traveled along the coast until Mtunzini, where we stayed in a tucked away tre
 
 On the Garden Route, you will pass by famous Storms River Bridge and Big Tree. Right next to it is Tsitsikamma National Park, which we highly recommend as a nature getaway. Strolling from the parking lot to the suspension bridge, we spotted many adorable rock dassies while getting used to the taste of buchu tea, a healthy but pungent fynbos tea special to South Africa.
 
-![tsitsikamma waterfall](/images/journal/south-africa-road-trip/IMG_0708.webp)
+![tsitsikamma waterfall](/images/journal/south-africa-road-trip/IMG_0708.webp#right)
 *Tsitsikamma waterfall*
 
 However, the real highlight was hiking in the opposite direction towards the Tsitsikamma waterfall. Along the way, we encountered diverse fynbos vegetation, and at the waterfall's end, we refreshed ourselves in the water. It's part of the Otter Trail, where you can spend days hiking along the wild sea.
@@ -222,7 +222,7 @@ We stayed in Stellenbosch for two days. In the peaceful and dry summer, waking u
 
 ## Cape Town - Sightseeing, Penguins on the Beach and Hiking Lion's Head
 
-![colorful muizenberg](/images/journal/south-africa-road-trip/IMG_9008.webp)
+![colorful muizenberg](/images/journal/south-africa-road-trip/IMG_9008.webp#left)
 *Colorful Muizenberg*
 
 In Cape Town, we stayed in Muizenberg, a surfer town known for its colorful beach huts. That meant a 40 minute travel time into Cape Town, but still being close enough to the Cape of Good Hope.

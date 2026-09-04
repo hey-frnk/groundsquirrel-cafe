@@ -29,7 +29,7 @@ Despite our comfortable stay at the hotel, we still longed for the feeling of sl
 
 With the sun shining and the beach calling, we explored the small town of Cannon Beach, checking out the local shops and making our way to Haystack Rock, the iconic natural wonder famous for its tufted puffins.
 
-![haystack rock is in the background!](/images/journal/cannon-beach-campfire/IMG_1277.jpg)
+![haystack rock is in the background!](/images/journal/cannon-beach-campfire/IMG_1277.jpg#left)
 *Haystack Rock is in the background!*
 
 > ℹ Beach weather can get very unpredictable. We were well prepared, so we put on some layers as soon as it got colder, cloudy and drizzly.

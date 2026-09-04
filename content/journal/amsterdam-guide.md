@@ -14,7 +14,7 @@ This is the Amsterdam blog for you if you want to find out about good hipster co
 
 ## How to Get Around in Amsterdam
 
-![biking is easy - it's flat in the netherlands](/images/journal/amsterdam-guide/IMG_7030.webp)
+![biking is easy - it's flat in the netherlands](/images/journal/amsterdam-guide/IMG_7030.webp#left)
 *Biking is easy - it's flat in the Netherlands*
 
 Amsterdam has world class public transport. During our time, we took the trams (which is a street-level light rail), walked a lot and also rented bikes to get around.
@@ -23,7 +23,7 @@ This is how the trams work: while you can purchase unlimited travel passes for a
 
 ## Frank's Favorite Neighborhoods
 
-![we love to soak in the cityscape as we wander through the streets](/images/journal/amsterdam-guide/IMG_3418.webp)
+![we love to soak in the cityscape as we wander through the streets](/images/journal/amsterdam-guide/IMG_3418.webp#right)
 *We love to soak in the cityscape as we wander through the streets*
 
 When it comes to cozy and warmhearted breakfast places, Amsterdam is the right destination. Hop onto a tram and visit the following neighborhoods:
@@ -46,8 +46,8 @@ This neighborhood boasts unique, local and authentic foodie spots in pretty bric
 *A sunny day in Amsterdam*
 
 ![](/images/journal/amsterdam-guide/IMG_3386.webp)
-![](/images/journal/amsterdam-guide/IMG_6503.webp)
-![](/images/journal/amsterdam-guide/IMG_3369.webp)
+![](/images/journal/amsterdam-guide/IMG_6503.webp#right)
+![](/images/journal/amsterdam-guide/IMG_3369.webp#left)
 
 ### Amsterdam Oud-West
 
@@ -65,12 +65,12 @@ In the "old-west" part of Amsterdam, we found some of the best places locals com
 
 ![frank is looking at the best pizza](/images/journal/amsterdam-guide/IMG_6990.webp)
 *Frank is looking at the best pizza*
-![a brunch in the sunlight at karavaan](/images/journal/amsterdam-guide/IMG_6772.webp)
+![a brunch in the sunlight at karavaan](/images/journal/amsterdam-guide/IMG_6772.webp#left)
 *A brunch in the sunlight at Karavaan*
 
 ### Jordaan
 
-![occasionally, you will find aesthetic bikes on a bridge](/images/journal/amsterdam-guide/IMG_6676.webp)
+![occasionally, you will find aesthetic bikes on a bridge](/images/journal/amsterdam-guide/IMG_6676.webp#right)
 *Occasionally, you will find aesthetic bikes on a bridge*
 
 The prettiest neighborhood steeped with canals and picturesque bridges adorned with Amsterdam's best looking bikes. Popular among both locals and tourists, it is adjacent to the city center and the Anne Frank Museum. Here are some of our favorites:
@@ -79,7 +79,7 @@ The prettiest neighborhood steeped with canals and picturesque bridges adorned w
 - **Westerstraat Market.** A lively and authentic market that offers delicious food from börek to Gouda cheese - and souvenirs.
 - **Luuk's Coffee.** Honestly, we were looking for a restroom around Westerstraat Market (which is really hard to find) and were delighted by how tasty the coffee at Luuk's Coffee was.
 
-![](/images/journal/amsterdam-guide/IMG_3852.webp)
+![](/images/journal/amsterdam-guide/IMG_3852.webp#right)
 
 ![lights will guide you home. the street lights are old-school gorgeous here](/images/journal/amsterdam-guide/IMG_3839.webp)
 *Lights will guide you home. The street lights are old-school gorgeous here*
@@ -100,7 +100,7 @@ Let's switch to Evelyne's favorites - a wildlife and nature-based guide to Amste
 
 ### Oud-Oost
 
-![ten parakeets in oosterpark on a tree](/images/journal/amsterdam-guide/IMG_3621.webp)
+![ten parakeets in oosterpark on a tree](/images/journal/amsterdam-guide/IMG_3621.webp#left)
 *Ten parakeets in Oosterpark on a tree*
 
 This area of Amsterdam is less visited and known for its best wildlife spots including Amsterdam's zoo.
@@ -117,12 +117,12 @@ This area of Amsterdam is less visited and known for its best wildlife spots inc
 
 ## An Escape Into Nature
 
-![the cycling path to broek in waterland is next to canals, rivers and houseboats](/images/journal/amsterdam-guide/IMG_3696.webp)
+![the cycling path to broek in waterland is next to canals, rivers and houseboats](/images/journal/amsterdam-guide/IMG_3696.webp#left)
 *The cycling path to Broek in Waterland is next to canals, rivers and houseboats*
 
 The Netherlands is known for its world class biking infrastructure - nearly everyone in the city travels by bike. There is no other place like Amsterdam to rent a bike to explore it, and its surroundings. For us, the bike tour day was the highlight of our trip.
 
-![traditional dutch vegan jackfruit stew with pickled cabbage, mayonnaise and fries](/images/journal/amsterdam-guide/IMG_3678.webp)
+![traditional dutch vegan jackfruit stew with pickled cabbage, mayonnaise and fries](/images/journal/amsterdam-guide/IMG_3678.webp#right)
 *Traditional Dutch vegan jackfruit stew with pickled cabbage, mayonnaise and fries*
 
 We decided to ride our bikes out of the city to explore its well-known surroundings. Our first stop? Zaanse Schans, a place famous for its windmills we've found online. However, we were disappointed to find that the place is a tourist trap, and an insult to the actual peaceful and authentic countryside next to it. While making our way to a different place called Broek in Waterland, Frank found a restaurant with traditional Dutch food: Twiske Haven Restaurant. A lakeside restaurant surrounded by nature. To get there, you ride your bike across wooden bridges, fresh and light forests and past typical Dutch windmills. The restaurant serves authentic traditional Dutch food. We had a vegan seasonal jackfruit stew with fries and bread. This is the very first place we would visit again on our next trip to Amsterdam!
@@ -143,11 +143,11 @@ We strongly encourage you to ride your bike straight to Broek in Waterland if yo
 
 When you make it to Broek in Waterland, don't miss out on De Witte Swaen, the place where Evelyne had the very best crêpes nine years ago.
 
-![](/images/journal/amsterdam-guide/IMG_7028.webp)
+![](/images/journal/amsterdam-guide/IMG_7028.webp#right)
 
 ## Birding in Vondelpark
 
-![eurasian coot - we call them taubenraucher!](/images/journal/amsterdam-guide/DSC_4151.webp)
+![eurasian coot - we call them taubenraucher!](/images/journal/amsterdam-guide/DSC_4151.webp#right)
 *Eurasian coot - we call them "Taubenraucher"!*
 
 As a South African field and nature guide, Evelyne can't resist exploring wildlife wherever she is. Amsterdam with its rich network of water canals is a prime spot for bird viewing. While we were in Vondelpark, we were able to spot the following birds: white storks, Egyptian geese, Eurasian magpies, green parakeets, European starlings, blue tits, grey herons, coots, moorhens - and of course mallards and pigeons.
@@ -195,7 +195,7 @@ In the country of stroopwafels, it's your chance to have a bite of warm, freshly
 
 ### 4. Find the Best Fries
 
-![](/images/journal/amsterdam-guide/IMG_3604.webp)
+![](/images/journal/amsterdam-guide/IMG_3604.webp#right)
 
 Fries were the most irresistible thing for Frank (and sometimes for Evelyne). They are freshly made, and you can find them throughout the centre of Amsterdam. Naturally, Frank was inclined to find the best place for fries in the city. Did you know there is a place called FEBO, where you can order fried stuff at a vending machine?
 

@@ -8,7 +8,7 @@ categories: ["travel"]
 tags: ["lakes", "pf\u00e4ffikersee", "romantic", "inspiration", "lifestyle", "travel", "day trip", "sunset", "swim", "switzerland", "z\u00fcrich", "europe"]
 ---
 
-![say hi to the duckies](/images/journal/pfaffikersee/IMG_9318.jpg)
+![say hi to the duckies](/images/journal/pfaffikersee/IMG_9318.jpg#right)
 *Say hi to the duckies*
 
 Have you ever seen a lake in such a magical teal that you legitimately wonder if someone dropped a giant jug of paint into the lake? I invite you to see and dream for yourself at Pfäffikersee, a serene little lake by the Zürich suburbs, a 10 minute walk away from Pfäffikon ZH station.

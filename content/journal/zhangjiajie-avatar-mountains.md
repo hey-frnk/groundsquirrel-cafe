@@ -35,7 +35,7 @@ Just like Kruger National Park in South Africa, Wu Ling Yuan Scenic Area has mul
 
 On both plains, there are free shuttle busses driving you between the places. They are available anytime and leave when they are full. To get from the high plain to the valley plain and vice versa there are cable cars, elevators, or you can hike.
 
-![calm stairs leading up to yuan jia jie](/images/journal/zhangjiajie-avatar-mountains/IMG_5134.jpg)
+![calm stairs leading up to yuan jia jie](/images/journal/zhangjiajie-avatar-mountains/IMG_5134.jpg#right)
 *Calm stairs leading up to Yuan Jia Jie*
 
 ### Hiking in China Means Stairs
@@ -44,7 +44,7 @@ There are no natural hiking trails in the national park. All hiking trails are s
 
 ### A Good Itinerary
 
-![we had planned a good outdoorsy time inside zhang jia jie](/images/journal/zhangjiajie-avatar-mountains/IMG_5108.jpg)
+![we had planned a good outdoorsy time inside zhang jia jie](/images/journal/zhangjiajie-avatar-mountains/IMG_5108.jpg#left)
 *We had planned a good outdoorsy time inside Zhang Jia Jie*
 
 It is true that Zhang Jia Jie has more than 200 rainy days a year. Depending on whether you like hiking outdoorsy or prefer sightseeing, it is more or less important to you that the weather cooperates. We love hiking in good weather and were very lucky not to have had a single rainy day in the national park. On the other hand, the national park would certainly have looked particularly mystical and cinematic if it had rained.
@@ -55,12 +55,12 @@ We worked out three day-programs in advance, two for good weather and one where 
 - **Hike up to Tian Zi Shan (天子山)** - a similarly scenic area with a pavilion and a park at the end of the hike. We even combined it with a hike in Yang Jia Jie (杨家界) to the Natural Great Wall (天然长城) in the afternoon where the shuttle takes you there.
 - **Calm walk along the Golden Whip Stream (金鞭溪)**, drinking out of a holy water fountain and possibly checking out Huang Shi Village (黄石寨).
 
-![the shuttle stop at golden whip stream at sunset](/images/journal/zhangjiajie-avatar-mountains/IMG_5363.jpg)
+![the shuttle stop at golden whip stream at sunset](/images/journal/zhangjiajie-avatar-mountains/IMG_5363.jpg#right)
 *The shuttle stop at Golden Whip Stream at sunset*
 
 ## Hiking Up the Hallelujah Mountains - a Peaceful Walk in the Valley
 
-![a peaceful walk in the valley](/images/journal/zhangjiajie-avatar-mountains/IMG_9783.jpg)
+![a peaceful walk in the valley](/images/journal/zhangjiajie-avatar-mountains/IMG_9783.jpg#left)
 *A peaceful walk in the valley*
 
 Yuan Jia Jie (袁家界) is the most popular spot in the Wu Ling Yuan Scenic Area and can be reached by shuttle after the Bailong Elevator. However, the view should be well deserved, which is why we took a leisurely hike up Yuan Jia Jie using just our feet from below.
@@ -70,7 +70,7 @@ The hike starts in the valley where you take the shuttle from the eastern gate t
 ![](/images/journal/zhangjiajie-avatar-mountains/IMG_0108.jpg)
 ![](/images/journal/zhangjiajie-avatar-mountains/IMG_0010.jpg)
 ![](/images/journal/zhangjiajie-avatar-mountains/IMG_5072.jpg)
-![](/images/journal/zhangjiajie-avatar-mountains/IMG_5123.jpg)
+![](/images/journal/zhangjiajie-avatar-mountains/IMG_5123.jpg#left)
 
 From there, it becomes really idyllic. It goes through a dense forest where, if you look very closely, you can spot red-hipped squirrels, but you'll notice how it slowly gets steeper. It really doesn't take that long before you get your first impressive, breathtaking panoramic view. You can pat yourself on the back because it's your achievement. In our opinion, you can stick to this view and you don't have to put up with the masses of tourists waiting at the viewpoints of Yuan Jia Jie. The mass tourism that comes by elevator and shuttle focuses on a few hotspots: Enchanting Terrace (迷魂台), the Natural Bridge (天下第一桥) or the floating mountain South Sky Pillar (南天一柱), which served as inspiration for Avatar.
 
@@ -105,7 +105,7 @@ Evelyne's highlight? Pa pa gan (the finest mandarins from Japan) or local Chines
 
 ## Hike Up Tian Zi Mountain
 
-![the quiet valley](/images/journal/zhangjiajie-avatar-mountains/Frame-24-11-2024-10-41-30.jpg)
+![the quiet valley](/images/journal/zhangjiajie-avatar-mountains/Frame-24-11-2024-10-41-30.jpg#right)
 *The quiet valley*
 
 We haven't had enough on our first hiking day. So that is why on our second day, we went on a hike up to Tian Zi Shan, which is just as impressive as day one.
@@ -118,7 +118,7 @@ Once you reach the end of the railroad, stay optimistic - even if the crowds gro
 *Having a good time on Tian Tai…*
 ![… the heavenly terrace with a view!](/images/journal/zhangjiajie-avatar-mountains/IMG_9981.jpg)
 *… the Heavenly Terrace with a view!*
-![macaques are quite a common sight in the park. keep a safe and respectful distance](/images/journal/zhangjiajie-avatar-mountains/IMG_5350.jpg)
+![macaques are quite a common sight in the park. keep a safe and respectful distance](/images/journal/zhangjiajie-avatar-mountains/IMG_5350.jpg#left)
 *Macaques are quite a common sight in the park. Keep a safe and respectful distance*
 
 … and just like the first hike, this one starts in the valley and leads up to the plateau via steps carved out of the precarious rocks. Towards the end, there is a detour to "Heavenly Terrace" (天台), which you should definitely not miss. It offers views of the high plain and the pavilion peacefully watching over the mountains in the distance.
@@ -138,7 +138,7 @@ While you can enjoy the view while having American McDonald's, we continued our 
 *A forest pool with crystal-clear turquoise water*
 ![the golden whip stream flowing between the majestic canyon](/images/journal/zhangjiajie-avatar-mountains/IMG_0056.jpg)
 *The Golden Whip Stream flowing between the majestic canyon*
-![pure peacefulness - a pond reflecting the rocks of zhang jia jie](/images/journal/zhangjiajie-avatar-mountains/IMG_0424.JPG)
+![pure peacefulness - a pond reflecting the rocks of zhang jia jie](/images/journal/zhangjiajie-avatar-mountains/IMG_0424.JPG#left)
 *Pure peacefulness - a pond reflecting the rocks of Zhang Jia Jie*
 
 Just like you would hike up Yuan Jia Jie on day one, the walk starts at Water Winding Four Gates (水绕四门). But instead of taking the stairs up to Yuan Jia Jie, you keep following the stream. A lot of exciting and entertaining things await you along the walk. Although as in all Chinese national parks, taking a cold plunge is not allowed, there is a water fountain before you reach Oxygen Bar Square (氧吧广场). The cold spring water promises eternal life, so be sure to not miss out on the opportunity to taste the water!
@@ -157,7 +157,7 @@ The serene Bao Feng Lake feels like a tranquil escape from the bustling Zhang Ji
 
 ### Where Did We Stay?
 
-![our hotel was right at the national park gates](/images/journal/zhangjiajie-avatar-mountains/IMG_5043.jpg)
+![our hotel was right at the national park gates](/images/journal/zhangjiajie-avatar-mountains/IMG_5043.jpg#left)
 *Our hotel was right at the national park gates*
 
 Those who have seen the traffic outside of the national park know it's absolutely essential to book the hotel within walkable distance. Our travel agency booked us a hotel that was five walking minutes away from the east gate. Even after breakfast, we were one of the first visitors to walk in.

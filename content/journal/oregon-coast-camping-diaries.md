@@ -32,12 +32,12 @@ That night we tried to find a cute restaurant by the sea, but figured they weren
 ![what a fiery sunset! when the horizon is just water and air](/images/journal/oregon-coast-camping-diaries/2022-08-17-05-14-50.jpg)
 *What a fiery sunset! When the horizon is just water and air*
 
-![wild blackberry, apricot and apple porridge bowl for breakfast!](/images/journal/oregon-coast-camping-diaries/IMG_1387.jpg)
+![wild blackberry, apricot and apple porridge bowl for breakfast!](/images/journal/oregon-coast-camping-diaries/IMG_1387.jpg#right)
 *Wild blackberry, apricot and apple porridge bowl for breakfast!*
 
 We found a spontaneous place to camp in a forest by the shore called Alder Dune and made a little fire in the morning to make special porridge with fresh blackberries from around the campground and pasta for along the way. It didn't take long for us to get distracted by a cute farmers market that took place in Coos Bay. Our yield was solid and diverse: cinnamon raisin sourdough bread, fresh veggies, hummus and most importantly, salted caramel fudge. Evelyne and I just love salted caramel!
 
-![](/images/journal/oregon-coast-camping-diaries/2022-08-17-05-14-16.jpg)
+![](/images/journal/oregon-coast-camping-diaries/2022-08-17-05-14-16.jpg#left)
 
 As we were getting closer to the Samuel H. Boardman Scenic Corridor, the coast turned more misty and the clouds from the sea swallowed the clear blue sky. We stopped near a beach parking facing a monolith rock sticking out on the beach, decorated our trunk space a little and this was the first time I truly felt like living in a van and how we are going to travel the world. We made music on our cozy Masai blanket under dimmed sparks of our fairy lights. The scenic corridor wasn't far from here.
 

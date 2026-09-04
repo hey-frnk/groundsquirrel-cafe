@@ -36,7 +36,7 @@ Our way back, we took the bus, which was the only option still cheap for what wa
 
 We booked our accommodation through Hostelworld, where you can also chat with a community of fellow travelers to check out what's going on near you. Paris is an expensive place, so for us, a hostel was the perfect budget-friendly option, which also is a great place to meet fellow like-minded travelers. Our hostel, named Le Village Montmartre, was located a five-minute walk away from Sacré-Cœur, where some magical stairs through a park reward you with a breathtaking city view.
 
-![](/images/journal/paris-weekend/470D22A1-936E-4F2B-94AB-EC3DE7747766.webp)
+![](/images/journal/paris-weekend/470D22A1-936E-4F2B-94AB-EC3DE7747766.webp#left)
 ![behind place du tertre lies le maison rose wrapped in ivy](/images/journal/paris-weekend/F5DE6088-790F-4C88-B7A9-64F8D2B747FD.webp)
 *Behind Place du Tertre lies Le Maison Rose wrapped in ivy*
 
@@ -62,12 +62,12 @@ My eyes were sparkling. It's been ten years since, and I couldn't wait to be her
 
 ![a city of love locks in the city of love](/images/journal/paris-weekend/417DCBE4-290C-4C19-A7F8-9D844F0D39D0.webp)
 *A city of love locks in the city of love*
-![a dreamy sunrise above paris](/images/journal/paris-weekend/F18B44FC-45F7-4AF0-8915-45712DCE6025.webp)
+![a dreamy sunrise above paris](/images/journal/paris-weekend/F18B44FC-45F7-4AF0-8915-45712DCE6025.webp#right)
 *A dreamy sunrise above Paris*
 
 If there's one advice we could offer you - Montmartre is most magical early in the morning, when most people, even scammers, are still cuddled up in their blankets and only birds are out there. Then the sun rises in front of Sacré-Cœur and bathes Paris in a golden light. The square of the cathedral offers an incredible view over the city. Early on, most streets are empty, and you can take beautiful pictures. No wonder you might casually become part of a film shoot. Place du Tertre, which all artists call their home, is covered in a peaceful atmosphere.
 
-![](/images/journal/paris-weekend/4F31D0FF-6FA9-40A7-95EA-5BCC424908B6.webp)
+![](/images/journal/paris-weekend/4F31D0FF-6FA9-40A7-95EA-5BCC424908B6.webp#left)
 
 It's still quiet. With a warm drink and a French croissant, you can perfectly enjoy the slow life there and observe how the streets slowly fill with people of all origins. More and more artists drag their easels there and get ready for the day.
 
@@ -81,9 +81,9 @@ Slowly, Montmartre fills with the sounds and colors of incoming visitors, and no
 
 Montmartre/Saint-Georges is also a paradise for musicians and offers everything for every kind of music and artist with its countless music shops in the same neighborhood. Many of them are located on Rue Victor Massé (the guitar street), Rue de Douai or Rue Duperré. Instagrammers, Pink Mama, an iconic Italian restaurant with lots of plants and natural light, is right around the corner. Reserve in advance, as it will be booked at all times.
 
-![](/images/journal/paris-weekend/0D73F56A-E319-4D88-90A1-BE384D274504.webp)
+![](/images/journal/paris-weekend/0D73F56A-E319-4D88-90A1-BE384D274504.webp#right)
 
-![picnic by the seine](/images/journal/paris-weekend/IMG_8065.webp)
+![picnic by the seine](/images/journal/paris-weekend/IMG_8065.webp#right)
 *Picnic by the Seine (48.860954, 2.292335) to be exact!*
 
 ## The Food
@@ -121,7 +121,7 @@ Just an amazing place for amazing Neapolitan pizza in pink neon light. Although 
 
 ### Some More Food Favorites
 
-![](/images/journal/paris-weekend/EFBE7F54-BC4C-4829-BEED-2AFC94AC281F.webp)
+![](/images/journal/paris-weekend/EFBE7F54-BC4C-4829-BEED-2AFC94AC281F.webp#left)
 
 **Créatures** - on the roofs of a Galeries Lafayette, Créatures offers fine vegetarian snacks with a Middle-Eastern touch and wine with a view.
 
@@ -140,7 +140,7 @@ Maybe we were lucky, but our pizza was served heart-shaped. It was the best pizz
 
 ![a little madness is key, to give us new colors to see](/images/journal/paris-weekend/2600899E-F1F7-43A6-9542-1888EE34437B.webp)
 *A little madness is key, to give us new colors to see*
-![michigander, live!!!](/images/journal/paris-weekend/IMG_8111.webp)
+![michigander, live!!!](/images/journal/paris-weekend/IMG_8111.webp#right)
 *Michigander, live!!!*
 
 For us, music always has a very special place wherever we go. On our first night, it was by pure chance that Michigander, a very talented indie-rock singer from the U.S., had a show in Paris at a venue called Supersonic. Frank knows him from one of Frank's all-time favorite songs called "East Chicago, IN."

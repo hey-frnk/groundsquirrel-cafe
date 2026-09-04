@@ -25,7 +25,7 @@ Oh I could talk about good coffee for hours. The more I was excited to get coffe
 
 I did make some remarks on visiting downtown at the end of the blog post. Please read them first before you plan your visit.
 
-![contrasts of downtown portland](/images/journal/portland-oregon/9AA4AA69-2CEF-4FE6-96C4-9895D14B2D0E.jpg)
+![contrasts of downtown portland](/images/journal/portland-oregon/9AA4AA69-2CEF-4FE6-96C4-9895D14B2D0E.jpg#left)
 *Contrasts of downtown Portland*
 
 ### White Stag Sign by the Waterfront Park
@@ -48,7 +48,7 @@ We got ourselves a blue guide book to camping, which talks about the national pa
 
 ### Shopping in Pearl District
 
-![the fjällräven store. we got a beanie!](/images/journal/portland-oregon/tempImageMEaOhp.jpg)
+![the fjällräven store. we got a beanie!](/images/journal/portland-oregon/tempImageMEaOhp.jpg#right)
 *The Fjällräven store. We got a beanie!*
 
 Looking for a lovely new Fjällräven backpack or fancy gear for the great outdoors? Pearl District has a variety of indie and not-so-indie stores for you to explore, and the best part about it? Oregon doesn't have sales tax! While we found prices in the U.S. generally high, despite both of us living in Switzerland, it might make sense to get things here. We found that Apple devices are more expensive overseas, so were Evelyne's professional binoculars.
@@ -60,7 +60,7 @@ We headed to Deschutes Brewery for a nice lunch of fries and salad, and of cours
 
 ### Stroll Down Northwest 23rd Avenue
 
-![cute plants inside harlow](/images/journal/portland-oregon/DE6F3666-C697-479F-908D-F5C33EB33148.jpg)
+![cute plants inside harlow](/images/journal/portland-oregon/DE6F3666-C697-479F-908D-F5C33EB33148.jpg#left)
 *Cute plants inside Harlow*
 
 While we did have mixed feelings walking through the streets of downtown, I felt more like I was back in Soho of New York or Prenzlauer Berg of Berlin when we walked down the cute indie shops of "trendy-third" avenue.
@@ -69,8 +69,8 @@ We sat down inside a vegetarian restaurant, Harlow, for dinner. Evelyne got hers
 
 A friend told us about the ice cream shop with unorthodox, creative flavors, Salt & Straw. It's also found on the same street, however the ocean was calling, so we drove away into the sundown.
 
-![](/images/journal/portland-oregon/DSC_0760-2.jpg)
-![](/images/journal/portland-oregon/0BB5564E-F623-429F-B8BF-C68C7FCE69AB.jpg)
+![](/images/journal/portland-oregon/DSC_0760-2.jpg#left)
+![](/images/journal/portland-oregon/0BB5564E-F623-429F-B8BF-C68C7FCE69AB.jpg#right)
 
 ## If We Had More Time
 

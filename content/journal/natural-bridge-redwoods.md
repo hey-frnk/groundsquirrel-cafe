@@ -10,7 +10,7 @@ tags: ["westcoast-roadtrip", "oregon", "california", "coast", "road trip", "samu
 
 "If you were a tree, what tree would you be? Big tree!" These were the words in "I Went on a Road Trip with a Stranger" by Aiden and Pip that stuck with me, just as much as Natalie Lynn's struggle to find the natural bridges on the Samuel H. Boardman State Scenic Corridor. Re-living the adventures of my biggest inspiration and finally flying over the bridge holding Evelyne's hand felt like living our own coming-of-age indie movie.
 
-![the granola couple. from the sand of the trail around us, frank's hiking shoes look almost the same color as evelyne's](/images/journal/natural-bridge-redwoods/2022-08-17-15-57-55.jpg)
+![the granola couple. from the sand of the trail around us, frank's hiking shoes look almost the same color as evelyne's](/images/journal/natural-bridge-redwoods/2022-08-17-15-57-55.jpg#right)
 *The granola couple. From the sand of the trail around us, Frank's hiking shoes look almost the same color as Evelyne's*
 
 We hiked through the foggy forest through an unofficial side trail to reach the stunning Natural Bridge, feeling like we were in a mystical movie set in the Pacific Northwest. While I was nervous about the steep cliffs, Evelyne bravely stepped ahead to capture beautiful pictures for us. We sat on the bridge and flew over it with my drone, just like heyxnatalie - well, we didn't know we were on the bridge until we saw it from the drone camera!

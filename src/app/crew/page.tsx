@@ -56,7 +56,9 @@ export default async function CrewPage() {
         {crew.map((member, i) => (
           <article
             key={member.slug}
-            className="reveal grid items-start gap-10 border-b border-ink/10 py-16 sm:gap-14 sm:py-20 md:grid-cols-[20rem_1fr] md:gap-16"
+            // Named, so a post can link straight to the person who wrote it.
+            id={member.slug}
+            className="reveal scroll-mt-24 grid items-start gap-10 border-b border-ink/10 py-16 sm:gap-14 sm:py-20 md:grid-cols-[20rem_1fr] md:gap-16"
           >
             <div>
               {member.photos && member.photos.length > 0 ? (

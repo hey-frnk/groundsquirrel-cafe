@@ -16,7 +16,7 @@ There is no wrong way to get the day hike started, whether it is enjoying a chil
 
 ![a spark in the old town of lugano](/images/journal/san-salvatore-morcote/IMG_9445.webp)
 *A spark in the old town of Lugano*
-![the colorful shops of via cattedrale](/images/journal/san-salvatore-morcote/IMG_9438.webp)
+![the colorful shops of via cattedrale](/images/journal/san-salvatore-morcote/IMG_9438.webp#right)
 *The colorful shops of Via Cattedrale*
 
 What is more perfect than starting out the day by sitting at the teal blue lake with some fresh papaya and having pistachio-filled croissants (Swiss German: Gipfeli) from the old town? We took a dip at around Parco Belvedere at 9 am on a Tuesday morning (like your unemployed friend), leaving locals and tourists wondering.
@@ -67,7 +67,7 @@ Hearing that Morcote is considered as one of the most beautiful villages in Swit
 
 ### Parco Scherrer, Morcote
 
-![how paradise looks like - inside parco scherrer, morcote](/images/journal/san-salvatore-morcote/IMG_9547.webp)
+![how paradise looks like - inside parco scherrer, morcote](/images/journal/san-salvatore-morcote/IMG_9547.webp#right)
 *How paradise looks like - inside Parco Scherrer, Morcote*
 
 From the port of Morcote, where all the restaurants and cute local shops are, you'll reach the most unique botanical garden, Parco Scherrer, if you walk westbound along the lake for ten minutes where the garden awaits behind an unassuming wall. And the best thing above all? It is all free for you to visit!
@@ -83,7 +83,7 @@ Made it this far? Here's a true local gem! Here comes the favorite part of the d
 
 Although we haven't tried, Italy is on the other side of the lake!
 
-![](/images/journal/san-salvatore-morcote/IMG_5943.webp)
+![](/images/journal/san-salvatore-morcote/IMG_5943.webp#right)
 
 Be sure to not miss out on the last boat ride, which unfortunately leaves fairly early at 5:45 pm in summer. You can step out anywhere you like to fade out the evening with a dinner or ride all the way to Lugano.
 

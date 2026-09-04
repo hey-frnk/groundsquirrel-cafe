@@ -52,7 +52,7 @@ Close to Columbia Road, you'll find a lesser-known street called Redchurch Stree
 
 ### Brick Lane
 
-![vintage find from 1920 - sadly evelyne missed her chance, it was gone the next day!](/images/journal/oxford-street-london/IMG_5887.jpg)
+![vintage find from 1920 - sadly evelyne missed her chance, it was gone the next day!](/images/journal/oxford-street-london/IMG_5887.jpg#right)
 *Vintage find from 1920 - sadly Evelyne missed her chance, it was gone the next day!*
 
 Adjacent to Redchurch Street is what we believe to be London's coolest shopping street: Brick Lane. It's the complete opposite of the well-known Oxford Street. If, like us, you adore secondhand and vintage finds, this street is paradise. The shops here, many of which are vintage-focused, sell high-quality, well-curated secondhand clothing. Many have distinct themes, offering pieces from decades past.
@@ -86,7 +86,7 @@ Every day, around 55 elephants die due to ivory poaching, climate change, defore
 
 To learn more about this project, or discover ecoexist, a small but very important not-for-profit NGO in Botswana that deals with the challenges between humans and elephants.
 
-![](/images/journal/oxford-street-london/ecoexist-logo.jpg)
+![](/images/journal/oxford-street-london/ecoexist-logo.jpg#left)
 
 ## The Northern Side of London
 
@@ -101,9 +101,9 @@ In the north of London lies the famous Camden area, once the center of London's 
 *Camden Market*
 ![busy on weekends](/images/journal/oxford-street-london/IMG_2361.jpg)
 *Busy on weekends*
-![walk along the canal](/images/journal/oxford-street-london/IMG_5763.jpg)
+![walk along the canal](/images/journal/oxford-street-london/IMG_5763.jpg#left)
 *Walk along the canal*
-![inside mandarin stone showroom](/images/journal/oxford-street-london/IMG_2369.jpg)
+![inside mandarin stone showroom](/images/journal/oxford-street-london/IMG_2369.jpg#left)
 *Inside Mandarin Stone showroom*
 
 Despite its transformation, Camden has some truly beautiful places to explore. Right next to the Camden markets, the Regent's Canal flows peacefully, inviting visitors for a relaxed walk along its banks.
@@ -184,14 +184,14 @@ For the south of London, we unfortunately didn't have much time during our stay.
 
 ### Nola Coffee
 
-![inside nola coffee, peckham](/images/journal/oxford-street-london/IMG_2303.jpg)
+![inside nola coffee, peckham](/images/journal/oxford-street-london/IMG_2303.jpg#right)
 *Inside Nola Coffee, Peckham*
 
 Since the opening of this café, Frank has dreamed of one day sitting here, sipping coffee at his leisure. Nola was founded by the English band Oh Wonder, who have been among Frank's favorite musicians since his youth. So, why not stop by on his 28th birthday? In fact, Nola was the main reason we decided to travel to London. And the café, along with its surroundings, did not disappoint.
 
-![peckham rye station](/images/journal/oxford-street-london/IMG_2273.jpg)
+![peckham rye station](/images/journal/oxford-street-london/IMG_2273.jpg#left)
 *Peckham Rye station*
-![frank before his visit at nola](/images/journal/oxford-street-london/IMG_2278.jpg)
+![frank before his visit at nola](/images/journal/oxford-street-london/IMG_2278.jpg#left)
 *Frank before his visit at Nola*
 
 The café is located slightly outside the city center in an area called Peckham Rye, accessible by train. Peckham Rye offers a glimpse of an English residential neighborhood and showcases a culturally diverse, authentic London. It's characterized by numerous international grocery stores and small, independent spots like Nola.
