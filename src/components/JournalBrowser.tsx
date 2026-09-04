@@ -143,6 +143,7 @@ const LOCATIONS = [
   { label: "Europe", tag: "europe" },
   { label: "Asia", tag: "asia" },
   { label: "North America", tag: "north america" },
+  { label: "Africa", tag: "africa" },
 ];
 
 /** `/journal/?category=travel&tag=hiking`, with empty values left out. */
@@ -226,13 +227,16 @@ export default function JournalBrowser({
               aria-label="Filter by category"
               className="flex flex-wrap gap-2.5 sm:justify-end"
             >
-              <Link href={journalHref({ tag })} className={pill(!category)}>
+              {/* Switching category drops the tag: "travel + switzerland",
+                  then a click on thoughts, would otherwise leave you staring at
+                  a Swiss filter that no longer has anything to show. */}
+              <Link href={journalHref({})} className={pill(!category)}>
                 Everything
               </Link>
               {categories.map((c) => (
                 <Link
                   key={c}
-                  href={journalHref({ category: c, tag })}
+                  href={journalHref({ category: c })}
                   className={pill(category === c)}
                 >
                   {c}
