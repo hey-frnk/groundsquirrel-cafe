@@ -14,7 +14,7 @@ This website is operated from Switzerland and personal data is processed in acco
 
 ## What this website does - and doesn't - do
 
-The Ground Squirrel Café is a static website: there is no user login, no database and no contact form. We set **no cookies**, we don't profile you, and we don't track you across websites or over time. We don't know who you are unless you choose to email us or place an order.
+The Ground Squirrel Café is a static website: there is no user login, no database and no contact form. We set **no cookies**, we don't profile you, and we don't track you across websites or over time. The only content from a third party that can set cookies are the interactive trip maps in a few journal posts - and those are loaded only if you click to load them; see "Interactive maps" below. We don't know who you are unless you choose to email us or place an order.
 
 We do count page views, using a privacy-friendly analytics service that works without cookies and without personal data - see "Visitor statistics" below.
 
@@ -55,6 +55,16 @@ If you write to us - for example via the "Get in touch" / "Say hello" links on t
 **Fulfilment.** Prints and stickers are produced to order by our print partner **Prodigi** (Prodigi Group Ltd., United Kingdom), who dispatch directly to you. To do that, we pass on the delivery address and the items ordered - nothing else, and only for the purpose of shipping your order. See [Prodigi's Privacy Policy](https://www.prodigi.com/privacy/).
 
 **Why and how long.** We process this data to perform the purchase contract with you (Art. 31 para. 2 lit. a FADP; Art. 6 para. 1 lit. b GDPR) and keep order records for as long as Swiss bookkeeping obligations require.
+
+## Interactive maps (Google My Maps)
+
+Some journal posts show an interactive map of a trip, hosted by **Google** (Google Ireland Ltd., Gordon House, Barrow Street, Dublin 4, Ireland, and Google LLC, USA).
+
+These maps are **not loaded automatically**. What you see at first is a placeholder on our own server; the map itself is only requested after you click "Load the interactive map". Until you do, no data whatsoever is sent to Google - no request, no IP address, and no cookie of Google's can reach your device. This is why these maps do not require a consent banner.
+
+If you do load a map, your browser connects directly to Google. In doing so, Google receives your IP address and technical connection data, and may store or read cookies and similar identifiers on your device; if you are signed in to a Google account, Google can associate the visit with that account. Data may be transferred to the USA. We have no influence over this processing and receive no data from it ourselves. Your choice applies to that one map on that one page only - it is not remembered, so nothing is stored on your device for it, and each map has to be loaded again on your next visit.
+
+**Legal basis.** Loading a map, and the resulting transfer of data to Google, happens only on your explicit request; we rely on your consent, which you give by clicking the button and can simply withhold by not clicking it (Art. 31 para. 1 FADP; Art. 6 para. 1 lit. a and Art. 49 para. 1 lit. a GDPR). See [Google's Privacy Policy](https://policies.google.com/privacy).
 
 ## Social media and external links
 

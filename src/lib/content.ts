@@ -48,9 +48,39 @@ function wrapImageGalleries(htmlStr: string): string {
   return out;
 }
 
+const escapeHtml = (s: string) =>
+  s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
+/**
+ * Turns `[map:<my-maps-id>|Caption]` on its own line into a Google My Maps
+ * embed that is *not* loaded yet: only a placeholder with a button. The iframe
+ * is inserted by `MapEmbeds` once the reader asks for it, so nothing is
+ * requested from Google — and no cookie of theirs can be set — unless the
+ * reader chooses to load the map. That is what keeps this site free of a
+ * consent banner; see the "Interactive maps" section of the privacy policy.
+ */
+function renderMapEmbeds(htmlStr: string): string {
+  return htmlStr.replace(
+    /<p>\[map:([A-Za-z0-9_-]+)(?:\|([^\]]*))?\]<\/p>/g,
+    (_m, mid: string, caption = "") => {
+      const label = escapeHtml(caption.trim() || "Interactive map");
+      return (
+        `<figure class="map-embed" data-map-embed="${escapeHtml(mid)}">` +
+        `<div class="map-embed-frame" data-map-frame>` +
+        `<div class="map-embed-consent">` +
+        `<p class="map-embed-title">${label}</p>` +
+        `<p class="map-embed-note">This map is hosted by Google. Loading it sends your IP address to Google and may allow Google to set cookies on your device. Nothing is sent until you click.</p>` +
+        `<button type="button" data-map-load data-map-title="${label}">Load the interactive map</button>` +
+        `<p class="map-embed-note"><a href="https://www.google.com/maps/d/u/0/embed?mid=${escapeHtml(mid)}&amp;ehbc=2E312F" target="_blank" rel="noopener noreferrer">Open the map at Google instead</a> · <a href="/datenschutz/">Privacy policy</a></p>` +
+        `</div></div></figure>`
+      );
+    }
+  );
+}
+
 export async function markdownToHtml(markdown: string): Promise<string> {
   const processed = await remark().use(html).process(markdown);
-  return wrapImageGalleries(processed.toString());
+  return renderMapEmbeds(wrapImageGalleries(processed.toString()));
 }
 
 export interface JournalPost {

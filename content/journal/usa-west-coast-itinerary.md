@@ -10,9 +10,6 @@ tags: ["westcoast-roadtrip", "usa", "west coast", "pacific northwest", "californ
 ![our favorite picture from our road trip was taken on the main road past sunset in the valley of fire. luckily we were not run over by a truck.](/images/journal/usa-west-coast-itinerary/00-Valley-of-Fire-State-Park-2C-Nevada-on-the-main-road-past-sunset.jpg)
 *Our favorite picture from our road trip was taken on the main road past sunset in the Valley of Fire. Luckily we were not run over by a truck.*
 
-![the franklyne route. there's an interactive map of the places we visited if you scroll down!](/images/journal/usa-west-coast-itinerary/01-Perfect-Itinerary-Interactive-Map-USA-West-Coast-Road-Trip-1-Month.jpeg)
-*The Franklyne route*
-
 In mid August, Evelyne and I left Switzerland for a month road tripping the West Coast of the United States. With our rental Toyota 4Runner from Seattle, we have traveled 5,001 miles of open roads, seen breathtaking sunsets on giant rocks, two brown bears, explored thousand year old forests, jumped into glacier lakes, escaped a wildfire, slept on the road, and made friends with squirrels.
 
 We designed our route the scenic way, to see as much as possible in a very short time, so you will find the itinerary most helpful if you like to drive as much as we do. This blog post is meant to be a summary where we show you our entire itinerary with all the highlights we loved on our road trip. Evelyne and I are working hard to post articles and thoughts about the individual places - they will be up soon!
@@ -70,6 +67,8 @@ Every around 5 days we stayed either at a privately owned RV park, or in a hotel
 I have dreamed of a West Coast road trip ever since 2015. A little while ago, I started drafting an itinerary for two separate road trips: a Pacific Northwest one, and a Californian one. When we booked our round trip flights to and from Seattle to make my dream come true, we connected the dots and added a few more exciting spots to come full circle. Here's the result, an interactive map for you to play around with!
 
 Of course, we've created the map after our road trip, so you don't have to go to places we thought were lame and can look at the exciting part!
+
+[map:198PDzMYMfGIs-0fRpFjUvOFeT44Sjlc|The Franklyne route — our one month USA West Coast road trip]
 
 ### The Pacific Northwest, Part 1
 

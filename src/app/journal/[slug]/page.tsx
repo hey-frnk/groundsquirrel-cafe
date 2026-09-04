@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import JsonLd from "@/components/JsonLd";
+import MapEmbeds from "@/components/MapEmbeds";
 import { getAllJournalPosts, getJournalPost } from "@/lib/content";
 import { SITE_URL, organization } from "@/lib/seo";
 
@@ -94,6 +95,8 @@ export default async function JournalPostPage({
         className="prose prose-lg mt-12 max-w-none"
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}
       />
+      {/* Wires the click-to-load buttons of any [map:…] embeds in the post. */}
+      <MapEmbeds />
 
       {post.tags?.length > 0 && (
         <div className="mt-14 flex flex-wrap justify-center gap-2 border-t border-ink/10 pt-8">

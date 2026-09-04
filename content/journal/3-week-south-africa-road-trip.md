@@ -9,9 +9,6 @@ tags: ["road trip", "africa", "beach", "nature", "wildlife", "cape town", "south
 
 ![](/images/journal/south-africa-road-trip/IMG_7740.webp)
 
-![south africa: from the bush… there's an interactive map of the places we visited if you scroll down!](/images/journal/south-africa-road-trip/south-africa-the-bush-roadtrip-map.webp)
-*South Africa: from the bush… there's an interactive map of the places we visited if you scroll down!*
-
 Sometimes, I close my eyes, and it takes me back to the terrace of our tented camp, where a soft crackling sound of the warm campfire peeks through the sea of frogs quacking. It has rained in the bush. And what Evelyne describes as golden and dry is a lush, green and lively summer where everything breathes and flows. I start singing Caamp with Evelyne on the ukulele until we got interrupted - our dinner is ready!
 
 ## Our Itinerary
@@ -40,8 +37,6 @@ Excited and curious? No more beating around the bush, here's our itinerary!
 - 1 day Cape of Good Hope & Boulders Beach
 - 2 days Cape Town
 
-![south africa: … to cape town & the garden route. scroll down to browse the interactive map!](/images/journal/south-africa-road-trip/Screenshot-2024-12-16-map.webp)
-*South Africa: … to Cape Town & the Garden Route. Scroll down to browse the interactive map!*
 ![there are so many beautiful waterfalls on the way](/images/journal/south-africa-road-trip/IMG_1608.webp)
 *There are so many beautiful waterfalls on the way*
 
@@ -50,6 +45,8 @@ Excited and curious? No more beating around the bush, here's our itinerary!
 When Evelyne left Switzerland to become a field guide in the bush of South Africa, I was most excited about the opportunity for a South African road trip. A little while ago, I started drafting an itinerary for two separate road trips: one for the bush in Mpumalanga and Limpopo, and one for the Garden Route. We connected the dots and added a few more exciting spots along the way - here's the result!
 
 Of course, we've mapped it out after our road trip, so you don't have to go to places we thought were lame and can look at the exciting part!
+
+[map:1S249HDCW6s4CrnmNjE3hDOm4yhJf4VM|From the bush to Cape Town — our 3 week South Africa road trip]
 
 ### Getting Around in South Africa
 
