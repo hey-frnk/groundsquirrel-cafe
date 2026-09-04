@@ -4,7 +4,7 @@ date: "2025-04-12"
 author: "Evelyne"
 excerpt: "From greenhouse to supermarket shelf - where do the vegetables in Swiss supermarkets actually come from? We visited a family-run greenhouse in Almería to find out."
 cover: "/images/journal/greenhouse-almeria/IMG_8965.webp"
-categories: ["thoughts"]
+categories: ["thoughts", "foodblog"]
 tags: ["spain", "sustainability", "slow travel", "vegetables", "almeria", "greenhouse", "ecotourism", "sustainable travel", "vegetarian", "vegan", "europe", "vanlife", "andalucia", "agriculture", "farming", "farmer"]
 ---
 

@@ -30,7 +30,7 @@ collections:
         widget: "select"
         multiple: true
         default: ["travel"]
-        options: ["travel", "thoughts", "creativity", "vegan"]
+        options: ["travel", "thoughts", "creativity", "foodblog", "vanlife"]
       - { label: "Tags", name: "tags", widget: "list", default: [] }
       - { label: "Inhalt", name: "body", widget: "markdown" }
 

@@ -150,7 +150,12 @@ export async function getJournalPost(slug: string) {
   };
 }
 
-/** Every category in use, in the order the journal wants to offer them. */
+/**
+ * Every category in use, in the order the journal wants to offer them. Derived
+ * from the posts, so a category the CMS offers (vanlife, say) joins the filter
+ * row by itself the moment the first post is filed under it — and leaves again
+ * when the last one goes.
+ */
 export function getJournalCategories(): string[] {
   const counts = new Map<string, number>();
   for (const post of getAllJournalPosts()) {

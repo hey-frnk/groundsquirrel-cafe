@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import type { JournalPost } from "@/lib/content";
@@ -103,6 +103,35 @@ export function Pinboard({ posts }: { posts: JournalPost[] }) {
   );
 }
 
+/**
+ * The masthead, with room on the right for the category filters. Rendered both
+ * by the browser below and by the fallback while it hydrates, so the heading is
+ * in the static HTML either way.
+ */
+export function JournalHeader({ filters }: { filters?: ReactNode }) {
+  return (
+    <header className="flex flex-wrap items-end justify-between gap-x-10 gap-y-6 border-b border-ink/10 pb-10">
+      <div>
+        <p className="eyebrow">The Ground Squirrel Café</p>
+        <h1 className="mt-5 text-5xl sm:text-7xl">Journal</h1>
+      </div>
+      {filters}
+    </header>
+  );
+}
+
+/** The journal as it stands before the filters hydrate: everything, newest first. */
+export function JournalFallback({ posts }: { posts: JournalPost[] }) {
+  return (
+    <>
+      <JournalHeader />
+      <div className="mt-14 sm:mt-20">
+        <Pinboard posts={posts} />
+      </div>
+    </>
+  );
+}
+
 /** `/journal/?category=travel&tag=hiking`, with empty values left out. */
 function journalHref(next: { category?: string | null; tag?: string | null }) {
   const params = new URLSearchParams();
@@ -167,27 +196,35 @@ export default function JournalBrowser({
 
   return (
     <>
-      <nav aria-label="Filter by category" className="flex flex-wrap gap-2.5">
-        <Link href={journalHref({ tag })} className={pill(!category)}>
-          Everything
-        </Link>
-        {categories.map((c) => (
-          <Link key={c} href={journalHref({ category: c, tag })} className={pill(category === c)}>
-            {c}
-          </Link>
-        ))}
-      </nav>
+      <JournalHeader
+        filters={
+          <nav
+            aria-label="Filter by category"
+            className="flex flex-wrap gap-2.5 sm:justify-end"
+          >
+            <Link href={journalHref({ tag })} className={pill(!category)}>
+              Everything
+            </Link>
+            {categories.map((c) => (
+              <Link
+                key={c}
+                href={journalHref({ category: c, tag })}
+                className={pill(category === c)}
+              >
+                {c}
+              </Link>
+            ))}
+          </nav>
+        }
+      />
 
-      <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-3">
-        <button
-          type="button"
-          onClick={() => setTagsOpen((open) => !open)}
-          aria-expanded={tagsOpen}
-          className="text-[0.7rem] uppercase tracking-[0.16em] text-graphite/60 underline decoration-ink/20 underline-offset-4 transition-colors duration-200 hover:text-ink"
-        >
-          {tagsOpen ? "Hide tags" : `Browse ${tags.length} tags`}
-        </button>
+      <div className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-3">
+        <p className="text-[0.7rem] uppercase tracking-[0.16em] text-graphite/50">
+          {filtered.length} {filtered.length === 1 ? "story" : "stories"}
+        </p>
 
+        {/* The one filter that isn't visible up top: say which tag is on, and
+            let it go with a single click. */}
         {tag && (
           <Link
             href={journalHref({ category })}
@@ -199,30 +236,6 @@ export default function JournalBrowser({
           </Link>
         )}
       </div>
-
-      {tagsOpen && (
-        <div className="mt-5 flex flex-wrap gap-2 border-t border-ink/10 pt-5">
-          {tags.map(([t, count]) => (
-            <Link
-              key={t}
-              href={journalHref({ category, tag: t === tag ? null : t })}
-              className={[
-                "rounded-full border px-3 py-1 text-xs transition-colors duration-200",
-                t === tag
-                  ? "border-rose/50 bg-rose/10 text-ink"
-                  : "border-ink/12 bg-ivory/25 text-graphite/75 hover:border-ink/25 hover:text-ink",
-              ].join(" ")}
-            >
-              {t}
-              <span className="ml-1.5 text-graphite/45">{count}</span>
-            </Link>
-          ))}
-        </div>
-      )}
-
-      <p className="mt-6 text-[0.7rem] uppercase tracking-[0.16em] text-graphite/50">
-        {filtered.length} {filtered.length === 1 ? "story" : "stories"}
-      </p>
 
       <div className="mt-10 sm:mt-14">
         {filtered.length > 0 ? (
@@ -237,6 +250,39 @@ export default function JournalBrowser({
           </p>
         )}
       </div>
+
+      {/* Tags are the long tail — hundreds of them, and mostly interesting once
+          you have already read something. They wait at the end of the page. */}
+      <section className="mt-24 border-t border-ink/10 pt-10">
+        <button
+          type="button"
+          onClick={() => setTagsOpen((open) => !open)}
+          aria-expanded={tagsOpen}
+          className="text-[0.7rem] uppercase tracking-[0.16em] text-graphite/60 underline decoration-ink/20 underline-offset-4 transition-colors duration-200 hover:text-ink"
+        >
+          {tagsOpen ? "Hide tags" : `Browse ${tags.length} tags`}
+        </button>
+
+        {tagsOpen && (
+          <div className="mt-6 flex flex-wrap gap-2">
+            {tags.map(([t, count]) => (
+              <Link
+                key={t}
+                href={journalHref({ category, tag: t === tag ? null : t })}
+                className={[
+                  "rounded-full border px-3 py-1 text-xs transition-colors duration-200",
+                  t === tag
+                    ? "border-rose/50 bg-rose/10 text-ink"
+                    : "border-ink/12 bg-ivory/25 text-graphite/75 hover:border-ink/25 hover:text-ink",
+                ].join(" ")}
+              >
+                {t}
+                <span className="ml-1.5 text-graphite/45">{count}</span>
+              </Link>
+            ))}
+          </div>
+        )}
+      </section>
     </>
   );
 }

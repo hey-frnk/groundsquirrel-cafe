@@ -4,7 +4,7 @@ date: "2022-07-02"
 author: "Evelyne"
 excerpt: "No other food has ever taught us so much, raised so many questions, and brought us closer together as this pasta did when Frank and I traveled through the West Coast of the USA in our 4Runner."
 cover: "/images/journal/legendary-fettuccine/2022-08-15-19-35-21.jpg"
-categories: ["thoughts", "creativity", "vegan"]
+categories: ["thoughts", "creativity", "foodblog"]
 tags: ["cooking", "vegan", "travel", "inspiration", "creative writing", "story", "road trip", "camping", "pacific northwest", "cannon beach", "oregon", "washington", "north cascades", "campfire", "westcoast-roadtrip"]
 ---
 
