@@ -34,6 +34,20 @@ collections:
       - { label: "Tags", name: "tags", widget: "list", default: [] }
       - { label: "Inhalt", name: "body", widget: "markdown" }
 
+  # Optional German version of a journal entry. The file name must match the
+  # English entry exactly - that is what pairs the two, and what makes the two
+  # flags appear on the article.
+  - name: "journal-de"
+    label: "Journal (Deutsch)"
+    label_singular: "Deutsche Fassung"
+    folder: "content/journal-de"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Kurzbeschreibung", name: "excerpt", widget: "text", required: false }
+      - { label: "Inhalt", name: "body", widget: "markdown" }
+
   - name: "shop"
     label: "Shop"
     label_singular: "Produkt"

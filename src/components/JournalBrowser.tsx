@@ -3,6 +3,7 @@
 import { useMemo, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import { ChFlag, UsFlag } from "@/components/icons";
 import type { JournalPost } from "@/lib/content";
 
 function formatDate(date: string) {
@@ -45,6 +46,14 @@ function Card({ post, eager }: { post: JournalPost; eager?: boolean }) {
         <p className="eyebrow mt-5">{formatDate(post.date)}</p>
         <h2 className="mt-3 text-xl leading-snug transition-colors duration-300 group-hover:text-rose sm:text-2xl">
           {post.title}
+          {/* Two flags mean the story can also be read in German. */}
+          {post.hasGerman && (
+            <span className="ml-2.5 inline-flex translate-y-[-0.15em] items-center gap-1 align-middle">
+              <UsFlag size={16} />
+              <ChFlag size={16} />
+              <span className="sr-only">Also available in German</span>
+            </span>
+          )}
         </h2>
         <p className="mt-2.5 line-clamp-4 text-sm leading-relaxed text-graphite/85">
           {post.excerpt}
@@ -147,10 +156,15 @@ const LOCATIONS = [
 ];
 
 /** `/journal/?category=travel&tag=hiking`, with empty values left out. */
-function journalHref(next: { category?: string | null; tag?: string | null }) {
+function journalHref(next: {
+  category?: string | null;
+  tag?: string | null;
+  author?: string | null;
+}) {
   const params = new URLSearchParams();
   if (next.category) params.set("category", next.category);
   if (next.tag) params.set("tag", next.tag);
+  if (next.author) params.set("author", next.author);
   const query = params.toString();
   return query ? `/journal/?${query}` : "/journal/";
 }
@@ -193,6 +207,9 @@ export default function JournalBrowser({
   const params = useSearchParams();
   const category = params.get("category")?.toLowerCase() || null;
   const tag = params.get("tag")?.toLowerCase() || null;
+  // Set by the author card at the end of a post: everything Frank wrote, say.
+  // Kept as written for the label, lower-cased for the comparison.
+  const author = params.get("author")?.trim() || null;
   const [tagsOpen, setTagsOpen] = useState(false);
 
   const filtered = useMemo(
@@ -200,9 +217,10 @@ export default function JournalBrowser({
       posts.filter(
         (post) =>
           (!category || post.categories.includes(category)) &&
-          (!tag || post.tags.includes(tag)),
+          (!tag || post.tags.includes(tag)) &&
+          (!author || post.author.toLowerCase() === author.toLowerCase()),
       ),
-    [posts, category, tag],
+    [posts, category, tag, author],
   );
 
   // Only tags that still lead somewhere within the chosen category, so the list
@@ -230,13 +248,13 @@ export default function JournalBrowser({
               {/* Switching category drops the tag: "travel + switzerland",
                   then a click on thoughts, would otherwise leave you staring at
                   a Swiss filter that no longer has anything to show. */}
-              <Link href={journalHref({})} className={pill(!category)}>
+              <Link href={journalHref({ author })} className={pill(!category)}>
                 Everything
               </Link>
               {categories.map((c) => (
                 <Link
                   key={c}
-                  href={journalHref({ category: c })}
+                  href={journalHref({ category: c, author })}
                   className={pill(category === c)}
                 >
                   {c}
@@ -254,6 +272,7 @@ export default function JournalBrowser({
                     key={location.tag}
                     href={journalHref({
                       category,
+                      author,
                       tag: location.tag === tag ? null : location.tag,
                     })}
                     className={smallPill(location.tag === tag)}
@@ -272,11 +291,22 @@ export default function JournalBrowser({
           {filtered.length} {filtered.length === 1 ? "story" : "stories"}
         </p>
 
-        {/* The one filter that isn't visible up top: say which tag is on, and
+        {/* The filters that have no row of their own: say which one is on, and
             let it go with a single click. */}
+        {author && (
+          <Link
+            href={journalHref({ category, tag })}
+            className="inline-flex items-center gap-2 rounded-full border border-rose/40 bg-rose/10 px-3.5 py-1.5 text-[0.7rem] uppercase tracking-[0.16em] text-graphite/80 transition-colors duration-200 hover:border-rose/70"
+          >
+            By {author}
+            <span aria-hidden>×</span>
+            <span className="sr-only">Remove this author filter</span>
+          </Link>
+        )}
+
         {tag && (
           <Link
-            href={journalHref({ category })}
+            href={journalHref({ category, author })}
             className="inline-flex items-center gap-2 rounded-full border border-rose/40 bg-rose/10 px-3.5 py-1.5 text-[0.7rem] uppercase tracking-[0.16em] text-graphite/80 transition-colors duration-200 hover:border-rose/70"
           >
             #{tag}
@@ -317,7 +347,11 @@ export default function JournalBrowser({
             {tags.map(([t, count]) => (
               <Link
                 key={t}
-                href={journalHref({ category, tag: t === tag ? null : t })}
+                href={journalHref({
+                  category,
+                  author,
+                  tag: t === tag ? null : t,
+                })}
                 className={[
                   "rounded-full border px-3 py-1 text-xs transition-colors duration-200",
                   t === tag

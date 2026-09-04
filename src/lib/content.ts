@@ -26,26 +26,125 @@ function readEntry<T extends object>(
   return { slug: filename.replace(/\.md$/, ""), data: data as T, content };
 }
 
+/** One photo from the markdown, with the italic line that captions it. */
+interface Photo {
+  img: string;
+  caption?: string;
+}
+
+/** A paragraph holding nothing but photos and their captions. */
+const PHOTO_PARAGRAPH = /^(?:\s|<img[^>]*>|<em>[^<]*<\/em>|<br\s*\/?>)+$/;
+
+/** A photo is portrait when it is clearly taller than it is wide. */
+function isPortrait(img: string): boolean {
+  const size = measureImage(/src="([^"]*)"/.exec(img)?.[1]);
+  return !!size && size.height > size.width * 1.05;
+}
+
 /**
- * Groups consecutive single-image paragraphs (no caption, no other text between
- * them) into a responsive side-by-side grid, mirroring how these images were
- * grouped in the original Squarespace "gallery" blocks they were migrated from.
- * A single image followed by its own caption paragraph is left untouched.
+ * Reads a paragraph of photos onto the end of `photos`. An `<em>` captions the
+ * photo before it — that is how a caption is written in these posts — and may
+ * arrive in a paragraph of its own, which is why the list is carried in rather
+ * than started fresh each time.
+ */
+function appendPhotos(inner: string, photos: Photo[]): void {
+  for (const m of inner.matchAll(/<img[^>]*>|<em>([^<]*)<\/em>/g)) {
+    const last = photos[photos.length - 1];
+    if (m[0].startsWith("<img")) photos.push({ img: m[0] });
+    else if (last && last.caption === undefined) last.caption = m[1];
+  }
+}
+
+/** Whether this paragraph's italic line is a caption for the photo before it. */
+function isLooseCaption(inner: string, photos: Photo[]): boolean {
+  const last = photos[photos.length - 1];
+  return !inner.includes("<img") && !!last && last.caption === undefined;
+}
+
+/**
+ * Lays out a run of photos.
+ *
+ * Two or more uncaptioned photos in a row become a grid, mirroring the
+ * Squarespace "gallery" blocks these posts were migrated from. Beyond that, two
+ * portrait photos next to each other are set side by side: a tall photo alone
+ * fills the column and pushes the story off the screen, so a run of them turns
+ * the post into a slideshow. As a pair they take about the space of one
+ * landscape photo, captions and all, and the reading keeps its flow.
+ */
+function layOutPhotos(photos: Photo[]): string {
+  const grid = (cells: string[], cols: number, extra = "") =>
+    `<div class="img-gallery${extra}" style="--gallery-cols:${cols}">${cells.join("")}</div>`;
+  const figure = (p: Photo) =>
+    `<figure>${p.img}${p.caption ? `<figcaption>${p.caption}</figcaption>` : ""}</figure>`;
+
+  const parts: string[] = [];
+  let i = 0;
+  while (i < photos.length) {
+    let plain = i;
+    while (plain < photos.length && photos[plain].caption === undefined) plain++;
+    if (plain - i >= 2) {
+      const run = photos.slice(i, plain);
+      parts.push(grid(run.map((p) => p.img), run.length >= 3 ? 3 : 2));
+      i = plain;
+      continue;
+    }
+
+    const [first, second] = [photos[i], photos[i + 1]];
+    if (second && isPortrait(first.img) && isPortrait(second.img)) {
+      parts.push(grid([figure(first), figure(second)], 2, " is-pair"));
+      i += 2;
+      continue;
+    }
+
+    parts.push(`<p>${first.img}</p>`);
+    if (first.caption) parts.push(`<p><em>${first.caption}</em></p>`);
+    i++;
+  }
+  return parts.join("");
+}
+
+/**
+ * Re-lays every stretch of photos in a rendered post. Photos reach us in two
+ * shapes — one paragraph per photo, or several sharing a paragraph when the
+ * markdown had no blank line between them — and both are read into the same
+ * list first, so the layout does not depend on how the lines happened to be
+ * typed. An italic line that is not a caption (a sign-off, say) ends the
+ * stretch and is left exactly where it was.
  */
 function wrapImageGalleries(htmlStr: string): string {
-  const toGrid = (imgs: string[]) => {
-    const cols = imgs.length >= 3 ? 3 : 2;
-    return `<div class="img-gallery" style="--gallery-cols:${cols}">${imgs.join("")}</div>`;
-  };
-  // Consecutive image lines with no blank line between them become one <p>
-  // containing multiple <img> tags (remark's soft-break behavior).
-  let out = htmlStr.replace(/<p>((?:\s*<img[^>]*>\s*){2,})<\/p>/g, (_m, inner: string) =>
-    toGrid(inner.match(/<img[^>]*>/g) ?? [])
-  );
-  // Consecutive image lines separated by blank lines become separate
-  // <p><img></p> blocks in a row — group those too.
-  out = out.replace(/(?:<p><img[^>]*><\/p>\s*){2,}/g, (run) => toGrid(run.match(/<img[^>]*>/g) ?? []));
-  return out;
+  const paragraphs = [...htmlStr.matchAll(/<p>([\s\S]*?)<\/p>/g)];
+
+  const out: string[] = [];
+  let cursor = 0;
+  for (let i = 0; i < paragraphs.length; i++) {
+    const first = paragraphs[i];
+    if (!PHOTO_PARAGRAPH.test(first[1]) || !first[1].trimStart().startsWith("<img")) continue;
+
+    const photos: Photo[] = [];
+    appendPhotos(first[1], photos);
+
+    // Take in every photo paragraph that follows with only whitespace between.
+    let last = first;
+    while (i + 1 < paragraphs.length) {
+      const next = paragraphs[i + 1];
+      const between = htmlStr.slice(last.index + last[0].length, next.index);
+      const inner = next[1];
+      const continues =
+        !between.trim() &&
+        PHOTO_PARAGRAPH.test(inner) &&
+        (inner.includes("<img") || isLooseCaption(inner, photos));
+      if (!continues) break;
+      appendPhotos(inner, photos);
+      last = next;
+      i++;
+    }
+
+    out.push(htmlStr.slice(cursor, first.index));
+    out.push(layOutPhotos(photos));
+    cursor = last.index + last[0].length;
+  }
+  out.push(htmlStr.slice(cursor));
+  return out.join("");
 }
 
 const escapeHtml = (s: string) =>
@@ -106,6 +205,8 @@ export interface JournalPost {
   /** Broad section the post belongs to ("travel", "thoughts", …). */
   categories: string[];
   tags: string[];
+  /** True when a `<slug>.de.md` translation sits next to the post. */
+  hasGerman?: boolean;
   /** Intrinsic size of `cover`, when it could be read — see `measureCover`. */
   coverWidth?: number;
   coverHeight?: number;
@@ -121,6 +222,35 @@ function measureCover(cover?: string): ImageDimensions | undefined {
   return imageSize(path.join(process.cwd(), "public", cover));
 }
 
+/**
+ * A German version of a post lives in `content/journal-de/` under the very same
+ * slug, and holds only a title, an excerpt and the translated body — date,
+ * cover, categories and tags stay with the English post and are never repeated.
+ * Its own folder (rather than a `.de.md` beside the post) keeps it out of the
+ * journal listing and gives the CMS a collection of its own. A post with no such
+ * file is simply English only; there is no half-translated state to handle.
+ */
+function germanPath(slug: string) {
+  return path.join(CONTENT_DIR, "journal-de", `${slug}.md`);
+}
+
+export interface GermanVersion {
+  title: string;
+  excerpt?: string;
+  contentHtml: string;
+}
+
+async function readGermanVersion(slug: string): Promise<GermanVersion | undefined> {
+  const full = germanPath(slug);
+  if (!fs.existsSync(full)) return undefined;
+  const { data, content } = matter(fs.readFileSync(full, "utf8"));
+  return {
+    title: (data.title as string) ?? "",
+    excerpt: data.excerpt as string | undefined,
+    contentHtml: await markdownToHtml(content),
+  };
+}
+
 export function getAllJournalPosts(): JournalPost[] {
   return readDir("journal")
     .map((filename) => {
@@ -131,6 +261,7 @@ export function getAllJournalPosts(): JournalPost[] {
         slug,
         categories: normalizeLabels(data.categories),
         tags: normalizeLabels(data.tags),
+        hasGerman: fs.existsSync(germanPath(slug)),
         coverWidth: size?.width,
         coverHeight: size?.height,
       };
@@ -147,6 +278,7 @@ export async function getJournalPost(slug: string) {
     categories: normalizeLabels(data.categories),
     tags: normalizeLabels(data.tags),
     contentHtml,
+    german: await readGermanVersion(slug),
   };
 }
 
@@ -167,6 +299,39 @@ export function getJournalCategories(): string[] {
   return [...counts.entries()]
     .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
     .map(([category]) => category);
+}
+
+/** The person behind a post, as the crew page already describes them. */
+export interface JournalAuthor {
+  /** The name as the posts spell it — "Frank", "Evelyne". */
+  author: string;
+  name: string;
+  role: string;
+  photo: string;
+  /** The opening sentence of their crew entry, enough to say who they are. */
+  excerpt: string;
+}
+
+/**
+ * Pairs the author of a post with their crew entry. Posts carry a first name
+ * and the crew a full one, so the first name is what matches; an author with no
+ * crew entry simply has no card, and the post still reads fine without one.
+ */
+export function getJournalAuthor(author: string): JournalAuthor | undefined {
+  const wanted = author.trim().toLowerCase();
+  for (const filename of readDir("crew")) {
+    const { data, content } = readEntry<CrewMember>("crew", filename);
+    if (!data.name?.toLowerCase().startsWith(wanted)) continue;
+    const [opening] = content.trim().split(/(?<=\.)\s/);
+    return {
+      author: author.trim(),
+      name: data.name,
+      role: data.role,
+      photo: data.photo,
+      excerpt: opening,
+    };
+  }
+  return undefined;
 }
 
 export interface CrewMember {

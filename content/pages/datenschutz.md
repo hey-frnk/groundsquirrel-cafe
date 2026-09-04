@@ -68,7 +68,7 @@ If you do load a map, your browser connects directly to Google. In doing so, Goo
 
 ## Social media and external links
 
-This site links out to platforms such as **Instagram**, **Etsy**, and **Eduki**. Once you follow such a link and are on their platform, that platform's own privacy policy and cookie practices apply - we have no influence over them. We recommend checking the respective provider's privacy policy directly:
+This site links out to platforms such as **Instagram**, **Etsy**, and **Eduki**. At the end of every journal post there are also "pass it on" links to **Facebook**, **X (Twitter)**, **Pinterest**, **WhatsApp** and your own email program. These are plain hyperlinks, not the platforms' share buttons: no script of theirs runs on this site, nothing is loaded from them, and no data reaches them unless you click - which is why they need no consent banner either. Once you follow such a link and are on their platform, that platform's own privacy policy and cookie practices apply - we have no influence over them. We recommend checking the respective provider's privacy policy directly:
 
 - Instagram / Meta Platforms Ireland Ltd.: [privacy policy](https://privacycenter.instagram.com/policy/)
 - Etsy, Inc.: [privacy policy](https://www.etsy.com/legal/privacy/)
