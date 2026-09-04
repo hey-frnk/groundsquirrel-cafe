@@ -3,6 +3,7 @@
 import { useMemo, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import { ChFlag, UsFlag } from "@/components/icons";
 import type { JournalPost } from "@/lib/content";
 
 function formatDate(date: string) {
@@ -45,6 +46,14 @@ function Card({ post, eager }: { post: JournalPost; eager?: boolean }) {
         <p className="eyebrow mt-5">{formatDate(post.date)}</p>
         <h2 className="mt-3 text-xl leading-snug transition-colors duration-300 group-hover:text-rose sm:text-2xl">
           {post.title}
+          {/* Two flags mean the story can also be read in German. */}
+          {post.hasGerman && (
+            <span className="ml-2.5 inline-flex translate-y-[-0.15em] items-center gap-1 align-middle">
+              <UsFlag size={16} />
+              <ChFlag size={16} />
+              <span className="sr-only">Also available in German</span>
+            </span>
+          )}
         </h2>
         <p className="mt-2.5 line-clamp-4 text-sm leading-relaxed text-graphite/85">
           {post.excerpt}

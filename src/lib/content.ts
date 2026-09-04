@@ -106,6 +106,8 @@ export interface JournalPost {
   /** Broad section the post belongs to ("travel", "thoughts", …). */
   categories: string[];
   tags: string[];
+  /** True when a `<slug>.de.md` translation sits next to the post. */
+  hasGerman?: boolean;
   /** Intrinsic size of `cover`, when it could be read — see `measureCover`. */
   coverWidth?: number;
   coverHeight?: number;
@@ -121,6 +123,35 @@ function measureCover(cover?: string): ImageDimensions | undefined {
   return imageSize(path.join(process.cwd(), "public", cover));
 }
 
+/**
+ * A German version of a post lives in `content/journal-de/` under the very same
+ * slug, and holds only a title, an excerpt and the translated body — date,
+ * cover, categories and tags stay with the English post and are never repeated.
+ * Its own folder (rather than a `.de.md` beside the post) keeps it out of the
+ * journal listing and gives the CMS a collection of its own. A post with no such
+ * file is simply English only; there is no half-translated state to handle.
+ */
+function germanPath(slug: string) {
+  return path.join(CONTENT_DIR, "journal-de", `${slug}.md`);
+}
+
+export interface GermanVersion {
+  title: string;
+  excerpt?: string;
+  contentHtml: string;
+}
+
+async function readGermanVersion(slug: string): Promise<GermanVersion | undefined> {
+  const full = germanPath(slug);
+  if (!fs.existsSync(full)) return undefined;
+  const { data, content } = matter(fs.readFileSync(full, "utf8"));
+  return {
+    title: (data.title as string) ?? "",
+    excerpt: data.excerpt as string | undefined,
+    contentHtml: await markdownToHtml(content),
+  };
+}
+
 export function getAllJournalPosts(): JournalPost[] {
   return readDir("journal")
     .map((filename) => {
@@ -131,6 +162,7 @@ export function getAllJournalPosts(): JournalPost[] {
         slug,
         categories: normalizeLabels(data.categories),
         tags: normalizeLabels(data.tags),
+        hasGerman: fs.existsSync(germanPath(slug)),
         coverWidth: size?.width,
         coverHeight: size?.height,
       };
@@ -147,6 +179,7 @@ export async function getJournalPost(slug: string) {
     categories: normalizeLabels(data.categories),
     tags: normalizeLabels(data.tags),
     contentHtml,
+    german: await readGermanVersion(slug),
   };
 }
 

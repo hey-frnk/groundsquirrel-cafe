@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import JsonLd from "@/components/JsonLd";
+import LanguageSwitch from "@/components/LanguageSwitch";
 import MapEmbeds from "@/components/MapEmbeds";
 import { getAllJournalPosts, getJournalPost } from "@/lib/content";
 import { SITE_URL, organization } from "@/lib/seo";
@@ -83,9 +84,25 @@ export default async function JournalPostPage({
             day: "numeric",
           })}
         </p>
-        <h1 className="mx-auto mt-6 max-w-3xl text-balance text-3xl leading-[1.12] sm:text-5xl">
+        <h1
+          data-lang="en"
+          className="mx-auto mt-6 max-w-3xl text-balance text-3xl leading-[1.12] sm:text-5xl"
+        >
           {post.title}
         </h1>
+        {/* Both versions are in the page; LanguageSwitch hides one of them. Until
+            it hydrates the German one stays hidden, so the page reads correctly
+            with no JavaScript at all. */}
+        {post.german && (
+          <h1
+            data-lang="de"
+            lang="de"
+            hidden
+            className="mx-auto mt-6 max-w-3xl text-balance text-3xl leading-[1.12] sm:text-5xl"
+          >
+            {post.german.title}
+          </h1>
+        )}
         <p className="mt-6 text-[0.7rem] uppercase tracking-[0.2em] text-graphite/60">
           Written by {post.author}
           {post.categories.map((category) => (
@@ -102,12 +119,24 @@ export default async function JournalPostPage({
             </span>
           ))}
         </p>
+
+        {post.german && <LanguageSwitch />}
       </header>
 
       <div
+        data-lang="en"
         className="prose prose-lg mt-12 max-w-none"
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}
       />
+      {post.german && (
+        <div
+          data-lang="de"
+          lang="de"
+          hidden
+          className="prose prose-lg mt-12 max-w-none"
+          dangerouslySetInnerHTML={{ __html: post.german.contentHtml }}
+        />
+      )}
       {/* Wires the click-to-load buttons of any [map:…] embeds in the post. */}
       <MapEmbeds />
 
