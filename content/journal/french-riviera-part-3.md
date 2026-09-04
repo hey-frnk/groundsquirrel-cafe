@@ -4,7 +4,8 @@ date: "2023-06-06"
 author: "Frank"
 excerpt: "Get lost running down lavender fields in the southern French countryside of Provence. Sun down low, light in a golden glow that will make you remember the moment. For infinity."
 cover: "/images/journal/french-riviera-part-3/IMG_6703.jpg"
-tags: ["france", "europe", "travel", "friends", "roadtrip"]
+categories: ["travel"]
+tags: ["france", "europe", "travel", "friends", "road trip"]
 ---
 
 Get lost running down lavender fields in the southern French countryside of Provence. Sun down low, light in a golden glow that will make you remember the moment. For infinity. And we have found it, in the perfect sunset.

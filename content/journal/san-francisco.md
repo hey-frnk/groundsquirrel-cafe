@@ -4,7 +4,8 @@ date: "2023-06-08"
 author: "Frank"
 excerpt: "Walking the streets of San Francisco was one of Evelyne's biggest childhood dreams. Part of our one month USA West Coast road trip series."
 cover: "/images/journal/san-francisco/DSC_0316.jpg"
-tags: ["westcoast-roadtrip", "san francisco", "california", "city trip", "sightseeing", "vsco", "granola girl", "bay area", "pacific northwest", "road trip", "streetart", "golden gate", "golden gate bridge", "tiburon"]
+categories: ["travel"]
+tags: ["westcoast-roadtrip", "san francisco", "california", "city trip", "sightseeing", "vsco", "granola girl", "bay area", "pacific northwest", "road trip", "streetart", "golden gate", "golden gate bridge", "tiburon", "north america", "usa"]
 ---
 
 > "Walking the streets of San Francisco was one of my biggest childhood dreams. Back then, I listened to Scott McKenzie for hours, while my father told me stories about his time he road tripped Northern California while he was young." - Evelyne

@@ -83,6 +83,19 @@ export async function markdownToHtml(markdown: string): Promise<string> {
   return renderMapEmbeds(wrapImageGalleries(processed.toString()));
 }
 
+/**
+ * Categories and tags are typed by hand in the CMS, and the same label came out
+ * of Squarespace in several spellings ("Big Five", "big five"). Lower-casing and
+ * de-duplicating them here means one label is one filter, everywhere.
+ */
+function normalizeLabels(labels: unknown): string[] {
+  if (!Array.isArray(labels)) return [];
+  const seen = new Set<string>();
+  return labels
+    .map((l) => (typeof l === "string" ? l.trim().toLowerCase() : ""))
+    .filter((l) => l && !seen.has(l) && seen.add(l));
+}
+
 export interface JournalPost {
   slug: string;
   title: string;
@@ -90,6 +103,8 @@ export interface JournalPost {
   author: string;
   excerpt: string;
   cover: string;
+  /** Broad section the post belongs to ("travel", "thoughts", …). */
+  categories: string[];
   tags: string[];
   /** Intrinsic size of `cover`, when it could be read — see `measureCover`. */
   coverWidth?: number;
@@ -111,7 +126,14 @@ export function getAllJournalPosts(): JournalPost[] {
     .map((filename) => {
       const { slug, data } = readEntry<JournalPost>("journal", filename);
       const size = measureCover(data.cover);
-      return { ...data, slug, coverWidth: size?.width, coverHeight: size?.height };
+      return {
+        ...data,
+        slug,
+        categories: normalizeLabels(data.categories),
+        tags: normalizeLabels(data.tags),
+        coverWidth: size?.width,
+        coverHeight: size?.height,
+      };
     })
     .sort((a, b) => (a.date < b.date ? 1 : -1));
 }
@@ -119,7 +141,32 @@ export function getAllJournalPosts(): JournalPost[] {
 export async function getJournalPost(slug: string) {
   const { data, content } = readEntry<JournalPost>("journal", `${slug}.md`);
   const contentHtml = await markdownToHtml(content);
-  return { ...data, slug, contentHtml };
+  return {
+    ...data,
+    slug,
+    categories: normalizeLabels(data.categories),
+    tags: normalizeLabels(data.tags),
+    contentHtml,
+  };
+}
+
+/**
+ * Every category in use, in the order the journal wants to offer them. Derived
+ * from the posts, so a category the CMS offers (vanlife, say) joins the filter
+ * row by itself the moment the first post is filed under it — and leaves again
+ * when the last one goes.
+ */
+export function getJournalCategories(): string[] {
+  const counts = new Map<string, number>();
+  for (const post of getAllJournalPosts()) {
+    for (const category of post.categories) {
+      counts.set(category, (counts.get(category) ?? 0) + 1);
+    }
+  }
+  // Busiest first, so "travel" leads and a one-off category doesn't open the row.
+  return [...counts.entries()]
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    .map(([category]) => category);
 }
 
 export interface CrewMember {

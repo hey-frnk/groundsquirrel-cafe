@@ -4,7 +4,8 @@ date: "2022-08-07"
 author: "Frank"
 excerpt: "Dispersed camping in the almost wild, ice cream in the old town of Nice, and the most beautiful sunset I have ever seen, at a hidden cove called Plage de la Madrague."
 cover: "/images/journal/french-riviera-part-1/IMG_6283.jpg"
-tags: ["europe", "france", "friends", "travel", "roadtrip", "cote d azur"]
+categories: ["travel"]
+tags: ["europe", "france", "friends", "travel", "road trip", "cote d azur"]
 ---
 
 *Hold me when the sun is golden.*

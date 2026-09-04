@@ -4,7 +4,8 @@ date: "2022-12-07"
 author: "Frank"
 excerpt: "A diary of driving down the mystic and rugged coastline of Oregon and how we felt like we lived in a vanlife dream, with wild-picked blackberries, sourdough cinnamon raisin bread, and our bed set up in the back of our car facing the wild ocean."
 cover: "/images/journal/oregon-coast-camping-diaries/2022-08-17-15-27-37.jpg"
-tags: ["westcoast-roadtrip", "vanlife", "travel", "inspiration", "granola", "hipster", "oregon", "pacific northwest", "beach", "camping", "roadtrip"]
+categories: ["travel"]
+tags: ["westcoast-roadtrip", "vanlife", "travel", "inspiration", "granola", "hipster", "oregon", "pacific northwest", "beach", "camping", "road trip", "north america", "usa"]
 ---
 
 ![pulling over to see the sea is always worth it](/images/journal/oregon-coast-camping-diaries/299796332_1996679753870900_5517364038630903003_n.jpg)

@@ -88,6 +88,19 @@ export default async function JournalPostPage({
         </h1>
         <p className="mt-6 text-[0.7rem] uppercase tracking-[0.2em] text-graphite/60">
           Written by {post.author}
+          {post.categories.map((category) => (
+            <span key={category}>
+              <span aria-hidden className="mx-2.5 text-graphite/30">
+                /
+              </span>
+              <Link
+                href={`/journal/?category=${encodeURIComponent(category)}`}
+                className="transition-colors duration-200 hover:text-ink"
+              >
+                {category}
+              </Link>
+            </span>
+          ))}
         </p>
       </header>
 
@@ -100,13 +113,16 @@ export default async function JournalPostPage({
 
       {post.tags?.length > 0 && (
         <div className="mt-14 flex flex-wrap justify-center gap-2 border-t border-ink/10 pt-8">
+          {/* Every tag leads to the journal filtered by it — the way the tags
+              on the old Squarespace blog did. */}
           {post.tags.map((tag) => (
-            <span
+            <Link
               key={tag}
-              className="rounded-full border border-ink/12 bg-ivory/25 px-3.5 py-1.5 text-[0.65rem] uppercase tracking-[0.16em] text-graphite/75"
+              href={`/journal/?tag=${encodeURIComponent(tag)}`}
+              className="rounded-full border border-ink/12 bg-ivory/25 px-3.5 py-1.5 text-[0.65rem] uppercase tracking-[0.16em] text-graphite/75 transition-colors duration-200 hover:border-ink/30 hover:text-ink"
             >
               {tag}
-            </span>
+            </Link>
           ))}
         </div>
       )}

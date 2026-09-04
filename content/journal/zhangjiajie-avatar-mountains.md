@@ -4,7 +4,8 @@ date: "2024-12-04"
 author: "Frank"
 excerpt: "This blog tells you all about how to travel the Avatar Mountains in Zhang Jia Jie, China - just like the mountains, the names of this place are confusing, so we hope to make things easier for you."
 cover: "/images/journal/zhangjiajie-avatar-mountains/IMG_5362.jpg"
-tags: ["china", "zhangjiajie", "asia", "travel", "national park", "hiking", "outdoors", "nature", "wulingyuan", "baofeng lake", "zhangjiajie national park", "tianzi mountain", "tianzishan", "zhangjiajie itinerary"]
+categories: ["travel"]
+tags: ["china", "zhangjiajie", "asia", "travel", "national park", "hiking", "outdoors", "nature", "wulingyuan", "baofeng lake", "zhangjiajie national park", "tianzi mountain", "tianzishan", "zhangjiajie itinerary", "zhangjiajie tips", "yuanjiajie", "outdoor travel china", "unique places in china", "travel inspiration china", "adventure travel in china", "famous chinese landmarks"]
 ---
 
 This blog tells you all about how to travel the Avatar Mountains in Zhang Jia Jie in China. Just like the mountains, the names of this place are confusing and used interchangeably, so we really hope to make things easier for you with this blog.
