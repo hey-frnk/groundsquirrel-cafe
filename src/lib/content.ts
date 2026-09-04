@@ -174,6 +174,49 @@ function wrapImageGalleries(htmlStr: string): string {
   return out.join("");
 }
 
+/**
+ * Takes the float back off a photo that has nothing to wrap around it.
+ *
+ * A float only earns its place when text runs down its side. If the next thing
+ * in the post is a heading, another photo, or the end of the article, the photo
+ * would sit half-width in an empty row instead — so it goes back to being an
+ * ordinary photo. Blocks that clear the float (headings, galleries, quotes) end
+ * the search; lists and paragraphs count towards it.
+ */
+function dropOrphanFloats(htmlStr: string): string {
+  // How much text it takes to fill the space beside a photo. In the column the
+  // posts are set in, a floated photo is about 352px wide and the text beside it
+  // runs at roughly 50 characters per 30px line — so a photo needs about as many
+  // characters as it is pixels tall to be covered. Six tenths of that is enough:
+  // a little air under a photo is normal, a photo hanging beside nothing is not.
+  const FLOAT_WIDTH = 352;
+  const enoughFor = (img: string) => {
+    const size = measureImage(/src="([^"]*)"/.exec(img)?.[1]?.split("#")[0]);
+    const height = size ? (FLOAT_WIDTH * size.height) / size.width : FLOAT_WIDTH;
+    return Math.max(200, Math.round(height * 0.6));
+  };
+  const FLOAT = /<figure class="img-float is-(left|right)">(<img[^>]*>)(?:<figcaption>([^<]*)<\/figcaption>)?<\/figure>/g;
+
+  return htmlStr.replace(FLOAT, (whole, _side, img: string, caption: string | undefined, at: number) => {
+    const enough = enoughFor(img);
+    let rest = htmlStr.slice(at + whole.length);
+    let beside = 0;
+    for (;;) {
+      const block = /^\s*<(p|ul|ol)(?:\s[^>]*)?>([\s\S]*?)<\/\1>/.exec(rest);
+      // A heading, a gallery, another photo — anything else clears the float.
+      if (!block) break;
+      const [matched, , inner] = block;
+      // A caption paragraph belongs to a photo, not to the reading.
+      const isCaption = /^<em>[^<]*<\/em>$/.test(inner.trim());
+      if (!isCaption) beside += inner.replace(/<[^>]*>/g, "").length;
+      if (beside >= enough) return whole;
+      rest = rest.slice(matched.length);
+    }
+    if (beside >= enough) return whole;
+    return `<p class="img-single">${img}</p>${caption ? `<p><em>${caption}</em></p>` : ""}`;
+  });
+}
+
 const escapeHtml = (s: string) =>
   s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
@@ -206,7 +249,7 @@ function renderMapEmbeds(htmlStr: string): string {
 
 export async function markdownToHtml(markdown: string): Promise<string> {
   const processed = await remark().use(html).process(markdown);
-  return renderMapEmbeds(wrapImageGalleries(processed.toString()));
+  return renderMapEmbeds(dropOrphanFloats(wrapImageGalleries(processed.toString())));
 }
 
 /**

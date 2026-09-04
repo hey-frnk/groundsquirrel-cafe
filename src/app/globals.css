@@ -477,6 +477,10 @@ html {
    Long-form reading
    --------------------------------------------------------------------------- */
 .prose {
+  /* Contains the floated photos below: without this a photo set into the last
+     paragraphs of a post hangs out of the article and lands on top of the tags,
+     the author and the share links. */
+  display: flow-root;
   --tw-prose-body: var(--color-graphite);
   --tw-prose-headings: var(--color-ink);
   --tw-prose-lead: var(--color-graphite);
