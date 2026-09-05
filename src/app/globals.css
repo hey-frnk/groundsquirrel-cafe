@@ -529,6 +529,101 @@ html {
   padding-left: 1.6em;
 }
 
+/* A call to action set as a button rather than a line of text — see the
+   `[button:…]` shorthand in `markdownToHtml`. Centered, because it is an
+   invitation to leave the page rather than part of the reading. */
+.prose .btn-row {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+.prose .btn-row a {
+  text-decoration: none;
+  color: var(--color-cream);
+}
+
+.prose .btn-row a:hover {
+  color: var(--color-ink);
+}
+
+/* ---------------------------------------------------------------------------
+   Table of contents — `[toc|Label]` on a line of its own
+   --------------------------------------------------------------------------- */
+
+/* A long, reference-shaped post — a build write-up, a packing list — is read
+   out of order as often as it is read through, so it gets a way in. Set as a
+   quiet panel in the column rather than a sidebar: the measure here is narrow,
+   and anything standing beside the text would crowd the reading. */
+.prose .post-toc {
+  clear: both;
+  margin-top: 2.4em;
+  margin-bottom: 2.8em;
+  padding: 1.5rem 1.8rem 1.7rem;
+  border: 1px solid color-mix(in srgb, var(--color-ink) 12%, transparent);
+  border-radius: var(--radius-tile);
+  background: color-mix(in srgb, var(--color-ivory) 18%, transparent);
+}
+
+.prose .post-toc-title {
+  margin: 0 0 1.1rem;
+  font-family: var(--font-special-elite), ui-monospace, monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-graphite) 70%, transparent);
+}
+
+.prose .post-toc ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: toc;
+}
+
+.prose .post-toc li {
+  position: relative;
+  margin: 0;
+  padding-left: 2.2rem;
+  line-height: 1.45;
+}
+
+.prose .post-toc li + li {
+  margin-top: 0.6rem;
+}
+
+/* Numbered in the house typewriter, the way the small labels elsewhere are. */
+.prose .post-toc li::before {
+  content: counter(toc, decimal-leading-zero);
+  counter-increment: toc;
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  font-family: var(--font-special-elite), ui-monospace, monospace;
+  font-size: 0.7rem;
+  color: var(--color-rose);
+}
+
+.prose .post-toc a {
+  color: var(--color-graphite);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.prose .post-toc a:hover {
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--color-rose);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+/* The site header stays at the top of the window, so a heading jumped to from
+   the contents has to stop below it rather than under it. */
+.prose :is(h2, h3, h4)[id] {
+  scroll-margin-top: 5.5rem;
+}
+
 .prose .img-gallery {
   display: grid;
   grid-template-columns: repeat(var(--gallery-cols, 2), minmax(0, 1fr));
@@ -793,6 +888,8 @@ html {
 .prose blockquote,
 .prose .img-gallery,
 .prose .img-single,
+.prose .btn-row,
+.prose .post-toc,
 .prose .map-embed {
   clear: both;
 }

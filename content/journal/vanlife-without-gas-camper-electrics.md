@@ -1,6 +1,6 @@
 ---
 title: "Vanlife Without Gas? What Our Camper Electrical System Does All Day"
-date: "2026-09-05"
+date: "2026-09-04"
 author: "Frank"
 excerpt: "An induction cooktop, an espresso machine, a fridge and Starlink - and not a gram of gas. We have been living off-grid in Humbär for more than a year and a half. Here is what we actually use, how much solar comes in, and whether 5 kWh is enough."
 cover: "/images/journal/humbaer-electrics/humbaer-at-golden-hour.webp"
@@ -14,6 +14,8 @@ tags: ["vanlife", "van conversion", "self build", "camper electrics", "solar", "
 We have been living off-grid in Humbär for more than a year and a half now. Thanks to our electrical system, we run ordinary household appliances on the road - an induction cooktop and an espresso machine. A fridge with its own freezer and Starlink are part of our everyday life too.
 
 Are you sizing up the electrics for your own van conversion right now? Then maybe you will find a few pointers here from our daily life: what do we actually use? How much solar comes in? And is a 5 kWh battery really enough for a life without gas and without being permanently plugged in?
+
+[toc|On this page]
 
 ## Cooking in a van without gas - is that possible?
 
