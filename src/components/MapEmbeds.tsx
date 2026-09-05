@@ -24,7 +24,7 @@ export default function MapEmbeds() {
 
       function load() {
         const iframe = document.createElement("iframe");
-        // `ehbc` is the Google My Maps background colour parameter from the
+        // `ehbc` is the Google My Maps background color parameter from the
         // original embed code; `mid` identifies the map itself.
         iframe.src = `https://www.google.com/maps/d/u/0/embed?mid=${encodeURIComponent(mid!)}&ehbc=2E312F`;
         iframe.title = button!.dataset.mapTitle || "Interactive map";

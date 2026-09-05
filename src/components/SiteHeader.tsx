@@ -26,7 +26,7 @@ export default function SiteHeader() {
 
   // The bar is transparent over the top of a page and only earns its background
   // once the page has moved beneath it — so a masthead photograph is never cut
-  // off by a band of colour that had nothing to sit on yet.
+  // off by a band of color that had nothing to sit on yet.
   useEffect(() => {
     const onScroll = () => setLifted(window.scrollY > 12);
     onScroll();

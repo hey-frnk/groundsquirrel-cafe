@@ -149,7 +149,7 @@ export default function ArtGallery({
   plates: ArtPlate[];
   /**
    * `masonry` keeps every painting at its own height, `grid` evens them out,
-   * and `single` centres one plate — a book cover on its own page.
+   * and `single` centers one plate — a book cover on its own page.
    */
   layout?: "masonry" | "grid" | "single";
 }) {

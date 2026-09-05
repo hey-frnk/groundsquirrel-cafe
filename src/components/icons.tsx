@@ -28,8 +28,8 @@ export function TiktokIcon({ size = 17 }: { size?: number }) {
 
 /**
  * The two flags that mark a post as bilingual. Drawn rather than set as emoji:
- * Windows ships no colour flag glyphs at all and would render "US" and "CH" as
- * plain letters instead. The colours are pulled a little towards the paper the
+ * Windows ships no color flag glyphs at all and would render "US" and "CH" as
+ * plain letters instead. The colors are pulled a little toward the paper the
  * site is printed on, so a flag does not shout next to a headline.
  */
 function Flag({ size, children }: { size: number; children: React.ReactNode }) {

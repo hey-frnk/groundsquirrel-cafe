@@ -4,7 +4,7 @@
 /* ---------------------------------------------------------------------------
    Palette
 
-   The five brand colours, unchanged. Everything else here is mixed from them:
+   The five brand colors, unchanged. Everything else here is mixed from them:
    `graphite` is the ink at reading weight, `paper` the warm white a print is
    mounted on, and blush/mist the two pastels thinned out far enough to wash a
    whole section without tinting the photographs on it.
@@ -225,7 +225,7 @@ html {
    Links
    --------------------------------------------------------------------------- */
 
-/* A rule that draws itself in from the left, rather than a colour change. */
+/* A rule that draws itself in from the left, rather than a color change. */
 .link-underline {
   position: relative;
   display: inline-block;
@@ -551,15 +551,31 @@ html {
   }
 }
 
-/* A lone italic line under a photograph is its caption. */
-.prose em:only-child {
+/* Every caption under a photograph, in one voice.
+   A caption reaches the page in three shapes — a lone italic line under a
+   full-width photo, a <figcaption> in a pair of photos, and a <figcaption>
+   under a photo set into the text — and all three have to look identical.
+   They were not: the floated one sat outside `.img-gallery`, so it missed the
+   rule below and fell through to the prose default at 16px, ranged left. */
+.prose em:only-child,
+.prose .img-gallery figcaption,
+.prose .img-float figcaption {
   display: block;
   text-align: center;
   font-style: normal;
   font-size: 0.8125rem;
+  line-height: 1.5;
   letter-spacing: 0.04em;
   color: color-mix(in srgb, var(--color-graphite) 72%, transparent);
+}
+
+.prose em:only-child {
   margin-top: -0.4rem;
+}
+
+.prose .img-gallery figcaption,
+.prose .img-float figcaption {
+  margin-top: 0.6rem;
 }
 
 /* ---------------------------------------------------------------------------
@@ -716,21 +732,20 @@ html {
   }
 }
 
-/* A pair of portrait photos set beside each other keeps its captions. */
+/* A pair of portrait photos set beside each other keeps its captions.
+   The photo sizes itself from its aspect ratio and the caption takes whatever
+   it needs underneath — `height: 100%` from the plain gallery above would hand
+   the whole cell to the photo, and a caption that runs to a second line would
+   then be pushed out of the cell and over the paragraph below. */
 .prose .img-gallery.is-pair figure {
   margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .prose .img-gallery.is-pair img {
   aspect-ratio: 3 / 4;
-}
-
-.prose .img-gallery figcaption {
-  margin-top: 0.6rem;
-  text-align: center;
-  font-size: 0.8125rem;
-  letter-spacing: 0.04em;
-  color: color-mix(in srgb, var(--color-graphite) 72%, transparent);
+  height: auto;
 }
 
 /* Photos in a post open full size — see ImageZoom. */
@@ -780,6 +795,25 @@ html {
 .prose .img-single,
 .prose .map-embed {
   clear: both;
+}
+
+/* A portrait photo is never allowed to run the full width of the column.
+   At the measure the posts are set in, a 3:4 photo would stand over 900px tall
+   — it fills the screen, and the reading stops dead at it. Capping the height
+   and centring what is left keeps a tall photo to about the size of a floated
+   one, which is the size these posts want it at.
+
+   This is deliberately enforced here rather than in the markdown: `#left` and
+   `#right` are only a request, and `dropOrphanFloats` takes the float back off
+   whenever the text beside it happens to come up short — which differs between
+   a post and its translation. So the cap is what actually guarantees it, in
+   every post, in both languages, however the photo got here. Landscape photos
+   are wider than they are tall and never reach the cap, so they are untouched.
+   Clicking still opens the photo full size; see ImageZoom. */
+.prose .img-single img {
+  max-height: 36rem;
+  width: auto;
+  margin-inline: auto;
 }
 
 /* On a phone there is no room for text beside a photo — it goes back to being

@@ -181,7 +181,7 @@ function wrapImageGalleries(htmlStr: string): string {
  * in the post is a heading, another photo, or the end of the article, the photo
  * would sit half-width in an empty row instead — so it goes back to being an
  * ordinary photo. Blocks that clear the float (headings, galleries, quotes) end
- * the search; lists and paragraphs count towards it.
+ * the search; lists and paragraphs count toward it.
  */
 function dropOrphanFloats(htmlStr: string): string {
   // How much text it takes to fill the space beside a photo. In the column the
@@ -632,7 +632,7 @@ export interface StudioProject extends StudioItem {
   lang?: string;
   /** Short selling points, set above the body text. */
   highlights: string[];
-  /** Publisher's data — ISBN, format, pages — as a labelled panel. */
+  /** Publisher's data — ISBN, format, pages — as a labeled panel. */
   details: StudioProjectDetail[];
   /**
    * The masthead names Evelyne as the illustrator by default. Projects that

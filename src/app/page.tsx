@@ -161,7 +161,7 @@ export default function Home() {
                 />
               </Link>
 
-              {/* from sm up the links leave the flow and centre on the badge's
+              {/* from sm up the links leave the flow and center on the badge's
                   own mid-line, so the two sit level */}
               <nav className="flex items-center gap-6 sm:absolute sm:top-1/2 sm:right-0 sm:-translate-y-1/2 sm:gap-9">
                 {NAV_LINKS.map((link) => (
@@ -178,7 +178,7 @@ export default function Home() {
           </div>
 
           {/* The welcome — held to the left half so it doesn't land on top of
-              Evelyne and Frank, who stand right of centre in the film */}
+              Evelyne and Frank, who stand right of center in the film */}
           <div className="relative z-10 mt-auto px-6 pt-10 pb-12 sm:absolute sm:inset-x-0 sm:bottom-0 sm:mt-0 sm:px-10 sm:pt-0 sm:pb-20">
             <div className="mx-auto max-w-7xl">
               <div className="max-w-2xl text-cream">
