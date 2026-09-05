@@ -247,9 +247,111 @@ function renderMapEmbeds(htmlStr: string): string {
   );
 }
 
-export async function markdownToHtml(markdown: string): Promise<string> {
+/**
+ * Turns `[button:<url>|Label]` on its own line into one of the site's pill
+ * buttons. Raw HTML in a post is dropped by remark, and the CMS markdown editor
+ * would mangle it anyway — so a call to action that has to look like a button
+ * rather than a line of text gets the same square-bracket shorthand the maps
+ * use. An external link opens in a new tab and carries `rel="noopener"`, the
+ * way every other outbound link on the site does.
+ */
+function renderButtons(htmlStr: string): string {
+  return htmlStr.replace(
+    /<p>\[button:([^|\]]+)(?:\|([^\]]*))?\]<\/p>/g,
+    (_m, url: string, label = "") => {
+      const href = url.trim();
+      const external = /^https?:\/\//.test(href);
+      const text = escapeHtml(label.trim() || href);
+      return (
+        `<p class="btn-row"><a class="btn btn-primary" href="${escapeHtml(href)}"` +
+        `${external ? ' target="_blank" rel="noopener noreferrer"' : ""}>${text}</a></p>`
+      );
+    }
+  );
+}
+
+/**
+ * Undoes the character references remark writes, so a heading's anchor is built
+ * from the text a reader would say out loud rather than from `&#x27;`.
+ */
+const decodeEntities = (s: string) =>
+  s
+    .replace(/&#x([0-9a-f]+);/gi, (_m, hex: string) => String.fromCodePoint(parseInt(hex, 16)))
+    .replace(/&#(\d+);/g, (_m, dec: string) => String.fromCodePoint(Number(dec)))
+    .replace(/&quot;/g, '"')
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&amp;/g, "&");
+
+/**
+ * The anchor a heading is linked by. Accents are folded rather than dropped, so
+ * a German heading still reads as itself in the address bar
+ * ("langlebigkeit-der-filter") — these links are shared, and a row of stripped
+ * consonants would say nothing about where it leads.
+ */
+function headingSlug(text: string): string {
+  return decodeEntities(text)
+    .replace(/ß/g, "ss")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+/**
+ * Gives every heading in a post an id, and turns `[toc|Label]` on its own line
+ * into a table of contents of the sections below it.
+ *
+ * A build write-up or a packing list is read out of order as often as it is
+ * read through, so the long posts get a way in. Only the h2s are listed: the
+ * h3s under them are parts on a list and questions in an FAQ, and naming all of
+ * them would make the contents longer than the section it introduces.
+ *
+ * `idPrefix` keeps the two language versions of a post apart. Both are in the
+ * page at once — one of them hidden — so without it a heading that happens to
+ * be spelled the same in both would leave two elements fighting over one
+ * anchor, and the link would land in whichever came first.
+ */
+function renderContents(htmlStr: string, idPrefix: string): string {
+  const headings: { level: number; id: string; label: string }[] = [];
+  const used = new Set<string>();
+
+  const withIds = htmlStr.replace(
+    /<h([234])>([\s\S]*?)<\/h\1>/g,
+    (_m, level: string, inner: string) => {
+      const label = inner.replace(/<[^>]*>/g, "").trim();
+      const base = idPrefix + (headingSlug(label) || "section");
+      let id = base;
+      for (let n = 2; used.has(id); n++) id = `${base}-${n}`;
+      used.add(id);
+      headings.push({ level: Number(level), id, label });
+      return `<h${level} id="${id}">${inner}</h${level}>`;
+    }
+  );
+
+  return withIds.replace(/<p>\[toc(?:\|([^\]]*))?\]<\/p>/g, (_m, caption = "") => {
+    const items = headings.filter((h) => h.level === 2);
+    // Nothing to show a way into — a post with one section, or none.
+    if (items.length < 2) return "";
+    const label = caption.trim() || "On this page";
+    return (
+      `<nav class="post-toc" aria-label="${escapeHtml(label)}">` +
+      `<p class="post-toc-title">${escapeHtml(label)}</p><ol>` +
+      items.map((h) => `<li><a href="#${h.id}">${h.label}</a></li>`).join("") +
+      `</ol></nav>`
+    );
+  });
+}
+
+export async function markdownToHtml(markdown: string, idPrefix = ""): Promise<string> {
   const processed = await remark().use(html).process(markdown);
-  return renderMapEmbeds(dropOrphanFloats(wrapImageGalleries(processed.toString())));
+  return renderButtons(
+    renderContents(
+      renderMapEmbeds(dropOrphanFloats(wrapImageGalleries(processed.toString()))),
+      idPrefix
+    )
+  );
 }
 
 /**
@@ -317,7 +419,7 @@ async function readGermanVersion(slug: string): Promise<GermanVersion | undefine
   return {
     title: (data.title as string) ?? "",
     excerpt: data.excerpt as string | undefined,
-    contentHtml: await markdownToHtml(content),
+    contentHtml: await markdownToHtml(content, "de-"),
   };
 }
 
