@@ -10,6 +10,8 @@ Mit Humbär stehen wir seit mehr als anderthalb Jahren autark. Dank unserer Elek
 
 Du bist gerade dabei, die Elektrik für deinen Van-Ausbau zu dimensionieren? Dann findest du hier vielleicht ein paar Anregungen aus unserem Alltag: Was verbrauchen wir tatsächlich? Wie viel Solarstrom kommt rein? Und reicht ein 5-kWh-Akku wirklich für ein Leben ohne Gas und ohne ständigen Landstrom?
 
+[toc|Inhalt dieses Beitrags]
+
 ## Kochen im Van ohne Gas - geht das?
 
 Du hast keine Lust auf eine Gasprüfung, keine Lust, Gastanks zu befüllen, und keine Lust, den passenden Gasadapter zu finden? Wir haben uns deshalb ebenfalls von Anfang an dazu entschieden, ohne Gas im Van unterwegs zu sein.
