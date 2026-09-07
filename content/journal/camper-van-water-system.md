@@ -3,7 +3,7 @@ title: "Building a Camper Van Water System: Fresh Water, Filters and Waste Water
 date: "2026-09-05"
 author: "Evelyne"
 excerpt: "How the water system in our campervan works - fresh water tank, Alb Filter filtration, pressure pump and underfloor waste water tank. With a full parts list, filter service intervals and everything we have learned about drinking water on the road. Built into our VW LT35, but it fits any camper or motorhome."
-cover: "/images/journal/humbaer-water-system/water-from-the-tap.webp"
+cover: "/images/journal/humbaer-water-system/breakfast-in-a-hot-spring.webp"
 categories: ["vanlife"]
 tags: ["wassersystem", "wassersystem camper", "wassersystem wohnmobil", "camper ausbau", "vanausbau", "vw lt35", "frischwassertank", "abwassertank", "wasserfilter", "alb filter", "trinkwasser", "wasserpumpe", "vanlife", "campervan", "self build", "water system", "van conversion", "drinking water", "water filter", "camper kitchen", "humbaer"]
 ---
