@@ -618,6 +618,60 @@ html {
   text-underline-offset: 4px;
 }
 
+/* An aside pointing at something useful off-site. Quiet on purpose: it sits in
+   the column like a paragraph, marked only by a rose rule and a small label, so
+   it never interrupts someone reading the post straight through. */
+.prose .post-tip {
+  clear: both;
+  margin-top: 2.2em;
+  margin-bottom: 2.2em;
+  padding: 0.15rem 0 0.15rem 1.4rem;
+  border-left: 2px solid var(--color-rose);
+}
+
+.prose .post-tip-title {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-special-elite), ui-monospace, monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-graphite) 70%, transparent);
+}
+
+.prose .post-tip-text {
+  margin: 0;
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+.prose .post-tip-link {
+  margin: 0.55rem 0 0;
+  font-size: 0.95em;
+}
+
+.prose .post-tip-link a {
+  color: var(--color-ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-rose);
+  padding-bottom: 1px;
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+.prose .post-tip-link a:hover {
+  color: var(--color-ink);
+  border-color: color-mix(in srgb, var(--color-ink) 45%, transparent);
+}
+
+/* The arrow leans into the hover the way the site's other forward links do. */
+.prose .post-tip-link a span {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.prose .post-tip-link a:hover span {
+  transform: translateX(3px);
+}
+
 /* The site header stays at the top of the window, so a heading jumped to from
    the contents has to stop below it rather than under it. */
 .prose :is(h2, h3, h4)[id] {

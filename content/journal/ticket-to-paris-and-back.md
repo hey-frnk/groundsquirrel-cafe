@@ -29,6 +29,8 @@ Train travel in Europe is top notch, cities are all well-connected. We've booked
 
 Our way back, we took the bus, which was the only option still cheap for what was going on a Sunday night. The bus station in Paris is a sketchy place, finding it is an utter nightmare. Don't take the bus unless you really have to.
 
+[tip:https://zurichparis.com/|Planning the same trip?|ZurichParis.com searches the direct TGV Lyria trains from Zurich to Paris across flexible dates and shows you the cheapest return combinations first - handy if, like us, your dates bend around the weather.|Find cheap Zurich-Paris trains]
+
 ## Our Accommodation
 
 ![spoiler alert: we stayed in none of these river view apartments](/images/journal/paris-weekend/8AB88A44-3804-4D40-87D1-F586980CD59B.webp)
