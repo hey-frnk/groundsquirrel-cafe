@@ -271,6 +271,38 @@ function renderButtons(htmlStr: string): string {
 }
 
 /**
+ * Turns `[tip:<url>|Eyebrow|Text|Link label]` on its own line into a quiet
+ * aside pointing at something useful off-site — a timetable, a tool, a map.
+ *
+ * A recommendation like this has to be findable without interrupting the
+ * story, so it is deliberately not a button: a slim rose rule down the side, a
+ * typewriter label above it, one sentence, and a single arrow link. A reader
+ * following the post reads past it; a reader who came for the practicalities
+ * spots it while scanning. Everything but the URL is optional.
+ */
+function renderTips(htmlStr: string): string {
+  return htmlStr.replace(
+    /<p>\[tip:([^|\]]+)(?:\|([^|\]]*))?(?:\|([^|\]]*))?(?:\|([^|\]]*))?\]<\/p>/g,
+    (_m, url: string, eyebrow = "", body = "", label = "") => {
+      const href = url.trim();
+      const external = /^https?:\/\//.test(href);
+      const title = escapeHtml(eyebrow.trim() || "Good to know");
+      const text = escapeHtml(body.trim());
+      const linkText = escapeHtml(label.trim() || href.replace(/^https?:\/\//, "").replace(/\/$/, ""));
+      return (
+        `<aside class="post-tip">` +
+        `<p class="post-tip-title">${title}</p>` +
+        (text ? `<p class="post-tip-text">${text}</p>` : "") +
+        `<p class="post-tip-link"><a href="${escapeHtml(href)}"` +
+        `${external ? ' target="_blank" rel="noopener noreferrer"' : ""}>` +
+        `${linkText}<span aria-hidden> \u2192</span></a></p>` +
+        `</aside>`
+      );
+    }
+  );
+}
+
+/**
  * Undoes the character references remark writes, so a heading's anchor is built
  * from the text a reader would say out loud rather than from `&#x27;`.
  */
@@ -346,10 +378,12 @@ function renderContents(htmlStr: string, idPrefix: string): string {
 
 export async function markdownToHtml(markdown: string, idPrefix = ""): Promise<string> {
   const processed = await remark().use(html).process(markdown);
-  return renderButtons(
-    renderContents(
-      renderMapEmbeds(dropOrphanFloats(wrapImageGalleries(processed.toString()))),
-      idPrefix
+  return renderTips(
+    renderButtons(
+      renderContents(
+        renderMapEmbeds(dropOrphanFloats(wrapImageGalleries(processed.toString()))),
+        idPrefix
+      )
     )
   );
 }
