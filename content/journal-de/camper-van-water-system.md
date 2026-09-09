@@ -5,6 +5,12 @@ excerpt: "Wie unser Wassersystem im Campervan aufgebaut ist: Frischwassertank, A
 
 ## Wassersystem, Humbär
 
+[review|NEU · Punkt 1 · Formale Werbekennzeichnung, gleich am Beitragsanfang]
+
+**Werbung.** Dieser Beitrag enthält Werbelinks (Affiliate-Links) zu [Alb Filter](https://alb-filter.com/products/pro-camper-set?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate). Wenn du darüber bestellst, bekommst du einen Rabatt und wir eine Provision. Der Preis bleibt für dich derselbe, du zahlst also nichts extra. Unsere Meinung zum Wassersystem bleibt davon unberührt: Wir schreiben hier über Teile, die seit Jahren in unserem eigenen Van verbaut sind.
+
+[/review]
+
 ![fliessendes wasser aus unserem wasserhahn im camper](/images/journal/humbaer-water-system/water-from-the-tap.webp#left)
 *Fliessendes Wasser aus dem Wasserhahn*
 
@@ -13,10 +19,22 @@ Unser Van verfügt über ein qualitativ hochwertiges und modernes Wasser-Setup. 
 Gebaut haben wir es in unseren VW LT35. Gebunden ist das System aber nicht daran: Es besteht aus frei erhältlichen Einzelteilen und lässt sich genauso in jeden anderen Campervan, Kastenwagen oder ins Wohnmobil übernehmen. Was sich von Fahrzeug zu Fahrzeug ändert, sind vor allem die Tankgrössen und der Platz, an dem die Tanks sitzen.
 
 ![unser filtersystem von alb filter im campervan](/images/journal/humbaer-water-system/the-alb-filter-housings.webp)
-*Unser hochwertiges Filtersystem von Alb Filter*
+*{{Der blaue Protect Vorfilter (Aluminium-Gehäuse) am Wassereinlass. Die beiden Gehäuse aus dem Pro Camper Set weiter unten sind aus Edelstahl}}*
 
 ![ein glas gefiltertes trinkwasser aus dem camper](/images/journal/humbaer-water-system/a-glass-of-filtered-water.webp)
 *Unser Wasser schmeckt so gut wie Schweizer Quellwasser*
+
+[review|NEU · Punkt 5 + 6 · CTA weit oben, mit konkret genanntem Rabatt]
+
+### Kurz für alle, die nur die Filter suchen
+
+Wir filtern mit dem **Alb Filter Pro Camper Set**, dazu der **Protect Vorfilter** beim Befüllen und die **Nano Keimsperre** vor dem Hahn. Über unseren Link bekommst du aktuell **10 % Rabatt** darauf.
+
+[button:https://alb-filter.com/products/pro-camper-set?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate|Zum Pro Camper Set mit 10 % Rabatt (Werbelink)]
+
+**10 % statt 5 %:** Alb Filter hat den Rabatt für unsere Leserinnen und Leser befristet erhöht. Die 10 % gelten noch **bis zum 8. Oktober 2026**, danach sind es wieder dauerhaft 5 %. Der Rabattcode lautet **`weltenhummler`**.
+
+[/review]
 
 [toc|Inhalt dieses Beitrags]
 
@@ -33,7 +51,7 @@ Das Frischwasser läuft über einen Wasserhahnadapter und unseren Wasserzähler 
 Anschliessend läuft das Wasser durch eine Active-Kartusche mit Aktivkohle. Diese reduziert unter anderem Chlor, Geschmacks- und Geruchsstoffe sowie verschiedene organische Schadstoffe und weitere unerwünschte Stoffe. Danach gelangt das gefilterte Wasser in unseren Frischwassertank, wo es gespeichert wird.
 
 ![ein blaues alb filter gehäuse am schlauch beim wassereinlass des fahrzeugs](/images/journal/humbaer-water-system/the-filter-at-the-inlet.webp)
-*Der Filter sitzt am Schlauch, direkt bevor das Wasser in den Tank läuft*
+*Der Filter sitzt am Schlauch, direkt bevor das Wasser in den Tank läuft. {{Das blaue Gehäuse ist die Aluminium-Variante des Protect Vorfilters, es gibt ihn auch in Edelstahl}}*
 
 ![ein spiralschlauch führt in den frischwassertank, daneben sein roter deckel](/images/journal/humbaer-water-system/the-hose-into-the-tank.webp)
 *Der Einfüllschlauch am Frischwassertank, daneben der rote Deckel*
@@ -79,11 +97,11 @@ Und ganz nebenbei sparen wir dadurch unterwegs auch jede Menge Einwegflaschen un
 ## So funktionieren die Filter
 
 ![lieferung des pro camper sets von alb filter](/images/journal/humbaer-water-system/the-pro-camper-set.webp#right)
-*Lieferung des Pro Camper Sets von Alb Filter*
+*Lieferung des Pro Camper Sets von Alb Filter{{, mit den beiden Edelstahl-Gehäusen. Das Blau auf dem Bild ist der Schlauch, nicht das Gehäuse}}*
 
-Du bestellst dir einmalig das Set, welches du für dein Vorhaben benötigst. Bei uns war es das Pro Camper Set von Alb Filter für ein fest verbautes Filtersystem in unserem Fahrzeug. Alb Filter bietet aber auch Filtersysteme für den Haushalt sowie Reisefilter an, die nicht fest eingebaut werden müssen und sich problemlos mitnehmen lassen.
+Du bestellst dir einmalig das Set, welches du für dein Vorhaben benötigst. Bei uns war es das {{[Pro Camper Set von Alb Filter](https://alb-filter.com/products/pro-camper-set?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate)}} für ein fest verbautes Filtersystem in unserem Fahrzeug. Alb Filter bietet aber auch Filtersysteme für den Haushalt sowie Reisefilter an, die nicht fest eingebaut werden müssen und sich problemlos mitnehmen lassen.
 
-In unserem Set erhalten wir alles, was wir für die Installation benötigen, inklusive eines ersten Sets an Filterkartuschen. Dazu gehören auch die hochwertigen Edelstahl-Gehäuse, in welche die Filterkartuschen eingesetzt werden.
+In unserem Set erhalten wir alles, was wir für die Installation benötigen, inklusive eines ersten Sets an Filterkartuschen. Dazu gehören auch die hochwertigen Edelstahl-Gehäuse, in welche die Filterkartuschen eingesetzt werden. {{Den Protect Vorfilter, den wir beim Befüllen an den Schlauch hängen, gibt es in zwei Ausführungen: als [Aluminium-Variante](https://alb-filter.com/products/alb-filter-protect?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate) im blauen Gehäuse, so wie bei uns, und als [Edelstahl-Variante](https://alb-filter.com/products/vorfilter-protect-mit-wechselpad-edelstahl?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate).}}
 
 Danach müssen lediglich die Filterkartuschen je nach Nutzung und Wasserqualität regelmässig ersetzt werden.
 
@@ -99,11 +117,19 @@ Auch die Filter selbst schauen wir regelmässig an. Wenn beispielsweise unser Vo
 
 Als grobe Orientierung gelten für unsere Kartuschen die vom Hersteller angegebenen Wechselintervalle. Die tatsächliche Lebensdauer kann je nach Nutzung und Wasserqualität variieren.
 
-- **Active-Kartusche:** ca. 4 Monate
-- **Nano-Keimsperre:** ca. 6 Monate
-- **Protect-Vorfilter:** bei uns aktuell ca. 3 Monate
+- **{{[Active-Kartusche](https://alb-filter.com/products/wasserfilter-kartusche-active?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate)}}:** ca. 4 Monate
+- **{{[Nano-Keimsperre](https://alb-filter.com/products/wasserfilter-kartusche-nano?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate)}}:** ca. 6 Monate
+- **{{[Protect-Vorfilter](https://alb-filter.com/products/alb-filter-protect?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate)}}:** bei uns aktuell ca. 3 Monate
 
 Gerade beim Vorfilter merken wir, dass die Wasserqualität einen grossen Unterschied macht. Deshalb sind die drei Monate bei uns lediglich ein persönlicher Erfahrungswert und keine allgemeingültige Angabe.
+
+[review|NEU · Punkt 5 · CTA genau dort, wo über Wechselintervalle gelesen wird]
+
+Wenn du gerade ausrechnest, wie oft du nachkaufen musst: Die Ersatzkartuschen bekommst du mit dem Code **`weltenhummler`** und **10 % Rabatt** (befristet bis 8. Oktober 2026, danach 5 %).
+
+[button:https://alb-filter.com/products/wasserfilter-kartusche-active?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate|Ersatzkartuschen mit 10 % Rabatt (Werbelink)]
+
+[/review]
 
 ![eine gebrauchte nano-keimsperre kartusche kurz vor dem austausch](/images/journal/humbaer-water-system/a-used-nano-cartridge.webp)
 *Eine gebrauchte Nano-Keimsperre Kartusche kurz vor dem Austausch*
@@ -115,23 +141,29 @@ Gerade beim Vorfilter merken wir, dass die Wasserqualität einen grossen Untersc
 
 Ein gutes Filtersystem allein macht noch kein hygienisch einwandfreies Wassersystem. Auch Frischwassertank, Leitungen, Anschlüsse und Wasserhahn müssen sauber gehalten und regelmässig gereinigt werden.
 
-Gerade weil unser Wasser mehrere Tage im Tank bleibt, gehört die Reinigung unseres Wassersystems für uns genauso zur Wasserhygiene wie der regelmässige Filterwechsel. Wir beziehen unser Reinigungsmittel ebenfalls von Alb Filter und können es wärmstens weiterempfehlen.
+Gerade weil unser Wasser mehrere Tage im Tank bleibt, gehört die Reinigung unseres Wassersystems für uns genauso zur Wasserhygiene wie der regelmässige Filterwechsel. Wir beziehen unser Reinigungsmittel ebenfalls von Alb Filter, den {{[Alb Clean Tankreiniger](https://alb-filter.com/products/alb-filter-clean-tankreiniger?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate)}}, und können ihn wärmstens weiterempfehlen.
 
 Wenn du dein Wassersystem selbst planst, würden wir nicht nur in gute Filter investieren, sondern das gesamte System möglichst hygienisch und gut zugänglich aufbauen.
 
 Wenn du an einer Stelle bei deinem Vanausbau nicht sparen solltest, dann hier. Gerade wenn man viel unterwegs ist, kann die Qualität des Wassers je nach Wasserquelle und Land unterschiedlich sein. Wir möchten uns deshalb nicht allein darauf verlassen, dass das Wasser, das irgendwo aus einem Wasserhahn fliesst, automatisch die Qualität hat, die wir uns für unser Trinkwasser wünschen.
 
 ![unser frischwassertankreiniger von alb filter](/images/journal/humbaer-water-system/the-tank-cleaner.webp)
-*Unser Frischwassertankreiniger von Alb Filter*
+*Unser Frischwassertankreiniger von Alb Filter{{, der Alb Clean}}*
 
 ![unser frischwassertank mit einer grossen öffnung mit rotem deckel](/images/journal/humbaer-water-system/the-tank-with-the-red-lid.webp)
 *Unser Frischwassertank mit einer grossen Öffnung (roter Deckel), der uns einen guten Zugang zum Innenraum des Tankes ermöglicht*
 
 ## Hier geht's zu den Wasserfiltern
 
-[button:https://alb-filter.com/weltenhummler|Zu den Alb Filter Wasserfiltern]
+[button:https://alb-filter.com/weltenhummler|{{Zu den Alb Filter Wasserfiltern mit 10 % Rabatt (Werbelink)}}]
 
-Indem du über unseren Link bestellst, kannst du die Filter mit Rabatt beziehen. Gleichzeitig unterstützt du uns dabei, dass wir noch lange mit Humbär unterwegs sein können. Das würde uns wirklich sehr freuen!
+{{**10 % Rabatt mit dem Code `weltenhummler`, bis zum 8. Oktober 2026. Danach dauerhaft 5 %.**}} Indem du über unseren Link bestellst, {{sparst du beim Kauf}} und unterstützt uns gleichzeitig dabei, dass wir noch lange mit Humbär unterwegs sein können. Das würde uns wirklich sehr freuen!
+
+[review|NEU · Punkt 7 · Direkte Shoplinks statt nur auf die Landingpage]
+
+**Direkt zu den einzelnen Produkten:** [Pro Camper Set](https://alb-filter.com/products/pro-camper-set?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate) · [Protect Vorfilter](https://alb-filter.com/products/alb-filter-protect?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate) · [Active Kartusche](https://alb-filter.com/products/wasserfilter-kartusche-active?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate) · [Nano Keimsperre](https://alb-filter.com/products/wasserfilter-kartusche-nano?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate) · [Alb Clean Tankreiniger](https://alb-filter.com/products/alb-filter-clean-tankreiniger?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate)
+
+[/review]
 
 ![glasklares trinkwasser aus unserem camper](/images/journal/humbaer-water-system/crystal-clear-water.webp)
 *Glasklares Trinkwasser*
@@ -153,7 +185,7 @@ Vom Frischwasser bis zum Abwasser: Das ist alles, was in Humbärs Wassersetup ve
 - **Hahnverbinder:** Gardena, 21 mm (G 1/2 Zoll)
 - **Wasserdieb:** Gardena
 - **Wasserzähler:** Gardena AquaCount
-- **Vorfilter:** Alb Filter Protect Vorfilter und Active Aktivkohle-Kartusche
+- **Vorfilter:** {{[Alb Filter Protect Vorfilter](https://alb-filter.com/products/alb-filter-protect?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate) und [Alb Filter Active Aktivkohle-Kartusche](https://alb-filter.com/products/wasserfilter-kartusche-active?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate)}}
 - **Tankelektrode:** Votronic 15-50 K
 - **Frischwasser-Tankanzeige:** Votronic LED-Balkenanzeige, 12/24 V
 - **Tankanschlussverschraubung:** gewinkelt, 40 mm
@@ -161,10 +193,16 @@ Vom Frischwasser bis zum Abwasser: Das ist alles, was in Humbärs Wassersetup ve
 ### Frischwasser: Entnahme
 
 - **Druckpumpe:** Lilie Soft-Serie LP4142, 11,3 l/min, 2,1 bar
-- **Feinfilter:** Alb Filter Nano Keimsperre (aus dem Alb Filter Pro Camper Set)
+- **{{Alb Filter Nano Keimsperre}}:** {{[Nano Keimsperre](https://alb-filter.com/products/wasserfilter-kartusche-nano?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate) aus dem [Alb Filter Pro Camper Set](https://alb-filter.com/products/pro-camper-set?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate)}}
 - **Trinkwasserschlauch:** Lilie Native, 10/16 mm, blau, für Kaltwasser, 5 m
 - **Y-Stück:** 10 mm, mit 2 Absperrhähnen
 - **Schlauchtüllen:** 2 x 3/8 Zoll, für Haushaltswasserhahn auf 10-mm-Schlauch
+
+[review|NEU · Kleinigkeit · Alb Clean fehlte im Steckbrief ganz]
+
+- **Tankreiniger:** [Alb Clean](https://alb-filter.com/products/alb-filter-clean-tankreiniger?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate), für Frischwassertank und Leitungen
+
+[/review]
 
 ### Spüle und Küche
 
