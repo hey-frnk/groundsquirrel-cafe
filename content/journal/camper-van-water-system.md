@@ -10,6 +10,12 @@ tags: ["wassersystem", "wassersystem camper", "wassersystem wohnmobil", "camper 
 
 ## Humbär's water system
 
+[ad]
+
+**Advertisement.** This post contains advertising links (affiliate links) to [Alb Filter](https://alb-filter.com/products/pro-camper-set?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate). If you order through them you get a discount and we get a commission. The price stays the same for you, so nothing extra to pay. It does not change what we think of the system either: everything here has been fitted in our own van for years.
+
+[/ad]
+
 ![water running from the tap in our camper](/images/journal/humbaer-water-system/water-from-the-tap.webp#left)
 *Water running from the tap*
 
@@ -18,10 +24,18 @@ Our van has a high-quality, modern water setup. Thanks to our filter system we g
 We built ours into a VW LT35, but nothing about the setup is tied to that van. It is made of parts anyone can buy, and it carries over just as well to any other campervan, panel van or motorhome. What changes from vehicle to vehicle is mainly the size of the tanks and where they can sit.
 
 ![our alb filter filtration system in the campervan](/images/journal/humbaer-water-system/the-alb-filter-housings.webp)
-*Our high-quality filter system from Alb Filter*
+*The blue Protect pre-filter (aluminium housing) at the water inlet. The two housings from the Pro Camper set further down are stainless steel*
 
 ![a glass of filtered drinking water from the camper](/images/journal/humbaer-water-system/a-glass-of-filtered-water.webp)
 *Our water tastes as good as Swiss spring water*
+
+### The short version, if you are only here for the filters
+
+We filter with the **Alb Filter Pro Camper set**, plus the **Protect pre-filter** while filling up and the **Nano germ barrier** before the tap. Through our link you currently get **10% off**.
+
+[button:https://alb-filter.com/products/pro-camper-set?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate|To the Pro Camper set with 10% off (ad link)]
+
+**10% instead of 5%:** Alb Filter has raised the discount for our readers for a limited time. The 10% runs until **8 October 2026**, after which it goes back to a permanent 5%. The discount code is **`weltenhummler`**.
 
 [toc|On this page]
 
@@ -38,7 +52,7 @@ The fresh water runs through a tap adapter and our water meter into the water ho
 The water then runs through an Active cartridge with activated carbon. Among other things, this reduces chlorine, substances affecting taste and smell, various organic pollutants and other unwanted substances. The filtered water then reaches our fresh water tank, where it is stored.
 
 ![a blue alb filter housing on the hose at the van's water inlet](/images/journal/humbaer-water-system/the-filter-at-the-inlet.webp)
-*The filter sits on the hose, right before the water goes into the tank*
+*The filter sits on the hose, right before the water goes into the tank. The blue housing is the aluminium version of the Protect pre-filter, it also comes in stainless steel*
 
 ![a spiral hose running into the fresh water tank, its red lid beside it](/images/journal/humbaer-water-system/the-hose-into-the-tank.webp)
 *The filler hose at the fresh water tank, the red inspection lid next to it*
@@ -84,11 +98,11 @@ And as a nice side effect, we save a great many single-use bottles on the road a
 ## How the filters work
 
 ![the pro camper set from alb filter, as delivered](/images/journal/humbaer-water-system/the-pro-camper-set.webp#right)
-*The Pro Camper set from Alb Filter, as delivered*
+*The Pro Camper set from Alb Filter, as delivered, with its two stainless steel housings*
 
-You order the set you need for your project once. In our case that was the Pro Camper set from Alb Filter, for a permanently installed filter system in our vehicle. Alb Filter also offers systems for the home as well as travel filters that do not have to be installed permanently and are easy to take along.
+You order the set you need for your project once. In our case that was the [Pro Camper set from Alb Filter](https://alb-filter.com/products/pro-camper-set?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate), for a permanently installed filter system in our vehicle. Alb Filter also offers systems for the home as well as travel filters that do not have to be installed permanently and are easy to take along.
 
-The set contains everything we need for the installation, including a first set of filter cartridges. That also includes the high-quality stainless steel housings the cartridges are fitted into.
+The set contains everything we need for the installation, including a first set of filter cartridges. That also includes the high-quality stainless steel housings the cartridges are fitted into. The Protect pre-filter, which we hang on the hose while filling up, comes in two versions: the [aluminium one](https://alb-filter.com/products/alb-filter-protect?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate) in a blue housing, which is what we have, and a [stainless steel one](https://alb-filter.com/products/vorfilter-protect-mit-wechselpad-edelstahl?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate).
 
 After that, all that is needed is to replace the cartridges regularly, depending on use and water quality.
 
@@ -104,11 +118,15 @@ We also look at the filters themselves regularly. If our pre-filter is heavily s
 
 As a rough guide we go by the replacement intervals given by the manufacturer. Actual service life can vary with use and water quality.
 
-- **Active cartridge:** approx. 4 months
-- **Nano germ barrier:** approx. 6 months
-- **Protect pre-filter:** currently approx. 3 months for us
+- **[Active cartridge](https://alb-filter.com/products/wasserfilter-kartusche-active?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate):** approx. 4 months
+- **[Nano germ barrier](https://alb-filter.com/products/wasserfilter-kartusche-nano?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate):** approx. 6 months
+- **[Protect pre-filter](https://alb-filter.com/products/alb-filter-protect?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate):** currently approx. 3 months for us
 
 With the pre-filter in particular we notice how much difference water quality makes. Those three months are therefore our own experience, not a generally valid figure.
+
+If you are working out how often you will need to reorder: replacement cartridges come with **10% off** using the code **`weltenhummler`** (until 8 October 2026, 5% after that).
+
+[button:https://alb-filter.com/products/wasserfilter-kartusche-active?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate|Replacement cartridges with 10% off (ad link)]
 
 ![a used nano germ barrier cartridge shortly before being replaced](/images/journal/humbaer-water-system/a-used-nano-cartridge.webp)
 *A used Nano germ barrier cartridge shortly before being replaced*
@@ -120,23 +138,25 @@ With the pre-filter in particular we notice how much difference water quality ma
 
 A good filter system alone does not make a hygienically sound water system. The fresh water tank, the pipes, the fittings and the tap all have to be kept clean and washed out regularly.
 
-Precisely because our water stays in the tank for several days, cleaning the system is as much a part of water hygiene for us as changing the filters. We get our cleaning agent from Alb Filter too, and can warmly recommend it.
+Precisely because our water stays in the tank for several days, cleaning the system is as much a part of water hygiene for us as changing the filters. We get our cleaning agent from Alb Filter too, the [Alb Clean tank cleaner](https://alb-filter.com/products/alb-filter-clean-tankreiniger?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate), and can warmly recommend it.
 
 If you are planning your own water system, we would not only invest in good filters but also build the whole system to be as hygienic and as easy to reach as possible.
 
 If there is one place in your van conversion not to save money, it is here. Especially when you travel a lot, water quality can differ from source to source and from country to country. We would rather not simply trust that water coming out of a tap somewhere automatically has the quality we want for our drinking water.
 
 ![our fresh water tank cleaner from alb filter](/images/journal/humbaer-water-system/the-tank-cleaner.webp)
-*Our fresh water tank cleaner from Alb Filter*
+*Our fresh water tank cleaner from Alb Filter, Alb Clean*
 
 ![our fresh water tank with a large opening closed by a red lid](/images/journal/humbaer-water-system/the-tank-with-the-red-lid.webp)
 *Our fresh water tank with a large opening (the red lid), which gives us good access to the inside of the tank*
 
 ## Where to find the water filters
 
-[button:https://alb-filter.com/weltenhummler|To the Alb Filter water filters]
+[button:https://alb-filter.com/weltenhummler|To the Alb Filter water filters with 10% off (ad link)]
 
-Ordering through our link gets you a discount on the filters. At the same time you help us keep traveling with Humbär for a long time to come. That really would make us very happy!
+**10% off with the code `weltenhummler`, until 8 October 2026. A permanent 5% after that.** Ordering through our link saves you money and at the same time helps us keep traveling with Humbär for a long time to come. That really would make us very happy!
+
+**Straight to the individual products:** [Pro Camper set](https://alb-filter.com/products/pro-camper-set?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate) · [Protect pre-filter](https://alb-filter.com/products/alb-filter-protect?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate) · [Active cartridge](https://alb-filter.com/products/wasserfilter-kartusche-active?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate) · [Nano germ barrier](https://alb-filter.com/products/wasserfilter-kartusche-nano?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate) · [Alb Clean tank cleaner](https://alb-filter.com/products/alb-filter-clean-tankreiniger?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate)
 
 ![crystal clear drinking water from our camper](/images/journal/humbaer-water-system/crystal-clear-water.webp)
 *Crystal clear drinking water*
@@ -158,7 +178,7 @@ From fresh water to waste water: everything built into Humbär's water setup, so
 - **Tap connector:** Gardena, 21 mm (G 1/2 inch)
 - **Tap adapter for indoor taps:** Gardena
 - **Water meter:** Gardena AquaCount
-- **Pre-filter:** Alb Filter Protect pre-filter and Active activated carbon cartridge
+- **Pre-filter:** [Alb Filter Protect pre-filter](https://alb-filter.com/products/alb-filter-protect?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate) and [Alb Filter Active activated carbon cartridge](https://alb-filter.com/products/wasserfilter-kartusche-active?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate)
 - **Tank electrode:** Votronic 15-50 K
 - **Fresh water tank gauge:** Votronic LED bar display, 12/24 V
 - **Tank connection fitting:** angled, 40 mm
@@ -166,10 +186,12 @@ From fresh water to waste water: everything built into Humbär's water setup, so
 ### Fresh water: outlet
 
 - **Pressure pump:** Lilie Soft series LP4142, 11.3 l/min, 2.1 bar
-- **Fine filter:** Alb Filter Nano germ barrier (from the Alb Filter Pro Camper set)
+- **Alb Filter Nano germ barrier:** [Nano germ barrier](https://alb-filter.com/products/wasserfilter-kartusche-nano?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate) from the [Alb Filter Pro Camper set](https://alb-filter.com/products/pro-camper-set?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate)
 - **Drinking water hose:** Lilie Native, 10/16 mm, blue, cold water, 5 m
 - **Y-piece:** 10 mm, with 2 shut-off valves
 - **Hose tails:** 2 x 3/8 inch, household tap to 10 mm hose
+
+- **Tank cleaner:** [Alb Clean](https://alb-filter.com/products/alb-filter-clean-tankreiniger?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate), for the fresh water tank and the pipework
 
 ### Sink and kitchen
 

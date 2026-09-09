@@ -977,3 +977,24 @@ html {
     margin-right: 0;
   }
 }
+
+/* The advertising disclosure a post with affiliate links carries at the top.
+   Legally it has to be there and it has to be legible; nothing beyond that, so
+   it is set small and italic and hands the column straight to the first
+   paragraph. */
+.prose .post-ad-note {
+  margin: 0 0 1.6em;
+}
+
+.prose .post-ad-note p {
+  margin: 0;
+  font-size: 0.72em;
+  font-style: italic;
+  line-height: 1.55;
+  color: color-mix(in srgb, var(--color-graphite) 75%, transparent);
+}
+
+.prose .post-ad-note strong {
+  font-weight: 600;
+  font-style: italic;
+}

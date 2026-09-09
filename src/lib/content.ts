@@ -303,6 +303,22 @@ function renderTips(htmlStr: string): string {
 }
 
 /**
+ * Turns `[ad]` … `[/ad]` around a paragraph into the small print a commercial
+ * link needs above it.
+ *
+ * It has to be there — an affiliate link is advertising and has to say so — but
+ * it is not what anyone came to read, so it is set small and italic and gets
+ * out of the way of the first paragraph. Markdown inside is processed as usual,
+ * which is the reason this is a pair of markers rather than one directive: the
+ * disclosure names the shop, and that name should be a link.
+ */
+function renderAdNotes(htmlStr: string): string {
+  return htmlStr
+    .replace(/<p>\[ad\]<\/p>/g, `<div class="post-ad-note">`)
+    .replace(/<p>\[\/ad\]<\/p>/g, `</div>`);
+}
+
+/**
  * Undoes the character references remark writes, so a heading's anchor is built
  * from the text a reader would say out loud rather than from `&#x27;`.
  */
@@ -378,11 +394,13 @@ function renderContents(htmlStr: string, idPrefix: string): string {
 
 export async function markdownToHtml(markdown: string, idPrefix = ""): Promise<string> {
   const processed = await remark().use(html).process(markdown);
-  return renderTips(
-    renderButtons(
-      renderContents(
-        renderMapEmbeds(dropOrphanFloats(wrapImageGalleries(processed.toString()))),
-        idPrefix
+  return renderAdNotes(
+    renderTips(
+      renderButtons(
+        renderContents(
+          renderMapEmbeds(dropOrphanFloats(wrapImageGalleries(processed.toString()))),
+          idPrefix
+        )
       )
     )
   );
