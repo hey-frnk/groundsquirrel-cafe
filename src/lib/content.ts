@@ -319,33 +319,6 @@ function renderAdNotes(htmlStr: string): string {
 }
 
 /**
- * REVIEW MODE — temporary, for the Alb Filter feedback round.
- *
- * Everything proposed in that round is wrapped so it can be seen at a glance
- * before anyone decides to keep it. Two shorthands:
- *
- *   `{{some words}}`      an inline change, painted amber inside the sentence
- *   `[review|Why]` … `[/review]`   a whole new block, boxed with a label
- *
- * Both are meant to be deleted once the changes are signed off: strip the
- * markers from the two posts and this function, and nothing else moves.
- */
-function renderReviewMarks(htmlStr: string): string {
-  return htmlStr
-    .replace(
-      /<p>\[review(?:\|([^\]]*))?\]<\/p>/g,
-      (_m, label = "") =>
-        `<div class="review-block">` +
-        `<p class="review-block-label">${escapeHtml(label.trim() || "Vorschlag")}</p>`
-    )
-    .replace(/<p>\[\/review\]<\/p>/g, `</div>`)
-    .replace(
-      /\{\{([\s\S]*?)\}\}/g,
-      (_m, inner: string) => `<mark class="review-add">${inner}</mark>`
-    );
-}
-
-/**
  * Undoes the character references remark writes, so a heading's anchor is built
  * from the text a reader would say out loud rather than from `&#x27;`.
  */
@@ -395,7 +368,7 @@ function renderContents(htmlStr: string, idPrefix: string): string {
   const withIds = htmlStr.replace(
     /<h([234])>([\s\S]*?)<\/h\1>/g,
     (_m, level: string, inner: string) => {
-      const label = inner.replace(/<[^>]*>/g, "").replace(/\{\{|\}\}/g, "").trim();
+      const label = inner.replace(/<[^>]*>/g, "").trim();
       const base = idPrefix + (headingSlug(label) || "section");
       let id = base;
       for (let n = 2; used.has(id); n++) id = `${base}-${n}`;
@@ -421,14 +394,12 @@ function renderContents(htmlStr: string, idPrefix: string): string {
 
 export async function markdownToHtml(markdown: string, idPrefix = ""): Promise<string> {
   const processed = await remark().use(html).process(markdown);
-  return renderReviewMarks(
-    renderAdNotes(
-      renderTips(
-        renderButtons(
-          renderContents(
-            renderMapEmbeds(dropOrphanFloats(wrapImageGalleries(processed.toString()))),
-            idPrefix
-          )
+  return renderAdNotes(
+    renderTips(
+      renderButtons(
+        renderContents(
+          renderMapEmbeds(dropOrphanFloats(wrapImageGalleries(processed.toString()))),
+          idPrefix
         )
       )
     )

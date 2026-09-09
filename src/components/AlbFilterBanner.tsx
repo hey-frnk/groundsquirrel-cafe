@@ -96,9 +96,9 @@ export default function AlbFilterBanner() {
         </p>
         <p className="mt-3 leading-relaxed text-graphite">
           The water our coffee is made of comes through an Alb Filter. With our code you get{" "}
-          {/* REVIEW · Point 6 — Alb Filter raised the code to 10% until 8 Oct 2026. */}
-          <mark className="review-add text-ink">10% off</mark> your order at alb-filter.com{" "}
-          <mark className="review-add">until 8 October 2026, 5% after that</mark>.
+          {/* Alb Filter raised the code to 10% until 8 October 2026, 5% after that. */}
+          <span className="text-ink">10% off</span> your order at alb-filter.com until 8 October
+          2026, 5% after that.
         </p>
 
         <div className="mt-4 flex flex-wrap items-center gap-3">
