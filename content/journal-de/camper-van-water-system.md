@@ -7,7 +7,11 @@ excerpt: "Wie unser Wassersystem im Campervan aufgebaut ist: Frischwassertank, A
 
 [review|NEU · Punkt 1 · Formale Werbekennzeichnung, gleich am Beitragsanfang]
 
+[ad]
+
 **Werbung.** Dieser Beitrag enthält Werbelinks (Affiliate-Links) zu [Alb Filter](https://alb-filter.com/products/pro-camper-set?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate). Wenn du darüber bestellst, bekommst du einen Rabatt und wir eine Provision. Der Preis bleibt für dich derselbe, du zahlst also nichts extra. Unsere Meinung zum Wassersystem bleibt davon unberührt: Wir schreiben hier über Teile, die seit Jahren in unserem eigenen Van verbaut sind.
+
+[/ad]
 
 [/review]
 
@@ -97,7 +101,7 @@ Und ganz nebenbei sparen wir dadurch unterwegs auch jede Menge Einwegflaschen un
 ## So funktionieren die Filter
 
 ![lieferung des pro camper sets von alb filter](/images/journal/humbaer-water-system/the-pro-camper-set.webp#right)
-*Lieferung des Pro Camper Sets von Alb Filter{{, mit den beiden Edelstahl-Gehäusen. Das Blau auf dem Bild ist der Schlauch, nicht das Gehäuse}}*
+*Lieferung des Pro Camper Sets von Alb Filter{{, mit den beiden Edelstahl-Gehäusen}}*
 
 Du bestellst dir einmalig das Set, welches du für dein Vorhaben benötigst. Bei uns war es das {{[Pro Camper Set von Alb Filter](https://alb-filter.com/products/pro-camper-set?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate)}} für ein fest verbautes Filtersystem in unserem Fahrzeug. Alb Filter bietet aber auch Filtersysteme für den Haushalt sowie Reisefilter an, die nicht fest eingebaut werden müssen und sich problemlos mitnehmen lassen.
 

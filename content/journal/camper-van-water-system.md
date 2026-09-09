@@ -12,7 +12,11 @@ tags: ["wassersystem", "wassersystem camper", "wassersystem wohnmobil", "camper 
 
 [review|NEW · Point 1 · Formal advertising disclosure, right at the top of the post]
 
+[ad]
+
 **Advertisement.** This post contains advertising links (affiliate links) to [Alb Filter](https://alb-filter.com/products/pro-camper-set?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate). If you order through them you get a discount and we get a commission. The price stays the same for you, so nothing extra to pay. It does not change what we think of the system either: everything here has been fitted in our own van for years.
+
+[/ad]
 
 [/review]
 
@@ -102,7 +106,7 @@ And as a nice side effect, we save a great many single-use bottles on the road a
 ## How the filters work
 
 ![the pro camper set from alb filter, as delivered](/images/journal/humbaer-water-system/the-pro-camper-set.webp#right)
-*The Pro Camper set from Alb Filter, as delivered{{, with its two stainless steel housings. The blue in the photo is the hose, not a housing}}*
+*The Pro Camper set from Alb Filter, as delivered{{, with its two stainless steel housings}}*
 
 You order the set you need for your project once. In our case that was the {{[Pro Camper set from Alb Filter](https://alb-filter.com/products/pro-camper-set?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate)}}, for a permanently installed filter system in our vehicle. Alb Filter also offers systems for the home as well as travel filters that do not have to be installed permanently and are easy to take along.
 
