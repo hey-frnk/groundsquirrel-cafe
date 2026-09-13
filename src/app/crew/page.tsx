@@ -30,7 +30,11 @@ export default async function CrewPage() {
           "@context": "https://schema.org",
           "@graph": [
             {
-              "@type": "ProfilePage",
+              // A CollectionPage, not a ProfilePage: this page introduces four
+              // subjects (two people, the van, the mascot), and Google's profile
+              // markup wants exactly one `mainEntity`. Evelyne's ProfilePage is
+              // /studio/; here the two Person nodes hang off `about`.
+              "@type": "CollectionPage",
               "@id": `${SITE_URL}/crew/#page`,
               url: `${SITE_URL}/crew/`,
               name: "The crew behind The Ground Squirrel Café",
