@@ -986,7 +986,18 @@ html {
   margin: 0 0 1.6em;
 }
 
-.prose .post-ad-note p {
+/* Small print further down a post, `[small]` … `[/small]`: the same voice as
+   the disclosure, set under whatever it annotates. */
+.prose .post-small-print {
+  margin: -0.6em 0 1.6em;
+}
+
+.prose .post-small-print p + p {
+  margin-top: 0.5em;
+}
+
+.prose .post-ad-note p,
+.prose .post-small-print p {
   margin: 0;
   font-size: 0.72em;
   font-style: italic;
@@ -998,3 +1009,4 @@ html {
   font-weight: 600;
   font-style: italic;
 }
+
