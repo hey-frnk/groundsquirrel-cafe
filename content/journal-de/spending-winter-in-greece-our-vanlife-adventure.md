@@ -20,7 +20,7 @@ Ursprünglich wollten wir ganz entspannt der Westküste entlangfahren und uns je
 
 Unsere Route führte uns unter anderem über:
 
-**Korinth → Epidaurus → Methana → Nafplio → Leonidio → Monemvasia → Elafonisos**
+**Korinth → Epidaurus → Methana → Nafplio → Leonidio → Monemvasia → Elafonisos → Gytheio**
 
 ![abendspaziergang im alten korinth](/images/journal/overwintering-in-greece/evening-walk-in-ancient-corinth.webp)
 *Auf Abendspaziergang im alten Korinth. Etwa die Hälfte der Läden haben im Januar geschlossen*
@@ -31,7 +31,7 @@ Unsere Route führte uns unter anderem über:
 ![türkisblaue bucht bei nafplio](/images/journal/overwintering-in-greece/turquoise-bay-near-nafplio.webp)
 *Die türkisblaue Bucht bei Nafplio. Vom Stellplatz aus kann man entlang vom Meer bis in die Altstadt von Nafplio wandern*
 
-Weiter sind wir zunächst nicht gekommen, bevor wir wieder Richtung Athen umdrehten.
+Von Elafonisos ging es noch weiter bis nach Gytheio, bevor wir über Leonidio wieder Richtung Athen zurückfuhren.
 
 ![simos beach auf elafonisos](/images/journal/overwintering-in-greece/simos-beach-elafonisos.webp)
 *Simos Beach auf der Insel Elafonisos. Mit den Bikes sind wir auf die Fähre und bis zur Simos Beach gefahren. Durch diese Enge kann man bei Ebbe in knietiefem Wasser spazieren*
@@ -51,12 +51,12 @@ Weiter sind wir zunächst nicht gekommen, bevor wir wieder Richtung Athen umdreh
 *Wandern in Leonidio*
 
 ![noch ein wanderweg bei leonidio](/images/journal/overwintering-in-greece/hiking-in-leonidio-2.webp)
-*Noch mehr Wandern rund um Leonidio*
+*Während die meisten hier mit Kletterausrüstung unterwegs sind, geniessen wir einfach die felsigen Wanderwege mit unvergesslichem Ausblick*
 
 ![ausblick auf leonidio und die roten felsen](/images/journal/overwintering-in-greece/view-over-leonidio.webp#right)
 *Ausblick auf Leonidio*
 
-Hier haben wir wegen dem Wetter und wegen Franks Arbeit viel Zeit verbringen dürfen. Ein Kletter-Mekka mit vielen Geschichten und den schönsten Orten, an denen man zusammenkommen kann. Jeden Montag gibt es einen Frischemarkt. Dieser Ort hat ein Specialty-Coffee-Café, himmlische rustikale Tavernen, eine Kletter-Kooperative, eine Holzofenbäckerei, ganz besondere Konditoreien und einen legendären Olivenölverkäufer, der am Abend mit seinem Minivan auf dem Stellplatz vorbeischaut.
+Hier haben wir wegen dem Wetter und wegen Franks Arbeit viel Zeit verbringen dürfen. Ein Kletter-Mekka mit vielen Geschichten und den schönsten Orten, an denen man zusammenkommen kann. Jeden Montag gibt es einen Wochenmarkt. Dieser Ort hat ein Specialty-Coffee-Café, himmlische rustikale Tavernen, eine Kletter-Kooperative, eine Holzofenbäckerei, ganz besondere Konditoreien und einen legendären Olivenölverkäufer, der am Abend mit seinem Minivan auf dem Stellplatz vorbeischaut.
 
 ![strasse in leonidio](/images/journal/overwintering-in-greece/downtown-leonidio.webp)
 *Downtown Leonidio*
@@ -65,7 +65,7 @@ Hier haben wir wegen dem Wetter und wegen Franks Arbeit viel Zeit verbringen dü
 *Montag ist Markttag! Wir sind mit unseren Bikes bis in die Altstadt gefahren*
 
 ![der minivan des olivenölverkäufers](/images/journal/overwintering-in-greece/the-olive-oil-man.webp)
-*Hier kommt das leckerste Olivenöl der Welt*
+*Von hier kommt das leckerste Olivenöl der Welt*
 
 ![die holzofenbäckerei in leonidio](/images/journal/overwintering-in-greece/wood-fired-bakery-leonidio.webp)
 *Die Holzofenbäckerei. Handwerk vom Feinsten*
@@ -95,7 +95,7 @@ Danach ging es weiter Richtung Volos, wo die Lackierung und Restaurierung unsere
 ![abholung des restaurierten vans](/images/journal/overwintering-in-greece/picking-up-humbaer.webp)
 *Wir nehmen glücklich einen wunderschönen neuen Humbär entgegen*
 
-Mit dem Mietauto konnten wir die Region anschliessend deutlich schneller erkunden: In der ersten Woche entdeckten wir den Pelion, in der zweiten Chalkidiki und in der dritten einige der legendären Vanlife-Orte auf der Peloponnes, darunter die Filia Laundry und Elea Beach.
+Mit dem Mietauto konnten wir die Region anschliessend deutlich schneller erkunden: In der ersten Woche entdeckten wir den Pelion, in der zweiten Chalkidiki und in der dritten einige der legendären Vanlife-Orte auf der Peloponnes, darunter die Filia Laundry, Elea Beach und die Voidokilia Beach (Ochsenbauchbucht).
 
 ![das mietauto](/images/journal/overwintering-in-greece/the-rental-car.webp)
 *Das Mietauto. Kein komfortabler Ersatz für Humbär, legt dafür aber mindestens doppelt so schnell Distanz zurück und kostet auf der Autobahn halb so viel*
@@ -105,6 +105,14 @@ Mit dem Mietauto konnten wir die Region anschliessend deutlich schneller erkunde
 
 ![kastanienwald auf dem pelion](/images/journal/overwintering-in-greece/hiking-on-pelion.webp)
 *Wandern im Pelion. Die Kastanienbäume erinnern uns fast zu sehr ans Wandern im Tessin in der Heimat*
+
+Von Volos aus sind wir noch an die Thermopylen zum Baden gefahren, bevor es quer durchs Land über die Meteora-Klöster zurück an den Start nach Igoumenitsa ging.
+
+![ein meteora-kloster](/images/journal/overwintering-in-greece/meteora.webp)
+*Meteora-Kloster. Wir haben gelernt, dass Klöster in Griechenland ein Non-Negotiable sind, was Besuche angeht. Immer ein Genuss*
+
+![frühstück in einer heissen quelle bei den thermopylen](/images/journal/overwintering-in-greece/breakfast-at-thermopylae.webp)
+*Schon mal in einer heissen Quelle gefrühstückt? In den Thermopylen haben wir es geschafft*
 
 Unsere Route war also weniger ein perfekt durchgeplanter Roadtrip als vielmehr eine Mischung aus Wetter, spontanen Entscheidungen, Vanlife und den Orten, an denen wir gerade sein wollten.
 
@@ -147,8 +155,11 @@ Sobald die Sonne verschwunden war, kühlte es ausserdem sehr schnell ab. Unser H
 
 ## Kann man in Griechenland im Winter mit dem Camper frei stehen?
 
-![ein einsamer stellplatz](/images/journal/overwintering-in-greece/a-lonely-spot.webp#right)
+![ein einsamer stellplatz](/images/journal/overwintering-in-greece/a-lonely-spot.webp)
 *Ein einsamer Stellplatz*
+
+![camper dicht nebeneinander](/images/journal/overwintering-in-greece/cozy-camping.webp)
+*Und manchmal ist man so überhaupt nicht allein: Kuschelcamping!*
 
 Viele Campingplätze sind im Winter geschlossen, und die meisten Ferienorte wirken ausserhalb der Saison beinahe menschenleer. Für uns war das freie Übernachten deshalb manchmal die einzige praktikable Möglichkeit. In den allermeisten Fällen hat es niemanden gestört, dass wir frei gestanden sind. Im Gegenteil: Wir hatten eher das Gefühl, dass sich Einheimische gefreut haben, dass überhaupt jemand in der Nebensaison zu Besuch war.
 
@@ -164,15 +175,6 @@ Zur Rechtslage: Wildcampen ist in Griechenland grundsätzlich verboten, und seit
 Auf einem Strandplatz kamen Leute auf uns zu und berichteten, die Polizei werde den Strand räumen, weil sich dort inzwischen ziemlich viele Camper versammelt hätten. Auf einem anderen Strandplatz sagte uns ein Einheimischer, dass es nicht erlaubt sei, dort zu übernachten. In beiden Fällen war es für uns selbstverständlich, einen anderen Platz aufzusuchen.
 
 Wir haben ausserdem sehr darauf geachtet, ausschliesslich an Orten zu übernachten, an denen keine entsprechenden Verbotsschilder angebracht waren, und unseren Platz stets sauber und unauffällig zu hinterlassen.
-
-### Storytime: Lagerfeuer am Strand
-
-![camper dicht nebeneinander](/images/journal/overwintering-in-greece/cozy-camping.webp#right)
-*Und manchmal ist man so überhaupt nicht allein: Kuschelcamping!*
-
-Einen richtigen Vanlife-Lagerfeuerabend hatten wir tatsächlich nicht besonders oft. An diesem einen Abend hat es aber einfach gepasst: Aus Fremden wurden Freunde, wir sassen zusammen und hatten einen dieser Abende, die man unterwegs nicht plant und später trotzdem nicht vergisst.
-
-Unsere neuen Freunde hatten dabei, wohlgemerkt, ein nicht ganz legales Lagerfeuer gemacht. Am nächsten Nachmittag wollten sie wieder Feuer machen. Einheimische Fischer fühlten sich allerdings zunehmend gestört, weil sie selber keine Parkplätze mehr fanden, und machten uns schliesslich ziemlich deutlich, dass wir den Platz verlassen sollten oder eben «bezahlen» müssten. Wir haben uns für die erste Variante entschieden und den Platz verlassen.
 
 ## Wo darf man in Griechenland mit dem Camper übernachten?
 
@@ -200,8 +202,8 @@ Ein grosses Highlight war ausserdem die Übernachtung auf Plätzen auf dem Bauer
 ![ein tisch in einer taverne in leonidio](/images/journal/overwintering-in-greece/a-divine-taverna-leonidio.webp)
 *Eine göttliche Wahl: Taverne in Leonidio*
 
-![paralia salanti bei sonnenuntergang](/images/journal/overwintering-in-greece/paralia-salanti-at-sunset.webp)
-*Lieblingsstellplatz Paralia Salanti bei Sonnenuntergang*
+![gasse in der altstadt von nafplio](/images/journal/overwintering-in-greece/nafplio-old-town.webp)
+*Die Altstadt von Nafplio. Hier hatten wesentlich mehr Geschäfte offen und luden zum Verweilen ein*
 
 ![gegrillte zucchettibälle, tzatziki und griechischer salat](/images/journal/overwintering-in-greece/zucchini-balls-and-greek-salad.webp)
 *Vegetarisches Lieblingsessen in Griechenland: gegrillte Zucchettibälle, viel Tzatziki und griechischer Salat. Einfach göttlich*
@@ -355,8 +357,8 @@ Allerdings war Schwimmen definitiv keine alltägliche Aktivität. Das Wasser war
 
 Die Wassertemperatur lag bei uns ungefähr bei 15 °C. Das ist ziemlich genau der Normalwert: Das Meer rund um die Peloponnes kühlt bis Februar und März auf seinen Tiefpunkt von etwa 14 bis 16 °C ab und erwärmt sich erst ab Mai wieder spürbar.
 
-![gasse in der altstadt von nafplio](/images/journal/overwintering-in-greece/nafplio-old-town.webp)
-*Die Altstadt von Nafplio. Hier hatten wesentlich mehr Geschäfte offen und luden zum Verweilen ein*
+![paralia salanti bei sonnenuntergang](/images/journal/overwintering-in-greece/paralia-salanti-at-sunset.webp)
+*Lieblingsstellplatz Paralia Salanti bei Sonnenuntergang*
 
 ![kaffee am meer](/images/journal/overwintering-in-greece/coffee-by-the-sea.webp)
 *Kaffee am Meer!*
@@ -366,16 +368,13 @@ Die Wassertemperatur lag bei uns ungefähr bei 15 °C. Das ist ziemlich genau de
 
 ### Vanlife Favorites: Heisse Quellen
 
-![heisse quelle auf methana](/images/journal/overwintering-in-greece/hot-spring-on-methana.webp#right)
-*Kälter, als es aussieht: eine Heisswasserquelle auf der Halbinsel Methana*
-
 Von Methana bis zu den Thermopylen, das grösste Highlight ist schwefelig blubbernd heisses Wasser aus der Erde. Sauberer wird man dabei nicht, aber gerade an kalten und windigen Tagen fühlt sich ein Gang in eine über 36 Grad warme Gratis-Quelle der Natur stinkend göttlich an. Welch ein Wunder ist unser Planet! Kleiner Praxistipp: Silberschmuck läuft im Schwefelwasser innert Minuten dunkel an, also besser vorher ausziehen.
+
+![heisse quelle auf methana](/images/journal/overwintering-in-greece/hot-spring-on-methana.webp)
+*Kälter, als es aussieht: eine Heisswasserquelle auf der Halbinsel Methana*
 
 ![lauwarmes thermalwasser auf methana](/images/journal/overwintering-in-greece/thermal-water-on-methana.webp)
 *Lauwarmes Thermalwasser auf Methana*
-
-![frühstück in einer heissen quelle bei den thermopylen](/images/journal/overwintering-in-greece/breakfast-at-thermopylae.webp)
-*Schon mal in einer heissen Quelle gefrühstückt? In den Thermopylen haben wir es geschafft*
 
 ## Wie ist die Vanlife-Community in Griechenland im Winter?
 
@@ -405,9 +404,6 @@ Hell yeah und wie! Kälte, Regen und die manchmal fehlende Camper-Infrastruktur 
 
 ![velos neben dem van](/images/journal/overwintering-in-greece/exploring-by-bike.webp)
 *Das Schönste: wenn man den Van stehen lassen und die Umgebung mit dem Rad erkunden kann*
-
-![ein meteora-kloster](/images/journal/overwintering-in-greece/meteora.webp)
-*Meteora-Kloster. Wir haben gelernt, dass Klöster in Griechenland ein Non-Negotiable sind, was Besuche angeht. Immer ein Genuss*
 
 ![strassenhunde in griechenland](/images/journal/overwintering-in-greece/street-dogs.webp)
 *Freundliche Begegnungen in Griechenland: Strassenhunde*

@@ -25,7 +25,7 @@ The original plan? Take it easy along the west coast and explore every single "f
 
 Here's roughly how the route played out:
 
-**Corinth → Epidaurus → Methana → Nafplio → Leonidio → Monemvasia → Elafonisos**
+**Corinth → Epidaurus → Methana → Nafplio → Leonidio → Monemvasia → Elafonisos → Gytheio**
 
 ![an evening walk in ancient corinth](/images/journal/overwintering-in-greece/evening-walk-in-ancient-corinth.webp)
 *An evening stroll through ancient Corinth. In January, about half the shops are shuttered for the season*
@@ -36,7 +36,7 @@ Here's roughly how the route played out:
 ![a turquoise bay near nafplio](/images/journal/overwintering-in-greece/turquoise-bay-near-nafplio.webp)
 *That turquoise bay near Nafplio! From our parking spot you can walk along the water all the way into the old town*
 
-That's as far as we made it on the first leg before we turned Humbär around and pointed him back toward Athens.
+From Elafonisos we pushed on a little further to Gytheio, then looped back via Leonidio and pointed Humbär toward Athens.
 
 ![simos beach on elafonisos](/images/journal/overwintering-in-greece/simos-beach-elafonisos.webp)
 *Simos Beach on Elafonisos. We rolled our bikes onto the ferry and pedaled all the way out here. At low tide you can wade across this skinny strip in knee-deep water*
@@ -56,12 +56,12 @@ That's as far as we made it on the first leg before we turned Humbär around and
 *Hiking in Leonidio*
 
 ![another hiking trail near leonidio](/images/journal/overwintering-in-greece/hiking-in-leonidio-2.webp)
-*More trails, more views, more Leonidio*
+*While most people here come loaded with climbing gear, we're happy just soaking up the rocky trails and those unforgettable views*
 
 ![a view over leonidio and its red cliffs](/images/journal/overwintering-in-greece/view-over-leonidio.webp#right)
 *Leonidio from above*
 
-Between the weather and Frank's work, we ended up hanging around here for quite a while, and we didn't mind one bit. Leonidio is a climbing mecca brimming with stories and cozy spots where people just naturally gather. Every Monday there's a fresh market. On top of that, this little town packs in a specialty coffee shop, heavenly rustic tavernas, a climbing co-op, a wood-fired bakery, some very special pastry shops, and a legendary olive oil seller who stops by the parking lot in his minivan every evening.
+Between the weather and Frank's work, we ended up hanging around here for quite a while, and we didn't mind one bit. Leonidio is a climbing mecca brimming with stories and cozy spots where people just naturally gather. Every Monday there's a farmers market. On top of that, this little town packs in a specialty coffee shop, heavenly rustic tavernas, a climbing co-op, a wood-fired bakery, some very special pastry shops, and a legendary olive oil seller who stops by the parking lot in his minivan every evening.
 
 ![a street in downtown leonidio](/images/journal/overwintering-in-greece/downtown-leonidio.webp)
 *Downtown Leonidio*
@@ -70,7 +70,7 @@ Between the weather and Frank's work, we ended up hanging around here for quite 
 *Monday means market day! We biked all the way into the old town for it*
 
 ![the olive oil seller's minivan](/images/journal/overwintering-in-greece/the-olive-oil-man.webp)
-*Here comes the best olive oil in the world*
+*Right here: the source of the best olive oil in the world*
 
 ![the wood-fired bakery in leonidio](/images/journal/overwintering-in-greece/wood-fired-bakery-leonidio.webp)
 *The wood-fired bakery. Traditional craftsmanship at its finest*
@@ -100,7 +100,7 @@ Next stop: Volos, where Humbär was booked in for a fresh coat of paint and some
 ![picking up the restored van](/images/journal/overwintering-in-greece/picking-up-humbaer.webp)
 *All smiles as we pick up our beautiful, good-as-new Humbär*
 
-With a rental car, we could cover a lot more ground a lot faster: week one was all about Pelion, week two took us to Chalkidiki, and in week three we swung back down to the Peloponnese to check out some legendary vanlife spots, including Filia Laundry and Elea Beach.
+With a rental car, we could cover a lot more ground a lot faster: week one was all about Pelion, week two took us to Chalkidiki, and in week three we swung back down to the Peloponnese to check out some legendary vanlife spots, including Filia Laundry, Elea Beach and Voidokilia Beach.
 
 ![the rental car](/images/journal/overwintering-in-greece/the-rental-car.webp)
 *The rental car. No match for Humbär in the comfort department, but it's at least twice as fast and costs half as much on the highway*
@@ -110,6 +110,14 @@ With a rental car, we could cover a lot more ground a lot faster: week one was a
 
 ![a chestnut forest on pelion](/images/journal/overwintering-in-greece/hiking-on-pelion.webp)
 *Hiking on Pelion. The chestnut forests felt so much like Ticino, we got a little homesick*
+
+From Volos we headed to Thermopylae for a soak in the hot springs, then cut straight across the country, past the monasteries of Meteora, all the way back to where it all began: Igoumenitsa.
+
+![a monastery at meteora](/images/journal/overwintering-in-greece/meteora.webp)
+*A Meteora monastery. Lesson learned: in Greece, monastery visits are non-negotiable. Always worth it*
+
+![breakfast in a hot spring at thermopylae](/images/journal/overwintering-in-greece/breakfast-at-thermopylae.webp)
+*Ever had breakfast in a hot spring? We checked that one off at Thermopylae*
 
 So no, this wasn't some perfectly mapped-out road trip. It was a happy mix of weather forecasts, spur-of-the-moment decisions, vanlife and wherever we felt like being next.
 
@@ -152,8 +160,11 @@ And the second the sun disappeared, the temperature dropped fast. That's when ou
 
 ## Can you wild camp in Greece in winter?
 
-![a lonely camping spot](/images/journal/overwintering-in-greece/a-lonely-spot.webp#right)
+![a lonely camping spot](/images/journal/overwintering-in-greece/a-lonely-spot.webp)
 *Just us and the view*
+
+![campers parked close together](/images/journal/overwintering-in-greece/cozy-camping.webp)
+*And sometimes you're anything but alone. Hello, cuddle camping!*
 
 Lots of campgrounds shut down for the winter, and most beach towns turn into near ghost towns once the season wraps up. So sometimes wild camping was simply the only option that made sense. And in the vast majority of cases, nobody batted an eye at us parking overnight. If anything, we got the sense that locals were happy to see anyone at all in the off-season.
 
@@ -169,15 +180,6 @@ Now for the legal side: wild camping is generally banned in Greece, and since Ja
 At one beach, some people came over to let us know that the police were about to clear the place out, since quite a crowd of campers had gathered there by then. At another beach, a local let us know that overnight stays weren't allowed. Both times, packing up and moving on was the obvious thing to do.
 
 We were also super careful to only stay where there were no "no camping" signs, and to always leave our spot clean and unobtrusive.
-
-### Storytime: a campfire on the beach
-
-![campers parked close together](/images/journal/overwintering-in-greece/cozy-camping.webp#right)
-*And sometimes you're anything but alone. Hello, cuddle camping!*
-
-Truth be told, classic vanlife campfire nights were pretty rare for us. But this one evening, everything just clicked: strangers turned into friends, we hung out together, and it became one of those nights you never plan on the road but never forget either.
-
-Mind you, our new friends' campfire wasn't exactly legal. The next afternoon they wanted to fire it up again. The local fishermen, meanwhile, were getting more and more fed up because they couldn't find anywhere to park, and eventually made it crystal clear that we could either leave or "pay up." We chose option one and moved on.
 
 ## So where can you actually park your camper overnight in Greece?
 
@@ -205,8 +207,8 @@ Another huge highlight: farm stays, which in Greece usually means tavernas. Thes
 ![a table at a taverna in leonidio](/images/journal/overwintering-in-greece/a-divine-taverna-leonidio.webp)
 *A match made in heaven: a taverna in Leonidio*
 
-![paralia salanti at sunset](/images/journal/overwintering-in-greece/paralia-salanti-at-sunset.webp)
-*Our all-time favorite spot, Paralia Salanti, at sunset*
+![a street in nafplio's old town](/images/journal/overwintering-in-greece/nafplio-old-town.webp)
+*Nafplio's old town. Way more shops were open here, inviting you to linger*
 
 ![grilled zucchini balls, tzatziki and greek salad](/images/journal/overwintering-in-greece/zucchini-balls-and-greek-salad.webp)
 *Our favorite vegetarian meal in Greece: grilled zucchini balls, lots of tzatziki and a Greek salad. Pure heaven*
@@ -360,8 +362,8 @@ That said, swimming was definitely not a daily thing. Even with the sun out, the
 
 Where we swam, the water hovered around 15 °C (59 °F). That's pretty much par for the course: the sea around the Peloponnese bottoms out at about 14 to 16 °C (57 to 61 °F) in February and March and doesn't really warm up again until May.
 
-![a street in nafplio's old town](/images/journal/overwintering-in-greece/nafplio-old-town.webp)
-*Nafplio's old town. Way more shops were open here, inviting you to linger*
+![paralia salanti at sunset](/images/journal/overwintering-in-greece/paralia-salanti-at-sunset.webp)
+*Our all-time favorite spot, Paralia Salanti, at sunset*
 
 ![coffee by the sea](/images/journal/overwintering-in-greece/coffee-by-the-sea.webp)
 *Coffee by the sea!*
@@ -371,16 +373,13 @@ Where we swam, the water hovered around 15 °C (59 °F). That's pretty much par 
 
 ### Vanlife favorites: hot springs
 
-![a hot spring pool on methana](/images/journal/overwintering-in-greece/hot-spring-on-methana.webp#right)
-*Colder than it looks: a hot spring on the Methana peninsula*
-
 From Methana all the way to Thermopylae, the ultimate highlight is sulfury, bubbling hot water gushing straight out of the ground. Sure, you won't come out any cleaner, but on a cold, windy day, sinking into one of nature's free hot tubs at over 36 °C (97 °F) feels stinkingly divine. What a wonder this planet is! A practical tip: silver jewelry tarnishes within minutes in the sulfur water, so take it off before you hop in.
+
+![a hot spring pool on methana](/images/journal/overwintering-in-greece/hot-spring-on-methana.webp)
+*Colder than it looks: a hot spring on the Methana peninsula*
 
 ![warm thermal water on methana](/images/journal/overwintering-in-greece/thermal-water-on-methana.webp)
 *Soaking in lukewarm thermal water on Methana*
-
-![breakfast in a hot spring at thermopylae](/images/journal/overwintering-in-greece/breakfast-at-thermopylae.webp)
-*Ever had breakfast in a hot spring? We checked that one off at Thermopylae*
 
 ## What's the vanlife community like in Greece in winter?
 
@@ -410,9 +409,6 @@ Hell yeah, in a heartbeat! Sure, the cold, the rain and the sometimes nonexisten
 
 ![bikes parked next to the van](/images/journal/overwintering-in-greece/exploring-by-bike.webp)
 *The best feeling: leaving the van parked and exploring by bike*
-
-![a monastery at meteora](/images/journal/overwintering-in-greece/meteora.webp)
-*A Meteora monastery. Lesson learned: in Greece, monastery visits are non-negotiable. Always worth it*
 
 ![street dogs in greece](/images/journal/overwintering-in-greece/street-dogs.webp)
 *Friendly faces all over Greece: the street dogs*
