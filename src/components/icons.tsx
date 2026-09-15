@@ -32,12 +32,24 @@ export function TiktokIcon({ size = 17 }: { size?: number }) {
  * plain letters instead. The colors are pulled a little toward the paper the
  * site is printed on, so a flag does not shout next to a headline.
  */
-function Flag({ size, children }: { size: number; children: React.ReactNode }) {
+function Flag({
+  size,
+  square = false,
+  children,
+}: {
+  size: number;
+  /** The Swiss flag is square; every other flag here is 3:2. */
+  square?: boolean;
+  children: React.ReactNode;
+}) {
+  // Both flags keep the same height, so a square one sits on the same line as
+  // a 3:2 one beside it and is simply narrower.
+  const height = Math.round((size * 2) / 3);
   return (
     <svg
-      width={size}
-      height={Math.round((size * 2) / 3)}
-      viewBox="0 0 30 20"
+      width={square ? height : size}
+      height={height}
+      viewBox={square ? "0 0 32 32" : "0 0 30 20"}
       aria-hidden
       className="shrink-0 rounded-[2px] ring-1 ring-inset ring-ink/15"
     >
@@ -60,11 +72,16 @@ export function UsFlag({ size = 18 }: { size?: number }) {
   );
 }
 
+/**
+ * Square, as the Swiss flag is. The cross follows the official proportions on a
+ * 32-unit field: arms 6 wide and 7 long (a sixth longer than they are wide),
+ * 20 across in all, centred.
+ */
 export function ChFlag({ size = 18 }: { size?: number }) {
   return (
-    <Flag size={size}>
-      <rect width="30" height="20" fill="#b4503f" />
-      <path d="M13.4 5h3.2v3.4H20v3.2h-3.4V15h-3.2v-3.4H10V8.4h3.4V5Z" fill="#f2ede3" />
+    <Flag size={size} square>
+      <rect width="32" height="32" fill="#b4503f" />
+      <path d="M13 6h6v7h7v6h-7v7h-6v-7H6v-6h7V6Z" fill="#f2ede3" />
     </Flag>
   );
 }

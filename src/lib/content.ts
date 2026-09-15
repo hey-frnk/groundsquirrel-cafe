@@ -116,6 +116,18 @@ function layOutPhotos(photos: Photo[]): string {
       continue;
     }
 
+    // A longer run of portraits is set in rows of three, which keeps a gallery
+    // compact. Only a run of exactly four goes in two pairs, since three and one
+    // would leave the last photo standing alone at full width.
+    let portraits = i;
+    while (portraits < photos.length && !photos[portraits].float && isPortrait(photos[portraits].img))
+      portraits++;
+    if (portraits - i >= 3 && portraits - i !== 4) {
+      parts.push(grid(photos.slice(i, i + 3).map((p) => figure(p)), 3, " is-pair"));
+      i += 3;
+      continue;
+    }
+
     const [first, second] = [photos[i], photos[i + 1]];
     if (second && !second.float && isPortrait(first.img) && isPortrait(second.img)) {
       parts.push(grid([figure(first), figure(second)], 2, " is-pair"));
@@ -319,6 +331,35 @@ function renderAdNotes(htmlStr: string): string {
 }
 
 /**
+ * Turns `[adbox|Label]` … `[/adbox]` into a boxed advertisement.
+ *
+ * The `[ad]` disclosure says up front that a post carries affiliate links. A
+ * passage that actually sells something needs more than that: set in the
+ * running text it reads like the rest of the story, so it is lifted out into a
+ * framed box with its label on top ("Werbung", "Advertisement"). Markdown
+ * inside is processed as usual, so a photo, a link and a button all fit.
+ */
+function renderAdBoxes(htmlStr: string): string {
+  return htmlStr
+    .replace(/<p>\[adbox(?:\|([^\]]*))?\]<\/p>/g, (_m, label = "") => {
+      const text = escapeHtml(label.trim() || "Werbung");
+      return `<aside class="post-ad-box" aria-label="${text}"><p class="post-ad-box-label">${text}</p>`;
+    })
+    .replace(/<p>\[\/adbox\]<\/p>/g, `</aside>`);
+}
+
+/**
+ * Turns `[small]` … `[/small]` into the same small print, for notes that belong
+ * under something rather than in the reading: a footnote to a list, or where a
+ * conversion rate came from.
+ */
+function renderSmallPrint(htmlStr: string): string {
+  return htmlStr
+    .replace(/<p>\[small\]<\/p>/g, `<div class="post-small-print">`)
+    .replace(/<p>\[\/small\]<\/p>/g, `</div>`);
+}
+
+/**
  * Undoes the character references remark writes, so a heading's anchor is built
  * from the text a reader would say out loud rather than from `&#x27;`.
  */
@@ -394,12 +435,16 @@ function renderContents(htmlStr: string, idPrefix: string): string {
 
 export async function markdownToHtml(markdown: string, idPrefix = ""): Promise<string> {
   const processed = await remark().use(html).process(markdown);
-  return renderAdNotes(
-    renderTips(
-      renderButtons(
-        renderContents(
-          renderMapEmbeds(dropOrphanFloats(wrapImageGalleries(processed.toString()))),
-          idPrefix
+  return renderSmallPrint(
+    renderAdBoxes(
+      renderAdNotes(
+        renderTips(
+          renderButtons(
+            renderContents(
+              renderMapEmbeds(dropOrphanFloats(wrapImageGalleries(processed.toString()))),
+              idPrefix
+            )
+          )
         )
       )
     )

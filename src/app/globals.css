@@ -672,6 +672,46 @@ html {
   transform: translateX(3px);
 }
 
+/* A passage that sells something, `[adbox|Werbung]` … `[/adbox]`. Framed and
+   tinted with the rose so it cannot be mistaken for the story around it, and
+   labelled on top the way a printed magazine marks an advertisement. */
+.prose .post-ad-box {
+  clear: both;
+  display: flow-root;
+  margin-top: 2.4em;
+  margin-bottom: 2.4em;
+  padding: 1rem 1.4rem 1.3rem;
+  border: 1px solid color-mix(in srgb, var(--color-rose) 75%, transparent);
+  border-radius: var(--radius-tile);
+  background: color-mix(in srgb, var(--color-blush) 40%, var(--color-paper));
+}
+
+.prose .post-ad-box-label {
+  display: inline-block;
+  margin: 0 0 0.2rem;
+  padding: 0.3rem 0.65rem 0.25rem;
+  border-radius: 999px;
+  background: var(--color-rose);
+  font-family: var(--font-special-elite), ui-monospace, monospace;
+  font-size: 0.62rem;
+  line-height: 1;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+}
+
+.prose .post-ad-box > h3 {
+  margin-top: 0.7em;
+}
+
+.prose .post-ad-box .img-float {
+  width: min(40%, 15rem);
+}
+
+.prose .post-ad-box > :last-child {
+  margin-bottom: 0;
+}
+
 /* The site header stays at the top of the window, so a heading jumped to from
    the contents has to stop below it rather than under it. */
 .prose :is(h2, h3, h4)[id] {
@@ -986,7 +1026,18 @@ html {
   margin: 0 0 1.6em;
 }
 
-.prose .post-ad-note p {
+/* Small print further down a post, `[small]` … `[/small]`: the same voice as
+   the disclosure, set under whatever it annotates. */
+.prose .post-small-print {
+  margin: -0.6em 0 1.6em;
+}
+
+.prose .post-small-print p + p {
+  margin-top: 0.5em;
+}
+
+.prose .post-ad-note p,
+.prose .post-small-print p {
   margin: 0;
   font-size: 0.72em;
   font-style: italic;
@@ -998,3 +1049,4 @@ html {
   font-weight: 600;
   font-style: italic;
 }
+
