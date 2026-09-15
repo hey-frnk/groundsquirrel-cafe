@@ -3,6 +3,12 @@ title: "Überwintern im Van in Griechenland: Kosten, Wetter, Freistehen & unsere
 excerpt: "Von Dezember bis März haben wir mit unserem autarken Camper Humbär in Griechenland überwintert, und schnell ist es zu unserem Lieblingsland für Vanlife geworden. Wie kalt es wirklich wird, wie oft unsere Solaranlage eine Steckdose brauchte, was das Gesetz zum Freistehen sagt, was uns bei den Kosten überrascht hat, und wen wir unterwegs getroffen haben."
 ---
 
+[ad]
+
+**Werbung.** Dieser Beitrag enthält Werbelinks (Affiliate-Links) zu [Alb Filter](https://alb-filter.com/products/pro-camper-set?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate). Wenn du darüber bestellst, bekommst du einen Rabatt und wir eine Provision. Der Preis bleibt für dich derselbe, du zahlst also nichts extra. Unsere Meinung zu den Filtern bleibt davon unberührt: Sie sind seit Jahren in unserem eigenen Van verbaut.
+
+[/ad]
+
 ![humbär in griechenland](/images/journal/overwintering-in-greece/cover.webp#right)
 
 Im letzten Winter zwischen Dezember und März sind wir mit unserem autarken Camper Humbär in Griechenland überwintern gegangen. Schnell ist es zu unserem Lieblingsland für Vanlife geworden. In diesem Blog teilen wir unsere Erfahrung mit dir, erzählen von Begegnungen und unseren Erlebnissen. Vielleicht hilft es dir ja ein wenig bei deiner Reiseplanung, falls du ebenfalls vorhast, in Griechenland mit dem Van zu überwintern.
@@ -229,6 +235,21 @@ Wenn es gar nicht mehr anders ging, etwa weil unsere Camper-Batterie aufgrund me
 
 ![noch ein teller vegane ravioli](/images/journal/overwintering-in-greece/vegan-ravioli-at-filia-laundry-2.webp)
 *So gut, dass sie ein zweites Foto verdient haben*
+
+[adbox|Werbung]
+
+### Frischwasser: sauberes Trinkwasser, direkt aus dem Hahn
+
+![eine trinkwasserquelle in griechenland](/images/journal/humbaer-water-system/a-spring-in-greece.webp#left)
+*Eine Trinkwasserquelle in Griechenland*
+
+In Griechenland kommt man wirklich gut an Frischwasser. Unser Filtersystem von Alb Filter gibt uns beim Auffüllen eine zusätzliche Filterstufe und damit ein richtig gutes Gefühl: Wasser aus Trinkwasserquellen trinken wir nach der Filterung direkt aus dem Hahn, ohne es abzukochen. Und ganz nebenbei sparen wir jede Menge Einwegflaschen. Mehr dazu in unserem Artikel über das [Wassersystem im Humbär](/journal/camper-van-water-system/).
+
+**10 % Rabatt** mit dem Code **`weltenhummler`** (bis 8. Oktober 2026, danach 5 %).
+
+[button:https://alb-filter.com/weltenhummler|Zu den Alb Filter Wasserfiltern mit 10 % Rabatt (Werbelink)]
+
+[/adbox]
 
 ### Storytime: Verlasse einen Ort schöner, als du ihn vorgefunden hast
 

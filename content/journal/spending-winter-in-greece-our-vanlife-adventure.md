@@ -8,6 +8,12 @@ categories: ["vanlife", "travel"]
 tags: ["vanlife", "greece", "winter", "winter in greece", "peloponnese", "leonidio", "athens", "volos", "pelion", "chalkidiki", "wild camping", "boondocking", "park4night", "off grid", "solar", "camper costs", "tolls", "hot springs", "tortoises", "humbaer", "europe", "slow travel", "überwintern", "griechenland"]
 ---
 
+[ad]
+
+**Advertisement.** This post contains advertising links (affiliate links) to [Alb Filter](https://alb-filter.com/products/pro-camper-set?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate). If you order through them you get a discount and we get a commission. The price stays the same for you, so nothing extra to pay. It does not change what we think of the filters either: they have been fitted in our own van for years.
+
+[/ad]
+
 ![humbär parked in greece](/images/journal/overwintering-in-greece/cover.webp#right)
 
 Last winter, from December to March, we packed up our off-grid camper Humbär and headed south to Greece. It didn't take long for Greece to become our all-time favorite country for vanlife. In this post we're sharing the whole story, from the people we met to the adventures we stumbled into along the way. And if you're dreaming about spending a winter in Greece in your own van, we hope it gives your trip planning a little head start.
@@ -234,6 +240,21 @@ When there was really no way around it, say our battery was running low after a 
 
 ![another plate of vegan ravioli](/images/journal/overwintering-in-greece/vegan-ravioli-at-filia-laundry-2.webp)
 *So good they earned a second photo*
+
+[adbox|Advertisement]
+
+### Fresh water: clean drinking water, straight from the tap
+
+![a drinking water spring in greece](/images/journal/humbaer-water-system/a-spring-in-greece.webp#left)
+*A drinking water spring in Greece*
+
+Getting fresh water in Greece is genuinely easy. Our Alb Filter system adds one more filtration stage every time we fill up, and that gives us real peace of mind: water from drinking water sources goes straight from our tap into our glass, no boiling needed. Bonus: we skip a whole lot of single-use bottles along the way. The full setup is in our post on [Humbär's water system](/journal/camper-van-water-system/).
+
+**10% off** with the code **`weltenhummler`** (until October 8, 2026, then 5%).
+
+[button:https://alb-filter.com/weltenhummler|Get 10% off Alb Filter water filters (ad link)]
+
+[/adbox]
 
 ### Storytime: leave it better than you found it
 

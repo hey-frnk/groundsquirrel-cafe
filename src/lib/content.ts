@@ -331,6 +331,24 @@ function renderAdNotes(htmlStr: string): string {
 }
 
 /**
+ * Turns `[adbox|Label]` … `[/adbox]` into a boxed advertisement.
+ *
+ * The `[ad]` disclosure says up front that a post carries affiliate links. A
+ * passage that actually sells something needs more than that: set in the
+ * running text it reads like the rest of the story, so it is lifted out into a
+ * framed box with its label on top ("Werbung", "Advertisement"). Markdown
+ * inside is processed as usual, so a photo, a link and a button all fit.
+ */
+function renderAdBoxes(htmlStr: string): string {
+  return htmlStr
+    .replace(/<p>\[adbox(?:\|([^\]]*))?\]<\/p>/g, (_m, label = "") => {
+      const text = escapeHtml(label.trim() || "Werbung");
+      return `<aside class="post-ad-box" aria-label="${text}"><p class="post-ad-box-label">${text}</p>`;
+    })
+    .replace(/<p>\[\/adbox\]<\/p>/g, `</aside>`);
+}
+
+/**
  * Turns `[small]` … `[/small]` into the same small print, for notes that belong
  * under something rather than in the reading: a footnote to a list, or where a
  * conversion rate came from.
@@ -418,12 +436,14 @@ function renderContents(htmlStr: string, idPrefix: string): string {
 export async function markdownToHtml(markdown: string, idPrefix = ""): Promise<string> {
   const processed = await remark().use(html).process(markdown);
   return renderSmallPrint(
-    renderAdNotes(
-      renderTips(
-        renderButtons(
-          renderContents(
-            renderMapEmbeds(dropOrphanFloats(wrapImageGalleries(processed.toString()))),
-            idPrefix
+    renderAdBoxes(
+      renderAdNotes(
+        renderTips(
+          renderButtons(
+            renderContents(
+              renderMapEmbeds(dropOrphanFloats(wrapImageGalleries(processed.toString()))),
+              idPrefix
+            )
           )
         )
       )
