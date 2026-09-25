@@ -1,5 +1,5 @@
 ---
-title: "Vanlife in Spain and Portugal: Our Favorite Spots, Where We Parked and What It Cost"
+title: "Vanlife in Spain and Portugal: Our Favorite Spots, Where We Camped and What it Cost"
 date: "2026-09-24"
 author: "Frank"
 excerpt: "Oranges by the roadside, surfers padding down cliffside stairs and hot springs in the middle of the forest. Spain and Portugal were the first big chapter for our freshly built camper Humbär. Here are our favorite spots, where we parked for the night, and exactly what a month of vanlife on the Iberian Peninsula set us back."
