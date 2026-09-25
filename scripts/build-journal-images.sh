@@ -158,4 +158,93 @@ greece "das schönste, wenn man den van stehen lassen kann und die umgebung mit 
 greece "meteora kloster. wir haben gelernt dass kloster in griechenland ein non-negotiable ist was besuch angeht - immer ein genuss.jpeg" meteora
 greece "freundliche begegnungen in griechenland - strassenhunde.jpeg" street-dogs
 
+echo "Vanlife in Spain & Portugal →"
+IB="$SRC/vanlife-iberian"
+iberian() { fit "$IB/$1" "$OUT/vanlife-spain-portugal/$2.webp" 2000 72; }
+
+iberian "titel.JPG"                                                cover
+iberian "die ikonische bucht an der costa brava.JPG"                costa-brava-cove
+iberian "es ist frühling in granada.JPG"                            spring-in-granada
+iberian "leckereien in sevilla.JPG"                                 treats-in-seville
+iberian "vor einem secondhand-laden in malaga. hier haben wir unseren campingstuhl gefunden.JPG" secondhand-shop-in-malaga
+iberian "wildblumen im spanischen frühling.jpg"                     wildflowers-in-spring
+iberian "mit neuem mut ins vanlife.jpg"                             new-courage
+iberian "einen stellplatz direkt am meer in spanien.JPG"            right-by-the-sea-in-spain
+iberian "ein stellplatz mit meerblick.JPG"                          a-spot-with-a-sea-view
+iberian "humbär auf einem sonnigen campingplatz an der costa blanca.JPG" costa-blanca-campground
+iberian "in einem vorort von valencia. von hier kommt die paella.JPG" valencia-home-of-paella
+iberian "eine vegane paella.JPG"                                    vegan-paella
+iberian "wir haben eine wüsten-wanderung gemacht in der tabernas wüste.JPG" tabernas-desert-hike
+iberian "nach einer wanderung im cabo de gata.JPG"                  hiking-cabo-de-gata
+iberian "es ist sonnenuntergang am cabo de gata.JPG"                sunset-at-cabo-de-gata
+iberian "die idyllischen buchten der algarve.JPG"                   idyllic-algarve-coves
+iberian "bucht an der algarve. hieraus könnte man ein wallpaper machen, nicht?.JPG" algarve-wallpaper-cove
+iberian "natural bridge an der algarve.JPG"                         natural-bridge-algarve
+iberian "laranjas aus der algarve machen einfach glücklich.JPG"     laranjas
+iberian "die schönste wasser-farbe die man sich erdenken kann, nicht?.JPG" turquoise-water
+iberian "die felsen am strand sind einfach rot. i mean whaaaat?.JPG" red-rocks
+iberian "portugal hat definitiv die beeindruckendsten strände bekommen.JPG" portugals-beaches
+iberian "praia dos tomates.JPG"                                     praia-dos-tomates
+iberian "der campingplatz ist so gut wie der einzige ort, an dem man richtig campen darf - mit tisch und stuhl - und in dem fall einem feuerchen.JPG" campfire-at-the-campground
+iberian "sonnenuntergang in der algarve.JPG"                        algarve-sunset
+iberian "happy frank im sonnenuntergang an der algarve.JPG"         happy-frank-algarve
+iberian "am strand von lagos, algarve.JPG"                          beach-in-lagos
+iberian "durch die strassen von lagos.JPG"                          streets-of-lagos
+iberian "goldenes licht und leckerer kaffee in lagos.JPG"           golden-light-coffee-lagos
+iberian "in lagos findest du genügend unendlich hübsche surf-cafés.JPG" surf-cafes-lagos
+iberian "sagres ist definitiv das surf-mekka.jpg"                   sagres
+iberian "frühstück mit einem ausblick auf die surfer.JPG"           breakfast-watching-surfers
+iberian "gourmet-vanlife-essen auf dem aldi-parkplatz.JPG"          gourmet-on-the-aldi-lot
+iberian "der geheime stellplatz vor dem surfen.JPG"                 secret-spot-before-surfing
+iberian "nach der surflektion in arrifana. es hat spass gemacht!.JPG" after-surfing-in-arrifana
+iberian "es ist date-day in lissabon!.JPG"                          its-date-day
+iberian "durch die strassen von lissabon.JPG"                       streets-of-lisbon
+iberian "pastel de nata in den lebhaften strassen lissabons.JPG"    pastel-de-nata-lisbon
+iberian "gespannt auf einen bus warten.JPG"                         waiting-for-the-bus
+iberian "date day in lissabon.JPG"                                  date-day-in-lisbon
+iberian "ein picknick am meer für unser date day!.JPG"              date-day-picnic
+iberian "angekommen im surf-café in ericeira.JPG"                   surf-cafe-ericeira
+iberian "diese beeindruckende landschaft befindet sich bei peniche, portugal.jpg" peniche
+iberian "am strand bis in den sonnenuntergang.jpg"                  beach-until-sunset
+iberian "hach, was für ein schöner ort - porto.JPG"                 porto
+iberian "cafés, wie man sich vorstellt. porto, portugal.JPG"        cafes-in-porto
+iberian "hier ausserhalb der stadt haben wir gepart für porto.JPG"  parked-outside-porto
+iberian "nach dem thermalbadbesuch in galizien.jpg"                 after-the-hot-springs
+iberian "am strand in galizien.JPG"                                 beach-in-galicia
+iberian "ab und zu führt die ruta del cares an den klippen vorbei.JPG" ruta-del-cares
+iberian "24 kilometer geschafft. im sonnenuntergang in den bergen.JPG" twenty-four-kilometers
+iberian "türkisblaues wasser im picos de europa... und wilde erdbeeren!.JPG" wild-strawberries-picos
+iberian "vanlife in picos de europa. ein traum!.JPG"                vanlife-in-picos
+iberian "das leben im van.JPG"                                      life-in-the-van
+iberian "ein stellplatz in der natur.JPG"                           a-spot-in-nature
+iberian "und ab und zu hatte humbär flauschigen besuch.jpg"         fluffy-visitor
+iberian "picknick am strand?.JPG"                                   beach-picnic
+iberian "happy evelyne.JPG"                                         happy-evelyne
+iberian "panorama-route richtung tossa de mar.JPG"                 road-to-tossa-de-mar
+iberian "eine malerische bucht an der costa brava.JPG"              picturesque-costa-brava-cove
+iberian "valencia-1.JPG"                                            valencia-coffee-to-go
+iberian "valencia-2.JPG"                                            valencia-oranges
+iberian "valencia-3.JPG"                                            valencia-rooftops
+iberian "valencia-4.JPG"                                            valencia-facades
+iberian "valencia-5.JPG"                                            valencia-street-lamp
+iberian "valencia-6.JPG"                                            valencia-iced-coffee
+iberian "valencia-7.JPG"                                            valencia-red-door
+iberian "valencia-8.JPG"                                            valencia-doorway
+iberian "grelos auf dem induktionsherd.JPG"                         grelos-on-the-stove
+iberian "blick of das kloster san juan de gaztelugatxe.JPG"          gaztelugatxe-hermitage
+iberian "wie aus einem film. wo sind die drachen?.JPG"              gaztelugatxe-dragons
+iberian "ein wocheneinkauf bei carrefour.JPG"                       groceries-from-carrefour
+iberian "aussicht auf die insel bei gaztelugatxe.JPG"              gaztelugatxe-island
+iberian "frisches brot aus granada.JPG"                             fresh-bread-granada
+iberian "morgenlicht in sevilla.JPG"                                morning-light-seville
+iberian "schöne strassen in granada.JPG"                            streets-of-granada
+iberian "vanlife in spanien und portugal.jpg"                       vanlife-couple-at-sunset
+iberian "wasser auffüllen auf einem campingplatz in cabo de gata.JPG" water-refill-cabo-de-gata
+iberian "willkommen im vanlife!.JPG"                                welcome-to-vanlife
+iberian "in einem waschsalon direkt in den picos de europa.JPG"     laundromat-in-picos
+iberian " Dom Luís I Bridge, von Gustave Eiffel.JPG"                 dom-luis-bridge-porto
+iberian "die leckerste zimtschnecke ausserhalb von skandinavien?.JPG" cinnamon-bun-porto
+iberian "was gibt es besseres als pastel de nata in porto?.JPG"     pastel-de-nata-porto
+iberian "bilderbuch-vanlife in nordspanien.JPG"                    picture-book-vanlife-northern-spain
+
 echo "Done."
