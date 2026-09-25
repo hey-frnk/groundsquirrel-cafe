@@ -245,5 +245,6 @@ iberian "in einem waschsalon direkt in den picos de europa.JPG"     laundromat-i
 iberian " Dom Luís I Bridge, von Gustave Eiffel.JPG"                 dom-luis-bridge-porto
 iberian "die leckerste zimtschnecke ausserhalb von skandinavien?.JPG" cinnamon-bun-porto
 iberian "was gibt es besseres als pastel de nata in porto?.JPG"     pastel-de-nata-porto
+iberian "bilderbuch-vanlife in nordspanien.JPG"                    picture-book-vanlife-northern-spain
 
 echo "Done."

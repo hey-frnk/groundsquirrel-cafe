@@ -12,8 +12,8 @@ Oranges hanging by the roadside, surfers padding barefoot down cliffside stairs 
 
 ![evelyne relaxing in humbär with the back doors wide open](/images/journal/vanlife-spain-portugal/cover.webp)
 
-![evelyne lying in a meadow of wildflowers](/images/journal/vanlife-spain-portugal/wildflowers-in-spring.webp)
-*Wildflowers everywhere: spring in Spain*
+![frank and evelyne kissing next to humbär in a flowering meadow](/images/journal/vanlife-spain-portugal/picture-book-vanlife-northern-spain.webp)
+*Picture-perfect vanlife in northern Spain*
 
 [toc|On this page]
 
@@ -22,7 +22,7 @@ Oranges hanging by the roadside, surfers padding barefoot down cliffside stairs 
 ![frank and evelyne kissing next to humbär at sunset](/images/journal/vanlife-spain-portugal/vanlife-couple-at-sunset.webp#left)
 *Vanlife in Spain and Portugal*
 
-We kicked things off in mid-March in Catalonia, right on the Costa Brava. From there we followed the Mediterranean coast south past Valencia all the way down to Almería, swung west to the Algarve, and then worked our way up Portugal's Atlantic coast through Lisbon and Porto. In May we finally rolled across Galicia, the Picos de Europa and the Basque Country until the road ran out in Bilbao. All in all, we spent about eleven weeks on the road and covered roughly [number] kilometers.
+We kicked things off in mid-March in Catalonia, right on the Costa Brava. From there we followed the Mediterranean coast south past Valencia all the way down to Almería, swung west to the Algarve, and then worked our way up Portugal's Atlantic coast through Lisbon and Porto. In May we finally rolled across Galicia, the Picos de Europa and the Basque Country until the road ran out in Bilbao. All in all, we spent about eleven weeks on the road and covered roughly 4,500 kilometers (2,800 miles).
 
 For us, spring was the sweet spot: pleasant temperatures and not a trace of the summer madness yet. In March and April we still crossed paths with plenty of snowbirds who were slowly packing up and heading north. And the big summer wave of vacationers in their camper vans? It hadn't hit yet, not even in May. A lot of places we had practically all to ourselves.
 
@@ -31,7 +31,7 @@ For us, spring was the sweet spot: pleasant temperatures and not a trace of the 
 ![evelyne waving from humbär with all the doors open](/images/journal/vanlife-spain-portugal/welcome-to-vanlife.webp#right)
 *Welcome to vanlife!*
 
-Nobody's born a vanlifer. And nobody's born with the nerve to park a freshly converted camper on some random roadside, in a country you've never set foot in, and then drift off to sleep without a care in the world.
+Being a vanlifer takes practice, at least it did for us. Same goes for the nerve to park a freshly converted camper on some random roadside, in a country you've never set foot in, and then drift off to sleep without a care in the world.
 
 On day five in the van, we meet Isi. We're puttering along the slow, winding coastal road toward Tossa de Mar when we pull over at a stunning lookout. The spot is on Park4Night, but other people report break-ins there. Our plan is to push on to an official RV area. The place is just too good to leave, though: we film Humbär in golden hour for the very first time, play some music, and that's how we get to know Isi. That encounter is the little nudge we need to start trusting people. We'd figure this out together, and we didn't have to worry nearly as much. That evening, we truly arrived in vanlife.
 
@@ -42,8 +42,6 @@ Riding that new wave of confidence, we head for a sea-view spot above a small vi
 
 ![the sea seen from the van](/images/journal/vanlife-spain-portugal/a-spot-with-a-sea-view.webp)
 *Room with a view: a spot overlooking the sea*
-
-Vanlife often gets sold as one giant community. Our reality looked different: most of the time, it was just the two of us. At RV areas and parking lots we mostly met retired couples in their big white motorhomes, plus weekend warriors and vacationers who'd be gone again after a few days. Fellow vanlifers were almost always the exception. Which makes the encounters that do happen all the more precious.
 
 ## Our favorite spots
 
@@ -61,7 +59,9 @@ For us, the Costa Brava is hands down the most spectacular landscape in all of S
 
 Valencia gave us serious Prenzlauer Berg vibes. Except here, it's oranges hanging from the trees instead of cherries. Cute little cafés, great restaurants and life spilling out onto the streets. It's the kind of city where you end up staying a few days longer than you planned.
 
-Our tip: the Jardín del Turia. After a massive flood in 1957, the city rerouted its river, and the old riverbed became a park that stretches for about nine kilometers (5.5 miles), perfect for a bike ride or a morning run.
+- **Our tip:** the Jardín del Turia. After a massive flood in 1957, the city rerouted its river, and the old riverbed became a park that stretches for about nine kilometers (5.5 miles), perfect for a bike ride or a morning run.
+- **Best bakery in Valencia:** [MÒLT Obrador de pa](https://maps.app.goo.gl/5DT3A6Wrr3cL8LXX7)
+- **Our favorite neighborhood:** Russafa (peak hipster)
 
 [gallery]
 
@@ -103,9 +103,14 @@ And then there's Cabo de Gata: rugged volcanic landscapes, turquoise water and p
 
 ### Seville and Granada: springtime with a Moorish twist
 
+![evelyne lying in a meadow of wildflowers](/images/journal/vanlife-spain-portugal/wildflowers-in-spring.webp#right)
+*Wildflowers everywhere: spring in Spain*
+
 We caught Seville and Granada at the height of spring, and what timing that was. Everything was in bloom, the air smelled of orange blossoms and the parks were bursting with color. Then there's the Moorish influence you feel on every corner of both cities: ornate arches, tiled courtyards and softly splashing fountains. Wandering those streets felt almost surreal, like we'd stepped into a completely different world.
 
 If the Alhambra in Granada is on your list, book tickets early, because they often sell out weeks ahead. And those orange trees lining Seville's streets? They are bitter oranges. Nobody eats them off the tree; most of them end up as British marmalade.
+
+- **Where we parked for Seville:** [Área Auto-Caravanas Parque de la Muela](https://maps.app.goo.gl/angCfupDnzVkFLxs9) in El Viso del Alcor, just outside the city
 
 ![frank and evelyne under blossoming trees in granada](/images/journal/vanlife-spain-portugal/spring-in-granada.webp)
 *Springtime in Granada*
@@ -190,7 +195,7 @@ Truth be told, we didn't do much in Sagres. And that was exactly the vibe. We sa
 
 Just a few minutes down the road is Cabo de São Vicente, the southwesternmost point of mainland Europe. People once thought of it as the end of the world, and the sunsets there are legendary.
 
-**Favorite cafés:** [Picnic Sagres](https://maps.app.goo.gl/in1CPsZKuBvUJGN9A) and [Sagres Surf & Coffee](https://maps.app.goo.gl/zCcsQDRnbNLd4KJS8)
+- **Favorite cafés:** [Picnic Sagres](https://maps.app.goo.gl/in1CPsZKuBvUJGN9A) and [Sagres Surf & Coffee](https://maps.app.goo.gl/zCcsQDRnbNLd4KJS8)
 
 ![breakfast in the van looking out at the surf](/images/journal/vanlife-spain-portugal/breakfast-watching-surfers.webp)
 *Breakfast with a front-row view of the surfers*
@@ -204,7 +209,7 @@ Finding a place to sleep between Sagres and Sines is no walk in the park. In the
 
 Why is finding a spot so tricky around here? The whole coastline belongs to the Southwest Alentejo and Vicentine Coast Natural Park, and in protected areas, sleeping in your camper is off-limits.
 
-**Our surf school:** [Boa Onda Surf School](https://boaondasurfschool.com)
+- **Our surf school:** [Boa Onda Surf School](https://boaondasurfschool.com)
 
 ![evelyne stretching in the van with the forest outside](/images/journal/vanlife-spain-portugal/secret-spot-before-surfing.webp)
 *Our secret spot the night before surf class*
@@ -227,9 +232,8 @@ We celebrated our three-year anniversary in Lisbon with a Lumineers concert. The
 
 When it comes to city trips, we have one non-negotiable: Humbär stays at a safe campground outside the city, and we take public transit into the center. That way our home stays safe, and we don't have to wrestle a camper through city traffic.
 
-**Where we parked:** Orbitur Camping Costa de Caparica. We took the bus and the ferry into town, but locals told us we should just grab a Bolt.
-
-**Favorite cafés:** [Taiyaki Café](https://maps.app.goo.gl/29wZ36ecFEc611k49) for Taiwanese wheel cakes, and [Hello, Kristof](https://maps.app.goo.gl/1h5NXxuXV2LtGVAd6)
+- **Where we parked:** Orbitur Camping Costa de Caparica. We took the bus and the ferry into town, but locals told us we should just grab a Bolt.
+- **Favorite cafés:** [Taiyaki Café](https://maps.app.goo.gl/29wZ36ecFEc611k49) for Taiwanese wheel cakes, and [Hello, Kristof](https://maps.app.goo.gl/1h5NXxuXV2LtGVAd6)
 
 ![evelyne waiting at a bus stop](/images/journal/vanlife-spain-portugal/waiting-for-the-bus.webp)
 *Waiting for the bus, full of anticipation*
@@ -249,9 +253,8 @@ Ericeira was love at first sight. This little coastal town north of Lisbon pairs
 
 At the weekly market we discovered grelos, a leafy green a lot like cime di rapa, with a flavor somewhere between broccoli and cabbage. We paired them with feta and turned them into gözleme right there in the van.
 
-**Where we parked:** We found the official RV areas a bit meh, so we just parked in a regular lot a little outside of town.
-
-**Favorite café:** [Sano Café](https://maps.app.goo.gl/KfiStEE9id2i18tx7)
+- **Where we parked:** We found the official RV areas a bit meh, so we just parked in a regular lot a little outside of town.
+- **Favorite café:** [Sano Café](https://maps.app.goo.gl/KfiStEE9id2i18tx7)
 
 ![frank and evelyne in a sea cave near peniche](/images/journal/vanlife-spain-portugal/peniche.webp)
 *This jaw-dropping landscape is near Peniche, Portugal*
@@ -263,11 +266,9 @@ At the weekly market we discovered grelos, a leafy green a lot like cime di rapa
 
 Porto is hands down one of the most beautiful cities of our whole trip. Kind of like Paris, just smaller, grittier and more Portuguese. We mostly explored on foot: letting ourselves drift through the alleys, stumbling onto cafés and seeing where we'd wash up.
 
-**Where we parked:** Tendinha Campers has an RV spot just outside Porto. Ridesharing was the obvious move: Humbär stayed put out of town, and we got downtown fast and cheap.
-
-**Best bakery in all of Portugal:** [Ogi by Euskalduna](https://maps.app.goo.gl/B1t6C22FgaRAcbsd7)
-
-**Local hidden gem (restaurant meets canteen):** [Almada Café](https://maps.app.goo.gl/cHBuE6rGnQ9jmkHy7)
+- **Where we parked:** Tendinha Campers has an RV spot just outside Porto. Ridesharing was the obvious move: Humbär stayed put out of town, and we got downtown fast and cheap.
+- **Best bakery in all of Portugal:** [Ogi by Euskalduna](https://maps.app.goo.gl/B1t6C22FgaRAcbsd7)
+- **Local hidden gem (restaurant meets canteen):** [Almada Café](https://maps.app.goo.gl/cHBuE6rGnQ9jmkHy7)
 
 ![colorful houses in porto](/images/journal/vanlife-spain-portugal/porto.webp)
 *Sigh, what a place: Porto*
@@ -279,7 +280,7 @@ Porto is hands down one of the most beautiful cities of our whole trip. Kind of 
 *Cafés exactly the way you picture them. Porto, Portugal*
 
 ![the dom luís i bridge over the douro in porto](/images/journal/vanlife-spain-portugal/dom-luis-bridge-porto.webp)
-*The Dom Luís I Bridge, Gustave Eiffel's handiwork*
+*The Dom Luís I Bridge, designed by Théophile Seyrig, Gustave Eiffel's former business partner*
 
 ![a pastel de nata in porto](/images/journal/vanlife-spain-portugal/pastel-de-nata-porto.webp)
 *What's better than a pastel de nata in Porto?*
@@ -289,11 +290,11 @@ Porto is hands down one of the most beautiful cities of our whole trip. Kind of 
 
 ### The onsen of Galicia
 
-A totally different kind of highlight: the hot springs of Galicia. Near the Portuguese border you'll find several thermal baths run by the local municipalities, and getting in costs next to nothing. Some have classic thermal pools, others feel like they're straight out of a Japanese onsen.
+A totally different kind of highlight: the hot springs of Galicia. Near the Portuguese border you'll find several thermal baths run by the local municipalities, and they are genuinely affordable to ordinary mortals. Some have classic thermal pools, others feel like they're straight out of a Japanese onsen.
 
 Our favorite: Espazo Lúdico Termal de Teáns, where water over 45 °C (113 °F) comes bubbling straight up out of the ground.
 
-**Where we soaked:** [Termas de Prexigueiro](https://maps.app.goo.gl/q3X3JeSfWNYqJKip7) near Ribadavia and [Espazo Lúdico Termal de Teáns](https://maps.app.goo.gl/HM571boLJkFyt2FB8) in Salvaterra de Miño
+- **Where we soaked:** [Termas de Prexigueiro](https://maps.app.goo.gl/q3X3JeSfWNYqJKip7) near Ribadavia and [Espazo Lúdico Termal de Teáns](https://maps.app.goo.gl/HM571boLJkFyt2FB8) in Salvaterra de Miño
 
 ![frank and evelyne in a natural pool in the forest](/images/journal/vanlife-spain-portugal/after-the-hot-springs.webp)
 *Fresh out of the hot springs in Galicia*
@@ -332,7 +333,7 @@ We made a point of visiting Gaztelugatxe early. Before the tour buses rolled in,
 
 It is 241 steps up to the little chapel on top of the rock. Tradition says you ring the bell three times and make a wish. And yes, the dragon hunch is spot on: Game of Thrones filmed Dragonstone right here.
 
-Good to know: in peak season you need a (free) online reservation to get in.
+- **Good to know:** in peak season you need a (free) online reservation to get in.
 
 ![evelyne looking out at the hermitage on the rock](/images/journal/vanlife-spain-portugal/gaztelugatxe-hermitage.webp)
 *Looking out at the hermitage of San Juan de Gaztelugatxe*
@@ -363,7 +364,7 @@ Wild camping is banned pretty much everywhere in Spain and Portugal, unless it's
 ![evelyne leaning against humbär among the pines](/images/journal/vanlife-spain-portugal/a-spot-in-nature.webp#left)
 *A spot out in nature*
 
-Parking overnight is way easier inland than on the coast. Out there, not a soul cares where you park your van (okay, maybe the pigs, but they keep it to themselves). Front row by the sea is a different story. In Galicia we got a visit from the police and watched campers who'd done more than just park get off with a warning. With us, they took a quick look and drove off again, because we didn't have anything set up outside. Apart from the protected areas along the Algarve, we had no trouble finding beautiful spots, even right by the beach.
+Parking overnight is way easier inland than on the coast. Out there, not a soul cares where you park your van. Front row by the sea is a different story. In Galicia we got a visit from the police and watched campers who'd done more than just park get off with a warning. With us, they took a quick look and drove off again, because we didn't have anything set up outside. Apart from the protected areas along the Algarve, we had no trouble finding beautiful spots, even right by the beach.
 
 In Portugal, sleeping in a camper has been regulated by law since 2021: it's banned in protected areas, and outside of them you can stay a maximum of 48 hours in the same spot.
 
@@ -376,7 +377,7 @@ Our most important app was Park4Night. Read the latest comments, especially abou
 
 Nowhere in Europe is the camper infrastructure as good as in Spain, and Portugal is top-notch too. Okay, fine, France might have a slight edge. Plenty of towns have RV areas where filling up on fresh water and dumping are free, and in Portugal some supermarkets even have a service point out front.
 
-Heads-up for our fellow Swiss: Switzerland isn't part of EU roaming. We picked up a Spanish 200 GB prepaid SIM from a well-known carrier with a red logo, and had internet and solid coverage the whole way.
+- **Heads-up for our fellow Swiss:** Switzerland isn't part of EU roaming. We picked up a Spanish 200 GB prepaid SIM from a well-known carrier with a red logo, and had internet and solid coverage the whole way.
 
 ### Cooking and grocery shopping
 
@@ -387,13 +388,13 @@ Cooking in the van is one of our favorite things about vanlife. Fresh ingredient
 
 In Spain, Mercadona was our hands-down favorite grocery store: a great selection and super cheap. We still made regular runs to Carrefour, though, mainly for the Oatly Barista we need for our café.
 
+[post:vanlife-without-gas-camper-electrics]
+
 ![a pan of grelos on the induction cooktop](/images/journal/vanlife-spain-portugal/grelos-on-the-stove.webp)
 *Grelos sizzling on the induction cooktop*
 
 ![evelyne sitting on a beach with a picnic blanket](/images/journal/vanlife-spain-portugal/beach-picnic.webp)
 *Picnic on the beach, anyone?*
-
-[post:vanlife-without-gas-camper-electrics]
 
 ### Doing laundry
 
@@ -435,7 +436,7 @@ That works out to about €51 a day for the two of us, or roughly €800 per per
 
 In Spain, tolls have been scrapped on a lot of highways. We only had to pay on a few stretches up north. Portugal is a different story: outside the Algarve, you'll pay tolls on nearly every highway.
 
-Heads-up: in Portugal, tolls are often collected electronically by overhead gantries, with no booths in sight. If you're driving on foreign plates, register beforehand, for example with EasyToll at the border or with a Toll Card. Otherwise, settling up after the fact turns into a real headache.
+- **Heads-up:** in Portugal, tolls are often collected electronically by overhead gantries, with no booths in sight. If you're driving on foreign plates, register beforehand, for example with EasyToll at the border or with a Toll Card. Otherwise, settling up after the fact turns into a real headache.
 
 We're not big on highways anyway. You just miss too much along the way. The back roads, on the other hand, can get pretty rough. But with Humbär, a little rattle and shake is part of any good road trip.
 
