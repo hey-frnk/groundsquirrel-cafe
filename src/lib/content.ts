@@ -315,6 +315,22 @@ function renderTips(htmlStr: string): string {
 }
 
 /**
+ * Turns `[note|Eyebrow|Text]` on its own line into the same quiet aside as a
+ * tip, only without a link: a fun fact or a bit of background that belongs to
+ * the place the post is talking about, but not to the story of the trip.
+ */
+function renderNotes(htmlStr: string): string {
+  return htmlStr.replace(
+    /<p>\[note\|([^|\]]*)\|([^\]]*)\]<\/p>/g,
+    (_m, eyebrow: string, body: string) =>
+      `<aside class="post-tip">` +
+      `<p class="post-tip-title">${escapeHtml(eyebrow.trim() || "Good to know")}</p>` +
+      `<p class="post-tip-text">${escapeHtml(body.trim())}</p>` +
+      `</aside>`
+  );
+}
+
+/**
  * Turns `[ad]` … `[/ad]` around a paragraph into the small print a commercial
  * link needs above it.
  *
@@ -357,6 +373,72 @@ function renderSmallPrint(htmlStr: string): string {
   return htmlStr
     .replace(/<p>\[small\]<\/p>/g, `<div class="post-small-print">`)
     .replace(/<p>\[\/small\]<\/p>/g, `</div>`);
+}
+
+/**
+ * Turns `[gallery]` … `[/gallery]` around a run of uncaptioned photos into a
+ * compact contact sheet: up to six small photos to a row instead of three.
+ *
+ * Some photos are there for the mood of a place rather than to be looked at one
+ * by one — a street, a doorway, a coffee — and at the usual size a stack of them
+ * pushes the story a long way down. Small, a reader takes them in at a glance
+ * and opens the one they are curious about (see ImageZoom). The photos are
+ * spread evenly over as few rows as fit, so eight become two rows of four rather
+ * than six and a lonely two.
+ */
+function renderGalleryStrips(htmlStr: string): string {
+  return htmlStr.replace(
+    /<p>\[gallery\]<\/p>\s*<div class="img-gallery" style="--gallery-cols:\d+">([\s\S]*?)<\/div>\s*<p>\[\/gallery\]<\/p>/g,
+    (_m, cells: string) => {
+      const count = (cells.match(/<img/g) ?? []).length;
+      const rows = Math.ceil(count / 6);
+      const cols = Math.ceil(count / rows);
+      // On a phone six across is too small to make anything out; three or two
+      // across, whichever leaves the last row full.
+      const phoneCols = cols % 3 === 0 ? 3 : 2;
+      return (
+        `<div class="img-gallery is-strip" style="--gallery-cols:${cols};--gallery-cols-phone:${phoneCols}">` +
+        `${cells}</div>`
+      );
+    }
+  );
+}
+
+/**
+ * Turns `[post:<slug>]` on its own line into a preview of another journal post:
+ * its cover, title and excerpt, linking through to it.
+ *
+ * A post that mentions an older one ("how we live without gas, we wrote about
+ * here") reads better with the older post shown than with a bare link, because
+ * a reader can see at a glance whether it is worth the detour. The title and
+ * excerpt come from the post itself, so the card never goes stale — and in the
+ * German version they come from the German translation when there is one. A
+ * slug that matches no post is dropped rather than left as a broken card.
+ */
+function renderPostCards(htmlStr: string, lang: "en" | "de"): string {
+  return htmlStr.replace(/<p>\[post:([a-z0-9-]+)\]<\/p>/g, (_m, slug: string) => {
+    const file = path.join(CONTENT_DIR, "journal", `${slug}.md`);
+    if (!fs.existsSync(file)) return "";
+    const { data } = matter(fs.readFileSync(file, "utf8"));
+    let { title, excerpt } = data as { title?: string; excerpt?: string };
+    if (lang === "de" && fs.existsSync(germanPath(slug))) {
+      const german = matter(fs.readFileSync(germanPath(slug), "utf8")).data;
+      title = (german.title as string) ?? title;
+      excerpt = (german.excerpt as string) ?? excerpt;
+    }
+    const eyebrow = lang === "de" ? "Aus dem Journal" : "From the journal";
+    const more = lang === "de" ? "Zum Beitrag" : "Read the post";
+    return (
+      `<a class="post-card" href="/journal/${slug}/">` +
+      (data.cover ? `<img class="post-card-cover" src="${escapeHtml(data.cover)}" alt="" loading="lazy">` : "") +
+      `<span class="post-card-body">` +
+      `<span class="post-card-eyebrow">${eyebrow}</span>` +
+      `<span class="post-card-title">${escapeHtml(title ?? slug)}</span>` +
+      (excerpt ? `<span class="post-card-excerpt">${escapeHtml(excerpt)}</span>` : "") +
+      `<span class="post-card-more">${more}<span aria-hidden> \u2192</span></span>` +
+      `</span></a>`
+    );
+  });
 }
 
 /**
@@ -433,22 +515,29 @@ function renderContents(htmlStr: string, idPrefix: string): string {
   });
 }
 
-export async function markdownToHtml(markdown: string, idPrefix = ""): Promise<string> {
+export async function markdownToHtml(
+  markdown: string,
+  idPrefix = "",
+  lang: "en" | "de" = "en"
+): Promise<string> {
   const processed = await remark().use(html).process(markdown);
-  return renderSmallPrint(
+  const rendered = renderSmallPrint(
     renderAdBoxes(
       renderAdNotes(
-        renderTips(
-          renderButtons(
-            renderContents(
-              renderMapEmbeds(dropOrphanFloats(wrapImageGalleries(processed.toString()))),
-              idPrefix
+        renderNotes(
+          renderTips(
+            renderButtons(
+              renderContents(
+                renderMapEmbeds(dropOrphanFloats(wrapImageGalleries(processed.toString()))),
+                idPrefix
+              )
             )
           )
         )
       )
     )
   );
+  return renderPostCards(renderGalleryStrips(rendered), lang);
 }
 
 /**
@@ -516,7 +605,7 @@ async function readGermanVersion(slug: string): Promise<GermanVersion | undefine
   return {
     title: (data.title as string) ?? "",
     excerpt: data.excerpt as string | undefined,
-    contentHtml: await markdownToHtml(content, "de-"),
+    contentHtml: await markdownToHtml(content, "de-", "de"),
   };
 }
 

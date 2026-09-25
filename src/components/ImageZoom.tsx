@@ -34,7 +34,11 @@ export default function ImageZoom() {
   const [open, setOpen] = useState<number | null>(null);
 
   useEffect(() => {
-    const images = () => [...document.querySelectorAll<HTMLImageElement>(".prose img")];
+    // A post card's cover is a link to another post, not a photo of this one.
+    const images = () =>
+      [...document.querySelectorAll<HTMLImageElement>(".prose img")].filter(
+        (img) => !img.closest(".post-card")
+      );
     // A post with a German version carries both, one of them hidden. Every photo
     // is made clickable — the hidden ones become visible when the language is
     // switched — but only the ones on show ever go into the list to walk through.
