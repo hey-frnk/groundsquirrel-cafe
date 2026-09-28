@@ -4,9 +4,18 @@ interface LegalPage {
   title: string;
 }
 
+// Legal small print has to be reachable from every page, but it must never
+// show up in search results. `noindex` is the guard that actually keeps it out
+// of Google; that only works while the page stays crawlable, so robots.ts must
+// not Disallow it. `noimageindex` keeps the contact image out of image search.
 export const metadata = {
   title: "Impressum",
-  alternates: { canonical: "/impressum/" },
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+    googleBot: { index: false, follow: false, noimageindex: true },
+  },
 };
 
 export default async function ImpressumPage() {

@@ -17,6 +17,7 @@ import { SITE_URL } from "@/lib/seo";
 
 // Pages that exist as their own route but should never be indexed: the
 // thank-you page is a post-checkout receipt and /admin is the CMS shell.
+// Impressum and Datenschutz are left out of STATIC_ROUTES for the same reason.
 const EXCLUDED = ["/shop/thank-you/", "/admin/"];
 
 const STATIC_ROUTES: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] }[] = [
@@ -26,8 +27,6 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Metadata
   { path: "/shop/", priority: 0.9, changeFrequency: "weekly" },
   { path: "/journal/", priority: 0.8, changeFrequency: "weekly" },
   { path: "/crew/", priority: 0.6, changeFrequency: "yearly" },
-  { path: "/impressum/", priority: 0.2, changeFrequency: "yearly" },
-  { path: "/datenschutz/", priority: 0.2, changeFrequency: "yearly" },
 ];
 
 // `output: export` has no server to answer a request, so this metadata route

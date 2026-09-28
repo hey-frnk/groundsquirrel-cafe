@@ -77,6 +77,7 @@ export default function SiteFooter() {
               <li>
                 <Link
                   href="/impressum"
+                  rel="nofollow"
                   className="text-sm text-cream/65 transition-colors hover:text-cream"
                 >
                   Impressum
@@ -85,6 +86,7 @@ export default function SiteFooter() {
               <li>
                 <Link
                   href="/datenschutz"
+                  rel="nofollow"
                   className="text-sm text-cream/65 transition-colors hover:text-cream"
                 >
                   Datenschutz
