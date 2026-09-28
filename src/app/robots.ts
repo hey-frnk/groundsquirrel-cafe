@@ -20,7 +20,10 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/shop/thank-you/", "/admin/"],
+      // /impressum/ and /datenschutz/ are deliberately NOT listed: Google has to
+      // crawl them to see their `noindex`. Only the contact image they share is
+      // blocked, so it cannot surface in image search.
+      disallow: ["/shop/thank-you/", "/admin/", "/images/legal/"],
     },
     sitemap: `${SITE_URL}/sitemap.xml`,
     host: SITE_URL,
