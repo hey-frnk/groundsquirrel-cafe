@@ -81,4 +81,8 @@ variants:
       - /images/shop/squirrel-stickers/sticker-california-ground-squirrel.webp
 ---
 
-**Ten percent of everything you spend here goes to wildlife conservation.**
+[highlight]
+
+10% of everything you spend here goes to wildlife conservation.
+
+[/highlight]

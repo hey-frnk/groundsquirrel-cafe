@@ -1133,6 +1133,29 @@ html {
 
 /* Small print further down a post, `[small]` … `[/small]`: the same voice as
    the disclosure, set under whatever it annotates. */
+/* One sentence set off in the accent colour: a rose rule and a blush wash. The
+   text stays ink, since rose on cream is too pale to read. */
+.prose .post-highlight {
+  margin: 1.8em 0;
+  padding: 1.1em 1.4em;
+  border-left: 3px solid var(--color-rose);
+  border-radius: 0 var(--radius-tile) var(--radius-tile) 0;
+  background: color-mix(in srgb, var(--color-blush) 70%, transparent);
+}
+
+.prose .post-highlight p {
+  margin: 0;
+  font-family: var(--font-display-serif), Georgia, serif;
+  font-size: 1.15em;
+  line-height: 1.4;
+  color: var(--color-ink);
+}
+
+.prose .post-highlight strong {
+  font-weight: inherit;
+  color: inherit;
+}
+
 .prose .post-small-print {
   margin: -0.6em 0 1.6em;
 }

@@ -376,6 +376,17 @@ function renderSmallPrint(htmlStr: string): string {
 }
 
 /**
+ * Turns `[highlight]` … `[/highlight]` into a line set off in the accent
+ * colour, for the one sentence a page most wants remembered — on the shop, that
+ * ten percent goes to wildlife conservation.
+ */
+function renderHighlights(htmlStr: string): string {
+  return htmlStr
+    .replace(/<p>\[highlight\]<\/p>/g, `<div class="post-highlight">`)
+    .replace(/<p>\[\/highlight\]<\/p>/g, `</div>`);
+}
+
+/**
  * Turns `[gallery]` … `[/gallery]` around a run of uncaptioned photos into a
  * compact contact sheet: up to six small photos to a row instead of three.
  *
@@ -521,7 +532,7 @@ export async function markdownToHtml(
   lang: "en" | "de" = "en"
 ): Promise<string> {
   const processed = await remark().use(html).process(markdown);
-  const rendered = renderSmallPrint(
+  const rendered = renderHighlights(renderSmallPrint(
     renderAdBoxes(
       renderAdNotes(
         renderNotes(
@@ -536,7 +547,7 @@ export async function markdownToHtml(
         )
       )
     )
-  );
+  ));
   return renderPostCards(renderGalleryStrips(rendered), lang);
 }
 

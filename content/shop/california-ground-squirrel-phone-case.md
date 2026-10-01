@@ -340,4 +340,8 @@ The case is drop tested from 5 feet for shock absorption, and a raised rim keeps
 
 *Please note: the printed squirrels cover the whole back of the case, but the print does not wrap around the sides.*
 
-**Ten percent of everything you spend here goes to wildlife conservation.**
+[highlight]
+
+10% of everything you spend here goes to wildlife conservation.
+
+[/highlight]

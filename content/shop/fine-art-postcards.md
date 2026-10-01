@@ -107,4 +107,8 @@ variants:
 gallery: *ref_0
 ---
 
-**Ten percent of everything you spend here goes to wildlife conservation.**
+[highlight]
+
+10% of everything you spend here goes to wildlife conservation.
+
+[/highlight]
