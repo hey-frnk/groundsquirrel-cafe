@@ -32,10 +32,10 @@ shippingNote: >-
   Shipping is calculated from your country and the largest item in your basket. A3 prints travel in a bigger tube than A5. Printed and dispatched from
   whichever partner studio sits closest to you.
 gallery:
-  - /images/shop/squirrel-posters/poster-set.webp
-  - /images/shop/squirrel-posters/framed-eurasian-red-squirrel.webp
-  - /images/shop/squirrel-posters/framed-eastern-grey-squirrel.webp
-  - /images/shop/squirrel-posters/framed-african-tree-squirrel.webp
+  - image: /images/shop/squirrel-posters/poster-set.webp
+  - image: /images/shop/squirrel-posters/framed-eurasian-red-squirrel.webp
+  - image: /images/shop/squirrel-posters/framed-eastern-grey-squirrel.webp
+  - image: /images/shop/squirrel-posters/framed-african-tree-squirrel.webp
 variants:
   - label: The full set - all five plates
     price: 40

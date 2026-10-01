@@ -21,7 +21,8 @@
  * Secrets (set with `wrangler secret put`, never committed):
  *   STRIPE_SECRET_KEY   sk_live_… / sk_test_…
  * Vars (written by scripts/sync-worker-config.mjs):
- *   SHIPPING_TABLE      profiles, rates and the Europe country list
+ *   SHIPPING_TABLE      profiles, rates, the Europe list and the countries we
+ *                       ship to at all (shipTo)
  *   PRICE_PROFILES      Stripe Price ID → shipping profile name
  */
 
@@ -131,6 +132,12 @@ export default {
     } catch {
       console.error("SHIPPING_TABLE or PRICE_PROFILES is not valid JSON");
       return json({ error: "Could not start checkout" }, 500, env);
+    }
+
+    // The cart only offers these, but the endpoint is public: a country we do
+    // not ship to (the EU, because of the PPWR) must not slip through.
+    if (Array.isArray(table.shipTo) && table.shipTo.length > 0 && !table.shipTo.includes(country)) {
+      return json({ error: "We cannot ship to that country yet" }, 400, env);
     }
 
     const shipping = shippingFor(items, country, table, priceProfiles);

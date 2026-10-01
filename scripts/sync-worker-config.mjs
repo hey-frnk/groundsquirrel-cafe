@@ -33,6 +33,8 @@ const table = {
   taxBehavior: config.taxBehavior,
   taxCode: config.taxCode,
   europe: config.europe ?? [],
+  // Codes only; the names are for the cart dropdown, not the Worker.
+  shipTo: Object.keys(config.shipTo ?? {}),
   profiles,
 };
 

@@ -21,10 +21,10 @@ shippingNote: >-
   Printed and dispatched from the Netherlands, the UK or the USA, whichever
   sits closest to you, so your stickers take the short route.
 gallery:
-  - /images/shop/squirrel-stickers/sticker-set.webp
-  - /images/shop/squirrel-stickers/sticker-european-squirrel.webp
-  - /images/shop/squirrel-stickers/sticker-alpine-marmot.webp
-  - /images/shop/squirrel-stickers/sticker-california-ground-squirrel.webp
+  - image: /images/shop/squirrel-stickers/sticker-set.webp
+  - image: /images/shop/squirrel-stickers/sticker-european-squirrel.webp
+  - image: /images/shop/squirrel-stickers/sticker-alpine-marmot.webp
+  - image: /images/shop/squirrel-stickers/sticker-california-ground-squirrel.webp
 variants:
   - label: The full set - all six designs
     price: 12

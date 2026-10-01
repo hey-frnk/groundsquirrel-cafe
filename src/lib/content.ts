@@ -738,6 +738,19 @@ function normalizeVariants(variants: unknown): ShopVariant[] {
     .map((v) => ({ ...v, price: Number(v.price) || 0, images: normalizePhotos(v.images) }));
 }
 
+/** Alt text from `{ image, alt }` entries, keyed by image path. */
+function collectAlts(...lists: unknown[]): Record<string, string> {
+  const alts: Record<string, string> = {};
+  for (const list of lists) {
+    if (!Array.isArray(list)) continue;
+    for (const entry of list) {
+      const { image, alt } = (entry ?? {}) as { image?: string; alt?: string };
+      if (image && alt) alts[image] = alt;
+    }
+  }
+  return alts;
+}
+
 function readShopProduct(filename: string) {
   const { slug, data, content } = readEntry<ShopProduct>("shop", filename);
   return {
@@ -745,6 +758,8 @@ function readShopProduct(filename: string) {
     slug,
     body: content.trim(),
     gallery: normalizePhotos(data.gallery),
+    story: normalizePhotos(data.story),
+    imageAlt: collectAlts(data.gallery, data.story),
     variants: normalizeVariants(data.variants),
   };
 }

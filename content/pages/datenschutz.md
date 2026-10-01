@@ -54,6 +54,8 @@ If you write to us - for example via the "Get in touch" / "Say hello" links on t
 
 **Fulfilment.** Prints and stickers are produced to order by our print partner **Prodigi** (Prodigi Group Ltd., United Kingdom), who dispatch directly to you. To do that, we pass on the delivery address and the items ordered - nothing else, and only for the purpose of shipping your order. See [Prodigi's Privacy Policy](https://www.prodigi.com/privacy/).
 
+**Shipping waitlist.** If you join the waitlist because your country is not yet on our shipping list, the name, email address and country you enter are sent via the form service **Web3Forms** to our inbox; Web3Forms passes it on as an email. We use these details solely to let you know when we can ship to your country, and delete them once we have done so or when you ask us to. The legal basis is your consent, given by submitting the form (Art. 31 para. 1 FADP; Art. 6 para. 1 lit. a GDPR), which you can withdraw at any time by writing to us. See [Web3Forms' Privacy Policy](https://web3forms.com/privacy).
+
 **Why and how long.** We process this data to perform the purchase contract with you (Art. 31 para. 2 lit. a FADP; Art. 6 para. 1 lit. b GDPR) and keep order records for as long as Swiss bookkeeping obligations require.
 
 ## Interactive maps (Google My Maps)

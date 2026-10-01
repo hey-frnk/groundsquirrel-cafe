@@ -4,10 +4,10 @@ import { getAllShopProducts } from "@/lib/content";
 import { formatPrice, lowestPrice } from "@/lib/shop";
 
 export const metadata = {
-  title: "Shop",
+  title: "Shop – Squirrel Art Prints, Stickers & Phone Cases",
   alternates: { canonical: "/shop/" },
   description:
-    "Hand-painted squirrel art prints and vinyl stickers. Made on the road, never by AI. 10% of every order funds wildlife conservation.",
+    "Hand-painted squirrel art prints, vinyl stickers and a biodegradable squirrel phone case for iPhone and Samsung. Made on the road, never by AI. 10% of every order funds wildlife conservation.",
 };
 
 const PROMISES = [
@@ -45,13 +45,16 @@ export default function ShopPage() {
             <div className="specimen-plate relative aspect-[4/5] overflow-hidden">
               <Image
                 src={product.image}
-                alt={product.title}
+                alt={product.imageAlt?.[product.image] ?? product.title}
                 fill
                 sizes="(max-width: 640px) 100vw, 45vw"
-                className="object-contain p-6 transition-transform duration-[900ms] ease-out group-hover:scale-[1.04]"
+                className={`${
+                  product.photographic ? "object-cover" : "object-contain p-6"
+                } transition-transform duration-[900ms] ease-out group-hover:scale-[1.04]`}
               />
               <span className="absolute top-4 left-4 rounded-full bg-cream/92 px-4 py-2 text-[0.65rem] uppercase tracking-[0.16em] text-graphite backdrop-blur">
-                from {formatPrice(lowestPrice(product))}
+                {new Set(product.variants.map((v) => v.price)).size > 1 && "from "}
+                {formatPrice(lowestPrice(product))}
               </span>
             </div>
 

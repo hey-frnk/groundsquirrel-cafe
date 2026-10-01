@@ -102,7 +102,7 @@ lässt sich also gefahrlos veröffentlichen, bevor Stripe fertig eingerichtet is
 
 Die Sätze stehen in [`content/shipping.json`](../content/shipping.json), nach
 **Versandprofil** und Zielland. Profile: `stickers`, `postcards`, `print-a5`,
-`print-a4`, `print-a3`. Jede Variante in `content/shop/*.md` nennt ihr Profil.
+`print-a4`, `print-a3`, `phone-case`. Jede Variante in `content/shop/*.md` nennt ihr Profil.
 
 In Stripe muss dafür **nichts** angelegt werden — der Worker erzeugt den Tarif
 pro Bezahlvorgang inline. Nach einer Änderung:
@@ -135,8 +135,27 @@ USA den Schweizer Satz anklicken. Deshalb wählt der Kunde das Land im
 Warenkorb, der Worker rechnet daraus genau einen Satz aus und sperrt das
 Adressformular auf dieses Land.
 
-Wer Länder ergänzt, muss sie in `content/shipping.json` **und** in
-[`src/lib/countries.ts`](../src/lib/countries.ts) eintragen.
+### Lieferländer (PPWR)
+
+Wegen der EU-Verpackungsverordnung (PPWR) wird zurzeit nicht in die EU/den EWR
+geliefert. Welche Länder im Warenkorb unter „Delivering to" erscheinen, steht
+**nur** in `content/shipping.json` unter `shipTo` (Ländercode → Name). Das
+Dropdown liest die Liste von dort und sortiert alphabetisch; der Worker lehnt
+jedes andere Land ab. Nach einer Änderung `sync-worker-config.mjs` laufen
+lassen und den Worker neu deployen.
+
+Kuba, Iran, Marshallinseln, Mikronesien, Palau, Sudan und Syrien fehlen
+absichtlich: Stripe Checkout akzeptiert dort keine Lieferadresse.
+
+### Warteliste
+
+„Your country isn't on the list? Join the waitlist" schickt Name, E-Mail und
+Land über [Web3Forms](https://web3forms.com) an hello@thegroundsquirrel.cafe.
+Einrichten: auf web3forms.com die Adresse hello@thegroundsquirrel.cafe
+eingeben, den zugeschickten Access Key als Repository-Variable
+`NEXT_PUBLIC_WAITLIST_ACCESS_KEY` hinterlegen (wie `NEXT_PUBLIC_CHECKOUT_URL`)
+und neu deployen. Ohne Key öffnet das Formular stattdessen eine vorausgefüllte
+E-Mail.
 
 > `automatic_tax` ist eingeschaltet, der Versand trägt Stripes Steuercode
 > `txcd_92010001`. Ob ihr überhaupt MwSt. ausweisen müsst, gehört einmal zum

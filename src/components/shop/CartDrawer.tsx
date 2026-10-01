@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { useCart } from "@/lib/cart";
 import { formatPrice } from "@/lib/shop";
-import { COUNTRY_GROUPS, DEFAULT_COUNTRY } from "@/lib/countries";
+import { DEFAULT_COUNTRY, SHIP_TO_COUNTRIES } from "@/lib/countries";
+import Waitlist from "./Waitlist";
 
 /**
  * Set NEXT_PUBLIC_CHECKOUT_URL to the deployed Cloudflare Worker to switch the
@@ -165,7 +166,7 @@ export default function CartDrawer() {
         )}
 
         {lines.length > 0 && (
-          <footer className="space-y-4 border-t border-ink/10 px-6 py-5">
+          <footer className="max-h-[75vh] space-y-4 overflow-y-auto border-t border-ink/10 px-6 py-5">
             <div className="flex items-baseline justify-between">
               <span className="eyebrow">Subtotal</span>
               <span className="font-display text-xl text-ink">{formatPrice(subtotal)}</span>
@@ -184,19 +185,19 @@ export default function CartDrawer() {
                 onChange={(e) => setCountry(e.target.value)}
                 className="w-full rounded-lg border border-ink/20 bg-paper px-3 py-2.5 text-sm focus:border-rose focus:outline-none"
               >
-                {COUNTRY_GROUPS.map((group) => (
-                  <optgroup key={group.label} label={group.label}>
-                    {group.countries.map((c) => (
-                      <option key={c.code} value={c.code}>
-                        {c.name}
-                      </option>
-                    ))}
-                  </optgroup>
+                {SHIP_TO_COUNTRIES.map((c) => (
+                  <option key={c.code} value={c.code}>
+                    {c.name}
+                  </option>
                 ))}
               </select>
               <p className="mt-2 text-xs text-graphite/65">
-                Shipping is added at checkout.
+                Shipping is added at checkout, based on your country and the
+                largest item in your basket.
               </p>
+              <div className="mt-3">
+                <Waitlist compact />
+              </div>
             </div>
 
             {error && <p className="text-xs text-rose">{error}</p>}
