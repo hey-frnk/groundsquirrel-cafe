@@ -131,9 +131,9 @@
     "ZA": "South Africa",
     "SS": "South Sudan",
     "LK": "Sri Lanka",
-    "KN": "St Kitts and Nevis",
-    "LC": "St Lucia",
-    "VC": "St Vincent and the Grenadines",
+    "KN": "St. Kitts and Nevis",
+    "LC": "St. Lucia",
+    "VC": "St. Vincent and the Grenadines",
     "SR": "Suriname",
     "CH": "Switzerland",
     "ST": "São Tomé and Príncipe",
@@ -286,12 +286,7 @@
       "minDays": 4,
       "maxDays": 10,
       "rates": {
-        "CH": 7.0,
-        "GB": 6.0,
-        "US": 8.0,
-        "CA": 8.0,
-        "AU": 9.0,
-        "_WORLD": 12.0
+        "_WORLD": 6.0
       }
     }
   }

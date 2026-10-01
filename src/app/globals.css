@@ -914,13 +914,15 @@ html {
   gap: 0.5rem;
 }
 
+/* The leader carries a non-breaking space so it has a baseline of its own and
+   stays on the first line when a long value wraps onto a second. */
 .spec-row::after {
-  content: "";
+  content: "\00a0";
   order: 1;
   flex: 1 1 auto;
   min-width: 1.5rem;
-  align-self: end;
-  margin-bottom: 0.3em;
+  align-self: baseline;
+  line-height: 0.9;
   border-bottom: 1px dotted color-mix(in srgb, var(--color-ink) 24%, transparent);
 }
 

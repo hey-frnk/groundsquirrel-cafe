@@ -4,7 +4,7 @@ tagline: 'Hand-painted California ground squirrels on a biodegradable, vegan pho
 seoTitle: Squirrel Phone Case for iPhone & Samsung – California Ground Squirrel
 seoDescription: >-
   Hand-painted squirrel phone case for iPhone and Samsung Galaxy.
-  Biodegradable, vegan and drop tested, CHF 21. 10% funds wildlife
+  Biodegradable, vegan, and drop tested, CHF 26. 10% funds wildlife
   conservation. Ships to Switzerland, the UK, the USA and Canada.
 keywords:
   - squirrel phone case
@@ -27,7 +27,7 @@ badges:
 variantPrompt: Choose your phone case
 specs:
   - label: Material
-    value: Biodegradable bioplastic and bamboo fibre
+    value: Biodegradable bioplastic and bamboo fiber
   - label: Protection
     value: '5 ft drop tested, raised rim for the screen'
   - label: Feel
@@ -37,7 +37,7 @@ specs:
   - label: Ports
     value: 'Clear, open ports'
   - label: Free of
-    value: 'Phthalates, BPA and cadmium'
+    value: 'Phthalates, BPA, and cadmium'
   - label: End of life
     value: Biodegrades in compost in approx. 6 months
   - label: Safety
@@ -61,7 +61,7 @@ gallery:
   - image: /images/shop/california-ground-squirrel-phone-case/squirrel-phone-case-close-up.webp
     alt: "Close-up of the hand-painted ground squirrels on the biodegradable phone case"
   - image: /images/shop/california-ground-squirrel-phone-case/squirrel-phone-case-inside.webp
-    alt: "Inside of the eco phone case, showing the bamboo fibre bioplastic and raised rim"
+    alt: "Inside of the eco phone case, showing the bamboo fiber bioplastic and raised rim"
   - image: /images/shop/california-ground-squirrel-phone-case/squirrel-phone-case-print-detail.webp
     alt: "Detail of the squirrel print and the ground squirrel café logo on the phone case"
   - image: /images/shop/california-ground-squirrel-phone-case/squirrel-phone-case-on-the-beach.webp
@@ -69,7 +69,7 @@ gallery:
   - image: /images/shop/california-ground-squirrel-phone-case/squirrel-phone-case-driftwood.webp
     alt: "Squirrel phone case on the beach next to a piece of driftwood"
   - image: /images/shop/california-ground-squirrel-phone-case/squirrel-phone-case-in-pocket.webp
-    alt: "Phone in the squirrel case slipped into a trouser pocket"
+    alt: "Phone in the squirrel case slipped into a pants pocket"
   - image: /images/shop/california-ground-squirrel-phone-case/squirrel-phone-case-in-hand.webp
     alt: "Two hands holding an iPhone in the California ground squirrel phone case"
 storyTitle: Meet the case
@@ -79,15 +79,15 @@ story:
   - image: /images/shop/california-ground-squirrel-phone-case/story-2-you-deserved-this.webp
     alt: "You deserved this: the squirrel phone case, real art and not AI"
   - image: /images/shop/california-ground-squirrel-phone-case/story-3-perks.webp
-    alt: "The perks: your money supports conservation, a small business and not big tech"
+    alt: "The perks: your money supports conservation, a small business, and not big tech"
   - image: /images/shop/california-ground-squirrel-phone-case/story-4-cons.webp
     alt: "The cons: you won't find it on Etsy, and you'll have to explain what a ground squirrel is"
   - image: /images/shop/california-ground-squirrel-phone-case/story-5-values.webp
     alt: "A closer look at the case's values"
   - image: /images/shop/california-ground-squirrel-phone-case/story-6-product-in-detail.webp
-    alt: "Product in detail: biodegradable bamboo fibre bioplastic, made on demand, shipped in recycled packaging"
-  - image: /images/shop/california-ground-squirrel-phone-case/story-7-wildlife-organisations.webp
-    alt: "The wildlife organisations this phone case supports"
+    alt: "Product in detail: biodegradable bamboo fiber bioplastic, made on demand, shipped in recycled packaging"
+  - image: /images/shop/california-ground-squirrel-phone-case/story-7-wildlife-organizations.webp
+    alt: "The wildlife organizations this phone case supports"
   - image: /images/shop/california-ground-squirrel-phone-case/story-8-what-are-you-waiting-for.webp
     alt: "So now, what are you waiting for?"
 faq:
@@ -100,7 +100,7 @@ faq:
   - q: Is the phone case really biodegradable?
     a: >-
       Yes. It is made from a 100% biodegradable mix of bioplastic and bamboo
-      fibre and will fully biodegrade in compost after approximately six months.
+      fiber and will fully biodegrade in compost after approximately six months.
       It contains no phthalates, BPA or cadmium.
   - q: Is it vegan?
     a: Yes, the case is vegan.
@@ -112,232 +112,231 @@ faq:
       EU at the moment. If your country is missing, join the waitlist.
   - q: How does it support wildlife?
     a: >-
-      10% of what you spend goes to wildlife conservation, to organisations such
-      as the Red Squirrel Survival Trust (UK), Re:wild (US and worldwide), WWF
+      10% of what you spend goes to wildlife conservation, to organizations such
+      as the Red Squirrel Survival Trust (UK), Re:wild (US and worldwide), WWF,
       and Rewilding Europe.
 variants:
   - label: 'iPhone 11'
     group: Apple
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-IP11
     shippingProfile: phone-case
   - label: 'iPhone 11 Pro'
     group: Apple
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-IP11P
     shippingProfile: phone-case
   - label: 'iPhone 11 Pro Max'
     group: Apple
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-IP11PM
     shippingProfile: phone-case
   - label: 'iPhone 12 Mini'
     group: Apple
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-IP12MINI
     shippingProfile: phone-case
   - label: 'iPhone 12 Pro'
     group: Apple
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-IP12P
     shippingProfile: phone-case
   - label: 'iPhone 12 Pro Max'
     group: Apple
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-IP12PM
     shippingProfile: phone-case
   - label: 'iPhone SE (2020)'
     group: Apple
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-IPSE2020
     shippingProfile: phone-case
   - label: 'iPhone 13'
     group: Apple
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-IP13
     shippingProfile: phone-case
   - label: 'iPhone 13 Mini'
     group: Apple
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-IP13MINI
     shippingProfile: phone-case
   - label: 'iPhone 13 Pro'
     group: Apple
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-IP13P
     shippingProfile: phone-case
   - label: 'iPhone 13 Pro Max'
     group: Apple
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-IP13PM
     shippingProfile: phone-case
   - label: 'iPhone 14'
     group: Apple
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-IP14
     shippingProfile: phone-case
   - label: 'iPhone 14 Plus'
     group: Apple
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-IP14PLUS
     shippingProfile: phone-case
   - label: 'iPhone 14 Pro'
     group: Apple
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-IP14P
     shippingProfile: phone-case
   - label: 'iPhone 14 Pro Max'
     group: Apple
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-IP14PM
     shippingProfile: phone-case
   - label: 'iPhone 15'
     group: Apple
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-IP15
     shippingProfile: phone-case
   - label: 'iPhone 15 Plus'
     group: Apple
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-IP15PLUS
     shippingProfile: phone-case
   - label: 'iPhone 15 Pro'
     group: Apple
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-IP15P
     shippingProfile: phone-case
   - label: 'iPhone 15 Pro Max'
     group: Apple
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-IP15PM
     shippingProfile: phone-case
   - label: 'iPhone 16'
     group: Apple
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-IP16
     shippingProfile: phone-case
   - label: 'iPhone 16 Pro'
     group: Apple
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-IP16P
     shippingProfile: phone-case
   - label: 'iPhone 16 Pro Max'
     group: Apple
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-IP16PM
     shippingProfile: phone-case
   - label: 'iPhone 17'
     group: Apple
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-IP17
     shippingProfile: phone-case
   - label: 'iPhone 17 Air'
     group: Apple
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-IP17AIR
     shippingProfile: phone-case
   - label: 'iPhone 17 Pro'
     group: Apple
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-IP17P
     shippingProfile: phone-case
   - label: 'iPhone 17 Pro Max'
     group: Apple
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-IP17PM
     shippingProfile: phone-case
   - label: 'iPhone 18 Pro'
     group: Apple
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-IP18P
     shippingProfile: phone-case
   - label: 'iPhone 18 Pro Max'
     group: Apple
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-IP18PM
     shippingProfile: phone-case
   - label: 'Galaxy S20'
     group: Samsung
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-GSS20
     shippingProfile: phone-case
   - label: 'Galaxy S20 Plus'
     group: Samsung
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-GSS20PLUS
     shippingProfile: phone-case
   - label: 'Galaxy S20 Ultra'
     group: Samsung
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-GSS20U
     shippingProfile: phone-case
   - label: 'Galaxy S21 Plus'
     group: Samsung
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-GSS21PLUS
     shippingProfile: phone-case
   - label: 'Galaxy S22 Plus'
     group: Samsung
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-GSS22PLUS
     shippingProfile: phone-case
   - label: 'Galaxy S22 Ultra'
     group: Samsung
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-GSS22U
     shippingProfile: phone-case
   - label: 'Galaxy S23'
     group: Samsung
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-GSS23
     shippingProfile: phone-case
   - label: 'Galaxy S23 Plus'
     group: Samsung
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-GSS23PLUS
     shippingProfile: phone-case
   - label: 'Galaxy S24'
     group: Samsung
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-GSS24
     shippingProfile: phone-case
   - label: 'Galaxy S24 Plus'
     group: Samsung
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-GSS24PLUS
     shippingProfile: phone-case
   - label: 'Galaxy S24 Ultra'
     group: Samsung
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-GSS24U
     shippingProfile: phone-case
   - label: 'Galaxy S25'
     group: Samsung
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-GSS25
     shippingProfile: phone-case
   - label: 'Galaxy S25 Plus'
     group: Samsung
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-GSS25PLUS
     shippingProfile: phone-case
   - label: 'Galaxy S25 Ultra'
     group: Samsung
-    price: 21
+    price: 26
     sku: GSC-CASE-CGS-GSS25U
     shippingProfile: phone-case
 ---
 
-**A phone case covered in hand-painted California ground squirrels**, the little sun-loving burrowers of the American West, painted in watercolour on the road and never by AI.
+Inspired by the California ground squirrels we met on our West Coast road trip through the USA, one of our favorite encounters and animals ever since.
 
-This squirrel phone case is as kind to the planet as it is to your phone. It is made from a flexible yet tough blend of 100% biodegradable bioplastic and bamboo fibre, and once it has done its job, it fully biodegrades in compost after approximately six months. It is free of environmentally damaging phthalates, BPA and cadmium, and it is certified FDA safety compliant (FDA 21 CFR 175.300).
+Every squirrel on this case is based on one we actually met along the way, carefully illustrated and brought together in one design.
 
-Protection comes first, though. The case is drop tested from 5 feet for shock absorbance, and a raised rim keeps your screen off the table. The slimline, scratch-resistant shell is smooth yet non-slip, so it sits firmly in your hand with a natural look and feel, and the open ports leave every button and cable within reach.
+Designed by me, inspired by the wild.
 
-- Enhanced durability and shock resistance
-- Scratch resistant
-- Clear, open ports for connectivity
-- 100% biodegradable
+This squirrel phone case is as kind to the planet as it is to your phone. It is made from a flexible yet tough blend of 100% biodegradable bioplastic and bamboo fiber, and once it has done its job, it fully biodegrades in compost after approximately six months. It is free of environmentally damaging phthalates, BPA, and cadmium, and it is certified FDA safety compliant (FDA 21 CFR 175.300).
+
+The case is drop tested from 5 feet for shock absorption, and a raised rim keeps your screen off the table. The slimline, scratch-resistant shell is smooth yet non-slip, so it sits firmly in your hand with a natural look and feel, while the open ports leave every button and cable within reach.
 
 *Please note: the printed squirrels cover the whole back of the case, but the print does not wrap around the sides.*
 

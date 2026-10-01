@@ -92,7 +92,15 @@ export default function ProductDetail({
 
   return (
     <>
-      <div className="grid lg:grid-cols-[minmax(0,1fr)_23rem] gap-10 lg:gap-14 items-start">
+      <div
+        className={`grid gap-10 lg:gap-14 items-start ${
+          // A full-bleed photo at the column's whole width towers over the
+          // purchase panel, so photographs get a narrower column.
+          photographic
+            ? "lg:grid-cols-[minmax(0,38rem)_23rem] lg:justify-between"
+            : "lg:grid-cols-[minmax(0,1fr)_23rem]"
+        }`}
+      >
         {/* Gallery */}
         <div className="lg:sticky lg:top-24">
           <div
