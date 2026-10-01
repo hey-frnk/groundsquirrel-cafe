@@ -285,39 +285,48 @@ export default function ProductDetail({
           />
         </div>
 
-        {product.specs && product.specs.length > 0 && (
-          <aside className="rounded-2xl border border-ink/12 bg-ivory/25 p-7">
-            <h2 className="eyebrow mb-5">Field notes</h2>
-            <dl className="space-y-3.5 text-sm">
-              {product.specs.map((spec) => (
-                <div key={spec.label} className="spec-row">
-                  <dt className="shrink-0 text-graphite/70">{spec.label}</dt>
-                  <dd className="text-right text-ink">{spec.value}</dd>
-                </div>
-              ))}
-            </dl>
-          </aside>
-        )}
-      </div>
+        {/* Side column: field notes, then the questions, beside the story. The
+            top margin matches the carousel's header row, so the notes start
+            level with its pictures rather than with its arrows. */}
+        <div
+          className={`space-y-12 ${
+            product.story && product.story.length > 0 ? "lg:mt-[4.25rem]" : ""
+          }`}
+        >
+          {product.specs && product.specs.length > 0 && (
+            <aside className="rounded-2xl border border-ink/12 bg-ivory/25 p-7">
+              <h2 className="eyebrow mb-5">Field notes</h2>
+              <dl className="space-y-3.5 text-sm">
+                {product.specs.map((spec) => (
+                  <div key={spec.label} className="spec-row">
+                    <dt className="shrink-0 text-graphite/70">{spec.label}</dt>
+                    <dd className="text-right text-ink">{spec.value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </aside>
+          )}
 
-      {product.faq && product.faq.length > 0 && (
-        <section className="mt-20 max-w-3xl">
-          <h2 className="eyebrow mb-6">Questions &amp; answers</h2>
-          <div className="divide-y divide-ink/10 border-y border-ink/10">
-            {product.faq.map((item) => (
-              <details key={item.q} className="group/faq py-5">
-                <summary className="flex cursor-pointer list-none items-baseline justify-between gap-6 text-lg leading-snug transition-colors hover:text-rose [&::-webkit-details-marker]:hidden">
-                  <h3 className="font-display">{item.q}</h3>
-                  <span aria-hidden className="shrink-0 text-graphite/50 transition-transform group-open/faq:rotate-45">
-                    +
-                  </span>
-                </summary>
-                <p className="mt-3 leading-relaxed text-graphite/85">{item.a}</p>
-              </details>
-            ))}
-          </div>
-        </section>
-      )}
+          {product.faq && product.faq.length > 0 && (
+            <section>
+              <h2 className="eyebrow mb-4">Questions &amp; answers</h2>
+              <div className="divide-y divide-ink/10 border-y border-ink/10">
+                {product.faq.map((item) => (
+                  <details key={item.q} className="group/faq py-4">
+                    <summary className="flex cursor-pointer list-none items-baseline justify-between gap-4 leading-snug transition-colors hover:text-rose [&::-webkit-details-marker]:hidden">
+                      <h3 className="font-display text-base">{item.q}</h3>
+                      <span aria-hidden className="shrink-0 text-graphite/50 transition-transform group-open/faq:rotate-45">
+                        +
+                      </span>
+                    </summary>
+                    <p className="mt-3 text-sm leading-relaxed text-graphite/85">{item.a}</p>
+                  </details>
+                ))}
+              </div>
+            </section>
+          )}
+        </div>
+      </div>
     </>
   );
 }
