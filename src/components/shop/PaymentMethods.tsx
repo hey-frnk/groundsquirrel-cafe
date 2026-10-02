@@ -5,9 +5,13 @@
  * at checkout costs more trust than it builds.
  *
  * Visa, Apple Pay and Google Pay are the Simple Icons outlines (simple-icons
- * on npm), cropped to the mark. Mastercard is drawn from its two circles; AMEX
- * and TWINT are set as their wordmarks on the brand color.
+ * on npm), cropped to the mark. Mastercard is drawn from its two circles.
+ * TWINT and American Express are the card logos from Datatrans's
+ * payment-logos (github.com/datatrans/payment-logos, also kept as files in
+ * public/images/payment/), drawn on a 120x80 card.
  */
+
+import { useId } from "react";
 
 const W = 38;
 const H = 24;
@@ -55,22 +59,70 @@ const APPLE_PAY = "M2.15 4.318a42.16 42.16 0 0 0-.454.003c-.15.005-.303.013-.452
 
 const GOOGLE_PAY = "M3.963 7.235A3.963 3.963 0 00.422 9.419a3.963 3.963 0 000 3.559 3.963 3.963 0 003.541 2.184c1.07 0 1.97-.352 2.627-.957.748-.69 1.18-1.71 1.18-2.916a4.722 4.722 0 00-.07-.806H3.964v1.526h2.14a1.835 1.835 0 01-.79 1.205c-.356.241-.814.379-1.35.379-1.034 0-1.911-.697-2.225-1.636a2.375 2.375 0 010-1.517c.314-.94 1.191-1.636 2.225-1.636a2.152 2.152 0 011.52.594l1.132-1.13a3.808 3.808 0 00-2.652-1.033zm6.501.55v6.9h.886V11.89h1.465c.603 0 1.11-.196 1.522-.588a1.911 1.911 0 00.635-1.464 1.92 1.92 0 00-.635-1.456 2.125 2.125 0 00-1.522-.598zm2.427.85a1.156 1.156 0 01.823.365 1.176 1.176 0 010 1.686 1.171 1.171 0 01-.877.357H11.35V8.635h1.487a1.156 1.156 0 01.054 0zm4.124 1.175c-.842 0-1.477.308-1.907.925l.781.491c.288-.417.68-.626 1.175-.626a1.255 1.255 0 01.856.323 1.009 1.009 0 01.366.785v.202c-.34-.193-.774-.289-1.3-.289-.617 0-1.11.145-1.479.434-.37.288-.554.677-.554 1.165a1.476 1.476 0 00.525 1.156c.35.308.785.463 1.305.463.61 0 1.098-.27 1.465-.81h.038v.655h.848v-2.909c0-.61-.19-1.09-.568-1.44-.38-.35-.896-.525-1.551-.525zm2.263.154l1.946 4.422-1.098 2.38h.915L24 9.963h-.965l-1.368 3.391h-.02l-1.406-3.39zm-2.146 2.368c.494 0 .88.11 1.156.33 0 .372-.147.696-.44.973a1.413 1.413 0 01-.997.414 1.081 1.081 0 01-.69-.232.708.708 0 01-.293-.578c0-.257.12-.47.363-.647.24-.173.54-.26.9-.26Z";
 
+const TWINT_WORDMARK = [
+  "M104.946 34.1879H94.5782V36.6836H98.2862V47.3981H101.22V36.6836H104.946V34.1879Z",
+  "M57.8582 34.1879H47.4902V36.6836H51.2162V47.3981H54.1502V36.6836H57.8582V34.1879Z",
+  "M87.8642 33.7686C84.6062 33.7686 82.7882 35.8822 82.7882 38.9251V47.3978H85.6862V38.8522C85.6862 37.5221 86.4602 36.5017 87.9002 36.5017C89.3222 36.5017 90.0962 37.7043 90.0962 38.8522V47.3978H92.9942V38.9251C92.9942 35.8822 91.1222 33.7686 87.8642 33.7686Z",
+  "M76.9022 34.1879V47.3981H79.8182V34.1879H76.9022Z",
+  "M67.0742 39.4349L67.1822 40.0181L69.9002 47.3981H71.0882L74.7962 34.1879H71.9342L70.1522 41.1296L70.0622 41.8766L69.9182 41.1296L67.5422 34.1879H66.6062L64.2482 41.1296L64.1042 41.8766L63.9962 41.1296L62.2322 34.1879H59.3702L63.0782 47.3981H64.2662L66.9842 40.0181L67.0742 39.4349Z",
+  "M40.7037 46.8298C40.7037 47.2159 40.4324 47.6939 40.1068 47.8777L28.4756 54.6984C28.15 54.9006 27.6074 54.9006 27.2818 54.6984L15.6506 47.8777C15.325 47.6755 15.0537 47.2159 15.0537 46.8298V33.1702C15.0537 32.7841 15.325 32.3062 15.6506 32.1223L27.2818 25.3017C27.6074 25.0995 28.15 25.0995 28.4756 25.3017L40.1068 32.1223C40.4324 32.3245 40.7037 32.7841 40.7037 33.1702V46.8298Z",
+];
+
+const TWINT_RED = "M33.9362 39.2611L30.9837 43.4739L29.4633 41.2134L31.2135 38.6788C31.5318 38.2335 32.2389 36.9834 31.4257 35.2879C30.7715 33.9179 29.3572 33.25 28.1196 33.25C26.882 33.25 25.5207 33.8665 24.8135 35.2879C24.0003 36.9149 24.7075 38.1993 25.008 38.6274C25.008 38.6274 25.9804 40.0146 26.7936 41.1791L28.1196 43.0287L30.0997 45.9571C30.1174 45.9743 30.4356 46.4366 30.9837 46.4366C31.5141 46.4366 31.8323 45.9743 31.8854 45.9229L36.5351 39.2611H33.9362ZM28.1196 39.3638C28.1196 39.3638 27.3417 38.2164 26.8467 37.4286C26.2986 36.5723 26.9174 35.3051 28.1196 35.3051C29.3395 35.3051 29.9406 36.5723 29.3925 37.4286C28.8975 38.2335 28.1196 39.3638 28.1196 39.3638V39.3638Z";
+
+const TWINT_BLUE = "M25.2555 43.3369L22.3384 39.381C22.3384 39.381 21.5605 38.2335 21.0654 37.4458C20.5174 36.5895 21.1361 35.3222 22.3384 35.3222C22.4975 35.3222 22.6389 35.3393 22.7627 35.3736L23.7881 33.5583C23.3107 33.3699 22.8157 33.2672 22.3384 33.2672C21.1008 33.2672 19.7395 33.8837 19.0323 35.3051C18.219 36.932 18.9262 38.2164 19.2268 38.6446L24.3185 45.9572C24.3538 46.0257 24.6897 46.488 25.2201 46.488C25.7682 46.488 26.0687 46.0428 26.1218 45.9743L27.6599 43.7137L26.3339 41.8299L25.2555 43.3369Z";
+
+const AMEX = "m120 76v-8.6763h-9.651l-4.969-5.4944-4.994 5.4944h-31.822v-25.607h-10.27l12.74-28.831h12.286l4.3857 9.877v-9.877h15.208l2.64 7.4429 2.658-7.4429h11.789v-8.8854c0-2.2091-1.7909-4-4-4h-112c-2.2091 4.4409e-16 -4 1.7909-4 4v72c4.4409e-16 2.2091 1.7909 4 4 4h112c2.2091 0 4-1.7909 4-4zm-8.026-11.882h8.026l-10.616-11.258 10.616-11.13h-7.898l-6.556 7.1645-6.4935-7.1645h-8.0275l10.554 11.194-10.554 11.194h7.8041l6.5889-7.2283 6.556 7.2283zm1.878-11.249 6.148 6.5406v-13.027l-6.148 6.4861zm-35.78 6.0675v-3.4864h12.633v-5.0534h-12.633v-3.4859h12.953l5e-4 -5.1815h-19.062v22.388h19.062l-5e-4 -5.1813h-12.953zm35.883-20.456h6.045v-22.388h-9.403l-5.022 13.944-4.989-13.944h-9.5631v22.388h6.0446v-15.672l5.7575 15.672h5.373l5.757-15.704v15.704zm-29.809 0h6.8765l-9.8824-22.388h-7.8682l-9.8833 22.388h6.7166l1.8554-4.4776h10.298l1.887 4.4776zm-3.9976-9.4992h-6.0773l3.0387-7.3242 3.0386 7.3242z";
+
+/**
+ * The TWINT mark with its two gradient arrows. The gradient ids come from
+ * useId: the row renders in both the product page and the cart drawer, and a
+ * shared id would point at whichever copy comes first, even a hidden one.
+ * The viewBox crops the 120x80 card around the logo so it reads at this size.
+ */
+function TwintLogo() {
+  const id = useId();
+  const red = `${id}-red`;
+  const blue = `${id}-blue`;
+  return (
+    <svg x="0" y="0" width={W} height={H} viewBox="10 8.4 100 63.2">
+      <defs>
+        <radialGradient id={red} cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(27.1406 34.3137) scale(13.6969)">
+          <stop stopColor="#ffcc00" />
+          <stop offset="0.0916" stopColor="#ffc800" />
+          <stop offset="0.1739" stopColor="#ffbd00" />
+          <stop offset="0.2528" stopColor="#ffab00" />
+          <stop offset="0.3295" stopColor="#ff9100" />
+          <stop offset="0.4046" stopColor="#ff7000" />
+          <stop offset="0.4786" stopColor="#ff4700" />
+          <stop offset="0.5503" stopColor="#ff1800" />
+          <stop offset="0.5822" stopColor="#ff0000" />
+          <stop offset="1" stopColor="#ff0000" />
+        </radialGradient>
+        <radialGradient id={blue} cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(18.8841 34.5648) scale(12.559)">
+          <stop stopColor="#00b4e6" />
+          <stop offset="0.201" stopColor="#00b0e3" />
+          <stop offset="0.3898" stopColor="#01a5db" />
+          <stop offset="0.5737" stopColor="#0292cd" />
+          <stop offset="0.7546" stopColor="#0377ba" />
+          <stop offset="0.9316" stopColor="#0455a1" />
+          <stop offset="1" stopColor="#054696" />
+        </radialGradient>
+      </defs>
+      {TWINT_WORDMARK.map((d) => (
+        <path key={d} d={d} fill="#ffffff" />
+      ))}
+      <path d={TWINT_RED} fill={`url(#${red})`} />
+      <path d={TWINT_BLUE} fill={`url(#${blue})`} />
+    </svg>
+  );
+}
+
 export default function PaymentMethods({ className = "" }: { className?: string }) {
   return (
     <ul aria-label="Accepted payment methods" className={`flex flex-wrap items-center gap-1.5 ${className}`}>
       <Card label="TWINT" background="#000000" bordered={false}>
-        <text
-          x={W / 2}
-          y="15.6"
-          textAnchor="middle"
-          fill="#ffffff"
-          fontFamily="Helvetica, Arial, sans-serif"
-          fontSize="9.5"
-          fontWeight="700"
-          letterSpacing="0.3"
-        >
-          TWINT
-        </text>
+        <TwintLogo />
       </Card>
 
       <Card label="Visa">
@@ -85,19 +137,12 @@ export default function PaymentMethods({ className = "" }: { className?: string 
         <path d="M19 6.88a6.5 6.5 0 0 1 0 10.24a6.5 6.5 0 0 1 0-10.24z" fill="#ff5f00" />
       </Card>
 
-      <Card label="American Express" background="#006fcf" bordered={false}>
-        <text
-          x={W / 2}
-          y="15.4"
-          textAnchor="middle"
-          fill="#ffffff"
-          fontFamily="Helvetica, Arial, sans-serif"
-          fontSize="9"
-          fontWeight="700"
-          letterSpacing="0.4"
-        >
-          AMEX
-        </text>
+      <Card label="American Express" background="#0690ff" bordered={false}>
+        {/* The logo is its own 3:2 card; the 1px strips either side are the frame's blue. */}
+        <svg x="1" y="0" width={W - 2} height={H} viewBox="0 0 120 80">
+          <rect x="40" width="80" height="80" rx="4" fill="#ffffff" />
+          <path d={AMEX} fill="#0690ff" />
+        </svg>
       </Card>
 
       {/* The Apple Pay mark brings its own rounded frame, so no card behind it. */}
