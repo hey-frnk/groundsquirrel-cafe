@@ -2,7 +2,7 @@
 title: "Datenschutz"
 ---
 
-*Last updated: August 2026. This is not legal advice - if you add new tools or services to the site (analytics, a newsletter, a contact form, etc.), please update this page accordingly.*
+*Last updated: August 2026.*
 
 ## Who is responsible
 
