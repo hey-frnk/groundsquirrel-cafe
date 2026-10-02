@@ -27,7 +27,7 @@ export interface CartLine {
 /* -------------------------------------------------------------------------- */
 /* External store                                                             */
 /*                                                                            */
-/* The basket lives outside React so it can be read synchronously during       */
+/* The cart lives outside React so it can be read synchronously during        */
 /* render (no hydration mismatch, no setState-in-effect) and so a second open   */
 /* tab stays in step via the `storage` event.                                  */
 /* -------------------------------------------------------------------------- */
@@ -57,7 +57,7 @@ function readStored(): CartLine[] {
     const parsed: unknown = JSON.parse(raw);
     if (!Array.isArray(parsed)) return EMPTY;
     // Anything hand-edited or left from an older shape is dropped rather than
-    // trusted — a malformed price must not reach the basket total.
+    // trusted: a malformed price must not reach the cart total.
     const valid = parsed.filter(isValidLine);
     return valid.length > 0 ? valid : EMPTY;
   } catch {
@@ -81,7 +81,7 @@ function setLines(next: CartLine[]) {
 
 if (typeof window !== "undefined") {
   lines = readStored();
-  // Another tab changed the basket — adopt it.
+  // Another tab changed the cart, so adopt it.
   window.addEventListener("storage", (event) => {
     if (event.key !== STORAGE_KEY) return;
     lines = readStored();

@@ -25,11 +25,11 @@ specs:
   - label: Framing
     value: Unframed - frames in the photos are for illustration
   - label: Made
-    value: 'To order, 3–5 days before dispatch'
+    value: 'To order, 3–5 days before shipping'
   - label: Packaging
     value: Rolled in a protective tube
 shippingNote: >-
-  Shipping is calculated from your country and the largest item in your basket. A3 prints travel in a bigger tube than A5. Printed and dispatched from
+  Shipping is calculated from your country and the largest item in your cart. A3 prints travel in a bigger tube than A5. Printed and shipped from
   whichever partner studio sits closest to you.
 gallery:
   - image: /images/shop/squirrel-posters/poster-set.webp
@@ -187,73 +187,73 @@ variants:
     images:
       - /images/shop/squirrel-posters/framed-eurasian-red-squirrel.webp
       - /images/shop/squirrel-posters/poster-eurasian-red-squirrel.webp
-  - label: Eastern Grey Squirrel
+  - label: Eastern Gray Squirrel
     price: 10
     sku: GSC-PRINT-EGS-A5-EN
     stripePriceId: "price_1U2YJnHhWAEQqbxLsKsZ9MjJ"
     shippingProfile: print-a5
     options:
-      design: Eastern Grey Squirrel
+      design: Eastern Gray Squirrel
       size: A5 - 14.8 × 21 cm
       language: English
     images:
       - /images/shop/squirrel-posters/framed-eastern-grey-squirrel.webp
       - /images/shop/squirrel-posters/poster-eastern-grey-squirrel.webp
-  - label: Eastern Grey Squirrel
+  - label: Eastern Gray Squirrel
     price: 10
     sku: GSC-PRINT-EGS-A5-DE
     stripePriceId: "price_1U2YJoHhWAEQqbxLOfsK6IFI"
     shippingProfile: print-a5
     options:
-      design: Eastern Grey Squirrel
+      design: Eastern Gray Squirrel
       size: A5 - 14.8 × 21 cm
       language: Deutsch
     images:
       - /images/shop/squirrel-posters/framed-eastern-grey-squirrel.webp
       - /images/shop/squirrel-posters/poster-eastern-grey-squirrel.webp
-  - label: Eastern Grey Squirrel
+  - label: Eastern Gray Squirrel
     price: 15
     sku: GSC-PRINT-EGS-A4-EN
     stripePriceId: "price_1U2YJpHhWAEQqbxL0y1CVpQw"
     shippingProfile: print-a4
     options:
-      design: Eastern Grey Squirrel
+      design: Eastern Gray Squirrel
       size: A4 - 21 × 29.7 cm
       language: English
     images:
       - /images/shop/squirrel-posters/framed-eastern-grey-squirrel.webp
       - /images/shop/squirrel-posters/poster-eastern-grey-squirrel.webp
-  - label: Eastern Grey Squirrel
+  - label: Eastern Gray Squirrel
     price: 15
     sku: GSC-PRINT-EGS-A4-DE
     stripePriceId: "price_1U2YJqHhWAEQqbxL4Yl93r2m"
     shippingProfile: print-a4
     options:
-      design: Eastern Grey Squirrel
+      design: Eastern Gray Squirrel
       size: A4 - 21 × 29.7 cm
       language: Deutsch
     images:
       - /images/shop/squirrel-posters/framed-eastern-grey-squirrel.webp
       - /images/shop/squirrel-posters/poster-eastern-grey-squirrel.webp
-  - label: Eastern Grey Squirrel
+  - label: Eastern Gray Squirrel
     price: 20
     sku: GSC-PRINT-EGS-A3-EN
     stripePriceId: "price_1U2YJrHhWAEQqbxLsaqGzIdN"
     shippingProfile: print-a3
     options:
-      design: Eastern Grey Squirrel
+      design: Eastern Gray Squirrel
       size: A3 - 29.7 × 42 cm
       language: English
     images:
       - /images/shop/squirrel-posters/framed-eastern-grey-squirrel.webp
       - /images/shop/squirrel-posters/poster-eastern-grey-squirrel.webp
-  - label: Eastern Grey Squirrel
+  - label: Eastern Gray Squirrel
     price: 20
     sku: GSC-PRINT-EGS-A3-DE
     stripePriceId: "price_1U2YJvHhWAEQqbxLQayhh5Ua"
     shippingProfile: print-a3
     options:
-      design: Eastern Grey Squirrel
+      design: Eastern Gray Squirrel
       size: A3 - 29.7 × 42 cm
       language: Deutsch
     images:

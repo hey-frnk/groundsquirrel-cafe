@@ -17,7 +17,7 @@ export default function ThankYouPage() {
       <p className="mt-8 leading-relaxed text-graphite">
         Your order is in. A receipt is on its way to your inbox, and your prints
         are about to be made. Everything is printed to order, so give it 3–5 days
-        before it goes in the post.
+        before it ships.
       </p>
       <p className="mt-4 leading-relaxed text-graphite">
         Ten percent of what you just spent goes to wildlife conservation. Thank you
@@ -41,6 +41,10 @@ export default function ThankYouPage() {
         >
           hello@thegroundsquirrel.cafe
         </a>
+        . See also{" "}
+        <Link href="/shipping-returns" className="link-underline text-ink">
+          shipping &amp; returns
+        </Link>
         .
       </p>
     </div>

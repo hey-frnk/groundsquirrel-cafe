@@ -10,7 +10,7 @@ export default function CartButton({ className = "" }: { className?: string }) {
       type="button"
       onClick={openCart}
       aria-label={
-        itemCount > 0 ? `Open basket, ${itemCount} item(s)` : "Open basket"
+        itemCount > 0 ? `Open cart, ${itemCount} item(s)` : "Open cart"
       }
       className={`relative flex h-9 w-9 items-center justify-center text-ink transition-colors hover:text-rose ${className}`}
     >

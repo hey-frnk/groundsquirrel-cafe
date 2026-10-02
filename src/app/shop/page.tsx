@@ -21,7 +21,7 @@ const PROMISES = [
   },
   {
     title: "Printed near you",
-    body: "Dispatched from the partner studio closest to your address, not shipped across the world.",
+    body: "Shipped from the partner studio closest to your address, not sent across the world.",
   },
 ];
 

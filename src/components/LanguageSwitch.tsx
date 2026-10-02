@@ -15,7 +15,7 @@ const LANGUAGES = [
  * piece marked `data-lang`; these two flags decide which of them is on show.
  * The switch works on the page that is already there — no route, no reload — and
  * nothing is remembered between visits, which keeps the site's promise that the
- * only thing it stores in your browser is the basket.
+ * only thing it stores in your browser is the cart.
  *
  * English is the default, because every post is written in it and only some also
  * have a German version.

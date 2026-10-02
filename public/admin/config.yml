@@ -459,6 +459,13 @@ collections:
             hint: "Wird gezeigt, solange es noch kein Unterrichtsmaterial gibt."
           - { label: "Bio-Text (länger, unter der Einleitung)", name: "body", widget: "markdown" }
 
+      - name: "shipping-returns"
+        label: "Versand & Rückgabe"
+        file: "content/pages/shipping-returns.md"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Inhalt", name: "body", widget: "markdown" }
+
       - name: "impressum"
         label: "Impressum"
         file: "content/pages/impressum.md"

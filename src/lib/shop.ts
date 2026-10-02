@@ -21,7 +21,7 @@ export interface ShopVariant {
   stripePriceId?: string;
   note?: string;
   images?: string[];
-  /** Key into content/shipping.json profiles — decides the postage. */
+  /** Key into content/shipping.json profiles: decides the shipping cost. */
   shippingProfile?: string;
   /** Values for each axis in ShopProduct.optionAxes, e.g. { size: "A3" }. */
   options?: Record<string, string>;

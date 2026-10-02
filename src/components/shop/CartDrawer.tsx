@@ -2,14 +2,16 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useCart } from "@/lib/cart";
 import { formatPrice } from "@/lib/shop";
 import { DEFAULT_COUNTRY, SHIP_TO_COUNTRIES } from "@/lib/countries";
+import PaymentMethods from "./PaymentMethods";
 import Waitlist from "./Waitlist";
 
 /**
  * Set NEXT_PUBLIC_CHECKOUT_URL to the deployed Cloudflare Worker to switch the
- * shop from "browsing" to "selling". Until then the basket works, but says so.
+ * shop from "browsing" to "selling". Until then the cart works, but says so.
  */
 const CHECKOUT_URL = process.env.NEXT_PUBLIC_CHECKOUT_URL;
 
@@ -42,7 +44,7 @@ export default function CartDrawer() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           // Only identifiers and quantities travel to the server. Prices are
-          // read from Stripe there, so a tampered basket cannot set its price.
+          // read from Stripe there, so a tampered cart cannot set its price.
           items: lines.map((l) => ({
             price: l.stripePriceId,
             quantity: l.quantity,
@@ -80,18 +82,18 @@ export default function CartDrawer() {
       <aside
         role="dialog"
         aria-modal="true"
-        aria-label="Your basket"
+        aria-label="Your cart"
         aria-hidden={!isOpen}
         className={`fixed right-0 top-0 z-[61] flex h-full w-full max-w-sm flex-col border-l border-ink/10 bg-cream shadow-2xl transition-transform duration-300 ease-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <header className="flex items-center justify-between border-b border-ink/10 px-6 py-5">
-          <h2 className="eyebrow">Your basket</h2>
+          <h2 className="eyebrow">Your cart</h2>
           <button
             type="button"
             onClick={closeCart}
-            aria-label="Close basket"
+            aria-label="Close cart"
             className="flex h-8 w-8 items-center justify-center text-graphite transition-colors hover:text-rose"
           >
             <svg aria-hidden width="15" height="15" viewBox="0 0 16 16" stroke="currentColor" strokeWidth="1.3">
@@ -193,7 +195,7 @@ export default function CartDrawer() {
               </select>
               <p className="mt-2 text-xs text-graphite/65">
                 Shipping is added at checkout, based on your country and the
-                largest item in your basket.
+                largest item in your cart.
               </p>
               <div className="mt-3">
                 <Waitlist compact />
@@ -215,10 +217,24 @@ export default function CartDrawer() {
               <div className="rounded-xl border border-ink/10 bg-ivory/25 px-4 py-4 text-center">
                 <p className="text-sm text-ink">Checkout opens soon</p>
                 <p className="mt-1.5 text-xs text-graphite/70">
-                  Your basket is saved. It will still be here.
+                  Your cart is saved. It will still be here.
                 </p>
               </div>
             )}
+
+            <div className="space-y-3 pt-1">
+              <PaymentMethods className="justify-center" />
+              <p className="text-center text-xs text-graphite/65">
+                14-day returns, free replacement if damaged.{" "}
+                <Link
+                  href="/shipping-returns"
+                  onClick={closeCart}
+                  className="text-ink underline decoration-ink/25 underline-offset-4 transition-colors hover:text-rose"
+                >
+                  Details
+                </Link>
+              </p>
+            </div>
           </footer>
         )}
       </aside>
