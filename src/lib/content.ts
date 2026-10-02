@@ -376,6 +376,17 @@ function renderSmallPrint(htmlStr: string): string {
 }
 
 /**
+ * Turns `[highlight]` … `[/highlight]` into a line set off in the accent
+ * colour, for the one sentence a page most wants remembered — on the shop, that
+ * ten percent goes to wildlife conservation.
+ */
+function renderHighlights(htmlStr: string): string {
+  return htmlStr
+    .replace(/<p>\[highlight\]<\/p>/g, `<div class="post-highlight">`)
+    .replace(/<p>\[\/highlight\]<\/p>/g, `</div>`);
+}
+
+/**
  * Turns `[gallery]` … `[/gallery]` around a run of uncaptioned photos into a
  * compact contact sheet: up to six small photos to a row instead of three.
  *
@@ -521,7 +532,7 @@ export async function markdownToHtml(
   lang: "en" | "de" = "en"
 ): Promise<string> {
   const processed = await remark().use(html).process(markdown);
-  const rendered = renderSmallPrint(
+  const rendered = renderHighlights(renderSmallPrint(
     renderAdBoxes(
       renderAdNotes(
         renderNotes(
@@ -536,7 +547,7 @@ export async function markdownToHtml(
         )
       )
     )
-  );
+  ));
   return renderPostCards(renderGalleryStrips(rendered), lang);
 }
 
@@ -738,6 +749,19 @@ function normalizeVariants(variants: unknown): ShopVariant[] {
     .map((v) => ({ ...v, price: Number(v.price) || 0, images: normalizePhotos(v.images) }));
 }
 
+/** Alt text from `{ image, alt }` entries, keyed by image path. */
+function collectAlts(...lists: unknown[]): Record<string, string> {
+  const alts: Record<string, string> = {};
+  for (const list of lists) {
+    if (!Array.isArray(list)) continue;
+    for (const entry of list) {
+      const { image, alt } = (entry ?? {}) as { image?: string; alt?: string };
+      if (image && alt) alts[image] = alt;
+    }
+  }
+  return alts;
+}
+
 function readShopProduct(filename: string) {
   const { slug, data, content } = readEntry<ShopProduct>("shop", filename);
   return {
@@ -745,6 +769,8 @@ function readShopProduct(filename: string) {
     slug,
     body: content.trim(),
     gallery: normalizePhotos(data.gallery),
+    story: normalizePhotos(data.story),
+    imageAlt: collectAlts(data.gallery, data.story),
     variants: normalizeVariants(data.variants),
   };
 }

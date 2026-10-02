@@ -32,15 +32,15 @@ shippingNote: >-
   Shipping is calculated from your country and the largest item in your basket. A3 prints travel in a bigger tube than A5. Printed and dispatched from
   whichever partner studio sits closest to you.
 gallery:
-  - /images/shop/squirrel-posters/poster-set.webp
-  - /images/shop/squirrel-posters/framed-eurasian-red-squirrel.webp
-  - /images/shop/squirrel-posters/framed-eastern-grey-squirrel.webp
-  - /images/shop/squirrel-posters/framed-african-tree-squirrel.webp
+  - image: /images/shop/squirrel-posters/poster-set.webp
+  - image: /images/shop/squirrel-posters/framed-eurasian-red-squirrel.webp
+  - image: /images/shop/squirrel-posters/framed-eastern-grey-squirrel.webp
+  - image: /images/shop/squirrel-posters/framed-african-tree-squirrel.webp
 variants:
   - label: The full set - all five plates
     price: 40
     sku: GSC-PRINT-SET-A5-EN
-    stripePriceId: price_1U2YJUHhWAEQqbxLiNuz5vh4
+    stripePriceId: "price_1U2YJUHhWAEQqbxLiNuz5vh4"
     shippingProfile: print-a5
     options:
       design: The full set - all five plates
@@ -53,7 +53,7 @@ variants:
   - label: The full set - all five plates
     price: 40
     sku: GSC-PRINT-SET-A5-DE
-    stripePriceId: price_1U2YJXHhWAEQqbxLv0ijvYzR
+    stripePriceId: "price_1U2YJXHhWAEQqbxLv0ijvYzR"
     shippingProfile: print-a5
     options:
       design: The full set - all five plates
@@ -66,7 +66,7 @@ variants:
   - label: The full set - all five plates
     price: 60
     sku: GSC-PRINT-SET-A4-EN
-    stripePriceId: price_1U2YJbHhWAEQqbxLE4kTmkrv
+    stripePriceId: "price_1U2YJbHhWAEQqbxLE4kTmkrv"
     shippingProfile: print-a4
     options:
       design: The full set - all five plates
@@ -79,7 +79,7 @@ variants:
   - label: The full set - all five plates
     price: 60
     sku: GSC-PRINT-SET-A4-DE
-    stripePriceId: price_1U2YJdHhWAEQqbxL0oDjH4pL
+    stripePriceId: "price_1U2YJdHhWAEQqbxL0oDjH4pL"
     shippingProfile: print-a4
     options:
       design: The full set - all five plates
@@ -92,7 +92,7 @@ variants:
   - label: The full set - all five plates
     price: 80
     sku: GSC-PRINT-SET-A3-EN
-    stripePriceId: price_1U2YJeHhWAEQqbxLu7DdViQE
+    stripePriceId: "price_1U2YJeHhWAEQqbxLu7DdViQE"
     shippingProfile: print-a3
     options:
       design: The full set - all five plates
@@ -105,7 +105,7 @@ variants:
   - label: The full set - all five plates
     price: 80
     sku: GSC-PRINT-SET-A3-DE
-    stripePriceId: price_1U2YJfHhWAEQqbxLeEPadXN3
+    stripePriceId: "price_1U2YJfHhWAEQqbxLeEPadXN3"
     shippingProfile: print-a3
     options:
       design: The full set - all five plates
@@ -118,7 +118,7 @@ variants:
   - label: Eurasian Red Squirrel
     price: 10
     sku: GSC-PRINT-ERS-A5-EN
-    stripePriceId: price_1U2YJgHhWAEQqbxLQYMwAjxR
+    stripePriceId: "price_1U2YJgHhWAEQqbxLQYMwAjxR"
     shippingProfile: print-a5
     options:
       design: Eurasian Red Squirrel
@@ -130,7 +130,7 @@ variants:
   - label: Eurasian Red Squirrel
     price: 10
     sku: GSC-PRINT-ERS-A5-DE
-    stripePriceId: price_1U2YJhHhWAEQqbxLrGzj7ZbT
+    stripePriceId: "price_1U2YJhHhWAEQqbxLrGzj7ZbT"
     shippingProfile: print-a5
     options:
       design: Eurasian Red Squirrel
@@ -142,7 +142,7 @@ variants:
   - label: Eurasian Red Squirrel
     price: 15
     sku: GSC-PRINT-ERS-A4-EN
-    stripePriceId: price_1U2YJjHhWAEQqbxLPxzJhI5h
+    stripePriceId: "price_1U2YJjHhWAEQqbxLPxzJhI5h"
     shippingProfile: print-a4
     options:
       design: Eurasian Red Squirrel
@@ -154,7 +154,7 @@ variants:
   - label: Eurasian Red Squirrel
     price: 15
     sku: GSC-PRINT-ERS-A4-DE
-    stripePriceId: price_1U2YJkHhWAEQqbxLJRh6RhO6
+    stripePriceId: "price_1U2YJkHhWAEQqbxLJRh6RhO6"
     shippingProfile: print-a4
     options:
       design: Eurasian Red Squirrel
@@ -166,7 +166,7 @@ variants:
   - label: Eurasian Red Squirrel
     price: 20
     sku: GSC-PRINT-ERS-A3-EN
-    stripePriceId: price_1U2YJlHhWAEQqbxL76jtwCiF
+    stripePriceId: "price_1U2YJlHhWAEQqbxL76jtwCiF"
     shippingProfile: print-a3
     options:
       design: Eurasian Red Squirrel
@@ -178,7 +178,7 @@ variants:
   - label: Eurasian Red Squirrel
     price: 20
     sku: GSC-PRINT-ERS-A3-DE
-    stripePriceId: price_1U2YJmHhWAEQqbxLi3DTqCfu
+    stripePriceId: "price_1U2YJmHhWAEQqbxLi3DTqCfu"
     shippingProfile: print-a3
     options:
       design: Eurasian Red Squirrel
@@ -190,7 +190,7 @@ variants:
   - label: Eastern Grey Squirrel
     price: 10
     sku: GSC-PRINT-EGS-A5-EN
-    stripePriceId: price_1U2YJnHhWAEQqbxLsKsZ9MjJ
+    stripePriceId: "price_1U2YJnHhWAEQqbxLsKsZ9MjJ"
     shippingProfile: print-a5
     options:
       design: Eastern Grey Squirrel
@@ -202,7 +202,7 @@ variants:
   - label: Eastern Grey Squirrel
     price: 10
     sku: GSC-PRINT-EGS-A5-DE
-    stripePriceId: price_1U2YJoHhWAEQqbxLOfsK6IFI
+    stripePriceId: "price_1U2YJoHhWAEQqbxLOfsK6IFI"
     shippingProfile: print-a5
     options:
       design: Eastern Grey Squirrel
@@ -214,7 +214,7 @@ variants:
   - label: Eastern Grey Squirrel
     price: 15
     sku: GSC-PRINT-EGS-A4-EN
-    stripePriceId: price_1U2YJpHhWAEQqbxL0y1CVpQw
+    stripePriceId: "price_1U2YJpHhWAEQqbxL0y1CVpQw"
     shippingProfile: print-a4
     options:
       design: Eastern Grey Squirrel
@@ -226,7 +226,7 @@ variants:
   - label: Eastern Grey Squirrel
     price: 15
     sku: GSC-PRINT-EGS-A4-DE
-    stripePriceId: price_1U2YJqHhWAEQqbxL4Yl93r2m
+    stripePriceId: "price_1U2YJqHhWAEQqbxL4Yl93r2m"
     shippingProfile: print-a4
     options:
       design: Eastern Grey Squirrel
@@ -238,7 +238,7 @@ variants:
   - label: Eastern Grey Squirrel
     price: 20
     sku: GSC-PRINT-EGS-A3-EN
-    stripePriceId: price_1U2YJrHhWAEQqbxLsaqGzIdN
+    stripePriceId: "price_1U2YJrHhWAEQqbxLsaqGzIdN"
     shippingProfile: print-a3
     options:
       design: Eastern Grey Squirrel
@@ -250,7 +250,7 @@ variants:
   - label: Eastern Grey Squirrel
     price: 20
     sku: GSC-PRINT-EGS-A3-DE
-    stripePriceId: price_1U2YJvHhWAEQqbxLQayhh5Ua
+    stripePriceId: "price_1U2YJvHhWAEQqbxLQayhh5Ua"
     shippingProfile: print-a3
     options:
       design: Eastern Grey Squirrel
@@ -262,7 +262,7 @@ variants:
   - label: Golden-mantled Ground Squirrel
     price: 10
     sku: GSC-PRINT-GMGS-A5-EN
-    stripePriceId: price_1U2YJyHhWAEQqbxLhiay8ZQY
+    stripePriceId: "price_1U2YJyHhWAEQqbxLhiay8ZQY"
     shippingProfile: print-a5
     options:
       design: Golden-mantled Ground Squirrel
@@ -274,7 +274,7 @@ variants:
   - label: Golden-mantled Ground Squirrel
     price: 10
     sku: GSC-PRINT-GMGS-A5-DE
-    stripePriceId: price_1U2YK1HhWAEQqbxLj8xExTsQ
+    stripePriceId: "price_1U2YK1HhWAEQqbxLj8xExTsQ"
     shippingProfile: print-a5
     options:
       design: Golden-mantled Ground Squirrel
@@ -286,7 +286,7 @@ variants:
   - label: Golden-mantled Ground Squirrel
     price: 15
     sku: GSC-PRINT-GMGS-A4-EN
-    stripePriceId: price_1U2YK5HhWAEQqbxLluGiWKbN
+    stripePriceId: "price_1U2YK5HhWAEQqbxLluGiWKbN"
     shippingProfile: print-a4
     options:
       design: Golden-mantled Ground Squirrel
@@ -298,7 +298,7 @@ variants:
   - label: Golden-mantled Ground Squirrel
     price: 15
     sku: GSC-PRINT-GMGS-A4-DE
-    stripePriceId: price_1U2YK9HhWAEQqbxL0cPmfZTC
+    stripePriceId: "price_1U2YK9HhWAEQqbxL0cPmfZTC"
     shippingProfile: print-a4
     options:
       design: Golden-mantled Ground Squirrel
@@ -310,7 +310,7 @@ variants:
   - label: Golden-mantled Ground Squirrel
     price: 20
     sku: GSC-PRINT-GMGS-A3-EN
-    stripePriceId: price_1U2YKDHhWAEQqbxLWYTJSTRY
+    stripePriceId: "price_1U2YKDHhWAEQqbxLWYTJSTRY"
     shippingProfile: print-a3
     options:
       design: Golden-mantled Ground Squirrel
@@ -322,7 +322,7 @@ variants:
   - label: Golden-mantled Ground Squirrel
     price: 20
     sku: GSC-PRINT-GMGS-A3-DE
-    stripePriceId: price_1U2YKHHhWAEQqbxL7ECHgSi1
+    stripePriceId: "price_1U2YKHHhWAEQqbxL7ECHgSi1"
     shippingProfile: print-a3
     options:
       design: Golden-mantled Ground Squirrel
@@ -334,7 +334,7 @@ variants:
   - label: African Tree Squirrel
     price: 10
     sku: GSC-PRINT-ATS-A5-EN
-    stripePriceId: price_1U2YKKHhWAEQqbxLq3lvuc3D
+    stripePriceId: "price_1U2YKKHhWAEQqbxLq3lvuc3D"
     shippingProfile: print-a5
     options:
       design: African Tree Squirrel
@@ -346,7 +346,7 @@ variants:
   - label: African Tree Squirrel
     price: 10
     sku: GSC-PRINT-ATS-A5-DE
-    stripePriceId: price_1U2YKLHhWAEQqbxL14nmlUEj
+    stripePriceId: "price_1U2YKLHhWAEQqbxL14nmlUEj"
     shippingProfile: print-a5
     options:
       design: African Tree Squirrel
@@ -358,7 +358,7 @@ variants:
   - label: African Tree Squirrel
     price: 15
     sku: GSC-PRINT-ATS-A4-EN
-    stripePriceId: price_1U2YKMHhWAEQqbxL2SOrKBtC
+    stripePriceId: "price_1U2YKMHhWAEQqbxL2SOrKBtC"
     shippingProfile: print-a4
     options:
       design: African Tree Squirrel
@@ -370,7 +370,7 @@ variants:
   - label: African Tree Squirrel
     price: 15
     sku: GSC-PRINT-ATS-A4-DE
-    stripePriceId: price_1U2YKNHhWAEQqbxLnjsUdgUa
+    stripePriceId: "price_1U2YKNHhWAEQqbxLnjsUdgUa"
     shippingProfile: print-a4
     options:
       design: African Tree Squirrel
@@ -382,7 +382,7 @@ variants:
   - label: African Tree Squirrel
     price: 20
     sku: GSC-PRINT-ATS-A3-EN
-    stripePriceId: price_1U2YKPHhWAEQqbxLzJXNOcrL
+    stripePriceId: "price_1U2YKPHhWAEQqbxLzJXNOcrL"
     shippingProfile: print-a3
     options:
       design: African Tree Squirrel
@@ -394,7 +394,7 @@ variants:
   - label: African Tree Squirrel
     price: 20
     sku: GSC-PRINT-ATS-A3-DE
-    stripePriceId: price_1U2YKQHhWAEQqbxLWDa6KFCW
+    stripePriceId: "price_1U2YKQHhWAEQqbxLWDa6KFCW"
     shippingProfile: print-a3
     options:
       design: African Tree Squirrel
@@ -406,7 +406,7 @@ variants:
   - label: California Ground Squirrel
     price: 10
     sku: GSC-PRINT-CGS-A5-EN
-    stripePriceId: price_1U2YKRHhWAEQqbxL7rtC7cXr
+    stripePriceId: "price_1U2YKRHhWAEQqbxL7rtC7cXr"
     shippingProfile: print-a5
     options:
       design: California Ground Squirrel
@@ -418,7 +418,7 @@ variants:
   - label: California Ground Squirrel
     price: 10
     sku: GSC-PRINT-CGS-A5-DE
-    stripePriceId: price_1U2YKSHhWAEQqbxLkBU2ab7z
+    stripePriceId: "price_1U2YKSHhWAEQqbxLkBU2ab7z"
     shippingProfile: print-a5
     options:
       design: California Ground Squirrel
@@ -430,7 +430,7 @@ variants:
   - label: California Ground Squirrel
     price: 15
     sku: GSC-PRINT-CGS-A4-EN
-    stripePriceId: price_1U2YKTHhWAEQqbxLyUsa2ogb
+    stripePriceId: "price_1U2YKTHhWAEQqbxLyUsa2ogb"
     shippingProfile: print-a4
     options:
       design: California Ground Squirrel
@@ -442,7 +442,7 @@ variants:
   - label: California Ground Squirrel
     price: 15
     sku: GSC-PRINT-CGS-A4-DE
-    stripePriceId: price_1U2YKUHhWAEQqbxLw0tcV5tX
+    stripePriceId: "price_1U2YKUHhWAEQqbxLw0tcV5tX"
     shippingProfile: print-a4
     options:
       design: California Ground Squirrel
@@ -454,7 +454,7 @@ variants:
   - label: California Ground Squirrel
     price: 20
     sku: GSC-PRINT-CGS-A3-EN
-    stripePriceId: price_1U2YKVHhWAEQqbxLDQqJpTW9
+    stripePriceId: "price_1U2YKVHhWAEQqbxLDQqJpTW9"
     shippingProfile: print-a3
     options:
       design: California Ground Squirrel
@@ -466,7 +466,7 @@ variants:
   - label: California Ground Squirrel
     price: 20
     sku: GSC-PRINT-CGS-A3-DE
-    stripePriceId: price_1U2YKWHhWAEQqbxLShOvaEzD
+    stripePriceId: "price_1U2YKWHhWAEQqbxLShOvaEzD"
     shippingProfile: print-a3
     options:
       design: California Ground Squirrel
@@ -477,4 +477,8 @@ variants:
       - /images/shop/squirrel-posters/poster-california-ground-squirrel.webp
 ---
 
-**Ten percent of everything you spend here goes to wildlife conservation.**
+[highlight]
+
+10% of everything you spend here goes to wildlife conservation.
+
+[/highlight]

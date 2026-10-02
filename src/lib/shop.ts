@@ -25,6 +25,13 @@ export interface ShopVariant {
   shippingProfile?: string;
   /** Values for each axis in ShopProduct.optionAxes, e.g. { size: "A3" }. */
   options?: Record<string, string>;
+  /** Heading the variant sits under in the dropdown, e.g. "Apple". */
+  group?: string;
+}
+
+export interface ShopFaq {
+  q: string;
+  a: string;
 }
 
 /** One dropdown on the product page, e.g. Design / Size / Language. */
@@ -46,6 +53,21 @@ export interface ShopProduct {
   variants: ShopVariant[];
   /** When set, the page shows one dropdown per axis instead of a single list. */
   optionAxes?: ShopOptionAxis[];
+  /** Label above the single dropdown; defaults to "Choose your design". */
+  variantPrompt?: string;
+  /** Photographs rather than cut-out artwork: shown cropped to fill the frame. */
+  photographic?: boolean;
+  /** Images for the carousel beside the field notes. */
+  story?: string[];
+  storyTitle?: string;
+  /** Alt text per image path, gathered from the gallery and story entries. */
+  imageAlt?: Record<string, string>;
+  /** Lists the countries checkout accepts, with the waitlist underneath. */
+  showShipTo?: boolean;
+  faq?: ShopFaq[];
+  seoTitle?: string;
+  seoDescription?: string;
+  keywords?: string[];
 }
 
 /** Distinct values for one axis, in the order the variants first mention them. */

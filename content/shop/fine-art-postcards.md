@@ -23,7 +23,7 @@ variants:
   - label: The full set - all six cards
     price: 12
     sku: GSC-POSTCARD-SET
-    stripePriceId: price_1U2YJ9HhWAEQqbxLejgLhRPu
+    stripePriceId: "price_1U2YJ9HhWAEQqbxLejgLhRPu"
     shippingProfile: postcards
     note: >-
       One of each: flamingo, red squirrel, sea turtle, dassies, elephant and sea
@@ -39,7 +39,7 @@ variants:
   - label: Greater Flamingo
     price: 3
     sku: GSC-POSTCARD-FLAMINGO
-    stripePriceId: price_1U2YJCHhWAEQqbxLkjNa6d1l
+    stripePriceId: "price_1U2YJCHhWAEQqbxLkjNa6d1l"
     shippingProfile: postcards
     note: Into the pink of it.
     images:
@@ -50,7 +50,7 @@ variants:
   - label: Eurasian Red Squirrel
     price: 3
     sku: GSC-POSTCARD-SQUIRREL
-    stripePriceId: price_1U2YJHHhWAEQqbxLWSydjz0D
+    stripePriceId: "price_1U2YJHHhWAEQqbxLWSydjz0D"
     shippingProfile: postcards
     note: Across the space between us.
     images:
@@ -61,7 +61,7 @@ variants:
   - label: Green Sea Turtle
     price: 3
     sku: GSC-POSTCARD-TURTLE
-    stripePriceId: price_1U2YJLHhWAEQqbxLRDKnUDJl
+    stripePriceId: "price_1U2YJLHhWAEQqbxLRDKnUDJl"
     shippingProfile: postcards
     note: Slow is a way of arriving.
     images:
@@ -72,7 +72,7 @@ variants:
   - label: Rock Dassies
     price: 3
     sku: GSC-POSTCARD-DASSIES
-    stripePriceId: price_1U2YJOHhWAEQqbxLlfNLfT1y
+    stripePriceId: "price_1U2YJOHhWAEQqbxLlfNLfT1y"
     shippingProfile: postcards
     note: We are each other's sunshine.
     images:
@@ -84,7 +84,7 @@ variants:
   - label: African Elephant
     price: 3
     sku: GSC-POSTCARD-ELEPHANT
-    stripePriceId: price_1U2YJQHhWAEQqbxLgSCWIfc5
+    stripePriceId: "price_1U2YJQHhWAEQqbxLgSCWIfc5"
     shippingProfile: postcards
     note: We walk as one.
     images:
@@ -96,7 +96,7 @@ variants:
   - label: Mediterranean Sea Stars
     price: 3
     sku: GSC-POSTCARD-SEASTARS
-    stripePriceId: price_1U2YJSHhWAEQqbxLQcrN7chm
+    stripePriceId: "price_1U2YJSHhWAEQqbxLQcrN7chm"
     shippingProfile: postcards
     note: 'Stars, but softer.'
     images:
@@ -107,4 +107,8 @@ variants:
 gallery: *ref_0
 ---
 
-**Ten percent of everything you spend here goes to wildlife conservation.**
+[highlight]
+
+10% of everything you spend here goes to wildlife conservation.
+
+[/highlight]

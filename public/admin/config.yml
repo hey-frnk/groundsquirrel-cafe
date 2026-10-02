@@ -62,6 +62,14 @@ collections:
         required: false
       - { label: "Vorschaubild (für die Shop-Übersicht)", name: "image", widget: "image" }
       - { label: "Reihenfolge", name: "order", widget: "number", default: 1 }
+      - label: "Fotos statt Kunstwerk (Bilder randlos zuschneiden)"
+        name: "photographic"
+        widget: "boolean"
+        required: false
+        default: false
+      - { label: "SEO-Titel (Google, optional)", name: "seoTitle", widget: "string", required: false }
+      - { label: "SEO-Beschreibung (Google, optional)", name: "seoDescription", widget: "text", required: false }
+      - { label: "Suchbegriffe", name: "keywords", widget: "list", required: false }
       - label: "Auszeichnungen (kleine Etiketten)"
         name: "badges"
         widget: "list"
@@ -71,7 +79,17 @@ collections:
         name: "gallery"
         widget: "list"
         required: false
-        field: { label: "Bild", name: "image", widget: "image" }
+        fields:
+          - { label: "Bild", name: "image", widget: "image" }
+          - { label: "Bildbeschreibung (Alt-Text)", name: "alt", widget: "string", required: false }
+      - { label: "Titel der Bildstrecke", name: "storyTitle", widget: "string", required: false }
+      - label: "Bildstrecke (Karussell neben den Field notes)"
+        name: "story"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Bild", name: "image", widget: "image" }
+          - { label: "Bildbeschreibung (Alt-Text)", name: "alt", widget: "string", required: false }
       - label: "Details ('Field notes'-Kasten)"
         name: "specs"
         widget: "list"
@@ -83,6 +101,19 @@ collections:
         name: "shippingNote"
         widget: "text"
         required: false
+      - label: "Lieferländer und Warteliste anzeigen"
+        name: "showShipTo"
+        widget: "boolean"
+        required: false
+        default: false
+      - label: "Häufige Fragen"
+        name: "faq"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Frage", name: "q", widget: "string" }
+          - { label: "Antwort", name: "a", widget: "text" }
+      - { label: "Beschriftung des Dropdowns", name: "variantPrompt", widget: "string", required: false, hint: "Standard: Choose your design" }
       - label: "Auswahl-Achsen (mehrere Dropdowns statt einem)"
         name: "optionAxes"
         widget: "list"
@@ -97,10 +128,11 @@ collections:
         hint: "Jede Variante ist ein eigener Stripe-Artikel mit eigenem Preis und eigener Artikelnummer."
         fields:
           - { label: "Bezeichnung (im Dropdown)", name: "label", widget: "string" }
+          - { label: "Gruppe im Dropdown (z.B. Apple)", name: "group", widget: "string", required: false }
           - label: "Versandprofil"
             name: "shippingProfile"
             widget: "select"
-            options: ["stickers", "postcards", "print-a5", "print-a4", "print-a3"]
+            options: ["stickers", "postcards", "print-a5", "print-a4", "print-a3", "phone-case"]
             hint: "Bestimmt das Porto. Die Beträge stehen in content/shipping.json."
           - label: "Achsenwerte (nur bei mehreren Dropdowns)"
             name: "options"

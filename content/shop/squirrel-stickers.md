@@ -21,16 +21,16 @@ shippingNote: >-
   Printed and dispatched from the Netherlands, the UK or the USA, whichever
   sits closest to you, so your stickers take the short route.
 gallery:
-  - /images/shop/squirrel-stickers/sticker-set.webp
-  - /images/shop/squirrel-stickers/sticker-european-squirrel.webp
-  - /images/shop/squirrel-stickers/sticker-alpine-marmot.webp
-  - /images/shop/squirrel-stickers/sticker-california-ground-squirrel.webp
+  - image: /images/shop/squirrel-stickers/sticker-set.webp
+  - image: /images/shop/squirrel-stickers/sticker-european-squirrel.webp
+  - image: /images/shop/squirrel-stickers/sticker-alpine-marmot.webp
+  - image: /images/shop/squirrel-stickers/sticker-california-ground-squirrel.webp
 variants:
   - label: The full set - all six designs
     price: 12
     sku: GSC-STICKER-SET
     shippingProfile: stickers
-    stripePriceId: price_1U0hpKHhWAEQqbxLOUCBWg9p
+    stripePriceId: "price_1U0hpKHhWAEQqbxLOUCBWg9p"
     images:
       - /images/shop/squirrel-stickers/sticker-set.webp
       - /images/shop/squirrel-stickers/sticker-european-squirrel.webp
@@ -40,21 +40,21 @@ variants:
     price: 3
     sku: GSC-STICKER-EUS
     shippingProfile: stickers
-    stripePriceId: price_1U2YKYHhWAEQqbxLyHHgs9pp
+    stripePriceId: "price_1U2YKYHhWAEQqbxLyHHgs9pp"
     images:
       - /images/shop/squirrel-stickers/sticker-european-squirrel.webp
   - label: Eastern Gray Squirrel
     price: 3
     sku: GSC-STICKER-EGS
     shippingProfile: stickers
-    stripePriceId: price_1U2YKaHhWAEQqbxL2pLxSafV
+    stripePriceId: "price_1U2YKaHhWAEQqbxL2pLxSafV"
     images:
       - /images/shop/squirrel-stickers/sticker-eastern-grey-squirrel.webp
   - label: Golden-mantled Ground Squirrel
     price: 3
     sku: GSC-STICKER-GMGS
     shippingProfile: stickers
-    stripePriceId: price_1U2YKbHhWAEQqbxL5UBGzgLv
+    stripePriceId: "price_1U2YKbHhWAEQqbxL5UBGzgLv"
     images:
       - >-
         /images/shop/squirrel-stickers/sticker-golden-mantled-ground-squirrel.webp
@@ -62,23 +62,27 @@ variants:
     price: 3
     sku: GSC-STICKER-ATS
     shippingProfile: stickers
-    stripePriceId: price_1U2YKdHhWAEQqbxLKwh0U8ca
+    stripePriceId: "price_1U2YKdHhWAEQqbxLKwh0U8ca"
     images:
       - /images/shop/squirrel-stickers/sticker-african-tree-squirrel.webp
   - label: Alpine Marmot
     price: 3
     sku: GSC-STICKER-AM
     shippingProfile: stickers
-    stripePriceId: price_1U2YKfHhWAEQqbxLER4AyDjm
+    stripePriceId: "price_1U2YKfHhWAEQqbxLER4AyDjm"
     images:
       - /images/shop/squirrel-stickers/sticker-alpine-marmot.webp
   - label: California Ground Squirrel
     price: 3
     sku: GSC-STICKER-CGS
     shippingProfile: stickers
-    stripePriceId: price_1U2YKgHhWAEQqbxLz8CaVJvO
+    stripePriceId: "price_1U2YKgHhWAEQqbxLz8CaVJvO"
     images:
       - /images/shop/squirrel-stickers/sticker-california-ground-squirrel.webp
 ---
 
-**Ten percent of everything you spend here goes to wildlife conservation.**
+[highlight]
+
+10% of everything you spend here goes to wildlife conservation.
+
+[/highlight]

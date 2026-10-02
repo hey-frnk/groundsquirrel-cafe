@@ -36,6 +36,9 @@ jobs:
         # payment — see checkout-worker/README.md.
         env:
           NEXT_PUBLIC_CHECKOUT_URL: ${{ vars.NEXT_PUBLIC_CHECKOUT_URL }}
+          # Web3Forms access key for the shipping waitlist. Without it, the form
+          # falls back to opening a prefilled email.
+          NEXT_PUBLIC_WAITLIST_ACCESS_KEY: ${{ vars.NEXT_PUBLIC_WAITLIST_ACCESS_KEY }}
         run: npm run build
 
       - name: Upload artifact

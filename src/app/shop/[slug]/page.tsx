@@ -18,13 +18,24 @@ export async function generateMetadata({
   const { slug } = await params;
   const product = getAllShopProducts().find((p) => p.slug === slug);
   if (!product) return {};
+  const title = product.seoTitle ?? product.title;
+  const description = product.seoDescription ?? product.tagline;
   return {
-    title: product.title,
-    description: product.tagline,
+    title,
+    description,
+    keywords: product.keywords,
     alternates: { canonical: `/shop/${slug}/` },
     openGraph: {
-      title: product.title,
-      description: product.tagline,
+      type: "website",
+      title,
+      description,
+      url: `/shop/${slug}/`,
+      images: [{ url: product.image, alt: product.imageAlt?.[product.image] ?? product.title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
       images: [product.image],
     },
   };
@@ -51,10 +62,22 @@ export default async function ShopProductPage({
           "@type": "Product",
           "@id": `${SITE_URL}/shop/${slug}/#product`,
           name: product.title,
-          description: product.tagline,
-          image: [`${SITE_URL}${product.image}`],
+          description: product.seoDescription ?? product.tagline,
+          image: [product.image, ...(product.gallery ?? [])]
+            .filter((src, i, all) => all.indexOf(src) === i)
+            .map((src) => `${SITE_URL}${src}`),
           url: `${SITE_URL}/shop/${slug}/`,
           brand: { "@type": "Brand", name: "the ground squirrel studio" },
+          ...(product.keywords?.length ? { keywords: product.keywords.join(", ") } : {}),
+          ...(product.specs?.length
+            ? {
+                additionalProperty: product.specs.map((spec) => ({
+                  "@type": "PropertyValue",
+                  name: spec.label,
+                  value: spec.value,
+                })),
+              }
+            : {}),
           offers: {
             "@type": "AggregateOffer",
             offerCount: product.variants.length,
@@ -68,6 +91,34 @@ export default async function ShopProductPage({
           },
         }}
       />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Shop", item: `${SITE_URL}/shop/` },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: product.title,
+              item: `${SITE_URL}/shop/${slug}/`,
+            },
+          ],
+        }}
+      />
+      {product.faq && product.faq.length > 0 && (
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: product.faq.map((item) => ({
+              "@type": "Question",
+              name: item.q,
+              acceptedAnswer: { "@type": "Answer", text: item.a },
+            })),
+          }}
+        />
+      )}
 
       <Link href="/shop" className="link-arrow is-back">
         <span data-arrow aria-hidden>
