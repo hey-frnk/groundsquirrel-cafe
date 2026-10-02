@@ -2,7 +2,7 @@
   "_comment": [
     "Shipping rates per product profile and destination.",
     "",
-    "Every variant in content/shop/*.md names a shippingProfile. A basket may",
+    "Every variant in content/shop/*.md names a shippingProfile. A cart may",
     "mix profiles (stickers plus a print, say); the customer is then charged the",
     "HIGHEST applicable rate once, not the sum, because the order ships together.",
     "",

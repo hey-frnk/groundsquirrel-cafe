@@ -9,7 +9,7 @@
  * Two things are deliberately decided here rather than in the browser:
  *
  *   Price. The browser sends only Stripe Price IDs and quantities; Stripe looks
- *   up the amount from those IDs. A basket edited in devtools cannot set its
+ *   up the amount from those IDs. A cart edited in devtools cannot set its
  *   own price.
  *
  *   Shipping. The rate is computed from PRICE_PROFILES and SHIPPING_TABLE, both
@@ -70,7 +70,7 @@ export function rateFor(profile, country, europe) {
 }
 
 /**
- * Highest applicable rate across everything in the basket. An order ships as
+ * Highest applicable rate across everything in the cart. An order ships as
  * one parcel, so charging the sum would overcharge; charging the highest covers
  * the most expensive thing in it.
  *
@@ -117,7 +117,7 @@ export default {
     }
 
     const items = parseItems(payload?.items);
-    if (!items) return json({ error: "Invalid basket" }, 400, env);
+    if (!items) return json({ error: "Invalid cart" }, 400, env);
 
     const country = payload?.country;
     if (typeof country !== "string" || !/^[A-Z]{2}$/.test(country)) {
@@ -165,7 +165,7 @@ export default {
     form.set("shipping_address_collection[allowed_countries][0]", country);
 
     // Created inline rather than referenced by ID: the rate depends on both the
-    // destination and what is in the basket, which would otherwise mean
+    // destination and what is in the cart, which would otherwise mean
     // registering a rate in Stripe for every profile/country combination.
     const rate = "shipping_options[0][shipping_rate_data]";
     form.set(`${rate}[type]`, "fixed_amount");

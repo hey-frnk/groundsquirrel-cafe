@@ -76,6 +76,14 @@ export default function SiteFooter() {
             <ul className="mt-6 space-y-3">
               <li>
                 <Link
+                  href="/shipping-returns"
+                  className="text-sm text-cream/65 transition-colors hover:text-cream"
+                >
+                  Shipping &amp; Returns
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/impressum"
                   rel="nofollow"
                   className="text-sm text-cream/65 transition-colors hover:text-cream"

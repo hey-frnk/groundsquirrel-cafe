@@ -49,7 +49,7 @@ specs:
 shippingNote: >-
   Worldwide shipping. Due to the PPWR, shipping is currently only available to
   certain countries. Shipping costs are calculated based on your country and
-  the largest item in your basket.
+  the largest item in your cart.
 showShipTo: true
 gallery:
   - image: /images/shop/california-ground-squirrel-phone-case/squirrel-phone-case-standing-in-sand.webp

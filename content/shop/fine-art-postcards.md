@@ -15,10 +15,10 @@ specs:
   - label: Reverse
     value: 'Blank for writing, printed with the conservation note'
   - label: Made
-    value: 'To order, 3–5 days before dispatch'
+    value: 'To order, 3–5 days before shipping'
 shippingNote: >-
-  Worldwide shipping. The rate is worked out from your country and the largest
-  item in your basket.
+  Worldwide shipping. The rate is calculated from your country and the largest
+  item in your cart.
 variants:
   - label: The full set - all six cards
     price: 12

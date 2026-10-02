@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useCart } from "@/lib/cart";
 import {
   choicesFor,
@@ -11,6 +12,7 @@ import {
   type ShopProduct,
 } from "@/lib/shop";
 import { SHIP_TO_COUNTRIES } from "@/lib/countries";
+import PaymentMethods from "./PaymentMethods";
 import StoryCarousel from "./StoryCarousel";
 import Waitlist from "./Waitlist";
 
@@ -76,7 +78,7 @@ export default function ProductDetail({
     addLine({
       // Keyed on the SKU: with three option axes, six variants share the label
       // "Eurasian Red Squirrel", and keying on that would merge A3 English with
-      // A5 German into one basket line.
+      // A5 German into one cart line.
       id: variant.sku ?? `${product.slug}::${variantDescription}`,
       productSlug: product.slug,
       productTitle: product.title,
@@ -240,8 +242,19 @@ export default function ProductDetail({
             </p>
 
             <button type="button" onClick={addToCart} className="btn btn-primary mt-6 w-full">
-              {justAdded ? "Added to basket" : "Add to basket"}
+              {justAdded ? "Added to cart" : "Add to cart"}
             </button>
+
+            <PaymentMethods className="mt-4" />
+            <p className="mt-3 text-xs text-graphite/70">
+              14-day returns, free replacement if it arrives damaged.{" "}
+              <Link
+                href="/shipping-returns"
+                className="text-ink underline decoration-ink/25 underline-offset-4 transition-colors hover:text-rose"
+              >
+                Shipping &amp; returns
+              </Link>
+            </p>
 
             {product.shippingNote && (
               <p className="mt-6 text-xs leading-relaxed text-graphite/70">

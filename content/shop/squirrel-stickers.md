@@ -16,9 +16,9 @@ specs:
   - label: Durability
     value: Made for indoors, survives outdoors up to 18 months
   - label: Made
-    value: 'To order, 3–5 days before dispatch'
+    value: 'To order, 3–5 days before shipping'
 shippingNote: >-
-  Printed and dispatched from the Netherlands, the UK or the USA, whichever
+  Printed and shipped from the Netherlands, the UK or the USA, whichever
   sits closest to you, so your stickers take the short route.
 gallery:
   - image: /images/shop/squirrel-stickers/sticker-set.webp

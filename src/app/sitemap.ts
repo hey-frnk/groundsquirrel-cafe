@@ -27,6 +27,7 @@ const STATIC_ROUTES: { path: string; priority: number; changeFrequency: Metadata
   { path: "/shop/", priority: 0.9, changeFrequency: "weekly" },
   { path: "/journal/", priority: 0.8, changeFrequency: "weekly" },
   { path: "/crew/", priority: 0.6, changeFrequency: "yearly" },
+  { path: "/shipping-returns/", priority: 0.3, changeFrequency: "yearly" },
 ];
 
 // `output: export` has no server to answer a request, so this metadata route

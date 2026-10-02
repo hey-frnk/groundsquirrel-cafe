@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useCart } from "@/lib/cart";
 
 /**
- * Stripe sends the customer back here after paying. The basket lives in
+ * Stripe sends the customer back here after paying. The cart lives in
  * localStorage, so without this the paid-for items would still be sitting in it.
  */
 export default function ClearCartOnMount() {

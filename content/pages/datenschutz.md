@@ -18,7 +18,7 @@ The Ground Squirrel Café is a static website: there is no user login, no databa
 
 We do count page views, using a privacy-friendly analytics service that works without cookies and without personal data - see "Visitor statistics" below.
 
-The one thing this site stores in your browser is your shopping basket, and only once you put something in it. See "Shop and payments" below.
+The one thing this site stores in your browser is your shopping cart, and only once you put something in it. See "Shop and payments" below.
 
 ## Hosting
 
@@ -46,9 +46,9 @@ If you write to us - for example via the "Get in touch" / "Say hello" links on t
 
 ## Shop and payments
 
-**Your basket.** When you add something to your basket, that selection is saved in your own browser using local storage - not a cookie. It holds only product identifiers and quantities, no personal data. It stays on your device, is never sent to us while you browse, and you can clear it at any time by emptying your basket or clearing your browser's site data.
+**Your cart.** When you add something to your cart, that selection is saved in your own browser using local storage - not a cookie. It holds only product identifiers and quantities, no personal data. It stays on your device, is never sent to us while you browse, and you can clear it at any time by emptying your cart or clearing your browser's site data.
 
-**Starting checkout.** When you press "Checkout", your basket contents and the delivery country you picked are sent to a small function we operate on **Cloudflare Workers** (Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA). Its only job is to create the payment session. Like any web server, Cloudflare handles technical data such as your IP address in the process. See [Cloudflare's Privacy Policy](https://www.cloudflare.com/privacypolicy/).
+**Starting checkout.** When you press "Checkout", your cart contents and the delivery country you picked are sent to a small function we operate on **Cloudflare Workers** (Cloudflare, Inc., 101 Townsend Street, San Francisco, CA 94107, USA). Its only job is to create the payment session. Like any web server, Cloudflare handles technical data such as your IP address in the process. See [Cloudflare's Privacy Policy](https://www.cloudflare.com/privacypolicy/).
 
 **Paying.** You are then taken to a checkout page hosted by **Stripe** (Stripe Payments Europe Ltd., Dublin, Ireland, and Stripe, Inc., USA). The email address, name, delivery address and payment details you enter there are collected and processed by Stripe. **We never see or store your card details.** We do receive what we need to fulfil the order: your name, email address, delivery address, and what you bought. See [Stripe's Privacy Policy](https://stripe.com/privacy).
 
