@@ -120,211 +120,253 @@ variants:
     group: Apple
     price: 26
     sku: GSC-CASE-CGS-IP11
+    stripePriceId: "price_1UM7aBHhWAEQqbxLrsw2qO63"
     shippingProfile: phone-case
   - label: 'iPhone 11 Pro'
     group: Apple
     price: 26
     sku: GSC-CASE-CGS-IP11P
+    stripePriceId: "price_1UM7aCHhWAEQqbxLCHEqZO52"
     shippingProfile: phone-case
   - label: 'iPhone 11 Pro Max'
     group: Apple
     price: 26
     sku: GSC-CASE-CGS-IP11PM
+    stripePriceId: "price_1UM7aDHhWAEQqbxLFYOSQ2dS"
     shippingProfile: phone-case
   - label: 'iPhone 12 Mini'
     group: Apple
     price: 26
     sku: GSC-CASE-CGS-IP12MINI
+    stripePriceId: "price_1UM7aEHhWAEQqbxLNzuB0smj"
     shippingProfile: phone-case
   - label: 'iPhone 12 Pro'
     group: Apple
     price: 26
     sku: GSC-CASE-CGS-IP12P
+    stripePriceId: "price_1UM7aFHhWAEQqbxLyJarF6wk"
     shippingProfile: phone-case
   - label: 'iPhone 12 Pro Max'
     group: Apple
     price: 26
     sku: GSC-CASE-CGS-IP12PM
+    stripePriceId: "price_1UM7aGHhWAEQqbxLVaUP8qKR"
     shippingProfile: phone-case
   - label: 'iPhone SE (2020)'
     group: Apple
     price: 26
     sku: GSC-CASE-CGS-IPSE2020
+    stripePriceId: "price_1UM7aHHhWAEQqbxLQc3oekbI"
     shippingProfile: phone-case
   - label: 'iPhone 13'
     group: Apple
     price: 26
     sku: GSC-CASE-CGS-IP13
+    stripePriceId: "price_1UM7aIHhWAEQqbxLXVSSkCQe"
     shippingProfile: phone-case
   - label: 'iPhone 13 Mini'
     group: Apple
     price: 26
     sku: GSC-CASE-CGS-IP13MINI
+    stripePriceId: "price_1UM7aKHhWAEQqbxLU4bExgtw"
     shippingProfile: phone-case
   - label: 'iPhone 13 Pro'
     group: Apple
     price: 26
     sku: GSC-CASE-CGS-IP13P
+    stripePriceId: "price_1UM7aLHhWAEQqbxLhV6XreWR"
     shippingProfile: phone-case
   - label: 'iPhone 13 Pro Max'
     group: Apple
     price: 26
     sku: GSC-CASE-CGS-IP13PM
+    stripePriceId: "price_1UM7aMHhWAEQqbxLZZGgHc0y"
     shippingProfile: phone-case
   - label: 'iPhone 14'
     group: Apple
     price: 26
     sku: GSC-CASE-CGS-IP14
+    stripePriceId: "price_1UM7aNHhWAEQqbxLQhvdVFeL"
     shippingProfile: phone-case
   - label: 'iPhone 14 Plus'
     group: Apple
     price: 26
     sku: GSC-CASE-CGS-IP14PLUS
+    stripePriceId: "price_1UM7aOHhWAEQqbxLicYh8Krq"
     shippingProfile: phone-case
   - label: 'iPhone 14 Pro'
     group: Apple
     price: 26
     sku: GSC-CASE-CGS-IP14P
+    stripePriceId: "price_1UM7aPHhWAEQqbxLCHT7Khwg"
     shippingProfile: phone-case
   - label: 'iPhone 14 Pro Max'
     group: Apple
     price: 26
     sku: GSC-CASE-CGS-IP14PM
+    stripePriceId: "price_1UM7aQHhWAEQqbxLZ6e7cCrw"
     shippingProfile: phone-case
   - label: 'iPhone 15'
     group: Apple
     price: 26
     sku: GSC-CASE-CGS-IP15
+    stripePriceId: "price_1UM7aSHhWAEQqbxLTSueqtqp"
     shippingProfile: phone-case
   - label: 'iPhone 15 Plus'
     group: Apple
     price: 26
     sku: GSC-CASE-CGS-IP15PLUS
+    stripePriceId: "price_1UM7aTHhWAEQqbxLUodOXwJE"
     shippingProfile: phone-case
   - label: 'iPhone 15 Pro'
     group: Apple
     price: 26
     sku: GSC-CASE-CGS-IP15P
+    stripePriceId: "price_1UM7aUHhWAEQqbxLtivYXkMv"
     shippingProfile: phone-case
   - label: 'iPhone 15 Pro Max'
     group: Apple
     price: 26
     sku: GSC-CASE-CGS-IP15PM
+    stripePriceId: "price_1UM7aVHhWAEQqbxL2MdFAGEa"
     shippingProfile: phone-case
   - label: 'iPhone 16'
     group: Apple
     price: 26
     sku: GSC-CASE-CGS-IP16
+    stripePriceId: "price_1UM7aWHhWAEQqbxLLKWhOzbH"
     shippingProfile: phone-case
   - label: 'iPhone 16 Pro'
     group: Apple
     price: 26
     sku: GSC-CASE-CGS-IP16P
+    stripePriceId: "price_1UM7aXHhWAEQqbxLrCrmfYuT"
     shippingProfile: phone-case
   - label: 'iPhone 16 Pro Max'
     group: Apple
     price: 26
     sku: GSC-CASE-CGS-IP16PM
+    stripePriceId: "price_1UM7aYHhWAEQqbxLIpcfaEZk"
     shippingProfile: phone-case
   - label: 'iPhone 17'
     group: Apple
     price: 26
     sku: GSC-CASE-CGS-IP17
+    stripePriceId: "price_1UM7aZHhWAEQqbxLtAfl6rRK"
     shippingProfile: phone-case
   - label: 'iPhone 17 Air'
     group: Apple
     price: 26
     sku: GSC-CASE-CGS-IP17AIR
+    stripePriceId: "price_1UM7aaHhWAEQqbxLottFAWwW"
     shippingProfile: phone-case
   - label: 'iPhone 17 Pro'
     group: Apple
     price: 26
     sku: GSC-CASE-CGS-IP17P
+    stripePriceId: "price_1UM7acHhWAEQqbxLu9ShRLQV"
     shippingProfile: phone-case
   - label: 'iPhone 17 Pro Max'
     group: Apple
     price: 26
     sku: GSC-CASE-CGS-IP17PM
+    stripePriceId: "price_1UM7adHhWAEQqbxL4r4sCcvH"
     shippingProfile: phone-case
   - label: 'iPhone 18 Pro'
     group: Apple
     price: 26
     sku: GSC-CASE-CGS-IP18P
+    stripePriceId: "price_1UM7aeHhWAEQqbxL7mwLJM0a"
     shippingProfile: phone-case
   - label: 'iPhone 18 Pro Max'
     group: Apple
     price: 26
     sku: GSC-CASE-CGS-IP18PM
+    stripePriceId: "price_1UM7afHhWAEQqbxLiMsy401T"
     shippingProfile: phone-case
   - label: 'Galaxy S20'
     group: Samsung
     price: 26
     sku: GSC-CASE-CGS-GSS20
+    stripePriceId: "price_1UM7agHhWAEQqbxLAOhOjCkB"
     shippingProfile: phone-case
   - label: 'Galaxy S20 Plus'
     group: Samsung
     price: 26
     sku: GSC-CASE-CGS-GSS20PLUS
+    stripePriceId: "price_1UM7aiHhWAEQqbxLFQ40rI5M"
     shippingProfile: phone-case
   - label: 'Galaxy S20 Ultra'
     group: Samsung
     price: 26
     sku: GSC-CASE-CGS-GSS20U
+    stripePriceId: "price_1UM7ajHhWAEQqbxLvL1mrwm9"
     shippingProfile: phone-case
   - label: 'Galaxy S21 Plus'
     group: Samsung
     price: 26
     sku: GSC-CASE-CGS-GSS21PLUS
+    stripePriceId: "price_1UM7akHhWAEQqbxLi9Favpue"
     shippingProfile: phone-case
   - label: 'Galaxy S22 Plus'
     group: Samsung
     price: 26
     sku: GSC-CASE-CGS-GSS22PLUS
+    stripePriceId: "price_1UM7alHhWAEQqbxLJPLsCal4"
     shippingProfile: phone-case
   - label: 'Galaxy S22 Ultra'
     group: Samsung
     price: 26
     sku: GSC-CASE-CGS-GSS22U
+    stripePriceId: "price_1UM7amHhWAEQqbxL7qVUCj3j"
     shippingProfile: phone-case
   - label: 'Galaxy S23'
     group: Samsung
     price: 26
     sku: GSC-CASE-CGS-GSS23
+    stripePriceId: "price_1UM7anHhWAEQqbxLZgmPmUVA"
     shippingProfile: phone-case
   - label: 'Galaxy S23 Plus'
     group: Samsung
     price: 26
     sku: GSC-CASE-CGS-GSS23PLUS
+    stripePriceId: "price_1UM7aoHhWAEQqbxL7A3QVap5"
     shippingProfile: phone-case
   - label: 'Galaxy S24'
     group: Samsung
     price: 26
     sku: GSC-CASE-CGS-GSS24
+    stripePriceId: "price_1UM7apHhWAEQqbxLLQKqsLZ9"
     shippingProfile: phone-case
   - label: 'Galaxy S24 Plus'
     group: Samsung
     price: 26
     sku: GSC-CASE-CGS-GSS24PLUS
+    stripePriceId: "price_1UM7arHhWAEQqbxLhRAXDP2H"
     shippingProfile: phone-case
   - label: 'Galaxy S24 Ultra'
     group: Samsung
     price: 26
     sku: GSC-CASE-CGS-GSS24U
+    stripePriceId: "price_1UM7asHhWAEQqbxLNsNkhFg4"
     shippingProfile: phone-case
   - label: 'Galaxy S25'
     group: Samsung
     price: 26
     sku: GSC-CASE-CGS-GSS25
+    stripePriceId: "price_1UM7atHhWAEQqbxLIQemxs8k"
     shippingProfile: phone-case
   - label: 'Galaxy S25 Plus'
     group: Samsung
     price: 26
     sku: GSC-CASE-CGS-GSS25PLUS
+    stripePriceId: "price_1UM7auHhWAEQqbxL9CIZ0RjV"
     shippingProfile: phone-case
   - label: 'Galaxy S25 Ultra'
     group: Samsung
     price: 26
     sku: GSC-CASE-CGS-GSS25U
+    stripePriceId: "price_1UM7avHhWAEQqbxLoykEi69k"
     shippingProfile: phone-case
 ---
 

@@ -144,7 +144,8 @@ async function ensurePrice({ productId, sku, amountMinor }) {
  */
 function patchPriceId(source, sku, priceId) {
   const quoted = sku.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const skuLine = new RegExp(`^([ \\t]*)sku:\\s*["']${quoted}["']\\s*$`, "m");
+  // The CMS rewrites the front matter without quotes, so they are optional.
+  const skuLine = new RegExp(`^([ \\t]*)sku:[ \\t]*(["']?)${quoted}\\2[ \\t]*$`, "m");
   const match = skuLine.exec(source);
   if (!match) return null;
 
@@ -159,9 +160,10 @@ function patchPriceId(source, sku, priceId) {
 
   const block = source.slice(blockStart, blockEnd);
   const priceLine = /^([ \t]*)stripePriceId:[ \t]*(["'][^"']*["']|\S*)[ \t]*$/m;
-  if (!priceLine.test(block)) return null;
-
-  const patched = block.replace(priceLine, `$1stripePriceId: "${priceId}"`);
+  // A variant entered without the field gets it right under its SKU.
+  const patched = priceLine.test(block)
+    ? block.replace(priceLine, `$1stripePriceId: "${priceId}"`)
+    : block.replace(match[0], `${match[0]}\n${indent}stripePriceId: "${priceId}"`);
   return source.slice(0, blockStart) + patched + source.slice(blockEnd);
 }
 
@@ -205,9 +207,41 @@ for (const file of files) {
     const images = (variant.images ?? []).slice(0, 8).map((src) => `${SITE}${src}`);
 
     if (DRY_RUN) {
-      console.log(
-        `    · ${variant.label} — CHF ${amount.toFixed(2)} (${sku}) would be created`
-      );
+      // Read-only lookup, so the dry run shows what a real run would reuse
+      // rather than claiming everything is new.
+      try {
+        const { data: found } = await stripe(
+          "GET",
+          `/prices?lookup_keys[0]=${encodeURIComponent(sku)}&active=true&limit=1`
+        );
+        const existing = found[0];
+        let action = "created";
+        if (existing) {
+          action =
+            existing.unit_amount === amountMinor && existing.currency === CURRENCY
+              ? "reused"
+              : "repriced";
+        }
+        if (action === "created") created++;
+        else if (action === "reused") reused++;
+        else repriced++;
+
+        const marks = { created: "+", reused: "=", repriced: "~" };
+        const verbs = { created: "would be created", reused: "unchanged", repriced: "would be repriced" };
+        console.log(
+          `    ${marks[action]} ${variant.label} — CHF ${amount.toFixed(2)} (${sku}) ${verbs[action]}` +
+            (existing ? `  ${existing.id}` : "")
+        );
+        // The file should name the live price Stripe holds for this SKU.
+        if (action === "reused" && variant.stripePriceId && variant.stripePriceId !== existing.id) {
+          failures.push(
+            `${file}: ${sku} names ${variant.stripePriceId}, Stripe has ${existing.id}`
+          );
+        }
+      } catch (e) {
+        failures.push(`${file}: ${variant.label} — ${e.message}`);
+        console.log(`    ✗ ${variant.label} — ${e.message}`);
+      }
       continue;
     }
 
@@ -249,7 +283,7 @@ for (const file of files) {
 }
 
 console.log(
-  `  ${created} created, ${reused} unchanged, ${repriced} repriced` +
+  `  ${DRY_RUN ? "Would be: " : ""}${created} created, ${reused} unchanged, ${repriced} repriced` +
     (WRITE_BACK && !DRY_RUN ? ", price IDs written to content/shop" : "")
 );
 
