@@ -4,8 +4,9 @@ import JsonLd from "@/components/JsonLd";
 import { getAllShopProducts, getShopProduct } from "@/lib/content";
 import ProductDetail from "@/components/shop/ProductDetail";
 import ReviewsSection from "@/components/shop/Reviews";
-import { CURRENCY, averageRating, validReviews } from "@/lib/shop";
-import { SITE_URL, contactEmail, googleLinks, organization } from "@/lib/seo";
+import { validReviews } from "@/lib/shop";
+import { productSchema } from "@/lib/productSchema";
+import { SITE_URL, contactEmail, googleLinks } from "@/lib/seo";
 
 export function generateStaticParams() {
   return getAllShopProducts().map((product) => ({ slug: product.slug }));
@@ -52,73 +53,14 @@ export default async function ShopProductPage({
 
   const product = await getShopProduct(slug);
   const reviews = validReviews(product);
-  const average = averageRating(reviews);
   const google = googleLinks();
 
   return (
     <div className="mx-auto max-w-7xl px-6 pt-12 pb-4 sm:px-10 sm:pt-16">
-      {/* Every field below is read off the same content file the page renders,
-          so the rich result and the page can never drift apart. Prints are made
-          to order, which is why availability is unconditional. */}
-      <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "Product",
-          "@id": `${SITE_URL}/shop/${slug}/#product`,
-          name: product.title,
-          description: product.seoDescription ?? product.tagline,
-          image: [product.image, ...(product.gallery ?? [])]
-            .filter((src, i, all) => all.indexOf(src) === i)
-            .map((src) => `${SITE_URL}${src}`),
-          url: `${SITE_URL}/shop/${slug}/`,
-          brand: { "@type": "Brand", name: "the ground squirrel studio" },
-          ...(product.keywords?.length ? { keywords: product.keywords.join(", ") } : {}),
-          ...(product.specs?.length
-            ? {
-                additionalProperty: product.specs.map((spec) => ({
-                  "@type": "PropertyValue",
-                  name: spec.label,
-                  value: spec.value,
-                })),
-              }
-            : {}),
-          offers: {
-            "@type": "AggregateOffer",
-            offerCount: product.variants.length,
-            lowPrice: Math.min(...product.variants.map((v) => v.price)),
-            highPrice: Math.max(...product.variants.map((v) => v.price)),
-            priceCurrency: CURRENCY,
-            availability: "https://schema.org/InStock",
-            itemCondition: "https://schema.org/NewCondition",
-            url: `${SITE_URL}/shop/${slug}/`,
-            seller: organization(),
-          },
-          // Only reviews that are shown on this page, as Google requires.
-          ...(average !== undefined
-            ? {
-                aggregateRating: {
-                  "@type": "AggregateRating",
-                  ratingValue: average,
-                  reviewCount: reviews.length,
-                  bestRating: 5,
-                  worstRating: 1,
-                },
-                review: reviews.map((r) => ({
-                  "@type": "Review",
-                  author: { "@type": "Person", name: r.name },
-                  datePublished: r.date,
-                  reviewBody: r.text,
-                  reviewRating: {
-                    "@type": "Rating",
-                    ratingValue: r.rating,
-                    bestRating: 5,
-                    worstRating: 1,
-                  },
-                })),
-              }
-            : {}),
-        }}
-      />
+      {/* Read off the same content files the page renders and checkout charges
+          from, so the rich result, the page and the price can never drift
+          apart. See lib/productSchema.ts. */}
+      <JsonLd data={productSchema(product)} />
       <JsonLd
         data={{
           "@context": "https://schema.org",
