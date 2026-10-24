@@ -67,7 +67,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "The Ground Squirrel Café",
-    locale: "en_GB",
+    locale: "en_US",
     url: SITE_URL,
     title: "The Ground Squirrel Café",
     description: DESCRIPTION,

@@ -9,10 +9,12 @@ import {
   formatPrice,
   imagesFor,
   variantFor,
+  validReviews,
   type ShopProduct,
 } from "@/lib/shop";
 import { SHIP_TO_COUNTRIES } from "@/lib/countries";
 import PaymentMethods from "./PaymentMethods";
+import { RatingSummary } from "./Reviews";
 import StoryCarousel from "./StoryCarousel";
 import Waitlist from "./Waitlist";
 
@@ -155,6 +157,9 @@ export default function ProductDetail({
         <div>
           <p className="eyebrow">The Ground Squirrel Shop</p>
           <h1 className="mt-4 text-3xl leading-[1.1] sm:text-4xl">{product.title}</h1>
+          <div className="mt-3 empty:hidden">
+            <RatingSummary reviews={validReviews(product)} />
+          </div>
           {product.tagline && (
             <p className="mt-4 leading-relaxed text-graphite">{product.tagline}</p>
           )}

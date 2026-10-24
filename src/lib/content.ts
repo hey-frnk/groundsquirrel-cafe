@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
 import { imageSize, type ImageDimensions } from "./imageSize";
-import type { ShopProduct, ShopVariant } from "./shop";
+import type { ShopProduct, ShopReview, ShopVariant } from "./shop";
 
 export type { ShopProduct, ShopVariant } from "./shop";
 
@@ -762,6 +762,21 @@ function collectAlts(...lists: unknown[]): Record<string, string> {
   return alts;
 }
 
+/**
+ * YAML reads an unquoted 2026-10-24 as a Date, the CMS writes it unquoted, and
+ * a Date cannot cross into the client components. Everything leaves here as a
+ * plain YYYY-MM-DD string and a numeric rating.
+ */
+function normalizeReviews(reviews: unknown): ShopReview[] {
+  if (!Array.isArray(reviews)) return [];
+  return reviews
+    .filter(Boolean)
+    .map((r) => {
+      const date = r.date instanceof Date ? r.date.toISOString().slice(0, 10) : String(r.date ?? "");
+      return { ...r, date, rating: Number(r.rating) } as ShopReview;
+    });
+}
+
 function readShopProduct(filename: string) {
   const { slug, data, content } = readEntry<ShopProduct>("shop", filename);
   return {
@@ -772,6 +787,7 @@ function readShopProduct(filename: string) {
     story: normalizePhotos(data.story),
     imageAlt: collectAlts(data.gallery, data.story),
     variants: normalizeVariants(data.variants),
+    reviews: normalizeReviews(data.reviews),
   };
 }
 

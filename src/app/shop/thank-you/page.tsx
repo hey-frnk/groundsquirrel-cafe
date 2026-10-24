@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ClearCartOnMount from "@/components/shop/ClearCartOnMount";
+import { googleLinks } from "@/lib/seo";
 
 export const metadata = {
   title: "Thank you",
@@ -7,6 +8,8 @@ export const metadata = {
 };
 
 export default function ThankYouPage() {
+  const google = googleLinks();
+
   return (
     <div className="mx-auto max-w-xl px-6 py-28 text-center">
       <ClearCartOnMount />
@@ -23,6 +26,20 @@ export default function ThankYouPage() {
         Ten percent of what you just spent goes to wildlife conservation. Thank you
         for that too.
       </p>
+      {google.reviewUrl && (
+        <p className="mt-4 leading-relaxed text-graphite">
+          Once it has arrived, we would love to hear how you like it. A short{" "}
+          <a
+            href={google.reviewUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-underline text-ink"
+          >
+            review on Google
+          </a>{" "}
+          helps a small studio more than you might think.
+        </p>
+      )}
 
       <div className="mt-12 flex flex-col justify-center gap-3 sm:flex-row">
         <Link href="/shop" className="btn btn-primary">
