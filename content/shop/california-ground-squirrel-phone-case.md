@@ -19,6 +19,7 @@ keywords:
   - animal phone case
 image: /images/shop/california-ground-squirrel-phone-case/squirrel-phone-case-driftwood.webp
 order: 0
+googleCategory: 'Electronics > Communications > Telephony > Mobile Phone Accessories > Mobile Phone Cases'
 photographic: true
 badges:
   - 10% funds wildlife conservation
