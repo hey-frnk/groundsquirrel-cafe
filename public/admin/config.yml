@@ -323,6 +323,13 @@ collections:
         fields:
           - { label: "Beschriftung", name: "label", widget: "string", hint: "z.B. Hier geht's zum Buch" }
           - { label: "Link", name: "url", widget: "string", hint: "Ganze Adresse, oder «/shop» für den eigenen Shop" }
+      - label: "Fotos (kleine Bilder unter dem Titelbild)"
+        name: "photos"
+        widget: "list"
+        required: false
+        hint: "Fotos vom fertigen Buch oder Werk. Erscheinen als kleine Bilder unter dem Titelbild und werden beim Anklicken gross gezeigt."
+        fields:
+          - { label: "Bild", name: "image", widget: "image" }
       - label: "Bilderreihe (Illustrationen & Erarbeitungen)"
         name: "gallery"
         widget: "list"

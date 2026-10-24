@@ -971,6 +971,8 @@ export interface StudioProject extends StudioItem {
    */
   hideCredit?: boolean;
   links: StudioProjectLink[];
+  /** Photos of the finished piece, in a carousel under the cover. */
+  photos: StudioProjectPlate[];
   gallery: StudioProjectPlate[];
   /** Stands in while the illustration series for a project is still coming. */
   galleryNote?: string;
@@ -1016,6 +1018,7 @@ function readStudioProject(filename: string): StudioProject {
     ...data,
     slug,
     links: normalizeProjectLinks(data.links),
+    photos: normalizeProjectGallery(data.photos),
     gallery: normalizeProjectGallery(data.gallery),
     highlights: normalizeProjectHighlights(data.highlights),
     details: normalizeProjectDetails(data.details),

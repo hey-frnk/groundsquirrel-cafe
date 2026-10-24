@@ -2,7 +2,7 @@
 title: "Wenn der Himmel Weihnachten berührt"
 subtitle: "Geschichten über kleine Wunder im Alltag"
 kind: "Buch"
-image: "/images/studio/projects/christmas/cover.webp"
+image: "/images/studio/projects/christmas/cover-book-on-knit-scarf.webp"
 order: 1
 status: "Veröffentlichung: September 2026"
 teaser: "Ein besonderes Weihnachtsbuch mit 10 Geschichten über kleine Wunder im Weihnachtsalltag. Kreiert in Zusammenarbeit mit Tiziana Hartmann."
@@ -31,6 +31,10 @@ details:
     value: "978-3-7462-7012-8"
   - label: "Bestellnummer"
     value: "1070128"
+photos:
+  - image: "/images/studio/projects/christmas/photo-the-clockmaker-spread.webp"
+  - image: "/images/studio/projects/christmas/photo-reading-in-the-mist.webp"
+  - image: "/images/studio/projects/christmas/photo-at-the-mountain-hut.webp"
 gallery:
   - image: "/images/studio/projects/christmas/angel-workshop.webp"
     caption: "Eine Werkstatt voller Engel"

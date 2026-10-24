@@ -142,6 +142,57 @@ function Lightbox({
   );
 }
 
+/**
+ * One large plate with the rest as small thumbnails underneath, like a product
+ * page in the shop: a thumbnail swaps the large plate, and the large plate opens
+ * into the full view.
+ */
+function Showcase({ plates, onOpen }: { plates: ArtPlate[]; onOpen: (i: number) => void }) {
+  const [active, setActive] = useState(0);
+  const plate = plates[active];
+
+  return (
+    <div className="mx-auto max-w-md">
+      <button
+        type="button"
+        onClick={() => onOpen(active)}
+        aria-label={plate.caption ? `Open ${plate.caption}` : "Open photo"}
+        className="group block w-full cursor-zoom-in focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-rose"
+      >
+        <span className="art-frame block overflow-hidden p-2">
+          <Plate
+            key={plate.image}
+            plate={plate}
+            priority
+            className="animate-plate-in block aspect-[3/4] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+          />
+        </span>
+      </button>
+
+      {plates.length > 1 && (
+        <div className="mt-4 flex flex-wrap justify-center gap-2.5">
+          {plates.map((p, i) => (
+            <button
+              key={`${p.image}-${i}`}
+              type="button"
+              onClick={() => setActive(i)}
+              aria-label={`View photo ${i + 1}`}
+              aria-current={i === active}
+              className={`h-16 w-16 overflow-hidden rounded-lg bg-ivory/25 transition-all sm:h-20 sm:w-20 ${
+                i === active
+                  ? "outline outline-1 outline-offset-[3px] outline-rose"
+                  : "opacity-65 outline outline-1 outline-ink/10 hover:opacity-100"
+              }`}
+            >
+              <Plate plate={{ image: p.image }} className="h-full w-full object-cover" />
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function ArtGallery({
   plates,
   layout = "masonry",
@@ -149,9 +200,10 @@ export default function ArtGallery({
   plates: ArtPlate[];
   /**
    * `masonry` keeps every painting at its own height, `grid` evens them out,
-   * and `single` centers one plate — a book cover on its own page.
+   * `single` centers one plate — a book cover on its own page — and
+   * `showcase` sets one large with the rest as thumbnails to pick from.
    */
-  layout?: "masonry" | "grid" | "single";
+  layout?: "masonry" | "grid" | "single" | "showcase";
 }) {
   const [open, setOpen] = useState<number | null>(null);
   const close = useCallback(() => setOpen(null), []);
@@ -161,6 +213,19 @@ export default function ArtGallery({
 
   const frame =
     "group block w-full cursor-zoom-in text-left focus:outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-rose";
+
+  const lightbox = open !== null && (
+    <Lightbox plates={plates} index={open} onClose={close} onMove={move} />
+  );
+
+  if (layout === "showcase") {
+    return (
+      <>
+        <Showcase plates={plates} onOpen={setOpen} />
+        {lightbox}
+      </>
+    );
+  }
 
   return (
     <>
@@ -199,9 +264,7 @@ export default function ArtGallery({
         ))}
       </div>
 
-      {open !== null && (
-        <Lightbox plates={plates} index={open} onClose={close} onMove={move} />
-      )}
+      {lightbox}
     </>
   );
 }
