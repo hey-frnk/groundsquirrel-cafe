@@ -5,6 +5,6 @@ contactEmail: "hello@thegroundsquirrel.cafe"
 instagramUrl: "https://instagram.com/groundsquirrelcafe"
 youtubeUrl: "https://www.youtube.com/@weltenhummler"
 tiktokUrl: "https://www.tiktok.com/@groundsquirrelcafe"
-googleReviewUrl: "PLATZHALTER"
-googleProfileUrl: "PLATZHALTER"
+googleReviewUrl: "https://g.page/r/CVJGXvetewD5ECE/review"
+googleProfileUrl: "https://g.page/r/CVJGXvetewD5ECE"
 ---
