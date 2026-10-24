@@ -260,6 +260,9 @@ export default function ProductDetail({
             <p className="mt-8 font-display text-4xl text-ink">
               {variant ? formatPrice(variant.price) : ""}
             </p>
+            <p className="mt-2 text-xs text-graphite/70">
+              Prices in Swiss francs. At checkout you can pay in your own currency.
+            </p>
 
             <button type="button" onClick={addToCart} className="btn btn-primary mt-6 w-full">
               {justAdded ? "Added to cart" : "Add to cart"}
