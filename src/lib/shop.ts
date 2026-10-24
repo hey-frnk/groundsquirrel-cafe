@@ -85,6 +85,8 @@ export interface ShopProduct {
   reviews?: ShopReview[];
   seoTitle?: string;
   seoDescription?: string;
+  /** Google product taxonomy path, for the Merchant Center feed. */
+  googleCategory?: string;
   keywords?: string[];
 }
 

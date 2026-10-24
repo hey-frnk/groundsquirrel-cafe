@@ -69,6 +69,7 @@ collections:
         default: false
       - { label: "SEO-Titel (Google, optional)", name: "seoTitle", widget: "string", required: false }
       - { label: "SEO-Beschreibung (Google, optional)", name: "seoDescription", widget: "text", required: false }
+      - { label: "Google-Shopping-Kategorie (optional)", name: "googleCategory", widget: "string", required: false, hint: "Pfad aus Googles Produkt-Taxonomie, z.B. Home & Garden > Decor > Artwork > Posters, Prints, & Visual Artwork. Leer lassen = Google ordnet selbst zu." }
       - { label: "Suchbegriffe", name: "keywords", widget: "list", required: false }
       - label: "Auszeichnungen (kleine Etiketten)"
         name: "badges"

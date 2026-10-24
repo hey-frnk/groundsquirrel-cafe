@@ -3,6 +3,7 @@ title: Squirrel Field Guide - Wallpaper Art Prints
 tagline: 'Five hand-painted field-guide plates, in three sizes and two languages.'
 image: /images/shop/squirrel-posters/poster-set.webp
 order: 1
+googleCategory: 'Home & Garden > Decor > Artwork > Posters, Prints, & Visual Artwork'
 badges:
   - 10% funds wildlife conservation
   - English or German
