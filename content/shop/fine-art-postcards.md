@@ -105,6 +105,7 @@ variants:
       - /images/shop/wildlife-postcards/seastars-pair.webp
       - /images/shop/wildlife-postcards/seastars-back.webp
 gallery: *ref_0
+artistNote: 'PLATZHALTER: Ein, zwei Sätze, wie dieses Stück entstanden ist (womit gemalt, wo unterwegs, welches Tier als Vorbild). Wird erst angezeigt, wenn dieser Text ersetzt ist.'
 ---
 
 [highlight]

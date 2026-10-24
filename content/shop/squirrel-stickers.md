@@ -80,6 +80,7 @@ variants:
     stripePriceId: "price_1U2YKgHhWAEQqbxLz8CaVJvO"
     images:
       - /images/shop/squirrel-stickers/sticker-california-ground-squirrel.webp
+artistNote: 'PLATZHALTER: Ein, zwei Sätze, wie dieses Stück entstanden ist (womit gemalt, wo unterwegs, welches Tier als Vorbild). Wird erst angezeigt, wenn dieser Text ersetzt ist.'
 ---
 
 [highlight]

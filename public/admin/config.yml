@@ -107,6 +107,11 @@ collections:
         widget: "boolean"
         required: false
         default: false
+      - label: "Notiz der Künstlerin zu diesem Stück (optional)"
+        name: "artistNote"
+        widget: "text"
+        required: false
+        hint: "Ein, zwei Sätze, wie dieses Stück entstanden ist. Erscheint im Kasten «Meet the artist» unter der allgemeinen Vorstellung (die steht unter Seiten > Shop: Meet the artist). Leer lassen oder PLATZHALTER stehen lassen = keine Notiz."
       - label: "Häufige Fragen"
         name: "faq"
         widget: "list"
@@ -481,6 +486,20 @@ collections:
             required: false
             hint: "Wird gezeigt, solange es noch kein Unterrichtsmaterial gibt."
           - { label: "Bio-Text (länger, unter der Einleitung)", name: "body", widget: "markdown" }
+
+      - name: "meet_the_artist"
+        label: "Shop: Meet the artist"
+        file: "content/pages/meet-the-artist.md"
+        fields:
+          - { label: "Kleine Zeile oben", name: "eyebrow", widget: "string", hint: "z.B. «Meet the artist»" }
+          - { label: "Überschrift", name: "heading", widget: "string" }
+          - { label: "Zeile unter der Überschrift", name: "role", widget: "string", required: false, hint: "z.B. «Illustrator & author, Switzerland»" }
+          - { label: "Foto (Hochformat)", name: "photo", widget: "image" }
+          - { label: "Bildbeschreibung (Alt-Text)", name: "photoAlt", widget: "string" }
+          - { label: "Titel über der Notiz pro Produkt", name: "noteLabel", widget: "string", required: false, hint: "Standard: About this piece" }
+          - { label: "Beschriftung des Links", name: "linkLabel", widget: "string", required: false }
+          - { label: "Ziel des Links", name: "linkUrl", widget: "string", required: false, hint: "z.B. «/studio»" }
+          - { label: "Kurze Vorstellung (2 bis 3 Sätze, auf jeder Produktseite)", name: "body", widget: "markdown" }
 
       - name: "shipping-returns"
         label: "Versand & Rückgabe"

@@ -369,6 +369,7 @@ variants:
     sku: GSC-CASE-CGS-GSS25U
     stripePriceId: "price_1UM7avHhWAEQqbxLoykEi69k"
     shippingProfile: phone-case
+artistNote: 'PLATZHALTER: Ein, zwei Sätze, wie dieses Stück entstanden ist (womit gemalt, wo unterwegs, welches Tier als Vorbild). Wird erst angezeigt, wenn dieser Text ersetzt ist.'
 ---
 
 Inspired by the California ground squirrels we met on our West Coast road trip through the USA, one of our favorite encounters and animals ever since.

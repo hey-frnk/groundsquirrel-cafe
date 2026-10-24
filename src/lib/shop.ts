@@ -77,6 +77,8 @@ export interface ShopProduct {
   /** Images for the carousel beside the field notes. */
   story?: string[];
   storyTitle?: string;
+  /** How this piece was made, shown under the artist's introduction. */
+  artistNote?: string;
   /** Alt text per image path, gathered from the gallery and story entries. */
   imageAlt?: Record<string, string>;
   /** Lists the countries checkout accepts, with the waitlist underneath. */

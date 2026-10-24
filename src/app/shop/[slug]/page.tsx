@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import JsonLd from "@/components/JsonLd";
-import { getAllShopProducts, getShopProduct } from "@/lib/content";
+import { getAllShopProducts, getPage, getShopProduct, markdownToHtml } from "@/lib/content";
 import ProductDetail from "@/components/shop/ProductDetail";
+import MeetTheArtist, { type MeetTheArtistContent } from "@/components/shop/MeetTheArtist";
 import ReviewsSection from "@/components/shop/Reviews";
 import { validReviews } from "@/lib/shop";
 import { productSchema } from "@/lib/productSchema";
@@ -54,6 +55,8 @@ export default async function ShopProductPage({
   const product = await getShopProduct(slug);
   const reviews = validReviews(product);
   const google = googleLinks();
+  const artist = getPage<MeetTheArtistContent>("meet-the-artist");
+  const artistBioHtml = await markdownToHtml(artist.content);
 
   return (
     <div className="mx-auto max-w-7xl px-6 pt-12 pb-4 sm:px-10 sm:pt-16">
@@ -99,6 +102,10 @@ export default async function ShopProductPage({
 
       <div className="mt-12">
         <ProductDetail product={product} bodyHtml={product.bodyHtml} />
+      </div>
+
+      <div className="mt-24">
+        <MeetTheArtist content={artist} bioHtml={artistBioHtml} note={product.artistNote} />
       </div>
 
       <div className="mt-24">
