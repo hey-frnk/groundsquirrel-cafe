@@ -206,6 +206,9 @@ export default function CartDrawer() {
               <span className="eyebrow">Subtotal</span>
               <span className="font-display text-xl text-ink">{formatPrice(subtotal)}</span>
             </div>
+            <p className="-mt-2 text-xs text-graphite/65">
+              Prices in Swiss francs. At checkout you can pay in your own currency.
+            </p>
 
             <div>
               <label

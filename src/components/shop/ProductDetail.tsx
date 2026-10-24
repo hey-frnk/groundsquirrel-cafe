@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useState, useSyncExternalStore } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useCart } from "@/lib/cart";
@@ -26,15 +26,30 @@ export default function ProductDetail({
   bodyHtml: string;
 }) {
   const axes = useMemo(() => product.optionAxes ?? [], [product.optionAxes]);
-  const [variantIndex, setVariantIndex] = useState(0);
-  const [selection, setSelection] = useState<Record<string, string>>(() =>
-    Object.fromEntries(
-      axes.map((axis) => [axis.id, product.variants[0]?.options?.[axis.id] ?? ""])
-    )
+  // A Google Shopping listing links to one variant as ?sku=..., so the page
+  // opens with that case or print already chosen. The static HTML is the same
+  // for everyone and shows the first variant; the URL is read after hydration.
+  const urlSku = useSyncExternalStore(
+    noSubscription,
+    () => new URLSearchParams(window.location.search).get("sku"),
+    () => null
   );
+  const skuIndex = urlSku ? product.variants.findIndex((v) => v.sku === urlSku) : -1;
+  const startIndex = Math.max(0, skuIndex);
+
+  // null until the visitor picks something themselves.
+  const [pickedIndex, setVariantIndex] = useState<number | null>(null);
+  const [pickedSelection, setSelection] = useState<Record<string, string> | null>(null);
+  const variantIndex = pickedIndex ?? startIndex;
+  const selection =
+    pickedSelection ??
+    Object.fromEntries(
+      axes.map((axis) => [axis.id, product.variants[startIndex]?.options?.[axis.id] ?? ""])
+    );
   const [imageIndex, setImageIndex] = useState(0);
   const [justAdded, setJustAdded] = useState(false);
   const { addLine } = useCart();
+
 
   const variant =
     axes.length > 0 ? variantFor(product, selection) : product.variants[variantIndex];
@@ -61,7 +76,7 @@ export default function ProductDetail({
   }
 
   function selectOption(axisId: string, value: string) {
-    setSelection((current) => ({ ...current, [axisId]: value }));
+    setSelection({ ...selection, [axisId]: value });
     setImageIndex(0);
   }
 
@@ -245,6 +260,9 @@ export default function ProductDetail({
             <p className="mt-8 font-display text-4xl text-ink">
               {variant ? formatPrice(variant.price) : ""}
             </p>
+            <p className="mt-2 text-xs text-graphite/70">
+              Prices in Swiss francs. At checkout you can pay in your own currency.
+            </p>
 
             <button type="button" onClick={addToCart} className="btn btn-primary mt-6 w-full">
               {justAdded ? "Added to cart" : "Add to cart"}
@@ -347,4 +365,9 @@ export default function ProductDetail({
       </div>
     </>
   );
+}
+
+/** The query string only changes on navigation, which remounts the page. */
+function noSubscription() {
+  return () => {};
 }

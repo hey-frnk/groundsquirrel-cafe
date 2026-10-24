@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 /**
  * Machbarkeitsstudie: the discount code from the Alb Filter collaboration,
@@ -10,6 +11,9 @@ import { useEffect, useState } from "react";
  * dismissed before the page can be read. It slides in from the right a moment
  * after the page has settled, and once it has been closed (or the code copied)
  * it never comes back on this browser.
+ *
+ * Never in the shop: there it slid over the price and the "Add to cart"
+ * button, and an ad for another store is the last thing a buyer should see.
  */
 const STORAGE_KEY = "gsc.albfilter-code.seen";
 const CODE = "weltenhummler";
@@ -24,8 +28,11 @@ export default function AlbFilterBanner() {
   const [mounted, setMounted] = useState(false);
   const [shown, setShown] = useState(false);
   const [copied, setCopied] = useState(false);
+  const inShop = usePathname()?.startsWith("/shop") ?? false;
 
   useEffect(() => {
+    if (inShop) return;
+
     // A browser with site data blocked throws on read; that is a reason to show
     // the banner, not to break the page.
     try {
@@ -48,7 +55,7 @@ export default function AlbFilterBanner() {
       window.clearTimeout(appear);
       window.clearTimeout(slide);
     };
-  }, []);
+  }, [inShop]);
 
   function dismiss() {
     setShown(false);
@@ -71,7 +78,7 @@ export default function AlbFilterBanner() {
     }
   }
 
-  if (!mounted) return null;
+  if (!mounted || inShop) return null;
 
   return (
     <aside
