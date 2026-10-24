@@ -34,6 +34,23 @@ export interface ShopFaq {
   a: string;
 }
 
+/**
+ * A customer review, entered by hand in the CMS. Only reviews from people who
+ * actually bought from us go in, and only with their permission to publish.
+ */
+export interface ShopReview {
+  name: string;
+  /** Where the reviewer lives, e.g. "Zurich, Switzerland". */
+  location?: string;
+  /** 1 to 5 stars. */
+  rating: number;
+  /** ISO date, YYYY-MM-DD. */
+  date: string;
+  text: string;
+  /** What they bought, e.g. "iPhone 15" or "A3, English". */
+  variant?: string;
+}
+
 /** One dropdown on the product page, e.g. Design / Size / Language. */
 export interface ShopOptionAxis {
   id: string;
@@ -65,9 +82,24 @@ export interface ShopProduct {
   /** Lists the countries checkout accepts, with the waitlist underneath. */
   showShipTo?: boolean;
   faq?: ShopFaq[];
+  reviews?: ShopReview[];
   seoTitle?: string;
   seoDescription?: string;
   keywords?: string[];
+}
+
+/** Reviews with a usable rating, newest first. */
+export function validReviews(product: Pick<ShopProduct, "reviews">): ShopReview[] {
+  return (product.reviews ?? [])
+    .filter((r) => r && r.text && r.rating >= 1 && r.rating <= 5)
+    .sort((a, b) => String(b.date).localeCompare(String(a.date)));
+}
+
+/** Average stars, rounded to one decimal; undefined when there are no reviews. */
+export function averageRating(reviews: ShopReview[]): number | undefined {
+  if (reviews.length === 0) return undefined;
+  const sum = reviews.reduce((total, r) => total + r.rating, 0);
+  return Math.round((sum / reviews.length) * 10) / 10;
 }
 
 /** Distinct values for one axis, in the order the variants first mention them. */

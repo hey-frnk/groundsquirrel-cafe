@@ -7,21 +7,47 @@ interface Settings {
   instagramUrl?: string;
   youtubeUrl?: string;
   tiktokUrl?: string;
+  googleReviewUrl?: string;
+  googleProfileUrl?: string;
+}
+
+function filledIn(url?: string): url is string {
+  return Boolean(url) && !url!.includes("PLATZHALTER");
 }
 
 /** The social profiles that are actually filled in. */
 function socialProfiles(settings: Settings): string[] {
-  return [settings.instagramUrl, settings.youtubeUrl, settings.tiktokUrl].filter(
-    (url): url is string => Boolean(url) && !url!.includes("PLATZHALTER")
-  );
+  return [
+    settings.instagramUrl,
+    settings.youtubeUrl,
+    settings.tiktokUrl,
+    settings.googleProfileUrl,
+  ].filter(filledIn);
 }
 
 /**
- * The café itself, as an organisation.
+ * The Google Business Profile links, each undefined until it is filled in.
+ * Both are plain links: nothing from Google is loaded on our pages, so they
+ * set no cookies and need no consent.
+ */
+export function googleLinks(): { reviewUrl?: string; profileUrl?: string } {
+  const settings = getPage<Settings>("settings");
+  return {
+    reviewUrl: filledIn(settings.googleReviewUrl) ? settings.googleReviewUrl : undefined,
+    profileUrl: filledIn(settings.googleProfileUrl) ? settings.googleProfileUrl : undefined,
+  };
+}
+
+export function contactEmail(): string {
+  return getPage<Settings>("settings").contactEmail;
+}
+
+/**
+ * The café itself, as an organization.
  *
  * Given a stable `@id` so that every other block on the site — a blog post's
  * publisher, a product's seller — can point at this one node instead of
- * restating it. Search engines then read one organisation, not five.
+ * restating it. Search engines then read one organization, not five.
  */
 export function organization() {
   const settings = getPage<Settings>("settings");
@@ -53,7 +79,7 @@ export function webSite() {
     "@id": `${SITE_URL}/#website`,
     url: SITE_URL,
     name: "The Ground Squirrel Café",
-    inLanguage: "en-GB",
+    inLanguage: "en-US",
     publisher: { "@id": `${SITE_URL}/#organization` },
   };
 }

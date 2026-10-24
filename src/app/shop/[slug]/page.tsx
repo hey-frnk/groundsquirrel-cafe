@@ -3,8 +3,9 @@ import { notFound } from "next/navigation";
 import JsonLd from "@/components/JsonLd";
 import { getAllShopProducts, getShopProduct } from "@/lib/content";
 import ProductDetail from "@/components/shop/ProductDetail";
-import { CURRENCY } from "@/lib/shop";
-import { SITE_URL, organization } from "@/lib/seo";
+import ReviewsSection from "@/components/shop/Reviews";
+import { CURRENCY, averageRating, validReviews } from "@/lib/shop";
+import { SITE_URL, contactEmail, googleLinks, organization } from "@/lib/seo";
 
 export function generateStaticParams() {
   return getAllShopProducts().map((product) => ({ slug: product.slug }));
@@ -50,6 +51,9 @@ export default async function ShopProductPage({
   if (!getAllShopProducts().some((p) => p.slug === slug)) notFound();
 
   const product = await getShopProduct(slug);
+  const reviews = validReviews(product);
+  const average = averageRating(reviews);
+  const google = googleLinks();
 
   return (
     <div className="mx-auto max-w-7xl px-6 pt-12 pb-4 sm:px-10 sm:pt-16">
@@ -89,6 +93,30 @@ export default async function ShopProductPage({
             url: `${SITE_URL}/shop/${slug}/`,
             seller: organization(),
           },
+          // Only reviews that are shown on this page, as Google requires.
+          ...(average !== undefined
+            ? {
+                aggregateRating: {
+                  "@type": "AggregateRating",
+                  ratingValue: average,
+                  reviewCount: reviews.length,
+                  bestRating: 5,
+                  worstRating: 1,
+                },
+                review: reviews.map((r) => ({
+                  "@type": "Review",
+                  author: { "@type": "Person", name: r.name },
+                  datePublished: r.date,
+                  reviewBody: r.text,
+                  reviewRating: {
+                    "@type": "Rating",
+                    ratingValue: r.rating,
+                    bestRating: 5,
+                    worstRating: 1,
+                  },
+                })),
+              }
+            : {}),
         }}
       />
       <JsonLd
@@ -129,6 +157,14 @@ export default async function ShopProductPage({
 
       <div className="mt-12">
         <ProductDetail product={product} bodyHtml={product.bodyHtml} />
+      </div>
+
+      <div className="mt-24">
+        <ReviewsSection
+          reviews={reviews}
+          googleReviewUrl={google.reviewUrl}
+          contactEmail={contactEmail()}
+        />
       </div>
 
       <div className="mt-28 border-t border-ink/10 pt-12 text-center">

@@ -1,7 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getAllShopProducts } from "@/lib/content";
-import { formatPrice, lowestPrice } from "@/lib/shop";
+import {
+  averageRating,
+  formatPrice,
+  lowestPrice,
+  validReviews,
+  type ShopProduct,
+} from "@/lib/shop";
+import { contactEmail, googleLinks } from "@/lib/seo";
+import { ReviewCard, ReviewInvite, Stars } from "@/components/shop/Reviews";
 
 export const metadata = {
   title: "Shop – Squirrel Art Prints, Stickers & Phone Cases",
@@ -27,6 +35,14 @@ const PROMISES = [
 
 export default function ShopPage() {
   const products = getAllShopProducts();
+  const google = googleLinks();
+  // The newest reviews across the whole shop, each labeled with its product.
+  const latestReviews = products
+    .flatMap((product) =>
+      validReviews(product).map((review) => ({ review, product }))
+    )
+    .sort((a, b) => b.review.date.localeCompare(a.review.date))
+    .slice(0, 3);
 
   return (
     <div className="pb-4">
@@ -69,6 +85,7 @@ export default function ShopPage() {
             {product.tagline && (
               <p className="mt-2 text-sm leading-relaxed text-graphite/85">{product.tagline}</p>
             )}
+            <CardRating product={product} />
           </Link>
         ))}
       </section>
@@ -81,6 +98,43 @@ export default function ShopPage() {
             Ten percent of every order funds wildlife conservation
           </h2>
         </div>
+      </section>
+
+      {/* Reviews */}
+      <section className="mx-auto mt-20 max-w-6xl px-6 sm:px-10">
+        <div className="border-b border-ink/10 pb-6">
+          <p className="eyebrow">Reviews</p>
+          <h2 className="mt-3 text-3xl">
+            {latestReviews.length > 0 ? "What customers say" : "Tell us how you like it"}
+          </h2>
+        </div>
+        {latestReviews.length > 0 && (
+          <ul className="mt-8 grid gap-5 sm:grid-cols-3">
+            {latestReviews.map(({ review, product }) => (
+              <li key={`${product.slug}-${review.name}-${review.date}`}>
+                <ReviewCard review={review} product={shortTitle(product.title)} />
+              </li>
+            ))}
+          </ul>
+        )}
+        <ReviewInvite
+          googleReviewUrl={google.reviewUrl}
+          contactEmail={contactEmail()}
+          className="mt-8"
+        />
+        {google.profileUrl && (
+          <a
+            href={google.profileUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-arrow mt-4"
+          >
+            Read all our reviews on Google
+            <span data-arrow aria-hidden>
+              →
+            </span>
+          </a>
+        )}
       </section>
 
       {/* Promises */}
@@ -103,5 +157,24 @@ export default function ShopPage() {
         </div>
       </section>
     </div>
+  );
+}
+
+/** "Squirrel Stickers - Vinyl Decals" becomes "Squirrel Stickers". */
+function shortTitle(title: string) {
+  return title.split(/\s[-–]\s/)[0];
+}
+
+function CardRating({ product }: { product: Pick<ShopProduct, "reviews"> }) {
+  const reviews = validReviews(product);
+  const average = averageRating(reviews);
+  if (average === undefined) return null;
+  return (
+    <p className="mt-3 flex items-center gap-2 text-xs text-graphite/75">
+      <Stars rating={average} size={12} />
+      <span>
+        {average.toFixed(1)} · {reviews.length} {reviews.length === 1 ? "review" : "reviews"}
+      </span>
+    </p>
   );
 }

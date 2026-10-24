@@ -113,6 +113,19 @@ collections:
         fields:
           - { label: "Frage", name: "q", widget: "string" }
           - { label: "Antwort", name: "a", widget: "text" }
+      - label: "Bewertungen"
+        name: "reviews"
+        widget: "list"
+        required: false
+        summary: "{{fields.rating}}★ {{fields.name}} ({{fields.date}})"
+        hint: "Nur echte Käufe, und nur mit Erlaubnis der Person (z.B. 'Ja, gerne' per Mail). Alle Bewertungen eintragen, auch mittelmässige. Text auf Englisch oder so, wie er geschrieben wurde."
+        fields:
+          - { label: "Name (z.B. Vorname + Initial: Anna K.)", name: "name", widget: "string" }
+          - { label: "Ort (z.B. Zurich, Switzerland)", name: "location", widget: "string", required: false }
+          - { label: "Sterne", name: "rating", widget: "number", value_type: "int", min: 1, max: 5, default: 5 }
+          - { label: "Datum", name: "date", widget: "datetime", format: "YYYY-MM-DD", time_format: false }
+          - { label: "Bewertung", name: "text", widget: "text" }
+          - { label: "Variante (optional, z.B. iPhone 15)", name: "variant", widget: "string", required: false }
       - { label: "Beschriftung des Dropdowns", name: "variantPrompt", widget: "string", required: false, hint: "Standard: Choose your design" }
       - label: "Auswahl-Achsen (mehrere Dropdowns statt einem)"
         name: "optionAxes"
@@ -354,6 +367,8 @@ collections:
           - { label: "Instagram-Link", name: "instagramUrl", widget: "string", required: false }
           - { label: "YouTube-Link", name: "youtubeUrl", widget: "string", required: false }
           - { label: "TikTok-Link", name: "tiktokUrl", widget: "string", required: false }
+          - { label: "Google: Link zum Bewerten", name: "googleReviewUrl", widget: "string", required: false, hint: "Im Google Business Profile unter 'Rezensionen erhalten' kopieren (beginnt meist mit https://g.page/r/...). Leer oder PLATZHALTER = wird nirgends angezeigt." }
+          - { label: "Google: Link zum öffentlichen Profil", name: "googleProfileUrl", widget: "string", required: false, hint: "Link, unter dem man eure Google-Bewertungen lesen kann (z.B. aus Google Maps 'Teilen'). Erscheint im Footer und in den Daten für Google." }
 
       - name: "home"
         label: "Startseite"

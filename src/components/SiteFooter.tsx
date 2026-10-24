@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { getPage } from "@/lib/content";
 import { InstagramIcon, TiktokIcon, YoutubeIcon } from "@/components/icons";
+import { googleLinks } from "@/lib/seo";
 
 interface Settings {
   contactEmail: string;
@@ -30,6 +31,7 @@ export default function SiteFooter() {
     { url: settings.youtubeUrl, label: "YouTube", Icon: YoutubeIcon },
     { url: settings.tiktokUrl, label: "TikTok", Icon: TiktokIcon },
   ].filter((s) => !isPlaceholder(s.url));
+  const google = googleLinks();
 
   return (
     <footer className="mt-28 bg-ink text-cream/70 sm:mt-36">
@@ -112,6 +114,17 @@ export default function SiteFooter() {
             >
               {settings.contactEmail}
             </a>
+
+            {google.profileUrl && (
+              <a
+                href={google.profileUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 block text-sm text-cream/65 transition-colors hover:text-cream"
+              >
+                Our reviews on Google
+              </a>
+            )}
 
             {socials.length > 0 && (
               <div className="mt-7 flex items-center gap-3">
