@@ -88,10 +88,18 @@ export default async function StudioProjectPage({
         )}
       </header>
 
-      {/* The cover, when there is one to show */}
+      {/* The cover, when there is one to show, with any photos of the
+          finished piece as thumbnails to switch to */}
       {project.image && (
         <div className="mt-14">
-          <ArtGallery plates={[{ image: project.image }]} layout="single" />
+          {project.photos.length > 0 ? (
+            <ArtGallery
+              plates={[{ image: project.image }, ...project.photos]}
+              layout="showcase"
+            />
+          ) : (
+            <ArtGallery plates={[{ image: project.image }]} layout="single" />
+          )}
         </div>
       )}
 

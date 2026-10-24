@@ -16,7 +16,8 @@
 # larger:
 #
 #   portfolio gallery   1000 px  (renders at ~340 px in a three-column masonry)
-#   project galleries   1200 px  (renders at ~600 px in a two-column grid)
+#   project galleries   1200 px  (renders at ~600 px in a two-column grid, and
+#                                 the same for the main photo above its thumbnails)
 #   project covers      1000 px  (renders at ~420 px on a carousel card)
 #
 set -euo pipefail
@@ -67,7 +68,7 @@ art "$SRC/Wenn der Himmel Weihnachten berührt/IMG_11.JPG" drawing-for-the-chris
 
 echo "Wenn der Himmel Weihnachten berührt →"
 WH="$SRC/Wenn der Himmel Weihnachten berührt"
-cover "$SRC/1070128_540x540_c.jpg.webp"      christmas/cover
+cover "$WH/Fotos/Cover.JPG"                 christmas/cover-book-on-knit-scarf
 plate "$WH/IMG_07.JPG"                      christmas/angel-workshop
 plate "$WH/IMG_13.JPG"                      christmas/wall-of-clocks
 plate "$WH/IMG_29.JPG"                      christmas/snowfall-in-the-forest
@@ -76,6 +77,9 @@ plate "$WH/IMG_09.JPG"                      christmas/feather
 plate "$WH/IMG_05.JPG"                      christmas/recorder-and-garland
 plate "$WH/Mostaccioli.TIF"                 christmas/mostaccioli
 plate "$SRC/IMG_11.JPG"                     christmas/cat-and-lamb
+plate "$WH/Fotos/IMG_7178.JPG"              christmas/photo-the-clockmaker-spread
+plate "$WH/Fotos/IMG_7176.JPG"              christmas/photo-reading-in-the-mist
+plate "$WH/Fotos/IMG_7244.JPG"              christmas/photo-at-the-mountain-hut
 
 echo "Deutsch mit Flex und Flora →"
 FF="$SRC/Flex&Flora"
