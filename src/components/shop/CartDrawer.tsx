@@ -14,11 +14,25 @@ import Waitlist from "./Waitlist";
  * shop from "browsing" to "selling". Until then the cart works, but says so.
  */
 const CHECKOUT_URL = process.env.NEXT_PUBLIC_CHECKOUT_URL;
+const CONTACT_EMAIL = "hello@thegroundsquirrel.cafe";
+
+/**
+ * What the cart shows when checkout cannot start. `orderByEmail` is set when
+ * the fault is ours (Worker or Stripe down), so the customer gets a way to
+ * order anyway instead of a status code.
+ */
+type CheckoutError = { message: string; orderByEmail: boolean };
+
+const CHECKOUT_DOWN: CheckoutError = {
+  message:
+    "Payment isn't working right now, sorry. Your cart is saved, so please try again later, or email us your order and we'll send you a payment link.",
+  orderByEmail: true,
+};
 
 export default function CartDrawer() {
   const { lines, subtotal, isOpen, closeCart, setQuantity, removeLine } = useCart();
   const [busy, setBusy] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<CheckoutError | null>(null);
   const [country, setCountry] = useState(DEFAULT_COUNTRY);
 
   useEffect(() => {
@@ -54,17 +68,36 @@ export default function CartDrawer() {
           country,
         }),
       });
-      if (!response.ok) throw new Error(`Checkout failed (${response.status})`);
-      const { url } = await response.json();
-      if (!url) throw new Error("Checkout did not return a URL");
-      window.location.href = url;
-    } catch (e) {
+      const body = await response.json().catch(() => null);
+      if (response.ok && body?.url) {
+        window.location.href = body.url;
+        return;
+      }
+      // A 400 names something about this cart (a country we cannot ship to,
+      // say) in words meant for the customer. Anything else is on our side.
       setError(
-        e instanceof Error ? e.message : "Something went wrong. Please try again."
+        response.status === 400 && body?.error
+          ? { message: `${body.error}.`, orderByEmail: false }
+          : CHECKOUT_DOWN
       );
-      setBusy(false);
+    } catch {
+      setError(CHECKOUT_DOWN);
     }
+    setBusy(false);
   }
+
+  // Prefilled so an order by email needs no retyping when checkout is down.
+  const orderMailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+    "Order from the shop"
+  )}&body=${encodeURIComponent(
+    [
+      "Hi, checkout didn't work for me. I'd like to order:",
+      "",
+      ...lines.map((l) => `${l.quantity} × ${l.productTitle}, ${l.variantLabel}`),
+      "",
+      `Delivering to: ${country}`,
+    ].join("\n")
+  )}`;
 
   const unpriced = lines.some((l) => !l.stripePriceId);
   const canCheckout = Boolean(CHECKOUT_URL) && !unpriced && lines.length > 0;
@@ -202,7 +235,19 @@ export default function CartDrawer() {
               </div>
             </div>
 
-            {error && <p className="text-xs text-rose">{error}</p>}
+            {error && (
+              <div role="alert" className="text-xs text-rose">
+                <p>{error.message}</p>
+                {error.orderByEmail && (
+                  <a
+                    href={orderMailto}
+                    className="mt-1.5 inline-block text-ink underline decoration-ink/25 underline-offset-4 transition-colors hover:text-rose"
+                  >
+                    Email your order to {CONTACT_EMAIL}
+                  </a>
+                )}
+              </div>
+            )}
 
             {canCheckout ? (
               <button

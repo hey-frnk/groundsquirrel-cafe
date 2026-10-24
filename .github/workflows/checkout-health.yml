@@ -1,0 +1,33 @@
+name: Checkout health
+
+# Hourly check that the checkout Worker can still talk to Stripe. A failed run
+# means customers cannot pay right now; GitHub emails whoever last edited this
+# file. See checkout-worker/README.md, "Wenn der Checkout ausfällt".
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ask the Worker whether Stripe accepts its key
+        env:
+          CHECKOUT_URL: ${{ vars.NEXT_PUBLIC_CHECKOUT_URL }}
+        run: |
+          if [ -z "$CHECKOUT_URL" ]; then
+            echo "::error::Repository variable NEXT_PUBLIC_CHECKOUT_URL is not set"
+            exit 1
+          fi
+          # Retries ride out a single network hiccup; a bad key fails every time.
+          if ! curl --silent --show-error --fail-with-body --retry 2 --retry-delay 20 \
+              --retry-all-errors --max-time 30 "${CHECKOUT_URL%/}/health"; then
+            echo
+            echo "::error::Checkout is down. Customers cannot pay. Check the Worker logs with: cd checkout-worker && npx wrangler tail"
+            exit 1
+          fi

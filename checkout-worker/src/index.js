@@ -95,8 +95,43 @@ export function shippingFor(items, country, table, priceProfiles) {
   return best;
 }
 
+/**
+ * GET /health: asks Stripe whether STRIPE_SECRET_KEY still works. Polled hourly
+ * by .github/workflows/checkout-health.yml, because an expired or rolled key
+ * otherwise only shows up as customers who cannot pay.
+ *
+ * Only Stripe's error code is passed on (e.g. api_key_expired), never its
+ * message, which can include part of the key.
+ */
+async function health(env) {
+  const headers = { "Content-Type": "application/json", "Cache-Control": "no-store" };
+  if (!env.STRIPE_SECRET_KEY) {
+    return new Response(JSON.stringify({ ok: false, reason: "key_missing" }), { status: 503, headers });
+  }
+
+  let response;
+  try {
+    response = await fetch("https://api.stripe.com/v1/checkout/sessions?limit=1", {
+      headers: { Authorization: `Bearer ${env.STRIPE_SECRET_KEY}` },
+    });
+  } catch {
+    return new Response(JSON.stringify({ ok: false, reason: "stripe_unreachable" }), { status: 503, headers });
+  }
+
+  if (!response.ok) {
+    const body = await response.json().catch(() => null);
+    const reason = body?.error?.code ?? `stripe_${response.status}`;
+    console.error("Health check failed", reason);
+    return new Response(JSON.stringify({ ok: false, reason }), { status: 503, headers });
+  }
+  return new Response(JSON.stringify({ ok: true }), { status: 200, headers });
+}
+
 export default {
   async fetch(request, env) {
+    if (request.method === "GET" && new URL(request.url).pathname === "/health") {
+      return health(env);
+    }
     if (request.method === "OPTIONS") {
       return new Response(null, { status: 204, headers: corsHeaders(env) });
     }

@@ -97,6 +97,8 @@ lässt sich also gefahrlos veröffentlichen, bevor Stripe fertig eingerichtet is
 > in `wrangler secret`. Nicht in Dateien, nicht in Commits, nicht in Chats.
 > Falls einer doch irgendwo aufgetaucht ist: Dashboard → Entwickler →
 > API-Schlüssel → **Roll key**. Dauert Sekunden und macht den alten wertlos.
+> Läuft der Worker mit diesem Schlüssel, danach sofort den neuen eintragen,
+> siehe [Wenn der Checkout ausfällt](#wenn-der-checkout-ausfällt).
 
 ## Schritt 3 — Versandkosten
 
@@ -211,6 +213,44 @@ nichts. Nach jeder Bestellung muss der Auftrag bei Prodigi ausgelöst werden.
 Am Anfang von Hand (Stripe-Bestellung ansehen → bei Prodigi bestellen). Wenn
 das Volumen steigt, lässt sich das über einen Stripe-Webhook automatisieren —
 dafür bitte melden, das ist ein eigener Ausbauschritt.
+
+## Wenn der Checkout ausfällt
+
+Im Oktober 2026 konnte wochenlang niemand bezahlen: Der Stripe-Schlüssel des
+Workers war abgelaufen, der Warenkorb zeigte nur „Checkout failed (502)". Seither
+gilt:
+
+**Eigener Schlüssel für den Worker.** Der Worker benutzt einen *Restricted Key*
+(`rk_live_…`) namens „gsc-checkout worker", der nur Checkout Sessions schreiben
+darf. Die Skripte (`setup-stripe.mjs`) bekommen einen anderen. Wer für ein
+Skript einen Schlüssel rollt, legt so nicht den Shop lahm.
+
+**Wer den Worker-Schlüssel rollt, trägt den neuen sofort ein:**
+
+```bash
+cd checkout-worker
+npx wrangler secret put STRIPE_SECRET_KEY
+curl https://gsc-checkout.fzheng.workers.dev/health   # muss {"ok":true} liefern
+```
+
+**Stündlicher Health-Check.** Die GitHub Action
+[`checkout-health.yml`](../.github/workflows/checkout-health.yml) ruft jede
+Stunde `/health` auf. Der Worker fragt dabei Stripe, ob der Schlüssel noch gilt.
+Schlägt das fehl, wird der Lauf rot und GitHub schickt eine Mail, und zwar an
+die Person, die die Workflow-Datei zuletzt geändert hat. Die Antwort nennt den
+Grund, z.B. `{"ok":false,"reason":"api_key_expired"}`.
+
+> GitHub pausiert geplante Workflows, wenn 60 Tage lang nichts ins Repository
+> committet wurde, und schickt vorher eine Warnung. Dann unter Actions →
+> *Checkout health* → **Enable workflow** wieder einschalten.
+
+**Fehlersuche:** `npx wrangler tail` zeigt die Worker-Logs live, inklusive der
+Stripe-Fehlermeldung. Gespeichert werden sie nicht, also tail starten und dann
+einen Checkout auslösen.
+
+Fällt der Checkout aus, sieht die Kundschaft im Warenkorb einen Hinweis und
+einen Link, der eine Bestell-Mail mit dem Warenkorbinhalt an
+hello@thegroundsquirrel.cafe vorbereitet.
 
 ## Kosten
 
