@@ -79,6 +79,42 @@ photo   "exterior-4.png"                 humbaer-in-the-sun
 photo   "interior-5.JPG"                 the-bed-with-the-doors-open
 diagram "miserable-days-solar.PNG"       four-bleak-days
 
+echo "What Humbär cost →"
+HC="$SRC/humbaer-cost"
+cost() { fit "$HC/$1" "$OUT/humbaer-cost/$2.webp" 2000 72; }
+
+cost "Interior in Humbär.JPG"                                       interior-in-humbaer
+cost "Humbär ist ein 1992 VW LT 35 der ersten Generation.JPG"     a-1992-vw-lt-35
+cost "Unsere Trockentrenntoilette, Flower Pott.JPG"               the-dry-toilet
+cost "Wir kaufen uns einen neuen Van.JPG"                         buying-the-van
+cost "IMG_4226.JPG"                                                 evening-light-at-camp
+cost "IMG_6384.JPG"                                                 evelyne-and-humbaer
+cost "IMG_7072.JPG"                                                 a-drawer-in-the-snow
+costd() { fit "$HC/$1" "$OUT/humbaer-cost/$2.webp" 1600 86; }
+costd "Zeichnung Detail Ofenschrank.JPG"                             drawing-stove-cabinet
+costd "Zeichnung der Küchenzeile und  der Hängeschränke von Evelyne.JPG" drawing-kitchen-and-cabinets
+costd "Zeichnung vom Esstisch, Bett und Holzofen.JPG"                drawing-table-bed-and-stove
+cost "Ein VW LT 35 frisch nach dem Kauf. Er wird als allererstes gewaschen und geschrubbt.JPG" fresh-after-purchase
+cost "Ein langer Tag von Säubern und Demontieren.JPG"              a-long-day-of-stripping-out
+cost "In den Anfängen. Die Trennwand wird rausgeflext.JPG"         cutting-out-the-partition
+cost "Unter dem Riffelblechboden zeigen sich zwei riesige Rostlöcher.JPG" two-rust-holes
+cost "Auf diesem viel zu schrägen Parkplatz haben wir Humbär ausgebaut.JPG" the-sloping-parking-lot
+cost "Birkensperrholz nach Mass zugeschnitten beim Baumarkt.JPG"   birch-plywood-cut-to-size
+cost "Auch während unserer Ausbauzeit sind wir mit Humbär ausgeflogen. Direkt nach dem PVC Boden sind wir im Sommer nach Schweden gefahren.JPG" off-to-sweden-mid-build
+cost "Ofenrohre beim Baumarkt kaufen.JPG"                           buying-stove-pipes
+cost "Die Hängeschrankkonstruktion steht.JPG"                       the-cabinet-frame
+cost "Hier wird unsere Küche gebaut.JPG"                            building-the-kitchen
+cost "Die Küche wird zum ersten Mal in Humbär eingebaut.JPG"       the-kitchen-goes-in
+cost "Die Möbelstücke werden grundiert und zweimal lackiert.JPG"   primed-and-painted
+cost "und danach in den Rahmen eingesetzt.JPG"                      fitted-into-the-frame
+cost "Einen Durchbruch geschafft. Hier kommt der Maxxfan.JPG"      a-hole-for-the-maxxfan
+cost "Die Kabel hinter den Wänden sind verlegt.JPG"                cables-behind-the-walls
+cost "Fermacell-Platte. Hier wird der Durchbruch vom Ofenrohr gebaut.JPG" the-stove-pipe-cutout
+cost "Die Hecktüren haben wir mit altem Holz - Barnwood verkleidet.JPG" barnwood-on-the-back-doors
+cost "Die Aussicht für die es sich gelohnt hat. Smögen, Schweden.JPG" the-view-in-smoegen
+cost "Das erste Mal einziehen in Humbär. Hier kommt unser Food Storage.JPG" moving-in
+cost "Das erste mal Licht. Diese Lampen haben wir aus Restholz der Küche selber gebaut.JPG" first-light
+
 echo "Overwintering in Greece →"
 GR="$SRC/vanlife-griechenland"
 greece() { fit "$GR/$1" "$OUT/overwintering-in-greece/$2.webp" 2000 72; }
