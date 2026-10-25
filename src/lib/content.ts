@@ -271,12 +271,118 @@ function renderButtons(htmlStr: string): string {
   return htmlStr.replace(
     /<p>\[button:([^|\]]+)(?:\|([^\]]*))?\]<\/p>/g,
     (_m, url: string, label = "") => {
-      const href = url.trim();
+      // remark has already escaped both (`&` in a query string arrives as
+      // `&#x26;`), so they are decoded before being escaped once for the tag.
+      const href = decodeEntities(url.trim());
       const external = /^https?:\/\//.test(href);
-      const text = escapeHtml(label.trim() || href);
+      const text = escapeHtml(decodeEntities(label.trim()) || href);
       return (
         `<p class="btn-row"><a class="btn btn-primary" href="${escapeHtml(href)}"` +
         `${external ? ' target="_blank" rel="noopener noreferrer"' : ""}>${text}</a></p>`
+      );
+    }
+  );
+}
+
+/**
+ * The hues a donut's slices take, in this order and never cycled. Checked as a
+ * categorical palette against the chart panel (`#f3ebd9`), the pair where the
+ * ring closes included: every neighbor stays apart for color-blind readers
+ * too. Ochre and teal sit a little under 3:1 against the panel, which is why
+ * every slice is also named, with its amount, in the legend beside the ring.
+ */
+const CHART_COLORS = ["#3f78b5", "#c2577f", "#c98a12", "#0f9e86", "#7a62c4", "#a5532c"];
+
+/** "CHF 10'285.85" or "CHF 10,285.85" as a number. */
+const chartAmount = (s: string) => Number(s.replace(/[^\d.]/g, ""));
+
+/** A sum written the way the post writes its amounts: same prefix, same separator. */
+function formatAmount(n: number, like: string): string {
+  const prefix = /^[^\d]*/.exec(like)?.[0] ?? "";
+  const separator = /\d(['\u2019,])\d{3}/.exec(like)?.[1] ?? "";
+  const [whole, fraction] = n.toFixed(2).split(".");
+  return `${prefix}${whole.replace(/\B(?=(\d{3})+(?!\d))/g, separator)}.${fraction}`;
+}
+
+/**
+ * Turns `[chart:donut|Title|Total label]` or `[chart:bars|Title]`, a list of
+ * `- Label: amount` lines and `[/chart]` into a chart, in the manner of the
+ * figures on the tour page. A bar can carry a note under its label, written
+ * `- Label | Note: amount`: the models a budget line is made of, say.
+ *
+ * A cost write-up is a list of numbers, and a list of numbers is hard to weigh
+ * against itself: a ring shows where the money went at a glance, bars show how
+ * the parts of one budget compare. The amounts stay in the markdown as written,
+ * so the post reads correctly in the CMS, and the chart is drawn here as plain
+ * SVG and HTML: finished without JavaScript. PostCharts only adds the motion
+ * and the hover read-out on top.
+ */
+function renderCharts(htmlStr: string, lang: "en" | "de"): string {
+  return htmlStr.replace(
+    /<p>\[chart:(donut|bars)\|([^|\]]*)(?:\|([^\]]*))?\]<\/p>\s*<ul>([\s\S]*?)<\/ul>\s*<p>\[\/chart\]<\/p>/g,
+    (_m, kind: string, title: string, totalLabel = "", list: string) => {
+      const items = [...list.matchAll(/<li>([\s\S]*?)<\/li>/g)].map(([, li]) => {
+        const text = decodeEntities(li.replace(/<[^>]*>/g, "")).trim();
+        const at = text.lastIndexOf(":");
+        const shown = text.slice(at + 1).trim();
+        const [label, note = ""] = text.slice(0, at).split("|").map((part) => part.trim());
+        return { label, note, shown, value: chartAmount(shown) };
+      });
+      if (items.length === 0) return "";
+      const heading = `<figcaption class="post-chart-title">${escapeHtml(decodeEntities(title.trim()))}</figcaption>`;
+
+      if (kind === "bars") {
+        const max = Math.max(...items.map((i) => i.value));
+        return (
+          `<figure class="post-chart is-bars" data-chart>${heading}<ul class="post-bars">` +
+          items
+            .map(
+              (item, i) =>
+                `<li><span class="post-bar-label">${escapeHtml(item.label)}` +
+                (item.note ? `<span class="post-bar-note">${escapeHtml(item.note)}</span>` : "") +
+                `</span>` +
+                `<span class="post-bar-track"><span class="post-bar-fill" style="--w:${((item.value / max) * 100).toFixed(1)}%;--i:${i}"></span></span>` +
+                `<span class="post-bar-value">${escapeHtml(item.shown)}</span></li>`
+            )
+            .join("") +
+          `</ul></figure>`
+        );
+      }
+
+      // A ring of radius 48 in a 120 box; each slice stops one unit short of
+      // the next, which draws as a 2px gap of panel between neighbors.
+      const total = items.reduce((sum, i) => sum + i.value, 0);
+      const ring = 2 * Math.PI * 48;
+      const totalShown = formatAmount(total, items[0].shown);
+      const percent = (v: number) => `${Math.round((v / total) * 100)}${lang === "de" ? "\u00a0%" : "%"}`;
+      let start = 0;
+      const slices = items.map((item, i) => {
+        const length = (item.value / total) * ring;
+        const slice =
+          `<circle class="post-donut-slice" data-slice="${i}" cx="60" cy="60" r="48" ` +
+          `stroke="${CHART_COLORS[i % CHART_COLORS.length]}" stroke-dashoffset="${(-start).toFixed(2)}" ` +
+          `style="--len:${Math.max(length - 1, 0.5).toFixed(2)};--i:${i}"><title>${escapeHtml(`${item.label}: ${item.shown}`)}</title></circle>`;
+        start += length;
+        return slice;
+      });
+      const legend = items
+        .map(
+          (item, i) =>
+            `<li data-slice="${i}" tabindex="0" data-label="${escapeHtml(item.label)}" data-shown="${escapeHtml(item.shown)}">` +
+            `<span class="post-legend-swatch" style="background:${CHART_COLORS[i % CHART_COLORS.length]}"></span>` +
+            `<span class="post-legend-label">${escapeHtml(item.label)}</span>` +
+            `<span class="post-legend-value">${escapeHtml(item.shown)}</span>` +
+            `<span class="post-legend-share">${percent(item.value)}</span></li>`
+        )
+        .join("");
+      const label = escapeHtml(decodeEntities(totalLabel.trim()) || "Total");
+      return (
+        `<figure class="post-chart is-donut" data-chart>${heading}<div class="post-chart-body">` +
+        `<div class="post-donut"><svg viewBox="0 0 120 120" aria-hidden="true"><g transform="rotate(-90 60 60)">` +
+        slices.join("") +
+        `</g></svg><p class="post-donut-center"><span class="post-donut-value" data-count data-total="${escapeHtml(totalShown)}">${escapeHtml(totalShown)}</span>` +
+        `<span class="post-donut-label" data-total-label="${label}">${label}</span></p></div>` +
+        `<ul class="post-legend">${legend}</ul></div></figure>`
       );
     }
   );
@@ -296,7 +402,7 @@ function renderTips(htmlStr: string): string {
   return htmlStr.replace(
     /<p>\[tip:([^|\]]+)(?:\|([^|\]]*))?(?:\|([^|\]]*))?(?:\|([^|\]]*))?\]<\/p>/g,
     (_m, url: string, eyebrow = "", body = "", label = "") => {
-      const href = url.trim();
+      const href = decodeEntities(url.trim());
       const external = /^https?:\/\//.test(href);
       const title = escapeHtml(eyebrow.trim() || "Good to know");
       const text = escapeHtml(body.trim());
@@ -539,7 +645,7 @@ export async function markdownToHtml(
           renderTips(
             renderButtons(
               renderContents(
-                renderMapEmbeds(dropOrphanFloats(wrapImageGalleries(processed.toString()))),
+                renderMapEmbeds(dropOrphanFloats(wrapImageGalleries(renderCharts(processed.toString(), lang)))),
                 idPrefix
               )
             )

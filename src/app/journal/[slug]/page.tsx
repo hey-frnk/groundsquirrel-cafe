@@ -5,6 +5,7 @@ import ImageZoom from "@/components/ImageZoom";
 import JsonLd from "@/components/JsonLd";
 import LanguageSwitch from "@/components/LanguageSwitch";
 import MapEmbeds from "@/components/MapEmbeds";
+import PostCharts from "@/components/PostCharts";
 import ShareRow from "@/components/ShareRow";
 import { getAllJournalPosts, getJournalAuthor, getJournalPost } from "@/lib/content";
 import { SITE_URL, organization } from "@/lib/seo";
@@ -149,6 +150,8 @@ export default async function JournalPostPage({
       )}
       {/* Wires the click-to-load buttons of any [map:…] embeds in the post. */}
       <MapEmbeds />
+      {/* Grows the [chart:…] figures into view and wires their hover read-out. */}
+      <PostCharts />
       {/* Makes every photo in the post open full size. */}
       <ImageZoom />
 
