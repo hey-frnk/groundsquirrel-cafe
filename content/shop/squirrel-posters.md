@@ -476,6 +476,7 @@ variants:
     images:
       - /images/shop/squirrel-posters/framed-california-ground-squirrel.webp
       - /images/shop/squirrel-posters/poster-california-ground-squirrel.webp
+artistNote: "Honestly, I got a little distracted from making educational posters. You'd have to teach something very niche to need one about the golden-mantled ground squirrel."
 ---
 
 [highlight]

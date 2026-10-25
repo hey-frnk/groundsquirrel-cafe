@@ -105,6 +105,7 @@ variants:
       - /images/shop/wildlife-postcards/seastars-pair.webp
       - /images/shop/wildlife-postcards/seastars-back.webp
 gallery: *ref_0
+artistNote: "My postcards are inspired by the natural wonders we met along our journey, in the van and out of it, like the rock dassies we watched climbing up the thin branches of a tree in Kruger National Park, South Africa. They remind me how lucky we are to share the world with these creatures. I want people to know about them, talk about them, love them and protect them."
 ---
 
 [highlight]

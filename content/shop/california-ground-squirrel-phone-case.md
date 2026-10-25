@@ -369,6 +369,7 @@ variants:
     sku: GSC-CASE-CGS-GSS25U
     stripePriceId: "price_1UM7avHhWAEQqbxLoykEi69k"
     shippingProfile: phone-case
+artistNote: "We met this curious California ground squirrel on our month-long road trip down Big Sur and fell in love with it right away. The phone case started out as a funny Christmas gift for Frank, but it turned out so special that he talked me into making the squirrel case famous one day."
 ---
 
 Inspired by the California ground squirrels we met on our West Coast road trip through the USA, one of our favorite encounters and animals ever since.
