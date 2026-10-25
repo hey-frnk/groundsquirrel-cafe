@@ -2,7 +2,7 @@
 title: Squirrel Stickers - Vinyl Decals
 tagline: 'Six hand-painted squirrels, cut from matte vegan vinyl.'
 image: /images/shop/squirrel-stickers/sticker-set.webp
-order: 2
+order: 1
 googleCategory: 'Arts & Entertainment > Hobbies & Creative Arts > Arts & Crafts > Art & Crafting Materials > Embellishments & Trims > Decorative Stickers'
 badges:
   - 10% funds wildlife conservation
