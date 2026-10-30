@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getPage } from "@/lib/content";
 import { InstagramIcon, TiktokIcon, YoutubeIcon } from "@/components/icons";
 import { googleLinks } from "@/lib/seo";
+import SimpleAnalyticsBadge from "@/components/SimpleAnalyticsBadge";
 
 interface Settings {
   contactEmail: string;
@@ -147,6 +148,7 @@ export default function SiteFooter() {
 
         <div className="mt-16 flex flex-col gap-3 border-t border-cream/12 pt-8 text-[0.7rem] tracking-[0.1em] text-cream/45 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} The Ground Squirrel Café</p>
+          <SimpleAnalyticsBadge />
           <p>
             with <span aria-hidden>🐿️</span>
             <span className="sr-only">love</span> by Evelyne and Frank
