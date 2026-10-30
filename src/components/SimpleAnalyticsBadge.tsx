@@ -1,5 +1,5 @@
 // Simple Analytics' free plan requires this badge on the site (since Nov 2026).
-// Their own markup, shrunk and dimmed to sit quietly in the footer's bottom bar.
+// Their own markup at full size, dimmed to sit quietly in the footer's bottom bar.
 export default function SimpleAnalyticsBadge() {
   return (
     <a
@@ -9,8 +9,8 @@ export default function SimpleAnalyticsBadge() {
       className="inline-block opacity-45 transition-opacity hover:opacity-80"
     >
       <svg
-        width="105"
-        height="25"
+        width="210"
+        height="50"
         viewBox="0 0 210 50"
         role="img"
         aria-label="Simple Analytics: 100% privacy friendly"
