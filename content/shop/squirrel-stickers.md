@@ -1,6 +1,6 @@
 ---
 title: Squirrel Stickers - Vinyl Decals
-tagline: 'Six hand-painted squirrels, cut from matte vegan vinyl.'
+tagline: 'Eight hand-painted squirrels, cut from matte vegan vinyl.'
 image: /images/shop/squirrel-stickers/sticker-set.webp
 order: 1
 googleCategory: 'Arts & Entertainment > Hobbies & Creative Arts > Arts & Crafts > Art & Crafting Materials > Embellishments & Trims > Decorative Stickers'
@@ -26,8 +26,10 @@ gallery:
   - image: /images/shop/squirrel-stickers/sticker-european-squirrel.webp
   - image: /images/shop/squirrel-stickers/sticker-alpine-marmot.webp
   - image: /images/shop/squirrel-stickers/sticker-california-ground-squirrel.webp
+  - image: /images/shop/squirrel-stickers/sticker-siberian-chipmunk.webp
+  - image: /images/shop/squirrel-stickers/sticker-finlaysons-squirrel.webp
 variants:
-  - label: The full set - all six designs
+  - label: The set - the six original designs
     price: 12
     sku: GSC-STICKER-SET
     shippingProfile: stickers
@@ -80,6 +82,20 @@ variants:
     stripePriceId: "price_1U2YKgHhWAEQqbxLz8CaVJvO"
     images:
       - /images/shop/squirrel-stickers/sticker-california-ground-squirrel.webp
+  - label: Siberian Chipmunk
+    price: 3
+    sku: GSC-STICKER-SC
+    stripePriceId: "price_1UWhjhHhWAEQqbxLGDkpetnm"
+    shippingProfile: stickers
+    images:
+      - /images/shop/squirrel-stickers/sticker-siberian-chipmunk.webp
+  - label: Finlayson's Squirrel
+    price: 3
+    sku: GSC-STICKER-FS
+    stripePriceId: "price_1UWhjiHhWAEQqbxLUBdEhkIb"
+    shippingProfile: stickers
+    images:
+      - /images/shop/squirrel-stickers/sticker-finlaysons-squirrel.webp
 artistNote: "Frank saw a dire need for squirrel portraits beyond the Eurasian red squirrel, the Eastern gray squirrel and generic AI slop squirrels. So I started the Squirrels of the World series, with a squirrel for every continent and every personality. And of course, the Eurasian red and the Eastern gray squirrel made it in too."
 ---
 
