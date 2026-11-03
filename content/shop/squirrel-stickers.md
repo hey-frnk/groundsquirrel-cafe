@@ -37,8 +37,12 @@ variants:
     images:
       - /images/shop/squirrel-stickers/sticker-set.webp
       - /images/shop/squirrel-stickers/sticker-european-squirrel.webp
+      - /images/shop/squirrel-stickers/sticker-eastern-grey-squirrel.webp
       - >-
         /images/shop/squirrel-stickers/sticker-golden-mantled-ground-squirrel.webp
+      - /images/shop/squirrel-stickers/sticker-african-tree-squirrel.webp
+      - /images/shop/squirrel-stickers/sticker-alpine-marmot.webp
+      - /images/shop/squirrel-stickers/sticker-california-ground-squirrel.webp
   - label: European Squirrel
     price: 3
     sku: GSC-STICKER-EUS
