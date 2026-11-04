@@ -30,7 +30,7 @@ specs:
   - label: Packaging
     value: Rolled in a protective tube
 shippingNote: >-
-  Shipping is calculated from your country and the largest item in your cart. A3 prints travel in a bigger tube than A5. Printed and shipped from
+  You pay shipping once per order, at the highest rate in your cart. A3 prints travel in a bigger tube than A5. Printed and shipped from
   whichever partner studio sits closest to you.
 gallery:
   - image: /images/shop/squirrel-posters/poster-set.webp

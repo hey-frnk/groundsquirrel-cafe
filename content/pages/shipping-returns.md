@@ -1,16 +1,13 @@
 ---
 title: "Shipping & Returns"
+intro: "Every order travels straight to you, packed with care. And if anything goes wrong, we will make it right."
+shippingRule: "**You only pay shipping once.** Mix and match as much as you like: stickers, postcards, a print or two. Your order ships together, so you pay just the highest rate in your cart, and everything else comes along for free."
+shipping: |-
+  - **How long it takes.** Prints, stickers and phone cases are made just for you, which takes 1 to 5 business days. Then they are on their way and usually arrive within the days shown above.
+  - **Where it comes from.** Postcards are packed by hand and sent from our home in Switzerland. Everything else is printed at the partner studio closest to you, so it takes the short route.
+  - **Where we ship.** To every country in the list above. The EU and EEA are not possible right now because of the new EU packaging rules (PPWR). Don't see your country? Join the waitlist on any product page and we will let you know.
+  - **Taxes and customs.** Prices are in Swiss francs, and you can pay in your own currency. Any tax is added at checkout. Some countries charge import fees on delivery; those are set locally and paid by the recipient.
 ---
-
-Everything in the shop is printed to order by our partner studios and sent straight to you. If something goes wrong, we will put it right.
-
-## Shipping
-
-- **Where we ship.** To every country listed in the cart. Because of the EU Packaging and Packaging Waste Regulation (PPWR), we currently cannot ship to the EU or EEA. If your country is missing, join the waitlist on any product page.
-- **What it costs.** Shipping is calculated from your country and the largest item in your cart, and you see it before you pay. A cart with several items pays one shipping rate, not one per item. Phone cases ship for a flat CHF 6.
-- **How long it takes.** Each item is made for you, which takes a few business days. The estimated delivery window for your country is shown at checkout. Delivery times are estimates, not guarantees.
-- **Where it comes from.** Your order ships from the partner studio closest to your address, so it takes the short route.
-- **Prices, taxes and customs.** Prices are in Swiss francs (CHF). Any sales tax or VAT that applies is calculated at checkout. Depending on your country, customs may charge import duties or fees on delivery. These are set by your country and paid by the recipient.
 
 ## Canceling an order
 

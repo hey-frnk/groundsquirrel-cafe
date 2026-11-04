@@ -506,7 +506,10 @@ collections:
         file: "content/pages/shipping-returns.md"
         fields:
           - { label: "Titel", name: "title", widget: "string" }
-          - { label: "Inhalt", name: "body", widget: "markdown" }
+          - { label: "Einleitung", name: "intro", widget: "text" }
+          - { label: "Versand: Grundregel (über dem Länder-Rechner)", name: "shippingRule", widget: "string" }
+          - { label: "Versand (unter dem Länder-Rechner)", name: "shipping", widget: "markdown", hint: "Die Preise selbst kommen aus content/shipping.json." }
+          - { label: "Stornierung, Rückgabe, Schäden", name: "body", widget: "markdown" }
 
       - name: "impressum"
         label: "Impressum"

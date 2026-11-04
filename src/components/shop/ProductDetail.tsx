@@ -104,6 +104,7 @@ export default function ProductDetail({
       image: images[0],
       sku: variant.sku,
       stripePriceId: variant.stripePriceId,
+      shippingProfile: variant.shippingProfile,
     });
     setJustAdded(true);
     window.setTimeout(() => setJustAdded(false), 1800);
@@ -270,7 +271,7 @@ export default function ProductDetail({
 
             <PaymentMethods className="mt-4" />
             <p className="mt-3 text-xs text-graphite/70">
-              14-day returns, free replacement if it arrives damaged.{" "}
+              One shipping charge per order. 14-day returns, free replacement if it arrives damaged.{" "}
               <Link
                 href="/shipping-returns"
                 className="text-ink underline decoration-ink/25 underline-offset-4 transition-colors hover:text-rose"

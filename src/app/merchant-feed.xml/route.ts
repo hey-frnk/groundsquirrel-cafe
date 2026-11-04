@@ -1,7 +1,8 @@
 import { getAllShopProducts } from "@/lib/content";
 import { CURRENCY, imagesFor } from "@/lib/shop";
 import { SITE_URL } from "@/lib/seo";
-import { HANDLING_DAYS, PROFILES, rateFor, variantDescription } from "@/lib/productSchema";
+import { variantDescription } from "@/lib/productSchema";
+import { HANDLING_DAYS, PROFILES, rateFor } from "@/lib/shipping";
 import shipping from "../../../content/shipping.json";
 
 /**

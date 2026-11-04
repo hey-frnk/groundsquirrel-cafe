@@ -17,8 +17,8 @@ specs:
   - label: Made
     value: 'To order, 3–5 days before shipping'
 shippingNote: >-
-  Worldwide shipping. The rate is calculated from your country and the largest
-  item in your cart.
+  Worldwide shipping. You pay shipping once per order, at the highest rate in
+  your cart.
 variants:
   - label: The full set - all six cards
     price: 12
