@@ -49,8 +49,8 @@ specs:
     value: 'On demand, in recycled, recyclable packaging'
 shippingNote: >-
   Worldwide shipping. Due to the PPWR, shipping is currently only available to
-  certain countries. Shipping costs are calculated based on your country and
-  the largest item in your cart.
+  certain countries. You pay shipping once per order, at the highest
+  rate in your cart.
 showShipTo: true
 gallery:
   - image: /images/shop/california-ground-squirrel-phone-case/squirrel-phone-case-standing-in-sand.webp

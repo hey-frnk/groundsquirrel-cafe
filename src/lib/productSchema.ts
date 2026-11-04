@@ -10,6 +10,7 @@
 
 import shipping from "../../content/shipping.json";
 import { SITE_URL, organization } from "./seo";
+import { HANDLING_DAYS, PROFILES, rateFor } from "./shipping";
 import {
   CURRENCY,
   averageRating,
@@ -19,27 +20,7 @@ import {
   type ShopVariant,
 } from "./shop";
 
-export interface Profile {
-  minDays?: number;
-  maxDays?: number;
-  rates: Record<string, number>;
-}
-
 const SHIP_TO = Object.keys(shipping.shipTo);
-const EUROPE: string[] = shipping.europe;
-export const PROFILES = shipping.profiles as Record<string, Profile>;
-
-/** Days an order waits to be made before it ships ("3–5 days before shipping"). */
-export const HANDLING_DAYS = { min: 1, max: 5 };
-
-/** Same lookup as rateFor() in checkout-worker/src/index.js. */
-export function rateFor(profile: Profile, country: string): number | null {
-  const { rates } = profile;
-  if (typeof rates[country] === "number") return rates[country];
-  if (EUROPE.includes(country) && typeof rates._EUROPE === "number") return rates._EUROPE;
-  if (typeof rates._WORLD === "number") return rates._WORLD;
-  return null;
-}
 
 function businessDays(min: number, max: number) {
   return { "@type": "QuantitativeValue", minValue: min, maxValue: max, unitCode: "DAY" };

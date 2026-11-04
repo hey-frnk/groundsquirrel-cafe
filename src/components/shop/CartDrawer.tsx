@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useCart } from "@/lib/cart";
 import { formatPrice } from "@/lib/shop";
 import { DEFAULT_COUNTRY, SHIP_TO_COUNTRIES } from "@/lib/countries";
+import { shippingFor } from "@/lib/shipping";
 import PaymentMethods from "./PaymentMethods";
 import Waitlist from "./Waitlist";
 
@@ -98,6 +99,15 @@ export default function CartDrawer() {
       `Delivering to: ${country}`,
     ].join("\n")
   )}`;
+
+  // The Worker prices it again from the same table; this is the preview. Null
+  // for a cart saved before lines carried their profile, which then says
+  // "added at checkout" instead of guessing.
+  const shipping = shippingFor(
+    lines.map((l) => l.shippingProfile),
+    country
+  );
+  const sentFromSeveral = new Set(lines.map((l) => l.shippingProfile)).size > 1;
 
   const unpriced = lines.some((l) => !l.stripePriceId);
   const canCheckout = Boolean(CHECKOUT_URL) && !unpriced && lines.length > 0;
@@ -202,14 +212,6 @@ export default function CartDrawer() {
 
         {lines.length > 0 && (
           <footer className="max-h-[75vh] space-y-4 overflow-y-auto border-t border-ink/10 px-6 py-5">
-            <div className="flex items-baseline justify-between">
-              <span className="eyebrow">Subtotal</span>
-              <span className="font-display text-xl text-ink">{formatPrice(subtotal)}</span>
-            </div>
-            <p className="-mt-2 text-xs text-graphite/65">
-              Prices in Swiss francs. At checkout you can pay in your own currency.
-            </p>
-
             <div>
               <label
                 htmlFor="cart-country"
@@ -229,14 +231,42 @@ export default function CartDrawer() {
                   </option>
                 ))}
               </select>
-              <p className="mt-2 text-xs text-graphite/65">
-                Shipping is added at checkout, based on your country and the
-                largest item in your cart.
-              </p>
               <div className="mt-3">
                 <Waitlist compact />
               </div>
             </div>
+
+            <dl className="space-y-1.5 text-sm">
+              <div className="flex items-baseline justify-between">
+                <dt className="text-graphite/80">Subtotal</dt>
+                <dd className="tabular-nums">{formatPrice(subtotal)}</dd>
+              </div>
+              <div className="flex items-baseline justify-between">
+                <dt className="text-graphite/80">Shipping</dt>
+                <dd className="tabular-nums">
+                  {shipping ? formatPrice(shipping.amount) : "Added at checkout"}
+                </dd>
+              </div>
+              <div className="flex items-baseline justify-between border-t border-ink/10 pt-2.5">
+                <dt className="eyebrow">Total</dt>
+                <dd className="font-display text-xl text-ink">
+                  {formatPrice(subtotal + (shipping?.amount ?? 0))}
+                </dd>
+              </div>
+            </dl>
+            <p className="-mt-2 text-xs leading-relaxed text-graphite/65">
+              {sentFromSeveral
+                ? "One shipping charge per order, at the highest rate among your items. Everything else ships with it for free. "
+                : "One shipping charge per order, however many items you add. "}
+              Prices in Swiss francs; at checkout you can pay in your own currency.{" "}
+              <Link
+                href="/shipping-returns#shipping"
+                onClick={closeCart}
+                className="text-ink underline decoration-ink/25 underline-offset-4 transition-colors hover:text-rose"
+              >
+                Shipping rates
+              </Link>
+            </p>
 
             {error && (
               <div role="alert" className="text-xs text-rose">

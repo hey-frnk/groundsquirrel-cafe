@@ -21,6 +21,8 @@ export interface CartLine {
   image: string;
   sku?: string;
   stripePriceId?: string;
+  /** Key into content/shipping.json profiles. Missing on carts saved before it existed. */
+  shippingProfile?: string;
   quantity: number;
 }
 
