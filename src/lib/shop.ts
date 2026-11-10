@@ -27,6 +27,25 @@ export interface ShopVariant {
   options?: Record<string, string>;
   /** Heading the variant sits under in the dropdown, e.g. "Apple". */
   group?: string;
+  /**
+   * This variant's own story slides and text, shown in place of the product's
+   * while it is selected: each sticker has its own animal to tell about.
+   */
+  story?: string[];
+  storyTitle?: string;
+  /** Plain text; a blank line starts a new paragraph. */
+  description?: string;
+  /** A short vertical film with a few words beside it. */
+  reel?: ShopReel;
+}
+
+export interface ShopReel {
+  video: string;
+  /** Still shown until the visitor presses play; the film loads only then. */
+  poster: string;
+  alt?: string;
+  title?: string;
+  text?: string;
 }
 
 export interface ShopFaq {

@@ -56,6 +56,15 @@ export default function ProductDetail({
   const images = useMemo(() => imagesFor(product, variant), [product, variant]);
   const activeImage = images[Math.min(imageIndex, images.length - 1)];
   const alts = product.imageAlt ?? {};
+  // A variant with its own story (one sticker, one animal) tells that one
+  // instead of the product's.
+  const ownStory = Boolean(variant?.story?.length);
+  const story = (ownStory ? variant?.story : product.story) ?? [];
+  const storyTitle = ownStory ? variant?.storyTitle ?? variant?.label : product.storyTitle;
+  const description = (variant?.description ?? "")
+    .split(/\n\s*\n/)
+    .map((paragraph) => paragraph.trim())
+    .filter(Boolean);
   const photographic = Boolean(product.photographic);
 
   // Variants with a `group` are listed under that heading (Apple / Samsung).
@@ -311,9 +320,49 @@ export default function ProductDetail({
       {/* Story */}
       <div className="mt-20 grid lg:grid-cols-[minmax(0,1fr)_23rem] gap-10 lg:gap-14 items-start">
         <div className="min-w-0">
-          {product.story && product.story.length > 0 && (
+          {story.length > 0 && (
             <div className="mb-14">
-              <StoryCarousel images={product.story} alts={alts} title={product.storyTitle} />
+              {/* Keyed so a new variant's slides start at the first one. */}
+              <StoryCarousel key={story[0]} images={story} alts={alts} title={storyTitle} />
+            </div>
+          )}
+          {variant?.reel && (
+            <div className="mb-14 grid grid-cols-[minmax(0,9rem)_1fr] items-center gap-6 sm:grid-cols-[minmax(0,15rem)_1fr] sm:gap-10">
+              <div className="relative aspect-[9/16] overflow-hidden rounded-[var(--radius-tile)] bg-ivory/30">
+                {/* preload="none": nobody pays for the film before pressing play. */}
+                <video
+                  key={variant.reel.video}
+                  className="absolute inset-0 h-full w-full object-cover"
+                  controls
+                  muted
+                  loop
+                  playsInline
+                  preload="none"
+                  poster={variant.reel.poster}
+                  aria-label={variant.reel.alt}
+                >
+                  <source src={variant.reel.video} type="video/mp4" />
+                </video>
+              </div>
+              <div>
+                {variant.reel.title && (
+                  <h2 className="text-balance text-2xl leading-[1.15] sm:text-3xl">
+                    {variant.reel.title}
+                  </h2>
+                )}
+                {variant.reel.text && (
+                  <p className="mt-4 text-sm leading-relaxed text-graphite sm:text-base">
+                    {variant.reel.text}
+                  </p>
+                )}
+              </div>
+            </div>
+          )}
+          {description.length > 0 && (
+            <div className="prose prose-lg mb-10 max-w-none">
+              {description.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
             </div>
           )}
           <div
@@ -327,7 +376,7 @@ export default function ProductDetail({
             level with its pictures rather than with its arrows. */}
         <div
           className={`space-y-12 ${
-            product.story && product.story.length > 0 ? "lg:mt-[4.25rem]" : ""
+            story.length > 0 ? "lg:mt-[4.25rem]" : ""
           }`}
         >
           {product.specs && product.specs.length > 0 && (
