@@ -173,6 +173,27 @@ collections:
             widget: "list"
             required: false
             field: { label: "Bild", name: "image", widget: "image" }
+          - { label: "Titel der Bildstrecke dieser Variante", name: "storyTitle", widget: "string", required: false }
+          - label: "Bildstrecke dieser Variante (Karussell unten)"
+            name: "story"
+            widget: "list"
+            required: false
+            hint: "Erscheint statt der Bildstrecke des Produkts, solange diese Variante gewählt ist."
+            fields:
+              - { label: "Bild", name: "image", widget: "image" }
+              - { label: "Bildbeschreibung (Alt-Text)", name: "alt", widget: "string", required: false }
+          - { label: "Beschreibung dieser Variante", name: "description", widget: "text", required: false, hint: "Leerzeile = neuer Absatz." }
+          - label: "Reel dieser Variante (links Film, rechts Text)"
+            name: "reel"
+            widget: "object"
+            required: false
+            collapsed: true
+            fields:
+              - { label: "Video (Pfad zur .mp4)", name: "video", widget: "string", required: false, hint: "z.B. /videos/shop/squirrel-stickers-reel.mp4. Hochkant, ohne Ton." }
+              - { label: "Standbild", name: "poster", widget: "image", required: false }
+              - { label: "Bildbeschreibung (Alt-Text)", name: "alt", widget: "string", required: false }
+              - { label: "Überschrift", name: "title", widget: "string", required: false }
+              - { label: "Text", name: "text", widget: "text", required: false }
           - { label: "Artikelnummer (SKU)", name: "sku", widget: "string", required: false }
           - label: "Stripe Price ID"
             name: "stripePriceId"

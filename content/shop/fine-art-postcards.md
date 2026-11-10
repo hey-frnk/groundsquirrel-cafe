@@ -93,6 +93,18 @@ variants:
       - /images/shop/wildlife-postcards/elephant-pair.webp
       - /images/shop/wildlife-postcards/elephant-back.webp
       - /images/shop/wildlife-postcards/elephant-scene.webp
+    storyTitle: Meet the African elephant
+    story:
+      - image: /images/shop/wildlife-postcards/story-elephant-1-designed-for.webp
+        alt: "The elephant painting on a wooden table with a paint box and brushes: designed for people who love the African elephant"
+      - image: /images/shop/wildlife-postcards/story-elephant-2-tuli-wilderness.webp
+        alt: "Two elephants running across dry ground: inspired by the Tuli Wilderness in Botswana"
+      - image: /images/shop/wildlife-postcards/story-elephant-3-wildlife-art.webp
+        alt: "Evelyne from behind, photographing the landscape: follow me for more wildlife art"
+    description: |-
+      Designed for people who love the African wilderness and the African elephant.
+
+      I've lived next to these giants for one year, and it just seems incredible how much I've learned from them and how much I miss being around them.
   - label: Mediterranean Sea Stars
     price: 3
     sku: GSC-POSTCARD-SEASTARS

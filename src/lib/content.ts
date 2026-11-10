@@ -852,7 +852,12 @@ function normalizeVariants(variants: unknown): ShopVariant[] {
   if (!Array.isArray(variants)) return [];
   return variants
     .filter((v): v is ShopVariant => Boolean(v) && typeof (v as ShopVariant).label === "string")
-    .map((v) => ({ ...v, price: Number(v.price) || 0, images: normalizePhotos(v.images) }));
+    .map((v) => ({
+      ...v,
+      price: Number(v.price) || 0,
+      images: normalizePhotos(v.images),
+      story: normalizePhotos(v.story),
+    }));
 }
 
 /** Alt text from `{ image, alt }` entries, keyed by image path. */
@@ -891,7 +896,11 @@ function readShopProduct(filename: string) {
     body: content.trim(),
     gallery: normalizePhotos(data.gallery),
     story: normalizePhotos(data.story),
-    imageAlt: collectAlts(data.gallery, data.story),
+    imageAlt: collectAlts(
+      data.gallery,
+      data.story,
+      ...(Array.isArray(data.variants) ? data.variants.map((v) => v?.story) : [])
+    ),
     variants: normalizeVariants(data.variants),
     reviews: normalizeReviews(data.reviews),
   };
