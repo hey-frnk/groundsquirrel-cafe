@@ -128,6 +128,22 @@ variants:
     images:
       - /images/shop/squirrel-posters/framed-eurasian-red-squirrel.webp
       - /images/shop/squirrel-posters/poster-eurasian-red-squirrel.webp
+    storyTitle: Meet the red squirrel
+    story: &red_squirrel_story
+      - image: /images/shop/red-squirrel-story/red-squirrel-1-hometown-squirrel.webp
+        alt: "Evelyne sitting in an autumn meadow, smiling: let me show you our hometown squirrel"
+      - image: /images/shop/red-squirrel-story/red-squirrel-2-mediocre-memory.webp
+        alt: "A red squirrel peeking around a wooden post: its memory is really mediocre"
+      - image: /images/shop/red-squirrel-story/red-squirrel-3-baby-trees.webp
+        alt: "Evelyne walking into a sunlit forest with a basket: forgotten nut hides sprout into baby trees"
+      - image: /images/shop/red-squirrel-story/red-squirrel-4-local-squirrel.webp
+        alt: "Squirrel stickers laid out around coffee and pastries on a wooden board: do you recognize your local squirrel?"
+      - image: /images/shop/red-squirrel-story/red-squirrel-5-paint-yours.webp
+        alt: "Evelyne opening the door of the camper van: can't find your hometown squirrel? Comment and I'll paint it"
+    description: &red_squirrel_text |-
+      Let me present to you: the red squirrel. The only tree squirrel that is native to Switzerland, where I am from. It's a beautiful squirrel with a long fluffy tail, tufted ears and a white belly.
+
+      Whenever I need something to lift me up, I head to my favorite parks and go look for these tiny friends. I could watch them for hours and they never fail to make my day.
   - label: Eurasian Red Squirrel
     price: 10
     sku: GSC-PRINT-ERS-A5-DE
@@ -140,6 +156,9 @@ variants:
     images:
       - /images/shop/squirrel-posters/framed-eurasian-red-squirrel.webp
       - /images/shop/squirrel-posters/poster-eurasian-red-squirrel.webp
+    storyTitle: Meet the red squirrel
+    story: *red_squirrel_story
+    description: *red_squirrel_text
   - label: Eurasian Red Squirrel
     price: 15
     sku: GSC-PRINT-ERS-A4-EN
@@ -152,6 +171,9 @@ variants:
     images:
       - /images/shop/squirrel-posters/framed-eurasian-red-squirrel.webp
       - /images/shop/squirrel-posters/poster-eurasian-red-squirrel.webp
+    storyTitle: Meet the red squirrel
+    story: *red_squirrel_story
+    description: *red_squirrel_text
   - label: Eurasian Red Squirrel
     price: 15
     sku: GSC-PRINT-ERS-A4-DE
@@ -164,6 +186,9 @@ variants:
     images:
       - /images/shop/squirrel-posters/framed-eurasian-red-squirrel.webp
       - /images/shop/squirrel-posters/poster-eurasian-red-squirrel.webp
+    storyTitle: Meet the red squirrel
+    story: *red_squirrel_story
+    description: *red_squirrel_text
   - label: Eurasian Red Squirrel
     price: 20
     sku: GSC-PRINT-ERS-A3-EN
@@ -176,6 +201,9 @@ variants:
     images:
       - /images/shop/squirrel-posters/framed-eurasian-red-squirrel.webp
       - /images/shop/squirrel-posters/poster-eurasian-red-squirrel.webp
+    storyTitle: Meet the red squirrel
+    story: *red_squirrel_story
+    description: *red_squirrel_text
   - label: Eurasian Red Squirrel
     price: 20
     sku: GSC-PRINT-ERS-A3-DE
@@ -188,6 +216,9 @@ variants:
     images:
       - /images/shop/squirrel-posters/framed-eurasian-red-squirrel.webp
       - /images/shop/squirrel-posters/poster-eurasian-red-squirrel.webp
+    storyTitle: Meet the red squirrel
+    story: *red_squirrel_story
+    description: *red_squirrel_text
   - label: Eastern Gray Squirrel
     price: 10
     sku: GSC-PRINT-EGS-A5-EN
