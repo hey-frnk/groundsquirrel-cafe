@@ -227,9 +227,13 @@ Water quality is the one place we refused to cut corners. We wanted the cleanest
 
 We filter with the **Alb Filter Pro Camper set**, plus the **Protect pre-filter** while filling up and the **Nano germ barrier** before the tap. The full setup is in our post on [Humbär's water system](/journal/camper-van-water-system/).
 
-**5% off** with the code **`weltenhummler`**.
+[highlight]
 
-[button:https://alb-filter.com/products/pro-camper-set?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate|Get 5% off the Pro Camper set (ad link)]
+**Black Friday: 15% instead of 5% off** all filters with the code **`weltenhummler`** (only until November 30, 2026).
+
+[/highlight]
+
+[button:https://alb-filter.com/products/pro-camper-set?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate|Get 15% off the Pro Camper set (ad link)]
 
 [/adbox]
 

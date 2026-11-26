@@ -31,11 +31,15 @@ We built ours into a VW LT35, but nothing about the setup is tied to that van. I
 
 ### The short version, if you are only here for the filters
 
-We filter with the **Alb Filter Pro Camper set**, plus the **Protect pre-filter** while filling up and the **Nano germ barrier** before the tap. Through our link you currently get **10% off**.
+We filter with the **Alb Filter Pro Camper set**, plus the **Protect pre-filter** while filling up and the **Nano germ barrier** before the tap. Through our link you get **15% off** for Black Friday.
 
-[button:https://alb-filter.com/products/pro-camper-set?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate|To the Pro Camper set with 10% off (ad link)]
+[button:https://alb-filter.com/products/pro-camper-set?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate|To the Pro Camper set with 15% off (ad link)]
 
-**10% instead of 5%:** Alb Filter has raised the discount for our readers for a limited time. The 10% runs until **8 October 2026**, after which it goes back to a permanent 5%. The discount code is **`weltenhummler`**.
+[highlight]
+
+**Black Friday: 15% instead of 5%.** Alb Filter has raised the discount for our readers for a limited time. The 15% applies to all filters, but only until **November 30, 2026**. The discount code is **`weltenhummler`**.
+
+[/highlight]
 
 [toc|On this page]
 
@@ -124,9 +128,9 @@ As a rough guide we go by the replacement intervals given by the manufacturer. A
 
 With the pre-filter in particular we notice how much difference water quality makes. Those three months are therefore our own experience, not a generally valid figure.
 
-If you are working out how often you will need to reorder: replacement cartridges come with **10% off** using the code **`weltenhummler`** (until 8 October 2026, 5% after that).
+If you are working out how often you will need to reorder: replacement cartridges come with **15% off** using the code **`weltenhummler`** (Black Friday, only until November 30, 2026).
 
-[button:https://alb-filter.com/products/wasserfilter-kartusche-active?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate|Replacement cartridges with 10% off (ad link)]
+[button:https://alb-filter.com/products/wasserfilter-kartusche-active?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate|Replacement cartridges with 15% off (ad link)]
 
 ![a used nano germ barrier cartridge shortly before being replaced](/images/journal/humbaer-water-system/a-used-nano-cartridge.webp)
 *A used Nano germ barrier cartridge shortly before being replaced*
@@ -152,9 +156,15 @@ If there is one place in your van conversion not to save money, it is here. Espe
 
 ## Where to find the water filters
 
-[button:https://alb-filter.com/weltenhummler|To the Alb Filter water filters with 10% off (ad link)]
+[button:https://alb-filter.com/weltenhummler|To the Alb Filter water filters with 15% off (ad link)]
 
-**10% off with the code `weltenhummler`, until 8 October 2026. A permanent 5% after that.** Ordering through our link saves you money and at the same time helps us keep traveling with Humbär for a long time to come. That really would make us very happy!
+[highlight]
+
+**Black Friday: 15% off all filters with the code `weltenhummler`, only until November 30, 2026.**
+
+[/highlight]
+
+Ordering through our link saves you money and at the same time helps us keep traveling with Humbär for a long time to come. That really would make us very happy!
 
 **Straight to the individual products:** [Pro Camper set](https://alb-filter.com/products/pro-camper-set?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate) · [Protect pre-filter](https://alb-filter.com/products/alb-filter-protect?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate) · [Active cartridge](https://alb-filter.com/products/wasserfilter-kartusche-active?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate) · [Nano germ barrier](https://alb-filter.com/products/wasserfilter-kartusche-nano?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate) · [Alb Clean tank cleaner](https://alb-filter.com/products/alb-filter-clean-tankreiniger?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate)
 

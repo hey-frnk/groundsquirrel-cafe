@@ -19,6 +19,16 @@ const STORAGE_KEY = "gsc.albfilter-code.seen";
 const CODE = "weltenhummler";
 const SHOP_URL = "https://alb-filter.com";
 
+/**
+ * Black Friday: Alb Filter raised the code to 15% on all filters until the end
+ * of 30 November 2026 (Swiss time), 5% after that. The sale has a key of its
+ * own, so anyone who closed the banner before sees it once more for the sale.
+ * Once the sale is over, the plain 5% banner and the old key come back by
+ * themselves.
+ */
+const SALE_ENDS = Date.parse("2026-12-01T00:00:00+01:00");
+const SALE_STORAGE_KEY = "gsc.albfilter-code.seen.black-friday-2026";
+
 /** Long enough that it arrives after the page, short enough to still be seen. */
 const DELAY_MS = 2600;
 
@@ -28,6 +38,10 @@ export default function AlbFilterBanner() {
   const [mounted, setMounted] = useState(false);
   const [shown, setShown] = useState(false);
   const [copied, setCopied] = useState(false);
+  // Decided on the client, where the banner lives anyway; it is only rendered
+  // after the timer, so there is no server markup to disagree with.
+  const [onSale] = useState(() => Date.now() < SALE_ENDS);
+  const storageKey = onSale ? SALE_STORAGE_KEY : STORAGE_KEY;
   const inShop = usePathname()?.startsWith("/shop") ?? false;
 
   useEffect(() => {
@@ -36,7 +50,7 @@ export default function AlbFilterBanner() {
     // A browser with site data blocked throws on read; that is a reason to show
     // the banner, not to break the page.
     try {
-      if (window.localStorage.getItem(STORAGE_KEY)) return;
+      if (window.localStorage.getItem(storageKey)) return;
     } catch {
       /* no storage — treat it as a first visit */
     }
@@ -55,12 +69,12 @@ export default function AlbFilterBanner() {
       window.clearTimeout(appear);
       window.clearTimeout(slide);
     };
-  }, [inShop]);
+  }, [inShop, storageKey]);
 
   function dismiss() {
     setShown(false);
     try {
-      window.localStorage.setItem(STORAGE_KEY, "1");
+      window.localStorage.setItem(storageKey, "1");
     } catch {
       /* nothing to remember it with; it will show again next time */
     }
@@ -99,14 +113,24 @@ export default function AlbFilterBanner() {
         </button>
 
         <p className="font-stamp text-[0.65rem] uppercase tracking-[0.18em] text-graphite/70">
-          From our collaboration
+          {onSale ? (
+            <span className="text-ink">Black Friday · Limited time</span>
+          ) : (
+            "From our collaboration"
+          )}
         </p>
-        <p className="mt-3 leading-relaxed text-graphite">
-          The water our coffee is made of comes through an Alb Filter. With our code you get{" "}
-          {/* Alb Filter raised the code to 10% until 8 October 2026, 5% after that. */}
-          <span className="text-ink">10% off</span> your order at alb-filter.com until 8 October
-          2026, 5% after that.
-        </p>
+        {onSale ? (
+          <p className="mt-3 leading-relaxed text-graphite">
+            The water our coffee is made of comes through an Alb Filter. With our code you get{" "}
+            <span className="text-ink">15% off all filters</span> at alb-filter.com, only until
+            November 30, 2026.
+          </p>
+        ) : (
+          <p className="mt-3 leading-relaxed text-graphite">
+            The water our coffee is made of comes through an Alb Filter. With our code you get{" "}
+            <span className="text-ink">5% off</span> your order at alb-filter.com.
+          </p>
+        )}
 
         <div className="mt-4 flex flex-wrap items-center gap-3">
           <button
