@@ -245,9 +245,13 @@ Wenn es gar nicht mehr anders ging, etwa weil unsere Camper-Batterie aufgrund me
 
 In Griechenland kommt man wirklich gut an Frischwasser. Unser Filtersystem von Alb Filter gibt uns beim Auffüllen eine zusätzliche Filterstufe und damit ein richtig gutes Gefühl: Wasser aus Trinkwasserquellen trinken wir nach der Filterung direkt aus dem Hahn, ohne es abzukochen. Und ganz nebenbei sparen wir jede Menge Einwegflaschen. Mehr dazu in unserem Artikel über das [Wassersystem im Humbär](/journal/camper-van-water-system/).
 
-**10 % Rabatt** mit dem Code **`weltenhummler`** (bis 8. Oktober 2026, danach 5 %).
+[highlight]
 
-[button:https://alb-filter.com/weltenhummler|Zu den Alb Filter Wasserfiltern mit 10 % Rabatt (Werbelink)]
+**Black Friday: 15 % Rabatt** auf alle Filter mit dem Code **`weltenhummler`** (nur bis 30. November 2026).
+
+[/highlight]
+
+[button:https://alb-filter.com/weltenhummler|Zu den Alb Filter Wasserfiltern mit 15 % Rabatt (Werbelink)]
 
 [/adbox]
 

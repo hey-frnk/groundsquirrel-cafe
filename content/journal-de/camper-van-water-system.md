@@ -26,11 +26,15 @@ Gebaut haben wir es in unseren VW LT35. Gebunden ist das System aber nicht daran
 
 ### Kurz für alle, die nur die Filter suchen
 
-Wir filtern mit dem **Alb Filter Pro Camper Set**, dazu der **Protect Vorfilter** beim Befüllen und die **Nano Keimsperre** vor dem Hahn. Über unseren Link bekommst du aktuell **10 % Rabatt** darauf.
+Wir filtern mit dem **Alb Filter Pro Camper Set**, dazu der **Protect Vorfilter** beim Befüllen und die **Nano Keimsperre** vor dem Hahn. Über unseren Link bekommst du zum Black Friday **15 % Rabatt** darauf.
 
-[button:https://alb-filter.com/products/pro-camper-set?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate|Zum Pro Camper Set mit 10 % Rabatt (Werbelink)]
+[button:https://alb-filter.com/products/pro-camper-set?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate|Zum Pro Camper Set mit 15 % Rabatt (Werbelink)]
 
-**10 % statt 5 %:** Alb Filter hat den Rabatt für unsere Leserinnen und Leser befristet erhöht. Die 10 % gelten noch **bis zum 8. Oktober 2026**, danach sind es wieder dauerhaft 5 %. Der Rabattcode lautet **`weltenhummler`**.
+[highlight]
+
+**Black Friday: 15 % statt 5 %.** Alb Filter hat den Rabatt für unsere Leserinnen und Leser befristet erhöht. Die 15 % gelten auf alle Filter, aber nur **bis zum 30. November 2026**. Der Rabattcode lautet **`weltenhummler`**.
+
+[/highlight]
 
 [toc|Inhalt dieses Beitrags]
 
@@ -119,9 +123,9 @@ Als grobe Orientierung gelten für unsere Kartuschen die vom Hersteller angegebe
 
 Gerade beim Vorfilter merken wir, dass die Wasserqualität einen grossen Unterschied macht. Deshalb sind die drei Monate bei uns lediglich ein persönlicher Erfahrungswert und keine allgemeingültige Angabe.
 
-Wenn du gerade ausrechnest, wie oft du nachkaufen musst: Die Ersatzkartuschen bekommst du mit dem Code **`weltenhummler`** und **10 % Rabatt** (befristet bis 8. Oktober 2026, danach 5 %).
+Wenn du gerade ausrechnest, wie oft du nachkaufen musst: Die Ersatzkartuschen bekommst du mit dem Code **`weltenhummler`** und **15 % Rabatt** (Black Friday, nur bis 30. November 2026).
 
-[button:https://alb-filter.com/products/wasserfilter-kartusche-active?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate|Ersatzkartuschen mit 10 % Rabatt (Werbelink)]
+[button:https://alb-filter.com/products/wasserfilter-kartusche-active?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate|Ersatzkartuschen mit 15 % Rabatt (Werbelink)]
 
 ![eine gebrauchte nano-keimsperre kartusche kurz vor dem austausch](/images/journal/humbaer-water-system/a-used-nano-cartridge.webp)
 *Eine gebrauchte Nano-Keimsperre Kartusche kurz vor dem Austausch*
@@ -147,9 +151,15 @@ Wenn du an einer Stelle bei deinem Vanausbau nicht sparen solltest, dann hier. G
 
 ## Hier geht's zu den Wasserfiltern
 
-[button:https://alb-filter.com/weltenhummler|Zu den Alb Filter Wasserfiltern mit 10 % Rabatt (Werbelink)]
+[button:https://alb-filter.com/weltenhummler|Zu den Alb Filter Wasserfiltern mit 15 % Rabatt (Werbelink)]
 
-**10 % Rabatt mit dem Code `weltenhummler`, bis zum 8. Oktober 2026. Danach dauerhaft 5 %.** Indem du über unseren Link bestellst, sparst du beim Kauf und unterstützt uns gleichzeitig dabei, dass wir noch lange mit Humbär unterwegs sein können. Das würde uns wirklich sehr freuen!
+[highlight]
+
+**Black Friday: 15 % Rabatt auf alle Filter mit dem Code `weltenhummler`, nur bis zum 30. November 2026.**
+
+[/highlight]
+
+Indem du über unseren Link bestellst, sparst du beim Kauf und unterstützt uns gleichzeitig dabei, dass wir noch lange mit Humbär unterwegs sein können. Das würde uns wirklich sehr freuen!
 
 **Direkt zu den einzelnen Produkten:** [Pro Camper Set](https://alb-filter.com/products/pro-camper-set?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate) · [Protect Vorfilter](https://alb-filter.com/products/alb-filter-protect?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate) · [Active Kartusche](https://alb-filter.com/products/wasserfilter-kartusche-active?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate) · [Nano Keimsperre](https://alb-filter.com/products/wasserfilter-kartusche-nano?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate) · [Alb Clean Tankreiniger](https://alb-filter.com/products/alb-filter-clean-tankreiniger?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate)
 

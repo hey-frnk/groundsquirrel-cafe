@@ -250,9 +250,13 @@ When there was really no way around it, say our battery was running low after a 
 
 Getting fresh water in Greece is genuinely easy. Our Alb Filter system adds one more filtration stage every time we fill up, and that gives us real peace of mind: water from drinking water sources goes straight from our tap into our glass, no boiling needed. Bonus: we skip a whole lot of single-use bottles along the way. The full setup is in our post on [Humbär's water system](/journal/camper-van-water-system/).
 
-**10% off** with the code **`weltenhummler`** (until October 8, 2026, then 5%).
+[highlight]
 
-[button:https://alb-filter.com/weltenhummler|Get 10% off Alb Filter water filters (ad link)]
+**Black Friday: 15% off** all filters with the code **`weltenhummler`** (only until November 30, 2026).
+
+[/highlight]
+
+[button:https://alb-filter.com/weltenhummler|Get 15% off Alb Filter water filters (ad link)]
 
 [/adbox]
 

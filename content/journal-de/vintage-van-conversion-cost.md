@@ -222,9 +222,13 @@ Bei der Wasserqualität haben wir keine Kompromisse gemacht. Wir wollten unterwe
 
 Wir filtern mit dem **Alb Filter Pro Camper Set**, dazu der **Protect Vorfilter** beim Befüllen und die **Nano Keimsperre** vor dem Hahn. Mehr dazu in unserem Artikel über das [Wassersystem im Humbär](/journal/camper-van-water-system/).
 
-**5 % Rabatt** mit dem Code **`weltenhummler`**.
+[highlight]
 
-[button:https://alb-filter.com/products/pro-camper-set?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate|Zum Pro Camper Set mit 5 % Rabatt (Werbelink)]
+**Black Friday: 15 % statt 5 % Rabatt** auf alle Filter mit dem Code **`weltenhummler`** (nur bis 30. November 2026).
+
+[/highlight]
+
+[button:https://alb-filter.com/products/pro-camper-set?sca_ref=10726719.4rW2Z0ZpdK&utm_source=uppromote&utm_medium=socialmedia&utm_campaign=affiliate|Zum Pro Camper Set mit 15 % Rabatt (Werbelink)]
 
 [/adbox]
 
