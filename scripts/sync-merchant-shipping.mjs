@@ -10,9 +10,10 @@
  *
  * Countries that pay the same rates for every profile share one service, and
  * profiles with different delivery times get separate services, since a
- * service has only one delivery time. Only the countries in googleCountries
- * get a service (all of shipTo if that list is missing). Today that is CH,
- * GB, US, CA, AU and NZ times 2 delivery times = 12 services.
+ * service has only one delivery time. Every shipTo country gets a service,
+ * or only those in googleCountries if shipping.json sets that list. Today
+ * that is 6 rate groups (Mexico and New Zealand both pay the world rates)
+ * times 2 delivery times = 12 services.
  *
  * The Merchant API replaces ALL shipping settings at once: whatever was set up
  * by hand in Merchant Center is gone after a sync. That is the point.
@@ -102,7 +103,9 @@ function buildServices() {
   const services = [];
   for (const region of regions) {
     const where =
-      region.length === 1 ? SHIP_TO[region[0]] : `Worldwide (${region.length} countries)`;
+      region.length <= 3
+        ? region.map((code) => SHIP_TO[code]).sort().join(" & ")
+        : `Worldwide (${region.length} countries)`;
 
     for (const names of timings) {
       const { minDays = 3, maxDays = 10 } = PROFILES[names[0]];

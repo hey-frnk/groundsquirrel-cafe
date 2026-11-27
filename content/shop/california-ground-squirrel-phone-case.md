@@ -107,10 +107,10 @@ faq:
     a: Yes, the case is vegan.
   - q: Where do you ship the squirrel phone case?
     a: >-
-      To Switzerland, the United Kingdom, the United States, Canada, Australia,
-      New Zealand and many more countries, all listed above. Because of the
-      EU Packaging and Packaging Waste Regulation (PPWR), I cannot ship to the
-      EU at the moment. If your country is missing, join the waitlist.
+      To Switzerland, the United Kingdom, the United States, Canada, Mexico,
+      Australia and New Zealand. Because of the EU Packaging and Packaging
+      Waste Regulation (PPWR), I cannot ship to the EU at the moment. If your
+      country is missing, join the waitlist.
   - q: How does it support wildlife?
     a: >-
       10% of what you spend goes to wildlife conservation, to organizations such
