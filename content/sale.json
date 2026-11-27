@@ -1,0 +1,27 @@
+{
+  "_comment": [
+    "A storewide sale: percentOff off every product (not shipping) from starts",
+    "until ends. Both times are Swiss time; ends is the first moment the sale is",
+    "over, so 2026-12-01T00:00:00+01:00 means it runs through November 30.",
+    "",
+    "Everything reads this file, and everything stops on its own at ends:",
+    "  - the checkout Worker only attaches the Stripe coupon before ends,",
+    "  - the shop pages check the visitor's clock and show regular prices after,",
+    "  - the Merchant Center feed sends sale_price with this effective date,",
+    "  - deploy.yml rebuilds the site every night just after midnight Swiss",
+    "    time, so the static HTML and the product structured data follow.",
+    "",
+    "To run a new sale: change the dates, percentOff, name and coupon (a new",
+    "coupon id, Stripe coupons cannot be edited), then:",
+    "  STRIPE_SECRET_KEY=sk_live_... node scripts/setup-sale.mjs",
+    "  node scripts/sync-worker-config.mjs",
+    "  cd checkout-worker && npx wrangler deploy",
+    "",
+    "To have no sale, set percentOff to 0."
+  ],
+  "name": "Black Friday",
+  "percentOff": 20,
+  "starts": "2026-11-27T00:00:00+01:00",
+  "ends": "2026-12-01T00:00:00+01:00",
+  "coupon": "black-friday-2026"
+}

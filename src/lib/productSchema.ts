@@ -11,6 +11,7 @@
 import shipping from "../../content/shipping.json";
 import { SITE_URL, organization } from "./seo";
 import { HANDLING_DAYS, PROFILES, rateFor } from "./shipping";
+import { BUILD_TIME, saleActiveAt, saleLastDate, salePrice } from "./sale";
 import {
   CURRENCY,
   averageRating,
@@ -93,6 +94,8 @@ export function productSchema(product: ShopProduct) {
   const average = averageRating(reviews);
   const brand = { "@type": "Brand", name: "the ground squirrel studio" };
   const absolute = (src: string) => `${SITE_URL}${src}`;
+  // Rendered once at build, like the rest of the static page.
+  const onSale = saleActiveAt(BUILD_TIME);
 
   const profiles = [
     ...new Set(product.variants.map((v) => v.shippingProfile).filter(Boolean)),
@@ -118,8 +121,11 @@ export function productSchema(product: ShopProduct) {
         "@type": "Offer",
         // Opens the page with this variant already chosen.
         url: variant.sku ? `${url}?sku=${encodeURIComponent(variant.sku)}` : url,
-        price: variant.price.toFixed(2),
+        // The price the page shows. During a sale, priceValidUntil names its
+        // last day, and the nightly rebuild in deploy.yml drops it afterwards.
+        price: (onSale ? salePrice(variant.price) : variant.price).toFixed(2),
         priceCurrency: CURRENCY,
+        ...(onSale ? { priceValidUntil: saleLastDate() } : {}),
         availability: "https://schema.org/InStock",
         itemCondition: "https://schema.org/NewCondition",
         seller: { "@id": `${SITE_URL}/#organization` },

@@ -15,3 +15,4 @@ PRICE_PROFILES = '{"price_1UM7aBHhWAEQqbxLrsw2qO63":"phone-case","price_1UM7aCHh
 
 # STRIPE_SECRET_KEY is NOT set here — it is a secret:
 #   npx wrangler secret put STRIPE_SECRET_KEY
+SALE = '{"percentOff":20,"starts":"2026-11-27T00:00:00+01:00","ends":"2026-12-01T00:00:00+01:00","coupon":"black-friday-2026"}'

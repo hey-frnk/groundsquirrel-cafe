@@ -13,6 +13,9 @@ import {
   type ShopProduct,
 } from "@/lib/shop";
 import { SHIP_TO_COUNTRIES } from "@/lib/countries";
+import { salePrice } from "@/lib/sale";
+import { useSaleActive } from "@/lib/useSale";
+import { Price, SaleNotice } from "./Price";
 import PaymentMethods from "./PaymentMethods";
 import { RatingSummary } from "./Reviews";
 import StoryCarousel from "./StoryCarousel";
@@ -49,7 +52,7 @@ export default function ProductDetail({
   const [imageIndex, setImageIndex] = useState(0);
   const [justAdded, setJustAdded] = useState(false);
   const { addLine } = useCart();
-
+  const onSale = useSaleActive();
 
   const variant =
     axes.length > 0 ? variantFor(product, selection) : product.variants[variantIndex];
@@ -246,7 +249,13 @@ export default function ProductDetail({
                     const options = indices.map((i) => (
                       <option key={product.variants[i].label} value={i}>
                         {product.variants[i].label}
-                        {uniformPrice ? "" : ` - ${formatPrice(product.variants[i].price)}`}
+                        {uniformPrice
+                          ? ""
+                          : ` - ${formatPrice(
+                              onSale
+                                ? salePrice(product.variants[i].price)
+                                : product.variants[i].price
+                            )}`}
                       </option>
                     ));
                     return group ? (
@@ -267,9 +276,12 @@ export default function ProductDetail({
               </p>
             )}
 
-            <p className="mt-8 font-display text-4xl text-ink">
-              {variant ? formatPrice(variant.price) : ""}
-            </p>
+            <div className="mt-8">
+              <SaleNotice className="mb-2" />
+              <p className="font-display text-4xl text-ink">
+                {variant ? <Price amount={variant.price} /> : ""}
+              </p>
+            </div>
             <p className="mt-2 text-xs text-graphite/70">
               Prices in Swiss francs. At checkout you can pay in your own currency.
             </p>

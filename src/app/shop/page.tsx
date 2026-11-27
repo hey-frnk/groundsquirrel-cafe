@@ -3,13 +3,13 @@ import Link from "next/link";
 import { getAllShopProducts } from "@/lib/content";
 import {
   averageRating,
-  formatPrice,
   lowestPrice,
   validReviews,
   type ShopProduct,
 } from "@/lib/shop";
 import { contactEmail, googleLinks } from "@/lib/seo";
 import { ReviewCard, ReviewInvite, Stars } from "@/components/shop/Reviews";
+import { Price, SaleNotice } from "@/components/shop/Price";
 
 export const metadata = {
   title: "Shop – Squirrel Art Prints, Stickers & Phone Cases",
@@ -51,6 +51,7 @@ export default function ShopPage() {
         <div className="border-b border-ink/10 pb-10">
           <p className="eyebrow">The Ground Squirrel Café</p>
           <h1 className="mt-5 text-5xl sm:text-7xl">Shop</h1>
+          <SaleNotice className="mt-6" />
         </div>
       </section>
 
@@ -69,8 +70,10 @@ export default function ShopPage() {
                 } transition-transform duration-[900ms] ease-out group-hover:scale-[1.04]`}
               />
               <span className="absolute top-4 left-4 rounded-full bg-cream/92 px-4 py-2 text-[0.65rem] uppercase tracking-[0.16em] text-graphite backdrop-blur">
-                {new Set(product.variants.map((v) => v.price)).size > 1 && "from "}
-                {formatPrice(lowestPrice(product))}
+                <Price
+                  amount={lowestPrice(product)}
+                  from={new Set(product.variants.map((v) => v.price)).size > 1}
+                />
               </span>
             </div>
 
