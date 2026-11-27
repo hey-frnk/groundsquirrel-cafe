@@ -10,8 +10,9 @@
  *
  * Countries that pay the same rates for every profile share one service, and
  * profiles with different delivery times get separate services, since a
- * service has only one delivery time. Today that is 6 country groups (CH, GB,
- * US, CA, AU, the rest of the world) times 2 delivery times = 12 services.
+ * service has only one delivery time. Only the countries in googleCountries
+ * get a service (all of shipTo if that list is missing). Today that is CH,
+ * GB, US, CA, AU and NZ times 2 delivery times = 12 services.
  *
  * The Merchant API replaces ALL shipping settings at once: whatever was set up
  * by hand in Merchant Center is gone after a sync. That is the point.
@@ -78,7 +79,15 @@ const micros = (amount) => String(Math.round(amount * 1_000_000));
 
 function buildServices() {
   const profileNames = Object.keys(PROFILES);
-  const countries = Object.keys(SHIP_TO);
+  // Only where Google should show the products (googleCountries), and never
+  // anywhere checkout does not ship to.
+  const countries = Object.keys(SHIP_TO).filter(
+    (code) => !config.googleCountries || config.googleCountries.includes(code)
+  );
+  const unknown = (config.googleCountries ?? []).filter((code) => !(code in SHIP_TO));
+  if (unknown.length) {
+    console.warn(`  googleCountries not in shipTo, left out: ${unknown.join(" ")}`);
+  }
 
   // Profiles that share a delivery time can share a service.
   const timings = groupBy(profileNames, (name) => {

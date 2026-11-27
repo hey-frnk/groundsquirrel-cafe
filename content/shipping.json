@@ -21,6 +21,10 @@
     "the product feed puts on its variants. Do not edit the policies by hand in",
     "Merchant Center; the next sync replaces them.",
     "",
+    "googleCountries limits which countries get a shipping policy in Merchant",
+    "Center, and so where Google shows the products. Checkout still ships to",
+    "all of shipTo. Leave it out to give Google every shipTo country.",
+    "",
     "handlingDays is how long an order waits to be made before it ships.",
     "",
     "taxCode txcd_92010001 is Stripe's 'Shipping' code, so Stripe Tax applies the",
@@ -38,6 +42,7 @@
   "taxCode": "txcd_92010001",
   "rule": "highest",
   "handlingDays": { "min": 1, "max": 5 },
+  "googleCountries": ["CH", "GB", "US", "CA", "AU", "NZ"],
   "shipTo": {
     "AF": "Afghanistan",
     "AL": "Albania",
