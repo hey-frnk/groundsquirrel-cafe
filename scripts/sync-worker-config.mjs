@@ -4,6 +4,8 @@
  *
  *   SHIPPING_TABLE  the rates from content/shipping.json
  *   PRICE_PROFILES  Stripe Price ID → shipping profile, read off content/shop
+ *   SALE            the storewide sale from content/sale.json (the Stripe
+ *                   coupon itself is created by scripts/setup-sale.mjs)
  *
  * Both live server-side on purpose. The browser never says what postage should
  * cost; it only names the products, and the Worker prices the postage itself.
@@ -20,6 +22,7 @@ import path from "node:path";
 import matter from "gray-matter";
 
 const SHIPPING = path.join(process.cwd(), "content", "shipping.json");
+const SALE_FILE = path.join(process.cwd(), "content", "sale.json");
 const SHOP_DIR = path.join(process.cwd(), "content", "shop");
 const WRANGLER = path.join(process.cwd(), "checkout-worker", "wrangler.toml");
 
@@ -72,6 +75,23 @@ for (const [name, profile] of Object.entries(profiles)) {
   }
 }
 
+// Only what the Worker reads; it checks the dates itself on every checkout.
+const saleConfig = JSON.parse(fs.readFileSync(SALE_FILE, "utf8"));
+const sale = {
+  percentOff: saleConfig.percentOff,
+  starts: saleConfig.starts,
+  ends: saleConfig.ends,
+  coupon: saleConfig.coupon,
+};
+if (sale.percentOff > 0) {
+  if (Number.isNaN(Date.parse(sale.starts)) || Number.isNaN(Date.parse(sale.ends))) {
+    problems.push("content/sale.json — starts or ends is not a valid date");
+  }
+  if (!/^[A-Za-z0-9_-]+$/.test(sale.coupon ?? "")) {
+    problems.push("content/sale.json — coupon must be a Stripe id ([A-Za-z0-9_-])");
+  }
+}
+
 if (problems.length > 0) {
   console.error(`\n  ${problems.length} problem(s):`);
   problems.forEach((p) => console.error(`    - ${p}`));
@@ -83,6 +103,7 @@ let toml = fs.readFileSync(WRANGLER, "utf8");
 for (const [key, value] of [
   ["SHIPPING_TABLE", table],
   ["PRICE_PROFILES", priceProfiles],
+  ["SALE", sale],
 ]) {
   const line = `${key} = '${JSON.stringify(value)}'`;
   toml = new RegExp(`^${key}\\s*=.*$`, "m").test(toml)
@@ -95,6 +116,9 @@ console.log(`\n  Profiles:      ${Object.keys(profiles).join(", ")}`);
 console.log(`  Mapped prices: ${priced}`);
 if (unpriced > 0) {
   console.log(`  Not yet in Stripe: ${unpriced} (run scripts/setup-stripe.mjs)`);
+}
+if (sale.percentOff > 0) {
+  console.log(`  Sale:          ${sale.percentOff}% off, ${sale.starts} until ${sale.ends} (${sale.coupon})`);
 }
 console.log("\n  Written to checkout-worker/wrangler.toml");
 console.log("  Next: cd checkout-worker && npx wrangler deploy\n");

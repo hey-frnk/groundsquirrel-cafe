@@ -4,6 +4,12 @@ on:
   push:
     branches: ["main"]
   workflow_dispatch:
+  # Nightly, just after midnight Swiss time (23:10 UTC is 00:10 in winter,
+  # 01:10 in summer). A sale in content/sale.json ends at midnight; the pages
+  # already switch back by the visitor's clock, and this rebuild brings the
+  # static HTML, the product structured data and the Merchant feed along.
+  schedule:
+    - cron: "10 23 * * *"
 
 permissions:
   contents: read

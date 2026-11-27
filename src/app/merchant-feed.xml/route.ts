@@ -3,6 +3,7 @@ import { CURRENCY, imagesFor } from "@/lib/shop";
 import { SITE_URL } from "@/lib/seo";
 import { variantDescription } from "@/lib/productSchema";
 import { HANDLING_DAYS, PROFILES } from "@/lib/shipping";
+import { BUILD_TIME, SALE, salePrice } from "@/lib/sale";
 
 /**
  * Product feed for Google Merchant Center, written once at build time to
@@ -38,6 +39,19 @@ function money(amount: number) {
   return `${amount.toFixed(2)} ${CURRENCY}`;
 }
 
+/** "2026-11-26T23:00+0000", the ISO 8601 form Google's examples use. */
+function feedTime(time: number) {
+  return `${new Date(time).toISOString().slice(0, 16)}+0000`;
+}
+
+/**
+ * A sale that has not ended by the build goes out as sale_price with its
+ * window. Merchant Center stops using it at the end of that window by itself,
+ * even if the feed is not rebuilt in time.
+ */
+const saleInFeed = SALE.percentOff > 0 && BUILD_TIME < SALE.ends;
+const saleWindow = `${feedTime(SALE.starts)}/${feedTime(SALE.ends)}`;
+
 export function GET() {
   const items: string[] = [];
 
@@ -67,6 +81,10 @@ export function GET() {
             .join("") +
           tag("availability", "in_stock") +
           tag("price", money(variant.price)) +
+          (saleInFeed
+            ? tag("sale_price", money(salePrice(variant.price))) +
+              tag("sale_price_effective_date", saleWindow)
+            : "") +
           tag("condition", "new") +
           tag("brand", "the ground squirrel studio") +
           // Our own designs carry no GTIN; the SKU is the manufacturer number.

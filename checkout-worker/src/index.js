@@ -24,6 +24,8 @@
  *   SHIPPING_TABLE      profiles, rates, the Europe list and the countries we
  *                       ship to at all (shipTo)
  *   PRICE_PROFILES      Stripe Price ID → shipping profile name
+ *   SALE                the storewide sale from content/sale.json: percentOff,
+ *                       starts, ends and the Stripe coupon id
  */
 
 const MAX_ITEMS = 20;
@@ -93,6 +95,27 @@ export function shippingFor(items, country, table, priceProfiles) {
   }
 
   return best;
+}
+
+/**
+ * The Stripe coupon to attach right now, or null. The dates are checked here,
+ * on every checkout, so the sale ends at `ends` without anyone redeploying.
+ * A missing or unreadable SALE means no sale, never a broken checkout.
+ */
+export function activeCoupon(saleJson, now) {
+  if (!saleJson) return null;
+  let sale;
+  try {
+    sale = JSON.parse(saleJson);
+  } catch {
+    console.error("SALE is not valid JSON");
+    return null;
+  }
+  if (!sale?.coupon || !(sale.percentOff > 0)) return null;
+  const starts = Date.parse(sale.starts);
+  const ends = Date.parse(sale.ends);
+  // NaN on either side compares false, so a bad date also means no sale.
+  return now >= starts && now < ends ? sale.coupon : null;
 }
 
 /**
@@ -189,6 +212,11 @@ export default {
     form.set("billing_address_collection", "required");
     form.set("automatic_tax[enabled]", "true");
 
+    // The pages show sale prices until the same moment, so the price in the
+    // cart and the price charged agree. Coupons do not touch shipping.
+    const coupon = activeCoupon(env.SALE, Date.now());
+    if (coupon) form.set("discounts[0][coupon]", coupon);
+
     items.forEach((item, i) => {
       form.set(`line_items[${i}][price]`, item.price);
       form.set(`line_items[${i}][quantity]`, String(item.quantity));
@@ -218,16 +246,28 @@ export default {
       form.set(`${rate}[delivery_estimate][maximum][value]`, String(shipping.profile.maxDays));
     }
 
-    const response = await fetch("https://api.stripe.com/v1/checkout/sessions", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${env.STRIPE_SECRET_KEY}`,
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: form,
-    });
+    const createSession = () =>
+      fetch("https://api.stripe.com/v1/checkout/sessions", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${env.STRIPE_SECRET_KEY}`,
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: form,
+      });
 
-    const session = await response.json();
+    let response = await createSession();
+    let session = await response.json();
+
+    // A coupon Stripe refuses (not created yet, expired a second early, a key
+    // without access to it) must not stop people from paying. Checkout then
+    // opens at the regular price, which Stripe shows before anyone pays.
+    if (!response.ok && coupon && String(session?.error?.param ?? "").startsWith("discounts")) {
+      console.error("Sale coupon refused, checkout without it", coupon, session?.error);
+      form.delete("discounts[0][coupon]");
+      response = await createSession();
+      session = await response.json();
+    }
     if (!response.ok) {
       // Stripe's message can name internal configuration, so log it for us and
       // give the customer something generic.

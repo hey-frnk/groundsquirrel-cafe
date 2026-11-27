@@ -7,6 +7,8 @@ import { useCart } from "@/lib/cart";
 import { formatPrice } from "@/lib/shop";
 import { DEFAULT_COUNTRY, SHIP_TO_COUNTRIES } from "@/lib/countries";
 import { shippingFor } from "@/lib/shipping";
+import { SALE, salePrice } from "@/lib/sale";
+import { useSaleActive } from "@/lib/useSale";
 import PaymentMethods from "./PaymentMethods";
 import Waitlist from "./Waitlist";
 
@@ -35,6 +37,7 @@ export default function CartDrawer() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<CheckoutError | null>(null);
   const [country, setCountry] = useState(DEFAULT_COUNTRY);
+  const onSale = useSaleActive();
 
   useEffect(() => {
     if (!isOpen) return;
@@ -108,6 +111,10 @@ export default function CartDrawer() {
     country
   );
   const sentFromSeveral = new Set(lines.map((l) => l.shippingProfile)).size > 1;
+
+  // Stripe applies the coupon to the items as a whole, not to shipping, and
+  // lists it as one line under them; the cart does the same.
+  const discount = onSale ? subtotal - salePrice(subtotal) : 0;
 
   const unpriced = lines.some((l) => !l.stripePriceId);
   const canCheckout = Boolean(CHECKOUT_URL) && !unpriced && lines.length > 0;
@@ -241,6 +248,14 @@ export default function CartDrawer() {
                 <dt className="text-graphite/80">Subtotal</dt>
                 <dd className="tabular-nums">{formatPrice(subtotal)}</dd>
               </div>
+              {discount > 0 && (
+                <div className="flex items-baseline justify-between text-rose">
+                  <dt>
+                    {SALE.name} {SALE.percentOff}% off
+                  </dt>
+                  <dd className="tabular-nums">−{formatPrice(discount)}</dd>
+                </div>
+              )}
               <div className="flex items-baseline justify-between">
                 <dt className="text-graphite/80">Shipping</dt>
                 <dd className="tabular-nums">
@@ -250,7 +265,7 @@ export default function CartDrawer() {
               <div className="flex items-baseline justify-between border-t border-ink/10 pt-2.5">
                 <dt className="eyebrow">Total</dt>
                 <dd className="font-display text-xl text-ink">
-                  {formatPrice(subtotal + (shipping?.amount ?? 0))}
+                  {formatPrice(subtotal - discount + (shipping?.amount ?? 0))}
                 </dd>
               </div>
             </dl>
