@@ -252,6 +252,63 @@ Fällt der Checkout aus, sieht die Kundschaft im Warenkorb einen Hinweis und
 einen Link, der eine Bestell-Mail mit dem Warenkorbinhalt an
 hello@thegroundsquirrel.cafe vorbereitet.
 
+## Google Merchant Center: Versand
+
+Die Versandrichtlinien in Merchant Center werden nicht von Hand gepflegt. Ein
+GitHub-Workflow (`.github/workflows/merchant-shipping.yml`) schreibt sie über
+die Merchant API aus `content/shipping.json`, sobald die Datei auf `main`
+geändert wird, und zur Sicherheit jeden Montag. Im Produkt-Feed trägt jede
+Variante ihr Versandprofil als `shipping_label` (`stickers`, `print-a3`, …);
+die Richtlinien legen den Preis pro Label und Land fest. So sind alle Länder
+aus `shipTo` abgedeckt.
+
+> Der Sync **ersetzt alle** Versandrichtlinien in Merchant Center. Von Hand
+> angelegte verschwinden beim nächsten Lauf. Preise also nur in
+> `content/shipping.json` ändern.
+
+Läuft komplett auf Servern von Google und GitHub. Auf der Website kommt nichts
+dazu, sie bleibt cookiefrei.
+
+**Einmalige Einrichtung:**
+
+1. **Google-Cloud-Projekt** anlegen auf
+   [console.cloud.google.com](https://console.cloud.google.com), z.B.
+   `groundsquirrel-merchant`. Unter *APIs & Dienste → Bibliothek* die
+   **Merchant API** aktivieren.
+2. **Dienstkonto** anlegen: *IAM & Verwaltung → Dienstkonten → Dienstkonto
+   erstellen* (keine Rollen nötig). Beim Dienstkonto unter *Schlüssel →
+   Schlüssel hinzufügen → JSON* einen Schlüssel herunterladen. Die Datei ist
+   ein Passwort: nicht ins Repository legen.
+3. **Dienstkonto in Merchant Center einladen:** *Einstellungen → Personen und
+   Zugriff → Person hinzufügen*, die E-Mail des Dienstkontos
+   (`…@….iam.gserviceaccount.com`) eintragen, Zugriff **Administrator**.
+4. **Projekt bei der Merchant API registrieren** (einmal pro Projekt), lokal:
+
+   ```bash
+   export MERCHANT_ACCOUNT_ID=1234567890          # Zahl oben in Merchant Center
+   export GOOGLE_APPLICATION_CREDENTIALS=~/Downloads/schluessel.json
+   node scripts/sync-merchant-shipping.mjs --register eure@adresse.ch
+   ```
+
+   Die Adresse ist die Kontaktperson für Google, nicht das Dienstkonto.
+5. **Probelauf**, ändert nichts, zeigt aktuelle und neue Richtlinien:
+
+   ```bash
+   node scripts/sync-merchant-shipping.mjs --dry-run
+   ```
+
+   Danach ohne `--dry-run` wirklich schreiben.
+6. **GitHub einrichten** (*Settings → Secrets and variables → Actions*):
+   - Variable `MERCHANT_ACCOUNT_ID` = die Konto-Nummer
+   - Secret `GOOGLE_MERCHANT_SERVICE_ACCOUNT_KEY` = der *Inhalt* der JSON-Datei
+
+   Danach die JSON-Datei lokal löschen. Unter Actions → *Merchant Center
+   shipping* → **Run workflow** lässt sich jederzeit ein Probelauf starten
+   (Haken bei *Only compare* weg = wirklich schreiben).
+
+Solange Variable oder Secret fehlen, überspringt der Workflow den Sync mit
+einer Warnung, statt fehlzuschlagen.
+
 ## Kosten
 
 | Posten | Kosten |
