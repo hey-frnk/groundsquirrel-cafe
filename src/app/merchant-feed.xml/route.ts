@@ -2,8 +2,7 @@ import { getAllShopProducts } from "@/lib/content";
 import { CURRENCY, imagesFor } from "@/lib/shop";
 import { SITE_URL } from "@/lib/seo";
 import { variantDescription } from "@/lib/productSchema";
-import { HANDLING_DAYS, PROFILES, rateFor } from "@/lib/shipping";
-import shipping from "../../../content/shipping.json";
+import { HANDLING_DAYS, PROFILES } from "@/lib/shipping";
 
 /**
  * Product feed for Google Merchant Center, written once at build time to
@@ -12,21 +11,14 @@ import shipping from "../../../content/shipping.json";
  * Shopping without anyone touching Merchant Center again.
  *
  * One item per variant, grouped by product with item_group_id, in the RSS 2.0
- * format Google documents. Prices and shipping come from the same files the
- * checkout charges from.
+ * format Google documents. Prices come from the same files the checkout
+ * charges from. Shipping is not listed per item: each variant carries its
+ * shipping profile as shipping_label, and the shipping policies in Merchant
+ * Center (kept in sync by scripts/sync-merchant-shipping.mjs) price that label
+ * for all 128 countries. Per-item rates stop at 100 entries.
  */
 
 export const dynamic = "force-static";
-
-/**
- * Countries the feed lists shipping for. Merchant Center only shows an item in
- * a country it has a shipping rate for, so this is also the list of countries
- * that can be targeted. Kept short on purpose: 128 countries under each of 90
- * variants would make the file enormous. Add a code here to target it too.
- */
-const FEED_COUNTRIES = ["CH", "GB", "US", "CA", "AU", "NZ"].filter(
-  (code) => code in shipping.shipTo
-);
 
 const MAX_ADDITIONAL_IMAGES = 10;
 
@@ -60,22 +52,6 @@ export function GET() {
 
       const images = variant.images?.length ? variant.images : imagesFor(product, variant);
       const [lead, ...rest] = images;
-      const profile = variant.shippingProfile ? PROFILES[variant.shippingProfile] : undefined;
-
-      const shippingTags = profile
-        ? FEED_COUNTRIES.map((country) => {
-            const rate = rateFor(profile, country);
-            if (rate === null) return "";
-            return (
-              "<g:shipping>" +
-              tag("country", country) +
-              tag("price", money(rate)) +
-              tag("min_transit_time", profile.minDays) +
-              tag("max_transit_time", profile.maxDays) +
-              "</g:shipping>"
-            );
-          }).join("")
-        : "";
 
       items.push(
         "<item>" +
@@ -101,7 +77,15 @@ export function GET() {
           tag("pattern", variant.options?.design) +
           tag("min_handling_time", HANDLING_DAYS.min) +
           tag("max_handling_time", HANDLING_DAYS.max) +
-          shippingTags +
+          // Picks the rate group in the Merchant Center shipping policies,
+          // which scripts/sync-merchant-shipping.mjs writes from the same
+          // profiles. Unknown profiles get no label and so no shipping.
+          tag(
+            "shipping_label",
+            variant.shippingProfile && PROFILES[variant.shippingProfile]
+              ? variant.shippingProfile
+              : undefined
+          ) +
           "</item>"
       );
     }

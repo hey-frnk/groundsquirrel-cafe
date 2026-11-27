@@ -1,0 +1,58 @@
+name: Merchant Center shipping
+
+# Rewrites the shipping policies in Google Merchant Center from
+# content/shipping.json whenever the rates change, plus once a week in case
+# someone edited them by hand in Merchant Center. See
+# scripts/sync-merchant-shipping.mjs and checkout-worker/README.md,
+# "Google Merchant Center: Versand".
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - content/shipping.json
+      - scripts/sync-merchant-shipping.mjs
+      - .github/workflows/merchant-shipping.yml
+  schedule:
+    - cron: "41 5 * * 1"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Only compare, change nothing"
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: merchant-shipping
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Sync shipping policies
+        env:
+          MERCHANT_ACCOUNT_ID: ${{ vars.MERCHANT_ACCOUNT_ID }}
+          GOOGLE_SERVICE_ACCOUNT_KEY: ${{ secrets.GOOGLE_MERCHANT_SERVICE_ACCOUNT_KEY }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
+        run: |
+          if [ -z "$MERCHANT_ACCOUNT_ID" ] || [ -z "$GOOGLE_SERVICE_ACCOUNT_KEY" ]; then
+            echo "::warning::Merchant Center sync is not set up yet (MERCHANT_ACCOUNT_ID or GOOGLE_MERCHANT_SERVICE_ACCOUNT_KEY missing). Skipped."
+            exit 0
+          fi
+          if [ "$DRY_RUN" = "true" ]; then
+            node scripts/sync-merchant-shipping.mjs --dry-run
+          else
+            node scripts/sync-merchant-shipping.mjs
+          fi

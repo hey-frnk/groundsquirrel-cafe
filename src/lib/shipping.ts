@@ -22,7 +22,7 @@ const EUROPE: string[] = shipping.europe;
 export const PROFILES = shipping.profiles as Record<string, Profile>;
 
 /** Days an order waits to be made before it ships ("3–5 days before shipping"). */
-export const HANDLING_DAYS = { min: 1, max: 5 };
+export const HANDLING_DAYS: { min: number; max: number } = shipping.handlingDays;
 
 /** Same lookup as rateFor() in checkout-worker/src/index.js. */
 export function rateFor(profile: Profile, country: string): number | null {
